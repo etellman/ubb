@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+
+my $i;
+foreach $i (2..12) {
+  my $t = log(3) * 100 / $i;
+  print "$i, $t\n";
+}

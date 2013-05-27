@@ -1,0 +1,163 @@
+
+\documentclass[fleqn,addpoints]{exam}
+
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{2in1, lscape}
+
+\title{Math 113 Chapter Six Study Guide}
+\author{}
+\date{June 23, 2010}
+
+\begin{document}
+
+\maketitle
+
+\section{Section 6.1--Complex Numbers}
+
+\subsection{Notes}
+
+\begin{itemize}
+\item
+Always convert square roots of negative numbers to imaginary numbers before doing anything else.  
+
+For example:
+\[
+  \sqrt{-4} \sqrt{-12} = i\sqrt{4} \cdot i\sqrt{12} = 2i^2 \sqrt{4 \cdot 3} = 4i^2 \sqrt{3} = -4 \sqrt{3}
+\]
+
+If you start out by multiplying $-4$ and $-12$, you'll end up with a positive answer instead of a negative one.
+
+\item
+Use the standard FOIL rules when multiplying two complex numbers.
+\[
+  (2 + 5i)(4 + 3i) = 8 + 6i + 20i + 15i^2 = 8 + 26i - 15 = -7 + 26i
+\]
+
+\item
+  To convert a fraction with an imaginary number in the denominator to standard form, multiply top and bottom by the
+  {\em complex conjugate} (the same number with the sign of the imaginary part reversed) of the denominator.
+
+\begin{align*}
+  \frac{2+7i}{3-2i} &= \frac{2+7i}{3-2i} \left( \frac{3+2i}{3+2i} \right) \\
+  &= \frac{6 + 4i + 21i + 14i^2}{9 - 4i^2} \\
+  &= \frac{6 + 25i - 14}{9 + 4} \\
+  &= \frac{-8 + 25i}{13} \\
+  &= - \frac{8}{13} + \frac{25}{13}i \\
+\end{align*}
+
+\end{itemize}
+
+\subsection{Examples}
+\begin{itemize}
+  \item $(5+2i) - (1 - 3i)$
+  \item $(\dfrac{2}{3}-\dfrac{1}{2}i) + (\dfrac{3}{5} + \dfrac{1}{3} i)$
+  \item $\sqrt{-40}$
+  \item $\sqrt{-4} \sqrt{-9}$
+  \item $(7+3i) (5 - 4i)$
+  \item $\dfrac{-3+i}{10-2i}$
+\end{itemize}
+
+\pagebreak
+
+\section{Section 6.2-6.5--Quadratic Equations}
+
+\subsection{Notes}
+\begin{itemize}
+\item
+You can solve equations where the left hand side is something squared by taking the square root of both sides.  Remember
+to include both the positive and negative square roots in the solution.  For example:
+\begin{align*}
+  (x+2)^2 = 9 \\
+  x+2 = \pm \sqrt{9} \\
+  x+2 = \pm 3 \\
+  x = -2 \pm 3 \\
+  x = \{-5, 1\} \\
+\end{align*}
+
+Make sure the entire left side is a square.  For example, with an equation like: \((x+2)^2  + 4 = 17 \), you would
+have to move the $4$ over to the right side before taking the square root.
+
+\item
+You can convert any equation to a form which is solvable using the above approach by ``completing the square.''  The steps are:
+\begin{enumerate}
+\item write the equation as: $x^2 + bx = -c$
+\item add $\dfrac{b^2}{4}$ (or, equivalently, $\left( \dfrac{b}{2} \right)^2$) to both sides
+\item factor the left side as: $\left(x + \dfrac{b}{2} \right)^2$
+\item solve by taking the square root of both sides
+\end{enumerate}
+
+\item You can solve any equation using the quadratic formula.  The steps are:
+\begin{enumerate}
+\item write the equation as: $ax^2 + bx + c = 0$
+\item make a note of the values for $a$, $b$, and $c$
+\item plug $a$, $b$, and $c$ into the quadratic formula, which is:
+\[
+  x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+\end{enumerate}
+
+\item
+You can check the solutions to any quadratic equation by adding and multiplying them together.  
+\begin{itemize}
+  \item the sum of the solutions should equal $- \dfrac{b}{a}$ 
+  \item the product of the solutions should equal $\dfrac{c}{a}$.
+\end{itemize}
+
+\item
+You can tell how many solutions to expect using the {\em discriminant}.  The discriminant is $b^2 - 4ac$.  The
+possibilities are:
+
+\begin{description}
+  \item[negative] two non-real solutions
+  \item[zero] one real solution
+  \item[positive] two real solutions
+\end{description}
+
+\item
+Usually there is more than one way to solve a particular quadratic equation.  Unless the instructions say to use a
+particular method, you should use whatever approach is easiest for you for that equation.
+
+\item
+There are some helpful suggestions for solving word problems on page 313 of the textbook.
+
+\end{itemize}
+
+\subsection{Examples}
+\begin{itemize}
+  \item $x^2 = -9$
+  \item $(x+2)^2 = 8$
+  \item $3(x+7)^2 -4 = 17$
+  \item solve $x^2+4x-2=0$ by completing the square
+  \item solve $x^2-7x+1=0$ using the quadratic formula
+  \item solve $x^2-6x+8=0$ using whatever approach seems most appropriate
+  \item word problems like the ones on pages 318-320
+\end{itemize}
+
+\pagebreak
+
+\section{Section 6.6--Inequalities}
+
+\subsection{Notes}
+To solve quadratic inequalities, you need to check all the points where the sign of the result might change.  This
+happens whenever the value of the equation is undefined or zero.  
+
+The procedure is:
+
+\begin{enumerate}
+\item find the points where the equation is zero or undefined.  These points divide the domain into different
+  regions where the sign of the result might change
+\item try a value from each region and see what the sign of the result is
+\item write the answer as a solution set
+\end{enumerate}
+
+\subsection{Examples}
+\begin{itemize}
+  \item $(x+2)(x-1) \geq 0$
+  \item $(x+1)(x-1)(x-3) < 0$
+  \item $\dfrac{-x+2}{x-1} \leq 0$
+\end{itemize}
+
+\end{document}

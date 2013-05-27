@@ -1,0 +1,259 @@
+
+\documentclass{exam}
+
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+% \oddsidemargin .5in
+% \topmargin -1in
+\textwidth 6.5 in
+
+\printanswers
+
+\ifprintanswers 
+\usepackage{2in1, lscape} 
+\fi
+
+\title{Physics \\ Homework Nine \\ Magnetism}
+\date{November 21, 2011}
+
+\begin{document}
+
+\maketitle
+
+\section{Homework}
+
+\begin{itemize*}
+  \item Read Chapter 14, sections 1-3
+  \item Chapter 14
+    \begin{itemize*}
+      \item questions 8-11, 15, 17
+      \item exercises 2, 4, 6-8
+      \item synthesis problems: 1-2
+    \end{itemize*}
+\end{itemize*}
+
+\section{Extra Credit}
+
+The magnitude of a proton or electron's charge is $1.6 \cdot 10^{-19} \ \coulomb$.
+
+\begin{questions}
+
+  \question An electron moving at $10 \ \meter \per \second$ in the positive $x$ direction experiences no magentic
+  force.  When it moves in the positive $y$ direction, it experiences a force of $2.0 \cdot 10^{-13} \ \newton$ in the
+  negative $z$ direction.  What is the direction and magnitude of the electric field? (James Walker)
+
+\begin{solution}
+
+Because the electron experiences no force when moving parallel to the $x$ axis, the magnetic field must also be parallel
+to the $x$ axis.  Because of the direction of the force experienced by the electron, the field is in the positive $x$
+axis direction.
+
+The magnitude is:
+\begin{align*}
+  F &= qvB \\
+  B &= \frac{F}{qv} \\
+    &= \frac{2.0 \cdot 10^{-13} \newton}{(1.6 \cdot 10^{-19} \ \coulomb)(10 \ \meter \per \second)} \\
+    &= 1.25 \cdot 10^5 \ \tesla \\
+\end{align*}
+
+\end{solution}
+
+\question 
+When at rest, a proton experiences a net electromagnetic force of $8.0 \cdot 10^{-13} \ \newton$ in the
+positive $x$ direction.  When the proton moves with a speed of $1.5 \cdot 10^6 \ \meter \per \second$ in the positive
+$y$ direction, the net electromagnetic force on it decreases in magnitude to $7.5 \cdot 10^{-13} \ \newton$, still
+pointing in the positive $x$ direction.  Find the magnitude and directions of the electric and magnetic fields. (James
+Walker)
+
+\begin{solution}
+The force the proton experiences when at rest is electrostatic since only moving protons are affected by magnetism.  The electric field is:
+\[
+  E = \frac{F}{q} = \frac{8.0 \cdot 10^{-13} \ \newton}{1.6 \cdot 10^{-19} \ \coulomb} = 5.0 \cdot 10^{6} \ \newton \per \coulomb
+\]
+
+When the proton is moving, it is also affected by the magnetic field:
+\begin{align*}
+  F_{total} &= F_{B} + F_{E} \\
+  7.5 \cdot 10^{-13} \ \newton &= F_{B} + 8.0 \cdot 10^{-13} \ \newton \\
+  F_{B} &= -5.0 \cdot 10^{-14} \ \newton \\
+\end{align*}
+
+The field can be determined from the force and velocity:
+\begin{align*}
+  F_{B} &= qvB \\
+  B &= \frac{F_{B}}{qv} \\
+    &= \frac{5.0 \cdot 10^{-14}}{(1.6 \cdot 10^{-19} \ \coulomb)(1.5 \cdot 10^6 \meter \per \second)} \\
+    &= 0.2 \ \tesla \\
+\end{align*}
+
+The force from the magenetic field must be in the opposite direction from the electrostatic force.  So the field is in the negative $z$ direction.
+
+
+\end{solution}
+
+\end{questions}
+
+\ifprintanswers
+
+\section{Questions}
+
+\begin{description}
+
+\item[Q8]
+The needle will deflect about $90 \degree$.
+
+\item[Q9]
+The needle is already pointing in the direction of the field, so it won't deflect.
+
+\item[Q10]
+Each wire has a balance of positive and negative charges, so there aren't any electrostatic forces and the only
+forces are magnetic.
+
+\item[Q11]
+There is a force pointing down.
+
+\item[Q15]
+The field points down at the center.
+
+\item[Q17]
+Using the right hand rule, the force at the top of the loop is to the left and the force at the bottom of the loop is to
+the right.  This combination wil make the loop rotate counterclockwise.
+
+\end{description}
+
+\section{Exercises}
+
+\begin{description}
+
+\item[E2]
+\[
+   \frac{F}{l} = \frac{2k'I_1I_2}{r} = \frac{2 (1 \cdot 10^{-7} \ \newton/\ampere^2) (4 \ \ampere)^2}{0.1 \ \meter}
+     = 3.2 \cdot 10^{-5} \ \newton \per \meter
+\]
+
+\item[E4]
+\begin{align*}
+  \frac{F}{l} &= \frac{2k'I_1I_2}{r} \\ 
+    r &= \frac{2k'I_1I_2}{F/l} \\ 
+     &= \frac{2 (1 \cdot 10^{-7} \ \newton/\ampere^2) (2 \ \ampere)^2}{1.6 \cdot 10^{-5} \ \newton \per \meter} \\
+     &= 5 \ \centi\meter \\
+\end{align*}
+
+\item[E6]
+\[
+  F = qvB = (0.06 \ \coulomb)(600 \ \meter \per \second)(0.5 \ \tesla) = 18 \ \newton
+\]
+
+\item[E7]
+\[
+  F = IlB = (5 \ \ampere)(0.1 \ \meter)(0.6 \ \tesla) = 0.3 \ \newton
+\]
+
+\item[E8]
+\begin{align*}
+  F &= IlB \\
+  B &= \frac{F}{Il} \\
+    &= \frac{6 \ \newton}{(5 \ \ampere)(0.3 \ \meter)} \\
+    &= 4 \ \tesla \\
+\end{align*}
+
+\end{description}
+
+\section{Synthesis Problems}
+\begin{description}
+
+\item[SP1]
+\begin{description}
+
+\item[a]
+\[
+   \frac{F}{l} = \frac{2k'I_1I_2}{r} = \frac{2 (1 \cdot 10^{-7} \ \newton/\ampere^2) (5 \ \ampere)(10 \ \ampere)}{0.05 \ \meter}
+     = 2 \cdot 10^{-4} \ \newton \per \meter
+\]
+
+\item[b]
+Since the currents are in opposite directions, the wires are repelled from each other.
+
+\item[c]
+\[
+  F = 2 \cdot 10^{-4} \ \newton \per \meter \cdot 0.3 \meter = 6 \cdot 10^{-5} \ \newton
+\]
+
+\item[d]
+\begin{align*}
+  F &= IlB \\
+  B &= \frac{F}{Il} \\
+    &= \frac{6 \cdot 10^{-5} \ \newton}{(10 \ \ampere)}{0.3 \ \meter} \\
+    &= 2 \cdot 10^{-5} \ \tesla
+\end{align*}
+
+
+\item[e]
+Using the right hand rule, the direction is down.
+
+\end{description}
+
+\item[SP2]
+\begin{description}
+
+\item[a]
+\[
+  F = qvB = (0.05 \ \coulomb)(200 \ \meter \per \second)(0.5 \ \tesla) = 5 \ \newton
+\]
+
+\item[b]
+up
+
+\item[c]
+Since the force is perpendicular to the velocity, it changes the direction but not the magnitude of the velocity.
+
+\item[d]
+\[
+  a = \frac{F}{m} = \frac{5 \ \newton}{0.025 \ \kilogram} = 200 \ \meter \per \second^2
+\]
+
+\item[e]
+\begin{align*}
+  a &= \frac{v^2}{r} \\
+  r &= \frac{v^2}{a} \\
+    &= \frac{(200 \ \meter \per \second)^2}{200 \ \meter \per \second^2} \\
+    &= 200 \ \meter \\
+\end{align*}
+
+\end{description}
+
+\end{description}
+
+\else
+
+\vspace{2 in}
+
+{\em 
+``Tell me one last thing,'' said Harry.  ``Is this real?  Or has it all been happening inside my head?''.  
+
+Dumbeldore beamed at him and his voice sounded loud and strong in Harry's ears even though the bright mist was
+descending again, obscuring his figure.
+
+``Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real?''
+}
+
+\vspace{.2 cm}
+
+\hspace{1 cm} --J. K. Rowling, {\em Harry Potter and the Deathly Hallows}
+\fi
+
+\end{document}
+

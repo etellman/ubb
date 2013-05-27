@@ -1,0 +1,374 @@
+
+\documentclass[fleqn,addpoints]{exam}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+
+\printanswers
+
+\ifprintanswers \usepackage{2in1, lscape} \fi
+
+\title{Math 115 Homework 2}
+\date{October 5, 2010}
+
+\begin{document}
+
+\maketitle
+
+\ifprintanswers
+\else
+\section{Key Points}
+\subsection{Symmetry}
+
+There are three kinds of symmetry:
+\begin{description}                    
+  \item[y-axis] whenever $(x, y)$ is on the graph, $(-x, y)$ is also on the graph.  To check for y-axis symmetry, plug
+    $-x$ into the equation and see if you end up with the same equation you started out with.  
+
+    An example of an equation with y-axis symmetry is $y=x^2$.
+
+  \item[x-axis] whenever $(x, y)$ is on the graph, $(x, -y)$ is also on the graph.  To check for x-axis symmetry, plug
+    $-y$ into the equation and see if you end up with the same equation you started out with.
+
+    An example of an equation with x-axis symmetry is $x=y^2$.
+
+  \item[origin] whenever $(x, y)$ is on the graph, $(-x, -y)$ is also on the graph.  To check for origin symmetry, plug
+    $(-x, -y)$ into the equation and see if you end up with the same equation you started out with.
+
+    An example of an equation with origin symmetry is $y=x^3$.
+\end{description}
+
+\subsection{Intercepts}
+Intercepts are points where the graph of an equation crosses one of the axes.
+\begin{description}
+  \item[x-intercept] the x-intercepts happen when $y$ is 0, so to find the x-intercepts, set $y$ to 0 and solve for x.
+  \item[y-intercept] the y-intercepts happen when $x$ is 0, so to find the y-intercepts, set $x$ to 0 and solve for y.
+\end{description}
+
+\subsection{Functions}
+
+\begin{itemize}
+
+\item A function converts values from its {\em domain} to values in its {\em range}.
+
+% \item functional notation:
+% \begin{description}
+%   \item[f, g, etc.] the name of the function
+%   \item[$f(x)$, $g(x)$, etc] the value of the function at $x$
+%   \item[x] the independent variable
+% \end{description}
+
+\item Each number in the domain goes with a single number in the range.  A number in the range may go with more than one
+  number in the domain.  
+
+  For example, the domain of $f(x) = x^2$ is any real number.  Both $-2$ and $2$ are in the
+  domain, $4$ is in the range, and $f(-2) = f(2) = 4$.
+
+\item You can check if a graph is a graph of a function by drawing vertical lines in the graph.  If you can find a place
+  where a vertical line intersects the graph in more than one point, then the graph is not a graph of a function.
+
+\item a dotted line on a graph of a function usually marks points which are not in the domain or range of the function
+
+\item {\em even} functions have y-axis symmetry and {\em odd} functions have origin symmetry
+
+\end{itemize}
+
+\pagebreak
+
+\fi
+
+\section{Homework}
+
+\subsection{From the Book}
+
+Read pages 17-22 and 31-43.
+ 
+\begin{itemize}
+  \item p. 22: 7-9, 12-13, 15, 27-28
+  \item pp. 43: 1, 3-9, 12, 15-17, 19, 22-23, 26-27, 35-36, 40-43
+\end{itemize}
+
+\ifprintanswers
+\section{Page 22}
+\begin{itemize}
+
+\item[7]
+\begin{align*}
+  x + y &= 1 \\
+  y &= -x + 1 \\
+\end{align*}
+
+no symmetry
+
+\item[8]
+\begin{align*}
+  2x - y &= 2 \\
+  -y &= -2x + 2 \\
+  y &= 2x - 2 \\
+\end{align*}
+
+no symmetry
+\item[9]
+\[
+  y = x^2 - 1 
+\]
+
+y-axis symmetry
+
+\item[12]
+\[
+  3y = x^2 \\
+\]
+y-axis symmetry
+
+\item[13]
+\[
+  x = y^2
+\]
+
+x-axis symmetry
+
+\item[15]
+\[
+  y = x^3 + 1 
+\]
+
+no symmetry
+
+% \item[20]
+% \[
+%   y = \sqrt{x-1}
+% \]
+
+% no symmetry
+
+% \item[22]
+% \[
+%   (x-1)^2 + y^2 = 1
+% \]
+
+% x-axis symmetry
+
+\item[27]
+\[
+  y = |x| - 1
+\]
+
+y-axis symmetry
+
+\item[28]
+\[
+  y = 2 - |x|
+\]
+
+y-axis symmetry
+
+\end{itemize}
+
+\section{Pages 43-46}
+\begin{itemize}
+
+\item[1]
+\begin{itemize}
+\item $f(2) = 4 \cdot 2^2 + 5 = 21$
+\item $f(\sqrt{3}) = 4(\sqrt{3})^2 + 5 = 4 \cdot 3 + 5 = 17$
+\item $f(2 + \sqrt{3}) = 4(2 + \sqrt{3})^2 + 5 = 33 + 16 \sqrt{3}$
+\item $f(2) + f(\sqrt{3}) = 21 + 17 = 38$
+\item $f(2x) = 4(2x)^2 + 5 = 16x^2 + 5$
+\item $f(1-x) = 4(1-x)^2 + 5 = 4(1-2x+x^2) + 5 = 4x^2-8x+9$
+\end{itemize}
+
+\item[3-8]
+numbers 3, 5, and 8 are functions
+
+\item[9]
+domain and range: $(-\infty, 0) \cup (0, \infty)$
+
+\item[12]
+domain: $(-\infty, 2)$
+range: $(0, \infty)$
+
+\item[15]
+\[
+  f(x) = \frac{x^4-x^2}{x^2-1} = \frac{x^2\cancel{(x^2-1)}}{\cancel{x^2-1}} = x^2
+\]
+
+In the original equation, $x$ can't be $-1$, since this would make the denominator zero.  So the domain is $(-\infty, -1) \cup (-1, 1) \cup (1, \infty)$.
+
+The range is: $[0, 1) \cup (1, \infty)$.
+
+\item[16]
+\[
+  f(x) = \frac{1}{\sqrt{x-3}}
+\]
+
+The domain is the values where $x-3>0$ or $(3, \infty)$
+
+The range is: $(0, \infty)$
+
+\item[17]
+\[
+  f(x) = \sqrt{x(x-2)}
+\]
+
+The domain is the values where $x(x-2) \geq 0$ or $(-\infty, 0] \cup [2, \infty)$
+
+The range is $[0, \infty]$
+
+\item[19]
+The domain is $(-\infty, \infty)$ and the range is $\{-1, 1\}$.
+
+\item[22]
+This is a function of $x$.  Each value for $x$ gives exactly one value for $y$.
+
+\item[23]
+This does not describe $y$ as a function of $x$.  When $x=4$, for example, $y$ might be either $-1$ or $1$, so a single
+value of $x$ corresponds to more than one value for $y$. 
+
+\item[26]
+\begin{align*}
+  f(x) &= x^2 + 2x + 3 \\
+  f(-x) &= (-x)^2 + 2(-x) + 3  = x^2 - 2x + 3\\
+  -f(x) &= -(x^2 + 2x + 3) = -x^2 - 2x - 3 \\
+  f\left( \frac{1}{x} \right) &= \left( \frac{1}{x} \right)^2 + 2 \left( \frac{1}{x} \right) + 3 
+      = \frac{1}{x^2} + \frac{2}{x} + 3 \\
+  \frac{1}{f(x)} &= \frac{1}{x^2 + 2x + 3} \\
+  f(\sqrt{x}) &= (\sqrt{x})^2 + 2\sqrt{x} + 3 = x + 2 \sqrt{x} + 3 \\
+  \sqrt{f(x)} &= \sqrt{x^2 + 2x + 3} \\
+\end{align*}
+
+\item[27]
+\begin{align*}
+  f(x)  &= \dfrac{1}{x} \\
+  f(-x) &= - \dfrac{1}{x} \\
+  -f(x) &= - \dfrac{1}{x} \\
+  f\left( \frac{1}{x} \right) &= \frac{1}{1/x} = x \\
+  \dfrac{1}{f(x)} &= \frac{1}{1/x} = x \\
+  f(\sqrt{x}) &= \dfrac{1}{\sqrt{x}} = \frac{\sqrt{x}}{x} \\
+  \sqrt{f(x)} &= \sqrt{\dfrac{1}{x}} = \frac{\sqrt{x}}{x} \\
+\end{align*}
+
+\item[35]
+  $f(x) = x^2$
+
+\[
+f(x+h) = (x + h)^2  = x^2 + 2xh + h^2 \\
+\]
+
+\begin{align*}
+  \frac{f(x+h) - f(x)}{h} &= \frac{x^2 + 2xh + h^2 - x^2}{h} \\
+  &= \frac{\cancel{h}(2x + h)}{\cancel{h}} \\
+  &= 2x + h \\
+\end{align*}
+
+\item[36]
+  $f(x) = 4x^2 + 3x + 1$
+
+\begin{align*}
+  f(x+h) &= 4(x + h)^2 + 3(x+h) + 1 \\
+         &= 4(x^2 + 2xh + h^2) + 3x + 3h + 1 \\
+         &= 4x^2 + 8xh + 4h^2 + 3x + 3h + 1 \\
+         &= 4x^2 + 8xh + 4h^2 + 3x + 3h + 1 \\
+\end{align*}
+
+\begin{align*}
+  \frac{f(x+h) - f(x)}{h} &= \frac{4x^2 + 8xh + 4h^2 + 3x + 3h + 1 - (4x^2 + 3x + 1)}{h} \\
+  &= \frac{4x^2 + 8xh + 4h^2 + 3x + 3h + 1 - 4x^2 - 3x - 1}{h} \\
+  &= \frac{8xh + 4h^2 + 3h)}{h} \\
+  &= \frac{\cancel{h} (8x + 4h + 3)}{\cancel{h}} \\
+  &= 8x + 4h + 3 \\
+\end{align*}
+
+\item[40]
+even
+
+\item[41]
+neither odd nor even
+
+\item[42]
+odd
+
+\item[43]
+\begin{itemize}
+\item[a] even
+\item[b] neither even nor odd
+\item[c] odd
+\item[d] neither even nor odd
+\item[e] neither even nor odd
+\item[f] neither even nor odd
+\item[g] even
+\item[h] odd
+\end{itemize}
+
+% \item[28]
+% \begin{align*}
+%   f(x) &= \sqrt{x} \\
+%   f(-x) &= \sqrt{-x} \\
+%   -f(x) &= - \sqrt{x} \\
+%   f \left( \frac{1}{x} \right) &= \sqrt{\dfrac{1}{x}} = \frac{\sqrt{x}}{x} \\
+%   \dfrac{1}{f(x)} &= \dfrac{1}{\sqrt{x}} = \frac{\sqrt{x}}{x} \\
+%   f(\sqrt{x}) &= \sqrt[4]{x} \\
+%   \sqrt{f(x)} &= \sqrt[4]{x} \\
+% \end{align*}
+
+\end{itemize}
+
+% \pagebreak
+
+\fi
+
+\subsection{Extra Credit}
+\begin{questions}
+
+\question
+
+There are twenty coins sitting on the table, ten are currently heads and tens are currently tails. You are sitting at
+the table with a blindfold and gloves on. You are able to feel where the coins are, but are unable to see or feel if
+they heads or tails. You must create two sets of coins. Each set must have the same number of heads and tails as the
+other group. You can only move or flip the coins, you are unable to determine their current state. How do you create two
+even groups of coins with the same number of heads and tails in each group?
+
+\begin{solution}
+
+First divide the coins arbitrarily into two groups of 10.  If the first group has $x$ heads, the numbers of heads and
+tails in the two groups will be:
+
+\begin{tabular}{|c||c|c||c|}
+\hline
+         & group one & group two & total   \\
+\hline
+   heads &    $x$      &    $10-x$   & 10      \\
+   tails &    $10-x$   &    $x$      & 10      \\
+\hline
+   total &    10     &    10     & 10      \\
+\hline
+\end{tabular}
+
+For example, if the first group has 7 heads and 3 tails, the other group will have 3 heads and 7 tails.  
+
+So all you need to do to get the same number of heads and tails in each group is to flip over all the coins in the
+second group.  Then the second group also will have $x$ heads and $10-x$ tails.
+
+\end{solution}
+
+\end{questions}
+
+\ifprintanswers
+\else
+\vspace{5 in}
+
+% {\em The more you can increase fear of drugs and crime, welfare mothers, immigrants and aliens, the more you control all
+%  the people. }
+
+{\em Any dictator would admire the uniformity and obedience of the U.S. media.}
+
+\vspace{.1 cm}
+\hspace{1 cm} --Noam Chomsky
+
+\fi
+
+\end{document}
+

@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+my $a = 1;
+my $b = 1/1024;
+
+foreach my $i (1..20) {
+    print "$a,$b\n";
+    ($a, $b) = ($a * $a - $b * $b, 2 * $a * $b);
+}

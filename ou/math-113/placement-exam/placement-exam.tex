@@ -1,0 +1,418 @@
+\documentclass[fleqn,addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\title{Math 113 Placement Exam}
+\author{}
+\date{January 13, 2010}
+
+% \oddsidemargin 0in
+% \topmargin -0.5in
+% \textwidth 6.5in
+
+\extrawidth{-1 in}
+\setlength{\mathindent}{0in}
+
+\printanswers
+
+\begin{document}
+
+\maketitle
+
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\begin{center}
+\gradetable[h][pages]
+\end{center}
+
+\section{Introduction}
+
+This exam is intended to help you determine if you are enrolled in the appropriate math course.  You should be familiar
+with most of the material on this exam before taking Math 113.  
+
+According to the Ohio University {\em Teacher's Guide}, if you score:
+
+\begin{itemize}
+  \item 60\%-100\%--you should be OK
+  \item 40\% - 59\%--you may be OK if you are can put in some additional effort at the beginning to catch up to the other
+    students. 
+  \item 0\% - 40\%--you should consider taking Math 101 instead.
+\end{itemize}
+
+No calculators.
+
+If you need more space or scratch paper, ask Carol.
+
+\ifprintanswers
+
+\vspace{0.5 in}
+
+  \begin{em}
+    Math is hard enough, so you should do everything you can to make it easier.  Here are some things you can often do:
+    \begin{itemize}
+      \item Reorder the equations a bit before doing any calculations.  When you do this, you may find that
+            some terms cancel out or you do less work finding common denominators, and you end up doing less work in
+            the end. 
+
+      \item Do as much simplification as you can before plugging in actual values for the variables.  For example,
+        suppose the problem is to evaluate this equation for \( n = 5 \):
+        
+        \[ 17n^2 - 3n - 16n^2 \]
+
+        If you just work from left to right, you have to figure out what \( 17 \cdot 25 \) is, then subtract \( 15 \),
+        then figure out what \( 16 \cdot 25 \) is and subtract that.  If you do all this correctly, you will end up with
+        the right answer.  But there is a lot of opportunity to make an arithmetic mistake.  So a better approach is to
+        turn the original equation into:
+
+        \[ 17n^2 - 16n^2 - 3n = n^2 - 3n \]
+
+        Then you just have to figure out what \( 25 - 15 \) is, which you can easily do in your head.
+    \end{itemize}
+
+    Reordering equations is good.  But don't try to take to many shortcuts in your head, as you are more likely to make
+    a mistake.  Paper is pretty cheap, so don't try to save it by doing several steps at once in your head.  When you do
+    this, you are likely to forget a term, write a term twice, etc.
+
+    An exponent goes with whatever it is next to and nothing else.  If the exponent is next to a parenthisized
+    expression, it applies to whole expression:
+
+    \begin{eqnarray*}
+      -2^2 & = & - (2 \cdot 2) = -4 \\
+      (-2)^2 & = & (-2) \cdot (-2) = 4 \\
+      2x^2 & = & 2 \cdot x \cdot x \\
+      (2x)^2 & = & (2 \cdot x) \cdot (2 \cdot x) = 4x^2 \\
+    \end{eqnarray*}
+
+    You should always show your work.  If you show your work and make a minor arithmetic error, you usually get most of
+    the credit.  If you don't show your work and just write an incorrect answer, you won't get any credit, since I won't
+    have any idea how you arrived at that answer.  If you need more room and use a separate piece of paper, write your
+    name on that paper and make it possible to identify which work goes with which problem.
+
+  \end{em}
+
+\fi
+
+\section{Questions}
+
+\subsection{Numerical Expressions}
+
+For problems \ref{ne:first}-\ref{ne:last}, simplify or evaluate each numerical expression.
+
+\begin{questions}
+
+\question[5]
+\label{ne:first}
+\( -7 + 4 - (-5) + 7 + 10 \)
+
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+    -7 + 4 - (-5) + 7 + 10 & = & 7 - 7 + 4 + 5 + 10 \\
+                           & = & 4 + 5 + 10 \\
+                           & = & 19 \\
+  \end{eqnarray*}
+\end{solution}
+
+\question[5]
+\( \displaystyle
+  \frac{1}{3} + \frac{1}{2} 
+\)
+
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+    \frac{1}{3} + \frac{1}{2} & = & \frac{2}{6} + \frac{3}{6} \\
+                              & = & \frac{5}{6} \\
+  \end{eqnarray*}
+\end{solution}
+
+\question[5]
+\( \displaystyle
+  5 (-\frac{1}{3}) - 3(-\frac{1}{2}) - 2(\frac{2}{3}) + 1 
+\)
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+    5 (-\frac{1}{3}) - 3(-\frac{1}{2}) - 2(\frac{2}{3}) + 1 & = & -\frac{5}{3} - \frac{4}{3} + \frac{3}{2} + 1 \\
+    & = & \frac{3}{2} - \frac{9}{3} + 1 \\
+    & = & \frac{3}{2} - 3 + 1 \\
+    & = & \frac{3}{2} - 2 \\
+    & = & \frac{3}{2} - \frac{4}{2} \\
+    & = & -\frac{1}{2} \\
+  \end{eqnarray*}
+\end{solution}
+
+\question[5]
+\( \displaystyle
+( \frac{1}{2} + \frac{3}{5} ) + \frac{1}{5} + (\frac{1}{2} \cdot 8 + \frac{1}{2})
+\)
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+    (\frac{1}{2} + \frac{3}{5} ) + \frac{1}{5} + (\frac{1}{2} \cdot 8 + \frac{1}{2})
+      & = & \frac{1}{2} + \frac{1}{2} + \frac{3}{5} + \frac{1}{5} + \frac{8}{2} \\
+      & = & 1 + \frac{4}{5} + 4 \\
+      & = & 5\ 4/5 \\
+  \end{eqnarray*}
+\end{solution}
+
+\question[5]
+\(
+  [57 + (-93)] + (-58)
+\)
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+    [57 + (-93)] + (-58)
+      & = & 57 - 58 - 93 \\
+      & = & -1 - 93 \\
+      & = & -94 \\
+  \end{eqnarray*}
+\end{solution}
+
+\question[5]
+\(
+  3(-2)^3 + 4(-2)^2 -9(-2) - 14
+\)
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+    3(-2)^3 + 4(-2)^2 -9(-2) - 14
+      & = & 3(-8) + 4(4) + 18 - 14 \\
+      & = & -24 + 16 + 4 \\
+      & = & -24 + 20 \\
+      & = & -4 \\
+  \end{eqnarray*}
+\end{solution}
+
+\question[5] Simplify \( 6x^2 - 7x - 2x^2 - 9x - 2 \) by combining similar terms.
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+    6x^2 - 7x - 2x^2 - 9x - 2
+      & = & 4x^2 -7x -9x -2 \\
+      & = & 4x^2 -16x -2 \\
+  \end{eqnarray*}
+\end{solution}
+
+\question[5] \label{ne:last} Simplify \( 3(3x + 2) -5(2x - 3) + 2(-3x - 1) \) by combining similar terms.
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+    3(3x + 2) -5(2x - 3) + 2(-3x - 1)
+      & = & 9x + 6 - 10x + 15 - 6x - 2 \\
+      & = & 9x -10x - 6x + 6 + 15 - 2 \\
+      & = & -7x + 19 \\
+  \end{eqnarray*}
+\end{solution}
+
+
+\subsection{Evaluating Algebraic Expressions}
+
+
+For problems \ref{ae:first}-\ref{ae:last}, evaluate each algebraic expression for the given values of the variables.
+
+\question[5] \label{ae:first}
+\( 5x + 2y \) for \( x = -6 \) and \( y = 5 \)
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+    5x + 2y & = & 5(-6) + 2(5)    \\
+      & = & -30 + 10  \\
+      & = & -20 \\
+  \end{eqnarray*}
+\end{solution}
+
+
+\question[5]
+\( 8a^2 - 2b^2 \) for \( \displaystyle a = -\frac{3}{4} \) and \( \displaystyle b = \frac{1}{2} \)
+
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+    8a^2 -2b^2  & = & 8(-\frac{3}{4})^2 - 2(\frac{1}{2})^2    \\
+      & = & 8(\frac{9}{16}) - 2(\frac{1}{4})  \\
+      & = & \frac{9}{2} - \frac{1}{2} \\
+      & = & \frac{8}{2} \\
+      & = & 4
+  \end{eqnarray*}
+\end{solution}
+
+\question[5]
+\( -5n^2 - 6n + 7n^2 + 5n - 1 \) for \( n = -6 \)
+
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+    -5n^2 - 6n + 7n^2 + 5n - 1  & = & 7n^2 - 5n^2 + 5n - 6n - 1 \\
+      & = & 2n^2 - n - 1 \\
+      & = & 2(-6)^2 - n - 1 \\
+      & = & 2(36) - (-6) - 1 \\
+      & = & 72 + 6 - 1 \\
+      & = & 77
+  \end{eqnarray*}
+\end{solution}
+
+\question[5]
+\( -2xy - x + 4y \) for \( x = -3 \) and \( y = 9 \)
+
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+     -2xy - x + 4y  & = & -2(-3)(9) - (-3) + 4(9) \\
+      & = & 6(9) + 3 + 36  \\
+      & = & 54 + 3 + 36 \\
+      & = & 90 + 3 \\
+      & = & 93 \\
+  \end{eqnarray*}
+\end{solution}
+
+\question[5]
+\( 4(n^2 + 1) - (2n^2 + 3) -2(n^2 + 3n) \) for \( n = -4 \)
+
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+     4(n^2 + 1) - (2n^2 + 3) -2(n^2 + 3n)   & = & 4n^2 + 4 - 2n^2 - 3 -2n^2 - 6n \\
+      & = & 4n^2 - 2n^2 - 2n^2 -6n + 4 - 3 \\
+      & = & -6n + 1 \\
+      & = & -6(-4) + 1 \\
+      & = & 25 \\
+  \end{eqnarray*}
+\end{solution}
+
+\question[5]  \label{ae:last}
+The formula to convert Farenheit to Celsius is: \(\displaystyle C = \frac{5}{9}(F - 32) \). 
+
+What is the Celsius value for \(104^{\circ}\) Farenheit? 
+
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+      \frac{5}{9}(F - 32) & = & \frac{5}{9}(104 - 32) \\
+      & = & \frac{5}{9}(72) \\
+      & = & 5(\frac{72}{9}) \\
+      & = & 5(8) \\
+      & = & 40 \\
+  \end{eqnarray*}
+\end{solution}
+
+\subsection{English to Algebraic Expression}
+
+For problems \ref{eae:first} to \ref{eae:last} answer each question with an algebraic expression.
+
+Example:
+
+\hspace{1 cm} {\em x} is 10 more than half {y}.
+
+Solution:
+
+\hspace{1 cm} \(\displaystyle x = \frac{y}{2} + 10 \)
+
+\vspace{1 cm}
+
+\question[5] \label{eae:first}
+The product of {\em x} and {\em y} is 85.  What is {\em y} in terms of {\em x}?
+
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+      xy & = & 85 \\
+      y  & = & \frac{85}{x} \\
+  \end{eqnarray*}
+\end{solution}
+
+\question[5] 
+Joe has {\em n} nickels, {\em d} dimes, and {\em q} quarters.  How much money, in cents, does he have?
+
+\begin{solution}[3 cm]
+  \begin{eqnarray*}
+      m & = & 5n + 10d + 25q 
+  \end{eqnarray*}
+\end{solution}
+
+
+\question \label{eae:last} 
+Although the United States only has 5\% of the world's population, it has a very impressive 25\% of the world's prison
+population.
+
+\ifprintanswers
+  \begin{em}
+  25\% is the same as \( 25/100 \) which reduces to \( 1/4 \).  Many people seemed confused about this point, so the
+  problem would probably have been much easier if it had been phrased as:  
+
+  {\em The US has \( 1/4 \) of the world's prison population}.
+
+  The 5\% number is just interesting background information which is not used in the solution.
+
+  \end{em}
+\fi
+
+\begin{parts}
+\part[5] If the US prison population is {\em U} and the world prison population is {\em W}, what is {\em W} in terms of
+  {\em U}?
+
+
+\begin{solution}[3 cm]
+
+  \begin{eqnarray*}
+      U & = & \frac{25}{100} W \\
+        & = & \frac{1}{4} W \\
+      W & = & 4U
+  \end{eqnarray*}
+
+\end{solution}
+
+\part[5]
+If the US prison population is {\em U} and the rest of the world's prison population (excluding
+the US) is {\em R}, what is {\em R} in terms of {\em U}? 
+
+\begin{solution}[3 cm]
+
+  \begin{eqnarray*}
+      U & = & \frac{25}{100} W \\
+      R & = & \frac{75}{100} W \\
+      \frac{R}{U} & = & \frac{75}{100} \cdot \frac{100}{25} \\
+      \frac{R}{U} & = & \frac{75}{25} \\
+      \frac{R}{U} & = & 3 \\
+      R           & = & 3U \\
+  \end{eqnarray*}
+\end{solution}
+
+\end{parts}
+
+
+\noaddpoints
+
+\subsection{Extra Credit}
+
+\question
+Alice and Carol run a 100 meter race and Alice wins by 10 meters.  To make the race more interesting the next time,
+they decide that Alice should start 10 meters behind the starting line.
+
+\begin{parts}
+\part[5]
+Is the second race a tie?  If not, who wins and why?
+
+\begin{solution}[6 cm]
+
+Alice also wins the second race.  Alice runs 100 meters in the same time Carol runs 90 meters.  In the second race Alice
+starts 10 meters behind.  So after Carol has run 90 meters, the runners are tied.  Alice is the faster runner, so she
+runs the last 10 meters faster and wins the race.
+
+\end{solution}[
+\part[5]
+If the second race is not a tie, how much does the winner win by?
+
+\begin{solution}
+
+Since Alice runs 100 meters in time it takes Carol to run 90 meters, Alice runs 10 meters in the time it takes Carol to run
+9 meters.  Since the runners are tied after 90 meters, Carol has only run 9 meters more when Alice finishes.  So Carol loses the
+race by a single meter.
+
+Another way to look at it is that Carol only runs at \( 9/10 \) of Alice's speed.  Alice needs to run 110 meters.  In this
+time, Carol can run 
+\begin{eqnarray*}
+  \frac{9}{10} \cdot 110 \text{ meters} & = & 9 (\frac{110}{10}) \text{ meters} \\
+    & = & 9 \cdot 11 \text{ meters} \\
+    & = & 99 \text{ meters} \\
+\end{eqnarray*}
+
+Carol has only run 99 meters when Alice finishes the race.  So Carol loses by a single meter.
+
+\end{solution}
+
+\end{parts}
+
+\end{questions}
+
+\end{document}
+
+

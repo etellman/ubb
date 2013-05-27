@@ -1,0 +1,637 @@
+
+\documentclass{exam}
+
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+
+% \oddsidemargin .5in
+% \topmargin -1in
+\textwidth 6.5 in
+
+\printanswers
+
+\ifprintanswers 
+\usepackage{2in1, lscape} 
+\fi
+
+\title{Physics \\ Homework Three}
+\date{September 26, 2011}
+% \author{Ed Tellman}
+
+\begin{document}
+
+\maketitle
+
+\section{From the Book}
+
+\begin{itemize*}
+  \item Read Chapter 5 and 6.1-6.4
+  \item Chapter 5
+    \begin{itemize*}
+      \item questions 3, 4, 5, 12, 22, 25
+      \item exercises 1, 4, 6, 11, 12
+      \item synthesis problems 1-5
+    \end{itemize*}
+  \item Chapter 6
+    \begin{itemize*}
+      \item questions 1, 3-5, 8, 12-14, 22, 30
+      \item exercises 1-6, 8, 11-12, 14, 16
+      \item synthesis problems 1-2, 5
+    \end{itemize*}
+\end{itemize*}
+
+\section{Extra Credit}
+
+\begin{questions}
+
+\question 
+You find yourself in the space shuttle trying to reach a satellite you are supposed to repair.  The
+satellite is in the same orbit as you but a few miles ahead.  You feel a bit frustrated, because if you fire your
+rocket, you shoot out to a higher orbit and if you flip around and fire your engine in reverse, you
+fall down to a lower orbit.  How can you catch up to the satellite so you can repair it?
+
+\begin{solution}
+  First flip around and fire your engine in reverse, so you drop down to a lower orbit.  In your new orbit, you will make
+  a trip around the earth more quickly than the satellite, since your new radius is smaller.  In a little while you will
+  catch up to the satellite, but be below it (closer to the earth).  When you catch up, fire your rocket again, in the
+  other direction, to boost yourself up to where the satellite is.
+\end{solution}
+
+\question 
+A 1000 kg drag racer deploys its drag chute to slow down after it crosses the finish line.  What force must
+the chute exert on the car to slow it from from 100 m/s to 25 m/s in 200 m?  ({\em This is last week's problem, but this
+time solve it using work and kinetic energy instead of Newton's laws.  It's much easier this way.})
+
+\begin{solution}
+
+The initial and final kinetic energies are:
+\begin{align*}
+  K_0 &= \frac{1}{2} (1000 \text{ kg})(100 \text{ m/s})^2 = 5 \cdot 10^6 \text{ J} \\
+  K_1 &= \frac{1}{2} (1000 \text{ kg})(25 \text{ m/s})^2 =  3.125 \cdot 10^5 \text{ J} \\
+\end{align*}
+
+The work is the change in energy, or: $W = - 4.69 \cdot 10^6 \text{ J}$.  And, since $W = Fd$:
+
+\begin{align*}
+  - 4.69 \cdot 10^6 \text{ J} &= F \cdot 200 \text{ m} \\
+  F &= -23,437 \text{ N} \\
+\end{align*}
+
+which is the same as the answer from last week (although I included a few more significant digits this week).
+
+\end{solution}
+
+\question 
+
+You just purchased a new slingshot and are curious to figure out how far it can shoot.  Of course, you don't
+want to actually try it, and would much prefer to do a few calculations.  You know that if you pull the elastic back 0.3 m
+and launch a 0.5 kg projectile straight up, the projectile will go to a height of 30 m.
+
+\begin{parts} 
+
+\part What is the spring coefficient k, assuming the elastic behaves like a spring?
+
+\begin{solution}
+At the peak of the flight, all the energy from the slingshot has been converted to potential energy.  At this point, it
+has 
+\[
+  U = mgh = (.5 \text{ kg})(9.8 \text{ m/s}^2)(30 \text{ m}) = 147 \text{ J}
+\]
+of energy.
+
+Originally, all this energy was in the slingshot:
+\begin{align*}
+  E_{spring} &= \frac{1}{2} kx^2 \\
+  147 \text{ J} &= \frac{1}{2}k(.3 \text{ m})^2 \\
+  k &= 3,267 \text{ N/m} \\
+\end{align*}
+
+\end{solution}
+
+\part How far will the 0.5 kg projectile travel if launched at a $45 \degree$ angle?
+
+\begin{solution}
+
+Immediately after the projectile is launched, all the energy is kinetic energy.  We can use this information to figure
+out the launch velocity:
+\begin{align*}
+  E_{kinetic} &= \frac{1}{2} mv^2 \\
+  147 \text{ J} &= \frac{1}{2}(0.5 \text{ kg})v^2 \\
+  v &\approx 24.2 \text{ m/s} \\
+\end{align*}
+
+The y-component of the velocity is $v_y =  (24 \text{ m/s})(\sin 45 \degree) = 17.1 \text{ m/s}$.  The x-component is the same,
+since the launch angle is $45 \degree$.
+
+The peak of the flight is reached when $v_y = 0$:
+\begin{align*}
+  v_y &= v_{0y} + at \\
+  0 &= (17 \text{ m/s}) - (9.8 \text{ m/s}^2)t \\
+  t &= 1.75 \text{ s} \\
+\end{align*}
+
+The total flight time is twice this, or 3.5 s.  In this time, the projectile travels:
+\[
+  x = (17.1 \text{ m/s}) \cdot (3.5 \text{ s}) \approx 60 \text{ m} 
+\]
+
+\end{solution}
+
+\end{parts} 
+
+\end{questions}
+
+\ifprintanswers
+
+\section{From the Book}
+
+\subsection{Chapter 5}
+\begin{description}
+
+\item[Q3]
+The faster moving car has experienced a greater change in velocity.  For example, it may have gone from traveling 60 mph
+North to 60 mph East which is a bigger change than going from 1 mph North to 1 mph East.
+
+\item[Q4]
+The car traveling around the curve with the smaller radius experiences the larger change in velocity.
+
+The bigger the radius the more closely the curve approximates a straight line.  A car traveling at a constant speed in a
+straight line experiences no change in velocity, and the closer the curve is to a straight line, the smaller the change
+in velocity.
+
+\item[Q5]
+The speed enters once because of the effect described in Q3.  The other reason the speed appears is that a faster moving object
+moves farther in each time interval.  So, for example, if you look at object every second, a faster moving object will
+have experienced a greater change than a slower moving object.
+
+\item[Q12]
+Since the object is moving at a constant speed, the centripetal force is constant throughout the motion.  At the bottom
+of the circle, the object's weight contributes to the tension in the string.  At the top of the circle, the object's
+weight subtracts from the tension in the string.  So the tension is greatest at the bottom of the circle.
+
+\item[Q22]
+Since $m_2$ is closer to $m_1$ than $m_3$, the attraction between $m_1$ and $m_2$ is greater than the attraction between $m_2$ and $m_3$, so
+the net force is to the left.
+
+\item[Q25]
+We have a new moon when the moon is roughly between the earth and the sun.  So the new moon rises and sets at about the
+same times the sun rises and sets.
+
+\item[E1]
+\[
+  a = \frac{v^2}{r} = \frac{(5 \text{ m/s})^2}{.8 \text{ m}} = 31.25 \text{ m/s}^2
+\]
+
+\item[E4]
+\begin{align*}
+  a_{60} &= \frac{(60 \text{ m/h})^2}{r} = \frac{3600}{r} \text{m/h}^2 \\
+  a_{30} &= \frac{(30 \text{ m/h})^2}{r} = \frac{900}{r} \text{m/h}^2 \\
+  \frac{a_{60 mph}}{a_{30 mph}} &= \frac{3600}{900} = 4 \\ 
+\end{align*}
+The faster car has 4 times the acceleration.
+
+\item[E6]
+\begin{description}
+\item[a]
+\[
+  a = \frac{v^2}{r} = \frac{(20 \text{ m/s})^2}{40 \text{ m}} = 10 \text{ m/s}^2
+\]
+
+\item[b]
+\[
+  F = ma = (1,200 \text{ kg}(10 \text{ m/s}^2) = 12,000 \text{ N}
+\]
+
+\end{description}
+
+\item[E11]
+Increasing the distance by a factor of 3 reduces the force by a factor of $3^2$ so the new force will be 
+\[
+  \frac{0.36 \text{ N}}{9} = 0.04 \text{ N}
+\]
+
+\item[E12]
+\[
+  F_g = \frac{Gm_1m_2}{r^2} = 6.67 \cdot 10^{-11} \cdot 200 \cdot 200 \text{ N} = 2.67 \cdot 10^{-6} \text{ N}
+\]
+
+\item[SP1]
+\begin{description}
+\item[a]
+\[
+  a = \frac{v^2}{r} = \frac{(4.0 \text{ m/s})^2}{.6 \text{ m}} = 26.67 \text{ m/s}^2
+\]
+
+\item[b]
+\[
+  F = ma = (0.2 \text{ kg})(26.7 \text{ m/s}^2) \approx 5.33 \text{ N}
+\]
+
+\item[c]
+\[
+ F = ma =  (0.2 \text{ kg})(9.8 \text{ m/s}^2) \approx 1.96 \text{ N}
+\]
+
+\item[d]
+\[
+  F = \sqrt{1.96^2 + 5.33^2} \text{ N} = 5.68 \text{ N}
+\]
+\end{description}
+
+\item[SP2]
+\begin{description}
+\item[a]
+\[
+  s = \frac{d}{t} = \frac{2 \pi \cdot 12 \text{ m}}{8 \text{ s}} = 9.4 \text{ m/s}
+\]
+
+\item[b]
+\[
+ a = \frac{v^2}{r} = \frac{(9.4 \text{ m/s})^2}{12 \text{ m}} = 7.4 \text{ m/s}^2
+\]
+
+\item[c]
+\[
+  F = ma = (40 \text{ kg})(7.4 \text{ m/s}^2) \approx 296 \text{ N}
+\]
+
+Since the centripetal acceleration is less than the acceleration from gravity, the rider's weight is sufficient to
+provide the centripetal acceleration.
+
+\item[d]
+The rider's weight is:
+\[
+  F = ma = (40 \text{ kg})(9.8 \text{ m/s}^2) = 392 \text{ N}
+\]
+
+The normal force is the difference between the weight and the centripetal force:
+\[
+  F_n = 392 - 296 \text{ N} = 96 \text{ N}
+\]
+
+\item[e]
+If the rider's seat belt was not securely fastened, he would get launched off into the air, which would make the ride
+much more exciting but might reduce the number of repeat customers.
+
+\end{description}
+
+\item[SP3]
+\begin{description}
+\item[a]
+\[
+  a = \frac{v^2}{r} = \frac{(25 \text{ m/s})^2}{60 \text{ m}} = 10.4 \text{ m/s}^2
+\]
+
+\item[b]
+\[
+  F = ma = (900 \text{ kg})(10.4 \text{ m/s}^2) = 9,360 \text{ N}
+\]
+
+\item[c]
+\[
+  F = ma = (900 \text{ kg})(9.8 \text{ m/s}^2) = 8,820 \text{ N}
+\]
+
+\item[d]
+I can't draw a picture with the computer, but here's the calculation:
+\begin{align*}
+  \cos \theta &= \frac{weight}{F_{normal}} \\
+  .97 &= \frac{8,820}{F_{normal}} \\
+  F_{normal} &= 9,131 \text{ N} \\
+\end{align*}
+
+\item[e]
+The normal force is smaller than the required centripetal force, so the the horizontal component by itself definitely
+isn't enough nearly enough. 
+
+\end{description}
+
+\item[SP4]
+\begin{description}
+\item[a]
+\[
+  s = \frac{d}{t} = \frac{2 \pi \cdot 3 \text{ m}}{1 \text{ s}} = 18.85 \text{ m/s}
+\]
+
+\item[b]
+\[
+  a = \frac{v^2}{r} = \frac{(18.85 \text{ m/s})^2}{3 \text{ m}} = 118.4 \text{ m/s}^2
+\]
+
+It's much bigger than the acceleration due to gravity.
+
+\item[c]
+\[
+  F = ma = (60 \text{ kg})(118.4 \text{ m/s}^2) = 7,106 \text{ N}
+\]
+
+The passenger's weight is only:
+\[
+  F = ma = (60 \text{ kg})(9.8 \text{ m/s}^2) = 588 \text{ N}
+\]
+
+If he doesn't have his seat belt fastened, he may be enjoying an exciting flight through the air.
+
+\end{description}
+
+\item[SP5]
+\begin{description}
+
+\item[a]
+\[
+  F = \frac{Gm_{sun}m_{earth}}{r_{sun/earth}^2} = 3.53 \cdot 10^{22} \text{ N}
+\]
+
+\item[b]
+\[
+  F = \frac{Gm_{moon}m_{earth}}{r_{moon/earth}^2} = 2.01 \cdot 10^{20} \text{ N}
+\]
+
+\item[c]
+\[
+  \frac{3.53 \cdot 10^{22}}{2.01 \cdot 10^{20}} = 175
+\]
+
+The force from the sun on the earth is about 175 times the force from the moon on the earth, so the moon doesn't have
+much impact on the earth's motion.
+
+\item[d]
+\[
+  F = \frac{Gm_{moon}m_{sun}}{r_{sun/earth}^2} = 4.34 \cdot 10^{20} \text{ N}
+\]
+
+The force from the sun on the moon is about twice the force from the earth on the moon (from part b), so the sun does
+have a big impact on the moon's motion.  Both the earth and the moon orbit the sun while the moon orbits the earth.
+
+\end{description}
+\end{description}
+
+\subsection{Chapter 6}
+
+\begin{description}
+
+\item[Q1]
+The formula for work is $W = Fd$.  The mass isn't involved, so the mass that moves twice as far has twice as much work done on it.
+
+\item[Q3]
+\begin{description*}
+\item[a] Part of the force is in the direction of motion, so the force does do work on the box.  
+\item[b] Only part of the force is in the direction of motion, so only part of the force does do work on the box.  
+\end{description*}
+
+\item[Q4]
+The frictional force is in the opposite direction of the motion so it does negative work on the box.
+
+\item[Q5]
+The normal force is perpendicular to the direction of the motion so it doesn't do work on the box.
+
+\item[Q8]
+She does the same amount of work:
+\begin{align*}
+  d_1 &= 4 d_2 \\
+  F_1 &= \frac{F_2}{4} \\
+  d_1 F_1 &= 4 d_2 \cdot \frac{F_2}{4} = d_2 F_2 \\
+\end{align*}
+
+\item[Q12]
+Some of the work done by the string goes into overcoming the friction, so the change in kinetic energy is less than the
+work done by the string. 
+
+\item[Q13] 
+
+No.  An object moving in a circle just has the centripetal force acting on it.  The centripetal changes the direction
+but not the magnitude of the velocity, so there is no change in kinetic energy in this case.
+
+Another way to look at it is that the centripetal force is always perpendicular to the motion.  It doesn't do any work
+on the object, so there is no change in the kinetic energy.
+
+\item[Q14]
+The work is the change in the kinetic energy.
+\begin{align*}
+  v_2 &= 2 v_1 \\
+  W_1 &= \frac{1}{2} mv_1^2 \\
+  W_2 &= \frac{1}{2} mv_2^2 = \frac{1}{2} m (2v_1)^2 = 2 mv_1^2\\
+\end{align*}
+
+The second force does four times as much work to accelerate the ball to twice the velocity.
+
+\item[Q22]
+\begin{itemize*}
+\item gravitational potential energy
+\item At the bottom of the swing, all the gravitational potential energy has been converted to kinetic energy, so this is
+  when the kinetic energy is the greatest.
+\item At the top of the swing, all the kinetic energy has been converted to gravitational potential energy, so this is
+  when the gravitational potential energy is the greatest.
+\end{itemize*}
+
+\item[E1]
+\[
+  W = Fd = (40 \text{ N})(2.5 \text{ m}) = 100 \text{ J}
+\]
+ 
+\item[E2]
+\begin{align*}
+  F &= \frac{W}{d} \\
+   &= \frac{160 \text{ J}}{4 \text{ m}} \\
+   &= 40 \text{ N}  
+\end{align*}
+
+\item[E3]
+\begin{align*}
+  d &= \frac{W}{F} \\
+   &= \frac{300 \text{ J}}{60 \text{ N}} \\
+   &= 5 \text{ m}  
+\end{align*}
+
+\item[E4]
+\begin{description*}
+\item[a] $W_{rope} = Fd = (180 \text{ N})(2 \text{ m}) = 360 \text{ J}$
+\item[b] $W_{friction} = Fd = (-60 \text{ N})(2 \text{ m}) = -120 \text{ J}$
+\item[c] $W_{total} = W_{rope} + W_{friction} = 360 \text{ J} - 120 \text{ J} = 240 \text{ J}$
+\end{description*}
+
+\item[E5]
+\begin{description*}
+
+\item[a] $W_{horizontal} = Fd = (40 \text{ N})(4 \text{ m}) = 160 \text{ J}$
+
+\item[b] The vertical component of the force isn't in the direction of motion so it doesn't do any work.
+
+\item[c] The total work is just the work done by the horizontal component, or 160 J.
+
+\end{description*}
+
+\item[E6]
+\begin{description*}
+
+\item[a] $W = Fd = (60 \text{ N})(10 \text{ m}) = 600 \text{ J}$    
+
+\item[b] The increase in kinetic energy is the same as the work done, or 600 J.  You can also figure out the final
+  velocity, if you're curious:
+\begin{align*}
+  K &= \frac{1}{2} mv^2 \\
+  600 \text{ J} &= \frac{1}{2} \cdot (4 \text{ kg}) v^2 \\
+  v^2 &= 300 \text{ J/kg} \\
+  v &\approx 17 \text{ m/s}
+\end{align*}
+
+\item[E8]
+\begin{description*}
+  \item[a] $U = mgh = (5 \text{ kg})(10 \text{ m/s}^2)(2 \text{ m}) = 100 \text{ J}$
+
+  \item[b] See part a
+\end{description*}
+
+\end{description*}
+
+\item[SP1]
+
+\begin{description}
+\item[a]
+\[
+  W = Fd = (5 \text{ N})(1.5 \text{ m}) = 7.5 \text{ J}
+\]
+
+\item[b]
+\[
+  W = Fd = (3 \text{ N})(1.5 \text{ m}) = 4.5 \text{ J}
+\]
+
+\item[c]
+The net force.  Some of the work from the 5 N force goes towards overcoming friction, not to speeding up the block.
+
+\item[d]
+Some of it shows up in the increase in kinetic energy and the rest of it turns into heat.
+
+\item[e]
+Since there was 4.5 J of work done by the net force, this is the kinetic energy at the end of the motion.  Its velocity
+is:
+\begin{align*}
+  4.5 \text{ J} &= \frac{1}{2} \cdot (0.25 \text{ kg}) v^2 \\
+  v &= 6 \text{ m/s} \\
+\end{align*}
+
+\end{description}
+
+\item[SP2]
+\begin{description}
+\item[a]
+\begin{align*}
+  F &= ma \\
+  50 \text{ N} &= (100 \text{ kg}) \cdot a \\
+  a &= 0.5 \text{ m/s}^2 \\
+\end{align*}
+
+\item[b]
+\[
+  x = \frac{1}{2} at^2 = \frac{1}{2} \cdot (0.5 \text{ m/s}^2)(4 \text{ s})^2  = 4 \text{ m}
+\]
+
+\item[c]
+\[
+  W = Fd = (50 \text{ N})(4 \text{ m}) = 200 \text{ N}
+\]
+
+\item[d]
+\[
+  v = at = (0.5 \text{ m/s}^2)(4 \text{ s}) = 2 \text{ m/s}
+\]
+
+\item[e]
+\[
+  E_k = \frac{1}{2} mv^2 = \frac{1}{2} (100 \text{ kg}) (2 \text{ m/s})^2 = 200 \text{ J}
+\]
+
+The two values match since all the work went into increasing the kinetic energy.
+
+\end{description}
+
+\item[SP5]
+
+\begin{description}
+\item[a]
+The initial potential energy is 
+\[
+  U = mgh = (40 \text{ kg})(9.8 \text{ m/s}^2)(40 \text{ m}) = 15,680 \text{ J}
+\]
+
+The potential energy at the second point is: 
+\[
+  U = mgh = (40 \text{ kg})(9.8 \text{ m/s}^2)(30 \text{ m}) = 11,760 \text{J}
+\]
+
+The difference is:
+\[
+  15,680 \text{ J} - 11,760 \text{J} = 3,920 \text{ J}
+\]
+
+Since only 2,000 J is lost to friction, there is plenty of energy to make it to the second hump.
+
+\item[b]
+The maximum energy that the sled could have on the second hump would be
+\[
+  15,680 \text{ J} - 2,000 \text{J} = 13,680 \text{ J}
+\]
+
+This corresponds to a height of:
+\begin{align*}
+  U &= mgh \\
+  13,680 \text{ J} &= (40 \text{ kg})(9.8 \text{ m/s}^2) h \\
+  h &\approx 35 \text{ m} \\
+\end{align*}
+
+In this case it will stop at the top of the second hump, so it will need a little push to continue to the bottom.
+
+\end{description}
+\end{description}
+
+\fi
+
+
+%% \section{Other Questions}
+
+%% \begin{questions}
+
+%% \question
+%% Two divers run horizontally off the edge of a low cliff.  Diver 2 runs with twice the speed of diver 1.  When the 
+%% divers hit the water, is the horizontal distance covered by diver 2:
+%% \begin{description*}
+%%   \item[a] the same as
+%%   \item[b] twice as much as
+%%   \item[c] four times as much as
+%% \end{description*}
+%% the distance covered by diver 1?
+
+%% \end{questions}
+
+
+\vspace{0.3 in}
+
+\ifprintanswers
+\else
+\begin{em}
+  My passion for social justice has often brought me into conflict with people, as did my aversion to any obligation and
+  dependence I do not regard as absolutely necessary. 
+  I always have a high regard for the individual and have an
+  insuperable distaste for violence and clubmanship.  All these motives made me into a passionate pacifist and
+  anti-militarist. I am against any nationalism, even in the guise of mere patriotism. Privileges based on position and
+  property have always seemed to me unjust and pernicious, as did any exaggerated personality cult.
+\end{em}
+
+\vspace{.2 cm}
+\hspace{1.5 cm} --Albert Einstein
+
+\fi
+
+\end{document}
+

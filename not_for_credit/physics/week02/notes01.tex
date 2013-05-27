@@ -1,0 +1,119 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+
+\oddsidemargin 0in
+\topmargin -0.5in
+\textwidth 6.5in
+
+\title{Introduction to Physics \\ Notes}
+\date{September 12, 2011}
+\author{Ed Tellman}
+
+\begin{document}
+
+\maketitle
+
+\section{Vectors}
+A vector describes something with both a size and a direction.  Examples of vectors are velocity, acceleration, and force.
+\begin{itemize} 
+  \item Vectors are represented in text like this: $\vec{A}$.  Sometimes people use a bold font ($\mathbf{A}$) instead
+    of or in addition to the arrow.
+  \item The length of $\vec{A}$ is usually represented by $A$ (without the arrow).
+  \item A vector really represents two numbers, an $x$ part and a $y$ part.  If $\theta$ is the angle the vector makes
+    with the $x$ axis, you can find each part this way: 
+    \begin{align*}
+      A_x &= A \cos \theta \\
+      A_y &= A \sin \theta \\
+    \end{align*}
+  \item If you have the two parts, you can use the quadratic formula to find the length of the vector.  \[A = \sqrt{A_x^2 + A_y^2}\]
+  \item The only thing that matters about a vector is its size and direction.  You can move a vector around at it is still the same vector.
+  \item You can add vectors $\vec{A}$ and $\vec{B}$ graphically by
+    \begin{itemize*}
+      \item place the head of $\vec{B}$ on the tail of $\vec{A}$.
+      \item draw a new vector from the tail of $\vec{A}$ to the head of $\vec{B}$
+    \end{itemize*}
+  \item If you multiply a vector by a {\em scalar} the length of the vector changes and the direction remains the same.
+  \item Multiplying a vector by a negative number reverses its direction.
+  \item The {\em unit vectors}, $\hat{x}$ and $\hat{y}$ are vectors of magnitude 1 pointing along the x and y axes, respectively.
+  \item Any vector can be written as a combination of unit vectors.  $3 \hat{x} + 4 \hat{y}$, for example, is a vector
+    with an x component of 3 and a y component of 4.
+\end{itemize} 
+
+\section{Velocity and Acceleration}
+\begin{itemize}
+  \item In physics, {\em velocity} is different from {\em speed}.  Velocity includes both speed and direction,
+    while speed only indicates how fast something is going without including the direction.  Since velocity
+    includes both speed and direction, velocity is a vector. 
+  \item In physics, if an object is accelerating its velocity is changing.  This happens when:
+    \begin{itemize*}
+      \item the object is speeding up
+      \item the object is slowing down
+      \item the object is changing direction
+    \end{itemize*}
+
+  \item In physics, a car stopping at a stop sign is accelerating because its velocity is changing.  Of course, in this
+    case the accelration is negative.
+
+  \item In physics, a car traveling an a constant speed in a sircle is accelerating because its velocity is changing.  In this
+    case the the acceleration is towards the center of the circle.
+
+  \item Since acceleration includes a magnitude (how fast is the velocity changing?) and a direction (how is the
+    direction of the velocity changing), acceleration is also a vector.
+\end{itemize}
+
+\section{Zero Acceleration}
+\begin{itemize}
+  \item An item moving in a straight line at a constant speed has a constant velocity and is undergoing non-accelerated
+    motion. 
+  \item For non-accelerated motion:
+    \begin{align*}
+      a &\text{ is 0} \\
+      v &\text{ is constant} \\
+      x &= x_0 + vt \\
+    \end{align*}
+\end{itemize}
+
+\section{Constant Acceleration in Straight Line}
+\begin{itemize}
+  \item An object moving in a straight line while its speed changes at a constant rate is undergoing
+    motion in a straight line with constant acceleration.
+  \item The relevant equations are:
+    \begin{align*}
+      a & \text{ is a constant} \\
+      v &= v_0 + at \\
+      x &= x_0 + v_0t + \frac{1}{2} at^2 \\
+    \end{align*}
+\end{itemize}
+
+\pagebreak
+
+\section{Constant Acceleration in Two Dimensions}
+\begin{itemize}
+  \item An object moving while its velocity (speed and/or direction) changes at a constant rate is undergoing motion
+    with constant acceleration.
+  \item The easiest way to analyze motion in two dimensions is to analyze the x and y directions separately using the
+    same equations you used for one dimension.
+  \item Another way to look at it is with vector equations.
+    \begin{align*}
+      \vec{a} & \text{ is a constant} \\
+      \vec{v} &= \vec{v}_0 + \vec{a}t \\
+      \vec{r} &= \vec{r}_0 + \vec{v}_0 t + \dfrac{1}{2} \vec{a}t^2 \\
+    \end{align*}
+    Each of these equations really represents two equations---one equation for the $x$ direction and one equation for the
+    $y$ direction.
+\end{itemize}
+
+\end{document}
+

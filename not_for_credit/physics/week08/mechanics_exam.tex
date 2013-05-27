@@ -1,0 +1,884 @@
+
+\documentclass[fleqn,addpoints]{exam}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{mdwlist}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+
+\printanswers
+
+\everymath{\displaystyle}
+
+\ifprintanswers 
+\usepackage{2in1, lscape} 
+\fi
+
+\title{Physics \\ Mechanics Exam}
+\date{October 24, 2010}
+
+\begin{document}
+
+\maketitle
+
+\ifprintanswers
+\else
+\begin{center}
+\gradetable[h][pages]
+\bonusgradetable[h][pages]
+\end{center}
+
+\fi
+
+\ifprintanswers
+\else
+\section{Notes}
+
+\begin{itemize*}
+  \item Feel free to use a calculator or borrow one from the UBB office.
+  \item Use your textbook or notes for the required formulas.
+  % \item If you get stuck on something, you can ask another student for assistance. 
+  \item Unless the question says otherwise, assume there is no air resistance or
+    friction.
+  \item Some questions are marked ``bonus''.  These questions are a bit harder
+    and are extra-credit.
+  \item There's no class on Oct 31, so this is due on Nov 7.
+\end{itemize*}
+
+\fi
+\section{Questions}
+
+\begin{questions}
+
+\subsection{Linear Motion}
+
+\question
+A projectile is launched with an initial horizontal velocity of $v_x$ and an initial vertical velocity of $v_y$.
+
+\begin{parts}
+
+\part[2]
+What is its vertical velocity the highest point in its path?
+
+\begin{solution}
+At the highest point in its path it isn't going up any more so its vertical velocity is zero.
+\end{solution}
+
+\part[2]
+What is its horizontal velocity the highest point in its path?
+
+\begin{solution}
+The horizontal velocity doesn't change throughout the flight so it is still $v_x$.
+\end{solution}
+
+\part[2]
+What is its acceleration at the highest point in its path?
+
+\begin{solution}
+The acceleration also doesn't change throughout the flight so it is still $-9.8 \ m/s^2$.
+\end{solution}
+
+\end{parts}
+
+\question
+A projectile is launched into the air and lands some distance away.  During its flight:
+\begin{parts}
+\part[2] Is its velocity ever parallel to its acceleration?
+
+\begin{solution}
+The acceleration is always straight down, so the only way the velocity could be parallel to the acceleration is if the
+velocity was either straight down or straight up at some point in the flight.  This could only happen if the projectile
+was launched straight up.  But the question says the projectile lands some distance away, so it wasn't launched straight
+up and the velocity is never parallel to the acceleration.
+\end{solution}
+
+\part[2] Is its velocity ever perpendicular to its acceleration?
+\begin{solution}
+Since the acceleration is always straight down, for the velocity to be perpendicular to the acceleration, the projectile
+must be moving horizontally.  This happens at the top of the flight when $v_y$ is zero.
+\end{solution}
+\end{parts}
+
+\question[3]
+When you play darts in an elevator moving up at a constant speed, how should you adjust your aim compared to how you
+play when standing on the ground?
+
+\begin{solution}
+An elevator moving 
+velocity is added to the darts' vertical velocity and everything behaves exactly as it would in a stationary elevator.
+\end{solution}
+
+\question[3]
+When you play darts in an elevator moving up with a constant acceleration, how should you adjust your aim compared to how you
+play when standing on the ground?
+
+\begin{solution}
+The constant acceleration of the elevator adds to the natural acceleration of gravity.  If the elevator is accelerating
+up, you will need to aim a bit higher, since the total acceleration will be higher.  
+
+\end{solution}
+
+\question
+A diver runs off a 6 meter diving board with an initial speed of 2 m/s.
+\begin{parts}
+\part[5]
+How long does it take for the diver to hit the water?
+
+\begin{solution}
+The diver needs to fall 6 m.  This takes:
+\begin{align*}
+  y &= \frac{1}{2} at^2 \\
+  6 \ m &= \frac{1}{2} (9.8 \ m/s^2)t^2 \\
+  t &\approx 1.11 \ s
+\end{align*}
+
+\end{solution}
+
+\part[3]
+\begin{solution}
+What is her vertical speed when she hits the water?
+\begin{align*}
+  v &= v_0 + at \\
+    &= 0 + (9.8 \ m/s^2)(1.11 \ s) \\
+    &\approx 10.84 \ m/s \\
+\end{align*}
+\end{solution}
+
+\part[2]
+What is her horizontal speed when she hits the water?
+
+\begin{solution}
+  Her horizontal speed hasn't changed and she is still moving at 2 m/s.
+\end{solution}
+
+\end{parts}
+
+\question[5]
+A ball is thrown at a $45 \degree$ angle and reaches a height of 30 meters.  What was its initial velocity?
+
+\begin{solution}
+The initial velocity in the y direction is the same is if the ball had been dropped from 30 meters.  We can figure this
+out by first finding out how long the ball was in flight and the finding out how fast it is going after this much time
+has elapsed.
+\begin{align*}
+  y &= \frac{1}{2} at^2 \\
+  30 \ m &= \frac{1}{2} (9.8 \ m/s^2)(t^2) \\
+  t & \approx 2.47 \ s \\
+\end{align*}
+After 2.47 s:
+\begin{align*}
+  v &= v_0 + at \\
+   &= (9.8 \ m/s^2)(2.47 \ s) \\
+  &\approx 24.2 \ m/s \\
+\end{align*}
+
+This is only the vertical part of the motion.  There are two ways to figure out the total velocity.  One approach is to
+notice that since the ball was thrown at a $45 \degree$ angle, its vertical and horizontal velocity's are the same.
+Knowing this we can use the Pythagorean theorem to find the total velocity:
+\begin{align*}
+  v^2 &= v_x^2 + v_y^2 \\
+  v & 34.3 \ m/s \\
+\end{align*}
+The other approach is to note that:
+\begin{align*}
+  \sin \theta &= \frac{v_y}{v} \\
+  v &= \frac{v_y}{\sin \theta} \\
+    & 34.3 \ m/s \\
+\end{align*}
+
+\end{solution}
+
+\question[5]
+A ball is thrown at a $45 \degree$ angle and travels 100 meters.  What was its initial velocity?
+
+\begin{solution}
+
+I probably should have made this problem extra credit, as it's pretty elaborate.  On the other hand, it's exactly like
+the pumpkin launching problem from homework 1, so if you remembered that, you could refer back to the homework one
+answer key to see how to do it.
+
+Here's the solution, copied from week 2's homework with the word ``pumpkin'' replaced by ``ball''
+
+Since velocity is a vector, the x and y components are given by:
+\begin{align*}
+  v_{0x} &= v_0 \cos \theta \\
+  v_{0y} &= v_0 \sin \theta \\
+\end{align*}
+where $\mathbf{v_0}$ is the initial velocity and $\theta$ is the launch angle.
+
+The first thing to do is to figure out how long the ball will be in the air.  There are two ways to do this.
+
+One option is to figure out when the y coordinate is zero.  This happens at time 0, of course, before the launch.  It
+also happens when the ball hits the ground at the end of its flight.
+\begin{align*}
+  y = v_{0y} t + \frac{1}{2} at^2 \\
+  0 = v_0 \sin \theta t + \frac{1}{2} at^2 \\
+  0 = t \left( v_0 \sin \theta + \frac{1}{2} at \right) \\
+\end{align*}
+The solution at the end of the flight is given by:
+\begin{align*}
+  v_0 \sin \theta + \frac{1}{2} at &= 0 \\
+  % at &= -2 v_0 \sin \theta \\
+  t &= - \frac{2 v_0 \sin \theta}{a} \\
+\end{align*}
+The other way to figure out how long the ball is in the air is to figure out when $v_y$ is zero at the top of the
+flight and multiply by 2.  Here's that approach:
+\begin{align*}
+  v_y &= v_{0y} + at \\
+  0 &= v_0 \sin \theta + at \\
+  t &= - \frac{v_0 \sin \theta}{a} \\
+\end{align*}
+Since this is the time to reach the top of the flight, you have to multiply by 2 to get the total flight time, so the
+two approaches agree on the flight time.
+
+Now we know the flight time, we need to figure out how far the ball travels in the x direction in this time.  The
+velocity in the x direction is constant and we can substitute in the expression for the total flight time.
+\begin{align*}
+  x &= v_{0x}t \\
+   &= v_0 \cos \theta t \\
+   &= v_0 \cos \theta \left( - \frac{2 v_0 \sin \theta}{a} \right) \\
+   &= - \frac{2 v_0^2 \sin \theta \cos \theta}{a} \\
+\end{align*}
+For this problem, we have a launch angle of $45 \degree$.  So now we can plug in all the numbers and solve for $v_0$:
+\begin{align*}
+   100 \ m &= - \frac{2 v_0^2 \sin 45 \degree \cos 45 \degree}{-9.8 \ m/s^2} \\
+   v_0 &\approx 31.3 \ m/s
+\end{align*}
+
+\end{solution}
+\bonusquestion[5]
+A mountain goat leaps horizontally across a 3 meter crevasse, landing 2 meters below his starting point.  What is the
+minimum initial horizontal velocity required for him to make it across?
+
+\begin{solution}
+The first thing to do is find out how long the flight lasts.  Since the goat jumps horizontally, he has time to fall 2
+meters before landing.  
+\begin{align*}
+  y &= \frac{1}{2} at^2 \\
+  2 \ m &= \frac{1}{2} (9.8 \ m/s^2)t^2 \\
+  t &\approx 0.64 \ s
+\end{align*}
+
+He needs to travel 3 meters horizontally in this time and he's not accelerating in the horizontal direction.
+\begin{align*}
+  x &= x_0 + v_xt \\
+  3 \ m &= (v_x)(0.64 \ s) \\
+  v_x &\approx 4.7 \ m/s
+\end{align*}
+
+\end{solution}
+
+\subsection{Newton's Laws}
+
+%% \question[5]
+%% What are the action/reaction forces for a bat hitting a baseball?
+
+\question[5]
+If you push a 5 kg block on a flat frictionless surface with a constant force of 10 N, how far does it travel in 
+3 seconds?
+
+\begin{solution}
+The first thing to do is to find the acceleration:
+\begin{align*}
+  F &= ma \\
+  10 \ N &= (5 \ kg) a \\
+  a &= 2 \ m/s^2 \\
+\end{align*}
+
+Now we can figure out how far it went:
+\begin{align*}
+  x &= \frac{1}{2} at^2 \\
+    &= \frac{1}{2} (2 \ m/s^2)(3 \ s)^2 \\
+    &= 9 \ m \\
+\end{align*}
+
+\end{solution}
+
+\question
+When you lift a weight with a force of 100 N, it accelerates upward at a rate of $5 \ m/s^2$.
+
+\begin{solution}
+I should have put the two parts in the opposite order since you need to find the mass in order to find the weight.  The
+net force which is producing the $5 \ m/s^2$ acceleration is the force you are applying minus the weight:
+\begin{align*}
+  F_{net} &= F_{applied} - mg \\
+  ma &= F_{applied} - mg \\
+  ma + mg &= F_{applied} \\
+  m &= \frac{F_{applied}}{a + g} \\
+   &= \frac{100 \ N}{5 \ m/s^2 + 9.8 \ m/s^2} \\
+   &\approx 6.76 \ kg \\
+\end{align*}
+The weight is:
+\begin{align*}
+  W &= mg \\
+    &= (6.76 \ kg)(9.8 \ m/s^2) \\
+    &\approx 66.2 \ N \\
+\end{align*}
+To check to see if this is correct:
+\begin{align*}
+  F_{net} &= 100 \ N - 66.2 \ N = 33.8 \ N \\
+  m &= 6.76 \ kg \\
+  \\
+  F &= ma \\
+  33.8 \ N &= (6.76 \ kg)(5 \ m/s^2)
+\end{align*}
+so everything checks out OK.
+
+\end{solution}
+
+\begin{parts}
+\part[3] What is its weight?
+
+\begin{solution}
+  66.2  N
+\end{solution}
+
+\part[3] What is its mass?
+
+\begin{solution}
+  6.76 \ kg
+\end{solution}
+
+\end{parts}
+
+\question There are three blocks sitting next to each other on a frictionless
+surface.  The first has a mass of 1 kg, the second has a mass of 3 kg, and the
+third has a mass of 2 kg.  If you push on the first block with a force of 6 N,
+what is the force between:
+
+\begin{solution}
+The strategy for this one is to find the acceleration for the three blocks together and then use $F=ma$ on the blocks
+mentioned for each part to find the forces between the blocks.
+
+The total acceleration is:
+\begin{align*}
+  F &= ma \\
+  6 \ N &= (6 \ kg) a \\
+  a &= 1 \ m/s^2 \\
+\end{align*}
+\end{solution}
+
+\begin{parts}
+\part[3]
+block one and block two?
+
+\begin{solution}
+The force between blocks one and two needs to accelerate blocks 2 and 3 which have a total mass of 5 kg.  So the force
+required is:
+\begin{align*}
+  F &= ma \\
+    &= (5 \ kg)(1 \ m/s^2) \\
+    &= 5 \ N \\
+\end{align*}
+\end{solution}
+
+\part[3]
+block two and block three?
+
+\begin{solution}
+The force between blocks two and three only needs to accelerate block 3 which has a mass of 2 kg.  So the force
+required is:
+\begin{align*}
+  F &= ma \\
+    &= (2 \ kg)(1 \ m/s^2) \\
+    &= 2 \ N \\
+\end{align*}
+\end{solution}
+
+\end{parts}
+
+\question[5]
+A rocket has an acceleration of $30 \ m/s^2$ at launch.  What force does the floor of the rocket exert on an 80 kg
+astronaut during the launch?
+
+\begin{solution}
+To accelerate an 80 kg astronaut at $30 \ m/s^2$, you need a net force of:
+\[
+  F_{net} = ma = (80 \ kg)(30 \ m/s^2) = 2,400 \ N 
+\]
+The force exerted by the floor also needs to counteract the astronaut's weight, so the force from the floor is:
+\begin{align*}
+  F_{net}   &= F_{floor} - W \\
+  F_{floor} &= F_{net} + W \\
+           &= 2,400 \ N + (80 \ kg)(9.8 \ m/s^2) \\
+           &= 3,184 \ N \\
+\end{align*}
+
+\end{solution}
+
+\bonusquestion
+A pitcher accelerates a 0.15 \ kg baseball from 0 to 45 m/s in a distance of 2 m.
+
+\begin{parts}
+\bonuspart[5]
+Use Newton's laws to find the average force required.
+
+\begin{solution}
+To use Newton's laws, we need to find the acceleration.  This requires using two of the motion equations, with the
+initial velocities and positions zero.
+\begin{align*}
+  v &= at \\
+  t &= \frac{v}{a} \\
+  \\
+  x &= \frac{1}{2} at^2 \\
+    &= \frac{1}{2} a \left( \frac{v}{a} \right)^2 \\
+  x  &= \frac{v^2}{2a} \\
+  a &= \frac{v^2}{2x} \\
+  \\
+  a &= \frac{(45 \ m/s)^2}{2 (2 \ m)} \\
+    &= 506.25 \ m/s^2 \\
+\end{align*}
+Now we can find the force:
+\begin{align*}
+  F &= ma \\
+    &= (0.15 \ kg)(506.25 \ m/s^2) \\
+    &\approx 76 \ N
+\end{align*}
+\end{solution}
+
+\bonuspart[5]
+Use work and the change in kinetic energy to find the average force required.
+\begin{solution}
+Doing it this way is much easier.  The initial kinetic energy is zero since the ball isn't moving at first.  The final
+kinetic energy is:
+\[
+  K = \frac{1}{2} mv^2 = \frac{1}{2} (0.15 \ kg)(45 \ m/s)^2 \approx 151.9 \ J
+\]
+
+This is the work done and the distance was 2 m.  So the force was:
+\begin{align*}
+  W &= Fd \\
+  151.9 \ J &= F (2 \ m) \\
+  F &\approx 76 \ N
+\end{align*}
+ 
+\end{solution}
+\end{parts}
+
+\subsection{Circular Motion}
+
+\question[5]
+What is the centripetal force required to keep a 1,000 kg car on the road while traveling around a curve with
+a radius of 60 meters at a speed of 15 m/s?
+
+\begin{solution}
+First find the centripetal acceleration required:
+\[
+  a = \frac{v^2}{r} = \frac{(15 \ m/s)^2}{60 \ m} = 3.75 \ m/s^2
+\]
+
+Then find the force:
+\[
+  F = ma = (1,000 \ kg)(3.75 \ m/s^2) = 3,750 \ N
+\]
+
+\end{solution}
+
+\question
+A passenger of mass m travels on a ferris wheel at a constant speed v.
+
+\begin{solution}
+  The forces involved are the passenger's weight, the force exerted by the seat and the centripetal force required to
+  keep the passenger moving in a circle.  The net force must be the centripetal force.
+\begin{align*}
+  W &= mg \\
+  F_{cp} &= m a_{cp} = \frac{mv^2}{r}
+\end{align*}
+\end{solution}
+
+\begin{parts}
+
+\part[3]
+What is the force exerted on the rider by his seat at the bottom of the ride?
+
+\begin{solution}
+  At the bottom of the ride, the centripetal force points up while the weight points down.
+\begin{align*}
+  F_{cp}   &= F_{seat} - W \\
+  F_{seat} &= F_{cp} + W \\
+          &= \frac{mv^2}{r} + mg \\
+\end{align*}
+\end{solution}
+
+\part[3]
+What is the force exerted on the rider by his seat at the top of the ride?
+
+\begin{solution}
+  At the top of the ride, both the centripital force and the weight are in the same direction, with the force from the
+  seat pointing the other way:
+\begin{align*}
+  F_{cp}   &= W - F_{seat} \\
+  F_{seat} &= W - F_{cp} \\
+          &= mg - \frac{mv^2}{r} \\
+\end{align*}
+\end{solution}
+
+\end{parts}
+
+\subsection{Work and Energy}
+\question[2]
+Can you do work on a stationary object?
+
+\begin{solution}
+  No.  Work is $\mathbf{W} = \mathbf{F}d$ so if $d$ is 0 so is $W$.
+\end{solution}
+
+\question[3] A 75 N force is used to push a 20 kg block 5 meters on a horizontal
+surface.  How much work was done by the force?
+
+\begin{solution}
+
+\[
+  W = Fd = (75 \ N)(5 \ m) = 375 \ J
+\]
+
+The mass doesn't matter.
+
+\end{solution}
+
+%% \question[2]
+%% What is the kinetic energy of a 0.15 kg baseball traveling at 45 m/s?
+
+\question[5] A 1,300 kg car coasts from 20 m/s to 10 m/s while traveling 30 m.
+How much work was done by friction to slow the car?
+
+\begin{solution}
+There are two ways to do this one.
+
+The easy way is to find the change in kinetic energy since this will also be the work done by friction.
+\begin{align*}
+  \Delta K &= \frac{1}{2} mv^2 - \frac{1}{2} m v_0^2 \\
+           &= \frac{1}{2} m (v^2 - v_0^2) \\
+           &= \left( \frac{1,300 \ kg}{2} \right) ((20 / m/s)^2 - (10 \ m/s)^2) \\
+           &= 195,000 \ J
+\end{align*}
+
+The hard way is to find the average friction force and then multiply by the distance traveled.
+
+To do it this way, we first need to find out how long the process took:
+\begin{align*}
+  v &= v_0 + at \\
+  a &= \frac{v - v_0}{t} \\
+  \\
+  x &= v_0t + \frac{1}{2} at^2 \\
+    &= v_0t + \frac{1}{2} \left( \frac{v - v_0}{t} \right) t^2 \\
+    &= \frac{t(v + v_0)}{2} \\
+  t &= \frac{2x}{v + v_0} \\
+  \\
+  t &= \frac{2 (30 \ m)}{20 \ m/s + 10 \ m/s} \\
+  t &= 2 \ s
+\end{align*}
+
+Now we know how long it took, we can find the acceleration:
+\[
+  a = \frac{v - v_0}{t} = \frac{10 m/s}{2 \ m/s} = 5 \ m/s^2
+\]
+
+This gives us the force:
+\[
+  F = ma = (1,300 \ kg)(5 \ m/s^2) = 6,500 \ N
+\]
+
+Which gives us the work:
+\[
+  W = Fd = (6,500 \ N)(30 \ m) = 195,000 \ J 
+\]
+
+\end{solution}
+
+\question[5]
+Lifting a box 5 meters requires 200 J of work.  What is the box's mass?
+
+\begin{solution}
+
+The work required is the same as the change in potential energy.
+\begin{align*}
+  U &= mgh \\
+  m &= \frac{U}{gh} \\
+    &= \frac{200 \ J}{(9.8 \ m/s^2)(5 \ m)} \\
+    &\approx 4.1 \ kg \\
+\end{align*}
+
+\end{solution}
+
+\question[5]
+A child slides down a frictionless water slide starting from a height of 10 m.  How fast is she going when she enters the pool?
+
+\begin{solution}
+All of the original potential energy is converted to kinetic energy.
+\begin{align*}
+  mgh &= \frac{1}{2} mv^2 \\
+  v^2 &= 2gh \\
+  v   &= \sqrt{2gh} \\
+      &= \sqrt{2 (9.8 \ m/s^2)(10 \ m)} \\
+      &= 14 \ m/s \\
+\end{align*}
+
+\end{solution}
+
+\subsection{Momentum, Impulse, and Collisions}
+
+\question[5]
+A cart of mass $m$ moving with velocity $v$ collides and sticks to a stationary cart with mass $2m$.  What is the final
+velocity of the pair?
+
+\begin{solution}
+Since only one cart is moving initially, the initial momentum is: $p_{initial} = mv$.
+
+The final momentum is the same:
+\begin{align*}
+  3mv_{final} &= mv \\
+  3v_{final} &= v \\
+  v_{final} &= \frac{v}{3} \\   
+\end{align*}
+
+\end{solution}
+
+\question[5] When a batter hits a fastball, the bat is in contact with the ball for
+0.002 seconds.  If the pitch is a 45 m/s fastball and leaves the bat at 60 m/s,
+how much force was exerted by the bat?
+
+\begin{solution}
+I inadvertently neglected to include the baseball's mass in the problem statement.  You can get it from problem 6, if
+you noticed that that problem also included a baseball.
+
+If you define the final velocity as being in the positive direction, the initial and final momentums are:
+\begin{align*}
+  p_{initial} &= m (-45 \ m/s) \\
+  p_{final}   &= m (60 \ m/s) \\
+\end{align*}
+The total change in momentum is:
+\[
+  \Delta p = (60 + 45 )(m) \ kg \cdot m/s = (105)(m) \ kg \cdot m/s 
+\]
+
+Impulse is the change in the momentum and also the force multiplied by the time.
+\begin{align*}
+  I &= \Delta p = 105m \ kg \cdot m/s \\
+  \\
+  I &= Ft \\
+  F &= \frac{I}{t} \\
+    &= \frac{105 m \ kg \cdot m/s}{0.002 \ s} \\
+    &= 52,500 m \ N\\
+\end{align*}
+
+This is as far as you can go without the mass.  If you got the mass from problem 6, you could get the final answer of:
+\[
+  F = 52,000 \cdot 0.15 \ N = 7,875 \ N
+\]
+
+\end{solution}
+
+\bonusquestion[5] A moving cart with mass $m$ and velocity $v$ collides and
+bounces off an identical cart with moving at velocity $-2v$ in a perfectly
+elastic collision.  What is the velocity of each cart after the collision?
+
+\begin{solution}
+There are several ways to solve this one.  The first approach uses Feynman's idea of using different points of view to
+observe the same event and doesn't require much math, but does require visualizing a few different collisions.
+
+All of the collisions involve identical objects.
+
+\begin{enumerate}
+\item In a perfectly elastic collision between two objects with with velocities $v$ and $-v$, the two objects bounce
+  off each other and move in the opposite direction with their original velocities.  Because the situation is symmetric,
+  both objects will be moving at the same speed after the collision.  They just change direction in the collision.
+
+\item If you observe the preceding collision from a coordinate system moving at velocity $v$, the first object appears to be
+  initially stationary and the second object appears to be initially moving at velocity $2v$.  From this point of view,
+  after the collision the second object appears to be stationary and the first object appears to be moving at a velocity
+  $2v$.  So you can conclude that when a moving object has a perfectly elastic collision with a stationary object, the
+  stationary object gets all of the moving object's velocity and the moving object stops.
+
+\item If you observe the collision described in the problem from a coordinate system moving at velocity $v$, the first
+  cart appears to be stationary and the second cart appears to be moving at velocity $3v$.  Applying what we just
+  learned about a collision between a stationary object and a moving object, from this point of view, after the
+  collision the first object appears to be moving at velocity $3v$ and the second object appears to be stationary.  From
+  the point of view of a stationary coordinate system, the first object is moving at velocity $2v$ and the second object
+  is moving at velocity $-v$, which is the answer we are looking for.
+\end{enumerate}
+
+The other way to solve this problem requires more algebra\ldots
+
+In an elastic collision, both momentum and kinetic energy are conserved.  The initial values for each are:
+\begin{align*}
+  K &= \frac{1}{2} mv^2 + \frac{1}{2} m (2v)^2 \\
+    &= \frac{5}{2} mv^2 \\
+  \\
+  p &= mv - 2mv \\
+    &= -mv \\
+\end{align*}
+If we say that after the collision, the first cart is moving at velocity $v_1$ and the second cart is moving at velocity
+$v_2$, the values for kinetic energy and momentum after the collision are:
+\begin{align*}
+  K &= \frac{1}{2} mv_1^2 + \frac{1}{2} mv_2^2 \\
+  p &= mv_1 + mv_2 \\
+\end{align*}
+$K$ and $p$ don't change, so:
+\begin{align*}
+  \frac{1}{2} mv_1^2 + \frac{1}{2} mv_2^2 &= \frac{5}{2} mv^2 \\
+  v_1^2 + v_2^2 &= 5v^2 \\
+  \\
+  mv_1 + mv_2 &= -mv \\
+  v_1 + v_2 &= v \\
+  v_2 &= v - v_1 \\
+  \\
+  v_1^2 + (v - v_1)^2 &= 5v^2 \\
+  v_1^2 + v^2 - 2vv_1 + v_1^2 &= 5v^2 \\
+  %% 2v_1^2 - 2vv_1 + v^2 &= 5v^2 \\
+  %% 2v_1^2 - 2vv_1 - 4v^2 &= 0 \\
+  v_1^2 - vv_1 - 2v^2 &= 0 \\
+  (v_1 - 2v)(v_1 + v) &= 0 \\
+  v_1 = 2v &\text{ or } v_1 = -v \\
+\end{align*}
+The interesting value is $v_1 = 2v$, since the other value was the velocity before the collision.  Substituting back in
+the momentum equation gives $v_2 = -v$.  The two carts swapped velocities in the collision.
+
+\end{solution}
+
+\subsection{Gravity}
+
+\question[3]
+What is the gravitational force between earth and the sun?
+\begin{align*}
+  m_{earth} &= 5.97 \cdot 10^{24} \ kg \\
+  m_{sun} &= 2.00 \cdot 10^{30} \ kg \\
+  G &= 6.67 \cdot 10^{-11} \ N \cdot m^2/kg^2 \\
+  r &= 1.50 \cdot 10^{11} \ m \\
+\end{align*}
+
+\begin{solution}
+\begin{align*}
+  F &= \frac{Gm_1m_2}{r^2} \\
+    &= \frac{(6.67 \cdot 10^{-11} \ N \cdot m^2/kg^2)(5.97 \cdot 10^{24} \ kg )(2.00 \cdot 10^{30} \ kg)}
+            {(1.50 \cdot 10^{11} \ m)^2} \\
+    &= 3.54 \cdot 10^{22} \ N \\
+\end{align*}
+\end{solution}
+\subsection{Rotational Motion}
+
+\question[2] The minute hand and hour hand of a clock have the same mass.  The
+minute hand is long and thin and the hour hand is short and fat.  Which one has
+the larger moment of inertia?
+
+\begin{solution}
+Since the rotational inertia increases the farther the mass is from the radius, the minute hand has a larger moment of
+inertia because it is longer. 
+\end{solution}
+
+\question The angular speed of a wheel increases with constant acceleration
+from 10 rad/s to 20 rad/s in 2 revolutions.
+
+\begin{parts}
+
+\part[3] How long does it take?
+\begin{solution}
+
+First find $\alpha$ in terms of $\omega$ and $t$:
+\begin{align*}
+  \omega &= \omega_0 + \alpha t \\
+  \alpha &= \frac{\omega - \omega_0}{t} \\
+\end{align*}
+
+Then plug $\alpha$ in to the angle equation to find $t$:
+\begin{align*}
+  \theta &= \omega_0 t + \frac{1}{2} \alpha t^2 \\
+         &= \omega_0 t + \frac{1}{2} \left( \frac{\omega - \omega_0}{t} \right) t^2 \\
+         &= \left( \omega_0 + \frac{\omega - \omega_0}{2} \right) t \\
+         &= \left( \frac{\omega + \omega_0}{2} \right) t \\
+       t &= \frac{2 \theta}{\omega + \omega_0} \\
+         &= \frac{2 \cdot 4 \cdot \pi \ rad}{20 \ rad/s + 10 \ rad/s} \\
+         &\approx 0.838 \ s
+\end{align*}
+\end{solution}
+
+\part[3] What is its angular acceleration?
+\begin{solution}
+\[
+  \alpha = \frac{\omega - \omega_0}{t} = \frac{20 \ rad/s - 10 \ rad/s}{0.838 \ s} = 11.9 \ rad/s^2
+\]
+\end{solution}
+
+\end{parts}
+
+\question[3] A torque of $15 \ N \cdot m$ is required to tighten a nut.  If the
+wrench is 30 cm long, what is the minimum force needed?
+
+\begin{solution}
+\begin{align*}
+  \tau &= Fr \\
+   F &= \frac{\tau}{r} \\
+     &= \frac{15 \ N \cdot m}{0.30 \ m} \\
+     &= 50 \ N \\
+\end{align*}
+\end{solution}
+
+\question A torque of $100 \ N \cdot m$ is applied to a bicycle wheel of radius
+35 cm and mass 1 kg.
+\begin{parts}
+
+\part[3] If you treat the wheel as a hoop ($I = mr^2$), what is the angular acceleration?
+\begin{solution}
+\begin{align*}
+   \alpha &= \frac{\tau}{I} \\
+          &= \frac{100 \ N \cdot m}{ (1 \ kg)(0.35 \ m)^2} \\
+          &\approx 816 \ rad/s \\
+\end{align*}
+\end{solution}
+
+\part[3] If you treat the wheel as a uniform disk ($I = \frac{1}{2} mr^2$), what is the angular acceleration?
+\begin{solution}
+If you divide the rotational inertia by 2, you get twice as much acceleration, or: $\alpha = 1,633 \ rad/s$
+\end{solution}
+
+\end{parts}
+
+\question
+A 15 g record with a radius of 15 cm rotates with an angular speed of 33 1/3 rpm.  
+\begin{parts}
+
+\part[3] Find the record's angular momentum, assuming the record is a uniform disk.
+\begin{solution}
+For a disk:
+\[
+  I = \frac{1}{2} mr^2 = \frac{1}{2} (0.015 \ kg) (0.15 \ m)^2 = 1.69 \cdot 10^{-4} \ kg \cdot m^2
+\]
+
+The angular velocity, in rad/s is:
+\[
+  \omega = \frac{33.33 \ rev}{1 \ minute} \cdot \frac{1 \ minute}{60 \ s} \cdot \frac{2 \pi \ rad}{1 \ rev} \approx 3.49 \ rad/s
+\] 
+
+So the record's angular momentum is:
+\begin{align*}
+  L &= \omega I \\
+    &= (3.49 \ rad/s)(1.69 \cdot 10^{-4} \ kg \cdot m^2) \\
+    &\approx 5.9 \cdot 10^{-4} \ kg \cdot m^2/s \\
+\end{align*}
+\end{solution}
+
+\part[3] Find the angular momentum of a 2 g fly sitting on the rim of the record.
+\begin{solution}
+The fly's rotational inertia is:
+\[
+  I = mr^2 = (0.002 \ kg) (0.15 \ m)^2 = 4.5 \cdot 10^{-5} \ kg \cdot m^2
+\]
+
+The fly's angular momentum is:
+\begin{align*}
+  L &= \omega I \\
+    &= (3.49 \ rad/s)(4.5 \cdot 10^{-5} \ kg \cdot m^2) \\
+    &\approx 1.57 \cdot 10^{-4} \ kg \cdot m^2/s \\ 
+\end{align*}
+\end{solution}
+\end{parts}
+
+\end{questions}
+
+\end{document}
+

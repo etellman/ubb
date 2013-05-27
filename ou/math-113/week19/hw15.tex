@@ -1,0 +1,448 @@
+
+\documentclass[fleqn,addpoints]{exam}
+
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{mdwlist}
+
+% \printanswers
+
+\ifprintanswers
+\usepackage{2in1, lscape}
+\fi
+
+\title{Math 113 Homework 15}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{From the Book}
+
+\begin{itemize*}
+  \item pp. 286-287: 1-15, 25, 26, 30-34, 50-57 
+  \item pp. 294-296: 35-39, 55-59, 65-69, 71, 73, 77 
+\end{itemize*}
+
+\section{Extra Credit}
+
+What is $\sqrt{i}$?  In other words, what complex number times itself is equal to $i$?
+
+\begin{solution}
+
+If we let $\sqrt{i} = a + bi$, we need to find $a$ and $b$, knowing that $(a + bi)^2 = i$
+
+\begin{align*}
+  (a + bi)^2 &= i \\
+  a^2 + 2abi + bi^2 &= i \\
+  a^2 - b^2 + 2abi &= i \\
+  a^2 - b^2 + 2abi - i &= 0 \\
+  (a^2 - b^2) + (2ab - 1) i &= 0 \\
+\end{align*}
+
+For a complex number to be equal to zero, both the real and the imaginary parts must be equal to zero.  This gives us
+two equations: 
+
+\begin{itemize}
+  \item $a^2 - b^2 = 0$
+  \item $2ab - 1 = 0$
+\end{itemize}
+
+If we assume $a$ and $b$ are both positive (we'll revisit this decision in a minute), the first equation tells us that
+$a = b$.  We can use this result in the second equation to solve for $b$: 
+
+\begin{align*}
+  2b^2 - 1 &= 0 \\
+  2b^2 &= 1 \\
+  b &= \sqrt{\frac{1}{2}} \\
+  b &= \frac{\sqrt{2}}{2} \\
+\end{align*}
+
+Since $a=b$, we can put this together to get: $\sqrt{i} = \dfrac{\sqrt{2}}{2} + i \dfrac{\sqrt{2}}{2}$.  
+
+Earlier, we assumed that $a$ and $b$ were both positive.  But of course, there is also a negative square root, which is:
+\[
+  - \left( \frac{\sqrt{2}}{2} + i \frac{\sqrt{2}}{2} \right) = -\frac{\sqrt{2}}{2} - i \frac{\sqrt{2}}{2}
+\]
+
+So the final answer is:
+
+\[
+  \sqrt{i} = \left \{ \frac{\sqrt{2}}{2} + i \dfrac{\sqrt{2}}{2}, - \frac{\sqrt{2}}{2} - i \dfrac{\sqrt{2}}{2} \right \}
+\]
+
+We can check the solution:
+\begin{align*}
+  \left( \frac{\sqrt{2}}{2} + i \frac{\sqrt{2}}{2} \right)^2 &= \frac{2}{4} + 2 i \cdot \frac{2}{4} + i^2 \frac{2}{4} \\
+  &= \frac{1}{2} - \frac{1}{2} + i \\
+  &= i
+\end{align*}
+
+\end{solution}
+
+\ifprintanswers
+
+\section{Pages 267-269}
+\begin{description}
+
+\item[1]
+Every complex number is a real number: {\em false}.
+
+\item[2]
+Every real number is a complex number: {\em true.  In fact, all numbers are complex numbers}.
+
+\item[3]
+The real part of the complex number $6i$ is $0$: {\em true}.
+
+\item[4]
+Every complex number is a pure imaginary number: {\em false}.
+
+\item[5]
+The sum of two complex numbers is always a complex number: {\em true.  In fact, all numbers are complex numbers.}
+
+\item[6]
+The imaginary part of the complex number $7$ is $0$: {\em true}.
+
+\item[7]
+The sum of two complex numbers is sometimes a real number: {\em true}.
+
+For example:
+\begin{align*}
+  2 + 3 = 5 \\
+  (1 + i) + (1 - i) &= 2
+\end{align*}
+
+\item[8]
+The sum of two pure imaginary numbers is always a pure imaginary number: {\em false}.
+
+For example:
+\[
+  (i) + (-i) = 0
+\]
+
+\item[9]
+\[
+  (6+3i) + (4+5i) = 10 + 8i
+\]
+
+\item[10]
+\[
+  (5+2i) + (7+10i) = 12 + 12i
+\]
+
+\item[11]
+\[
+  (-8+4i) + (2+6i) = -6+10i
+\]
+
+\item[12]
+\[
+  (5-8i) + (-7+2i) = -2 - 6i
+\]
+
+\item[13]
+\[
+  (3+2i) - (5+7i) = -2 - 5i
+\]
+
+\item[14]
+\[
+  (1+3i) - (4+9i) = -3 - 6i
+\]
+
+\item[15]
+\[
+  (-7+3i) - (5-2i) = -12 + 5i
+\]
+
+\item[25]
+\begin{align*}
+  \left( - \frac{5}{9} + \frac{3}{5} i\right) - \left( \frac{4}{3} - \frac{1}{6} i \right)
+    & = \left( - \frac{5}{9} - \frac{4}{3} \right) + \left( \frac{3}{5} + \frac{1}{6} \right) i \\
+    & = \left( - \frac{5}{9} - \frac{12}{9} \right) + \left( \frac{18}{30} + \frac{5}{30} \right) i \\
+    &= - \frac{17}{9} + \frac{23}{30} i \\
+\end{align*}
+
+\item[26]
+\begin{align*}
+  \left( \frac{3}{8} - \frac{5}{2} i\right) - \left( \frac{5}{6} + \frac{1}{7} i \right)
+    &= \left( \frac{3}{8} - \frac{5}{6} \right) + \left( - \frac{5}{2} - \frac{1}{7} \right) i \\
+    &= \left( \frac{9}{24} - \frac{20}{24} \right) + \left( - \frac{35}{14} - \frac{2}{14} \right) i \\
+    &= - \frac{11}{24} - \frac{37}{14} i \\
+\end{align*}
+
+\item[30]
+\[
+  \sqrt{-33} = i \sqrt{33} 
+\]
+
+\item[31]
+\[
+  \sqrt{- \frac{16}{25}} = i \sqrt{\frac{16}{25}} = \frac{4}{5} i
+\]
+
+\item[32]
+\[
+  \sqrt{- \frac{64}{36}} = i \sqrt{\frac{64}{36}} = \frac{8}{6} i = \frac{4}{3} i
+\]
+
+\item[33]
+\[
+  \sqrt{-18} = i \sqrt{18} = 3i \sqrt{2}
+\]
+
+\item[34]
+\[
+  \sqrt{-84} = i \sqrt{84} = i \sqrt{4 \cdot 21} = 2i \sqrt{21}
+\]
+
+\item[50]
+\[
+  \sqrt{-2} \sqrt{-20} =  (i \sqrt{2}) (i \sqrt{20}) = i^2 \sqrt{2^3 \cdot 5} = -2 \sqrt{10}
+\]
+
+\item[51]
+\[
+  \sqrt{-2} \sqrt{-27} = i^2 \sqrt{2 \cdot 3^3} = -3 \sqrt{6}
+\]
+
+\item[52]
+\[
+  \sqrt{-3} \sqrt{-15} = i^2 \sqrt{3^2 \cdot 5} = -3 \sqrt{5}
+\]
+
+\item[53]
+\[
+  \sqrt{6} \sqrt{-8} = i \sqrt{2^4 \cdot 3} = 4i \sqrt{3}
+\]
+
+\item[54]
+\[
+  \sqrt{-75} \sqrt{3} = i \sqrt{5^2 \cdot 3^2} = 15i
+\]
+
+\item[55]
+\[
+  \frac{\sqrt{-25}}{\sqrt{-4}} = \frac{\cancel{i} \sqrt{25}}{\cancel{i} \sqrt{4}} = \frac{5}{2}  
+\]
+
+\item[56]
+\[
+  \frac{ \sqrt{-81} }{ \sqrt{-9} } = \frac{ \cancel{i} \sqrt{81} }{ \cancel{i} \sqrt{9} } = \frac{9}{3} = 3
+\]
+
+\item[57]
+\[
+  \frac{ \sqrt{-56} }{ \sqrt{-7} } = \frac{ \cancel{i} \sqrt{56} }{ \cancel{i} \sqrt{7} } = \sqrt{\frac{56}{7}} 
+  = \sqrt{8} = 2\sqrt{2}
+\]
+
+\end{description}
+
+\section{Pages 294-296}
+\begin{description}
+
+\item[35]
+\begin{align*}
+  x^2 &= 1 \\
+  x &= \pm \sqrt{1} \\
+  x &= \pm 1 \\
+  x &= \{ -1, 1 \} \\
+\end{align*}
+
+\item[36]
+\begin{align*}
+  x^2 &= 81 \\
+  x &= \pm \sqrt{81} \\
+  x &= \pm 9 \\
+  x &= \{ -9, 9 \} \\
+\end{align*}
+
+\item[37]
+\begin{align*}
+  x^2 &= -36 \\
+  x &= \pm \sqrt{-36} \\
+  x &= \pm 6i \\
+  x &= \{ -6i, 6i \} \\
+\end{align*}
+
+\item[38]
+\begin{align*}
+  x^2 &= -49 \\
+  x &= \pm \sqrt{-49} \\
+  x &= \pm 7i \\
+  x &= \{ -7i, 7i \} \\
+\end{align*}
+
+\item[39]
+\begin{align*}
+  x^2 &= 14 \\
+  x &= \pm \sqrt{14} \\
+  x &= \{ -\sqrt{14}, \sqrt{14} \} \\
+\end{align*}
+
+\item[55]
+\begin{align*}
+  (x+3)^2 &= 25 \\
+  x+3 &= \pm \sqrt{25} \\
+  x &= -3 \pm \sqrt{25} \\
+  x &= -3 \pm 5 \\
+  x &= \{ -8, 2 \} \\
+\end{align*}
+
+\item[56]
+\begin{align*}
+  (x-2)^2 &= 49 \\
+  x-2 &= \pm \sqrt{49} \\
+  x &= 2 \pm \sqrt{49} \\  
+  x &= 2 \pm 7 \\  
+  x &= \{ -5, 9 \} \\  
+\end{align*}
+
+\item[57]
+\begin{align*}
+  (x+6)^2 &= -4 \\
+  x+6 &= \pm \sqrt{-4} \\
+  x &= -6 \pm i \sqrt{4} \\  
+  x &= -6 \pm 2i \\  
+  x &= \{ -6 - 2i, -6 + 2i \} \\  
+\end{align*}
+
+\item[58]
+\begin{align*}
+  (3x+1)^2 &= 9 \\
+  3x+1 &= \pm \sqrt{9} \\
+  3x+1 &= \pm 3 \\
+  3x &= -1 \pm 3 \\  
+  x &= \frac{-1 \pm 3}{3} \\  
+  x &= \left \{ - \frac{4}{3}, \frac{2}{3} \right \} \\  
+\end{align*}
+
+\item[59]
+\begin{align*}
+  (2x-3)^2 &= 1 \\
+  2x-3 &= \pm \sqrt{1} \\
+  2x-3 &= \pm 1 \\
+  2x &= 3 \pm 1 \\  
+  x &= \frac{3 \pm 1}{2} \\  
+  x &= \{ 1, 2 \} \\  
+\end{align*}
+
+\item[65]
+\begin{align*}
+  (3y-2)^2 &= -27 \\
+  3y-2 &= \pm \sqrt{-27} \\
+  3y-2 &= \pm 3i \sqrt{3} \\
+  3y &= 2 \pm 3i \sqrt{3} \\  
+  y &= \frac{2 \pm 3i \sqrt{3}}{3} \\  
+  y &= \left \{ \frac{2}{3} - i\sqrt{3}, \frac{2}{3} + i\sqrt{3} \right \} \\  
+\end{align*}
+
+\item[66]
+\begin{align*}
+  (4y+5)^2 &= 80 \\
+  4y+5 &= \pm \sqrt{80} \\
+  4y+5 &= \pm 4 \sqrt{5} \\
+  4y &= -5 \pm 4 \sqrt{5} \\  
+  y &= \frac{-5 \pm 4\sqrt{5}}{4} \\  
+  y &= \left \{ - \frac{5}{4} - \sqrt{5}, -\frac{5}{4} + \sqrt{5} \right \} \\  
+\end{align*}
+
+\item[67]
+\begin{align*}
+  3(x+7)^2 + 4 &= 79 \\
+  3(x+7)^2 &= 75 \\
+  (x+7)^2 &= 25 \\
+  x+7 &= \pm \sqrt{25} \\
+  x+7 &= \pm 5 \\
+  x &= -7 \pm 5 \\
+  x &= \{ -12, -2 \} \\
+\end{align*}
+
+\item[68]
+\begin{align*}
+  2(x+6)^2 - 9 &= 63 \\
+  2(x+6)^2 &= 72 \\
+  (x+6)^2 &= 36 \\
+  x+6 &= \pm \sqrt{36} \\
+  x+6 &= \pm 6 \\
+  x &= -6 \pm 6 \\
+  x &= \{ -12, 0 \} \\
+\end{align*}
+
+\item[69]
+\begin{align*}
+  2(5x-2)^2 + 5 &= 25 \\
+  2(5x-2)^2  &= 20 \\
+  (5x-2)^2  &= 10 \\
+  5x-2  &= \sqrt{10} \\
+  5x  &= 2 \pm \sqrt{10} \\
+  x  &= \frac{2 \pm \sqrt{10}}{5} \\
+  x &= \left \{ \frac{2 - \sqrt{10}}{5}, \frac{2 + \sqrt{10}}{5} \right \}
+\end{align*}
+
+\item[71]
+\begin{align*}
+  c^2 &= 4^2 + 6^2 \\
+  c^2 &= 16 + 36 \\
+  c^2 &= 52 \\
+  c   &= \pm \sqrt{52} \\
+  c   &= \pm 2\sqrt{13} \\
+\end{align*}
+
+Since you can't have a negative length, the only solution is $2 \sqrt{13}$.
+
+\item[73]
+\begin{align*}
+  a^2 + 8^2 &= 12^2 \\
+  a^2 + 64 &= 144 \\
+  a^2 &= 80 \\
+  a &= \pm \sqrt{80} \\
+  a &= \pm 4 \sqrt{5} \\
+\end{align*}
+
+Since you can't have a negative length, the only solution is $4 \sqrt{5}$.
+
+\item[77]
+\begin{align*}
+  c^2 &= 6^2 + 6^2 \\
+  c^2 &= 36 + 36 \\
+  c^2 &= 72 \\
+  c   &= \pm \sqrt{72} \\
+  c   &= \pm 6 \sqrt{2} \\
+\end{align*}
+
+Since you can't have a negative length, the only solution is $6 \sqrt{2}$.
+
+\end{description}
+
+\else
+\vspace{3 in}
+
+\begin{em}
+In Zen they say:  If something is boring after two minutes, try it for four.  If it is still boring try it for
+eight, sixteen, thirty-two, and so on.  Eventually one discovers that it's not boring at all but very interesting.
+
+\vspace{6 pt}
+
+At the New School once I was substituting for Henry Cowell, teaching a class in Oriental music.  I had told him I didn't
+know anything about the subject.  He said, ``That's all right.  Just go where the records are.  Take one out.  Play it
+and then discuss it with the class.''  Well, I took out the first record.  It was an LP  of a Buddhist service.  It
+began with a short microtonal chant with sliding tones, then soon settled into a single loud reiterated percussive
+beat.  This noise continued relentlessly for about fifteen minutes with no perceptible variation.  A lady got up and
+screamed, and then yelled, ``Take it off.  I can't bear it any longer.''  I took it off.  A man in the class then said
+angrily, ``Why'd you take it off?  I was just getting interested.''
+
+\end{em}
+
+\vspace{0.1 in}
+\hspace{0.5 in} --John Cage
+
+\fi
+
+\end{document}
+

@@ -1,0 +1,313 @@
+
+\documentclass{exam}
+
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+
+% \oddsidemargin .5in
+% \topmargin -1in
+\textwidth 6.5 in
+
+\printanswers
+
+\ifprintanswers 
+\usepackage{2in1, lscape} 
+\fi
+
+\title{Physics \\ Homework Four}
+\date{October 3, 2011}
+% \author{Ed Tellman}
+
+\begin{document}
+
+\maketitle
+
+\section{From the Book}
+
+\begin{itemize*}
+  \item Read Chapter 7
+  \item Chapter 7
+    \begin{itemize*}
+      \item questions 2, 6, 7, 9, 12, 19, 24, and 32
+      \item exercises 1, 2, 4, 5, 8, 11, and 14
+      \item synthesis problems 2 and 3
+    \end{itemize*}
+\end{itemize*}
+
+\section{Extra Credit}
+
+\begin{questions}
+
+\question 
+An object initially at rest breaks into two pieces as the result of an explosion.  One piece has twice the kinetic
+energy of the other piece.  What is the ratio of the masses of the two pieces?  Which piece has the larger mass? ({\em James Walker}).
+
+\begin{solution}
+Here's what we know about the kinetic energy of the two pieces:
+\[
+  \frac{1}{2} m_1v_1^2 = 2 \left( \frac{1}{2} m_2v_2^2 \right) = m_2v_2^2
+\]
+
+Since the initial momentum before the explosion was zero, the momentum after the explosion is also zero:
+\[
+  m_1v_1 + m_2v_2 = 0
+\]
+
+We can solve the momentum equation for one of the velocities and plug that into the kinetic energy equation:
+\begin{align*}
+  m_1v_1 + m_2v_2 &= 0 \\
+  v_1 &= - \frac{m_2v_2}{m1} \\
+  \\
+  \frac{1}{2} m_1 \left(- \frac{m_2v_2}{m1} \right)^2 &= m_2 v_2^2 \\
+  \frac{1}{2} \left(\frac{m_2^2v_2^2}{m1} \right) &= m_2 v_2^2 \\
+  m_2 &= 2m_1 \\
+\end{align*}
+
+If, you put the masses back in the original equation, you find that 
+\[
+  v_2 = - \frac{v_1}{2}
+\]
+
+The larger object has twice the mass and half the kinetic energy as the smaller object.
+
+\end{solution}
+
+\end{questions}
+
+\ifprintanswers
+
+\section{Chapter 7}
+\begin{description}
+
+\item[Q2]
+If the impulses are equal, the force which acted for a longer time must have been smaller.
+
+\item[Q6]
+\begin{description}
+\item[a] Since the ball reverses direction, the momentum is the same magnitude but also in the opposite direction.
+\item[b] Since there is a change in momentum, there is also an impulse.
+\end{description}
+
+\item[Q7]
+Since $I = Ft$, keeping the ball in contact for a longer time will result in a larger impulse, which will make the ball go farther.
+
+\item[Q9]
+In a collision, the passenger decelerates rapidly from driving speed to zero.  If the passenger decelerates by
+contacting the dashboard or windshield, the impulse will be delivered over a very short time with a very large force,
+causing a great deal of damage to the passenger.  If the passenger declerates by contacting the air bag, the impulse
+will be delivered over a longer time with a smaller force, causing less damager to the passenger.
+
+\item[Q12]
+Both vehicles have the same velocity, but the truck has larger mass so it also has larger momentum.  Impulse is the
+change in momentum, so the truck requires a larger impulse.
+
+\item[Q19]
+Momentum is conserved in a closed system.  The initial momentum was zero, so the momentum after the push is also zero.
+The momentum of one skater exactly cancels the momentum of the other skater.
+
+\item[Q24]
+Before the collision, the momentum was $p_{before} = m_1v_1$.  After the collision, the momentum is 
+$p_{after} = (m_1 + m_2) v$  These two momentums must be equal since momentum is conserved.  And since the
+post-collision mass is larger, the post-collision velocity must be smaller.
+
+\item[Q32]
+Since most of the motion after the collision is to the right, most of the momentum after the collision is to the right.
+So the red car must have most of the momentum before the collision.  Since the cars have the same mass, the red car must
+have been moving faster before the collision.
+
+\item[E1]
+\begin{description}
+\item[a]
+\[
+  I = Ft = (300 \text{ N})(0.04 \text{ s}) = 12 \text{ N s} 
+\]
+
+\item[b]
+\[
+  I = \Delta p = 12 \text{ kg m/s} 
+\]
+\end{description}
+
+\item[E2]
+\[
+  p = mv = (1,200 \text{ kg})(27 \text{ m/s}) = 32,400 \text{ kg m/s}
+\]
+
+\item[E4]
+\begin{description}
+\item[a] 
+\[
+  I = Ft = (45 \text{ N})(0.2 \text{ s}) = 9 \text{ N s}
+\]
+
+\item[b] 
+The final momentum is the same as the impulse: $9 \text{ kg m/s}$.
+
+\end{description}
+
+\item[E5]
+\[
+  I = \Delta p = - (0.12 \text{ kg})(40 \text{ m/s}) = -4.8 \text{ N s}
+\]
+
+\item[E8]
+\begin{description}
+\item[a]
+\[
+  \Delta p = (2.5 \text{ kg m/s}) - (- 2.5 \text{ kg m/s}) = 5 \text{ kg m/s}
+\]
+
+\item[b] from part a, $5 \text{ kg m/s}$
+\end{description}
+
+\item[E11]
+\begin{description}
+\item[b] 
+Since the initial momentum was zero and no external forces acted on the two skaters, the momentum after they push
+off is also zero.
+
+\item[c]
+
+Since the total momentum is zero:
+\begin{align*}
+  (80 \text{ kg}) & (3 \text{ m/s}) + (32 \text{ kg}) v = 0 \\
+  v &= - 7.5 \text{ m/s} \\
+\end{align*}
+
+\end{description}
+
+\item[E14]
+\begin{description}
+\item[a]
+\[
+  p = mv = (12,000 \text{ kg})(12 \text{ m/s}) = 144,000 \text{ kg m/s}
+\]
+
+\item[b]
+\begin{align*}
+  144,000 \text{ kg m/s} &= (12,000 + 18,000 \text{ kg}) v \\
+  v &= 4.8 \text{ m/s} \\
+\end{align*}
+
+\end{description}
+
+\item[SP1]
+
+I typed the solution to this one and then I realized that it wasn't one of the assigned problems \ldots
+
+\begin{description}
+\item[a]
+If we consider the direction from the pitcher to the batter to be positive and from the batter to the pitcher to be negative:
+\begin{itemize*}
+  \item the initial momentum of the ball is 
+    \[ p = mv = (.120 \text{ kg})(40 \text{ m/s}) = 4.8 \text{ kg m/s} \]
+  \item the final momentum of the ball is 
+    \[ p = mv = (.120 \text{ kg})(-60 \text{ m/s}) = -7.2 \text{ kg m/s} \]
+  \item the change is $4.8 - (-7.2) \text{ kg m/s} = 12 \text{ kg m/s}$
+\end{itemize*}
+
+\item[b]
+The change is greater than the final momentum because the ball reversed direction.
+
+\item[c]
+The magnitude of the required impulse is the same as the change in the momentum.
+
+\item[d]
+\[
+  F = \frac{I}{\Delta t} = \frac{12 \text{ kg m/s}}{0.04 \text{ s}} = 300 \text{ N}
+\]
+
+\end{description}
+
+\item[SP2]
+
+You have to retain quite a few significant digits in this problem for all the numbers to work out exactly.
+
+\begin{description}
+
+\item[a]
+The initial momentum of the bullet is 
+\[ p = mv = (0.005 \text{ kg})(500 \text{ m/s}) = 2.5 \text{ kg m/s} \]
+
+Since momentum is conserved, this is also the momentum of the bullet/block combination after the collision.  So the
+velocity of the bullet/block combination is:
+\begin{align*}
+  p &= mv \\
+  2.5 \text{ kg m/s} &= (1.2 \text{ kg} + 0.005 \text{ kg}) v \\
+  v &\approx 2.0747 \text{ m/s} \\
+\end{align*}
+
+\item[b]
+Since the block of wood starts out stationary, the change in momentum for the block of wood is the same as its final
+momentum: 
+\[
+  p = mv = (1.2 \text{ kg})(2.0747 \text{ m/s}) \approx 2.4896 \text{ kg m/s}
+\]
+This is also the impulse that acts on the block of wood.
+
+\item[c]
+
+The final momentum for the bullet is
+\[
+  p = mv = (0.005 \text{ kg})(2.0747 \text{ m/s}) \approx 0.0104 \text{ kg m/s}
+\]
+
+The change in momentum for the bullet is 
+\[
+\Delta p = 2.5 \text{ kg m/s} - 0.0104 \text{ kg m/s} = 2.4896 \text{ kg m/s}
+\]
+which matches the momentum of the block of wood.
+
+This makes sense, because any momentum the bullet lost must have been transferred to the block for the momentum of the bullet/block
+system to remain constant.
+
+\end{description}
+
+\item[SP3]
+\begin{description}
+\item[a]
+In case A the ball ends up with zero momentum and the change is from its initial momentum to zero.  In case B, the
+ball reverses direction so the change is from its initial momentum to negative its initial momentum, which is twice as
+big of a change.
+
+\item[b]
+Case B, because that is the larger change in momentum.
+
+\item[c]
+Momentum is always conserved, but you have to include the change in the wall's momentum which is probably very difficult to
+observe.
+
+\end{description}
+
+\end{description}
+
+\fi
+
+
+\vspace{3 in}
+
+\ifprintanswers
+\else
+\begin{em}
+% The ancients studied in order to rule themselves.  These days, people study in order to rule others.
+Adept Kung was forever comparing and criticizing people.  The Master said: ``To have time for such things, Kung must have
+already perfected himself completely.  As for me, I am not so lucky.''
+\end{em}
+
+\vspace{.2 cm}
+\hspace{1 cm} --The Analects of Confucius
+
+\fi
+
+\end{document}
+

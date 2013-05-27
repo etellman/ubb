@@ -1,0 +1,511 @@
+\documentclass[fleqn,addpoints]{exam}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+
+\printanswers
+
+\ifprintanswers 
+\usepackage{2in1, lscape} 
+\fi
+
+\title{Math 115 Homework 12}
+\date{January 3, 2011}
+
+\begin{document}
+
+\maketitle
+ 
+
+\ifprintanswers
+\else
+\section{Reading}
+\begin{itemize}
+  \item Larson/Hostetler Sections 2.4-2.5
+  \item Faires/DeFranza Sections 2.4 and 2.6 (optional)
+\end{itemize}
+
+\section{Homework}
+
+\begin{itemize}
+  \item Larson/Hostetler, pp 253-255: 11-18, 21-22, 37-38, 40, 47-48, 50, 62-63, 81-85
+\end{itemize}
+
+\fi
+
+\ifprintanswers
+
+\section{Larson/Hostetler}
+
+\begin{description}
+\item[11]
+\[ 
+  f(x) = x^3-6x^2+11x-6
+\]
+
+The candidates are: $\{\pm1, \pm6, \pm2, \pm 3 \}$
+
+\[ 
+  \polyhornerscheme[x=1]{x^3-6x^2+11x-6} \\
+\]
+
+\begin{align*}
+  f(x) &= (x-1)(x^2-5x+6) \\
+  &= (x-1)(x-3)(x-2) \\
+\end{align*}
+
+zeros: $x = \{ 1, 2, 3 \}$
+
+\item[12]
+\[ 
+  f(x) = x^3-7x-6 
+\]
+
+The candidates are: $\{\pm 1, \pm 6, \pm 2, \pm 3 \}$
+
+\[
+  \polyhornerscheme[x=1]{x^3-7x-6} 
+\]
+\[
+  \polyhornerscheme[x=-1]{x^3-7x-6} 
+\]
+
+
+\begin{align*}
+  f(x) &=  (x+1)(x^2-x-6)\\
+  &=  (x+1)(x-3)(x+2) \\
+\end{align*}
+
+zeros: $x = \{ -1, 3, -2 \}$
+
+\item[13]
+\[ 
+  g(x) = x^3 - 4x^2 - x + 4
+\]
+
+The candidates are: $\{\pm 1, \pm 4, \pm 2\}$
+
+\[ 
+  \polyhornerscheme[x=1]{x^3 - 4x^2 - x + 4}
+\]
+
+\begin{align*}
+  g(x) &=  (x-1)(x^2 - 3x - 4) \\
+  &=  (x-1)(x-4)(x+1) \\
+\end{align*}
+
+zeros: $x = \{ -1, 1, 4 \}$
+
+\item[14]
+\[ 
+  h(x) = x^3-9x^2+20x-12
+\]
+
+The candidates are: $\{\pm 1, \pm 12, \pm 2, \pm 6, \pm 3, \pm 4\}$
+
+\[ 
+  \polyhornerscheme[x=1]{x^3-9x^2+20x-12}
+\]
+
+\begin{align*}
+  h(x) &=  (x-1)(x^2-8x+12) \\
+  &=  (x-1)(x-6)(x-2) \\
+\end{align*}
+
+zeros: $x = \{ 1, 2, 6 \}$
+
+\item[15]
+\[ 
+  h(t) = t^3+12t^2+21t+10
+\]
+
+The candidates are: $\{\pm 1, \pm 10, \pm 2, \pm 5 \}$
+
+\[ 
+  \polyhornerscheme[x=1]{x^3+12x^2+21x+10}
+\]
+
+\[ 
+  \polyhornerscheme[x=-1]{x^3+12x^2+21x+10}
+\]
+
+\begin{align*}
+  h(t) &=  (t+1)(t^2 + 11t + 10) \\
+  &=  (t+1)(t+10)(t+1) \\
+  &=  (t+1)^2(t+10) \\
+\end{align*}
+
+zeros: $t = \{ -1, -10 \}$
+
+\item[16]
+\[ 
+  p(x) = x^3 - 9x^2 + 27x - 27
+\]
+
+The candidates are: $\{\pm 1, \pm 27, \pm 3, \pm 9 \}$
+
+\[ 
+  \polyhornerscheme[x=1]{x^3 - 9x^2 + 27x - 27}
+\]
+
+\[ 
+  \polyhornerscheme[x=-1]{x^3 - 9x^2 + 27x - 27}
+\]
+
+\[ 
+  \polyhornerscheme[x=3]{x^3 - 9x^2 + 27x - 27}
+\]
+
+\begin{align*}
+  f(x) &=  (x-3)(x^2-6x+9) \\
+  &=  (x-3)(x-3)(x-3) \\
+  &=  (x-3)^3 \\
+\end{align*}
+
+zeros: $x = \{ 3 \}$
+
+\item[17]
+\[ 
+  C(x) =  2x^3 + 3x^2 - 1
+\]
+
+The candidates are: $\left \{\pm 1, \pm \dfrac{1}{2} \right \}$
+
+\[ 
+  \polyhornerscheme[x=1]{2x^3 + 3x^2 - 1}
+\]
+
+\[ 
+  \polyhornerscheme[x=-1]{2x^3 + 3x^2 - 1}
+\]
+
+\[ 
+  \polyhornerscheme[x=\frac{1}{2}]{2x^2 + x - 1}
+\]
+
+\begin{align*}
+  C(x) &=  (x+1)(x-\frac{1}{2})(2x+2) \\
+  &=  2(x+1)(x-\frac{1}{2})(x+1) \\
+  &=  (x+1)(2x-1)(x+1) \\
+  &=  (2x-1)(x+1)^2 \\
+\end{align*}
+
+zeros: $x = \left \{ -1, \dfrac{1}{2} \right \}$
+
+\item[18]
+\[ 
+  f(x) = 3x^3 - 19x^2 + 33x - 9 
+\]
+
+The candidates are: $\left \{\pm 1, \pm 9, \pm 3, \pm \dfrac{1}{3} \right \}$
+
+\[ 
+  \polyhornerscheme[x=1]{3x^3 - 19x^2 + 33x - 9}
+\]
+
+\[ 
+  \polyhornerscheme[x=-1]{3x^3 - 19x^2 + 33x - 9}
+\]
+
+\[ 
+  \polyhornerscheme[x=\frac{1}{3}]{3x^3 - 19x^2 + 33x - 9}
+\]
+
+\begin{align*}
+  f(x) &=  (x-\frac{1}{3})(3x^2-18x+27) \\
+  &=  3(x-\frac{1}{3})(x^2-6x+9) \\
+  &=  (3x-1)(x-3)^2 \\
+\end{align*}
+
+zeros: $x = \left \{ \dfrac{1}{3}, 3 \right \}$
+
+\item[21]
+\[ 
+  z^4 - z^3 - 2z - 4 = 0
+\]
+
+The candidates are: $\{\pm 1, \pm 2, \pm 4 \}$
+
+\[ 
+  \polyhornerscheme[x=1]{x^4 - x^3 - 2x - 4 }
+\]
+
+\[ 
+  \polyhornerscheme[x=-1]{x^4 - x^3 - 2x - 4 }
+\]
+
+\[ 
+  \polyhornerscheme[x=-1]{x^3 - 2x^2 + 2x - 4 }
+\]
+
+\[ 
+  \polyhornerscheme[x=2]{x^3 - 2x^2 + 2x - 4 }
+\]
+
+\begin{align*}
+  (x+1)(x-2)(x^2+2) &= 0
+\end{align*}
+
+real solutions: $x = \{ -1, 2 \}$
+
+\item[22]
+\begin{align*}
+  x^4 - 13x^2 - 12x &= 0 
+  x(x^3 - 13x - 12) &= 0 
+\end{align*}
+
+The candidates are: $\{\pm 1, \pm 12, \pm 2, \pm 6, \pm 3, \pm 4\}$
+
+\[ 
+  \polyhornerscheme[x=-1]{x^3 - 13x - 12}
+\]
+
+\begin{align*}
+  x(x+1)(x^2-x-12) &=  0 \\
+  x(x+1)(x-4)(x+3) &=  0 \\
+\end{align*}
+
+zeros: $x = \{ -3, -1, 0, 4 \}$
+
+\item[37]
+\begin{align*}
+  f(x) &= (x-1)(x-5i)(x+5i) \\
+  &= (x-1)(x^2+25) \\
+  &= x^3 -x^2 + 25x - 25 \\
+\end{align*}
+
+\item[38]
+\begin{align*}
+  f(x) &= (x-4)(x-3i)(x+3i) \\
+  &= (x-4)(x^2+9) \\
+  &= x^3 -4x^2 + 9x - 36 \\
+\end{align*}
+
+\item[40]
+\begin{align*}
+  f(x) &= (x-2)(x- (4+i) )(x - (4-i)) \\
+   &= (x-2)(x^2 - (4+i)x -(4-i)x + (16-i^2)) \\
+   &= (x-2)(x^2 - 4x -ix -4x +ix + (16+1)) \\
+   &= (x-2)(x^2 - 8x + 17) \\
+   &= x^3 -8x^2 + 17x -2x^2 + 16x -34 \\
+   &= x^3 -10x^2 + 33x -34 \\
+\end{align*}
+
+\item[47]
+\[
+  f(x) = 2x^3 + 3x^2 + 50x + 75
+\]
+
+If there is a root at $x=5i$, there is also a root at the conjugate, $x=-5i$:
+\[
+  (x-5i)(x+5i) = x^2-25i^2 = x^2+25
+\]
+
+\[ 
+  \polylongdiv{2x^3 + 3x^2 + 50x + 75}{x^2+25} 
+\]
+
+So the complete factoring is:
+\[
+  f(x) = (2x+3)(x+5i)(x-5i)
+\]
+
+and the roots are: $x = \left \{ -\dfrac{3}{2}, -5i, 5i \right\}$
+
+\item[48]
+\[
+  f(x) = x^3 + x^2 + 9x + 9
+\]
+
+If there is a root at $x=3i$, there is also a root at the conjugate, $x=-3i$:
+\[
+  (x-3i)(x+3i) = x^2-9i^2 = x^2+9
+\]
+
+\[ 
+  \polylongdiv{ x^3 + x^2 + 9x + 9}{x^2+9} 
+\]
+
+So the complete factoring is:
+\[
+  f(x) = (x+1)(x+3i)(x-3i)
+\]
+
+and the roots are: $x = \{ -1, -3i, 3i \}$
+
+\item[50]
+\[
+  g(x) = x^3-7x^2-x+87
+\]
+
+If there is a root at $x=5+2i$, there is also a root at the conjugate, $x=5-2i$:
+\begin{align*}
+  (x-(5+2i))(x-(5-2i)) & \\
+  & = x^2 - (5-2i)x - (5+2i)x + (25 -4i^2) \\
+  &= x^2 -5x + 2ix - 5x -2ix + 29 \\
+  &= x^2 -10x + 29 \\
+\end{align*}
+
+\[ 
+  \polylongdiv{ x^3-7x^2-x+87}{x^2 -10x + 29} 
+\]
+
+So the complete factoring is:
+\[
+  f(x) = (x+3)(x - (5+2i) )(x- (5 - 2i))
+\]
+
+and the roots are: $x = \{ -3, 5+2i, 5-2i \}$
+
+\item[62]
+\[ 
+  f(x) = x^3 - 3x^2 + 4x - 2 
+\]
+
+The candidates for rational zeros are: $\{\pm 1, \pm 2 \}$
+
+\[ 
+  \polyhornerscheme[x=1]{x^3 - 3x^2 + 4x - 2}
+\]
+
+\begin{align*}
+  f(x) &=  (x-1)(x^2 - 2x + 2) \\
+\end{align*}
+
+$x^2-2x+2$ doesn't factor, but we can use the quadratic formula to find the solutions:
+
+\begin{align*}
+  x &= \frac{2 \pm \sqrt{4 - (4)(2)}}{2} \\
+    &= \frac{2 \pm 2i}{2} \\
+    &= 1 \pm i \\
+\end{align*}
+
+So the factors are: $f(x) = (x-1)(x - (1 + 2i))(x - (1-2i))$
+
+The roots are: $x = \{1, 1+i, 1-i \}$
+
+\item[63]
+\[ 
+  g(x) = x^3-6x^2+13x-10
+\]
+
+The candidates for rational zeros are: $\{\pm 1, \pm 10, \pm 2 \pm 5 \}$
+
+\[ 
+  \polyhornerscheme[x=2]{x^3-6x^2+13x-10}
+\]
+
+\begin{align*}
+  f(x) &=  (x-2)(x^2 - 4x + 5) \\
+\end{align*}
+
+$x^2-4x+5$ doesn't factor, but we can use the quadratic formula to find the solutions:
+
+\begin{align*}
+  x &= \frac{4 \pm \sqrt{16 - (4)(5)}}{2} \\
+    &= \frac{4 \pm 2i}{2} \\
+    &= 2 \pm i
+\end{align*}
+
+So the factors are: $f(x) = (x-2)(x - (2 + i))(x - (2-i))$
+
+The roots are: $x = \{2, 2+2i, 2-2i \}$
+
+\item[81]
+There are no changes of sign for $h(x)$ or h(-x) so there aren't any real zeros.
+
+\item[82]
+There are 2 changes of sign for $h(x)$ so there are 0 or 2 positive zeros.
+
+There are no changes of sign for $h(-x)$ so there aren't any negative zeros.
+
+\item[83]
+There is 1 change of sign for $g(x)$ so there is one positive zero.
+
+There are no changes of sign for $h(-x)$ so there aren't any negative zeros.
+
+\item[84]
+There are 3 changes of sign for $f(x)$ so there are 1 or 3 positive zeros.
+
+There are no changes of sign for $f(-x)$ so there aren't any negative zeros.
+
+\item[85]
+There are 3 changes of sign for $f(x)$ so there are 1 or 3 positive zeros.
+
+There are no changes of sign for $f(-x)$ so there aren't any negative zeros.
+
+\end{description}
+
+\pagebreak
+
+\fi
+
+\section{Extra Credit}
+
+
+Page 242, questions 89 and 90.
+
+
+\ifprintanswers
+\begin{description}
+
+
+\item[89]
+The product is:
+\begin{align*}
+  (a_1+b_1i)(a_2 + b_2i) &= a_1a_2 + a_1b_2i + a_2b_1i - b_1b_2 \\
+  &= a_1a_2 - b_1b_2 + (a_1b_2 + a_2b_1)i 
+\end{align*}
+
+The conjugate of the product is:
+\[
+  a_1a_2 - b_1b_2 - (a_1b_2 + a_2b_1)i 
+\]
+
+The product of the conjugates is:
+\begin{align*}
+  (a_1 - b_1i)(a_2 - b_2i) &= a_1a_2 - a_1b_2i - a_2b_1i - b_1b_2 \\
+  &= a_1a_2 - b_1b_2 - (a_1b_2 + a_2b_1)i 
+\end{align*}
+
+This is the same as the conjugate of the products, so we're done.
+
+\item[90]
+The sum is:
+\[
+  a_1+b_1i + a_2 + b_2i = a_1+a_2 + (b_1 + b_2)i 
+\]
+
+The conjugate of the sum is:
+\[
+  a_1+a_2 - (b_1 + b_2)i 
+\]
+
+The sum of the conjugates is:
+\[
+  a_1 - b_1i + a_2 - b_2i = a_1 + a_2 - (b_1 + b_2)i
+\]
+
+This is the same as the conjugate of the sums, so we're done.
+
+\end{description}
+
+\fi
+
+\ifprintanswers
+\else
+\vspace{10 cm}
+
+{\em If you have no critics you'll likely have no success.}
+
+\vspace{.1 cm}
+\hspace{1 cm} --Malcolm X
+
+\fi
+
+\end{document}
+

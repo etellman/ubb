@@ -1,0 +1,379 @@
+\documentclass[fleqn,addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{polynom}
+
+\printanswers
+
+\ifprintanswers
+\usepackage{2in1, lscape}
+\fi
+
+\title{Math 113 Ohio University Exam Problems}
+\author{}
+\date{October 23, 2010}
+
+% \oddsidemargin 0in
+% \topmargin -0.5in
+% \textwidth 6.5in
+
+% \extrawidth{-1 in}
+% \setlength{\mathindent}{0in}
+
+\begin{document}
+
+\maketitle
+
+\begin{questions}
+
+\question
+Perform the indicated division.
+\[
+  (x^5 - 32) \div (x-2)
+\]
+
+\begin{solution}[1cm]
+
+\[ \polylongdiv{x^5 - 32}{x-2} \]
+
+\end{solution}
+
+
+\question
+Perform the indicated operation and write the result in simplest form.
+
+\[
+  \frac{36x^2-49}{-x+5} \cdot \frac{x^2-10x+25}{14-2x}
+\]
+
+\begin{solution}[1cm]
+\begin{align*}
+    \frac{36x^2-49}{-x+5} \cdot \frac{x^2-10x+25}{14-2x} &= \frac{(6x+7)(6x-7)(x-5)\cancel{(x-5)}}{-2\cancel{(x-5)}(7-x)} \\
+        &= \frac{(6x+7)(6x-7)(x-5)}{2(x-7)} \\
+\end{align*}
+
+\end{solution}
+
+\question
+Solve the absolute inequality.
+
+\[
+  \left| \frac{4x+3}{2} \right| - 2 \leq 5
+\]
+
+\begin{solution}[1cm]
+
+\begin{align*}
+  \left| \frac{4x+3}{2} \right| - 2 &\leq 5 \\
+  \left| \frac{4x+3}{2} \right|  &\leq 7 \\
+\end{align*}
+
+\begin{align*}
+  -7 &\leq \frac{4x+3}{2} \leq 7 \\
+  -14 &\leq 4x+3 \leq 14 \\
+  -17 &\leq 4x \leq 11 \\
+  -\frac{17}{4} &\leq x \leq \frac{11}{4} \\
+\end{align*}
+
+\[
+  x = \left[-\frac{17}{4}, \frac{17}{4} \right]
+\]
+\end{solution}
+
+\question
+Solve the system of equations.
+
+\begin{align*}
+  7x + 2  &= 5y \\
+  3x + 2y &= 11 \\
+\end{align*}
+
+\begin{solution}[1cm]
+\begin{align*}
+  7x + 2  &= 5y \\
+  3x + 2y &= 11 \\
+  \\
+  7x - 5y &= -2 \\
+  3x + 2y &= 11 \\
+  \\
+  14x - 10y &= -4 \\
+  15x + 10y &= 55 \\
+  \\
+  29x &= 51
+  \\
+  x &= \frac{51}{29}
+\end{align*}
+
+\begin{align*}
+  3 \left( \frac{51}{29} \right) + 2y &= 11 \\
+  y &= \frac{83}{29} \\
+\end{align*}
+
+\end{solution}
+
+\question
+Find the equation of a line passing through $(3, -2)$ and parallel to the line $2x-y+10 = 0$
+
+\begin{solution}[1cm]
+First we should put the original line in slope-intercept form so we know what slope to look for:
+\begin{align*}
+  2x-y+10 &= 0 \\
+  y &= 2x + 10 \\
+\end{align*}
+
+So we need a line with a slope of 2 which passes through $(3, -2)$.
+
+\begin{align*}
+  y - (-2) &= 2(x - 3) \\
+  y +2 &= 2x- 6 \\
+  y &= 2x - 8 \\
+\end{align*}
+
+\end{solution}
+
+\question
+Factor the following expressions.
+
+\begin{parts}
+
+\part $20x^4 - 17x^2 - 63$
+\begin{solution}[1cm]
+\begin{align*}
+  20x^4 - 17x^2 - 63 &= (5x^2+7)(4x^2-9) \\
+  &= (5x^2+7)(2x+3)(2x-3) \\
+\end{align*}
+
+\end{solution}
+
+\part $x^2y - 3x^2w + 2xy - 6xw$
+\begin{solution}[1cm]
+\begin{align*}
+  x^2y - 3x^2w + 2xy - 6xw &= x^2(y-3w) + 2x(y-3w) \\
+    &= (x^2 + 2x)(y-3w) \\
+    &= x(x + 2)(y-3w) \\
+\end{align*}
+
+\end{solution}
+
+\end{parts}
+
+\ifprintanswers
+\pagebreak
+\fi
+
+\question
+Solve for x:
+\[
+  2x^2 - 6x + 5 = 0
+\]
+
+\begin{solution}[1cm]
+\begin{align*}
+  x = \frac{6 \pm \sqrt{36-4 \cdot 2 \cdot 5}}{4} = \frac{3}{2} \pm \frac{i}{2}
+\end{align*}
+
+\end{solution}
+
+\question
+Simplify the following radicals
+
+\begin{parts}
+\part $\sqrt[5]{- \dfrac{81}{16} x^6y^{-3}}$
+
+\begin{solution}[1cm]
+\begin{align*}
+  \sqrt[5]{- \dfrac{81}{16} x^6y^{-3}} &= -\sqrt[5]{\dfrac{81x^6}{16y^3}} \\
+  &= -\sqrt[5]{\dfrac{81x^6}{16y^3}} \left( \frac{2y^2}{2y^2} \right) \\
+  &= - \frac{x \sqrt[5]{162xy^2}}{2y} 
+\end{align*}
+
+\end{solution}
+
+\part $\sqrt{x^4+x^6y^2}$
+
+\begin{solution}[1cm]
+\[
+  \sqrt{x^4+x^6y^2} = \sqrt{x^4(1+x^2y^2)} = x^2 \sqrt{1+x^2y^2}
+\]
+\end{solution}
+
+\end{parts}
+
+\question
+Solve for x:
+\[
+\frac{1}{x-1} = 3 + \frac{2}{x-3}
+\]
+
+\begin{solution}[1cm]
+\begin{align*}
+  \frac{1}{x-1} &= 3 + \frac{2}{x-3} \\
+  \frac{1}{x-1} &= \frac{3x-9+2}{x-3} \\
+  \frac{1}{x-1} &= \frac{3x-7}{x-3} \\
+  x-3 &= (x-1)(3x-7) \\
+  3x^2 - 11x + 10 &= 0 \\
+  (3x-5)(x-2) &= 0
+\end{align*}
+
+$x = \left\{\dfrac{5}{3}, 2 \right\}$
+
+\end{solution}
+
+\question
+Find the quotient and express the answer in the standard form of a complex number
+\[
+\frac{2+3i}{3-2i}
+\]
+
+\begin{solution}[1cm]
+\begin{align*}
+  \frac{2+3i}{3-2i} &= \frac{2+3i}{3-2i} \left( \frac{3+2i}{3+2i} \right) \\
+  &= \frac{6 + 9i + 4i + 6i^2}{9-4i^2} \\
+  &= \frac{6 + 13i -6}{9+4} \\
+  &= \frac{13i}{13} \\
+  &= i \\
+\end{align*}
+
+\end{solution}
+
+\ifprintanswers
+\pagebreak
+\fi
+
+
+\question
+Perform the indicated operations and reduce the result to lowest terms.
+\[
+x^2 + x + 1 + \frac{1}{x-1}
+\]
+
+\begin{solution}[1cm]
+\begin{align*}
+  x^2 + x + 1 + \frac{1}{x-1} &= \frac{(x-1)(x^2+x+1) + 1}{x-1} \\
+  &= \frac{x^3 + x^2 + x - x^2 - x - 1 + 1}{x-1} \\
+  &= \frac{x^3}{x-1} \\
+\end{align*}
+
+\end{solution}
+
+\question
+Solve for x:
+\[
+  12x^{-2} - 17x^{-1} - 5 = 0
+\]
+
+\begin{solution}[1cm]
+\begin{align*}
+  12x^{-2} - 17x^{-1} - 5 &= 0 \\
+  12 - 17x - 5x^2 &= 0 \\
+  5x^2 + 17x - 12 &= 0 \\
+  (5x-3)(x+4) &= 0 \\
+\end{align*}
+
+$x = \left\{ -4, \dfrac{3}{5} \right\}$
+
+\end{solution}
+
+\ifprintanswers
+\pagebreak
+\fi
+
+
+\question
+Solve for y in terms of x:
+\[
+  xy - 7y = 4xy + 3x - 2
+\]
+
+\begin{solution}[1cm]
+\begin{align*}
+  xy - 7y &= 4xy + 3x - 2 \\
+  xy - 7y - 4xy &= 3x - 2 \\
+  - 3xy - 7y  &= 3x - 2 \\
+  y(-3x -7) &= 3x - 2 \\
+  y &= \frac{3x - 2}{- 3x -7} \\
+\end{align*}
+
+\end{solution}
+
+\question
+Howard lives 2 miles from school.  When he rode his bicycle, he traveled 5 mph faster than when he walked, and thus saved
+25 minutes.  What was is average rate of walking? 
+
+\begin{solution}[1cm]
+Here are the facts from the equation, putting everything in hours:
+\begin{itemize}
+  \item $d = 2$
+  \item $r_b = r_w + 5$
+  \item $t_b = t_w - \dfrac{25}{60} = t_w - \dfrac{5}{12}$
+\end{itemize}
+
+Using $r=\dfrac{d}{t}$, $r_b = \dfrac{2}{t_b}$ and $r_w = \dfrac{2}{t_w}$.  We can plug these into the second equation
+to get: $dfrac{2}{t_b} = \dfrac{2}{t_w} + 5$.  We can substitute the third equation into this one to get
+\[
+  2\left(t_w - \dfrac{5}{12} \right) = \dfrac{2}{t_w} + 5
+\]
+
+With a little work, this turns into:
+\begin{align*}
+  60t_w^2 - 25t_w - 10 &= 0 \\
+  (4t_w + 1)(3t_w - 2) &= 0 \\
+\end{align*}
+
+So $t_w$ is either $- \dfrac{1}{4}$ or $\dfrac{2}{3}$.  A negative number doesn't make sense for a time, so $t_w =
+\dfrac{2}{3}$.  This means the rate walking was 3 mph and the rate biking was 8 mph.  
+
+8 mph is a pretty slow biking rate, but perhaps it was uphill both ways.
+
+\end{solution}
+
+\question
+Separate 83 into two parts such that if the larger is divided by the smaller, the quotient is 4 with a remainder of 8.
+
+\begin{solution}[1cm]
+From the problem statement, we have the two equations:
+\begin{align*}
+  x+y &= 83 \\
+  y &= 4x + 8 \\
+\end{align*}
+
+We can plug the second equation into the first one to find $x$:
+\begin{align*}
+  x+4x+8 &= 83 \\
+  5x &= 75 \\
+  x &= 15 \\
+\end{align*}
+
+So the two numbers are 15 and 68.
+
+\vspace{.5 cm}
+
+The hard part is getting the two equations.  Fortunately, there is another approach if you can't figure out the
+equations.  If you try a few numbers, you can find the solution using trial and error.  For example, you might try:
+\begin{itemize}
+  \item 70 and 13 ($70/13$ is 6 remainder 2 so 70 is too big)
+  \item 60 and 23 ($60/23$ is 2 remainder 14 so 60 is too small)
+  \item 65 and 18 ($65/18$ is 3 remainder 11 so 65 is still a little too small)
+  \item 68 and 15 ($68/15$ is 4 remainder 8 so this is the correct solution)
+\end{itemize}
+
+However, you can't just write $x = 15$ and $y = 68$ on your exam, because you are supposed to do some algebra to get the correct
+solution.  However, knowing the correct solution, you may be able to work backwards to the equations.  What you want is
+an equation which contains 68, 15, 4, and 8.  $68 = 4 \cdot 15 + 8$ works and makes sense with the problem statement.
+Since you know $y=68$ and $x=15$, you can turn this into $y = 4x + 8$ and solve the system of equations:
+
+\begin{align*}
+  x+y &= 83 \\
+  y &= 4x + 8 \\
+\end{align*}
+
+You should be able solve this system of equations pretty easily, especially when you know the solution in advance.
+
+\end{solution}
+
+
+\end{questions}
+\end{document}
+
+

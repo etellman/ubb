@@ -1,0 +1,400 @@
+
+\documentclass[fleqn,addpoints]{exam}
+
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{mdwlist}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+
+\printanswers
+
+\everymath{\displaystyle}
+
+\ifprintanswers 
+\usepackage{2in1, lscape} 
+\fi
+
+\title{Physics \\ Electromagnetism Exam}
+\date{December 5, 2010}
+
+\begin{document}
+
+\maketitle
+
+% \ifprintanswers
+% \else
+% \begin{center}
+% \gradetable[h][pages]
+% \bonusgradetable[h][pages]
+% \end{center}
+% \fi
+
+\ifprintanswers
+\else
+\section{Notes}
+
+\begin{itemize*}
+  \item Feel free to use a calculator or borrow one from the UBB office.
+  \item Use your textbook or notes for the required formulas.
+  % \item If you get stuck on something, you can ask another student for assistance. 
+  \item Some questions are marked ``bonus''.  These questions are a bit harder and are extra-credit.
+  \item electron charge, proton mass, etc. are all on the front cover of the text book
+  \item There's no class on Dec 12, so this is due on Dec 19, which will be the last day of class.
+\end{itemize*}
+
+\fi
+
+\begin{questions}
+
+\section{Electrostatics}
+
+\question[5]
+What is the magnitude of the electric field produced by a $5 \ \coulomb$ charge at a distance of $3 \ \meter$?
+\begin{solution}
+\[
+  E = \frac{kq}{r^2} = \frac{(9 \cdot 10^9 \ \newton \cdot \meter^2 \per \coulomb^2)(5 \ \coulomb)}{(3 \ \meter)^2} 
+    = 5 \cdot 10^9 \ \newton \per \coulomb
+\]
+\end{solution}
+ 
+\question[5]
+What is the force between an electron and a proton separated by $1 \cdot 10^{-5} \ \meter$?
+\begin{solution}
+\[
+  F = \frac{kq_1q_2}{r^2} = \frac{(9 \cdot 10^9 \ \newton \cdot \meter^2 \per \coulomb^2)(1.6 \cdot 10^{-19} \ \coulomb)^2}{(2 \cdot 10^{-5} \ \meter)^2} 
+    = 5.76 \cdot 10^{-19} \ \newton
+\]
+\end{solution}
+
+\question[5]
+An {\em ion} is an atom which is missing some electrons or has some extra electrons so that it has a net positive or
+negative charge.  
+
+When two identical ions are separated by a distance of $6.2 \cdot 10^{-10} \ \meter$, the electrostatic
+force each exerts on the other is $5.4 \cdot 10^{-9} \ \newton$.  How many electrons are missing from each ion?
+
+\begin{solution}
+\begin{align*}
+  F &= \frac{kq^2}{r^2} \\
+  q &= r \sqrt{ \frac{F}{k} } \\
+    &= (6.2 \cdot 10^{-10} \ \meter) \sqrt{ \frac{5.4 \cdot 10^{-9} \ \newton}{9 \cdot 10^9 \ \newton \cdot \meter^2 \per \coulomb^2} } \\
+    &\approx 4.8 \cdot 10^{-19} \ \coulomb \\
+\end{align*}
+
+Each electron has a charge of $1.6 \cdot 10^{-19} \ \coulomb$, so the number of missing electrons is:
+\[
+  \frac{4.8 \cdot 10^{-19} \ \coulomb}{1.6 \cdot 10^{-19} \ \coulomb \per \text{ electron}} = 3 \text{ electron}
+\]
+
+\end{solution}
+
+\question
+A uniform electric field of magnitude $10 \ \volt \per \meter$ points in the positive $y$ direction.  What is the change
+in electric potential of a $5 \ \coulomb$ charge as it moves from the origin to:
+\begin{parts}
+\part[3] $(0 \ \meter, 5 \ \meter)$
+\begin{solution}
+The charge is moving only in the $y$ direction, so the change in potential is the distance times the field:
+\[
+  V = Ed = (10 \ \volt \per \meter)(5 \ \meter) = 50 \ \volt
+\]
+\end{solution}
+
+\part[3] $(5 \ \meter, 0 \ \meter)$
+\begin{solution}
+The charge is moving perpendicular to the field so its potential doesn't change.
+\end{solution}
+
+\part[3] $(5 \ \meter, 5 \ \meter)$
+\begin{solution}
+The only part of the movement that matters is the movement in the $y$ direction, so the result is the same as part a, or $50 \ \volt$.
+\end{solution}
+
+\end{parts}
+
+\question[5]
+A point charge of $q = -0.5 \ \coulomb$ is at the origin.  Where should you put a proton so that the force from the
+charge at the origin exactly counteracts the proton's weight at the earth's surface ($g = 9.8 \ \meter\per\second^2$)?
+
+\begin{solution}
+We need the weight and the electrostatic force to match:
+\begin{align*}
+  mg &= \frac{kq_1q_2}{r^2} \\
+  r  &= \sqrt{ \frac{kq_1q_2}{mg} } \\
+     &= \sqrt{ \frac{ (9 \cdot 10^9 \ \newton \cdot \meter^2 \per \coulomb^2) (0.5 \ \coulomb)(1.6 \cdot 10^{-19})}
+                    {(1.67 \cdot 10^{-27})(9.8 \cdot \meter \per \second^2)} } \\
+     &= 2.1 \cdot 10^8 \ \meter \\
+\end{align*}
+
+Since the charge at the origin is negative, the proton should be placed below the origin so that the electrostatic force pulls the proton up.
+
+\end{solution}
+
+\bonusquestion[5]
+A typical $12 \ \volt$ car battery can delivery $7.5 \cdot 10^5 \ \coulomb$ of charge.  If the energy supplied by the
+battery could be converted to kinetic energy, what speed would it give a $1200 \ \kilogram$ car?
+
+\begin{solution}
+A $12 \ \volt$ battery is prepared to deliver $12 \ \joule$ of energy to each Coulomb of charge.  So this batter is
+capable of of delivering:
+\[
+  (12 \ \volt)(7.5 \cdot 10^5 \ \coulomb) = 9 \cdot 10^6 \ \joule
+\]
+
+If all this energy goes into the car's kinetic energy, the velocity of the car is:
+\begin{align*}
+  K &= \frac{1}{2} mv^2 \\
+  v &= \sqrt{\frac{2K}{m}} \\
+    &= \sqrt{\frac{1.8 \cdot 10^7 \ \joule}{1200 \ \kilogram}} \\
+    &= 122.5 \ \meter \per \second \\
+\end{align*}
+
+\end{solution}
+
+\question[5] Two point charges of equal magnitude and opposite sign are $8 \ \centi \meter$ apart.  At the midpoint
+of the line connecting them, their combined electric field has a magnitude of $45 \ \newton \per \coulomb$.  What is the
+magnitude of the charges?
+
+Each charge accounts for half the field.
+
+\begin{solution}
+\begin{align*}
+  E &= \frac{kq}{r^2} \\
+  q &= \frac{Er^2}{k} \\
+    &= \frac{(22.5 \ \newton \per \coulomb)(0.04 \ \centi \meter)^2}
+            {9 \cdot 10^9 \ \newton \cdot \meter^2 \per \coulomb^2} \\
+    &= 4 \cdot 10^{-12} \ \coulomb \\
+\end{align*}
+\end{solution}
+
+\bonusquestion Three point charges are placed on the vertices of an equilateral triangle with edges $5 \centi\meter$
+long.  The charges are: $2 \ \micro\coulomb$ (top), $3 \ \micro\coulomb$ (bottom left), and $-1 \micro \coulomb$ (bottom
+right).  What is the force on the $2 \ \micro\coulomb$ charge in the:
+
+\begin{solution}
+I find the equations easier to deal with with letters instead of actual numbers, so I'll use $q$ for one $\micro \coulomb$ of
+charge and $r$ for the length of a side.  Then I can plug the numbers in at the end.
+
+\end{solution}
+\begin{parts}
+\part[5] $x$ direction
+\begin{solution}
+In the $x$ direction the charge in the bottom right corner is pulling to the right and the charge in the bottom left
+corner is pushing to the right.  The total force is:
+\begin{align*}
+  F_x &= \frac{2kq^2}{r^2} \sin 30 \degree + \frac{6kq^2}{r^2} \sin 30 \degree \\
+      &= \frac{8kq^2}{r^2} \sin 30 \degree \\
+      &= 14.4 \ \newton \text{ (to the right)} \\
+\end{align*}
+
+\end{solution}
+\part[5] $y$ direction
+\begin{solution}
+In the $y$ direction the charge in the bottom right corner is pulling down and the charge in the bottom left
+corner is pushing up.  The total force is:
+\begin{align*}
+  F_y &= - \frac{6kq^2}{r^2} \cos 30 \degree + \frac{2kq^2}{r^2} \sin 30 \degree \\
+      &= -\frac{4kq^2}{r^2} \sin 30 \degree \\
+      &= -12.5 \ \newton \text{ (down)}
+\end{align*}
+\end{solution}
+
+\end{parts}
+
+\section{Electric Current}
+\question[5]
+$4 \ \ohm$ and $6 \ \ohm$ resistors are connected in series to a $9 \ \volt$ battery.  How much current flows through the
+circuit?
+\begin{solution}
+\[
+  I = \frac{V}{R} = \frac{9 \ \volt}{10 \ \ohm} = 0.9 \ \ampere
+\]
+\end{solution}
+
+\question[5]
+An $2 \ \ohm$ resistor is connected in series with a $6 \ \ohm$ resistor.  There is a current of $0.5 \ \ampere$
+through the two resistors.  What is the voltage of the battery to which they are connected?
+
+\begin{solution}
+  V = IR = (0.5 \ \ampere)(8 \ \ohm) = 4 \ \ampere
+\end{solution}
+
+\question[5]
+A circuit containing two identical resistors connected in parallel has a current of $12 \ \ampere$ when connected to a
+$6 \ \volt$ battery.  What is the resistance of each resistor?
+
+\begin{solution}
+The resistance of two identical resistors connected in parallel is one half the resistance of each.  So the current
+through the circuit is:
+\begin{align*}
+  I &= \frac{V}{R/2} \\
+    &= \frac{2V}{R} \\
+  R &= \frac{2V}{I} \\
+    &= \frac{12 \ \volt}{12 \ \ampere} \\
+    &= 1 \ \ohm
+\end{align*}
+
+An alternate approach is to note that half the current goes through each resistor and each resistor has a voltage drop
+of $6 \ \volt$.  For one resistor:
+\[
+  R = \frac{V}{I} = \frac{6 \ \volt}{6 \ \ampere} = 1 \ \ohm
+\]
+
+\end{solution}
+
+\question
+A $1 \ \ohm$ and a $2 \ \ohm$ resistor are connected to a battery.  Which resistor dissipates more power when:
+\begin{parts}
+\part[3] the resistors are connected in series?
+\begin{solution}
+When the resistors are in series, they both get the same current.  Since $P = I^2R$, the larger resistor dissapates more power.
+\end{solution}
+
+\part[3] the resistors are connected in parallel?
+\begin{solution}
+When the resistors are in parallel, they both get the same voltage.  Since $P = VI = \frac{V^2}{R}$, the smaller
+resistor dissapates more power.
+\end{solution}
+\end{parts}
+
+\question[5]
+How much power is dissipated in a $25 \ \ohm$ electric heater connected to a $120 \ \volt$ outlet?
+\begin{solution}
+\[
+  P = VI = V \cdot \frac{V}{R} = \frac{V^2}{R} = \frac{(120 \ \volt)^2}{25 \ \ohm} = 576 \ \watt
+\]
+\end{solution}
+
+\section{Magnetism}
+\question[5]
+One proton moves with speed $v$ from Seattle to New York.  Another proton moves with the same speed from Seattle to San
+Francisco.  Which proton experiences a larger magnetic force during its trip?
+
+\begin{solution}
+Since the earth's magnetic field runs N/S, the proton traveling from West to East is moving roughly perpendicular to the
+earth's magnetic field while the other proton is moving roughly parallel to the earth's magnetic field.  Since a field
+only affects charges moving perpendicular to the field, the proton going to New York experiences the larger force.
+\end{solution}
+
+\question[5]
+An electron moving in the positive $x$ direction, at right angles to a magnetic field, experiences a magnetic force in
+the positive $y$ direction.  What is the direction of the magnetic field?
+\begin{solution}
+Using the Right Hand Rule, in the positive $z$ direction.
+\end{solution}
+
+\question[5]
+An electron moves at right angles to a magnetic field of $0.12 \ \tesla$.  What is its speed if the force exerted on it
+is $9 \cdot 10^{-15} \ \newton$?
+\begin{solution}
+
+\begin{align*}
+  F &= qvB \\
+  v &= \frac{F}{qB} \\
+    &= \frac{9 \cdot 10^{-15} \ \newton}{(1.6 \ \cdot 10^{-19} \ \coulomb)(0.12 \ \tesla)} \\
+    &= 4.5 \cdot 10^5 \ \meter \per \second \\
+\end{align*}
+
+\end{solution}
+
+\question[5]
+What is the acceleration of a proton moving with a speed of $10 \ \meter \per \second$ moving at right angles to a
+magnetic field of $2 \ \tesla$?
+\begin{solution}
+
+First find the force:
+\[
+  F = qvB = (1.6 \cdot 10^{-19})(10 \ \meter \per \second)(2 \ \tesla) = 3.2 \cdot 10^{-18} \ \newton
+\]
+
+Then use $F = ma$ to find the acceleration:
+\[
+  a = \frac{F}{m} = \frac{3.2 \cdot 10^{-18} \ \newton}{1.67 \cdot 10^{-27} \ \kilogram} 
+    \approx 1.9 \cdot 10^9 \ \meter \per \second
+\]
+\end{solution}
+
+\question[5]
+What is the magnetic force exerted on a $2 \ \meter$ length of wire carrying a current of $1 \ \ampere$ perpendicular to
+a magnetic field of $0.75 \ \tesla$?
+
+\begin{solution}
+\[
+  F = IBl = (1 \ \ampere)(0.75 \ \tesla)(2 \ \meter) = 1.5 \ \newton
+\]
+\end{solution}
+
+%% \question
+%% A single circular loop of radius $0.25 \ \meter$ carries a current of $3 \ \ampere$ in a magnetic field of $1
+%% \ \tesla$.  What is the maximum torque exerted on the loop?
+
+\question[5]
+A wire with a length of $3 \ \meter$ and a mass of $0.75 \ kg$ is in a magnetic field of $0.8 \ \tesla$.  What is the
+minimum current needed to levitate the wire?
+
+\begin{solution}
+We need the wire's weight to match the force:
+\begin{align*}
+  mg &= IBl \\
+  I  &= \frac{mg}{Bl} \\
+     &= \frac{(0.75 \ \kg)(9.8 \ \meter \per \second)}{(0.8 \ \tesla)(3 \ \meter)} \\
+     &\approx 3.06 \ \ampere \\
+\end{align*}
+\end{solution}
+
+% \question[5]
+% A coil with 375 turns and a radius of $5 \ \centi\meter$ has a magnetic flux through its core of $1.25
+% \cdot 10^{-4} \ \tesla \cdot \meter^2$.  What is the current in the coil?
+
+\question[5]
+A bar magnet with its south pole pointing downward is falling toward the center of a horizontal conducting ring.  As
+viewed from above, is the direction of the induced current in the ring clockwise or counterclockwise?
+
+\begin{solution}
+From the Right Hand Rule and Lenz's law, clockwise.
+\end{solution}
+
+\question[5]
+A $0.25 \ \tesla$ magnetic field is perpendicular to a circular loop of wire with 50 turns and a radius of $15
+\ \centi\meter$.  If the field is reduced to zero in $0.1 \ \second$, what is the magnitude of the induced emf?
+
+\begin{solution}
+\begin{align*}
+  V &= \frac{\Delta \Phi}{\Delta t} \\
+           &= \frac{- (0.25 \ \tesla)(50)(.15 \ \centi \meter)^2(\pi)}{0.1 \ \second} \\
+           &\approx 0.707 \ \volt \\
+\end{align*}
+\end{solution}
+ 
+\bonusquestion[5]
+A single circular conducting loop has a radius $0.5 \ \meter$ and a resistance of $10 \ \ohm$.  Perpendicular
+to the plane of the loop is a magnetic field of $0.25 \ \tesla$.  At what rate, in $\tesla \per \second$, must this
+field change if the induced current in the loop is to be $0.2 \ \ampere$?
+
+\begin{solution}
+First we need to figure out what voltage is required:
+\[
+  V = IR = (0.2 \ \ampere)(10 \ \ohm) = 2 \ \volt
+\]
+
+Then we need to find the required change in flux:
+\begin{align*}
+  V &= \frac{\Delta \Phi}{\Delta t} \\
+  V &= \frac{NA \Delta B}{\Delta t} \\
+  V &= NA \cdot \frac{\Delta B}{\Delta t} \\
+  \frac{\Delta B}{\Delta t} &= \frac{V}{NA} \\
+  &= \frac{2 \ \volt}{(0.5 \ \meter)^2 \pi} \\
+  &\approx 2.5 \ \tesla \per \second \\  
+\end{align*}
+\end{solution}
+
+\end{questions}
+
+\end{document}
+

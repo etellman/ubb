@@ -1,0 +1,367 @@
+
+\documentclass[fleqn,addpoints]{exam}
+
+\usepackage{amsmath}
+\usepackage{mdwlist}
+\usepackage{graphicx}
+\usepackage{cancel}
+% \usepackage{polynom}
+\usepackage{float}
+
+\printanswers
+
+\ifprintanswers
+\usepackage{2in1, lscape}
+\fi
+
+\title{Math 113 Homework 21}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{From the Book}
+
+Read section 10.3.
+
+\begin{itemize*}
+  \item pp. 516-517: 5-11, 27
+\end{itemize*}
+
+\ifprintanswers
+\section{Pages 516-517}
+\begin{description}
+\item[5]
+\begin{align*}
+  2x - y + z &= 0 \\
+  3x - 2y + 4z &= 11 \\
+  5x + y - 6z &= -32 \\
+\\
+  2x - y + z &= 0 \\
+  3x - 2y + 4z &= 11 \\
+  7x  - 5z &= -32 \\
+\\
+  2x - y + z &= 0 \\
+  -x + 2z &= 11 \\
+  7x  - 5z &= -32 \\
+\\
+  2x - y + z &= 0 \\
+  -x + 2z &= 11 \\
+  9z &= 45 \\ 
+\\
+  2x - y + z &= 0 \\
+  -x + 2z &= 11 \\
+  z &= 5 \\ 
+\end{align*}
+
+\framebox{$(-1, 3, 5)$}
+
+\item[6]
+\begin{align*}
+  x-2y+3z &= 7 \\
+  2x+y+5z &= 17 \\
+  3x-4y-2z &= 1 \\
+\\
+  x-2y+3z &= 7 \\
+  5y - z &= 3 \\
+  2y - 11z &= -20 \\
+\\
+  x-2y+3z &= 7 \\
+  -10y + 2z &= 6 \\
+  10y - 55z &= -100 \\
+\\
+  x-2y+3z &= 7 \\
+  5y - z &= 3 \\
+   -53z &= -106 \\
+\\
+\\
+  x-2y+3z &= 7 \\
+  5y - z &= 3 \\
+   z &= 2 \\
+\\
+\end{align*}
+
+\framebox{(3, 1, 2)}
+
+\item[7]
+\begin{align*}
+  4x-y+z &= 5 \\
+  3x+y+2z &= 4 \\
+  x-2y-z &= 1 \\
+\\
+  4x-y+z &= 5 \\
+  7x + 3z &= 9 \\
+  -7x - 3z &= -9 \\
+\\
+  4x-y+z &= 5 \\
+  7x + 3z &= 9 \\
+  0 &= 0 \\
+\\
+\end{align*}
+
+
+\framebox{infinitely many solutions}
+
+\item[8]
+\begin{align*}
+  2x - y + 3z &= -14 \\
+  4x + 2y - z &= 12 \\
+  6x - 3y + 4z &= -22 \\
+\\
+  2x - y + 3z &= -14 \\
+  4y - z &= 40 \\
+  -5z &= 20 \\
+\\
+  2x - y + 3z &= -14 \\
+  4y - z &= 40 \\
+  z &= -4 \\
+\\
+\end{align*}
+
+\framebox{$ \left(\dfrac{1}{2}, 3, -4 \right) $}
+
+\item[9]
+\begin{align*}
+  x-y+2z &= 4 \\
+  2x-2y+4z &= 7 \\
+  3x - 3y + 4z &= 1 \\
+\\
+  x - y + 2z &= 4 \\
+  0 &= -1 \\
+\end{align*}
+
+\framebox{no solution}
+
+\item[10]
+\begin{align*}
+  x + y - z &= 2 \\
+  3x - 4y + 2z &= 5 \\
+  2x + 2y - 2z &= 7 \\
+\\
+  x + y - z &= 2 \\
+  -7y + 5z &= -1 \\
+  0 &= -3 \\
+\end{align*}
+
+\framebox{no solution}
+
+\item[11]
+\begin{align*}
+  x-2y+z &= -4 \\
+  2x+4y-3z &= -1 \\
+  -3x-6y+7z &= 4 \\
+\\
+  x-2y+z &= -4 \\
+  8y-5z &= 7 \\
+  -12y+10z &= -8 \\
+\\
+  x-2y+z &= -4 \\
+  8y-5z &= 7 \\
+  -6y+5z &= -4 \\
+\\
+  x-2y+z &= -4 \\
+  8y-5z &= 7 \\
+  2y &= 3 \\
+\\
+  x-2y+z &= -4 \\
+  8y-5z &= 7 \\
+  y &= \frac{3}{2} \\
+\\
+\end{align*}
+
+\framebox{ $\left(-2, \dfrac{3}{2}, 1 \right)$ }
+
+\pagebreak
+
+\item[27]
+Let $x$, $y$, and $z$ be the small, medium, and large angles, respectively.
+
+The equations are:
+\begin{align*}
+  x + y + z &= 180 \\
+  z &= 2x \\
+  x + z &= 2y \\
+\end{align*}
+
+Solve
+\begin{align*}
+  x + y + z &= 180 \\
+  -2x + z &= 0 \\
+  x -2y + z &= 0 \\
+\\
+  x + y + z &= 180 \\
+  -2x + z &= 0 \\
+  3x + 3z &= 360 \\
+\\
+  x + y + z &= 180 \\
+  -2x + z &= 0 \\
+  x + z &= 120 \\
+\\
+  x + y + z &= 180 \\
+  -2x + z &= 0 \\
+  3z &= 240 \\
+\\
+  x + y + z &= 180 \\
+  -2x + z &= 0 \\
+  z &= 80 \\
+\\
+\end{align*}
+
+So the angles are 40, 60, and 80 degrees.
+
+\end{description}
+
+\section{Cumulative Review Problems}
+
+\begin{questions}
+
+\question 
+Evaluate: $(2^{-2} + 3^{-1})^{-2}$
+
+\begin{solution}
+\[
+  (2^{-2} + 3^{-1})^{-2} = \left( \frac{1}{4} + \frac{1}{3} \right)^{-2} = \left( \frac{7}{12} \right)^{-2} = \frac{144}{49}
+\]
+\end{solution}
+
+\question 
+Evaluate: $(2^{-2} \cdot 3^{-1})^{-2}$
+\begin{solution}
+\[
+  (2^{-2} \cdot 3^{-1})^{-2} = 2^4 \cdot 3^2 = 144
+\]
+\end{solution}
+
+\question 
+Solve for $x$: $x^2-11x+28 = 0$
+\begin{solution}
+\begin{align*}
+  x^2-11x+28 &= 0 \\
+  (x-7)(x-4) &= 0 
+\end{align*}
+
+$x = \{4, 7\}$
+
+\end{solution}
+
+\pagebreak
+
+\question 
+Solve for $x$: $4x^2+4x+1 = 0$
+\begin{solution}
+
+\begin{align*}
+  4x^2+4x+1 &= 0 \\
+  (2x+1)(2x+1) &= 0 \\
+\end{align*}
+
+$x = - \dfrac{1}{2}$
+
+\end{solution}
+
+\question 
+Solve for $x$: $x^2+6x-3 = 0$
+\begin{solution}
+
+Using the quadratic formlula:
+\[
+  x = \frac{-6 \pm \sqrt{36 - 4(-3)}}{2} = -3 \pm 2\sqrt{3}
+\]
+\end{solution}
+
+% \question 
+% Solve for $x$: $x^2+6x+4 = 0$
+% \begin{solution}
+% \end{solution}
+
+\question 
+Solve for $x$: $-4x^2-6x+3 = 0$
+\begin{solution}
+
+Using the quadratic formula:
+\[
+  x = \frac{-6 \pm \sqrt{36 - 4 (4) (-3)}}{8} = \frac{-3 \pm \sqrt{21}}{4}
+\]
+
+\end{solution}
+
+\pagebreak
+
+\question 
+Solve for $x$: $2x(x-18) + 3(x-18) = 0$
+\begin{solution}
+\begin{align*}
+  2x(x-18) + 3(x-18) &= 0 \\
+  (2x+3)(x-18) &= 0
+\end{align*}
+
+$x = \left\{ -\dfrac{3}{2}, 18 \right\}$
+
+\end{solution}
+
+\question 
+Solve for $x$: $7x(x+2) + 5 = 3x(x+1)$
+\begin{solution}
+
+\begin{align*}
+  7x(x+2) + 5 &= 3x(x+1) \\
+  7x^2 + 14x + 5 &= 3x^2 + 3x \\
+  4x^2 + 11x + 5 &= 0 
+\end{align*}
+
+using the quadratic formula:
+\[
+  x = \frac{-11 \pm \sqrt{121 - 4 \cdot 4 \cdot 5}}{8} = \frac{-11 \pm \sqrt{41}}{8}
+\]
+
+\end{solution}
+
+\question 
+Solve the inequality: $x^2+4x > 0$
+\begin{solution}
+The interesting values for $x$ are $0$ and $-4$.  With test points, we find the solution: $(-\infty, 4) \cup (0, \infty)$
+\end{solution}
+
+\question 
+Solve the inequality: $x^2-3x-10 \geq 0$
+\begin{solution}
+The interesting values for $x$ are $5$ and $-2$.  With test points, we find the solution: $(-\infty, -2] \cup ([5, \infty)$
+\end{solution}
+
+\question 
+Solve the inequality: $\dfrac{x+2}{4x+6} \leq 0$
+\begin{solution}
+The interesting values for $x$ are $-2$ and $-\dfrac{3}{2}$.  With test points, we find the solution: $\left[ -2, -\dfrac{3}{2} \right]$
+\end{solution}
+
+
+\end{questions}
+
+\fi
+
+\ifprintanswers
+\else
+\vspace{10 cm}
+
+\begin{em}
+I were asked to answer the following question: What is slavery? and I should answer in one word, It is murder!, my
+meaning would be understood at once. No extended argument would be required \ldots Why, then, to this other question:
+What is property? may I not likewise answer, It is robbery!, without the certainty of being misunderstood; the second
+proposition being no other than a transformation of the first? 
+\end{em}
+
+\vspace{0.1 in}
+\hspace{0.5 in} -- Pierre-Joseph Proudhon 
+
+\begin{em}
+\end{em}
+
+\vspace{0.1 in}
+\hspace{0.5 in} 
+
+\fi
+
+\end{document}
+

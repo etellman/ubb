@@ -1,0 +1,428 @@
+
+\documentclass{exam}
+
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+
+% \oddsidemargin .5in
+% \topmargin -1in
+\textwidth 6.5 in
+
+\printanswers
+
+\ifprintanswers 
+\usepackage{2in1, lscape} 
+\fi
+
+\title{Physics \\ Homework Five \\Rotational Kinematics}
+\date{October 10, 2011}
+% \author{Ed Tellman}
+
+\begin{document}
+
+\maketitle
+
+\section{From the Book}
+
+\begin{itemize*}
+  \item Read Chapter 8, Section 1
+  \item Chapter 8
+    \begin{itemize*}
+      \item questions 3-6, 8
+      \item exercises 2-7
+    \end{itemize*}
+\end{itemize*}
+
+\section{Useful Formulas}
+
+\begin{itemize}
+\item The {\em tangential velocity} of a rotating object is $v_t = r \omega$, where $\omega$ is in {\em rad/s}.  With a
+  constant angular velocity, the farther the object is from the center, the faster it moves.
+
+\item The {\em tangential acceleration} of a rotating object is $a_t = r \alpha$, where $\alpha$ is in $\text{
+  rad/s}^2$.  With a constant angular acceleration, the farther the object is from the center, the greater its
+  tangential acceleration.
+
+\item The {\em centripetal acceleration} of a rotating object in terms of its angular velocity is $a_{cp} = r \omega^2$.
+
+\end{itemize}
+
+\section{Exercises}
+
+\begin{questions}
+\item Find the angular velocity of the earth's rotation on its axis in rad/s.
+
+\begin{solution}
+One revolution takes 24 hours.  To convert this to rad/s:
+\[
+  \frac{1 \cancel{\text{ rev}}}{24 \cancel{\text{ h}}} 
+      \cdot \frac{1 \cancel{\text{ h}}}{60 \cancel{\text{ min}}}
+      \cdot \frac{1 \cancel{\text{ min}}}{60 \text{ s}}
+      \cdot \frac{2 \pi \text{ rad}}{1 \cancel{\text{ rev}}}
+      = 7.27 \cdot 10^{-5} \text{ rad/s}
+\]
+
+\end{solution}
+
+\item The angular velocity of a wheel increases from 10 rad/s to 20 rad/s in 5 revolutions.  What is its angular
+  acceleration?
+
+\begin{solution}
+5 revolutions is $5 \cdot 2 \pi \approx 31.42 \text{ rad}$
+
+First find out how long it took:
+\begin{align*}
+  \theta &= v_{avg}t \\
+  t &= \frac{\theta}{v_{avg}} \\
+  t &= \frac{31.42 \text{ rad}}{15 \text{ rad/s}} \approx 2.09 \text{ s}
+\end{align*}
+
+Then find the acceleration:
+\[
+  \alpha = \frac{\Delta v}{t} = \frac{10 \text{ rad/s}}{2.09 \text{ s}} \approx 4.77 \text{ rad/s}^2
+\]
+
+check:
+\begin{align*}
+  \omega &= \omega_0 + \alpha t \\
+  20 \text{ rad/s} &= 10 \text{ rad/s} + (4.77 \text{ rad/s}^2)(2.09 \text{ s}) \\ 
+  20 \text{ rad/s} &\approx 19.97 \text{ rad/s} \\
+  \\
+   \theta &= \omega_0 t + \frac{1}{2} \alpha t^2 \\
+  5 \cdot 2 \pi \text{ rad} &= (10 \text{ rad/s})(2.09 \text{ s}) + \frac{1}{2} (4.77 \text{ rad/s}^2) (2.09 \text{ s})^2 \\
+  31.4 \text{ rad} &\approx 31.3 \text{ rad} \\
+\end{align*}
+
+\end{solution}
+
+
+\item The angular velocity of a wheel increases from 10 rad/s to 20 rad/s in 5 seconds.  What angle did it turn through in
+  this time.
+
+\begin{solution}
+First find the angular acceleration:
+
+\[
+  \alpha = \frac{\Delta v}{t} = \frac{10 \text{ rad/s}}{5 \text{ s}} = 2 \text{ rad/s}^2
+\]
+
+Then find the angle:
+\begin{align*}
+  \theta &= \omega_0 t + \frac{1}{2} \alpha t^2 \\
+    &= (10 \text{ rad/s})(5 \text{ s}) + \frac{1}{2} (2 \text{ rad/s}^2)(5 \text{ s})^2 \\
+    &= 75 \text{ rad} \\
+\end{align*}
+
+
+\end{solution}
+
+\item If the second hand of a clock is 10 cm long, what is the linear velocity of the tip of the hand?
+\begin{solution}
+The angular velocity is:
+\[
+  \omega = \frac{1 \cancel{\text{ rev}}}{1 \cancel{\text{ m}}} 
+      \cdot \frac{1 \cancel{\text{ m}}}{60 \text{ s}} 
+      \cdot \frac{2 \pi \text{ rad}}{1 \cancel{\text{ rev}}} 
+      \approx 0.105 \text{ rad/s}
+\]
+
+The linear velocity is:
+\[
+  v = \omega r = (0.105 \text{ rad/s})(10 \text{ cm}) = 1.05 \text{ cm/s}
+\]
+
+\end{solution}
+
+\item The outer edge of a Frisbee with diameter .3 m has linear velocity of 3 m/s.  What is the Frisbee's angular velocity?
+
+\begin{solution}
+\begin{align*}
+  v &= \omega r \\
+  \omega &= \frac{v}{r} \\
+  \\
+  \omega &= \frac{3 \text{ m/s}}{.15 \text{ m}} = 20 \text{ rad/s}
+\end{align*}
+
+\end{solution}
+
+\item A carousel rotates once every 45 seconds.
+\begin{solution}
+The angular velocity is:
+\[
+  \omega = \frac{1 \cancel{\text{ rev}}}{45 \text{ s}} \cdot \frac{2 \pi \text{ rad}}{\cancel{\text{rev}}} 
+      \approx 0.14 \text{ rad/s}
+\]
+
+\end{solution}
+\begin{parts}
+  \part What is the linear velocity of a horse 1 m from the center?
+
+\begin{solution}
+\[
+  v = \omega r = (0.14 \text{ rad/s}) \cdot (1 \text{ m}) = 0.14 \text{ m/s}
+\]
+\end{solution}
+
+  \part What is the linear velocity of a horse 3 m from the center?
+\begin{solution}
+\[
+  v = \omega r = (0.14 \text{ rad/s}) \cdot (3 \text{ m}) = 0.42 \text{ m/s}
+\]
+\end{solution}
+
+\end{parts}
+
+\item A wheel of radius .1 m spins at 1,000 rpm.  What is the centripetal acceleration at the edge of the wheel?
+
+\begin{solution}
+The angular velocity in rad/s is:
+\[
+  \omega = \frac{1,000 \cancel{\text{ rev}}}{\cancel{\text{ min}}} 
+      \cdot \frac{2 \pi \text{ rad}}{1 \cancel{ \text{ rev}}} \cdot \frac{1 \cancel{\text{ min}}}{60 \text{ s}} 
+      \approx 104.7 \text{ rad/s}
+\]
+
+The acceleration is:
+\[
+  a_{cp} = r \omega^2 = (.1 \text{ m})(104.7 \text{ rad/s})^2 \approx 1,096 \text{ m/s}^2
+\]
+
+\end{solution}
+
+\item If the wheels of a car have a radius of .3 m, what is their angular speed when the car is driven at 20 m/s (about 45 mph)?
+
+\begin{solution}
+If the car was stationary while the wheel continued rotating at the same speed, a point on the edge of the wheel would
+move at 20 m/s.  To find the angular speed, convert the linear speed to angular speed:
+\begin{align*}
+  \omega &= \frac{v}{r} \\
+  &= \frac{20 \text{ m/s}}{.3 \text{ m}} \\
+  &\approx 66.7 \text{ rad/s} \\ 
+\end{align*}
+
+\end{solution}
+
+\section{Extra Credit}
+
+\question 
+
+At 3:00, the angle between the minute hand and the hour hand of a clock is $90 \degree$.
+When is the first time after 3:00 when the hands make a $45 \degree$ angle? (\em{James Walker})
+
+\begin{solution}
+
+The angular velocity of the hour hand is 
+\[
+  \omega_h = \frac{1}{12} \text{ rev/h} = \frac{1}{12} \cdot 360 \text{ degree/h} = 30 \text{ degree/h}  
+\]
+
+The angular velocity of the minute hand is 
+\[
+  \omega_m = 1 \text{ rev/h} = 360 \text{ degree/h}
+\]
+
+The initial positions are:
+\begin{itemize*}
+  \item $\omega_{h0} = 90 \degree$
+  \item $\omega_{m0} = 0 \degree$
+\end{itemize*}
+
+So the angular position formulas are:
+\begin{itemize*}
+  \item $\theta_h = 90 + 30t \text{ degree}$
+  \item $\theta_m = 360t \text{ degree}$
+\end{itemize*}
+where $t$ is in hours.
+
+We want the difference to be $45 \degree$ 
+\begin{align*}
+  45 \degree &= \theta_h - \theta_t \\
+  45 \degree &= 90\degree + 30t - 360t \\
+  t &= 0.1364 \text{ h}
+\end{align*}
+
+0.1364 hours is about 8 minutes and 11 seconds, so at 3:08:11 the hands will make a $45 \degree$ angle.
+
+\end{solution}
+
+\end{questions}
+
+\ifprintanswers
+
+\pagebreak
+
+\section{Chapter 8}
+\begin{description}
+
+\item[Q3]
+The coin does have a rotational acceleration since its number of revolutions per second is increasing as it rolls down the incline.
+
+\item[Q4]
+It does have a rotational acceleration.  Acceleration happens whenever the angular velocity changes, and can be negative.
+
+\item[Q5]
+The rotational velocity is the same.  They both make the same number of revolutions in each minute.
+
+\item[Q6]
+The linear velocity is different.  The closer you are to the edge the farther you have to go in each revolution.
+
+\item[Q8]
+\begin{description*}
+\item[a] The ball experiences both kinds of acceleration.  It is making more revolutions per second and moving faster as
+  it progresses down the incline.
+
+\item[b]
+Each revolution the ball travels the length of its circumference, or $2 \pi r$.
+
+\item[c]
+As we discussed in class, the linear velocity is: $v = \omega r$.
+
+\end{description*}
+
+\item[E2]
+\begin{description*}
+
+\item[a]
+\[
+  \frac{45 \cancel{\text{ rev}}}{1 \cancel{\text{ m}}} \cdot \frac{1 \cancel{\text{ m}}}{60 \text{ s}} = 0.75 \text{ rev/s}
+\]
+
+\item[b]
+\[
+  0.75 \text{ rev/s} \cdot 5 \text{ s} = 3.75 \text{ rev}
+\]
+
+\end{description*}
+
+\item[E3]
+\begin{description*}
+
+\item[a]
+\[
+  \theta = 3 \cancel{\text{ rev}} \cdot \frac{2 \pi \text{ rad}}{1 \cancel{\text{ rev}}} = 6 \pi \text{ rad} 
+  \approx 18.85 \text{ rad}
+\]
+
+\item[b]
+
+\[
+  \omega = \frac{18.85 \text{ rad}}{4 \text{ s}} = 4.71 \text{ rad/s}
+\]
+ 
+\end{description*}
+
+\item[E4]
+\begin{align*}
+  \Delta \omega &= 1.8 \text{ rad/s} - 0.6 \text{ rad/s} = 1.2 \text{ rad/s} \\
+  \alpha &= \frac{1.2 \text{ rad/s}}{4 \text{ s}} = 0.3 \text{ rad/s} \\
+\end{align*}
+
+\item[E5]
+\begin{description}
+\item[a]
+\[
+  \omega = \alpha t = (1.2 \text{ rev/s})(4 \text{ s}) = 4.8 \text{ rev/s}
+\]
+
+%% \begin{align*}
+%%   \alpha &= \frac{1.2 \cancel{\text{ rev}}}{\text{s}^2} \cdot \frac{2 \pi \text{ rad}}{1 \cancel{\text{ rev}}} 
+%%       \approx 7.54 \text{ rad/s}^2 \\
+%%   \omega &= \alpha t = (7.54 \text{ rad/s}^2) (4 \text{ s}) \approx 30.16 \text{ rad/s}
+%% \end{align*}
+
+\item[b]
+\[
+  \theta = \frac{1}{2} \alpha t^2 = \frac{1}{2} (4.8 \text{ rev/s}^2) (4 \text{ s})^2 = 9.6 \text{ rev}
+\]
+
+%% \[
+%%   \theta = \frac{1}{2} \alpha t^2 = \frac{1}{2} (7.54 \text{ rad/s}^2) (4 \text{ s})^2 \approx 60.32 \text{ rad}
+%% \]
+
+\end{description}
+
+\item[E6]
+The change in angular velocity, measured in revolutions per second is: 
+\[
+  6 \text{ rev/s} - 3 \text{ rev/s} = 3 \text{rev/s}
+\]
+
+%% We need to convert this to rad/s:
+%% \[
+%%   (3 \text{ rev/s})(2 \pi \text{ rad/rev}) \approx 18.85 \text{ rad/s}
+%% \]
+
+The change occurs in 12 s, so the angular acceleration is:
+\[
+  \alpha = \frac{3 \text{ rev/s}}{12 \text{ s}} = 0.25 \text{ rev/s}^2
+\]
+
+\item[E7]
+%% Convert the angular acceleration from rev/s to rad/s:
+%% \[
+%%   (0.2 \text{ rev/s}^2)(2 \pi \text{ rad/rev}) \approx 1.26 \text{ rad/s}^2
+%% \]
+
+\begin{description}
+\item[a]
+\[
+  \omega = \alpha t = (0.2 \text{ rev/s}^2)(5 \text{ s}) = 1 \text{ rev/s}
+\]
+
+\item[b]
+The angle the merry-go-round moves through is:
+\[
+  \theta = \frac{1}{2} \alpha t^2 = \frac{1}{2} (1 \text{ rev/s}^2) (5 \text{ s})^2 = 2.5 \text{ rev}
+\]
+
+\end{description}
+
+
+\end{description}
+
+\fi
+
+
+\vspace{4.5 in}
+
+\ifprintanswers
+\else
+\begin{verse}
+crazy jay blue) \\
+demon laughshriek \\
+ing at me \\
+your scorn of easily 
+
+hatred of timid \\
+\& loathing for(dull all \\
+regular righteous \\
+comfortable)unworlds 
+
+thief crook cynic \\
+(swimfloatdrifting \\
+fragment of heaven) \\
+trickstervillain 
+
+raucous rogue \& \\
+vivid voltaire \\
+you beautiful anarchist \\
+(i salute thee
+\end{verse}
+
+\vspace{.2 cm}
+\hspace{1 cm} --e.e. cummings
+
+\fi
+
+\end{document}
+

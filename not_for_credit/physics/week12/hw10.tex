@@ -1,0 +1,227 @@
+
+\documentclass{exam}
+
+\usepackage{siunitx} 
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+% \oddsidemargin .5in
+% \topmargin -1in
+\textwidth 6.5 in
+
+\printanswers
+
+\ifprintanswers 
+\usepackage{2in1, lscape} 
+\fi
+
+\title{Physics \\ Homework Ten \\ Magnetism}
+\date{November 28, 2011}
+
+\begin{document}
+
+\maketitle
+
+\section{Homework}
+
+\begin{itemize*}
+  \item Read Chapter 14, section 4
+  \item Chapter 14
+    \begin{itemize*}
+      \item questions 24, 26, 28
+      \item exercises 11-15
+      \item synthesis problems: 3-4
+    \end{itemize*}
+\end{itemize*}
+
+\section{Extra Credit}
+
+\begin{questions}
+\question A loop of wire is dropped between the poles of a horseshoe magnet, where the north pole is on the left.  Is
+the induced current in the loop clockwise or counterclockwise when the loop is (a) above the magnet (b) below the
+magnet?
+
+\begin{solution}
+Because of Lenz's law, the induced current will create a magnetic field which opposes the change in flux.  When the loop
+is entering the field from above the magnet, the flux through the loop is increasing and the current will be
+clockwise to create an opposing magnetic field.  When the loop is exiting the field below the magnet, the current
+changes direction and moves counterclockwise to create a magnetic field in the same direction as the original field. 
+\end{solution}
+
+\question
+Suppose instead of dropping the loop, you attach it to a string and lower it between the poles of the magnet.  Is the
+tension in the string greater than, less than, or equal to the weight of the loop when the loop is (a) above the magnet
+(b) below the magnet? 
+
+\begin{solution}
+When the loop is above the magnet, the current in the loop generates a magnetic field which opposes the original field.
+The opposing magnetic forces decrease the tension on the rope when the loop is lowered.
+
+When the loop is below the magnet, the current in the loop opposes the motion by generating a magnetic field which is
+attracted to the original field.  The tension on the rope is again decreased.
+
+\end{solution}
+
+\question
+With the loop still attached to the string, you now raise it between the poles instead of lowering it.  Is the
+tension in the string greater than, less than, or equal to the weight of the loop when the loop is (a) above the magnet
+(b) below the magnet? 
+
+\begin{solution}
+When the loop is below the magnet, the current in the loop generates a magnetic field which opposes the original field.
+The opposing magnetic forces increase the tension on the rope.
+
+When the loop is above the magnet, the current in the loop opposes the motion by generating a magnetic field which is
+attracted to the original field.  The tension on the rope is again increased.
+
+\end{solution}
+
+\end{questions}
+
+\ifprintanswers
+
+\section{Questions}
+
+\begin{description}
+
+\item[Q24]
+The current is clockwise, so that it creates a field which opposes the change in the flux.
+
+\item[Q28]
+A simple generator produces an alternating current because the rate of the change in the flux alternates between
+positive (increasing flux) and negative (decreasing flux).
+
+\end{description}
+
+\section{Exercises}
+
+\begin{description}
+
+\item[E11]
+\[
+  V = \frac{\Delta \Phi}{\Delta t} = \frac{6 \ \tesla \cdot \meter^2}{0.25 \ \second} = 24 \ \volt
+\]
+
+\item[E12]
+\begin{description}
+\item[a]
+\[
+  \Phi = NBA = 60 \cdot (1.5 \ \tesla)(0.02 \ \meter^2) = 1.8 \ \tesla \cdot \meter^2
+\]
+
+\item[b]
+\[
+  V = \frac{\Delta \Phi}{\Delta t} = \frac{0.03 \ \tesla \cdot \meter^2}{0.2 \ \second} = 9 \ \volt
+\]
+
+\end{description}
+
+\item[E13]
+\begin{description}
+\item[a]
+Since the number of turns on the secondary coil is larger than the number of turns on the primary coil, this is a
+step-up transformer.
+
+\item[b]
+\[
+  V_s = V_p \cdot \frac{N_s}{N_p} = (110 \ \volt) \cdot \frac{60}{15} = 440 \ \volt
+\]
+
+\end{description}
+
+\item[E14]
+\begin{align*}
+  V_s I_s &= V_p I_p \\
+  I_s &= \frac{V_p}{V_s} \cdot I_p \\
+      &= \frac{1}{4} \cdot (6 \ \ampere) \\
+      &= 1.5 \ \ampere \\
+\end{align*}
+
+
+
+\item[E15]
+\begin{align*}
+  V_s &= V_p \cdot \frac{N_s}{N_p} \\
+  N_s &= N_p \cdot \frac{V_s}{V_p} \\
+      &= 300 \cdot \frac{6 \ \volt}{120 \ \volt} \\
+      &= 15 \ \text{ turns} \\
+\end{align*}
+
+\end{description}
+
+\section{Synthesis Problems}
+
+\begin{description}
+\item[SP3]
+\begin{description}
+
+\item[a]
+\[
+  A = lw = (0.03 \ \meter)(0.06 \ \meter) = 0.0018 \ \meter^2
+\]
+
+\item[b]
+\[
+  \Phi = BA =60 \cdot  (0.4 \ \tesla)(0.0018 \ \meter^2) = 0.0432 \ \tesla \cdot \meter^2
+\]
+
+\item[c]
+The minimum value is zero when the coil is parallel to the field.
+
+\item[d]
+With one complete turn each second, it takes 0.25 seconds for the loop to move from perpendicular to parallel.
+
+\item[e]
+\[
+  V = \frac{\Delta \Phi}{\Delta t} = \frac{0.0432 \ \tesla \cdot \meter^2}{0.25 \ \second} = 0.173 \ \volt
+\]
+
+\end{description}
+
+\item[SP4]
+\begin{description}
+\item[a]
+\[
+  N_s = \frac{V_s}{V_p} \cdot N_p = \frac{22 \ \volt}{110 \ \volt} \cdot 400 = 80 \ \text{ turns}
+\]
+
+\item[b]
+\[
+  I_s = I_p \cdot \frac{V_p}{V_s} = (5 \ \ampere) \frac{110 \ \volt}{22 \ \volt} = 25 \ \ampere
+\]
+
+\item[c]
+If the transformer gets warm, some of the original energy is being converted to heat.  The energy remaining is reduced
+and the current in the secondary coil will be less than $25 \ \ampere$.
+
+\end{description}
+
+\end{description}
+
+\else
+
+\vspace{4.5 cm}
+
+{\em 
+Voting is easy and marginally useful, but it is a poor substitute for democracy, which requires direct action by concerned citizens.
+} 
+
+\vspace{.2 cm}
+
+\hspace{1 cm} --Howard Zinn
+
+\fi
+
+\end{document}
+

@@ -1,0 +1,29 @@
+                      Relativity
+
+    In 1905 when he was a 25-year old clerk at the patent office, Albert Einstein
+discovered the theory of Special Relativity in his spare time.
+
+Einstein proposed two simple rules:
+   o as long as you travel in a straight line, the laws physics are the same,
+     regardless of how fast you are moving
+   o the speed of light in a vacuum is one of the laws of physics
+
+He applied a little algebra and a lot of imagination and discovered that if
+you follow these two rules carefully, there are some very interesting 
+consequences:
+   o time travels more slowly for fast-moving objects
+   o fast moving objects shrink
+   o energy and mass are really two aspects of the same thing (E = mc^2)
+
+Why should you care? Relativity brings us:
+   o nuclear power
+   o the atom bomb
+   o the Global Position System (GPS)
+   o black holes
+
+No math is required, although a little knowledge of algebra will be helpful
+at a few points.
+
+
+
+                                  1

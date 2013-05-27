@@ -1,0 +1,557 @@
+
+\documentclass[fleqn,addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{polynom}
+\usepackage{mdwlist}
+\usepackage{cancel}
+
+\usepackage{unitsdef} 
+\newunit{\inch}{in}
+\newunit{\mile}{mile}
+\newunit{\mph}{mph}
+\newunit{\foot}{ft}
+\newunit{\knot}{knot}
+\newunit{\gallon}{gallon}
+
+\printanswers
+\bracketedpoints
+\everymath{\displaystyle}
+
+%% \ifprintanswers
+%% \usepackage{2in1, lscape}
+%% \fi
+
+\title{Math 263A Exam One \\ Chapters 2 and 3}
+\date{April 18, 2012}
+
+\author{}
+
+\begin{document}
+
+\maketitle  
+
+\ifprintanswers
+\else
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\begin{center}
+\gradetable[h][pages]
+\bonusgradetable[h][pages]
+\end{center}
+
+% \vspace{1 cm}
+%% \section{Instructions}
+
+%% Calculators aren't allowed on the final, so they also aren't allowed on any other tests.  If the answer involves a
+%% logarithm or exponential, just leave the answer as $\dfrac{\ln 7}{2}$ (or whatever it is).
+
+\fi
+
+\begin{questions}
+
+\uplevel{\section{Limits and Continuity}}
+ 
+\uplevel{For questions \ref{limit:first} and \ref{limit:last}, evaluate the limits.}
+
+\vspace{1 cm}
+
+%% \question[5]
+%% \[
+%%   \lim_{x \to 1} \frac{x^2 - 1}{x - 1} 
+%% \]
+%% \begin{solution}[2 cm]
+
+%% \begin{align*}
+%%   \lim_{x \to 1} \frac{x^2 - 1}{x - 1} &= \lim_{x \to 1} \frac{(x + 1) \cancel{(x - 1)}}{\cancel{(x - 1)}} \\
+%%   &= \lim_{x \to 1} (x + 1) \\
+%%   &= 2 \\
+%% \end{align*}
+
+%% \end{solution}
+
+\question[5]
+\label{limit:first} 
+\[
+  \lim_{x \to -2} \frac{x^2 + x - 2}{x^2 + 5x + 6}
+\]
+
+\begin{solution}[1 cm]
+
+\begin{align*}
+  \lim_{x \to -2} \frac{x^2 + x  - 2}{x^2 + 5x + 6} &= \lim_{x \to -2} \frac{(x - 1) \cancel{(x + 2)}}{(x + 3) \cancel{(x + 2)}} \\
+  &= \lim_{x \to -2} \frac{x - 1}{x + 3} \\
+  &= -3 \\
+\end{align*}
+
+\end{solution}
+
+
+\pagebreak
+
+\question[7]
+\label{limit:last}
+\[
+  \lim_{x \to 0} \left( \frac{1}{x} \right) \left( \frac{1}{\sqrt{x + 1}} - 1 \right)
+\]
+\begin{solution}[5 cm]
+The problem in this equation is the $x$ in the denominator.  If you rationalize the numerator, you are left with an $x$
+by itself in the numerator which cancels the $x$ in the denominator.
+
+\begin{align*}
+  \lim_{x \to 0} \left( \frac{1}{x} \right) \left( \frac{1}{\sqrt{x + 1}} - 1 \right) 
+      &= \lim_{x \to 0} \left( \frac{1}{x} \right) \left( \frac{1 - \sqrt{x + 1}}{\sqrt{x + 1}} \right) \\
+      &= \lim_{x \to 0} \left( \frac{1 - \sqrt{x + 1}}{x \sqrt{x + 1}} \right) \left( \frac{1 + \sqrt{x + 1}}{1 + \sqrt{x + 1}} \right) \\
+      &= \lim_{x \to 0} \frac{1 - (x + 1)}{x (\sqrt{x + 1})(1 + \sqrt{x+1})} \\
+      &= \lim_{x \to 0} \frac{- \cancel{x}}{\cancel{x} (\sqrt{x + 1})(1 + \sqrt{x+1})} \\
+      &= \lim_{x \to 0} \frac{-1}{(\sqrt{x + 1})(1 + \sqrt{x+1})} \\
+      &= - \frac{1}{2} \\
+\end{align*}
+\end{solution}
+
+\question[7]
+How should you define $f(16)$ to make $f$ continuous at 16?
+\[
+  f(x) = \frac{x - 16}{\sqrt{x} - 4}
+\]
+\begin{solution}[4 cm]
+For a function to be continuous at 16:
+\[
+  f(16) = \lim_{x \to 16} f(x)
+\]
+
+\begin{align*}
+  \lim_{x \to 16} \frac{x - 16}{\sqrt{x} - 4} 
+    &= \lim_{x \to 16} \frac{\cancel{(\sqrt{x} - 4)}(\sqrt{x} + 4)}{\cancel{\sqrt{x} - 4}} \\
+    &= \lim_{x \to 16} \sqrt{x} + 4 \\
+    &= 8 \\
+\end{align*}
+
+So if you define $f(16) = 8$, the function will be continuous at 16.
+
+\end{solution}
+
+%% \uplevel{For problems \ref{continuity_range:first} and \ref{continuity_range:last}, find the range of numbers where
+%%   $f(x)$ is continuous.}
+
+%% \question[5]
+%% \label{continuity_range:first}
+%% \[
+%%   f(x) = \frac{3x - 5}{2x^2 - x -3}
+%% \]
+%% \begin{solution}[4 cm]
+%% \end{solution}
+
+%% \question[5]
+%% Over what range of values is $f$ continuous?
+%% \[
+%%   f(x) = \frac{\sqrt{9-x}}{\sqrt{x - 6}}
+%% \]
+%% \begin{solution}[4 cm]
+%% \end{solution}
+
+\uplevel{\section{Derivatives}}
+
+\uplevel{For problems \ref{derivative:first} to \ref{derivative:last}, find $f'(x)$.}
+
+\question[3]
+\label{derivative:first}
+\[
+  f(x) = 2x^3 - 3x^2 + 7x - \pi^3
+\]
+\begin{solution}[2 cm]
+\[
+  f'(x) = 6x^2 - 6x + 7
+\]
+
+$\pi^3$ is a constant so its derivative is 0.
+
+\end{solution}
+
+\ifprintanswers
+\else
+\pagebreak
+\fi
+
+\question[5]
+\[
+  f(x) = \frac{1}{2x^4 - 7x^2}
+\]
+\begin{solution}[4 cm]
+\[
+  f'(x) = \frac{-(8x^3 - 14x)}{(2x^4 - 7x^2)^2} = \frac{14x - 8x^3}{(2x^4 - 7x^2)^2} \\
+\]
+
+\end{solution}
+
+\question[7]
+\[
+  f(x) = \sqrt{x} \cos x
+\]
+\begin{solution}[5 cm]
+\begin{align*}
+  f(x) &= x^{1/2} \cdot \cos x
+  \\
+  f'(x) &= x^{1/2} \cdot (-\sin x) + \cos x \cdot \frac{1}{2} x^{-1/2} \\
+        &= \frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \cdot \sin x \\
+\end{align*}
+
+\end{solution}
+
+\ifprintanswers
+\pagebreak
+\fi
+
+\question[10]
+\[
+  f(x) = \frac{2x^2 - 5x + 7}{x^3 + 4}
+\]
+\begin{solution}[7 cm]
+\begin{align*}
+  f'(x) &= \frac{(x^3 + 4) \cdot D_x(2x^2 - 5x + 7) - (2x^2 - 5x + 7) \cdot D_x(x^3 + 4)}{(x^3 + 4)^2} \\
+        &= \frac{(x^3 + 4)(4x - 5) - (2x^2 - 5x + 7)(3x^2)}{(x^3 + 4)^2} \\
+        &= \frac{4x^4 - 5x^3 + 16x - 20 - (6x^4 - 15x^3 + 21x^2)}{(x^3 + 4)^2} \\
+        &= \frac{-2x^4 + 10x^3 - 21x^2 + 16x - 20}{(x^3 + 4)^2} \\
+\end{align*}
+\end{solution}
+
+\ifprintanswers
+\else
+\pagebreak
+\fi
+
+\question[10]
+\[
+  f(x) = \left( \frac{2x+ 1}{3x^2 - 2} \right)^4
+\]
+\begin{solution}[8 cm]
+\begin{align*}
+  f'(x) &= 4 \left( \frac{2x+ 1}{3x^2 - 2} \right)^3 \cdot D_x \left( \frac{2x+ 1}{3x^2 - 2} \right) \\
+        &= 4 \left( \frac{2x+ 1}{3x^2 - 2} \right)^3 
+             \left( \frac{(3x^2 - 2) \cdot Dx(2x+ 1) - (2x + 1) \cdot D_x(3x^2 - 2)}{(3x^2 - 2)^2} \right) \\
+        &= 4 \left( \frac{2x+ 1}{3x^2 - 2} \right)^3 \left( \frac{(3x^2 - 2)(2) - (2x + 1)(6x)}{(3x^2 - 2)^2} \right) \\
+        &= 4 \left( \frac{2x+ 1}{3x^2 - 2} \right)^3 \left( \frac{6x^2 - 4 - (12x^2 + 6x)}{(3x^2 - 2)^2} \right) \\
+        &= 4 \left( \frac{2x+ 1}{3x^2 - 2} \right)^3 \left( \frac{-6x^2 + 6x - 4}{(3x^2 - 2)^2} \right) \\
+        &= \frac{4(2x+ 1)^3(-6x^2 + 6x - 4)}{(3x^2 - 2)^5}  \\
+\end{align*}
+\end{solution}
+
+\ifprintanswers
+\pagebreak
+\fi
+
+\question[10]
+\[
+  f(x) = \sin^2 \left( \pi x^3 \right)
+\]
+\begin{solution}[6 cm]
+\begin{align*}
+  f'(x) &= 2(\sin \left( \pi x^3 \right)) \cdot D_x \sin \left( \pi x^3 \right) \\
+        &= 2 \left( \sin \left( \pi x^3 \right) \right) \cdot \cos \left( \pi x^3 \right) \cdot D_x \left( \pi x^3 \right) \\
+        &= 2(\sin \left( \pi x^3 \right)) \cdot \cos \left( \pi x^3 \right) \cdot \left( 3 \pi x^2 \right) \\
+        &= 6 \pi x^2 \sin \left( \pi x^3 \right) \cos \left( \pi x^3 \right) \\
+\end{align*}
+\end{solution}
+
+\ifprintanswers
+\else
+\pagebreak
+\fi
+
+\question[10]
+\label{derivative:last}
+\[
+  f(x) = \frac{\sin x^2}{\cos^2 x}
+\]
+\begin{solution}[8 cm]
+\begin{align*}
+  f'(x) &= \frac{\cos^2 x \cdot D_x \left( \sin x^2 \right) - \sin x^2 \cdot D_x \left( \cos^2 x \right)}{ \cos^4 x} \\
+        &= \frac{\cos^2 x \cdot \cos x^2 \cdot D_x(x^2) - \sin x^2 ( 2 \cos x) \cdot D_x(\cos x)}{ \cos^4 x} \\
+        &= \frac{2 x \cos^2 x \cos x^2 - 2 \sin x^2 \cos x(-\sin x)}{ \cos^4 x} \\
+        &= \frac{2 x \cos^2 x \cos x^2 + 2 \sin x^2 \cos x \sin x}{ \cos^4 x} \\
+        &= \frac{2 x \cos x \cos x^2 + 2 \sin x \sin x^2 }{ \cos^3 x} \\
+\end{align*}
+
+\end{solution}
+
+\ifprintanswers
+\pagebreak
+\fi
+
+
+\question $y = x^4 + 3x^3 - 7x + 12$
+
+\begin{parts}
+
+\part[3]
+Find $\frac{dy}{dx}$
+\begin{solution}[3 cm]
+\[
+  \frac{dy}{dx} = 4x^3 + 9x^2 - 7
+\]
+\end{solution}
+
+\part[3]
+Find $\frac{d^2y}{dx^2}$
+\begin{solution}[3 cm]
+\[
+  \frac{d^2y}{dx^2} = 12x^2 + 18x
+\]
+\end{solution}
+
+\end{parts}
+
+\ifprintanswers
+\else
+\pagebreak
+\fi
+
+\question[10] Use implicit differentiation to find $\frac{dy}{dx}$.
+\[
+  xy^2 + 3x^2y = 7
+\]
+\begin{solution}[5 cm]
+\begin{align*}
+  xy^2 + 3x^2y &= 7 \\
+  D_x(xy^2 + 3x^2y) &= D_x(7) \\
+  x \cdot D_x(y^2) + y^2 + 3x^2 \frac{dy}{dx} + y \cdot 6x &= 0 \\
+  % x \left( 2 y \frac{dy}{dx} \right) + y^2 + 3x^2 \frac{dy}{dx} + 6xy &= 0 \\
+  2xy \frac{dy}{dx} + y^2 + 3x^2 \frac{dy}{dx} + 6xy &= 0 \\
+  2xy \frac{dy}{dx} + 3x^2 \frac{dy}{dx} &= -6xy - y^2 \\
+  \frac{dy}{dx} &= \frac{-6xy - y^2}{2xy + 3x^2} \\
+\end{align*}
+\end{solution}
+
+\pagebreak
+
+\uplevel{\section{Applications}}
+
+\question 
+Newton is in the park playing fetch with his dogs Eff and Eff Prime.  Each time he throws the ball, he watches its
+graceful flight as the two dogs bound enthusiastically in pursuit.  As the ball is sailing through the air, he
+notices that its height seems to be approximately given by the expression:
+\[
+  h = 64t - 16t^2 
+\]
+where the time is in seconds and the distance in feet.
+
+\vspace{1 cm}
+
+\begin{parts}
+\part[2]
+How fast is the ball going after 1 second?
+\begin{solution}[4 cm]
+The velocity is the derivative of the height:
+\[
+  h'(t) = 64 - 32t
+\]
+After 1 second:
+\[
+  h'(1) = 64 - 32 = 32 \foot / \second
+\]
+\end{solution}
+
+\part[2]
+What is the ball's acceleration?
+\begin{solution}[3 cm]
+\[
+  h''(t) = -32 \foot / \second^2
+\]
+The acceleration is negative because the ball is slowing down because of gravity.
+
+\end{solution}
+
+\part[2]
+When does the ball reach the peak of its flight?
+\begin{solution}[4 cm]
+At the peak of the flight, the velocity is zero.
+\begin{align*}
+  64 - 32t &= 0 \\
+  32t &= 64 \\
+  t &= 2 \second \\
+\end{align*}
+\end{solution}
+
+\part[2]
+What is the maximum height reached by the ball?
+\begin{solution}[2 cm]
+\[
+  h(2) = 64 \cdot 2 - 16 \cdot 4 = 64 \foot
+\]
+\end{solution}
+
+\end{parts}
+
+\pagebreak
+
+\question[10] Newton and Leibniz are having a heated discussion about calculus.  They agree on mundane facts like
+$\sqrt{289} = 17$ and $257/17 \approx 15.12$. But they don't see eye to eye on the best notation to use for derivatives.
+
+Eventually, Newton stomps off in disgust, heading east at 4 mph muttering angrily about stubborn Germans.  Leibniz sits
+pensively for an hour and then hops on his bike and starts riding north at a meditative 15 mph.
+
+At what rate is the distance between them changing 1 hour after Leibniz starts biking?
+
+\begin{solution}[11 cm]
+Before you start, you can do a quick common sense check to see what range the value should be in.  If the two mathemeticians
+traveled in opposite directions, the rate would be $15 + 4 = 19 \mph$.  If the two mathemeticians
+traveled in the same direction, the rate would be $15 - 4 = 11 \mph$.  So the answer must be somewhere between
+11 and 19 mile/hour.
+
+The distance between the two mathemeticians is the hypotenuse of a right triangle, so if $x$ is Newton's position, $y$
+is Leibniz's position and $r$ the distance between them:
+\[
+  r^2 = x^2 + y^2 \\
+\]
+
+The rate of change of this distance over time is:
+\begin{align*}
+  2r \cdot \frac{dr}{dt} &= 2x \cdot \frac{dx}{dt} + 2y \cdot \frac{dy}{dt} \\
+  \frac{dr}{dt} &= \frac{x}{r} \cdot \frac{dx}{dt} + \frac{y}{r} \cdot \frac{dy}{dt} \\
+\end{align*}
+
+This is the same formula you get for any problem like this where two objects are traveling perpendicular to each other
+and you want the rate the distance between them is changing.  The only things that differ from problem to problem are
+the rates and distances you plug into this formula.
+
+At the time we're interested in:
+\begin{itemize*}
+\item Newton has been walking for 2 hours at 4 mph and is 8 miles from the origin.
+\item Leibniz has been biking for 1 hour at 15 mph and is 15 miles from the origin.
+\item The distance between them is: $\sqrt{8^2 + 15^2} = \sqrt{289} = 17 \mile$.
+\end{itemize*}
+%% Let the time be zero when Leibniz starts biking.  At this time, Newton has been walking for an hour so, he's 4 miles
+%% away from the starting point.  If he walks along the x-axis, his position is given by:
+%% \[
+%%   x = 4 + 4t
+%% \]
+%% Leibniz starts biking up the y-axis at time 0, so his position is:
+%% \[
+%%   y = 15 t
+%% \]
+
+%% The values 1 hour after Leibniz starts biking are:
+%% \begin{align*}
+%%   x &= 8 \mile \\
+%%   y &= 15 \mile \\
+%%   r &= \sqrt{8^2 + 15^2} = \sqrt{289} = 17
+%% \end{align*}
+
+So the desired rate is:
+\begin{align*}
+  \frac{dr}{dt} &= \frac{8}{17} \cdot 4 + \frac{15}{17} \cdot 15 \\
+                &= \frac{257}{17} \\
+                &\approx 15.12 \\
+\end{align*}
+
+\end{solution}
+
+\ifprintanswers
+\pagebreak
+\fi
+
+\question[7]
+A spherical balloon is being inflated with gas.  Use differentials to estimate how much the volume changes when the
+radius grows from 3 ft to 3.02 ft.
+
+You can express your answer as some number times $\pi$ ($1.234 \pi$, for example).
+
+The volume of a sphere is: $V = \frac{4}{3} \pi r^3$
+
+\begin{solution}[3 cm]
+\begin{align*}
+  V  &= \frac{4}{3} \pi r^3 \\ 
+  dV &= 4 \pi r^2 dr \\
+  \\
+  dV &= 4 \pi \cdot 3^2 \cdot 0.02 \\
+     &= 0.72 \pi \foot^3 \\
+\end{align*}
+\end{solution}
+
+\ifprintanswers
+\else
+\pagebreak
+\fi
+
+\uplevel{\section{Extra Credit}}
+\bonusquestion[10] 
+A light is at the top of a 15 foot pole.  A 5 foot tall boy walks away from the pole at 4 ft/s.  At what rate is the tip
+of his shadow moving?
+
+\begin{solution}[9 cm] 
+I drew a picture of the situation and called $x$ the distance of the boy from the pole and $L$ the length of the
+shadow.  With this labeling, there are two similar triangles and:
+\begin{align*}
+  \frac{5}{L} &= \frac{15}{x + L} \\
+  L &= \frac{x}{2} \\
+\end{align*}
+We know the rate $x$ is changing, since it is the boy's walking speed.  So we can differentiate to find the rate the
+length of the shadow is changing:
+\[
+  \frac{dL}{dt} = \frac{1}{2} \frac{dx}{dt} = \frac{1}{2} \cdot 4 = 2 \foot / \second
+\]
+
+The shadow is both growing and moving because the boy is walking.  So the rate the tip moves is:
+\[
+  4 \mph + 2 \mph = 6 \foot / \second
+\]
+\end{solution}
+
+\ifprintanswers
+\pagebreak
+\fi
+
+\bonusquestion[10] 
+Use only the product rule (not the power rule or the chain rule) to show that:
+\[
+  D_x f^3(x) = 3 f^2(x) \cdot f'(x)
+\]
+
+\begin{solution}[8 cm] 
+You have to apply the product rule twice and do a little algebra to get the desired result.
+\begin{align*}
+  D_x(f^3(x)) &= D_x(f^2(x)f(x)) \\
+  &= f^2(x) f'(x) + f(x) \cdot D_x(f^2(x)) \\
+  &= f^2(x) f'(x) + f(x) \cdot D_x(f(x) \cdot f(x)) \\
+  &= f^2(x) f'(x) + f(x) \cdot ( f(x) f'(x) + f(x) f'(x) ) \\
+  &= f^2(x) f'(x) + f(x) \cdot \left( 2f(x) f'(x) \right) \\
+  &= f^2(x) f'(x) + 2f^2(x) f'(x) \\
+  &= 3 f^2(x) f'(x) \\
+\end{align*}
+\end{solution}
+
+%% \bonusquestion[7] 
+%% A cable is submerged in the ocean.  Because of corrosion, the surface area of the cable decreases at a rate of
+%% $\frac{dA}{dt}$.  The corrosion of the ends is negligible, so the length remains constant.
+
+%% Find the rate at which the radius of the cable is decreasing in terms of the length ($L$) and radius
+%% ($r$) of the cable.
+
+%% \begin{solution}[5 cm] 
+%% \begin{align*}
+%%   A &= \pi r^2 L \\
+%%   \frac{dA}{dt} &= 2 \pi r L \frac{dr}{dt} \\
+%%   \frac{dr}{dt} &= \frac{1}{2 \pi r L} \frac{dA}{dt}
+%% \end{align*}
+
+%% \end{solution}
+
+%% \bonusquestion[10] 
+%% When two resistors ($R_1$ and $R_2$) are connected in parallel, the total resistance of the circuit ($R$) is given by
+%% \[
+%%   \frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2}
+%% \]
+
+%% Find an expression for the rate the total resistance is changing in terms of the rates the other two resistances are
+%% changing and the values of the other two resistances.
+
+%% \begin{solution}[5 cm] 
+%% \end{solution}
+
+\end{questions}
+
+\end{document}

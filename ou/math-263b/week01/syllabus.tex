@@ -1,0 +1,126 @@
+\documentclass[fleqn, onecolumn]{article}
+
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{mdwlist}
+\usepackage{parskip}
+
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+
+\everymath{\displaystyle}
+\setlength{\mathindent}{1 cm}
+
+\title{Math 263B Syllabus}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+Math 263A covered derivatives.  Math 263B covers the inverse operation which is {\em integrals}. Derivatives allow you
+to find the rate at which a function changes from a function.  Integrals allow you to find a function, given the rate at
+which it changes.
+
+
+The text book is {\em Calculus, 7th edition} by Varberg and Purcell.  Here are the sections we'll cover, as described in
+the OU course guide:
+
+\begin{quote}
+Math 263B covers Chapters 5, 7, 8, 9, and the first two sections of Chapter 6. The following sections are omitted: 5.2,
+5.10, 6.3-6.8, 7.10, 8.7, 9.6. In addition, you can omit the Mean Value Theorem for Integrals, page 281
+of the text, and the material on Inverse Hyperbolic Functions, beginning on page 393 of the text.
+\end{quote}
+
+\section{Homework and Exams}
+
+You should expect to spend two or three hours each week doing homework.
+
+Math is like learning piano, basketball, or bicycle mechanics.  Watching someone else do it or reading about it in a
+book is helpful.  But you can't actually learn how to do it yourself unless you've practiced on your own.
+
+Each chapter will be followed by an in-class test.  The primary reason to have in-class tests is so that you can
+practice for the OU exam which is the way you receive credit at the end of the course.  Taking tests is like any other
+skill---you get better at it with practice.
+
+\section{Course Overview}
+
+\subsection{Chapter Five--The Integral}
+
+%% Many mathemetical operations have inverses.  Examples are plus/minus, multiply/divide, square root/square, etc.  You can
+%% apply the first operation and then undo it by applying the second operation. Of course, you don't usually want to apply
+%% an operation and its inverse right sequentially, because then you are left right where you started and haven't
+%% accomplished anything.
+
+Derivitaves are useful because given a function, you can get a new function which describes the rate at which the
+original function changes, or its slope.  For example, given a function which describes the position of an object as a
+function of time, you can find functions which describe its velocity and its acceleration as a function of time.
+
+For example, if $x(t)$ provides the position of something at time $t$:
+\begin{align*}
+  x(t) &= 5t^2 \\
+  v(t) &= x'(t) = 10t \\
+  a(t) &= v'(t) = 10 \\
+\end{align*}
+
+% As we learned last semester, you can use the slope to find minimums, maximums, related rates, etc.  
+
+Integrals are useful in going the opposite direction.  Given a function which describes the acceleration of an object as
+a function of time, you can find functions which describe its velocity and position as a function of time.
+
+\begin{align*}
+  a(t) &= 10 \\
+  v(t) &= \int 10 \, \mathrm{d}t = 10 t \\
+  s(t) &= \int 10t \, \mathrm{d}t = 5t^2 \\
+\end{align*}
+
+In this chapter we learn what an integral is, how integrals are related to derivatives, and how to calculate some integrals.
+
+\subsection{Chapter Six--Applications of the Integral}
+
+We learn how to use integrals to compute the area and volume of objects.
+
+\subsection{Chapter 7--Transendental Functions}
+
+{\em Transcendental Functions} are functions like sine and cosine which can't be written as polynomials.
+
+Two other transendental functions we learned about in pre-calculus were $f(x) = e^x$ and $f(x) = \ln x$.  There is a
+natural way to define these functions using integrals which we learn about in this chapter.  
+
+This chapter also includes a review of derivatives and integrals of trigonometric functions and introduces hyperbolic functions.
+
+\subsection{Chapter 8--Techniques of Integration}
+
+Doing derivatives required learning some rules about what to do when faced with various situations.  Integrals are the
+same way, and this chapter includes some techniques to use for integrating various expressions.
+
+\subsection{Chapter 9--Indeterminate Forms and Improper Integrals}
+
+In this chapter we learn:
+\begin{itemize}
+\item Easier and more powerful ways to solve expressions which result in $0/0$ or $\infty/\infty$.  For example, we
+  learn an easy way to evaluate $\lim_{x \to 0} \frac{\sin x}{x}$.
+
+\item What to do when one of the limits of integration is infinite.
+\end{itemize}
+
+%% Last semester we learned about the derivative.  This semester we'll learn about its inverse operation--the integral.  
+
+%% Subjects include:
+%% \begin{itemize*}
+%% \item antiderivatives (indefinite integrals).  An antiderivative or ind
+%% \item differential equations 
+%% \item sums
+%% \item using integrals to calculate area
+%% \item definite integrals
+%% \item the Fundamental Theorem of Calculus
+%% \end{itemize*}
+
+\end{document}
+

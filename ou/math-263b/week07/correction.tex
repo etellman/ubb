@@ -1,0 +1,87 @@
+\documentclass{article}
+
+\usepackage{fullpage}
+\usepackage{bookmark}
+\usepackage{parskip}
+\usepackage{paralist}
+\usepackage{mdwlist}
+\usepackage{listings}
+\usepackage{booktabs}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{polynom}
+
+
+\everymath{\displaystyle}
+
+% \printanswers
+
+\title{Math 263B Correction}
+\date{August 30, 2011}
+
+\begin{document}
+
+\maketitle
+
+Last week I made a mistake describing how to go from sums to integrals which I wanted to clear up.  Here's the correct explanation.
+
+Suppose you have this sum:
+\[
+\lim_{n \to \infty} \sum_{i = 1}^n \left(1 + \frac{2i}{n}\right) \frac{2}{n}
+\]
+
+The range is of size 2, because the fraction $\frac{2}{n}$ has 2 in the numerator.
+
+You can think of this problem in two ways. One way is that the function is $f(x) = 1 + x$.  This turns the original sum
+into this integral:
+\[
+  \int_0^2 (1 + x) \, \mathrm{d}x = x + \frac{x^2}{2} \bigg|_0^2 = 4 \\
+\]
+
+Another way is to use the function $f(x) = x$ and take the integral from 1 to 3:
+\begin{align*}
+  \int_1^3 x \, \mathrm{d}x = \frac{x^2}{2} \bigg|_1^3 = 4 \\
+\end{align*}
+
+There are two possibilities because you can think of this problem as either the area between 0 and 2 of a line with a
+y-intercept of 1 or as the area between 1 and 3 of a line with a y-intercept of 0 and get the same answer.
+
+However, suppose the original problem was instead:
+\[
+\lim_{n \to \infty} \sum_{i = 1}^n \left(1 + \frac{2i}{n}\right)^2 \frac{2}{n}
+\]
+
+Now there is only one choice:
+\[
+  \int_0^2 (1 + x)^2 \, \mathrm{d}x \\
+\]
+
+The pattern is
+\[
+  \lim_{n \to \infty} \sum_{i = 1}^n f \left(a + \frac{(b - a)i}{n}\right) \frac{(b - a)}{n} = \int_a^b  f(x) \, \mathrm{d}x
+\]
+
+In class last week, and when I graded the homework, I said that problem 34 in section 5.6
+\[
+  \lim_{n \to \infty} \sum_{i = 1}^n \left[ 1 + \frac{2i}{n} + \left( \frac{2i}{n} \right)^2 \right] \frac{2}{n}
+  = \int_1^3 (x + x^2) \, \mathrm{d}x
+\]
+
+But this is wrong.  The function that matches the pattern is $f(x) = 1 + x + x^2$, and the correct answer, which most
+people had, is actually
+\[
+  \lim_{n \to \infty} \sum_{i = 1}^n \left[ 1 + \frac{2i}{n} + \left( \frac{2i}{n} \right)^2 \right] \frac{2}{n}
+  = \int_0^2 (1 + x + x^2) \, \mathrm{d}x
+\]
+
+The sum for an integral between 1 and 3 with this function would instead be:
+\[
+  \lim_{n \to \infty} \sum_{i = 1}^n \left[ 1 + \left(\frac{2i}{n} + 1 \right) + \left( \frac{2i}{n} + 1 \right)^2 \right] \frac{2}{n}
+  = \int_1^3 (1 + x + x^2) \, \mathrm{d}x
+\]
+
+
+\end{document}

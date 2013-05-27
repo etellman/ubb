@@ -1,0 +1,379 @@
+\documentclass[fleqn,addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{polynom}
+
+\printanswers
+
+\ifprintanswers
+\usepackage{2in1, lscape}
+\fi
+
+\title{Math 113 Chapter Four Exam}
+\author{}
+\date{\today}
+
+% \oddsidemargin 0in
+% \topmargin -0.5in
+% \textwidth 6.5in
+
+
+% \extrawidth{-1 in}
+% \setlength{\mathindent}{0in}
+
+\begin{document}
+
+\maketitle
+
+\ifprintanswers
+\else
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\begin{center}
+\gradetable[h][pages]
+\end{center}
+
+\fi
+
+\section{Questions}
+
+\subsection{Simplifying Rational Expressions}
+
+For problems \ref{simplify:first}-\ref{simplify:last}, simplify each expression.
+
+\begin{questions}
+
+\question[5] \( \displaystyle \frac{42x^4y^3}{35x^3y^5} \)
+\label{simplify:first}
+\begin{solution}[2 cm]
+\[ 
+\frac{42x^4y^3}{35x^3y^5} = \frac{6x}{5y^2}
+\]
+\end{solution}
+
+\question[5] \( \displaystyle \frac{x^2-9}{x^2+3x} \)
+\begin{solution}[2 cm]
+\[
+\frac{x^2-9}{x^2+3x}  = \frac{\cancel{(x+3)}(x-3)}{x \cancel{(x+3)}} = \frac{x-3}{x}
+\]
+\end{solution}
+
+\question[5] \( \displaystyle \frac{2x^2+x-28}{2x^2-13x+21} \)
+\begin{solution}[3 cm]
+\[
+  \frac{2x^2+x-28}{2x^2-13x+21} = \frac{\cancel{(2x-7)}(x+4)}{\cancel{(2x-7)}(x+3)} = \frac{x+4}{x-3}
+\]
+\end{solution}
+
+\question[7] \( \displaystyle \frac{3x^3y - 2x^2y - 16xy}{x^2y^2 + 6xy^2 + 8y^2} \)
+\label{simplify:last}
+\begin{solution}[6 cm]
+\[
+  \frac{3x^3y - 2x^2y - 16xy}{x^2y^2 + 6xy^2 + 8y^2} 
+  = \frac{x(3x-8) \cancel{(x+2)}} {y(x+4) \cancel{x+2)}} 
+  = \frac{x(3x-8)}{y(x+4)} 
+\]
+
+\end{solution}
+
+\subsection{Multiplying and Dividing Rational Expressions}
+
+For problems \ref{multiply:first}-\ref{multiply:last}, perform each multiplication or division and simplify the result
+as much as possible.
+
+\question[7] \( \displaystyle \frac{20a^2b}{7a^3} \cdot \frac{3a^3b^2}{12a^2b^2} \)
+\label{multiply:first}
+\begin{solution}[3 cm]
+\[
+  \frac{20a^2b}{7a^3} \cdot \frac{3a^3b^2}{12a^2b^2}  = \frac{5b}{7}
+\]
+\end{solution}
+
+\question[7] \( \displaystyle \frac{2xy}{x^2-4x+4} \div \frac{16y}{x^2-4}\)
+\begin{solution}[4 cm]
+\[
+  \frac{2xy}{(x-2) \cancel{(x-2)}} \cdot \frac{(x+2) \cancel{(x-2)}}{16y} = \frac{x(x+2)}{8(x-2)}
+\]
+\end{solution}
+
+\question[7] \( \displaystyle \frac{9x^2y}{10x} \cdot \frac{35xy}{12y^2} \div \frac{3x^3}{4xy^2} \)
+\begin{solution}[3 cm]
+\[
+  \frac{9x^2y}{10x} \cdot \frac{35xy}{12y^2} \div \frac{3x^3}{4xy^2} 
+  = \frac{9x^2y}{10x} \cdot \frac{35xy}{12y^2} \cdot \frac{4xy^2}{3x^3}
+  = \frac{7y^2}{2}
+\]
+\end{solution}
+
+\question[10] \( \displaystyle \frac{x^2-6x-7}{2x^2-18x+28} \cdot \frac{-4x^2 + 2x + 12}{2x^2+5x+3} \)
+\label{multiply:last}
+\begin{solution}[7 cm]
+\begin{align*}
+  & \frac{x^2-6x-7}{2x^2-18x+28} \cdot \frac{-4x^2 + 2x + 12}{2x^2+5x+3} \\
+  &= \frac{(x-7) \cancel{(x+1)} (-2)(2x^2-x-6)}{2(x^2-9x+14)(2x+3) \cancel{(x+1)}} \\
+  &= \frac{- \cancel{(2)} \cancel{(x-7)} \cancel{(2x+3)} \cancel{(x-2)} } {\cancel{(2)}\cancel{(x-7)} \cancel{(x-2)} \cancel{(2x+3)}} \\
+  &= -1 \\
+\end{align*}
+
+\end{solution}
+
+\subsection{Adding and Subtracting Rational Expressions}
+
+For problems \ref{add:first}-\ref{add:last}, perform each addiiton or subtraction and simplify the result
+as much as possible.
+
+\question[5] \( \displaystyle \frac{2}{x+2} - \frac{3}{x-2} \)
+\label{add:first}
+\begin{solution}[5 cm]
+\begin{align*}
+  \frac{2}{x+2} - \frac{3}{x-2} &= \frac{2(x-2) - 3(x+2)}{(x+2)(x-2)} \\
+  &= \frac{2x-4-3x-6}{(x+2)(x-2)} \\
+  &= \frac{-x-10}{(x+2)(x-2)} \\
+\end{align*}
+\end{solution}
+
+\question[5] \( \displaystyle \frac{x}{x^2-9} + \frac{3}{x-3} \)
+\begin{solution}[5 cm]
+\begin{align*}
+  \frac{x}{x^2-9} + \frac{3}{x-3} &= \frac{x}{(x+3)(x-3)} + \frac{3}{x-3} \\
+  &= \frac{x}{(x+3)(x-3)} + \frac{3(x+3)}{(x+3)(x-3)} \\
+  &= \frac{x + 3x + 9}{(x+3)(x-3)} \\
+  &= \frac{4x + 9}{(x+3)(x-3)} \\
+\end{align*}
+
+\end{solution}
+
+\question[10] \( \displaystyle \frac{3x}{x^2+6x+8} + \frac{2}{x+2} - \frac{4x-1}{x+4} \)
+\label{add:last}
+\begin{solution}[5 cm]
+\begin{align*}
+  & \frac{3x}{x^2+6x+8} + \frac{2}{x+2} - \frac{4x-1}{x+4} \\
+  &= \frac{3x}{(x+2)(x+4)} + \frac{2}{x+2} - \frac{4x-1}{x+4} \\
+  &= \frac{3x}{(x+2)(x+4)} + \frac{2(x+4)}{(x+2)(x+4)} - \frac{(x+2)(4x-1)}{(x+2)(x+4)} \\
+  &= \frac{3x+2x+8-(4x^2+7x-2)}{(x+2)(x+4)} \\
+  &= \frac{5x+8-4x^2-7x+2}{(x+2)(x+4)} \\
+  &= \frac{-4x^2 -2x + 10}{(x+2)(x+4)} \\
+\end{align*}
+
+\end{solution}
+
+\subsection{Complex Fractions}
+
+For problems \ref{complex:first}-\ref{complex:last}, simplify each complex fraction as much as possible.
+
+\question[5] \( \displaystyle \frac{\cfrac{1}{x} - \cfrac{2}{y}} {\cfrac{3}{y} + \cfrac{7}{xy}} \)
+\label{complex:first}
+\begin{solution}[4 cm]
+\[
+  \frac{\cfrac{1}{x} - \cfrac{2}{y}} {\cfrac{3}{y} + \cfrac{7}{xy}} 
+  = \left( \frac{xy}{xy} \right) \left( \frac{\cfrac{1}{x} - \cfrac{2}{y}} {\cfrac{3}{y} + \cfrac{7}{xy}} \right)
+  = \frac{y-2x}{3x+7}
+\]
+\end{solution}
+
+\question[7] \( \displaystyle \frac{\cfrac{2}{x-2} - \cfrac{3}{x+2}} { \cfrac{5}{x^2-4} + \cfrac{9}{x-2} }\)
+\begin{solution}[5 cm]
+\begin{align*}
+  & \frac{\cfrac{2}{x-2} - \cfrac{3}{x+2}} { \cfrac{5}{x^2-4} + \cfrac{9}{x-2} } \\
+  &= \frac{\cfrac{2}{x-2} - \cfrac{3}{x+2}} { \cfrac{5}{(x+2)(x-2)} + \cfrac{9}{x-2} } \\
+  &= \left( \frac{(x+2)(x-2)}{(x+2)(x-2)} \right) \left( \frac{\cfrac{2}{x-2} - \cfrac{3}{x+2}} { \cfrac{5}{(x+2)(x-2)} + \cfrac{9}{x-2} } \right) \\
+  &= \frac{2(x+2) - 3(x-2)}{5 + 9(x+2)} \\
+  &= \frac{2x+4 - 3x + 6}{5 + 9x+ 18} \\
+  &= \frac{-x+10}{9x+ 23} \\
+\end{align*}
+
+\end{solution}
+
+\question[7] \( \displaystyle \frac{4x}{x - \cfrac{1}{x}} - 1 \)
+\label{complex:last}
+\begin{solution}[5 cm]
+\begin{align*}
+  & \frac{4x}{x - \cfrac{1}{x}} - 1 \\
+  &= \left( \frac{x}{x} \right) \left( \frac{4x}{x - \cfrac{1}{x}} \right) - 1 \\  
+  &=  \frac{4x^2}{x^2 - 1} - 1 \\
+  &=  \frac{4x^2}{x^2 - 1} - \frac{x^2-1}{x^2-1} \\
+  &=  \frac{4x^2 - (x^2 - 1)}{x^2 - 1} \\
+  &=  \frac{3x^2 + 1}{x^2 - 1} \\
+\end{align*}
+
+\end{solution}
+
+\subsection{Long Division}
+
+For problems \ref{long-div:first}-\ref{long-div:last}, perform each long division.
+
+\question[7] \( (2x^2-7x-72) \div (x-8) \)
+\label{long-div:first}
+\begin{solution}[7 cm]
+\[ \polylongdiv{2x^2-7x-72}{x-8} \]
+\[ 2x+9 \]
+\end{solution}
+
+\question[10] \( (x^3-10) \div (x+4) \)
+\label{long-div:last}
+\begin{solution}[5 cm]
+\[ \polylongdiv{x^3-10}{x+4} \]
+\[ x^2-4x+16 - \frac{74}{x+4}\]
+\end{solution}
+
+\subsection{Equations with Rational Expressions}
+
+For problems \ref{equation:first}-\ref{equation:last}, solve each equation.
+
+\question[7] \( \displaystyle \frac{4}{2x-3} = \frac{8}{x+3} \)
+\label{equation:first}
+\begin{solution}[6 cm]
+\begin{align*}
+  \frac{4}{2x-3} &= \frac{8}{x+3} \\
+  4(x+3) &= 8(2x-3) \\
+  4x + 12 &= 16x - 24 \\
+  12x &= 36 \\
+  x &= 3 \\
+\end{align*}
+\end{solution}
+
+\question[7] \( \displaystyle \frac{x}{x+3} + 1 = \frac{4}{x+3}\)
+\begin{solution}[6 cm]
+\begin{align*}
+  \frac{x}{x+3} + 1 &= \frac{4}{x+3} \\
+  (x + 3) \left( \frac{x}{x+3} + 1 \right) &= (x+3) \left( \frac{4}{x+3} \right) \\
+  x + x + 3 &= 4 \\
+  2x + 3 &= 4 \\
+  2x  &= 1 \\
+  x  &= \frac{1}{2} \\
+\end{align*}
+\end{solution}
+
+\question[10] \( \displaystyle \frac{3}{x-5} + \frac{4}{x+7} = \frac{2x+11}{x^2+2x-35} \)
+\label{equation:last}
+\begin{solution}[5 cm]
+\begin{align*}
+  \frac{3}{x-5} + \frac{4}{x+7} &= \frac{2x+11}{x^2+2x-35} \\
+  \frac{3}{x-5} + \frac{4}{x+7} &= \frac{2x+11}{(x-5)(x+7)} \\
+  3(x+7) + 4(x-5) &= 2x+11 \\
+  3x+21 + 4x-20 &= 2x+11 \\
+  7x+1 &= 2x+11 \\
+  5x &= 10 \\
+  x &= 2 \\
+\end{align*}
+\end{solution}
+
+\subsection{Word Problems}
+
+For problems \ref{word:first}-\ref{word:last}, use an equation to solve each problem.
+
+\question[7]
+\label{word:first}
+
+In a recent Washington case, the court ruled that the Washington law which says that felons can't vote unfairly
+discriminiates against African-Americans because African-Americans are disproportionalty represented in the Washington
+prison system.
+
+One of the arguments the plaintiffs made was that the prison population doesn't match the population of the state.  If
+the the ratio of African-Americans to non-African-Americans in the state is 1 to 9, and the prison population did match
+the state population, how many African-American prisoners would you find in a prison with 800 prisoners?
+
+\begin{solution}[7 cm]
+
+If we let $x$ be the expected number of African-American prisoners, there are $800-x$ other prisoners:
+
+\begin{align*}
+  \frac{1}{9} &= \frac{x}{800-x} \\
+  800-x &= 9x \\
+  10x &= 800 \\
+  x &= 80 \\
+\end{align*}
+
+Another approach is to use the ratio of African-Americans to population instead of African-Americans to
+non-African-Americans.  If for every African-American there are 9 non-African-Americans, 1 out of every 10 people in the
+state is African-American.  So we can use this ratio:
+
+\begin{align*}
+  \frac{1}{10} &= \frac{x}{800} \\
+  800 &= 10x \\
+  x &= 80 \\
+\end{align*}
+
+A common mistake was to say that: \( \displaystyle \frac{1}{9} = \frac{x}{800} \) which is not correct since the
+denominator of the first fraction represents the number of non-African-Americans and the denomonator of the second
+fraction represents the total number (of both categories) of prisoners.
+
+\end{solution}
+
+\question[10]
+\label{word:last}
+One day a swallow went in search of food.  He flew for 20 miles and found a very tasty looking coconut which he
+picked up and carried 20 miles back to his nest.  Naturally, carrying a coconut is no easy task for a swallow, so he
+travelled twice as fast without the coconut as with the coconut.  If the entire trip (both ways) took 3 hours, how fast
+did the swallow fly while carrying the coconut?
+
+\begin{solution}[5 cm]
+
+Here's what we know about the trip:
+\begin{itemize}
+  \item $d_{out} = d_{in} = 20$
+  \item $r_{out} = 2 r_{in}$
+  \item $\displaystyle t_{out} = \frac{d_{out}}{r_{out}} = \frac{20}{2r_{in}}$
+  \item $\displaystyle t_{in} = \frac{d_{in}}{r_{in}} = \frac{20}{r_{in}}$
+  \item $\displaystyle t_{total} = t_{out} + t_{in} = \frac{20}{2r_{in}} + \frac{20}{r_{in}} = 3$
+\end{itemize}
+
+The last equation just has one variable, so we can solve it for $r_in$:
+\begin{align*}
+  \frac{20}{2r_{in}} + \frac{20}{r_{in}} &= 3  \\
+  \frac{10}{r_{in}} + \frac{20}{r_{in}} &= 3  \\
+  10 + 20 &= 3 r_{in}  \\
+  30 &= 3 r_{in}  \\
+  r_{in} &= 10  \\
+\end{align*}
+
+He went 10 mph carrying the coconut and 20 mph without the coconut.  We can check this, since going 20 miles at 10 mph
+would take 20/10 = 2 hours and going 20 miles at 20 mph would take 20/20 = 1 hour, accounting for all three hours.
+
+
+\end{solution}
+
+\noaddpoints
+
+\ifprintanswers
+\else
+\pagebreak
+\fi
+
+\subsection{Extra Credit}
+
+\question[10]
+
+When a trip is made by car, the car will of course travel different speeds at different times.  If the total distance is
+divided by the total driving time, the result is called the {\em average speed} for that trip.
+
+Alice planned to drive the 30 miles from Seattle to Tacoma and back again.  She wanted to average 30 mph for the 60 mile
+round trip.  
+
+On the way to Tacoma, she was stuck in traffic and only managed to average 20 mph.  What must her average speed be on
+the return trip in order to raise her average for the round trip to 30 mph?
+
+\begin{solution}[5 cm]
+
+The first thing to do is to figure out how long the trip needs to take for the average speed to be 30 mph.  Since the
+round trip is 60 miles, the desired time for the trip will be $t=d/r = 60/30 = 2$ hours.
+
+The next thing to do is to figure out how much of this time was spent on the outgoing trip.  She drove 30 miles at 20
+mph, which took $30/20 = 3/2$ hours.
+
+Since she took $3/2$ hours on the way to Tacoma and she wants to take 2 hours for the whole trip, she has half an hour to get
+back.  To travel 30 miles in half an hour requires a rate of: $\displaystyle r = \frac{d}{t} = \frac{30}{1/2} = 60$.
+
+So she needs to drive 60 mph on the return trip to get her average speed up to 30 mph.
+
+\end{solution}
+
+
+\end{questions}
+
+\end{document}
+
+

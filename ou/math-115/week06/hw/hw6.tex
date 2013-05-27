@@ -1,0 +1,458 @@
+
+\documentclass[fleqn,addpoints]{exam}
+
+\usepackage{graphicx}
+\usepackage{xfrac}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+
+\printanswers
+
+\ifprintanswers \usepackage{2in1, lscape} \fi
+
+\title{Math 115 Homework 6}
+\date{November 9, 2010}
+
+\begin{document}
+
+\maketitle
+ 
+\section{From the Book}
+
+\vspace{0.2 cm} 
+
+Read section 1.10 and 1.11.
+ 
+\begin{itemize}
+  \item p. 81: 2-7, 11
+  \item p. 89: 7-15, 17, 20, 23
+\end{itemize}
+
+\section{Page 81}
+\begin{itemize}
+\item[2]
+$f(x) = x^2$; $g(x) = x+1$
+\begin{align*}
+  (f+g)(x) &= x^2 + x + 1 \\
+  (f-g)(x) &= x^2 - x - 1 \\
+  (f \cdot g)(x) &= x^2(x+1) = x^3 + x^2 \\
+  (f/g)(x) &= \dfrac{x^2}{x+1} \\
+\end{align*}
+
+The domain for $f/g$ is $x \neq -1$.  The domain for the remaining functions is $(-\infty, \infty)$.
+
+\item[3]
+$f(x) = \dfrac{1}{x}$; $g(x) = \sqrt{x-1}$
+
+\begin{align*}
+  (f+g)(x) &= \dfrac{1}{x} + \sqrt{x-1} \\
+  (f-g)(x) &= \dfrac{1}{x} - \sqrt{x-1} \\
+  (f \cdot g)(x) &= \dfrac{\sqrt{x-1}}{x} \\
+  (f/g)(x) &= \dfrac{1}{x\sqrt{x-1}} \\
+\end{align*}
+
+The domain for $f/g$ is $(1, \infty)$.  The domain for the remaining functions is $[1, \infty)$.
+
+\item[4]
+$f(x) = \dfrac{1}{x-1}$; $g(x) = \dfrac{1}{x+1}$
+\begin{align*}
+  (f+g)(x) &= \dfrac{1}{x-1} + \dfrac{1}{x+1} = \dfrac{x+1+x-1}{(x+1)(x-1)} = \dfrac{2x}{x^2-1} \\
+  (f-g)(x) &= \dfrac{1}{x-1} - \dfrac{1}{x+1} = \dfrac{x+1 - x + 1}{(x+1)(x-1)} = \dfrac{2}{x^2-1} \\
+  (f \cdot g)(x) &= \dfrac{1}{x-1} \cdot \dfrac{1}{x+1} = \dfrac{1}{x^2-1} \\
+  (f/g)(x) &= \dfrac{1}{x-1} \cdot \dfrac{x+1}{1} = \dfrac{x+1}{x-1} \\
+\end{align*}
+
+The domain for all the functions is $x \neq \pm 1$.
+
+\item[5]
+$f(x) = \sqrt{x+2}$; $g(x) = \sqrt{2-x}$
+\begin{align*}
+  (f+g)(x) &= \sqrt{x+2} + \sqrt{2-x} \\
+  (f-g)(x) &= \sqrt{x+2} - \sqrt{2-x} \\
+  (f \cdot g)(x) &= \sqrt{x+2} \cdot \sqrt{2-x} = \sqrt{4-x^2} \\
+  (f/g)(x) &= \dfrac{\sqrt{x+2}}{\sqrt{2-x}} = \dfrac{\sqrt{x+2}}{\sqrt{2-x}} \left( \frac{\sqrt{2-x}}{\sqrt{2-x}} \right) \\
+           &= \dfrac{\sqrt{x+2}}{\sqrt{2-x}} \left( \frac{\sqrt{2-x}}{\sqrt{2-x}} \right) = \frac{\sqrt{4-x^2}}{2-x}  \\
+\end{align*}
+
+The domain for $f/g$ is $[-2, 2)$.  The domain for the remaining functions is $[-2, 2]$.
+
+\item[6]
+$f(x) = \dfrac{1}{x}$; $g(x) = \dfrac{x}{x-2}$
+\begin{align*}
+  (f+g)(x) &= \dfrac{1}{x} + \dfrac{x}{x-2} = \dfrac{x^2 + x-2}{x(x-2)} \\
+  (f-g)(x) &= \dfrac{1}{x} - \dfrac{x}{x-2} = \dfrac{-x^2 + x - 2}{x(x-2)} \\
+  (f \cdot g)(x) &= \dfrac{1}{ \cancel{x}} \cdot \dfrac{ \cancel{x}}{x-2} = \dfrac{1}{x-2} \\
+  (f/g)(x) &= \dfrac{\sfrac{1}{x}}{\sfrac{x}{(x-2)}} = \dfrac{x-2}{x^2} \\
+\end{align*}
+
+The domain for all functions is $\{x | x \neq 0 \text{ and } x \neq 2\}$
+\item[7]
+\[
+  f(x) = 
+  \begin{cases}
+    -1      & \text{if } x < 0 \\
+     1      & \text{if } x \geq 0
+  \end{cases}
+\]
+\[
+  g(x) = 
+  \begin{cases}
+    1      & \text{if } x < 0 \\
+    0      & \text{if } x \geq 0
+  \end{cases}
+\]
+
+\[
+    (f+g)(x) = 
+    \begin{cases}
+      0      & \text{if } x < 0 \\
+      1      & \text{if } x \geq 0
+    \end{cases}
+\]
+\[
+    (f-g)(x) = 
+    \begin{cases}
+      -2      & \text{if } x < 0 \\
+       1      & \text{if } x \geq 0
+    \end{cases}
+\]
+\[
+    (fg)(x) = 
+    \begin{cases}
+      -1      & \text{if } x < 0 \\
+       0      & \text{if } x < 0
+    \end{cases}
+\]
+\[  (f/g)(x) = -1$, $x<0 \]
+
+\item[11]
+2 is in the domain of $g(x)$ and not in the domain of $f(x)$.
+
+\end{itemize}
+
+\section{Page 89}
+\begin{itemize}
+
+\item[7]
+$f(x) = 2x+1$; $g(x) = 3x-1$
+\begin{align*}
+  (f \circ g)(x) &= 2(3x-1) + 1 = 6x-1 \\
+  (g \circ f)(x) &= 3(2x+1)-1 = 6x+2 \\
+  (f \circ f)(x) &= 2(2x+1) + 1 = 4x+3 \\
+  (g \circ g)(x) &= 3(3x-1) - 1 = 9x-4 \\
+\end{align*}
+
+The domain for all functions is $(-\infty, \infty)$.
+
+\item[8]
+$f(x) = x^2+1$; $g(x) = x-1$
+\begin{align*}
+  (f \circ g)(x) &= (x-1)^2 + 1 = x^2-2x+2 \\
+  (g \circ f)(x) &= x^2+1-1 = x^2 \\
+  (f \circ f)(x) &= (x^2+1)^2+1 = x^4 + 2x^2+2 \\
+  (g \circ g)(x) &= (x-1)-1 = x-2 \\
+\end{align*}
+
+The domain for all functions is $(-\infty, \infty)$.
+
+\item[9]
+$f(x) = \dfrac{1}{x}$; $g(x) = x^2+2x$
+\begin{align*}
+  (f \circ g)(x) &= \frac{1}{x^2+2x} = \frac{1}{x(x+2)}  \text{; $x \neq 0$ and $x \neq -2$} \\
+  (g \circ f)(x) &= \frac{1}{x^2} + \frac{2}{x} \text{; $x \neq 0$} \\
+  (f \circ f)(x) &= \frac{1}{\sfrac{1}{x}} = x \text{; $x \neq 0$}\\
+  (g \circ g)(x) &= (x^2+2x)^2 + 2(x^2+2x) = x^4 + 4x^3 + 6x^2 + 4x\\
+\end{align*}
+
+\item[10]
+$f(x) = \sqrt{x-1}$; $g(x) = x^2-3$
+\begin{align*}
+  (f \circ g)(x) &= \sqrt{x^2-3-1} = \sqrt{x^2-4} \text{; $x = (-\infty, -2] \cup [2, \infty)$} \\
+  (g \circ f)(x) &= (\sqrt{x-1})^2 - 3 = x-4 \text{; $x \geq 1$} \\
+  (f \circ f)(x) &= \sqrt{\sqrt{x-1} - 1} \text{; $x \geq 2$} \\
+  (g \circ g)(x) &= (x^2-3)^2 - 3 = x^4-6x^2+6 \\
+\end{align*}
+
+\item[11]
+\begin{align*}
+  h(x) &= (2-3x^2)^4 \\
+  f(x) &= x^4 \\
+  g(x) &= 2-3x^2 \\
+\end{align*}
+
+\item[12]
+\begin{align*}
+  h(x) &= \sqrt{x-2} \\
+  f(x) &= \sqrt{x} \\
+  g(x) &= x-2 \\
+\end{align*}
+
+\item[13]
+\begin{align*}
+  h(x) &=  \frac{1}{x+2}\\
+  f(x) &=  \frac{1}{x}\\
+  g(x) &= x+2 \\
+\end{align*}
+
+\item[14]
+\begin{align*}
+  h(x) &=  |x^2+x+1|\\
+  f(x) &=  |x|\\
+  g(x) &= x^2+x+1\\
+\end{align*}
+
+\item[15]
+\begin{parts}
+  \part $(f \circ g)(1) = f(2) = 0$
+  \part $(g \circ f)(-1) = g(-2) = -1$
+  \part $(g \circ f)(0) = g(0) = 1$
+  \part $(f \circ g)(-2) = f(-1) = -1$
+\end{parts}
+
+\item[17]
+
+Whenever $f$ and $g$ are inverses of each other, $f \circ g = g \circ f = x$.  Here are a few functions that work.  The
+back of the book has some different examples.
+\begin{itemize}
+  \item $f(x) = x+1$; $g(x) = x-1$
+  \item $f(x) = x^3$; $g(x) = \sqrt[3]{x}$
+\end{itemize}
+
+\pagebreak
+
+\item[20]
+$(f \circ f) = 4x+3$
+
+\begin{align*}
+  4x+ 3 &= m(mx+b)+b \\
+  4x+ 3 &= m^2x+mb+b \\
+\end{align*}
+
+From this we can see that the slope must be $m^2$ and the y-intercept must be $mb+b$:
+\begin{align*}
+  m^2 &= 4 \\
+  m &= 2 \\
+  \\
+  mb+b &= 2 \\
+  2b+b &= 3 \\
+  b &= 1 \\
+\end{align*}
+
+So the function is: $f(x) = 2x+1$.
+
+check: $f \circ f = f(2x+1) = 2(2x+1) + 1 = 4x+3$
+
+
+\item[23]
+From the front of the book, the function for the volume of a sphere is $V(r) = \dfrac{4}{3} \pi r^3$.  So the function
+for the volume in terms of time is:
+\[
+  V(t) = \dfrac{4}{3} \pi (3 + 0.01t)^3
+\]
+
+\end{itemize}
+
+\section{Other Problems}
+
+The recent election led to some interesting math problems.  The fate of several of the ballot measures depended on
+people not understanding the math behind them.  Here are a few problems which may help you decide how you should vote if
+you have your own economic interests in mind.
+
+Your tax rate is the amount of tax you pay divided by your income.
+
+\begin{questions}
+
+\question
+Proposition 1098 proposed a 4\% income tax on income over \$200,000/year.  
+
+For people with this income, there are two functions they need to think about:
+\begin{align*}
+  f(x) &= x - 200,000 \\
+  g(x) &= 0.04x \\
+\end{align*}
+
+\begin{parts}
+\part
+Which of $f \circ g$ or $g \circ f$ is the correct function for calculating the tax?
+
+\begin{solution}[1cm]
+
+$f(x)$ is the function for determining how much of your income is taxable and $g(x)$ is the function for determining how
+much tax you need to pay, given your taxable income.  so the correct function for calculating your tax given your income
+is: \[(g \circ f)(x) = 0.04(x - 200,000) \]
+
+\end{solution}
+
+\part
+How much tax would someone making \$300,000 pay?
+\begin{solution}[1cm]
+\[
+  (g \circ f)(300,000) = 0.04(300,000 - 200,000) = 4,000
+\]
+\end{solution}
+
+\part
+What is the tax rate for someone making \$300,000?
+
+\begin{solution}
+The tax rate is the tax divided by the income, or: \[\frac{4,000}{300,000} = 0.013 \]
+
+The tax rate for this income is about 1.3\%.
+\end{solution}
+
+\end{parts}
+
+\pagebreak
+
+\question
+The current WA system uses only a sales tax of around 10\%.  I made up a few numbers about this to make an interesting
+problem.  I'm not sure how accurate the numbers are, but the general idea is correct.
+
+Everyone needs to buy some stuff to survive.  Everyone needs clothes, transportation, etc.  If you have a big income,
+you tend to buy more stuff and more expensive stuff.  However, you probably don't spend all of your money on buying
+taxable stuff in WA.  You spend most of it on your vacation home in Aspen, your European vacation, and your kid's
+tuition at Harvard.  
+
+If we suppose that everyone needs at least \$5,000 worth of stuff, a guess at the amount of money a person spends on
+taxable stuff might be:
+
+\[
+  T(x) = 5000 + 0.1x
+\]
+
+$x$ is your income.  Everyone buys \$5,000 worth of stuff, and then everyone spends 10\% of their income on other
+taxable stuff they want or need.  Everyone spends the rest of their income on non-taxable stuff like rent or
+Harvard tuition.
+
+So if you make \$10,000, for example, you spend \$6,000 on taxable stuff.  If you make \$300,000, you spend \$35,000 on
+taxable stuff.
+
+With a 10\% sales tax, the amount of tax you pay when you buy something taxable is:
+\[
+  S(x) = .1x
+\]
+$x$ is the price of the item.
+
+\begin{parts}
+\part 
+Use the functions:
+\begin{align*}
+  T(x) &= 5000 + 0.1x \\
+  S(x) &= .1x
+\end{align*}
+
+to find a composite function for the amount of sales tax you pay, as a function of income.
+
+\begin{solution}[1cm]
+\[
+  f(x) = (S \circ T)(x) = .1(5,000 + .1x) = 500 + .01x
+\]
+
+\end{solution}
+
+\part
+Use your function from part a to find the amount of sales tax someone with an income of \$300,000 would pay.
+\[
+  f(300,000) = 500 + .01(300,000) = 3,500
+\]
+
+\part
+Use your function from part a to find the amount of sales tax someone with an income of \$10,000 would pay.
+\[
+  f(10,000) = = 500 + .01(10,000) = 600
+\]
+
+\part
+What is the tax rate for the person with a \$300,000 income?
+
+\begin{solution}
+\[
+  \frac{3,500}{300,000} = .012
+\]
+
+or about 1.2\%
+
+\end{solution}
+
+\part
+What is the tax rate for the person with a \$10,000 income?
+\begin{solution}[1cm]
+\[
+  \frac{600}{10,000} = .06
+\]
+
+or about 6\%
+
+Many people who make more than \$200,000/year were naturally concerned about Proposition 1098.  If it had passed, they
+might have ended up with a tax rate of around 2\%, which is frighteningly close to the tax rate of around 6\% which
+people with smaller incomes pay now (according to the calculations from this problem).
+
+The proposed income tax was a \emph{progressive} tax, where higher incomes receive higher tax rates.  The current sales
+tax is a \emph{regressive} tax, where lower incomes receive higher tax rates.
+
+\end{solution}
+
+
+
+\end{parts}
+
+\section{Extra Credit}
+
+\question
+The graphs of the functions:
+\begin{align*}
+  f(x) &= m_1x + b_1 \\
+  g(x) &= m_2x + b_2 \\
+\end{align*}
+
+are lines with slopes $m_1$ and $m_2$, respectively.  Is the graph of $f \circ g$ a line?  If so, what is its slope?
+
+\begin{solution}[1cm]
+\[
+  (f \circ g)(x) = m_1(m_2x + b_2) + b_1 = m_1m_2x + (m_1b_2 + b_1)
+\]
+
+This function is a line with slope $m_1m_2$ and y-intercept $(m_1b_2 + b_1)$.
+
+\end{solution}
+
+\end{questions}
+
+\ifprintanswers
+
+
+\fi
+
+\ifprintanswers
+\else
+\vspace{3 cm}
+
+\begin{ttfamily}
+\begin{verse}
+l(a
+
+le \\
+af \\
+fa 
+
+ll 
+
+s) \\
+one \\
+l 
+
+iness
+\end{verse}
+
+\vspace{.1 cm}
+\hspace{1 cm} --e.e. cummings
+
+\end{ttfamily}
+
+\fi
+
+\end{document}
+

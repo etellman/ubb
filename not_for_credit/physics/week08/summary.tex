@@ -1,0 +1,245 @@
+
+\documentclass{exam}
+
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+
+\everymath{\displaystyle}
+
+% \oddsidemargin .5in
+% \topmargin -1in
+\textwidth 6.5 in
+
+% \printanswers
+
+\ifprintanswers 
+\usepackage{2in1, lscape} 
+\fi
+
+% \begin{tabular}{cc}
+% \toprule
+% disk with axis of rotation at center & $I = \dfrac{1}{2} mr^2$ \\
+% \midrule
+% disk with axis of rotation at edge & $I = \dfrac{3}{2} mr^2$. \\
+% \bottomrule
+% \end{tabular}
+ 
+
+\title{Physics \\ Mechanics Summary}
+\date{October 24, 2011}
+% \author{Ed Tellman}
+
+\begin{document}
+
+\maketitle
+
+% \tableofcontents
+ 
+\section{Overview}
+This is a short summary of what we've covered so far.  I did my best to get all the equations on a
+single page, but didn't quite make it.
+
+\section{Linear Motion}
+
+When an object moves with constant acceleration $a$, with starting position $x_0$ and starting velocity $v_0$, its position
+and velocity at a later time can be found with two equations:
+
+\begin{align*}
+  v &= v_0 + at \\
+  x &= x_0 + v_0t + \frac{1}{2}at^2 \\
+\end{align*}
+
+\section{Newton's Laws}
+
+Newton's three laws are:
+\begin{enumerate*}
+
+\item If something is stationary or moving in a straight line at a constant speed, it will continue doing so unless a
+  force acts on it.  This is actually just the second law with $\mathbf{F} = 0$.
+
+\item The force, acceleration, and mass of an object are related by: $\mathbf{F} = m \mathbf{a}$.
+
+\item Every action has an equal an opposite reaction.  If object one pushes on object two with force $\mathbf{F}$, object
+  two pushes on object one with force $-\mathbf{F}$.
+
+\end{enumerate*}
+
+\section{Gravity}
+Two objects wih masses $m_1$ and $m_2$ separated by a distance $r$ exert a force on each other:
+
+\[
+  F_{gravity} = \frac{Gm_1m_2}{r^2}
+\]
+
+$G$ is the universal graviatationl constant and has a value of: $G = 6.67 \cdot 10^{-11} \ N \cdot m^2/kg^2$.
+
+\section{Work and Power}
+
+\subsection{Work}
+Work is a force applied over a distance: 
+\[
+\mathbf{W} = \mathbf{F}d
+\]
+
+Some rules apply:
+\begin{itemize}
+\item Only force in the line of motion counts.  Work is positive if it is in the direction of motion and negative
+  if it opposes the motion.  For an object in free fall with air resistance, for example, gravity does positive work
+  while the air resistance does negative work.
+
+% \item If the work is only partially in the direction of motion and the force makes an angle $\theta$ with the line of
+%   motion, the formula for work is:  $W = Fd \sin \theta$.  $d \sin \theta$ is the component of the force in the line
+%   of motion.
+
+\item When you do work, you change the energy of a system.  So another way to look at work is: $W = \Delta E$.  Some
+  problems are much easier when you use this formula instead of $W = \mathbf{F}d$.
+\end{itemize}
+
+\subsection{Power}
+Power is work done over time:
+\[
+  P = \frac{W}{t}
+\]
+
+Another way of looking at it is force times velocity:
+\[
+  P = \frac{W}{t} = \frac{Fd}{t} = F \frac{d}{t} = Fv
+\]
+
+\subsection{Energy}
+
+Energy comes in many different forms.  The ones we talked about are:
+\begin{description}
+
+\item[Kinetic Energy] $K = \dfrac{1}{2} mv^2$ is the energy an object has because it is moving.
+
+\item[Gravitational Potential Energy] $U = mgh$ is the energy an object has because of its position in a gravitational
+  field.
+
+\item[Spring Energy] $E = \dfrac{1}{2} kx^2$ is the energy of a compressed or stretched spring, where $k$ is the spring
+constant, which is different for every spring, and $x$ is the distance the spring is compressed or stretched from its
+neutral position.
+
+\item[Heat Energy] If a moving object has friction or air resistance opposing its motion, some of its energy is
+  converted to heat.  Heat is actually just the kinetic energy of the molecules in an object.
+
+\end{description}
+
+The total energy of a closed system remains constant, although it may change from one form to another.  
+
+Since the universe is an example of a closed system, the energy in the universe is constant.  For the universe, you also
+have to know that $e = mc^2$ and mass is another form of energy (we'll talk about this later). 
+
+\section{Momentum, Impulse, and Collisions}
+
+\subsection{Momentum}
+An object's momentum depends on its mass and velocity: 
+\[
+\mathbf{p} = m \mathbf{v}
+\]
+
+The total momentum of a closed system remains constant.  You can see why this is by thinking about Newton's third law.
+If object one pushes on object two and changes its momentum, object two pushes back on object one, giving it an equal
+and opposite change in momentum.
+
+Since the universe is an example of a closed system, the momentum in the universe is constant.
+
+\subsection{Impulse}
+
+An {\em impulse} is a force applied over a time: 
+\[
+  \mathbf{I} = \mathbf{F}t
+\]
+
+An impulse results in a change in an object's momentum, so impulse is also: 
+\[
+  \mathbf{I} = \Delta \mathbf{p}
+\]
+A large impulse results in a large change in momentum.
+
+\subsection{Collisions}
+Momentum is conserved in all collisions.  Kinetic energy is also conserved in perfectly elastic collisions.
+
+\section{Rotational Motion}
+All the equations for non-rotating motion have corresponding equations for rotating motion.  You just have to replace
+the symbols with the rotational version.  Here are the translations:
+
+\vspace{.2 in}
+
+\begin{tabular}{lcc}
+\toprule
+Description & Linear & Rotational \\
+\midrule
+mass/moment of intertia  & $m$          & $I$   \\
+force/torque & $\mathbf{F}$ & $\mathbf{\tau}$   \\
+position     & $x$          & $\theta$          \\
+velocity     & $\mathbf{v}$ & $\mathbf{\omega}$ \\
+acceleration & $\mathbf{a}$ & $\mathbf{\alpha}$ \\
+momentum     & $\mathbf{p}$ & $\mathbf{L}$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{.2 in}
+
+The {\em moment of intertia} or {\em rotational inertia} depends on both the mass and shape of the object.  The values
+for a few common shapes are:
+
+\vspace{.2 in}
+
+\begin{tabular}{ll}
+\toprule
+Shape & $I$ \\
+\midrule
+point mass  & $I = mr^2$ \\
+hoop with all mass in rim   & $I = mr^2$ \\
+disk or cylinder   & $I = \frac{1}{2}mr^2$ \\
+stick with axis at end   & $I = \frac{1}{3}mr^2$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{.2 in}
+
+For rotating motion:
+\begin{itemize*}
+\item the position ($\theta$) is usually measured in radians 
+\item the velocity ($\omega$) is usually measured in $rad/s$
+\item the acceleration ($\alpha$) is usually measured in $rad/s^2$
+\end{itemize*}
+
+You can go back and forth between the linear and rotational values:
+\begin{align*}
+  \tau &= Fr \text{ (for a tangential force)} \\
+  v &= \omega r \\
+  a &= \alpha r \\
+  L &= p r \text{ (for a tangential momentum)} \\
+\end{align*}
+
+You can replace all the variables in the linear equations to get the rotational versions:
+
+\vspace{.2 in}
+
+\begin{tabular}{ll}
+\toprule
+Linear & Rotational \\
+\midrule
+$ \mathbf{F} = m \mathbf{a}$         & $\mathbf{\tau} = I \mathbf{\alpha}$               \\
+$ v = v_0 + at$                      & $\omega = \omega_0 + \alpha t$  \\
+$ x = x_0 + v_0t + \frac{1}{2}at^2$  & $\theta = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2$ \\
+$ K = \frac{1}{2} mv^2$              & $K = \frac{1}{2} I \omega^2$ \\
+$ \mathbf{p} = m \mathbf{v}$         & $\mathbf{L} = I \mathbf{\omega}$ \\
+\bottomrule
+\end{tabular}
+
+
+\end{document}
+

@@ -1,0 +1,51 @@
+
+\documentclass[fleqn,addpoints]{exam}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{mdwlist}
+
+% \printanswers
+
+\ifprintanswers 
+\usepackage{2in1, lscape} 
+\fi
+
+\title{Algorithm Question}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+A cable television company wants to determine how much bandwidth will be required to deliver the television signal on a
+particular day.  Of course, during the day there are numerous shows at various channels and times.  Each show may have a 
+different bandwidth requirement.
+
+The relevant information for each show is:
+\begin{itemize*}
+\item channel number
+\item start time
+\item duration
+\item bandwidth requirement (positive integer)
+\end{itemize*}
+
+Find an algorithm which finds the maximum bandwidth required for a collection of shows.
+
+\vspace{.5 cm}
+
+For example, given the following schedule:
+\begin{itemize*}
+\item 9:00-10:00, channel 1, bandwidth 5
+\item 9:30-10:30, channel 2, bandwidth 7
+\item 10:15-10:45, channel 3, bandwidth 10
+\end{itemize*}
+
+the bandwidth requirement of 17 occurs between 10:15 and 10:30.
+
+\end{document}
+

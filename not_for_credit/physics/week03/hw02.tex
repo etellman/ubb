@@ -1,0 +1,363 @@
+\documentclass{exam}
+
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+
+% \oddsidemargin .5in
+% \topmargin -1in
+\textwidth 6.5 in
+
+\printanswers
+
+\ifprintanswers 
+\usepackage{2in1, lscape} 
+\fi
+
+\title{Physics \\ Homework Two}
+\date{September 19, 2011}
+% \author{Ed Tellman}
+
+\begin{document}
+
+\maketitle
+
+\section{From the Book}
+
+\begin{itemize*}
+  \item Read Chapters 4 and 5
+  \item Chapter 4
+    \begin{itemize*}
+      \item questions 20, 23, 30, 31
+      \item exercises 1, 2, 3, 7, 9, 15
+      \item synthesis problems 1, 2, 5-7
+    \end{itemize*}
+
+%   \item Chapter 5
+%     \begin{itemize*}
+%       \item questions 3, 4, 5, 12, 22, 25
+%       \item exercises 1, 4, 6, 11, 12
+%       \item synthesis problems 1-5
+%     \end{itemize*}
+
+\end{itemize*}
+
+\section{Extra Credit}
+
+\begin{questions}
+
+\question
+A 1000 kg drag racer deploys its drag chute to slow down after it crosses the finish line.  What force must the chute
+exert on the car to slow it from from 100 m/s to 25 m/s in 200 m? 
+
+\begin{solution}
+From the information provided and the equations of motion with constant acceleration, we have two equations and two unknowns:
+\begin{align*}
+  v &= v_0 + at \\
+  x &= v_0t + \frac{1}{2} at^2 \\
+\end{align*}
+
+The two unknowns are $t$ and $a$---everything else is provided in the problem.  $a$ is what we are looking for, since
+once we have $a$ we can multiply it by the mass to find the force.  So we can solve the first equation for $t$ and
+substitute this value in the second equation.
+
+\begin{align*}
+  v &= v_0 + at \\
+  t &= \frac{v-v_0}{a} \\
+  \\
+  x &= v_0 \left( \frac{v-v_0}{a} \right) + \frac{1}{2} a \left( \frac{v-v_0}{a} \right)^2 \\
+    &= \frac{v_0v - v_0^2}{a} + \frac{(v-v_0)^2}{2a} \\
+    &= \frac{v_0v - v_0^2}{a} + \frac{v^2 + 2v_0v + v_0^2}{2a} \\
+    &= \frac{2v_0v - 2v_0^2 + v^2 - 2v_0v + v_0^2}{2a} \\
+    &= \frac{v^2 - v_0^2}{2a} \\
+  a &= \frac{v^2 - v_0^2}{2x} \\
+\end{align*}
+
+We have all of these numbers, so we can plug them in to find the acceleration:
+\[
+  a = \frac{(25 \text{ m/s})^2 - (100 \text{ m/s})^2}{2 \cdot (200 \text{ m})} \approx -23 \text{ m/s}^2 \\
+\]
+
+Then we can use Newton's second law to find the force:
+\[
+  F = ma = (1000 \text{ kg }) (23 \text{ m/s}^2) = 23,000 \text{ N}
+\]
+
+The force is in the opposite direction of the motion, since it is slowing the car down.
+
+\end{solution}
+% \question 
+% You find yourself in the space shuttle trying to reach a satellite you are supposed to repair.  The
+% satellite is in the same orbit as you but a few miles ahead.  You feel a bit frustrated, because if you fire your
+% rocket, you shoot out to a higher orbit and if you flip around and fire your engine in reverse, you
+% fall down to a lower orbit.  How can you catch up to the satellite so you can repair it?
+
+% \begin{solution}
+%   First flip around and fire your engine in reverse, so you drop down to a lower orbit.  In your new orbit, you will make
+%   a trip around the earth more quickly than the satellite, since your new radius is smaller.  In a little while you will
+%   catch up to the satellite, but be below it (closer to the earth).  When you catch up, fire your rocket again, in the
+%   other direction, to boost yourself up to where the satellite is.
+% \end{solution}
+
+\end{questions}
+
+\ifprintanswers
+
+\section{Chapter 4}
+
+\begin{description}
+
+\item[Q20]
+The force of gravity pulls the boy down and the normal force from the chair pushes up.  They exactly cancel, so the boy
+doesn't go anywhere.  They don't form an action/reaction pair since they act on the same object.
+
+\item[Q23]
+\begin{description}
+\item[a]
+The force of gravity pulls down and the force from the string pulls up.
+
+\item[b]
+The net force is 0 because the ball is not accelerating.
+
+\item[c]
+The reaction force for gravity is the force from the ball pulling up on the earth.  The reaction force for the string is
+the force the ball exerts on the string pulling the string down.
+
+\end{description}
+
+\item[Q30]
+\begin{description}
+\item[a] The blocks will accelerate because there is a net force operating on them.
+\item[b] The tension in the string is less than the force.  The force from the string only accelerates the second block
+  while the force $\vec{F}$needs to accelerate both blocks.
+\end{description}
+
+\item[Q31]
+The force of gravity will always exceed the force from air resistance.  So the diver will always experience a net
+downward force and will continue to accelerate indefinitely.
+
+\item[E1]
+\[
+  a = \frac{F}{m} = \frac{40 \text{ N}}{5 \text{ kg}} = 8 \text{ m/s}^2
+\]
+
+\item[E2]
+\[
+  F = ma = (2.5 \text{ kg} \cdot (6 \text{ m/s}^2) = 15 \text{ N}
+\]
+
+\item[E3]
+\[
+  m = \frac{F}{a} = \frac{20 \text{ N}}{4 \text{ m/s}^2} = 5 \text{ kg}
+\]
+
+\item[E7]
+The net force is 20N to the right.
+
+\[
+  m = \frac{F}{a} = \frac{20 \text{ N}}{4 \text{ m/s}^2} = 5 \text{ kg}
+\]
+
+\item[E9]
+\begin{description*}
+\item[a] The net force is: $F = -2 \text{ N} - 0.5 \text{ N}= -2.5N$ (opposing the motion)
+\item[b] The acceleration is $a = \dfrac{-2.5 \text{ N}}{4 \text{ kg}} = -0.625 \text{ m/s}^2$
+\end{description*}
+
+\item[E15]
+\begin{itemize}
+  \item The force from gravity is: $(5 \text{ kg}) (-9.8 \text{ m/s}^2) = -49 N$ (down)
+  \item The net force is: $-49 \text{ N}+ 15 \text{ N}= -34 \text{ N}$ (down)
+  \item The acceleration is: $a = \dfrac{-34 \text{ N}}{4 \text{ kg}} = -8.5 \text{ m/s}^2$ (down)
+\end{itemize}
+
+\item[SP1]
+
+\begin{description}
+\item[a]
+\[
+  a = \frac{25 \text{ N}}{5 \text{ kg}} = 5 \text{ m/s}^2
+\]
+
+\item[b]
+\[
+  v = (5 \text{ m/s}^2) \cdot (3 \text{ s}) = 15 \text{ m/s}
+\]
+
+\item[c]
+\[
+  x = \frac{1}{2} \cdot (5 \text{ m/s}^2) \cdot (3 \text{ s})^2 = 22.5 \text{ m}
+\]
+
+\end{description}
+
+\item[SP2]
+
+\begin{description}
+\item[a]
+\[
+  a = \frac{2 \text{ m/s}}{2 \text{ s}} = 1 \text{ m/s}^2
+\]
+
+\item[b]
+\[
+  F = (60 \text{ kg}) \cdot (1 \text{ m/s}^2) = 60 N
+\]
+
+\item[c]
+\begin{align*}
+  250 \text{ N} + F_{friction} &= 60 \text{ N} \\
+  F_{friction} = -180 \text{ N} \\  
+\end{align*}
+
+\item[d]
+For the box to move with constant velocity, the force from the rope would have to just cancel the force of friction, so
+the force from the rope would need to be 180 N.
+
+\end{description}
+
+\pagebreak
+
+\item[SP5]
+
+\begin{description}
+\item[a]
+\[
+  F = 30 \text{ N} - 14 \text{ N} = 16 \text{ N}
+\]
+
+\item[b]
+\[
+  a = \frac{F}{m} = \frac{16 \text{ N}}{6 \text{ kg}} \approx 2.66 \text{ m/s}^2
+\]
+
+\item[c]
+\[
+  F = ma = (2 \text{ kg})(2.66 \text{ m/s}^2) \approx 5.3 \text{ N}
+\]
+
+The force from the string also has to overcome the force of friction, so the total force from the string is $11.3 \text{ N}$.
+
+\item[d]
+\[
+  F = 30 \text{ N} - 11.3 \text{ N} - 8 \text{ N} \approx 10.7 \text{ N}
+\]
+
+\[
+  a = \frac{F}{m} = \frac{10.7 \text{ N}}{4 \text{ kg}} = 2.7 \text{ m/s}^2
+\]
+
+The two accelerations match. 
+
+\end{description}
+
+\item[SP6]
+
+\begin{description}
+\item[a]
+\[
+  F = ma = (60 \text{ kg})(-9.8 \text{ m/s}^2) = 588 \text{ N}
+\]
+
+\item[b]
+\[
+  F = ma = (60 \text{ kg})(1.4 \text{ m/s}^2) = -84 \text{ N (down)}
+\]
+
+\item[c]
+\begin{align*}
+  -588 \text{ N} + F &= -84 \text{ N} \\
+  F &=  -84 \text{ N} + 588 \text{ N} \\
+   &=  504 \text{ N} \\
+\end{align*}
+
+\item[d]
+From part c, 504 N.
+
+\item[e]
+The man's apparent weight would increase by 84 N instead of decreasing by 84 N.
+
+\end{description}
+
+\item[SP7]
+
+\begin{description}
+\item[a]
+
+\begin{itemize*}
+  \item The force of air resistance is: $4 \cdot 100 \text{ N} = 400 \text{ N}$ (up)
+  \item The force of gravity is: $-750$ N (down)
+  \item The net force is: $400 \text{ N} - 750 \text{ N} = -350 \text{ N}$
+\end{itemize*}
+
+\item[b]
+To figure out the acceleration, we first need to figure out the mass.
+
+\[
+  m = \frac{F}{a} = \frac{750 \text{ N}}{9.8 \text{ m/s}^2} \approx 77 \text{ kg}
+\]
+
+Now we can find the acceleration:
+\[
+  a = \frac{F}{m} = \frac{-350 \text{ N}}{77 \text{ kg}} = -4.6 \text{ m/s}^2 \text{ down}
+\]
+
+\item[c]
+The terminal velocity happens when the force of the air resistance is equal to the sky diver's weight.  This happens at:
+$v = 75 \text{ m/s}$ since the force from the air resistance is ten times the velocity.
+
+\item[d]
+The upward force would exceed the downward force and he would slow down to his terminal velocity again. 
+
+\end{description}
+
+\end{description}
+
+\fi
+
+
+%% \section{Other Questions}
+
+%% \begin{questions}
+
+%% \question
+%% Two divers run horizontally off the edge of a low cliff.  Diver 2 runs with twice the speed of diver 1.  When the 
+%% divers hit the water, is the horizontal distance covered by diver 2:
+%% \begin{description*}
+%%   \item[a] the same as
+%%   \item[b] twice as much as
+%%   \item[c] four times as much as
+%% \end{description*}
+%% the distance covered by diver 1?
+
+%% \end{questions}
+
+
+\vspace{1.5 in}
+
+\ifprintanswers
+\else
+\begin{em}
+But there was a wisdom in it all, as you'll see if you take a walk some night on a suburban street and pass house after
+house on both sides of the street each with the lamplight of the living room, shining golden, and inside the little blue
+square of the television, each living family riveting its attention on probably one show; nobody talking; silence in the
+yards; dogs barking at you because you pass on human feet instead of wheels.  You'll see what I mean, when it begins to
+appear like everybody in the world is soon going to be thinking in the same way...
+\end{em}
+
+\vspace{.2 cm}
+\hspace{1.5 cm} --Jack Kerouac, {\em The Dharma Bums}
+
+\fi
+
+\end{document}
+

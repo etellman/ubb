@@ -1,0 +1,16 @@
+In this not-for-credit course, you'll learn things like:
+
+  * Why is it impossible to build a perpetual motion machine?
+  * How are an apple and the moon similar?
+  * How fast is a ball going and where is it several seconds after you throw it?
+  * How do ice skaters control the speed of their spin?
+  * Why is it a very bad idea to crash your Mini Cooper into a Semi?
+  * How does Hoover Dam generate electricity?
+  * Why does E=mc^2 and what does c stand for anyway?
+  * Why is 186,000 miles per second the cosmic speed limit?
+  * Did Einstein wear socks, and if not, why not?
+  * Miscellaneous other topics in physics.
+
+The only prerequisite is algebra, so people who have been through math-113 or something similar should be fine.  
+
+

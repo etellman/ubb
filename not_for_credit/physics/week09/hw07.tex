@@ -1,0 +1,306 @@
+
+\documentclass{exam}
+
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+% \oddsidemargin .5in
+% \topmargin -1in
+\textwidth 6.5 in
+
+\printanswers
+
+\ifprintanswers 
+\usepackage{2in1, lscape} 
+\fi
+
+\title{Physics \\ Homework Seven \\ Electrostatics}
+\date{November 7, 2011}
+
+\begin{document}
+
+\maketitle
+
+\ifprintanswers
+\else
+\section{Notes}
+
+This information is in the text, but I had to poke around a bit to find it.  Here it is to save you the trouble:
+
+\begin{itemize*}
+\item When rubbing a glass rod with silk, the rod becomes positively charged.
+\item When rubbing a plastic or rubber rod with fur, the rod becomes negatively charged.
+\end{itemize*}
+
+\fi
+
+\section{Homework}
+
+\begin{itemize*}
+  \item Read Chapter 12
+  \item Chapter 12
+    \begin{itemize*}
+      \item questions 4, 11-12, 20, 22, 23, 25-28, 31
+      \item exercises 3, 6, 8, 10-11, 13, 15-16
+      \item synthesis problems: 1-3, 5
+    \end{itemize*}
+\end{itemize*}
+
+\section{Extra Credit}
+Three charges, $q_1$, $q_2$, and $q_3$ are in a line, with $q_1$ and $q_3$ $32 \ \centi \meter$ apart.  The magnitudes of the charges
+are:
+\begin{itemize*}
+\item $q_1 = +12 \cdot 10^{-6} \ C$
+\item $q_2 = -24 \cdot 10^{-6} \ C$
+\item $q_3 = +36 \cdot 10^{-6} \ C$
+\end{itemize*}
+
+Find the position between $q_1$ and $q_3$ where $q_2$ experiences a net force of zero.
+
+\begin{solution}
+I accidentally made this one require the quadratic forumula.  I meant to have the equation be factorable but messed it up somehow.
+
+The two charges on the ends are pulling in oposite directions.  Onlye the relative magnitude of the charges matters, so
+I'll just use $q$ for the charge.  All the $q$s cancel out.  $d$ is the distance between $q_1$ and $q_2$.
+\begin{align*}
+  \frac{k q \cdot 2q}{d^2} &=   \frac{k 2q \cdot 3q}{(32 -d)^2} \\
+  (32 - d)^2 &= 3d^2 \\
+  d^2 + 32d - 512 &= 0 \\
+\end{align*}
+Using the quadratic forumla:
+\[
+ d = \frac{-32 \pm \sqrt{32^2 - (4)(-512)}}{2} = -16 \pm 16 \sqrt{3} \\
+\]
+One of the solutions is negative, so the solution we're looking for is: 
+\[
+  -16 + 16 \sqrt{3} = 11.71 \ \centi\meter
+\]
+Check:
+\begin{align*}
+  \frac{(12 \micro\coulomb) (24 \micro\coulomb)}{(.1171 \ \meter)^2} &\approx 2.1 \cdot 10^{-8} \ \newton \\
+  \frac{(36 \ \micro\coulomb) (24 \ \micro\coulomb)}{(.32 - .1171 \ \meter)^2} &\approx 2.1 \cdot 10^{-8} \ \newton
+\end{align*}
+
+\end{solution}
+
+\ifprintanswers
+\pagebreak
+\section{Questions}
+
+\begin{description}
+
+\item[Q4]
+\begin{description}
+
+\item[a]
+The glass rod is positively charged and, because charge is conserved, the cloth is negatively charged.  So the ball that
+touches the rod becomes positively charged and the ball that touches the cloth becomes negatively charged.
+
+\item[b]
+Since the balls have opposite charges, they will attract each other.
+
+\end{description}
+
+\item[Q11]
+
+When the negatively charged rod is close to the ball, the electrons are forced to the side of the ball away from the
+rod.  When you touch the ball, some of these electrons leave the ball and end up in you.  So in the end the ball has
+fewer electrons than it started with and ends up positively charged.
+
+\item[Q25]
+Since the two charges are attracted to each other, moving them closer together reduces the potential energy of the
+system.  This is similar to moving a heavy object closer to the earth, which reduces the potential energy of the object.
+
+A little more mathematically, the change in potential energy is:
+\[
+  \Delta U = - W
+\]
+
+where $W$ is the work done by the force.  In this case we are moving the object in the direction of the force, so we are
+doing positive work and the change in potential energy is negative.
+
+\item[Q26]
+This is the opposite of the situation in Q25, since the objects are repelled from each other, so the potential energy of
+the system increases.
+
+\item[Q27]
+The electric field lines point from positive to negative charges.  So this is just like Q26 where the charge is moving
+towards a negative charge, and its potential energy increases.
+
+\item[Q28]
+The electric potential decreases in the direction of the field lines, so it decreases in this case.
+
+You can compare this with gravity as well.  The force of gravity is directed down, and as you move towards the ground,
+your gravitational potential decreases.
+
+\item[Q31]
+A positive charge will move towards lower potential so a negative charge moves towards higher potential.  
+\end{description}
+
+\section{Exercises}
+
+\begin{description}
+\item[E3]
+When the balls touch, an equal amount of charge ends up on each ball.  The original charge was 
+$12 \ \micro\coulomb - 4 \ \micro\coulomb = 8 \ \micro\coulomb$, so each ball ends up with $4 \micro\coulomb$.
+
+\item[E6]
+\begin{align*}
+   F &= \frac{kq_1q_2}{r^2} \\
+     &= \frac{(9 \cdot 10^9 \ N \cdot m^2/C^2)(4 \cdot 10^{-6} \ C)^2}{(.1 \ m)^2} \\
+     &= 14.4 \ N \\
+\end{align*}
+
+\item[E8]
+\begin{align*}
+   F &= \frac{kq_1q_2}{r^2} \\
+     &= \frac{(9 \cdot 10^9 \ N \cdot m^2/C^2)(1.6 \cdot 10^{-19} \ C)^2}{(5 \cdot 10^{-11} \ m)^2} \\
+     &= 9.2 \cdot 10^{-8} \ N \\
+\end{align*}
+
+\item[E10]
+\begin{align*}
+  E &= \frac{F}{q} \\
+    &= \frac{12 \ N}{4 \cdot 10^{-6} \ C} \\
+    &= 3 \cdot 10^{6} \ N/C \\
+\end{align*}
+
+The field is down, in the same direction as the force.
+
+\item[E11]
+The net force is $4 \ \newton$ East.
+
+The field is:
+\begin{align*}
+  E &= \frac{F}{q} \\
+    &= \frac{4 \ \newton}{1.5 \cdot 10^{-6} \ \coulomb} \\
+    &= 2.7 \cdot 10^{6} \ \newton \per \coulomb \\
+\end{align*}
+
+The direction of the field is also East.
+
+\item[E13]
+The potential difference between the two points is 50 V.  So the change in potential energy is:
+\begin{align*}
+  \Delta U &= q \Delta V \\
+           &= (.25 \ C)(50 \ V) \\
+           &= 12.5 \ J \\
+\end{align*}
+
+\item[E15]
+\begin{align*}
+  \Delta U &= q \Delta V \\
+  (.02 - .06 \ J) &= (2 \cdot 10^{-6} \ C) \Delta V \\
+  \Delta V &= -20,000 \ V \\
+\end{align*}
+
+\item[E16]
+\begin{align*}
+  \Delta U &= q \Delta V \\
+           &= (-5 \cdot 10^{-4} \ \coulomb) (400 \ \volt) \\
+           &= -0.2 \ \joule \\
+\end{align*}
+
+Since the charge is negative, it has less potential energy after being moved.
+
+\end{description}
+
+\section{Synthesis Problems}
+
+\begin{description}
+
+\item[SP1]
+
+\begin{description}
+\item[a]
+\[
+  F = \frac{kq_1q_2}{r^2} = \frac{(9 \cdot 10^9 \ N \cdot m^2/C^2)(0.1 \ C)(0.02 \ C)}{(2 \ m)^2} = 4.5 \cdot 10^6 \ N
+\]
+
+to the right.
+
+\item[b]
+\[
+  F = \frac{kq_1q_2}{r^2} = \frac{(9 \cdot 10^9 \ N \cdot m^2/C^2)(0.04 \ C)(0.02 \ C)}{(1 \ \meter)^2} = 7.2 \cdot 10^6 \ \newton
+\]
+
+to the left.
+
+\item[c]
+The charges are pushing in opposite directions, so the net force is:
+\[
+  F_{net} = 7.2 \cdot 10^6 - 4.5 \cdot 10^6 \ \newton = 2.7 \cdot 10^6 \ \newton
+\]
+
+to the left.
+
+\item[d]
+\[
+  E = \frac{F}{q} = \frac{2.7 \cdot 10^6 \ N}{0.02 \ C} = 1.35 \cdot 10^8 \ \newton \per \coulomb \\
+\]
+
+to the left.
+
+\item[e]
+\[
+  F = Eq = (1.35 \cdot 10^8 \ N/C)(-0.06 \ C) = 8.1 \cdot 10^{-7} \ \newton
+\]
+
+to the right.
+
+\end{description}
+\item[SP5]
+
+\begin{description}
+\item[a]
+\[
+  \Delta U = \Delta V \cdot q = (-400 \ V)(3 \cdot 10^{-4}) = -0.12 \ \joule
+\]
+
+\item[b]
+The force is in the direction of decreasing potential towards the top plate.
+
+\item[c]
+The field is in the same direction as the force.
+
+\item[d]
+\begin{align*}
+  V &= Ed \\
+  E &= \frac{V}{d} \\
+    &= \frac{400 \ \volt}{0.12 \ \meter} \\
+    &\approx 3,333 \ \volt \per \meter \\
+\end{align*}
+
+\end{description}
+
+\end{description}
+\fi
+
+
+\vspace{1 in}
+
+\ifprintanswers
+\else
+{\em We have to fight against the evils of a society that has failed to produce brotherhood for every member of that
+  society.  This in no way means that we're antiwhite, antiblue, antigreen, or antiyellow.  We're antiwrong.  We're
+  antidescrimination.  We're antisegregation.  We're against anybody who wants to practice some form of segregation or
+  descrimination because we don't happen to be a color that's acceptable to you.}
+\vspace{.2 cm}
+
+\hspace{1 cm} --Malcolm X
+\fi
+
+\end{document}
+

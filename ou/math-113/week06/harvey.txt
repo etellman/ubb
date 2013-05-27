@@ -1,0 +1,78 @@
+Thanks for letting me know about your difficulties with the word problems.
+
+The problems aren't intended to torture you.  Although your perseverance is
+admirable, I wouldn't recommend spending four hours on a single problem.  If you
+haven't figured a problem out in about 15 minutes you can either:
+    - find a TA or fellow student and ask for assistance
+    - give it a break and try again the next day
+    - skip that one and wait for the answer key
+
+The word problems also aren't intended to be especially tricky.  There
+is always some straightforward way to translate the text into an
+equation.  Some of the extra credit problems are more tricky and
+require you to notice some subtle feature of the problem.  But that's
+why I make these problems extra credit, so you know that it is fine to
+skip them if you want.
+
+You suggested modifying the problem so that the fractions come out
+simpler.  If you take a look at the answer key, you'll see that all of
+the ages actually are integers.  I do always try to minimize the
+computations required, since the course is about algebra, not
+long-division.  If you find yourself doing complicated computations,
+it is often a sign that your equation is not quite correct.  This
+problem is also actually a true story.  Diophantes is a real guy and
+it is true that these are the only facts that people know about his
+life.
+
+There are several reasons why I think word problems are useful.
+
+When you have to do math in your life, you aren't likely to be given
+an equation that you have to solve.  Instead, you will have some
+situation which has a bunch of numbers and facts, and you will have to
+use the facts to figure out the other facts in which you are
+interested.  This might come up if you are running a business, buying
+a house, writing a computer program, solving an engineering problem,
+etc.  Doing word problems helps you get better at translating
+real-world situations into equations.
+
+I know that you aren't likely to need to figure out Diophantes age outside of a 
+math class.  But the practice turning English into equations will help you turn 
+other English into equations.
+
+The more immediate practical application of word problems is the final for this
+course.  I don't make up the final, but it is likely to contain some word
+problems.  So you need to practice them so you will be prepared. 
+
+I don't exclusively use the word problems from the text for a few reasons.
+
+The text word problems are generally very short, so translating from English to
+an equation is often fairly trivial.  The text word problems are often things
+like: 
+
+"If Joe traveled for 2 hours on his bicycle and went 30 miles, what was his
+average speed?"
+
+This sort of problem just requires plugging numbers into the right places in 
+d = rt.  So I try to think of some more challenging problems which are still
+doable but require a bit more thought.
+
+I probably don't always succeed, but I also try to think of problems which are
+interesting or entertaining in some way, so you can see how algebra might be
+useful in your life.  You may not care about Joe and his bicycle speed.  But you
+might be more interested in knowing how much more a football coach makes than a
+math teacher.  Or you might be interested in knowing about the judges in PA
+(also a true story) and their bribery scheme.
+
+I'm also trying to get everyone ready for the final.  I think the problems on
+the homework are likely to be slightly harder than the ones that will show up on
+the final.  So if you get good at doing the homework, the final will seem
+straightforward.  It's sort of like the way a baseball player will warm up with
+weights on his bat so that when he takes them off, swinging the weight-free bat
+seems easier. 
+
+Anyway, keep trying to do the word problems, but don't try so hard.  If you
+don't get the answer, skip it and move on and try the next one or find someone
+to help you figure it out.  If you keep trying them they'll get easier 
+eventually.
+
+--Ed

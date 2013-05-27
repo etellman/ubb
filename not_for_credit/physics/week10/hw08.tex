@@ -1,0 +1,407 @@
+
+\documentclass{exam}
+
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+% \oddsidemargin .5in
+% \topmargin -1in
+\textwidth 6.5 in
+
+\printanswers
+
+\ifprintanswers 
+\usepackage{2in1, lscape} 
+\fi
+
+\title{Physics \\ Homework Eight \\ Electricity}
+\date{November 14, 2011}
+
+\begin{document}
+
+\maketitle
+
+\section{Homework}
+
+\begin{itemize*}
+  \item Read Chapter 13
+  \item Chapter 13
+    \begin{itemize*}
+      \item questions 7, 13-16, 22
+      \item exercises 2-6, 9-10, 12-14, 16-17
+      \item synthesis problems: 1-2, 4-5
+    \end{itemize*}
+\end{itemize*}
+
+\section{Extra Credit}
+\begin{questions}
+
+\question
+In your spare time you are making a radio and find to your dismay that you need a $150 \ \ohm$ resistor but only have
+$220 \ \ohm$, $79 \ \ohm$, and $92 \ \ohm$ resistors available.  How can you connect the resistors you have to get the
+desired resistance? (James Walker)
+
+\begin{solution}
+The $220 \ \ohm$ resistor is too large to be connected in series with either of the other two.  If we connect it in
+parallel with the  $79 \ \ohm$ resistor, the equivalent resistance is:
+\[
+  R = \frac{220 \cdot 79}{220 + 79} \ \ohm \approx 58 \ \ohm
+\]
+
+If this combination is connected in series with the remaining resistor, the total is the desired $150 \ \ohm$.
+
+\end{solution}
+
+\question How many $65 \ \watt$ light bulbs can be connected in parallel across a potential difference of $85 \ \volt$
+before the total current exceeds $2.1 \ \ampere$? (James Walker)
+
+\begin{solution}
+Since the bulbs are all the same, an equal current goes through each.  If $n$ is the number of bulbs, the current through one bulb is:
+\[
+  I_{one bulb} = \frac{I_{total}}{n}
+\]
+
+We can use the power consumption of one bulb and the current and solve for $n$:
+\begin{align*}
+  P &= \frac{VI}{n} \\
+  n &= \frac{VI}{P} \\
+    &= \frac{(85 \ \volt)(2.1 \ \ampere)}{65 \ \watt} \\
+    &\approx 2.7 \\
+\end{align*}
+
+You can't have a fraction of a light bulb, so 2 is the largest number of bulbs that will work.
+
+The current through one bulb is:
+\[
+  I = \frac{P}{V} = \frac{65 \ \watt}{85 \ \volt} \approx 0.76 \ \ampere
+\]
+
+The total current for two bulbs is $2 \cdot 0.76 \ \ampere = 1.52 \ \ampere$.  
+
+\end{solution}
+
+\end{questions}
+
+\ifprintanswers
+
+\section{Questions}
+
+\begin{description}
+
+\item[Q7]
+Circuit b will work because there is a complete circuit which includes the batter and the light.  Circuit a doesn't
+provide a route for the charge to both enter and return to the battery.
+
+\item[Q13]
+\begin{description}
+\item[a]
+The same current flows through both resistors.
+
+\item[b]
+Since $R_2$ is larger and $V = IR$, $R_2$ has the largest voltage difference.
+\end{description}
+
+\item[Q14]
+All of the current flows through $R_3$ while only a part of the current flows through each of $R_1$ and $R_2$, so $R_3$
+has the largest current.
+
+\item[Q15]
+$R_3$ is the largest resistance and it has the largest current, so it has the largest voltage difference.
+
+\item[Q16]
+The current will decrease because there is one less route for it to follow.
+
+\item[Q22]
+No, it will quadruple:
+\[ 
+  P = (2I)^2 R = 4I^2R
+\]
+
+\end{description}
+
+\section{Exercises}
+
+\begin{description}
+
+\item[E2]
+\[
+  Q = I \Delta t = (2.5 \ \ampere)(60 \ \second) = 150 \ \coulomb
+\]
+
+\item[E3]
+\[
+  I = \frac{V}{R} = \frac{6 \ \volt}{24 \ \ohm} = 0.25 \ \ampere
+\]
+
+\item[E4]
+\[
+  V = \frac{I}{R} = \frac{1.5 \ \ampere}{18 \ \ohm} = 27 \ \volt
+\]
+
+\item[E5]
+\[
+  R = \frac{V}{I} = \frac{120 \ \volt}{0.6 \ \ampere} = 200 \ \ohm
+\]
+
+\item[E6]
+\begin{description}
+\item[a]
+\[
+  I = \frac{V}{R} = \frac{6 \ \volt}{60 \ \ohm} = 0.1 \ \ampere
+\]
+
+\item[b]
+\[
+  V = IR = (0.1 \ \ampere)(20 \ \ohm) = 2 \ \volt
+\]
+\end{description}
+
+\item[E9]
+\begin{description}
+\item[a]
+The current is the same through all the resistors:
+\[
+  I = \frac{V}{R} = \frac{6 \ \volt}{60 \ \ohm} = 0.1 \ \ampere
+\]
+
+\item[b]
+yes
+
+\item[c]
+\[
+  V = IR = (0.1 \ \ampere)(20 \ \ohm) = 2 \ \volt
+\]
+
+\end{description}
+
+\item[E10]
+\begin{align*}
+  \frac{1}{R} &= \frac{1}{8 \ \ohm} + \frac{1}{8 \ \ohm} \\
+  \frac{1}{R} &= \frac{1}{4 \ \ohm} \\
+  R           &= 4 \ \ohm \\
+\end{align*}
+
+
+\item[E12]
+\begin{description}
+\item[a]
+\begin{align*}
+  \frac{1}{R} &= 3 \cdot \frac{1}{24 \ \ohm} \\
+  \frac{1}{R} &= \frac{1}{8 \ \ohm} \\
+  R           &= 8 \ \ohm \\
+\end{align*}
+
+\item[b]
+\[
+  I = \frac{V}{R} = \frac{12 \ \volt}{8 \ \ohm} = 1.5 \ \ampere
+\]
+
+\item[c]
+\[
+  I = \frac{12 \ \volt}{24 \ \ohm} = 0.5 \ \ampere
+\]
+This is consistent with $1.5 \ \ampere$ total, since 1/3 of the current goes through each resistor.
+
+\end{description}
+
+\item[E13]
+\[
+  P = VI = (9 \ \volt)(1.5 \ \ampere) = 13.5 \ \watt
+\]
+
+\item[14]
+\begin{description}
+
+\item[a]
+\[
+  I = \frac{V}{R} = \frac{3 \ \volt}{30 \ \ohm} = 0.1 \ \ampere
+\]
+
+\item[b]
+\[
+  P = VI = {3 \ \volt}{0.1 \ \ampere} = 0.3 \ \watt
+\]
+
+\end{description}
+
+\item[16]
+
+\begin{description}
+
+\item[a]
+\[
+  P = VI = (110 \ \volt)(7 \ \ampere) = 770 \ \watt
+\]
+
+\item[b]
+\[
+  R = \frac{V}{I} = \frac{110 \ \volt}{7 \ \ampere} \approx 15.7 \ \ohm
+\]
+
+\end{description}
+
+\item[E17]
+\[
+  I = \frac{P}{V} = \frac{5,500 \ \watt}{220 \ \volt} = 25 \ \ampere
+\]
+\end{description}
+
+\section{Synthesis Problems}
+
+\begin{description}
+\item[SP1]
+
+\begin{description}
+\item[a]
+\begin{align*}
+  \frac{1}{R} &= \frac{1}{6 \ \ohm} + \frac{1}{12 \ \ohm} \\
+  \frac{1}{R} &= \frac{1}{4 \ \ohm} \\
+  R &= 4 \ \ohm \\
+\end{align*}
+
+\item[b]
+\[
+  I = \frac{V}{R} = \frac{1.5 \ \volt}{12 \ \ohm} = 0.125 \ \ampere
+\]
+
+\item[b]
+\[
+  I = \frac{V}{R} = \frac{1.5 \ \volt}{12 \ \ohm} = 0.125 \ \ampere
+\]
+
+\item[c]
+The voltage over the $8 \ \ohm$ resistor is:
+\[
+  V = IR = (0.125 \ \ohm)(8 \ \ohm) = 1 \ \volt
+\]
+
+So the voltage over the other two resistors is $0.5 \ \volt$, which gives a current through the $6 \ \ohm$ resistor of:
+\[
+  I = \frac{V}{R} = \frac{0.5 \ \volt}{6 \ \ohm} \approx 0.833 \ \ampere
+\]
+
+The current through the $12 \ \ohm$ resistor is
+\[
+  I = \frac{V}{R} = \frac{0.5 \ \volt}{12 \ \ohm} \approx 0.417 \ \ampere
+\]
+
+Adding the two currents together gives $0.125 \ \ampere$, so all the current is accounted for.
+
+\item[d]
+\[
+  P = I^2R = (0.125 \ \ampere)^2(8 \ \ohm) = 0.125 \ \watt
+\]
+
+\item[e]
+Greater--see part c.
+
+\end{description}
+
+\item[SP2]
+\item[a]
+The effective resistance of the three resistors is:
+\begin{align*}
+  \frac{1}{R} &= \frac{3}{30 \ \ohm} \\
+  R &= 10 \ \ohm \\
+\end{align*}
+
+The current is:
+\[
+  I = \frac{V}{R} = \frac{1.5 \ \volt}{10 \ \ohm} = 0.15 \ \ampere
+\]
+
+\item[b]
+1/3 of the current goes through each bulb, so each bulb gets $0.05 \ \ampere$.  An alternate approach is:
+\[
+  I = \frac{V}{R} = \frac{1.5 \ \volt}{30 \ \ohm} = 0.05 \ \ampere
+\]
+
+\item[c] 
+A bulb burning out has no effect on the other bulbs.  Each bulb still has the same voltage difference and the
+same current it had before.  Another way to look at it is that there is less total current than there was, but there
+are fewer bulbs to share the current, and the net effect is no change.
+
+\item[SP4]
+\begin{description}
+\item[a]
+Since each of the parallel combinations involves identical resistors, the equivalent resistance is just the resistance
+of one resistor divided by the number of resistors.  So the first one is $1.5 \ \ohm$ and the second one is $1 \ \ohm$.
+
+\item[b]
+\[
+  R = 1.5 \ \ohm + 3 \ \ohm + 1 \ \ohm = 5.5 \ \ohm
+\]
+
+\item[c]
+\[
+  I = \frac{V}{R} = \frac{6 \ \volt}{5.5 \ \ohm} \approx 1.1 \ \ampere
+\]
+
+\item[d]
+Each resistor gets 1/3 of the current, or $0.36 \ \ampere$
+
+\end{description}
+
+\item[SP5]
+
+\begin{description}
+\item[a]
+\begin{tabular}{lr}
+\toprule
+Appliance & Current \\
+\midrule
+toaster        & $5.2 \ \ampere$\\
+iron           & $10.4 \ \ampere$\\
+food processor & $4.3 \ \ampere$\\
+\bottomrule
+\end{tabular}
+
+\item[b]
+If the iron and toaster are turned together, the total current will be more than $15 \
+\ampere$, which would be a problem.
+
+\item[c]
+\[
+  R = \frac{V}{I} = \frac{115 \ \volt}{10.4 \ \ampere} \approx 11.1 \ \ohm
+\]
+
+\end{description}
+
+
+\end{description}
+\else
+
+\vspace{2.5 in}
+
+% When a sixth of the population of a nation which has undertaken to be the refuge of liberty are slaves, and a whole
+% country is unjustly overrun and conquered by a foreign army, and subjected to military law, I think that it is not too
+% soon for honest men to rebel and revolutionize. What makes this duty the more urgent is the fact that the country so
+% overrun is not our own, but ours is the invading army
+
+
+{\em 
+
+Our inventions are wont to be pretty toys, which distract our attention from serious things. They are but improved
+means to an unimproved end, an end which it was already but too easy to arrive at.  
+
+} 
+
+\vspace{.2 cm}
+
+\hspace{1 cm} --Henry David Thoreau
+\fi
+
+\end{document}
+

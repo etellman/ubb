@@ -1,0 +1,410 @@
+\documentclass[fleqn,addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{polynom}
+
+\printanswers
+
+\ifprintanswers
+\usepackage{2in1, lscape}
+\fi
+
+\title{Math 113 Chapter Six Exam}
+\author{}
+\date{\today}
+
+% \oddsidemargin 0in
+% \topmargin -0.5in
+% \textwidth 6.5in
+
+% \extrawidth{-1 in}
+% \setlength{\mathindent}{0in}
+
+\begin{document}
+
+\maketitle
+
+\ifprintanswers
+\else
+\vspace{0.2in}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vspace{0.2in}
+
+\begin{center}
+\gradetable[h][pages]
+\end{center}
+
+\fi
+
+\section{Complex Numbers}
+
+For problems \ref{complex-arithmetic:first}-\ref{complex-arithmetic:last} add, subtract, or multiply as indicated, 
+
+\begin{questions}
+
+\question[3] \( (2 + 5i) + (3 - 2i) \)
+\label{complex-arithmetic:first}
+\begin{solution}[3 cm]
+\[
+  (2 + 5i) + (3 - 2i) = (2+3) + (5-2)i = 5+3i
+\]
+\end{solution}
+
+\question[3] \( (10 -7i) - (10 - 2i) \)
+\begin{solution}[3 cm]
+\begin{align*}
+  (10 -7i) - (10 - 2i) &= (10-10) + (-7 - (-2))i \\
+  &= (-7+2i) \\
+  &= -5i \\
+\end{align*}
+
+\end{solution}
+
+\question[5] \( (5 + 6i) (3 - 3i) \)
+\begin{solution}[4 cm]
+\begin{align*}
+  (5 + 6i) (3 - 3i) &= 15 + 18i - 15i - 18i^2 \\
+  & = 15 + 3i + 18 \\
+  & = 33+3i
+\end{align*}
+
+\end{solution}
+
+\question[5] \( (-2 - i) (-2 + i) \)
+\label{complex-arithmetic:last}
+\begin{solution}[4 cm]
+\[
+  (-2 - i) (-2 + i) = 4 - i^2 = 4+1 = 5
+\]
+\end{solution}
+
+For problems \ref{complex-simplify:first}-\ref{complex-simplify:last} write in terms if $i$, perform the indicated
+operations and simplify.
+
+\question[3] \( \sqrt{-45} \)
+\label{complex-simplify:first}
+\begin{solution}[3 cm]
+\[
+  \sqrt{-45} = i \sqrt{9 \cdot 5} = 3i \sqrt{5}
+\]
+\end{solution}
+
+\question[3] \( -3 \sqrt{-16} \)
+\begin{solution}[3 cm]
+\[
+  -3 \sqrt{-16} = -3i \sqrt{16} = -12i
+\]
+\end{solution}
+
+\question[5] \( \sqrt{-9} \sqrt{-12} \)
+\begin{solution}[4 cm]
+\[
+  \sqrt{-9} \sqrt{-12} = (i \sqrt{9})(i \sqrt{12}) = i^2 \cdot 3 \cdot 2\sqrt{3} = -6 \sqrt{3}
+\]
+\end{solution}
+
+\question[5] \( \dfrac{\sqrt{-50}} {\sqrt{75}} \)
+\label{complex-simplify:last}
+\begin{solution}[4 cm]
+If you simplify early on, as in the solution below, you can avoid doing calculations like $50*75$.
+
+\begin{align*}
+  \frac{\sqrt{-50}} {\sqrt{75}} &= \frac{i \sqrt{50}} {\sqrt{75}}  \\
+  &= i \sqrt{\frac{50}{75}} \\
+  &= i \sqrt{ \frac{\cancel{25} \cdot 2}{\cancel{25} \cdot 3}} \\
+  &= \frac{i \sqrt{2}}{\sqrt{3}} \\
+  &= \frac{i \sqrt{6}}{3} \\
+\end{align*}
+
+\end{solution}
+
+\ifprintanswers
+\else
+\pagebreak
+\fi
+
+For problems \ref{complex-divide:first}-\ref{complex-divide:last} find the quotient and express the answer in the
+standard form of a complex number.
+
+\question[5] \( \dfrac{3}{5i} \)
+\label{complex-divide:first}
+\begin{solution}[4 cm]
+Very few people did the simplest thing, which is:
+\[
+  \frac{3}{5i} = \frac{3}{5i} \left( \frac{i}{i} \right) = \frac{3i}{5i^2} = - \frac{3i}{5}
+\]
+
+Most people multiplied the numerator and denominator by $5i$, which also gives the correct solution but is a little more work.
+
+\end{solution}
+
+\question[7] \( \dfrac{-2 + 3i}{2 - 2i} \)
+\label{complex-divide:last}
+\begin{solution}[5 cm]
+For this problem, you need to multiply the numerator and denominator by the complex conjugate (the same number with the
+sign of the imaginary part reversed):
+\begin{align*}
+  \frac{-2 + 3i}{2 - 2i} &= \frac{-2 + 3i}{2 - 2i} \left( \frac{2+2i}{2+2i} \right) \\
+  &= \frac{-4 + 6i - 4i + 6i^2}{4-4i^2} \\
+  &= \frac{-4 + 2i - 6}{4+4} \\
+  &= \frac{-10 + 2i}{8} \\
+  &= \frac{2(-5 + i)}{8} \\
+  &= \frac{-5 + i}{4} \\
+  &= -\frac{5}{4} + \frac{i}{4} \\
+\end{align*}
+
+
+
+\end{solution}
+
+\section{Completing the Square}
+For problems \ref{square:first}-\ref{square:last}, solve each problem by completing the square.
+
+\question[10] \( x^2 - 12x + 3 = 0 \)
+\label{square:first}
+\begin{solution}[6 cm]
+\begin{align*}
+  x^2 - 12x + 3 &= 0 \\
+  x^2 - 12x &= -3 \\
+  x^2 - 12x + 36 &= -3 + 36 \\
+  (x-6)^2 &= 33 \\
+  x-6 &= \pm \sqrt{33} \\
+  x &= 6 \pm \sqrt{33} \\
+\end{align*}
+
+check:
+\begin{itemize}
+  \item \( (6 + \sqrt{33}) + (6 - \sqrt{33}) = 12 \)
+  \item \( (6 + \sqrt{33})(6 - \sqrt{33}) = 36 - 33 = 3 \)
+\end{itemize}
+
+\end{solution}
+
+\question[10] \( 2x^2 + 3x + 5 = 0 \)
+\label{square:last}
+\begin{solution}[6 cm]
+When you get rid of the $2$ in $2x^2$, make sure you divide all the factors by $2$, not just the
+$5$ on the right side of the equation.
+
+\begin{align*}
+  2x^2 + 3x + 5 &= 0 \\
+  2x^2 + 3x &= -5 \\
+  x^2 + \frac{3x}{2}  &= - \frac{5}{2} \\
+  x^2 + \frac{3x}{2} + \frac{9}{16} &= - \frac{5}{2} + \frac{9}{16} \\
+  \left(x + \frac{3}{4} \right)^2 &= - \frac{40}{16} + \frac{9}{16} \\
+  \left(x + \frac{3}{4} \right)^2 &= - \frac{31}{16} \\
+  x + \frac{3}{4} &= \pm \sqrt{-\frac{31}{16}} \\
+  x  &= -\frac{3}{4} \pm \frac{i \sqrt{31}}{4} \\
+  x &= \frac{-3 \pm i \sqrt{31}}{4} \\
+\end{align*}
+\end{solution}
+
+% \question[10] \( 3x^2 - 7x - 11 = 0 \)
+% \label{square:last}
+% \begin{solution}[6 cm]
+% \[
+% \]
+% \end{solution}
+
+\section{Quadratic Formula}
+For problems \ref{quadratic-formula:first}-\ref{quadratic-formula:last}, solve each problem using the quadratic formula.
+
+\question[10] \( x^2 + 8x - 2 = 0\)
+\label{quadratic-formula:first}
+\begin{solution}[6 cm]
+\begin{align*}
+  x &= \frac{-8 \pm \sqrt{64 - 4(-2)}}{2} \\
+  &= \frac{-8 \pm \sqrt{72}}{2} \\
+  &= \frac{-8 \pm \sqrt{36 \cdot 2}}{2} \\
+  &= \frac{-8 \pm 6 \sqrt{2}}{2} \\
+  &= \frac{2(-4 \pm 3 \sqrt{2})}{2} \\
+  &= -4 \pm 3 \sqrt{2} \\  
+\end{align*}
+\end{solution}
+
+\question[10] \( -x^2 + 5x - 3 = 0 \)
+\begin{solution}[6 cm]
+Some people started out by converting the equation to $x^2-5x+3=0$ which is also fine and may make it less likely to
+make a mistake with the signs.
+
+\begin{align*}
+  x &= \frac{-5 \pm \sqrt{25 - 4(-1)(-3)}}{-2} \\
+    &= \frac{-5 \pm \sqrt{25 - 12}}{-2} \\
+    &= \frac{-5 \pm \sqrt{13}}{-2} \\
+    &= \frac{5 \pm \sqrt{13}}{2} \\
+\end{align*}
+
+\end{solution}
+
+\question[10] \( 4x^2 - 9x = -7 \)
+\label{quadratic-formula:last}
+\begin{solution}[6 cm]
+\begin{align*}
+  x &= \frac{9 \pm \sqrt{81 - 4 \cdot 4 \cdot 7}}{8} \\
+   &= \frac{9 \pm \sqrt{81 - 112}}{8} \\
+   &= \frac{9 \pm \sqrt{-31}}{8} \\
+   &= \frac{9 \pm i \sqrt{31}}{8} \\
+\end{align*}
+\end{solution}
+
+% \section{Quadratic Equations}
+% For problems \ref{quadratic:first}-\ref{quadratic:last}, solve each problem using any method.  Or, as Malcolm X might
+% say, ``By any means necessary.''
+
+% \question[7] \( (x+2)^2 = -5 \)
+% \label{quadratic:first}
+% \begin{solution}[5 cm]
+% \[
+% \]
+% \end{solution}
+
+% \question[7] \( 3x^2 + 5x + 2 = 0 \)
+% \label{quadratic:last}
+% \begin{solution}[5 cm]
+% \[
+% \]
+% \end{solution}
+
+\section{Nonlinear Inequalities}
+
+For problems \ref{nonlinear:first}-\ref{nonlinear:last}, solve each inequality.
+
+\question[10] \( 2x^2 + 5x - 3 \geq 0 \)
+\label{nonlinear:first}
+\begin{solution}[6 cm]
+First solve for $x$:
+\begin{align*}
+  2x^2 + 5x - 3 &= 0 \\
+  (2x-1)(x+3) &= 0 \\
+  x &= \left \{ -3, \frac{1}{2} \right \}
+\end{align*}
+
+Then use a sample point from each region to find the solution:
+\[
+ x = (-\infty, -3] \cup \left[ \frac{1}{2}, \infty \right )
+\]
+\end{solution}
+
+\question[10] \( \dfrac{2x+1}{x-5} < 0 \)
+\label{nonlinear:last}
+\begin{solution}[6 cm]
+The interesting points are: $x = - \dfrac{1}{2}$ and $x = 5$.
+\[
+  x = \left( - \frac{1}{2}, 5 \right)- \frac{1}{2} < x < 5
+\]
+\end{solution}
+
+
+\section{Word Problems}
+
+\question[10] 
+The length of a rectangle is 1 inch less than twice its width.  find the sides of the rectangle if its area is 5 inches.
+\begin{solution}[9 cm]
+From the problem statement:
+\begin{itemize}
+  \item The length is 1 inch less than twice the width: $L = 2W - 1$
+  \item The area is 5 square inches: $LW=5$
+\end{itemize}
+
+We can plug the value for $L$ into the area equation and solve for $W$:
+\begin{align*}
+  W(2W-1) &= 5 \\
+  2W^2-W &= 5 \\
+  2W^2-W = 5 &= 0 \\
+\end{align*}
+
+Using the quadratic formula:
+\begin{align*}
+  W &= \frac{1 \pm \sqrt{1 - 5(-5)(2)}}{2} \\
+  &= \frac{1 \pm \sqrt{41}}{4} \\
+\end{align*}
+
+The only positive choice for $W$ is $W = \dfrac{1 + \sqrt{41}}{4}$.  We can use this to get $L$
+\[
+  L = 2W-1 = 2 \left( \frac{1 + \sqrt{41}}{4} \right) - 1 = \frac{1 + \sqrt{41}}{2} - \frac{2}{2} = \frac{-1 + \sqrt{41}}{2}
+\]
+
+To check the area:
+\begin{align*}
+  LW &= \left( \frac{1 + \sqrt{41}}{4} \right) \left( \frac{-1 + \sqrt{41}}{2} \right) \\
+  &= \frac{-1 + 41}{8} \\
+  &= 5 \\
+\end{align*}
+
+\end{solution}
+
+\question[10] 
+Working together, 2 people can complete a task in 5 hours.  Working alone, one person takes 2 hours longer than the
+other.  How long would it take each person to do the task alone?
+
+\begin{solution}[9 cm]
+From the problem statement:
+\begin{itemize}
+  \item 2 people can complete a task in 5 hours: $t_{1+2} = 5$
+  \item one person takes two hours longer than the other: $t_2 = t_1 + 2$
+\end{itemize}
+
+The rate for two people working together is the sum of their individual rates: 
+
+$r_{1+2} = r_1 + r_2 = \dfrac{1}{t_1} + \frac{1}{t_2} = \dfrac{1}{t_1} + \frac{1}{t_1+2}$.
+
+In 5 hours, the complete 1 job.  This gives us an equation to solve:
+\begin{align*}
+  5 \left( \dfrac{1}{t_1} + \frac{1}{t_1+2} \right) &= 1 \\
+  \frac{5}{t_1} + \frac{5}{t_1+2} = 1 \\
+  \frac{5t_1 + 10 + 5t_1}{t_1(t_1+2)} = 1 \\
+  t_1^2 - 8t_1 - 10 &= 0 \\
+\end{align*}
+
+Using the quadratic formula:
+\begin{align*}
+  t_1 &= \frac{8 \pm \sqrt{64+40}}{2} \\
+  &= 4 \pm \sqrt{26}
+\end{align*}
+
+Since $4 + \sqrt{26}$ is the only positive choice, this is the
+time for one person.  The other person takes 2 hours longer, or $6 + \sqrt{26}$.
+
+check:
+\begin{align*}
+  5\left( \frac{1}{4+\sqrt{26}} + \frac{1}{6 + \sqrt{26}} \right) 
+  &= 5 \left( \frac{6 + \sqrt{26} + 4 + \sqrt{26}}{24 + 10 \sqrt{26} + 26} \right) \\
+  &= 5 \left( \frac{10 + 2 \sqrt{26}}{50 + 10 \sqrt{26}} \right) \\
+  &= 5 \left( \frac{2 \cancel{(5 + 2 \sqrt{26})} }{10 \cancel{(5 + 2 \sqrt{26})}} \right) \\
+  &= 5 \left( \frac{2}{10} \right) \\
+  &= 1 \\
+\end{align*}
+
+\end{solution}
+
+\pagebreak
+\noaddpoints
+
+\section{Extra Credit}
+\question[10] 
+Show how to use the ``complete the square'' technique to derive the quadratic equation.  In other words, show how to get
+from 
+\[ ax^2+bx+c=0 \] 
+to 
+\[ x = \dfrac{-b \pm \sqrt{b^2-4ac}}{2a} \]
+
+\begin{solution}[6 cm]
+\begin{align*}
+  ax^2+bx+c &= 0 \\
+  ax^2+bx &= -c \\
+  x^2+\frac{bx}{a} &= -\frac{c}{a} \\
+  x^2+\frac{bx}{a} + \frac{b^2}{4a^2} &=  \frac{b^2}{4a^2} -\frac{c}{a} \\
+  \left( x + \frac{b}{2a} \right)^2 &= \frac{b^2}{4a^2} - \frac{4ac}{4a^2}  \\
+  \left( x + \frac{b}{2a} \right)^2 &= \frac{b^2 - 4ac}{4a^2} \\
+  x + \frac{b}{2a} &= \pm \sqrt{\frac{b^2 - 4ac}{4a^2}} \\
+  x + \frac{b}{2a} &= \frac{\pm \sqrt{b^2 - 4ac}}{2a} \\
+  x &= -\frac{b}{2a} \pm \frac{\sqrt{b^2 - 4ac}}{2a} \\
+  x &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+\end{align*}
+\end{solution}
+
+\end{questions}
+\end{document}
+
+
