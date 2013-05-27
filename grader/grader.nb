@@ -1,0 +1,169 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      6362,        160]
+NotebookOptionsPosition[      5957,        141]
+NotebookOutlinePosition[      6313,        157]
+CellTagsIndexPosition[      6270,        154]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"for", " ", "a", " ", "particular", " ", "assignment"}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"problems", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"5", "-", "32"}], ",", 
+       RowBox[{"36", "-", "39"}], ",", 
+       RowBox[{"46", "-", "49"}], ",", 
+       RowBox[{"55", "-", "64"}], ",", "81"}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+     "Returns", " ", "a", " ", "list", " ", "with", " ", "the", " ", "number",
+       " ", "of", " ", "points", " ", "correct"}], ",", " ", 
+     RowBox[{"the", " ", "total", " ", "number", " ", "of", " ", "points"}], 
+     ",", " ", 
+     RowBox[{"and", " ", "the", " ", 
+      RowBox[{"percentage", "."}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"percentage", "[", "delta_Integer", "]"}], ":=", 
+     RowBox[{"Module", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", " ", 
+        RowBox[{"possible", ",", "points"}], " ", "}"}], ",", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "single", " ", "problem", " ", "vs", " ", "a", " ", "range", " ", 
+         "of", " ", "problems"}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"points", "[", "problem_Integer", "]"}], ":=", 
+         RowBox[{"1", "/;", 
+          RowBox[{"problem", ">", "0"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"points", "[", "problem_Integer", "]"}], ":=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "problem"}], "+", "1"}], "/;", 
+          RowBox[{"problem", "<", "0"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"SetAttributes", "[", 
+         RowBox[{"points", ",", "Listable"}], "]"}], ";", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"possible", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"points", "[", "problems", "]"}], "*", "5"}], "//", 
+          "Total"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"{", " ", 
+         RowBox[{
+          RowBox[{"possible", "+", "delta"}], ",", " ", "possible", ",", 
+          RowBox[{
+           RowBox[{"100", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"possible", "+", "delta"}], ")"}], "/", "possible"}]}], 
+           "//", "Round"}]}], " ", "}"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+    ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.574503552655189*^9, 3.574503695060264*^9}, {
+   3.5745038055813217`*^9, 3.574503897450267*^9}, {3.574503952815824*^9, 
+   3.574504383679823*^9}, {3.57450443532557*^9, 3.574504445584285*^9}, {
+   3.574504483677971*^9, 3.57450458216226*^9}, {3.574504636617405*^9, 
+   3.574504716748787*^9}, {3.574504837540579*^9, 3.574504845064831*^9}, {
+   3.574504902249023*^9, 3.574505090579419*^9}, {3.5745051312765636`*^9, 
+   3.57450514141442*^9}, {3.57450520551501*^9, 3.574505205867519*^9}, {
+   3.5745052433136044`*^9, 3.574505252430784*^9}, {3.574505349060405*^9, 
+   3.574505373073246*^9}, {3.574518255183647*^9, 3.57451830173346*^9}, {
+   3.574518366382023*^9, 3.574518494044733*^9}, {3.574518526422822*^9, 
+   3.574518547870614*^9}, {3.574518582280671*^9, 3.574518588520481*^9}, {
+   3.574518736590785*^9, 3.574518820448885*^9}, {3.574518870912982*^9, 
+   3.574518876853549*^9}, {3.574763199108676*^9, 3.574763209442341*^9}, {
+   3.574763277107135*^9, 3.5747632821284723`*^9}, {3.574763318595841*^9, 
+   3.574763321591339*^9}, {3.5754567956227922`*^9, 3.575456808197977*^9}, {
+   3.575475391294797*^9, 3.575475470064423*^9}, 3.5754770510608587`*^9, {
+   3.5760642190580387`*^9, 3.576064223258569*^9}, {3.5767515993466377`*^9, 
+   3.576751602201414*^9}, 3.576751633161406*^9, 3.5779057283371677`*^9, {
+   3.5779097507929564`*^9, 3.5779097520393467`*^9}, {3.577963375005109*^9, 
+   3.57796343009017*^9}, 3.578476464075055*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"percentage", "[", 
+  RowBox[{"-", "6"}], "]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQA2IQ/XOtRdi6xa8cj4ldjwbRHj8zUkF02cXnGSBaIldI
+8eySV45RWvJgWuzU7idXgbTHolNg+t80465rQDpAyhJMa2n2Jt8C0j0xa8C0
+6DHGwzLLXjleCeo8DqI3L885DaJV5pSCaQ01qWJZIL33mDmYPnD3uU3QileO
+XvyfwbQFwxNHEB2hx+IEonNlNdNygPSUOF0wPX1nkm0ukL6QUwamTWcJ+OQB
+6ZS7wmA6Rv95WguQ/j+FIx1ET5M48C1t5SvHvIdHwPQ/r2UvMoG026qtYJqN
+de87EF2cOuc9iL5SvJMvC0jPeH8LTF95nHC2GEiXTZsKpk3//GopAdIRk1Ra
+QbRG7c8jE4H0CWXLoyAaAIVJvaQ=
+  "]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"229", ",", "235", ",", "97"}], "}"}], TraditionalForm]], "Output",\
+
+ CellChangeTimes->{{3.5754770394103823`*^9, 3.575477063911229*^9}, 
+   3.576064265937711*^9, 3.57608221547584*^9, 3.576083538591188*^9, 
+   3.576091422233233*^9, {3.576751641396894*^9, 3.576751708731526*^9}, 
+   3.576753051165553*^9, 3.577905734757854*^9, {3.577909736417272*^9, 
+   3.5779097769697437`*^9}, 3.577963314373226*^9, 3.577965036554586*^9, 
+   3.577967201475524*^9, 3.578012473301735*^9, 3.578476470770803*^9, 
+   3.5784825023033123`*^9, 3.578482558158822*^9, {3.5784828139500237`*^9, 
+   3.578482823968069*^9}, 3.578502765582262*^9, 3.578504234161482*^9, 
+   3.578564138717174*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ FormBox["", TraditionalForm]], "Input",
+ CellChangeTimes->{{3.578564032076337*^9, 3.5785640666111403`*^9}}]
+},
+WindowSize->{946, 629},
+WindowMargins->{{23, Automatic}, {29, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 3997, 84, 267, "Input"],
+Cell[CellGroupData[{
+Cell[4579, 108, 519, 11, 28, "Input"],
+Cell[5101, 121, 715, 13, 62, "Output"]
+}, Open  ]],
+Cell[5831, 137, 122, 2, 28, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
