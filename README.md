@@ -1,4 +1,5 @@
 ubb
 ===
 
-University Beyond Bars course materials
+This project contains University Beyond Bars course materials for math and science.
+
