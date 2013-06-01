@@ -32,7 +32,7 @@
 %   \bottomrule
 % \end{tabular}
 
-\printanswers
+% \printanswers
 
 \ifprintanswers 
   \usepackage{2in1, lscape} 
@@ -480,20 +480,41 @@
               p &= 67,121 \\
             \end{align*}
         \end{enumerate}
+
+      \item[83]
+        When you are paid by the daily scheme, the amount of money you have after each day is:
+        \begin{tabular}[H]{lr}
+          \toprule
+          day  & total (cents) \\
+          \midrule
+          1 & $2$ \\
+          2 & $2 + 4 = 6$ \\
+          3 & $2 + 4 + 8 = 14$ \\
+          4 & $2 + 4 + 8 + 16 = 30$ \\
+          5 & $2 + 4 + 8 + 16 + 32 = 62$ \\
+          n & $2^{n + 1} - 2$ \\
+          \bottomrule
+        \end{tabular}
+
+        Using the general formula, after day 30, you'll have made:
+        \[
+          2^{31} - 2 = \unit[2,147,483,646]{cents} = \$21,474,836.46
+        \]
+
+        which is much better than the measely million you'd get with the other plan.
     \end{description}
 
-\else
-  \vspace{6 cm}
-  \begin{quote}
-    \begin{em}
-      to do
-    \end{em}
-  \end{quote}
+  \else
+    \vspace{9 cm}
+    \begin{quote}
+      \begin{em}
+        Most of the luxuries, and many of the so-called comforts of life, are not only not indispensable, but positive
+        hindrances to the elevation of mankind.  
+      \end{em}
+    \end{quote}
 
-  \hspace{1 cm} --author here
-
-
-\fi
+    \hspace{1 cm} --Henry David Thoreau
+  \fi
 
 \end{document}
 
