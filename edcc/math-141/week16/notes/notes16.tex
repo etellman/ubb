@@ -33,9 +33,9 @@
 % \bottomrule
 % \end{tabular}
 
-\title{Math 141 Notes \\ Section 3.6--Rational Functions}
+\title{Math 141 Notes \\ Section 4.1--Exponential Functions}
 
-\date{May 15, 2013}
+\date{June 5, 2013}
 
 \begin{document}
 
@@ -44,273 +44,114 @@
 
   \pagebreak
 
-  \section{Review}
-  \begin{itemize}
-    \item 
-      \begin{align*}
-        x^3 + 5x^2 - x - 5 &= x^2(x + 5) - (x + 5) \\
-                           &= \left( x^2 - 1 \right) (x + 5) \\
-                           &= (x + 1)(x - 1)(x + 5) \\
-      \end{align*}
-  \end{itemize}
-
-  \section{Definitions}
-
-  \begin{itemize*}
-    \item A rational function is: $r(x) = \frac{P(x)}{Q(x)}$
-    \item domain: $Q(x) \neq 0$
-  \end{itemize*}
-
-  \section{Example: $f(x) = \frac{1}{x}$}
-
-  \subsection{Vertical Asymptote}
-  \begin{itemize*}
-    \item occurs when denominator is zero
-    \item $y \rightarrow \pm \infty$ as $x \rightarrow a$
-    \item $x \rightarrow a^-$ may be different from $x \rightarrow a^+$
-    \item asymptote is vertical line $x = a$
-    \item graph never crosses vertical asymptote
-  \end{itemize*}
-
-  \subsection{Horizontal Asymptote}
-  \begin{itemize*}
-    \item behavior of function for very large or very small values of $x$
-    \item graph may cross horizontal asymptote
-    \item $y \rightarrow a$ as $x \pm \infty a$
-    \item asymptote is horizontal line $y = a$
-  \end{itemize*}
-
-  \subsection{Slant Asymptote}
-  \begin{itemize*}
-    \item behavior of function for very large or very small values of $x$
-    \item graph may cross slant asymptote
-    \item $y \rightarrow ax + b$ as $x \pm \infty a$
-    \item asymptote is slant line $y = ax + b$
-  \end{itemize*}
-
-  \pagebreak
-
-  \section{Graphing Using Transformations}
-
-  \begin{align*}
-    f(x) &= \frac{1}{x} \\
-    g(x) &= -\frac{1}{x} \\
-    h(x) &= \frac{1}{x + 2} \\
-    i(x) &= \frac{2}{x + 2} \\
-    j(x) &= \frac{3x + 1}{x - 4} = 3 + \frac{13}{x - 4}
-  \end{align*}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale=1.0]{figure1.eps}
-    \caption*{$f(x) = \frac{3x + 1}{x - 4}$}
-  \end{figure}
-
-  \pagebreak
-
-  \section{Asymptotes}
-
-  \subsection{Vertical Asymptotes}
-  \begin{itemize*}
-    \item find where denominator is zero
-    \item do a sign chart or use test points to find out where the function is positive or negative
-    \item around asymptote, $f(x) \rightarrow \pm \infty$
-  \end{itemize*}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale=1.0]{figure2.eps}
-    \caption*{$f(x) = \frac{1}{x^2-3 x+2}$}
-  \end{figure}
-
-  \subsection{Horizontal Asymptotes}
-
-  \subsubsection{Overview}
-  $r(x) = \frac{ax^m + P(x)}{bx^n + Q(x)}$.  
-
-  Divide numerator and denominator by $\frac{1}{x^{\max(m, n)}}$.
-
-  three cases:
-  \begin{enumerate*}
-    \item $n > m$: asymptote at $x = 0$
-    \item $n = m$: asymptote at $y = \frac{a}{b}$
-    \item $n < m$: no horizontal asymptote
-  \end{enumerate*}
-
-  \pagebreak
-
-  \subsubsection{Case One: $n < m$}
-
-  When $n < m$, there is an asymptote at $x = 0$ because the denominator grows faster than the numerator and is larger
-  than the numerator for large values of $x$. 
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale=1.0]{figure3.eps}
-    \caption*{Case One: $f(x) = \frac{2 x}{x^2 + x - 2}$}
-  \end{figure}
-
-  \subsubsection{Case Two: $n = m$}
-
-  When $n = m$, there is an asymptote at $x = \frac{a}{b}$ because all the terms other than the first one 
-  become insignificant for large values of $x$.
-
-  Two ways of showing:
-  \begin{itemize*}
-    \item Divide numerator and denominator by $\frac{1}{x^{\max(m, n)}}$.
-    \item Long divide numerator by denominator.  Result is constant plus
-      rational function with numerator lower degree than denominator.
-  \end{itemize*}
+  \section{Description}
 
   \[
-    \frac{2 x^2}{x^2 + x - 2} = 2 + \frac{4 - 2x}{x^2 + x - 2}
+    f(x) = a^x
   \]
 
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale=1.0]{figure4.eps}
-    \caption*{Case Two: $f(x) = \frac{2 x^2}{x^2 + x - 2}$}
-  \end{figure}
+    $a > 0$ and $a \neq 1$
 
-  \subsubsection{Case Three: $n > m$}
+  Exponentials are used when the amount of something you will have in the future is a percentage (possibly more than
+  100\%) of what you have now.  
+  
+  Examples include bacteria growth rate, interest, and radioactive decay.
 
-  When $n > m$, there is no horizontal asymptote because the numerator grows faster than the denominator and is larger for
-  large values of $x$. 
+  \section{Growth Rate}
+  Exponentials grow faster than polynomials because gap also grows at an exponential rate.
 
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale=1.0]{figure5.eps}
-    \caption*{Case Three: $f(x) = \frac{2 x^3}{x^2 + x - 2}$}
-  \end{figure}
+  \begin{itemize*}
+    \item $2^x$ vs $10x$: exponential always doubles, while $f(x) = 10x$ always grows by 10
+    \item $2^x$ vs $x^2$: exponential always doubles (gap is $2^x$), while $f(x) = x^2$ always grows by 1, 3, 5, $2n +
+      1$.  Gap is linear and exponentials grow faster than linear.
+    \item Similarly for higher degree polynomials.
+  \end{itemize*}
 
-  \subsection{Slant Asymptotes}
+  \begin{tabular}[h]{rrrr}
+    \toprule
+    $x$ & $x^2$ & $x^3$ & $2^x$ \\
+    \midrule
+    5  & 25    & 125     & 32 \\
+    10 & 100   & 1,000   & 1,024 \\
+    25 & 625   & 15,625  & 33,554,432 \\
+    50 & 2,500 & 125,000 & 1,125,899,906,842,624 \\
+    \bottomrule
+  \end{tabular}
 
-  \subsubsection{Overview}
+  P vs. NP time
 
-  When the degree of numerator is exactly one more than the degree of the denominator, the function can be rewritten using
-  long division:
+  \section{Graphs}
 
-  $r(x) = \frac{P(x)}{Q(x)} = ax + b + \frac{R(x)}{Q(x)}$.  
+  \begin{align*}
+    f(x) &= 2^x \\
+    g(x) &= \left( \frac{1}{2} \right)^x \\
+         &= \left( 2^{-1} \right)^x \\
+         &= 2^{-x} \\
+  \end{align*}
 
-  The degree of $R$ is less than the degree of $Q$, so for large values of $x$, $\frac{R(x)}{Q(x)} \rightarrow 0$ and
-  the function approaches the line $y = ax + b$.
+  \section{Applications}
+
+  \subsection{Compound Interest}
+
+  Interest compounded annually:
+  \begin{align*}
+    A_1  &= P(1 + r) \\
+    A_2  &= A_1(1 + r) = P(1 + r)^2 \\
+    A_3  &= A_2(1 + r) = P(1 + r)^3 \\
+    A(t) &= A_{t - 1}(1 + r) \\
+         &= P(1 + r)^t \\
+  \end{align*}
+
+  Compounded $n$ times per year: 
+  \[
+    A(t) = P \left( 1 + \frac{r}{n} \right)^{nt} \\
+  \]
+
+  Compounded continuously:
+  \begin{align*}
+    m &= \frac{n}{r} \\
+    n &= mr \\
+    \\
+    A(t) &= P\left(1 + \frac{r}{n}\right)^{nt} \\
+         &= P\left(1 + \frac{1}{m}\right)^{mrt} \\
+         &= P \left[ \left(1 + \frac{1}{m}\right)^{m} \right]^{rt} \\
+    \\
+    \lim_{x \to \infty} \left[ \left(1 + \frac{1}{m}\right)^{m} \right] &= e \\
+  \end{align*}
+
+  \subsection{Carbon Dating}
+
+  Amount of radioactive substance left after $t$ years:
+  \[
+    m(t) = m_0 e^{-kt}
+  \]
 
   \pagebreak
 
-  \subsubsection{Examples}
-  \begin{align*}
-    f(x) &= \frac{x^2-x-2}{x+3} \\
-         &= x - 4 + \frac{10}{x + 3} \\
-  \end{align*}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale=1.0]{figure6.eps}
-    \caption*{$f(x) = \frac{x^2-x-2}{x+3}$}
-  \end{figure}
+  \subsection{Free Fall}
 
   \begin{align*}
-    f(x) &= \frac{x^3-2 x^2-x+2}{x^2-x-6} \\
-         &= x + 1 + \frac{4x - 4}{x^2-x-6} \\
+    v(t) &= \frac{32}{k} \left( 1 - e^{-kt} \right) \\
+         &\approx \frac{32}{k} \\
+    y(t) &= \frac{32}{k} t + \frac{32}{k^2} e^{-kt} - \frac{32}{k^2} \\
+         &\approx \frac{32}{k} t - \frac{32}{k^2} \\
   \end{align*}
 
-  \begin{figure}[H]
+  \begin{itemize*}
+    \item feet and seconds
+    \item $k$ depends on shape of falling object
+    \item homework problem seems to be off by factor of 2 (uses 16 instead of 32)
+  \end{itemize*}
+
+  \begin{figure}[h]
     \centering
-    \includegraphics[scale=1.0]{figure7.eps}
-    \caption*{$f(x) = \frac{x^3-2 x^2-x+2}{x^2-x-6}$}
+    \includegraphics[scale=0.9]{freeFallVelocity.eps}
+    \caption{Free Fall Velocity ($k = 0.2$)}
   \end{figure}
 
-  \section{General Procedure}
-
-  \begin{enumerate}
-    \item Find vertical asymptotes by solving for denominator equal to zero.
-
-    \item Find x-intercepts by solving for numerator equal to zero.
-
-    \item If degree of numerator is less than the degree of the denominator there is a horizontal asymptote at
-      $y = 0$.
-
-    \item If degree of numerator is equal to the degree of the denominator there is a horizontal asymptote at 
-      $y = \frac{a}{b}$.
-
-    \item If the degree of numerator is exactly one greater than the degree of the denominator there is a slant
-      asymptote.
-
-    \item Plug in a few other points to fill in the blanks
-
-    \item Draw graph
-
-  \end{enumerate}
-
-  \section{Examples}
-
-  \begin{enumerate}
-
-    \item
-      \begin{figure}[H]
-        \centering
-        \includegraphics[scale=1.0]{example1.eps}
-        \caption*{Example 1: $f(x) = \frac{3}{x - 4}$}
-      \end{figure}
-
-    \item
-      \begin{figure}[H]
-        \centering
-        \includegraphics[scale=1.0]{example2.eps}
-        \caption*{Example 2: $f(x) = \frac{4x}{2x - 5} = 2 + \frac{10}{2x - 5}$}
-      \end{figure}
-
-    \item
-      \begin{figure}[H]
-        \centering
-        \includegraphics[scale=1.0]{example3.eps}
-        \caption*{Example 3: $f(x) = \frac{x+1}{x^2+2 x-3}$}
-      \end{figure}
-
-    \item
-      \begin{figure}[H]
-        \centering
-        \includegraphics[scale=1.0]{example4.eps}
-        \caption*{Example 4: $f(x) = \frac{3 x^2-3 x-36}{x^2+x-2}$}
-      \end{figure}
-
-    \item
-      \begin{figure}[H]
-        \centering
-        \includegraphics[scale=1.0]{example5.eps}
-        \caption*{Example 5: $f(x) = \frac{x^3+1}{x^2-9} = x + \frac{9x + 1}{x^2-9}$}
-      \end{figure}
-
-      \pagebreak
-
-    \item Find an equation of a rational function that satisfies the given conditions.
-
-      \begin{enumerate}[a]
-        \item 
-          \begin{itemize*}
-            \item vertical asymptote: $x = 4$
-            \item horizontal asymptote: $y = -1$
-            \item x-intercept: 3
-          \end{itemize*}
-
-          \begin{figure}[H]
-            \centering
-            \includegraphics[scale=1.0]{example6.eps}
-            \caption*{Example 6: $f(x) = \frac{3 - x}{x + 4}$}
-          \end{figure}
-
-        \item 
-          \begin{itemize*}
-            \item vertical asymptotes: $x = -2$ and $x = 1$
-            \item horizontal asymptote: $y = 0$
-            \item x-intercepts: $x = -1$ and $x = 0$
-          \end{itemize*}
-
-          \begin{figure}[H]
-            \centering
-            \includegraphics[scale=1.0]{example7.eps}
-            \caption*{Example 7: $\frac{2 x^2+2 x}{x^2+x-2}$}
-          \end{figure}
-      \end{enumerate}
-  \end{enumerate}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.9]{freeFallPosition.eps}
+    \caption{Free Fall Position ($k = 0.2$)}
+  \end{figure}
 \end{document}
