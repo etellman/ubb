@@ -42,8 +42,6 @@
   \maketitle
   \tableofcontents
 
-  \pagebreak
-
   \section{Description}
 
   \[
@@ -102,8 +100,6 @@
     j(x) &= -2^{-x} \\
   \end{align*}
 
-  \pagebreak
-
   \begin{figure}[h]
     \centering
     \includegraphics{figure1.eps}
@@ -113,7 +109,7 @@
 
   $f(x) = c \cdot a^x$ and contains: $(0, 2)$ and $(2, 18)$.  Find $c$ and $a$.
 
-  \subsection{Compound Interest/e}
+  \section{e}
 
   Interest compounded annually:
   \begin{align*}
@@ -143,8 +139,8 @@
 
   Alternate way to calculate e:
   \begin{align*}
-    (1 + a)^n           &= 1 + an + a^2 \frac{n (n - 1)}{2!} + a^3 \frac{n(n-1)(n-2)}{3!} + a^4 \frac{n(n-1)(n-2)(n-3)}{4!} + \ldots \\
-    (1 + \frac{1}{n})^n &= 1 + \frac{1}{n} \cdot n + \left( \frac{1}{n} \right)^2 \frac{ n (n - 1)}{2!}
+    (1 + a)^n                        &= 1 + an + a^2 \frac{n (n - 1)}{2!} + a^3 \frac{n(n-1)(n-2)}{3!} + a^4 \frac{n(n-1)(n-2)(n-3)}{4!} + \ldots \\
+    \left( 1 + \frac{1}{n} \right)^n &= 1 + \frac{1}{n} \cdot n + \left( \frac{1}{n} \right)^2 \frac{ n (n - 1)}{2!}
         + \left( \frac{1}{n} \right)^3 \frac{n(n-1)(n-2)}{3!} + \left( \frac{1}{n} \right)^4 \frac{n(n-1)(n-2)(n-3)}{4!} + \ldots \\
         e &= 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \frac{1}{5!} + \ldots \\
   \end{align*}
@@ -155,7 +151,31 @@
             &\approx 1 + \frac{1}{n} \\
   \end{align*}
 
+  rate of change of e:
+  \begin{align*}
+    \frac{e^{x + h} - e^x}{h} & = \frac{e^x \left( e^h - 1 \right)}{h} \\
+                              & \approx \frac{e^x \left( 1 + h - 1 \right)}{h} \\
+                              & = \frac{e^x \cdot h}{h} \\
+                              & = e^x \\
+  \end{align*}
+
   \section{Applications}
+
+  \subsection{Compound Interest}
+  \begin{align*}
+    A(t) &= P \left( 1 + \frac{r}{n} \right)^{nt} \\
+    A(t) &= P e^{rt} \\
+  \end{align*}
+
+  compare:
+  \begin{itemize*}
+    \item simple vs. compounded annually
+    \item same interest rate different compounding rate
+    \item different interest rate same compounding rate
+    \item compounded monthly vs continuous
+    \item given interest rate, compounding schedule, and time period, how much do you need to invest today to get to the
+      target amount in the desired time? (present value)
+  \end{itemize*}
 
   \subsection{Carbon Dating}
 
