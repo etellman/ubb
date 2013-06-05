@@ -187,16 +187,21 @@
   \subsection{Free Fall}
 
   \begin{align*}
-    v(t) &= \frac{32}{k} \left( 1 - e^{-kt} \right) \\
-         &\approx \frac{32}{k} \\
-    y(t) &= \frac{32}{k} t + \frac{32}{k^2} e^{-kt} - \frac{32}{k^2} \\
-         &\approx \frac{32}{k} t - \frac{32}{k^2} \\
+    v(t) &= \frac{mg}{k} \left( 1 - e^{-kt/m} \right) \\
+         &\approx \frac{mg}{k} \\
+    y(t) &= \frac{mg}{k} t + \frac{mg}{k^2} e^{-kt} - \frac{mg}{k^2} \\
+         &\approx \frac{mg}{k} t - \frac{mg}{k^2} \\
+  \end{align*}
+
+  for a 1 pound object on earth, $mg \approx 32$
+  \begin{align*}
+    v(t) &\approx \frac{32}{k} \\
+    y(t) &\approx \frac{32}{k} t - \frac{32}{k^2} \\
   \end{align*}
 
   \begin{itemize*}
     \item feet and seconds
-    \item $k$ depends on shape of falling object
-    \item homework problem seems to be off by factor of 2 (uses 16 instead of 32)
+    \item $k$ is proportionality constant in air resistance: $r = kv$, and depends on density of air shape of falling object
   \end{itemize*}
 
   \begin{figure}[h]
