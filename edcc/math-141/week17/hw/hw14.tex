@@ -51,23 +51,75 @@
   Section 4.2: 
 
   \section{Extra Credit}
-  Section 4.2, TO DO
+  Section 4.2: 75-76
 
   \ifprintanswers
     \begin{description}
-      \item[49] TO DO
+      \item[75]
+        \begin{enumerate}[a]
+
+          \item 
+            \begin{align*}
+              \log_{10} x      & > 0 \\
+              10^{\log_{10} x} & > 10^0 \\
+              x                & > 1 \\
+            \end{align*}
+
+            \fbox{$(1, \infty)$}
+
+          \item 
+            \begin{align*}
+              y        &= \log_2 (\log_{10} x) \\
+              2^y      &= \log_{10} x \\
+              10^{2^y} &= x \\
+            \end{align*}
+
+            The inverse function is: \fbox{$f^{-1}(x) = 10^{2^x}$}
+
+            % check:
+            % \begin{align*}
+            %   f^{-1}(f(x)) &= 10^{ 2^{ \log_2( \log_{10} x ) } } \\
+            %                &= 10^{\log_{10} x} \\
+            %                &= x \\
+            %   \\
+            %   f(f^{-1}(x)) &= \log_2 (\log_{10} 10^{2^x}) \\
+            %                &= \log_2 2^x \\
+            %                &= x \\
+            % \end{align*}
+
+          \item 
+            \begin{align*}
+              \ln(\ln x)     & > 0 \\
+              e^{\ln(\ln x)} & > e^0 \\
+              \ln x          & > 1 \\
+              e^{\ln x}      & > e^1 \\
+              x              & > e \\
+            \end{align*}
+
+            \fbox{$(e, \infty)$}
+
+          \item 
+            \begin{align*}
+              y        &= \ln(\ln(\ln x)) \\
+              e^y      &= \ln(\ln x) \\
+              e^{e^y}      &= \ln x \\
+              e^{e^{e^y}}      &= x \\
+            \end{align*}
+
+            The inverse function is: \fbox{$f^{-1}(x) = e^{e^{e^x}}$}
+        \end{enumerate}
     \end{description}
 
   \section{Review}
 
+  Find $f^{-1}(x)$
+
   \begin{enumerate}
-    \item Simplify: $\frac{\sqrt{-4}\sqrt{-27}\sqrt{-16}}{\sqrt{-3}}$
+
+    \item $f(x) = \frac{x + 1}{x - 2}$
       \begin{solution}
         \begin{align*}
-          \frac{\sqrt{-4}\sqrt{-27}\sqrt{-16}}{\sqrt{-3}} &= \frac{2i \cdot 3i \sqrt{3} \cdot 4i}{i \sqrt{3}} \\
-          &= \frac{24i^3 \sqrt{3}}{i \sqrt{3}} \\
-          &= 24 i^2 \\
-          &= -24 \\
+          y &= 
         \end{align*}
       \end{solution}
 
@@ -85,7 +137,7 @@
     \item[4] 
       \begin{align*}
         10^{-1} &= 0.1 \\
-        8^3 &= 512 \\
+        8^3     &= 512 \\
       \end{align*}
 
     \item[5] 
@@ -248,8 +300,9 @@
 
         \item 
           \begin{align*}
-            \log_2 16     &= x \\
-            x &= 4 \\
+            \log_2 16 &= x \\
+            2^x       &= 16 \\
+            x         &= 4 \\
           \end{align*}
       \end{enumerate}
 
@@ -265,7 +318,8 @@
         \item 
           \begin{align*}
             \log_{10} 0.1 &= x \\
-            x &= -1 \\
+            10^x          &= 0.1 \\
+            x             &= -1 \\
           \end{align*}
       \end{enumerate}
 
@@ -274,7 +328,8 @@
         \item 
           \begin{align*}
             \log_3 243 &= x \\
-            x &= 5 \\
+            3^x        &= 243 \\
+            x          &= 5 \\
           \end{align*}
 
         \item 
@@ -424,8 +479,10 @@
     \item[45] VI
     \item[46] I
 
+    \pagebreak
+
     \item[49]
-      \begin{tabular}[h]{lll}
+      \begin{tabular}[H]{lll}
         \toprule
         domain    & $(4, \infty)$ \\
         range     & $(-\infty, \infty)$ \\
@@ -433,14 +490,14 @@
         \bottomrule
       \end{tabular}
 
-      \begin{figure}[h]
+      \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.9]{problem49.eps}
         \caption{Problem 49: $f(x) = \log_2(x - 4)$}
       \end{figure}
 
     \item[50]
-      \begin{tabular}[h]{lll}
+      \begin{tabular}[H]{lll}
         \toprule
         domain    & $(0, \infty)$ \\
         range     & $(-\infty, \infty)$ \\
@@ -448,14 +505,14 @@
         \bottomrule
       \end{tabular}
 
-      \begin{figure}[h]
+      \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.9]{problem50.eps}
         \caption{Problem 50: $f(x) = -\log_{10} x$}
       \end{figure}
 
     \item[51]
-      \begin{tabular}[h]{lll}
+      \begin{tabular}[H]{lll}
         \toprule
         domain    & $(-\infty, 0)$ \\
         range     & $(-\infty, \infty)$ \\
@@ -463,14 +520,14 @@
         \bottomrule
       \end{tabular}
 
-      \begin{figure}[h]
+      \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.9]{problem51.eps}
-        \caption{Problem 51: $f(x) = \log_{5} -x$}
+        \caption{Problem 51: $f(x) = \log_{5} (-x)$}
       \end{figure}
 
     \item[52]
-      \begin{tabular}[h]{lll}
+      \begin{tabular}[H]{lll}
         \toprule
         domain    & $(-2, \infty)$ \\
         range     & $(-\infty, \infty)$ \\
@@ -478,14 +535,14 @@
         \bottomrule
       \end{tabular}
 
-      \begin{figure}[h]
+      \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.9]{problem52.eps}
         \caption{Problem 52: $f(x) = \ln(x + 2)$}
       \end{figure}
 
     \item[53]
-      \begin{tabular}[h]{lll}
+      \begin{tabular}[H]{lll}
         \toprule
         domain    & $(0, \infty)$ \\
         range     & $(-\infty, \infty)$ \\
@@ -493,14 +550,14 @@
         \bottomrule
       \end{tabular}
 
-      \begin{figure}[h]
+      \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.9]{problem53.eps}
         \caption{Problem 53: $f(x) = 2 + \log_3 x$}
       \end{figure}
 
     \item[54]
-      \begin{tabular}[h]{lll}
+      \begin{tabular}[H]{lll}
         \toprule
         domain    & $(1, \infty)$ \\
         range     & $(-\infty, \infty)$ \\
@@ -508,29 +565,29 @@
         \bottomrule
       \end{tabular}
 
-      \begin{figure}[h]
+      \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.9]{problem54.eps}
         \caption{Problem 54: $f(x) = \log_3(x - 1) - 2$}
       \end{figure}
 
-    \item[57]
-      \begin{tabular}[h]{lll}
-        \toprule
-        domain    & $(0, \infty)$ \\
-        range     & $[0, \infty)$ \\
-        asymptote & $x = 0$ \\
-        \bottomrule
-      \end{tabular}
+    % \item[57]
+    %   \begin{tabular}[H]{lll}
+    %     \toprule
+    %     domain    & $(0, \infty)$ \\
+    %     range     & $[0, \infty)$ \\
+    %     asymptote & $x = 0$ \\
+    %     \bottomrule
+    %   \end{tabular}
 
-      \begin{figure}[h]
-        \centering
-        \includegraphics[scale = 0.9]{problem57.eps}
-        \caption{Problem 57: $f(x) = | \ln x |$}
-      \end{figure}
+    %   \begin{figure}[H]
+    %     \centering
+    %     \includegraphics[scale = 0.9]{problem57.eps}
+    %     \caption{Problem 57: $f(x) = | \ln x |$}
+    %   \end{figure}
 
     \item[58]
-      \begin{tabular}[h]{lll}
+      \begin{tabular}[H]{lll}
         \toprule
         domain    & $(-\infty, 0) \cup (0, \infty)$ \\
         range     & $[-\infty, \infty)$ \\
@@ -538,7 +595,7 @@
         \bottomrule
       \end{tabular}
 
-      \begin{figure}[h]
+      \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.9]{problem58.eps}
         \caption{Problem 58: $f(x) = \ln |x|$}
@@ -550,6 +607,8 @@
         x     & > -3 \\
       \end{align*}
 
+      \fbox{$(-3, \infty)$} 
+
     \item[60]
       \begin{align*}
         8 - 2x & > 0 \\
@@ -557,6 +616,72 @@
         x      & < 4 \\
       \end{align*}
 
+      \fbox{$(-\infty, 4)$} 
+
+    \item[61]
+      \begin{align*}
+        x^2 - 1 & > 0 \\
+      \end{align*}
+
+      \fbox{$(-\infty, -1) \cup (1, \infty)$} 
+
+    \item[62]
+      \begin{align*}
+        x - x^2  & > 0 \\
+        x(1 - x) & > 0 \\
+      \end{align*}
+
+      \fbox{$(0, 1)$} 
+
+    \item[63]
+      \begin{align*}
+        2 - x & > 0 \\
+        x     & < 2 \\
+      \end{align*}
+
+      \fbox{$(0, 2)$} 
+
+    \item[64]
+      \begin{align*}
+        x-2 & >0 \\
+        x   & >2 \\
+        \\
+        10 - x & > 0 \\
+        x      & < 10 \\
+      \end{align*}
+
+      \fbox{$(2, 10)$} 
+
+    \item[78]
+      \begin{align*}
+        C &= -2500 \ln \left( \frac{0.7 I_0}{I_0} \right) \\
+          &= -2500 \ln 0.7 \\
+          &\approx \boxed{\unit[892]{moles/liter}} \\
+      \end{align*}
+
+    \item[79]
+      \begin{align*}
+        A &= -8267 \ln \left( \frac{0.73 D_0}{D_0} \right) \\
+          &= -8267  \ln 0.73 \\
+          &\approx \boxed{\unit[2602]{years}} \\
+      \end{align*}
+
+    \item[80]
+      \begin{align*}
+        t &= 3 \frac{\log(1,000,000 / 50)}{\log 2} \\
+          &\approx \boxed{\unit[43]{hours}} \\
+      \end{align*}
+
+    \item[81]
+      \begin{tabular}[H]{lr}
+        \toprule
+        rate & time \\
+        \midrule
+        6\% & \unit[11.5]{years} \\
+        7\% & \unit[9.9]{years} \\
+        8\% & \unit[8.7]{years} \\
+        \bottomrule
+      \end{tabular}
     \end{description}
 
   \else
