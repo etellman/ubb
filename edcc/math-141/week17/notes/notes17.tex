@@ -42,7 +42,8 @@
   \maketitle
   \tableofcontents
 
-  \section{John Napier}
+  \section{History}
+  \subsection{John Napier}
 
   \begin{itemize*}
     \item 1550-1617
@@ -77,6 +78,27 @@
 
   Square root algorithm by repeated division.
 
+  \begin{tabular}[H]{rr}
+    \toprule
+    $x$    & $10/guess$ \\
+    \midrule
+    3      & 3.3333 \\
+    3.1667 & 3.1579 \\
+    3.1623 & 3.1623 \\
+    \bottomrule
+  \end{tabular}
+
+  \begin{tabular}[H]{rr}
+    \toprule
+    $x$    & $\sqrt{10}/guess$ \\
+    \midrule
+    1.5    & 2.1082 \\
+    1.8041 & 1.7528 \\
+    1.7785 & 1.7781 \\
+    1.7783 & 1.7783 \\
+    \bottomrule
+  \end{tabular}
+
   Made table of fractional powers of 10 with repeated square roots.
 
   \begin{tabular}[H]{lr}
@@ -92,5 +114,63 @@
     x & $1 + 2.3026x$ \\
     \bottomrule
   \end{tabular}
+
+  \begin{align*}
+    \log 7 &= 10^{1/2} \cdot 2.2136 \\
+           &= 10^{1/2} \cdot 10^{1/4} \cdot 1.2448 \\
+           &= 10^{1/2} \cdot 10^{1/4} \cdot 10^{1/16} \cdot 1.0779 \\
+           &= 10^{1/2} \cdot 10^{1/4} \cdot 10^{1/16} \cdot 10^{1/32} \cdot 1.0031 \\
+    \\
+    1.0031 &= 1 + 2.2136x \\
+    0.0031  &= 0.2136x \\
+    x      &= 0.0014
+    \\
+    \log 7 &= 10^{1/2} \cdot 10^{1/4} \cdot 10^{1/16} \cdot 10^{1/32} \cdot 10^{0.0014} \\
+           &= 10^0.8452 \\
+  \end{align*}
+
+  Show another example of calculation.
+
+  \subsection{After Napier}
+
+  \begin{itemize}
+    \item Briggs (1561-1631) changed details of calculation to match current base 10 logarithms.  From 1614-1624
+      calculated all integers from 1-20,000 and 90,000 to 100,000.  
+
+    \item Adrian Vlacq (1600-1667) filled in gaps for second edition in 1628.
+
+    \item From 1924-1949 new set of tables calculated.
+
+    \item Computers used after around 1950.
+  \end{itemize}
+
+  \pagebreak
+
+  \section{Definitions}
+
+  \[
+    \log_{10} x = a \Longleftrightarrow 10^a = x
+  \]
+
+  examples:
+  \begin{align*}
+    \log_{10} 100 &= 2 \\
+    \log_{10} 1 &= 1 \\
+    \log_{10} \frac{1}{10} &= -1 \\
+  \end{align*}
+
+  General
+  \[
+    \log_b x = a \Longleftrightarrow b^a = x
+  \]
+
+  examples:
+  \begin{align*}
+    \log_6 36 = 2 & \Longleftrightarrow 6^2 = 36 \\
+    \log_2 32 = 5 & \Longleftrightarrow 2^5 = 32 \\
+    3^4 = 81 & \Longleftrightarrow \log_3 81 = 4 \\
+    2^{-3} = \frac{1}{8} & \Longleftrightarrow \log_2 \frac{1}{8} = -3 \\
+    10^3 = 1000 & \Longleftrightarrow \log_{10} 1000 = 3 \\
+  \end{align*}
 
 \end{document}
