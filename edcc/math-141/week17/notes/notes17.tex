@@ -221,4 +221,33 @@
     \item $\log_2 (-x)$
   \end{itemize*}
   
+  \pagebreak
+
+  \section{Carbon 14 Dating}
+
+  Half life of Carbon 14 is 5,730 years.
+
+  Like compound interest running time in reverse. Principal is amount present today and amount is the amount present in
+  the past.
+
+  \begin{align*}
+    A      &= P e^{rt} \\
+    \\
+    D_0    &= D e^{rt} \\
+    e^{rt} &= \frac{D_0}{D} \\
+    rt     &= \ln{\frac{D_0}{D}} \\
+    \\
+    r \cdot 5730 &= \ln{2} \\
+    r            &= \frac{\ln{2}}{5730} \\
+                 &= 0.000120968 \\
+    \\
+    t &= \frac{1}{r} \cdot \ln{\frac{D_0}{D}} \\
+      &= 8267 \ln{\frac{D_0}{D}} \\
+  \end{align*}
+
+  When 60 grams out of 100 are left:
+  \[
+    t = 8267 \ln{\frac{100}{60}} = \unit[4223]{years}
+  \]
+
 \end{document}
