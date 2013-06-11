@@ -38,7 +38,7 @@
   \usepackage{2in1, lscape} 
 \fi
 
-\date{June 5, 2013}
+\date{June 12, 2013}
 \author{}
 \title{Math 141 \\ Homework 13}
 
@@ -48,9 +48,9 @@
 
   \section{Homework}
 
-  Section 4.2: 
+  Section 4.2: 1-32, 37-46, 49-54, 58-81
 
-  \section{Extra Credit}
+ \section{Extra Credit}
   Section 4.2: 75-76
 
   \ifprintanswers
@@ -109,6 +109,27 @@
             The inverse function is: \fbox{$f^{-1}(x) = e^{e^{e^x}}$}
         \end{enumerate}
     \end{description}
+  \fi
+
+\begin{enumerate}
+  \item 
+    Remember that a definition of $e$ is:
+    \[
+      e \approx \left( 1 + \frac{1}{n} \right)^n
+    \]
+    where the approximation gets better as $n$ gets bigger.
+
+    An interesting fact about $e^x$ is that $e^x \approx x$ when $x$ is a small number.  Explain why.
+
+  \item 
+    When calculating the base 10 logarithm table, Napier noticed that for small $x$:
+    \[
+      \log_{10} x \approx 1 + 2.3026x
+    \]
+
+    Where does the number 2.3026 come from and why does $\log_{10} x \approx 1 + 2.3026x$ for small $x$?
+    
+\end{enumerate}
 
   \section{Review}
 
@@ -116,14 +137,33 @@
 
   \begin{enumerate}
 
+    \item $f(x) = x^3 - 1$ 
+      \begin{solution}
+        \begin{align*}
+          y   &= x^3 - 1 \\
+          x^3 &= y + 1 \\
+          x   &= \sqrt[3]{y + 1} \\
+          \\
+          f^{-1}(x) &= \sqrt[3]{x + 1}
+        \end{align*}
+      \end{solution}
+
     \item $f(x) = \frac{x + 1}{x - 2}$
       \begin{solution}
         \begin{align*}
-          y &= 
+          y        &= \frac{x + 1}{x - 2} \\
+          xy - 2y  &= x + 1 \\
+          xy - x   &= 2y + 1 \\
+          x(y - 1) &= 2y + 1 \\
+          x        &= \frac{2y + 1}{y - 1} \\
+          \\
+          f^{-1}(x) &= \frac{2x + 1}{x - 1} \\
         \end{align*}
       \end{solution}
 
   \end{enumerate}
+
+  \ifprintanswers
     \section{Section 4.2}
 
     \begin{description}
