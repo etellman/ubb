@@ -51,12 +51,22 @@
   Section 4.3: TO DO
 
  \section{Extra Credit}
-  Section 4.2: TO DO
+  Section 4.3: 61 and 67
 
   \ifprintanswers
     \begin{description}
-      \item[75]
-        answer here
+      \item[61]
+        \begin{align*}
+          - \log(x - \sqrt{x^2 - 1}) &= \log(x - \sqrt{x^2 - 1})^{-1} \\
+                                     &= \log \frac{1}{x - \sqrt{x^2 - 1}} \\
+                                     &= \log \left[ \frac{1}{x - \sqrt{x^2 - 1}} \cdot \frac{x + \sqrt{x^2 - 1}}{x + \sqrt{x^2 - 1}} \right] \\
+                                     &= \log \left[ \frac{x + \sqrt{x^2 - 1}}{x^2 - (x^2 - 1)} \right] \\
+                                     &= \log ( x + \sqrt{x^2 - 1} ) \\
+        \end{align*}
+
+      \item[67]
+        The problem is in the last step.  The log of a number less than one is a negative number so the inequality should go the other direction.
+
     \end{description}
   \fi
 
@@ -380,6 +390,72 @@
           \log_5 2 &= \frac{\ln 2}{\ln 5} \\
                    &\approx \boxed{0.430677} \\
         \end{align*}
+
+      \item[51] 
+        \begin{align*}
+          \log_3 16 &= \frac{\ln 16}{\ln 3} \\
+                   &\approx \boxed{2.52372} \\
+        \end{align*}
+
+      \item[52] 
+        \begin{align*}
+          \log_6 92 &= \frac{\ln 92}{\ln 6} \\
+                   &\approx \boxed{\boxed{2.52366}} \\
+        \end{align*}
+
+      \item[59] 
+        \begin{align*}
+          \log e &= \frac{\ln e}{\ln 10} \\
+                 &= \boxed{\frac{1}{\ln 10}} \\
+        \end{align*}
+
+      \item[60] 
+        \begin{align*}
+          (\log_2) (\log_5 7) &= \frac{\ln 5}{\ln 2} \cdot \frac{\ln 7}{\ln 5} \\
+                              &= \boxed{\frac{\ln 7}{\ln 2}} \\
+        \end{align*}
+
+      \item[63]
+        \begin{enumerate}[a]
+          \item 
+            \begin{align*}
+              \log P &= \log c - k \log W \\
+                     &= \log c - \log W^k \\
+                     &= \log \frac{c}{W^k} \\
+                   P &= \boxed{\frac{c}{W^k}} \\
+            \end{align*}
+
+          \item
+            \begin{align*}
+              P(2)  & = \frac{8,000}{2^{2.1}} \\
+                    & \approx \boxed{\unit[1,866]{people}} \\
+              \\
+              P(10) & = \frac{8,000}{10^{2.1}} \\
+                    & \approx \boxed{\unit[64]{people}} \\
+            \end{align*}
+
+        \end{enumerate}
+
+      \item[64]
+        \begin{enumerate}[a]
+          \item 
+            \begin{align*}
+              \log S &= \log c + k \log A \\
+                     &= \log c + \log A^k \\
+                     &= \log cA^k \\
+                   S &= \boxed{cA^k} \\
+            \end{align*}
+
+          \item
+            \begin{align*}
+              S     &= cA^3 \\
+              S(2A) &= c (2A)^3 \\
+                    &= 8 cA^3 \\
+                    &= \boxed{8 S(A)} \\
+            \end{align*}
+
+        \end{enumerate}
+
 
     \end{description}
 
