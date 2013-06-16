@@ -20,7 +20,7 @@
 
 % \begin{figure}[H]
 %   \centering
-%   \includegraphics[scale=0.9]{problem7.eps}
+%   \includegraphics[scale=0.8]{problem7.eps}
 %   \caption*{Problem 7}
 % \end{figure}
 
@@ -32,13 +32,13 @@
 %   \bottomrule
 % \end{tabular}
 
-\printanswers
+% \printanswers
 
 \ifprintanswers 
   \usepackage{2in1, lscape} 
 \fi
 
-\date{June 17, 2013}
+\date{June 19, 2013}
 \author{}
 \title{Math 141 \\ Homework 15}
 
@@ -48,9 +48,13 @@
 
   \section{Homework}
 
-  Section 4.3: TO DO
+  Section 4.3: 1-24, 31-45, 48-52, 59-60, 63-64
 
- \section{Extra Credit}
+  \ifprintanswers
+    \pagebreak
+  \fi
+
+  \section{Extra Credit}
   Section 4.3: 61 and 67
 
   \ifprintanswers
@@ -70,11 +74,39 @@
     \end{description}
   \fi
 
+  \ifprintanswers
+    \pagebreak
+  \fi
+
   \section{Review}
 
+  Graph each function
   \begin{enumerate}
 
-    \item $f(x) = x^3 - 1$ 
+    \item $f(x) = x + |x|$ 
+      \ifprintanswers
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale=0.8]{review1.eps}
+          \caption{$f(x) = x + |x|$}
+        \end{figure}
+      \fi
+
+    \item 
+      \[
+        \begin{cases}
+          -x^2 & \text{ if } x < 0 \\
+          x    & \text{ if } x \geq 0 \\
+        \end{cases}
+      \]
+
+      \ifprintanswers
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale=0.8]{review2.eps}
+          \caption{$Piecewise Function$}
+        \end{figure}
+      \fi
 
   \end{enumerate}
 
@@ -460,14 +492,15 @@
     \end{description}
 
   \else
-    \vspace{2 cm}
+    \vspace{5 cm}
     \begin{quote}
       \begin{em}
-        TO DO
+        The law is an adroit mixture of customs that are beneficial to society, and could be followed even if no law existed, and others that are of
+        advantage to a ruling minority, but harmful to the masses of men, and can be enforced on them only by terror.
       \end{em}
     \end{quote}
 
-    \hspace{1 cm} --Carl Jung
+    \hspace{1 cm} --Peter Kropotkin
   \fi
 
 \end{document}
