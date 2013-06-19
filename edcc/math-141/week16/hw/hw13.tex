@@ -104,14 +104,14 @@
       \item[50]
         For this one you have to start from the right side:
         \begin{align*}
-          \sinh(x) & \cosh(y) + \cosh(x) \sinh(y) \\
-                            &= \frac{e^x - e^{-x}}{2} \cdot \frac{e^y + e^{-y}}{2} 
-                                 + \frac{e^x + e^{-x}}{2} \cdot \frac{e^y - e^{-y}}{2} \\
-                            &= \frac{e^{x + y} + e^{x - y} - e^{y - x} - e^{-x - y}}{4} 
-                                + \frac{e^{x + y} - e^{x - y} + e^{y - x} - e^{-x - y}}{4} \\
-                            &= \frac{2e^{x + y} - 2e^{-x - y}}{4} \\
-                            &= \frac{e^{x + y} - e^{-(x + y)}}{2} \\
-                            &= \sinh(x + y) \\
+          & \sinh(x) \cosh(y) + \cosh(x) \sinh(y) \\
+          &= \frac{e^x - e^{-x}}{2} \cdot \frac{e^y + e^{-y}}{2} 
+               + \frac{e^x + e^{-x}}{2} \cdot \frac{e^y - e^{-y}}{2} \\
+          &= \frac{e^{x + y} + e^{x - y} - e^{y - x} - e^{-x - y}}{4} 
+              + \frac{e^{x + y} - e^{x - y} + e^{y - x} - e^{-x - y}}{4} \\
+          &= \frac{2e^{x + y} - 2e^{-x - y}}{4} \\
+          &= \frac{e^{x + y} - e^{-(x + y)}}{2} \\
+          &= \sinh(x + y) \\
         \end{align*}
         
     \end{description}
