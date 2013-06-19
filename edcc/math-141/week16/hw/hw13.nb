@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     28170,        722]
-NotebookOptionsPosition[     26017,        643]
-NotebookOutlinePosition[     26371,        659]
-CellTagsIndexPosition[     26328,        656]
+NotebookDataLength[     28257,        723]
+NotebookOptionsPosition[     26114,        644]
+NotebookOutlinePosition[     26468,        660]
+CellTagsIndexPosition[     26425,        657]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -617,12 +617,13 @@ Cell[BoxData[{
    SuperscriptBox["2", "n"], "-", "2"}]}], "\[IndentingNewLine]", 
  RowBox[{"f", "[", "20", "]"}]}], "Input",
  CellChangeTimes->{{3.5805454984662123`*^9, 3.5805455376039057`*^9}, {
-  3.580545602027409*^9, 3.5805456027540083`*^9}}],
+  3.580545602027409*^9, 3.5805456027540083`*^9}, {3.580593179338925*^9, 
+  3.580593184471815*^9}}],
 
 Cell[BoxData[
  FormBox["1048574", TraditionalForm]], "Output",
  CellChangeTimes->{{3.580545522530118*^9, 3.5805455385664682`*^9}, 
-   3.580545603884254*^9}]
+   3.580545603884254*^9, {3.580593180973835*^9, 3.5805931851973457`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -706,7 +707,7 @@ Cell[20762, 484, 317, 10, 48, "Input"],
 Cell[21082, 496, 194, 6, 28, "Output"]
 }, Open  ]],
 Cell[21291, 505, 365, 10, 50, "Input"],
-Cell[21659, 517, 159, 3, 28, InheritFromParent],
+Cell[21659, 517, 159, 3, 28, "Input"],
 Cell[CellGroupData[{
 Cell[21843, 524, 616, 20, 69, "Input"],
 Cell[22462, 546, 205, 5, 28, "Output"],
@@ -717,12 +718,12 @@ Cell[24877, 601, 118, 2, 28, "Input"],
 Cell[24998, 605, 103, 2, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25138, 612, 306, 7, 49, "Input"],
-Cell[25447, 621, 156, 3, 28, "Output"]
+Cell[25138, 612, 355, 8, 49, "Input"],
+Cell[25496, 622, 204, 3, 62, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25640, 629, 242, 7, 48, "Input"],
-Cell[25885, 638, 116, 2, 62, "Output"]
+Cell[25737, 630, 242, 7, 48, "Input"],
+Cell[25982, 639, 116, 2, 28, "Output"]
 }, Open  ]]
 }
 ]
