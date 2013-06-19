@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      6362,        160]
-NotebookOptionsPosition[      5957,        141]
-NotebookOutlinePosition[      6313,        157]
-CellTagsIndexPosition[      6270,        154]
+NotebookDataLength[      6731,        163]
+NotebookOptionsPosition[      6326,        144]
+NotebookOutlinePosition[      6682,        160]
+CellTagsIndexPosition[      6639,        157]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -28,11 +28,12 @@ Cell[BoxData[
     RowBox[{"problems", "=", 
      RowBox[{"{", 
       RowBox[{
-       RowBox[{"5", "-", "32"}], ",", 
-       RowBox[{"36", "-", "39"}], ",", 
-       RowBox[{"46", "-", "49"}], ",", 
-       RowBox[{"55", "-", "64"}], ",", "81"}], "}"}]}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"11", "-", "12"}], ",", 
+       RowBox[{"15", "-", "30"}], ",", 
+       RowBox[{"33", "-", "40"}], ",", "45", ",", "64", ",", 
+       RowBox[{"66", "-", "68"}], ",", 
+       RowBox[{"73", "-", "77"}], ",", "79", ",", "81", ",", "83"}], "}"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{
      RowBox[{
@@ -102,27 +103,27 @@ Cell[BoxData[
    3.5760642190580387`*^9, 3.576064223258569*^9}, {3.5767515993466377`*^9, 
    3.576751602201414*^9}, 3.576751633161406*^9, 3.5779057283371677`*^9, {
    3.5779097507929564`*^9, 3.5779097520393467`*^9}, {3.577963375005109*^9, 
-   3.57796343009017*^9}, 3.578476464075055*^9}],
+   3.57796343009017*^9}, 3.578476464075055*^9, 3.580600284577499*^9}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"percentage", "[", 
-  RowBox[{"-", "6"}], "]"}]], "Input",
+ RowBox[{"percentage", "[", "9", "]"}]], "Input",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQA2IQ/XOtRdi6xa8cj4ldjwbRHj8zUkF02cXnGSBaIldI
+1:eJxTTMoPSmViYGCQAWIQ/XOtRdi6xa8cj4ldjwbRHj8zUkF02cXnGSBaIldI
 8eySV45RWvJgWuzU7idXgbTHolNg+t80465rQDpAyhJMa2n2Jt8C0j0xa8C0
 6DHGwzLLXjleCeo8DqI3L885DaJV5pSCaQ01qWJZIL33mDmYPnD3uU3QileO
 XvyfwbQFwxNHEB2hx+IEonNlNdNygPSUOF0wPX1nkm0ukL6QUwamTWcJ+OQB
 6ZS7wmA6Rv95WguQ/j+FIx1ET5M48C1t5SvHvIdHwPQ/r2UvMoG026qtYJqN
 de87EF2cOuc9iL5SvJMvC0jPeH8LTF95nHC2GEiXTZsKpk3//GopAdIRk1Ra
-QbRG7c8jE4H0CWXLoyAaAIVJvaQ=
+QbRG7c8jE4H0CWXLoyD60L0Jf4rXAsM3byqY5nnhxlwCpC/khoPp6ZbZnCC6
+TrMZTD8S2sUPog+77wfTOdPuC4PoLWdegum0E+mSILrApQdMAwBlFO+A
   "]],
 
 Cell[BoxData[
  FormBox[
   RowBox[{"{", 
-   RowBox[{"229", ",", "235", ",", "97"}], "}"}], TraditionalForm]], "Output",\
+   RowBox[{"204", ",", "195", ",", "105"}], "}"}], TraditionalForm]], "Output",\
 
  CellChangeTimes->{{3.5754770394103823`*^9, 3.575477063911229*^9}, 
    3.576064265937711*^9, 3.57608221547584*^9, 3.576083538591188*^9, 
@@ -132,7 +133,9 @@ Cell[BoxData[
    3.577967201475524*^9, 3.578012473301735*^9, 3.578476470770803*^9, 
    3.5784825023033123`*^9, 3.578482558158822*^9, {3.5784828139500237`*^9, 
    3.578482823968069*^9}, 3.578502765582262*^9, 3.578504234161482*^9, 
-   3.578564138717174*^9}]
+   3.578564138717174*^9, {3.580600293722199*^9, 3.580600307161626*^9}, 
+   3.58060034754652*^9, {3.580600400806737*^9, 3.5806004078592443`*^9}, 
+   3.580600446875388*^9, 3.580600479984899*^9, 3.580600524950274*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -156,12 +159,12 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 3997, 84, 267, "Input"],
+Cell[557, 20, 4105, 85, 267, "Input"],
 Cell[CellGroupData[{
-Cell[4579, 108, 519, 11, 28, "Input"],
-Cell[5101, 121, 715, 13, 62, "Output"]
+Cell[4687, 109, 590, 11, 28, "Input"],
+Cell[5280, 122, 905, 15, 62, "Output"]
 }, Open  ]],
-Cell[5831, 137, 122, 2, 28, "Input"]
+Cell[6200, 140, 122, 2, 28, "Input"]
 }
 ]
 *)
