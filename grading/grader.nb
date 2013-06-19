@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      6731,        163]
-NotebookOptionsPosition[      6326,        144]
-NotebookOutlinePosition[      6682,        160]
-CellTagsIndexPosition[      6639,        157]
+NotebookDataLength[      6788,        166]
+NotebookOptionsPosition[      6383,        147]
+NotebookOutlinePosition[      6739,        163]
+CellTagsIndexPosition[      6696,        160]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -108,22 +108,24 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"percentage", "[", "9", "]"}]], "Input",
+ RowBox[{"percentage", "[", 
+  RowBox[{"-", "10"}], "]"}]], "Input",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGCQAWIQ/XOtRdi6xa8cj4ldjwbRHj8zUkF02cXnGSBaIldI
-8eySV45RWvJgWuzU7idXgbTHolNg+t80465rQDpAyhJMa2n2Jt8C0j0xa8C0
-6DHGwzLLXjleCeo8DqI3L885DaJV5pSCaQ01qWJZIL33mDmYPnD3uU3QileO
-XvyfwbQFwxNHEB2hx+IEonNlNdNygPSUOF0wPX1nkm0ukL6QUwamTWcJ+OQB
-6ZS7wmA6Rv95WguQ/j+FIx1ET5M48C1t5SvHvIdHwPQ/r2UvMoG026qtYJqN
-de87EF2cOuc9iL5SvJMvC0jPeH8LTF95nHC2GEiXTZsKpk3//GopAdIRk1Ra
-QbRG7c8jE4H0CWXLoyD60L0Jf4rXAsM3byqY5nnhxlwCpC/khoPp6ZbZnCC6
-TrMZTD8S2sUPog+77wfTOdPuC4PoLWdegum0E+mSILrApQdMAwBlFO+A
+1:eJwd0E8oQwEcwPHnb2iZiFiWFo2tcJBYcXgSWg7agcWSsOffe6Meu3HBgabQ
+bNJOaP6ECw5IxIz8KWqoFfKnxjtwUGrS5vf7Hb597l9Va6/BHMkwjBJCg+ul
+9RsLEutNu29Ca4KdZtR6E+hE04Vk1dWixDZqs8i08723W7Bm/pwMOYrG78A6
+hY7Uaiba/KDNtEameiOOM90S6zOMnaKbS/wFmuMaIPPUClEJ7ntLyMOHQJlh
+WWL18m+ylHljUWNBdAUqKDUcD9qb80nnTmu5AF7zVrJ4LqnWArY/pJCmwgA3
+AobtcR2oI/3wh1uRWMuzhwzp3e9dYNXqNhkbs/+JimbXF+oTdxK7wdkvP+l7
+bbkSQatjhiz++x3pB43TOaNo3mDQMwWeZetO0KPHyT9xHf5aZkjZe1VUP3gt
+NJBOXU88OqQZJl+Sd+XocfUByTueUtCtyw+SO+vIQPsqbWSCGFKjsnBGLvoP
+neb3BQ==
   "]],
 
 Cell[BoxData[
  FormBox[
   RowBox[{"{", 
-   RowBox[{"204", ",", "195", ",", "105"}], "}"}], TraditionalForm]], "Output",\
+   RowBox[{"185", ",", "195", ",", "95"}], "}"}], TraditionalForm]], "Output",\
 
  CellChangeTimes->{{3.5754770394103823`*^9, 3.575477063911229*^9}, 
    3.576064265937711*^9, 3.57608221547584*^9, 3.576083538591188*^9, 
@@ -135,7 +137,8 @@ Cell[BoxData[
    3.578482823968069*^9}, 3.578502765582262*^9, 3.578504234161482*^9, 
    3.578564138717174*^9, {3.580600293722199*^9, 3.580600307161626*^9}, 
    3.58060034754652*^9, {3.580600400806737*^9, 3.5806004078592443`*^9}, 
-   3.580600446875388*^9, 3.580600479984899*^9, 3.580600524950274*^9}]
+   3.580600446875388*^9, 3.580600479984899*^9, 3.580600524950274*^9, 
+   3.580600633785919*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -161,10 +164,10 @@ CellTagsIndex->{}
 Notebook[{
 Cell[557, 20, 4105, 85, 267, "Input"],
 Cell[CellGroupData[{
-Cell[4687, 109, 590, 11, 28, "Input"],
-Cell[5280, 122, 905, 15, 62, "Output"]
+Cell[4687, 109, 622, 13, 28, "Input"],
+Cell[5312, 124, 930, 16, 62, "Output"]
 }, Open  ]],
-Cell[6200, 140, 122, 2, 28, "Input"]
+Cell[6257, 143, 122, 2, 28, "Input"]
 }
 ]
 *)
