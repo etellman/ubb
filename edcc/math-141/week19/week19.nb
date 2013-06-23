@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      2590,         98]
-NotebookOptionsPosition[      2158,         77]
-NotebookOutlinePosition[      2512,         93]
-CellTagsIndexPosition[      2469,         90]
+NotebookDataLength[      4914,        160]
+NotebookOptionsPosition[      4183,        129]
+NotebookOutlinePosition[      4537,        145]
+CellTagsIndexPosition[      4494,        142]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,36 +21,59 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell[BoxData[
- RowBox[{"Solve", "[", 
+ RowBox[{"Reduce", "[", 
   RowBox[{
-   RowBox[{
-    SuperscriptBox[
+   RowBox[{"Log", "[", 
+    RowBox[{"2", ",", 
      RowBox[{"Log", "[", 
-      RowBox[{"10", ",", "x"}], "]"}], "3"], "\[Equal]", 
-    RowBox[{"3", " ", 
-     RowBox[{"Log", "[", 
-      RowBox[{"10", ",", "x"}], "]"}]}]}], ",", "x"}], "]"}]], "Input",
+      RowBox[{"3", ",", "x"}], "]"}]}], "]"}], "//", "N"}]}]], "Input",
  CellChangeTimes->{{3.580764089800159*^9, 3.580764174044901*^9}, {
   3.580813994243203*^9, 3.580814027080488*^9}, {3.5808145782003736`*^9, 
-  3.580814582063452*^9}}],
+  3.580814582063452*^9}, {3.58085421073013*^9, 3.580854264889553*^9}, {
+  3.580854302837682*^9, 3.580854313482696*^9}, {3.580854401649444*^9, 
+  3.58085446075493*^9}, {3.580854734384667*^9, 3.580854759765718*^9}}],
 
 Cell[BoxData[
  FormBox[
-  RowBox[{"{", 
+  RowBox[{
+   StyleBox[
+    RowBox[{"NumericQ", "::", "argx"}], "MessageName"], 
    RowBox[{
-    RowBox[{"{", 
-     RowBox[{"x", "\[Rule]", "1"}], "}"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"x", "\[Rule]", 
-      SuperscriptBox["10", 
-       RowBox[{"-", 
-        SqrtBox["3"]}]]}], "}"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"x", "\[Rule]", 
-      SuperscriptBox["10", 
-       SqrtBox["3"]]}], "}"}]}], "}"}], TraditionalForm]], "Output",
+   ":", " "}], "\<\"\[NoBreak]\\!\\(TraditionalForm\\`NumericQ\\)\[NoBreak] \
+called with \[NoBreak]\\!\\(TraditionalForm\\`2\\)\[NoBreak] arguments; 1 \
+argument is expected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/argx\\\", ButtonNote -> \
+\\\"NumericQ::argx\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.58085446133074*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"NumericQ", "::", "argx"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"\[NoBreak]\\!\\(TraditionalForm\\`NumericQ\\)\[NoBreak] \
+called with \[NoBreak]\\!\\(TraditionalForm\\`2\\)\[NoBreak] arguments; 1 \
+argument is expected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/argx\\\", ButtonNote -> \
+\\\"NumericQ::argx\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.5808544613897047`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"NumericQ", "[", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["2.`", 
+      FractionBox["3.2188758248682006`", 
+       RowBox[{"log", "(", "x", ")"}]]], "\[LongEqual]", "0.0625`"}], ",", 
+    "x"}], "]"}], TraditionalForm]], "Output",
  CellChangeTimes->{{3.5807641357498903`*^9, 3.5807641744908237`*^9}, {
-   3.580814012011409*^9, 3.580814029576906*^9}, 3.580814582685424*^9}]
+   3.580814012011409*^9, 3.580814029576906*^9}, 3.580814582685424*^9, {
+   3.580854239919381*^9, 3.580854266556637*^9}, {3.5808543045978727`*^9, 
+   3.580854328350037*^9}, {3.580854403871065*^9, 3.580854461393087*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -73,6 +96,35 @@ Cell[BoxData[
     RowBox[{"x", "\[Rule]", 
      FractionBox["3", "2"]}], "}"}], "}"}], TraditionalForm]], "Output",
  CellChangeTimes->{3.580814162500738*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["2", 
+   RowBox[{"2", "/", 
+    RowBox[{"Log", "[", 
+     RowBox[{"5", ",", 
+      RowBox[{"1", "/", 
+       RowBox[{"Sqrt", "[", "5", "]"}]}]}], "]"}]}]], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.5808543517781057`*^9, 3.580854380728829*^9}}],
+
+Cell[BoxData[
+ FormBox["0.0625`", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.580854362107456*^9, 3.580854381711356*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"1", "/", "16"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.5808543843609333`*^9, 3.580854390216255*^9}}],
+
+Cell[BoxData[
+ FormBox["0.0625`", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.58085438560284*^9, 3.580854390590823*^9}}]
 }, Open  ]]
 },
 WindowSize->{740, 596},
@@ -93,16 +145,25 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 451, 12, 35, "Input"],
-Cell[1033, 36, 542, 16, 41, "Output"]
+Cell[579, 22, 548, 11, 28, "Input"],
+Cell[1130, 35, 569, 12, 24, "Message"],
+Cell[1702, 49, 572, 12, 24, "Message"],
+Cell[2277, 63, 559, 12, 46, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1612, 57, 327, 9, 28, "Input"],
-Cell[1942, 68, 200, 6, 106, "Output"]
+Cell[2873, 80, 327, 9, 28, "Input"],
+Cell[3203, 91, 200, 6, 48, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3440, 102, 287, 8, 32, "Input"],
+Cell[3730, 112, 128, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3895, 119, 142, 3, 28, "Input"],
+Cell[4040, 124, 127, 2, 28, "Output"]
 }, Open  ]]
 }
 ]
 *)
 
 (* End of internal cache information *)
-

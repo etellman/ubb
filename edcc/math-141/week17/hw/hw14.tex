@@ -48,7 +48,7 @@
 
   \section{Homework}
 
-  Section 4.2: 1-32, 37-46, 49-54, 58-81
+  Section 4.2: 3-32, 37-46, 49-54, 58-64, 78-81
 
  \section{Extra Credit}
   Section 4.2: 75-76
@@ -87,6 +87,10 @@
             %                &= x \\
             % \end{align*}
 
+        \end{enumerate}
+
+      \item[76]
+        \begin{enumerate}[a]
           \item 
             \begin{align*}
               \ln(\ln x)     & > 0 \\
@@ -111,25 +115,51 @@
     \end{description}
   \fi
 
-\begin{enumerate}
-  \item 
-    Remember that a definition of $e$ is:
-    \[
-      e \approx \left( 1 + \frac{1}{n} \right)^n
-    \]
-    where the approximation gets better as $n$ gets bigger.
+  \ifprintanswers
+    \pagebreak
+  \fi
 
-    An interesting fact about $e^x$ is that $e^x \approx 1 + x$ when $x$ is a small number.  Explain why.
+  \begin{enumerate}
+    \item 
+      Remember that a definition of $e$ is:
+      \[
+        e \approx \left( 1 + \frac{1}{n} \right)^n
+      \]
+      where the approximation gets better as $n$ gets bigger.
 
-  \item 
-    When calculating the base 10 logarithm table, Napier noticed that for small $x$:
-    \[
-      \log_{10} x \approx 1 + 2.3026x
-    \]
+      An interesting fact about $e^x$ is that $e^x \approx 1 + x$ when $x$ is a small number.  Explain why.
 
-    Where does the number 2.3026 come from and why does $\log_{10} x \approx 1 + 2.3026x$ for small $x$?
-    
-\end{enumerate}
+      \begin{solution}
+        If $n$ is a large number, $\frac{1}{n}$ is a small number.  So raising $e$ to a small number is approximately:
+        \begin{align*}
+          e^{1/n} & \approx \left[ \left( 1 + \frac{1}{n} \right)^n \right]^{1/n} \\
+                  & \approx \left( 1 + \frac{1}{n} \right)^{n/n} \\
+                  & \approx 1 + \frac{1}{n} \\
+        \end{align*}
+
+      \end{solution}
+    \item 
+      When calculating the base 10 logarithm table, Napier noticed that for small $x$:
+      \[
+        \log_{10} x \approx 1 + 2.3026x
+      \]
+
+      Where does the number 2.3026 come from and why does $\log_{10} x \approx 1 + 2.3026x$ for small $x$?
+
+      \begin{solution}
+        \begin{align*}
+          10^n & = \left( e^{\ln 10} \right)^n \\
+               & = e^{n \ln 10} \\
+        \end{align*}
+
+        When $n \ln 10$ is a small number, this is approximately:
+        \begin{align*}
+          10^n & \approx 1 + n \ln 10 \\
+               & = 1 + 2.3026n \\
+        \end{align*}
+      \end{solution}
+      
+  \end{enumerate}
 
   \section{Review}
 
@@ -147,6 +177,10 @@
           f^{-1}(x) &= \sqrt[3]{x + 1}
         \end{align*}
       \end{solution}
+
+    \ifprintanswers
+      \pagebreak
+    \fi
 
     \item $f(x) = \frac{x + 1}{x - 2}$
       \begin{solution}
@@ -242,62 +276,62 @@
 
     \item[15]
       \begin{align*}
-        \log_3 3   &= 1 \\
-        \log_3 1   &= 0 \\
-        \log_3 3^2 &= 2 \\
+        \log_3 3   &= \boxed{1} \\
+        \log_3 1   &= \boxed{0} \\
+        \log_3 3^2 &= \boxed{2} \\
       \end{align*}
 
     \item[16]
       \begin{align*}
-        \log_5 5^4 &= 4 \\
-        \log_4 64  &= 3 \\
-        \log_9 9   &= 1 \\
+        \log_5 5^4 &= \boxed{4} \\
+        \log_4 64  &= \boxed{3} \\
+        \log_9 9   &= \boxed{1} \\
       \end{align*}
 
     \item[17]
       \begin{align*}
-        \log_6 36     &= 2 \\
-        \log_9 81     &= 2 \\
-        \log_7 7^{10} &= 10 \\
+        \log_6 36     &= \boxed{2} \\
+        \log_9 81     &= \boxed{2} \\
+        \log_7 7^{10} &= \boxed{10} \\
       \end{align*}
 
     \item[18]
       \begin{align*}
-        \log_2 32     &= 5 \\
-        \log_8 8^{17} &= 17 \\
-        \log_6 1      &= 0 \\
+        \log_2 32     &= \boxed{5} \\
+        \log_8 8^{17} &= \boxed{17} \\
+        \log_6 1      &= \boxed{0} \\
       \end{align*}
 
     \item[19]
       \begin{align*}
-        \log_3 \left( \frac{1}{27} \right) &= -3 \\
-        \log_{10} \sqrt{10}                &= \frac{1}{2} \\
+        \log_3 \left( \frac{1}{27} \right) &= \boxed{-3} \\
+        \log_{10} \sqrt{10}                &= \boxed{\frac{1}{2}} \\
         \log_5 0.2                         &= \log_5 \left( \frac{2}{10} \right) \\
                                            &= \log_5 \left( \frac{1}{5} \right) \\
-                                           &= -1 \\
+                                           &= \boxed{-1} \\
       \end{align*}
 
     \item[20]
       \begin{align*}
-        \log_5 125      &= 3 \\
-        \log_{49} 7     &= \frac{1}{2} \\
+        \log_5 125      &= \boxed{3} \\
+        \log_{49} 7     &= \boxed{\frac{1}{2}} \\
         \log_9 \sqrt{3} &= \log_9 3^{1/2} \\
                         &= \log_9 9^{1/4} \\
-                        &= \frac{1}{4} \\
+                        &= \boxed{\frac{1}{4}} \\
       \end{align*}
 
     \item[21]
       \begin{align*}
-        2^{\log_2 37}    &= 37 \\
-        3^{\log_3 8}     &= 8 \\
-        e^{\ln \sqrt{5}} &= \sqrt{5} \\
+        2^{\log_2 37}    &= \boxed{37} \\
+        3^{\log_3 8}     &= \boxed{8} \\
+        e^{\ln \sqrt{5}} &= \boxed{\sqrt{5}} \\
       \end{align*}
 
     \item[22]
       \begin{align*}
-        e^{\ln \pi}  &= \pi \\
-        10^{\log 5}  &= 5 \\
-        10^{\log 87} &= 87 \\
+        e^{\ln \pi}  &= \boxed{\pi} \\
+        10^{\log 5}  &= \boxed{5} \\
+        10^{\log 87} &= \boxed{87} \\
       \end{align*}
 
     \item[23]
@@ -305,28 +339,28 @@
         \log_{8} 0.25 &= \log_8 \left( \frac{1}{4} \right) \\
                       &= \log_8 2^{-2} \\
                       &= \log_8 {2^3}^{-2/3} \\
-                      &= - \frac{2}{3} \\
+                      &= \boxed{-\frac{2}{3}} \\
         \\
-        \ln e^4 &= 4 \\
+        \ln e^4 &= \boxed{4} \\
         \\
         \ln \left( \frac{1}{e} \right) &= \ln e^{-1} \\
-                                       &= -1 \\
+                                       &= \boxed{-1} \\
       \end{align*}
 
     \item[24]
       \begin{align*}
         \log_4 \sqrt{2} &= \log_4 2^{1/2} \\
                         &= \log_4 4^{1/4} \\
-                        &= \frac{1}{4} \\
+                        &= \boxed{\frac{1}{4}} \\
         \\
         \log_4 \left( \frac{1}{2} \right) &= \log_4 \left( \frac{1}{4^{1/2}} \right) \\
                                           &= \log_4 4^{-1/2} \\
-                                          &= - \frac{1}{2} \\
+                                          &= \boxed{-\frac{1}{2}} \\
         \\
         \log_4 8 &= \log_4 2^3 \\
                  &= \log_4 \left[ 4^{1/2} \right]^3 \\
                  &= \log_4 4^{3/2} \\
-                 &= \frac{3}{2} \\
+                 &= \boxed{\frac{3}{2}} \\
       \end{align*}
 
     \item[25]
@@ -335,14 +369,14 @@
           \begin{align*}
             \log_2 x &= 5 \\
             2^5      &= x \\
-            x        &= 32 \\
+            x        &= \boxed{32} \\
           \end{align*}
 
         \item 
           \begin{align*}
             \log_2 16 &= x \\
             2^x       &= 16 \\
-            x         &= 4 \\
+            x         &= \boxed{4} \\
           \end{align*}
       \end{enumerate}
 
@@ -352,14 +386,14 @@
           \begin{align*}
             \log_5 x &= 4 \\
             5^4      &= x \\
-            x        &= 625 \\
+            x        &= \boxed{625} \\
           \end{align*}
 
         \item 
           \begin{align*}
             \log_{10} 0.1 &= x \\
             10^x          &= 0.1 \\
-            x             &= -1 \\
+            x             &= \boxed{-1} \\
           \end{align*}
       \end{enumerate}
 
@@ -369,14 +403,14 @@
           \begin{align*}
             \log_3 243 &= x \\
             3^x        &= 243 \\
-            x          &= 5 \\
+            x          &= \boxed{5} \\
           \end{align*}
 
         \item 
           \begin{align*}
             \log_3 x &= 3 \\
             3^3      &= x \\
-            x        &= 27 \\
+            x        &= \boxed{27} \\
           \end{align*}
       \end{enumerate}
 
@@ -388,14 +422,14 @@
           \begin{align*}
             \log_4 2 &= x \\
             x        &= \log_4 4^{1/2} \\
-                     &= \frac{1}{2} \\
+                     &= \boxed{\frac{1}{2}} \\
           \end{align*}
 
         \item 
           \begin{align*}
             \log_4 x &= 2 \\
              4^2     &= x \\
-            x        &= 16 \\
+            x        &= \boxed{16} \\
           \end{align*}
       \end{enumerate}
 
@@ -405,17 +439,19 @@
           \begin{align*}
             \log_{10} x &= 2 \\
              10^2       &= x \\
-            x           &= 100 \\
+            x           &= \boxed{100} \\
           \end{align*}
 
         \item 
           \begin{align*}
             \log_{5} x &= 2 \\
             5^2        &= x \\
-            x          &= 25 \\
+            x          &= \boxed{25} \\
           \end{align*}
 
       \end{enumerate}
+
+  \pagebreak
 
     \item[30]
       \begin{enumerate}[a]
@@ -423,14 +459,14 @@
           \begin{align*}
             \log_x 1000     &= 3 \\
             x^3             &= 1000 \\
-            x               &= 10 \\
+            x               &= \boxed{10} \\
           \end{align*}
 
         \item 
           \begin{align*}
             \log_x 25     &= 2 \\
             x^2           &= 25 \\
-            x             &= 5 \\
+            x             &= \boxed{5} \\
           \end{align*}
       \end{enumerate}
 
@@ -440,7 +476,7 @@
           \begin{align*}
             \log_x 16     &= 4 \\
             x^4           &= 16 \\
-            x             &= 2 \\
+            x             &= \boxed{2} \\
           \end{align*}
 
         \item 
@@ -448,25 +484,24 @@
             \log_x 8     &= \frac{3}{2} \\
             x^{3/2}      &= 8 \\
             x            &= 8^{2/3} \\
-                         &= 4 \\
+                         &= \boxed{4} \\
           \end{align*}
       \end{enumerate}
 
     \item[32]
       \begin{enumerate}[a]
         \item 
-        \item 
           \begin{align*}
             \log_x 6     &= \frac{1}{2} \\
             x^{1/2}      &= 6 \\
-            x            &= 36 \\
+            x            &= \boxed{36} \\
           \end{align*}
 
         \item 
           \begin{align*}
             \log_x 3     &= \frac{1}{3} \\
             x^{1/3}      &= 3 \\
-            x            &= 27 \\
+            x            &= \boxed{27} \\
           \end{align*}
       \end{enumerate}
 
@@ -476,7 +511,7 @@
         a &= 5 \\
       \end{align*}
 
-      The equation is: $y = \log_5 x$
+      The equation is: $\boxed{y = \log_5 x}$
 
     \item[38]
       \begin{align*}
@@ -485,7 +520,7 @@
         a           &= 2 \\
       \end{align*}
 
-      The equation is: $y = \log_2 x$
+      The equation is: $\boxed{y = \log_2 x}$
 
     \item[39]
       \begin{align*}
@@ -494,7 +529,7 @@
         a           &= 9 \\
       \end{align*}
 
-      The equation is: $y = \log_9 x$
+      The equation is: $\boxed{y = \log_9 x}$
 
     \item[40]
       \begin{align*}
@@ -503,9 +538,7 @@
         a   &= 3 \\
       \end{align*}
 
-      The equation is: $y = \log_3 x$
-
-    \pagebreak
+      The equation is: $\boxed{y = \log_3 x}$
 
     \item[41] II
     \item[42] V
@@ -514,7 +547,6 @@
     \item[45] VI
     \item[46] I
 
-    \pagebreak
 
     \item[49]
       \begin{tabular}[H]{lll}
@@ -530,6 +562,8 @@
         \includegraphics[scale = 0.9]{problem49.eps}
         \caption{Problem 49: $f(x) = \log_2(x - 4)$}
       \end{figure}
+
+    \pagebreak
 
     \item[50]
       \begin{tabular}[H]{lll}
@@ -652,8 +686,6 @@
       \end{align*}
 
       \fbox{$(-\infty, 4)$} 
-
-    \pagebreak
 
     \item[61]
       \begin{align*}
