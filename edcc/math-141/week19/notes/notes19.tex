@@ -75,6 +75,16 @@
             &= 2 \\
   \end{align*}
 
+  more examples:
+  \begin{enumerate}
+    \item $10^x = 15$
+
+    \item $3^{-x} = 4$
+
+    \item $e^2x = 7$
+
+  \end{enumerate}
+
   \subsection{Exponential/Powers Combined}
   \begin{align*}
     2^x x^2 - 2^x &= 0 \\
@@ -112,29 +122,35 @@
   \end{itemize*}
 
   more examples:
-  \begin{align*}
-    2e^{2x} - e^x - 15  &= 0 \\
-    (2e^x + 5)(e^x - 3) &= 0 \\
-    x                   &= \ln 3 \\
-  \end{align*}
+  \begin{enumerate}
 
-  \begin{align*}
-    e^{4x} - 16                    &= 0 \\
-    (e^{2x} - 4)(e^{2x} + 4)       &= 0 \\
-    (e^x - 2)(e^x + 2)(e^{2x} + 4) &= 0 \\
-    x                              &= \ln 2 \\
-  \end{align*}
+    \item 
+      \begin{align*}
+        2e^{2x} - e^x - 15  &= 0 \\
+        (2e^x + 5)(e^x - 3) &= 0 \\
+        x                   &= \ln 3 \\
+      \end{align*}
 
-  alternate:
-  \begin{align*}
-    e^{4x} - 16 &= 0 \\
-    e^{4x}      &= 16 \\
-    4x          &= \ln 16 \\
-    x           &= \frac{\ln 16}{4} \\
-                &= \frac{\ln 2}{4} \\
-                &= \frac{4 \ln 2^4}{4} \\
-                &= \ln 2 \\
-  \end{align*}
+    \item
+      \begin{align*}
+        e^{4x} - 16                    &= 0 \\
+        (e^{2x} - 4)(e^{2x} + 4)       &= 0 \\
+        (e^x - 2)(e^x + 2)(e^{2x} + 4) &= 0 \\
+        x                              &= \ln 2 \\
+      \end{align*}
+
+      alternate:
+      \begin{align*}
+        e^{4x} - 16 &= 0 \\
+        e^{4x}      &= 16 \\
+        4x          &= \ln 16 \\
+        x           &= \frac{\ln 16}{4} \\
+                    &= \frac{\ln 2}{4} \\
+                    &= \frac{4 \ln 2^4}{4} \\
+                    &= \ln 2 \\
+      \end{align*}
+
+  \end{enumerate}
 
   \section{Logarithm Equations}
 
@@ -181,33 +197,39 @@
   \end{itemize*}
 
   more examples:
-  \begin{align*}
-    2 \log x       &= \log 4 + \log(x + 3) \\
-    \log x^2       &= \log [4(x + 3)] \\
-    x^2            &= 4x + 12 \\
-    x^2 - 4x - 12  &= 0 \\
-    (x + 2)(x - 6) &= 0 \\
-    x              &= 6 \\
-  \end{align*}
+  \begin{enumerate}
+    \item 
+      \begin{align*}
+        2 \log x       &= \log 4 + \log(x + 3) \\
+        \log x^2       &= \log [4(x + 3)] \\
+        x^2            &= 4x + 12 \\
+        x^2 - 4x - 12  &= 0 \\
+        (x + 2)(x - 6) &= 0 \\
+        x              &= 6 \\
+      \end{align*}
 
-  \begin{align*}
-    \ln x + \ln(x + 1) &= \ln (3x) \\
-    \ln [x(x + 1)]     &= \ln (3x) \\
-    x^2 + x            &= 3x \\
-    x^2 - 2x           &= 0 \\
-    x(x - 2)           &= 0 \\
-    x                  &= 2 \\
-  \end{align*}
+    \item
+      \begin{align*}
+        \ln x + \ln(x + 1) &= \ln (3x) \\
+        \ln [x(x + 1)]     &= \ln (3x) \\
+        x^2 + x            &= 3x \\
+        x^2 - 2x           &= 0 \\
+        x(x - 2)           &= 0 \\
+        x                  &= 2 \\
+      \end{align*}
 
-  \begin{align*}
-    \ln x          &= \ln 21 - \ln(x - 4) \\
-    \ln x          &= \ln \frac{21}{x - 4} \\
-    x              &= \frac{21}{x - 4} \\
-    x^2 - 4x       &= 21 \\
-    x^2 - 4x - 21  &= 0 \\
-    (x + 3)(x - 7) &= 0 \\
-    x              &= 7 \\
-  \end{align*}
+    \item
+      \begin{align*}
+        \ln x          &= \ln 21 - \ln(x - 4) \\
+        \ln x          &= \ln \frac{21}{x - 4} \\
+        x              &= \frac{21}{x - 4} \\
+        x^2 - 4x       &= 21 \\
+        x^2 - 4x - 21  &= 0 \\
+        (x + 3)(x - 7) &= 0 \\
+        x              &= 7 \\
+      \end{align*}
+
+  \end{enumerate}
 
   \section{Applications}
 
@@ -283,18 +305,17 @@
       \end{align*}
 
     \item
-      Carbon 14 has a half-life of 8,000 years.  If 40\% of the original carbon remains, how old is the sample?
+      Carbon 14 has a half-life of 5,730 years.  If 40\% of the original carbon remains, how old is the sample?
 
       \begin{align*}
-        \frac{0.5} &= e^{-r \cdot 8000} \\
-        \ln 0.5    &= -8,000 r \\
-        r          &= -0.0000866434 \\
+        0.5     &= e^{-r \cdot 5,730} \\
+        \ln 0.5 &= -5,730 r \\
+        r       &\approx -0.000120968 \\
         \\
-        0.4 &= e^{-0.0000866434t} \\
-        t   &= \frac{\ln 0.4}{-0.0000866434t} \\
-            &= \unit[10,575]{year} \\
+        0.4     &= e^{-0.000120968 t} \\
+        t       &= \frac{\ln 0.4}{-0.000120968 t} \\
+                &\approx \unit[7,575]{year} \\
       \end{align*}
-
 
   \end{enumerate}
 \end{document}
