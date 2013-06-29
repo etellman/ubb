@@ -50,10 +50,6 @@
 
     Section 4.4: 7-24, 27-34, 41-51, 67-77, 81
 
-    \ifprintanswers
-      \pagebreak
-    \fi
-
     \section{Extra Credit}
     Section 4.4: 52-54
 
@@ -102,13 +98,25 @@
     \begin{enumerate}
       \item $2x^3 + 5x^2 - 23x + 10 = 0$
         \ifprintanswers
-          $x = \left\{ 2, -5, \frac{1}{2} \right\}$
+          \begin{align*}
+            2x^3 + 5x^2 - 23x + 10                &= 0 \\
+            (x - 2)\left( 2 x^2 + 9 x - 5 \right) &= 0 \\
+            (x - 2)(2x - 1)(x + 5)                &= 0 \\
+            x                                     &= \boxed{ \left\{ - 5, \frac{1}{2}, 2 \right\} } \\
+          \end{align*}
         \fi
 
       \item $x^4 + 2x^3 - 9x^2 - 18x = 0$
         \ifprintanswers
-          $x = \left\{ 3, -3, 2 \right\}$
+          \begin{align*}
+            x^4 + 2x^3 - 9x^2 - 18x               &= 0 \\
+            x \left( x^3 + 2x^2 - 9x - 18 \right) &= 0 \\
+            x (x + 2) \left( x^2 - 9 \right)      &= 0 \\
+            x (x + 2) (x + 3)(x - 3)              &= 0 \\
+            x                                     &= \boxed{ \left\{ -3, -2, 3 \right\} } \\
+          \end{align*}
         \fi
+
     \end{enumerate}
 
   \ifprintanswers
@@ -294,6 +302,20 @@
           x                           &= \boxed{ \{ -1, 2 \} } \\
         \end{align*}
 
+      \item[29]
+        \begin{align*}
+          4x^3 e^{-3x} - 3x^4e^{-3x}        &= 0 \\
+          x^3 e^{-3x} \left( 4 - 3x \right) &= 0 \\
+          x                                 &= \boxed{ \left\{ 0, \frac{4}{3} \right\} } \\
+        \end{align*}
+
+      \item[30]
+        \begin{align*}
+          x^2e^x + xe^x - e^x            &= 0 \\
+          e^x \left( x^2 + x - 1 \right) &= 0 \\
+          x                              &= \boxed{ \left\{ \frac{ - 1 \pm \sqrt{5}}{2} \right\} } \\
+        \end{align*}
+
       \item[31]
         \begin{align*}
           e^{2x} - 3e^x + 2  &= 0 \\
@@ -301,46 +323,68 @@
           x                  &= \boxed{ \{ 0, \ln 2 \} } \\
         \end{align*}
 
-      \item[35] 
+      \item[32]
         \begin{align*}
-          \ln x &= 10 \\
-          x     &= \boxed{e^{10}} \\
+          e^{2x} - e^x - 6   &= 0 \\
+          (e^x - 3)(e^x - 2) &= 0 \\
+          x                  &= \boxed{ \{ \ln 2, \ln 3 \} } \\
         \end{align*}
 
-      \item[36] 
+      \item[33]
         \begin{align*}
-          ln (2 + x) &= 1 \\
-          2 + x      &= e \\
-          x          &= \boxed{e - 2} \\
+          e^{4x} + 4e^{2x} - 21    &= 0 \\
+          (e^{2x} - 3)(e^{2x} + 7) &= 0 \\
+          x                        &= \boxed{ \left\{ \frac{\ln 3}{2} \right\} } \\
         \end{align*}
 
-      \item[37] 
+      \item[34]
         \begin{align*}
-          \log x &= -2 \\
-          x      &= 10^{-2} \\
-                 &= \boxed{\frac{1}{100}} \\
+          e^x - 12e^{-x} - 1 &= 0 \\
+          e^{2x} - e^x - 12  &= 0 \\
+          (e^x + 3)(e^x - 4) &= 0 \\
+          x                  &= \boxed{ \{ \ln 3, \ln 4 \} } \\
         \end{align*}
 
-      item[38] 
-        \begin{align*}
-          \log (x - 4) &= 3 \\
-          x - 4        &= 10^3 \\
-          x            &= \boxed{996} \\
-        \end{align*}
+      % \item[35] 
+      %   \begin{align*}
+      %     \ln x &= 10 \\
+      %     x     &= \boxed{e^{10}} \\
+      %   \end{align*}
 
-      \item[39] 
-        \begin{align*}
-          \log (3x + 5) &= 2 \\
-          3x + 5        &= 10^2 \\
-          x             &= \boxed{\frac{95}{3}} \\
-        \end{align*}
+      % \item[36] 
+      %   \begin{align*}
+      %     ln (2 + x) &= 1 \\
+      %     2 + x      &= e \\
+      %     x          &= \boxed{e - 2} \\
+      %   \end{align*}
 
-      \item[40] 
-        \begin{align*}
-          \log_2 (2 - x) &= 3 \\
-          2 - x          &= 2^3 \\
-          x              &= \boxed{-6} \\
-        \end{align*}
+      % \item[37] 
+      %   \begin{align*}
+      %     \log x &= -2 \\
+      %     x      &= 10^{-2} \\
+      %            &= \boxed{\frac{1}{100}} \\
+      %   \end{align*}
+
+      % item[38] 
+      %   \begin{align*}
+      %     \log (x - 4) &= 3 \\
+      %     x - 4        &= 10^3 \\
+      %     x            &= \boxed{996} \\
+      %   \end{align*}
+
+      % \item[39] 
+      %   \begin{align*}
+      %     \log (3x + 5) &= 2 \\
+      %     3x + 5        &= 10^2 \\
+      %     x             &= \boxed{\frac{95}{3}} \\
+      %   \end{align*}
+
+      % \item[40] 
+      %   \begin{align*}
+      %     \log_2 (2 - x) &= 3 \\
+      %     2 - x          &= 2^3 \\
+      %     x              &= \boxed{-6} \\
+      %   \end{align*}
 
       \item[41] 
         \begin{align*}
@@ -463,6 +507,40 @@
                   &\approx \boxed{\unit[6.33]{years}} \\
         \end{align*}
 
+      \item[70]
+        \begin{align*}
+          5,000 & = 4,000 \left( 1 + \frac{0.095}{2} \right)^{2t} \\
+          t     & \approx \boxed{\unit[2.40]{years}} \\
+        \end{align*}
+
+      \item[71]
+        \begin{align*}
+          2,000 & = 1,000 e^{0.085t} \\
+          t     & = \frac{\ln 2}{0.085} \\
+          t     & \approx \boxed{\unit[8.15]{years}} \\
+        \end{align*}
+
+      \item[72]
+        \begin{align*}
+          1,435.77 &= 1,000 \left( 1 + \frac{r}{2} \right)^8 \\
+          t &= \frac{\ln 2}{0.085} \\
+          t     & \approx \boxed{9.25\%} \\
+        \end{align*}
+
+      \item[73]
+        \begin{align*}
+          A   & = P \left( 1 + \frac{0.08}{12} \right)^{12} \\
+          A   & \approx 1.083 P \\
+          APY & \approx \boxed{8.3\%} \\
+        \end{align*}
+
+      \item[74]
+        \begin{align*}
+          A   & = P e^{0.055} \\
+          A   & \approx 1.05654 P \\
+          APY & \approx \boxed{5.65\%} \\
+        \end{align*}
+
       \item[75]
         \begin{align*}
           5 &= 15 e^{-0.087t} \\
@@ -495,8 +573,14 @@
         \begin{enumerate}[a]
           \item 
             \begin{align*}
-              I &= \frac{60}{13}\left( 1 - e^{-13t/5} \right) \\
-              1 - \frac{60 I}{14} &= e^{-13t/5} \\
+              I &= \frac{60}{13} \left( 1 - e^{-13t/5} \right) \\
+              t &= \boxed{\frac{5}{13} \ln \left( \frac{60}{60 - 13I} \right) } \\
+            \end{align*}
+
+          \item 
+            \begin{align*}
+              t &= \frac{5}{13} \ln \left( \frac{60}{60 - 13 \cdot 2} \right)  \\
+              t &\approx \boxed{\unit[0.218455]{s}} \\
             \end{align*}
 
         \end{enumerate}
