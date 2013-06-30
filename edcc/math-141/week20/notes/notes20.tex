@@ -62,7 +62,7 @@
   \begin{itemize*}
     \item $n$ population at time $t$
     \item $n_0$ initial population
-    \item $r$ growth rate
+    \item $r$ growth rate--the percentage of the population that produces a new instance each interval
     \item $t$ time
   \end{itemize*}
 
@@ -72,7 +72,7 @@
     \item bacteria with:
       \begin{itemize*}
         \item $n_0 = 1,000$ 
-        \item $r = \unit[0.3]{hr}$ 
+        \item $r = \unit[0.3]{hr}$; 30\% divide each hour
       \end{itemize*}
 
       \begin{enumerate}[a]
@@ -96,9 +96,9 @@
             1,000 = n_0 e^{.3 \cdot 2} \approx 549 
           \]
 
-        \item how many bacteria were present 24 hours ago? 
+        \item when did the experiment start with 1 bacteria?
           \[
-            1,000 = n_0 e^{.3 \cdot 24} \approx 1 
+            1,000 = e^{.3 \cdot t} \approx \unit[23]{hr} 
           \]
 
       \end{enumerate}
@@ -120,8 +120,8 @@
 
         \item when will there be 20,000?
           \begin{align*}
-            20,000 &= 2,000 e^{0.231 t} \\
-            t &\approx \unit[9.97]{hr} \\
+            20,000 & = 2,000 e^{0.231 t} \\
+            t      & \approx \unit[9.97]{hr} \\
           \end{align*}
 
       \end{enumerate}
