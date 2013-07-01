@@ -14,3 +14,14 @@ In[55]:= Solve[2==E^(3r),r,Reals]//N
 Out[55]= {{r->0.231049}}
 In[58]:= n[2000,0.231049,2]//N
 Out[58]= 3174.8
+In[60]:= 6Sqrt[7]//N
+Out[60]= 15.8745
+In[88]:= Solve[1000==E^(10r),r,Reals]//N
+Out[88]= {{r->0.690776}}
+In[89]:= Log[2]/2000//N
+Out[89]= 0.000346574
+In[94]:= Solve[.35== E^(-Out[89] t),t,Reals]
+During evaluation of In[94]:= Solve::ratnz: Solve was unable to solve the system with inexact coefficients. The answer was obtained by solving a corresponding exact system and numericizing the result. >>
+Out[94]= {{t->3029.15}}
+In[96]:= 100 E^(-Out[89] 10000)//N
+Out[96]= 3.125
