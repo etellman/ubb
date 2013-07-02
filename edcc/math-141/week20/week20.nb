@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      7963,        244]
-NotebookOptionsPosition[      7047,        206]
-NotebookOutlinePosition[      7401,        222]
-CellTagsIndexPosition[      7358,        219]
+NotebookDataLength[      8602,        269]
+NotebookOptionsPosition[      7576,        227]
+NotebookOutlinePosition[      7930,        243]
+CellTagsIndexPosition[      7887,        240]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -202,6 +202,27 @@ Cell[BoxData[
     RowBox[{"r", "\[Rule]", "1.9952623149688795`"}], "}"}], "}"}], 
   TraditionalForm]], "Output",
  CellChangeTimes->{{3.581720954525855*^9, 3.5817209592428083`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"x", "^", "3"}], "-", 
+   RowBox[{"2", "x"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"f", "[", "3", "]"}], "-", 
+    RowBox[{"f", "[", 
+     RowBox[{"-", "1"}], "]"}]}], ")"}], "/", "4"}]}], "Input",
+ CellChangeTimes->{{3.581722497299992*^9, 3.581722535279312*^9}}],
+
+Cell[BoxData[
+ FormBox["5", TraditionalForm]], "Output",
+ CellChangeTimes->{3.581722536124803*^9}]
 }, Open  ]]
 },
 WindowSize->{740, 596},
@@ -244,11 +265,14 @@ Cell[6362, 179, 115, 2, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[6514, 186, 291, 9, 28, "Input"],
-Cell[6808, 197, 223, 6, 86, "Output"]
+Cell[6808, 197, 223, 6, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7068, 208, 391, 12, 46, "Input"],
+Cell[7462, 222, 98, 2, 62, "Output"]
 }, Open  ]]
 }
 ]
 *)
 
 (* End of internal cache information *)
-
