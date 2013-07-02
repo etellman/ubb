@@ -140,11 +140,14 @@
   \section{Radioactive Decay}
 
   \subsection{Description}
-  Like growth, but with time running backwards: $n(t) = n_0 e^{-rt}$.
+  Like growth, but with time running backwards: 
+  \[
+    n(t) = n_0 e^{-rt}
+  \]
 
   \begin{itemize*}
-    \item $n$ quantity at time $t$
-    \item $n_0$ initial quantity
+    \item $m$ quantity at time $t$
+    \item $m_0$ initial quantity
     \item $r$ decay rate
     \item $t$ time
   \end{itemize*}
@@ -154,7 +157,7 @@
   \begin{enumerate}
     \item What is the rate if the half life is $T$ years?
       \begin{align*}
-        \frac{n_0}{2} &= n_0 e^{-rT} \\
+        \frac{m_0}{2} &= m_0 e^{-rT} \\
         -rT           &= \ln \frac{1}{2} \\
         rT            &= \ln 2 \\
         r             &= \frac{\ln 2}{T} \\
@@ -167,29 +170,138 @@
 
     \item How old is a sample if 35\% remains and the half life is 2,000 years?
       \begin{align*}
-        0.35 n_0 & = n_0 e^{0.000346574 t} \\
+        0.35 m_0 & = m_0 e^{0.000346574 t} \\
         t        & \approx \unit[3,029]{yr} \\
       \end{align*}
 
     \item How much of an original sample of 100 kg remains after 10,000 years?
       \begin{align*}
-        n & = 100 e^{0.000346574 \cdot 10,000} \\
+        m & = 100 e^{0.000346574 \cdot 10,000} \\
           & \approx \unit[3.125]{kg} \\
       \end{align*}
   \end{enumerate}
+
+  \section{Newton's Law of Cooling}
+
+  \subsection{Description}
+  \[
+    T(t) = T_s + D_0 e^{-kt}
+  \]
+
+  \begin{itemize*}
+    \item $T_s$ temperature of surroundings
+    \item $D_s$ initial temperature difference
+    \item $k$ constant that depends on the object
+    \item $t$ time
+  \end{itemize*}
+
+  \subsection{Example}
+    If it's $130 \degree$ in Death Valley and an object brought from outside into an air-condition room at $70
+    \degree$ cools to $110 \degree$ in 10 minutes, when will it be $80 \degree$?
+
+    First find $k$:
+    \begin{align*}
+      D_0 & = 130 - 70 \\
+          & = 60 \\
+      \\
+      110 & = 70 + 60 e^{-k \cdot 10} \\
+      k   & \approx 0.0405465 \\
+    \end{align*}
+
+    Then find out when it will be $80 \degree$:
+    \begin{align*}
+      80 & = 70 + 60 e^{-0.0405465 t} \\
+      t  & \approx \unit[44]{minute} \\
+    \end{align*}
 
   \section{Logarithmic Scale}
 
   \subsection{Richter Scale}
   The Richter scale is the log of the ratio of an earthquake to the smallest measurable earthquake.
+  \[
+    M = \log \frac{I}{S}
+  \]
 
   \begin{itemize*}
-    \item $n$ quantity at time $t$
-    \item $n_0$ initial quantity
-    \item $r$ decay rate
-    \item $t$ time
+    \item $I$ intensity of quake 
+    \item $S$ intensity of minimum measurable quake
+    \item $M$ magnitude of quake on the Richter scale
   \end{itemize*}
 
   \subsection{Examples}
+  \begin{enumerate}
+
+    \item What is the intensity of a 9.5 earthquake?
+      \begin{align*}
+        9.5 & = \log \frac{I}{10^{-4}} \\
+        I   & \approx 316,228 \\
+      \end{align*}
+
+    \item What is the magnitude of a quake with intensity 50,000?
+      \begin{align*}
+        M & = \log \frac{50,000}{10^{-4}} \\
+           & \approx 8.7 \\
+      \end{align*}
+
+  \end{enumerate}
+
+  \subsection{Decibels}
+  Measure of loudness
+  \[
+    B = 10 \log \frac{I}{I_0}
+  \]
+  
+  $I_0 = \unit[10^{-12}]{W/m^2}$--just barely audible sound 
+
+  \begin{itemize*}
+    \item $I$ intensity of sound 
+    \item $I_0$ intensity of barely audible sound $I_0 = \unit[10^{-12}]{W/m^2}$
+    \item $B$ magnitude of sound in decibels
+  \end{itemize*}
+
+  \subsection{Examples}
+  \begin{enumerate}
+
+    \item What is the intensity of a 120, 130, and 140 dB sounds?
+      \begin{align*}
+        120 & = 10 \log \frac{I}{10^{-12}} \\
+        I   & \approx 1 \\
+        \\
+        130 & = 10 \log \frac{I}{10^{-12}} \\
+        I   & \approx 10 \\
+        \\
+        140 & = 10 \log \frac{I}{10^{-12}} \\
+        I   & \approx 100 \\
+      \end{align*}
+
+      10 dB corresponds to a 10x increase in intensity:
+      \begin{align*}
+        I_2       &= 10 I_1 \\
+        M_1       &= 10 \log \frac{I_1}{I_0} \\
+                  &= 10 (\log I_1 - \log I_0 ) \\
+        \\
+        M_2       &= 10 \log \frac{10 I_1}{I_0} \\
+                  &= 10 (\log 10 + \log I_1 - \log I_0 ) \\
+        \\
+        M_1 - M_2 &= 10 (\log I_1 - \log I_0 ) - 10 (\log 10 + \log I_1 - \log I_0 ) \\
+                  &= 10 \log 10 \\
+                  &= 10 \\
+      \end{align*}
+
+    \item What increase in intensity comes from a 3 dB increase?
+      \begin{align*}
+        I_2 &= r I_1 \\
+        M_1 &= 10 \log \frac{I_1}{I_0} \\
+            &= 10 (\log I_1 - \log I_0 ) \\
+        \\
+        M_2 &= 10 \log \frac{r I_1}{I_0} \\
+            &= 10 (\log 10 + \log I_1 - \log I_0 ) \\
+        \\
+        3   &= 10 (\log I_1 - \log I_0 ) - 10 (\log r + \log I_1 - \log I_0 ) \\
+            &= 10 \log r \\
+        r   &\approx 2 \\
+      \end{align*}
+
+  \end{enumerate}
 
 \end{document}
