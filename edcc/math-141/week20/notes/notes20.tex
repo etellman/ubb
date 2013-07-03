@@ -214,9 +214,38 @@
       t  & \approx \unit[44]{minute} \\
     \end{align*}
 
-  \section{Logarithmic Scale}
+  \section{Logarithmic Scales}
+
+  \subsection{pH}
+  \subsubsection{Description}
+  The log of the concentration of Hydrogen ions.
+  \[
+    pH = - \log(H+)
+  \]
+
+  \begin{itemize*}
+    \item $H+$ concentration of hydrogen ions in moles per liter
+    \item 7 is neutral
+  \end{itemize*}
+
+  \subsubsection{Examples}
+
+  \begin{enumerate}
+    \item What is the pH if the concentration is $\unit[3 \cdot 10^{-3}]{mole/liter}$?
+      \[
+        pH = - \log \left( 3 \cdot 10^{-3} \right) \approx 2.5
+      \]
+
+    \item What is the concentration of hydrogen ions if the pH is 3?
+      \begin{align*}
+        3 &= - \log H \\
+        H &\approx \unit[7.9 \cdot 10^{-3}]{mole/liter}
+      \end{align*}
+
+  \end{enumerate}
 
   \subsection{Richter Scale}
+  \subsubsection{Description}
   The Richter scale is the log of the ratio of an earthquake to the smallest measurable earthquake.
   \[
     M = \log \frac{I}{S}
@@ -228,7 +257,7 @@
     \item $M$ magnitude of quake on the Richter scale
   \end{itemize*}
 
-  \subsection{Examples}
+  \subsubsection{Examples}
   \begin{enumerate}
 
     \item What is the intensity of a 9.5 earthquake?
@@ -246,6 +275,8 @@
   \end{enumerate}
 
   \subsection{Decibels}
+
+  \subsubsection{Description}
   Measure of loudness
   \[
     B = 10 \log \frac{I}{I_0}
@@ -259,7 +290,7 @@
     \item $B$ magnitude of sound in decibels
   \end{itemize*}
 
-  \subsection{Examples}
+  \subsubsection{Examples}
   \begin{enumerate}
 
     \item What is the intensity of a 120, 130, and 140 dB sounds?
