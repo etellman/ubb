@@ -301,6 +301,75 @@
 
             The population will have tripled by \fbox{2040}.
         \end{enumerate}
+
+      \item[12] 
+        \begin{enumerate}[a]
+          \item 
+            find the rate:
+            \begin{align*}
+              23,668,562 & = 10,586,223 e^{30r} \\
+              r          & \approx 0.02682 \\
+            \end{align*}
+
+            The equation is \fbox{$n = 10,586,223 e^{0.0268198t}$}
+
+          \item $n(50) \approx \boxed{40,469,300}$.  The actual population was 33,871,648.
+        \end{enumerate}
+
+      \item[13] 
+        One approach is to first find out what the critical number is by figuring out how many bacteria are present
+        after 24 hours starting with a single bacteria:
+        \[
+          n = e^{2 \cdot 24} \approx 7.017 \times 10^{20}
+        \]
+        
+        Then determine how long it will take to get to this number starting with 10 bacteria:
+        \begin{align*}
+          7.017 \times 10^{20} & = 10 e^{2t} \\
+          t                    & \approx \boxed{\unit[22.85]{hr}} \\
+        \end{align*}
+
+        An alternate approach, which is a little easier, is to figure out how long it takes to get from 1 to 10 and
+        subtract that from 24:
+        \begin{align*}
+          10 & = e^{2t} \\
+          t  & \approx \unit[1.151]{hr} \\
+        \end{align*}
+
+        So going from 10 to 24 takes the rest of the time, or $24 - 1.151 \approx \unit[22.85]{hr} $
+
+      \item[14] 
+        \begin{enumerate}[a]
+          \item Find the rate: $r = \frac{\ln 2}{1,600} \approx 0.0004332$
+
+            The function is: \fbox{$m(t) = 22 e^{-0.0004332 t}$}
+
+          \item $m(4,000) \approx \boxed{\unit[3.890]{mg}}$
+
+          \item
+            \begin{align*}
+              18 & = 22 e^{-0.0004332 t} \\
+              t  & \approx \boxed{\unit[849]{yr}} \\
+            \end{align*}
+
+        \end{enumerate}
+
+      \item[15] 
+        \begin{enumerate}[a]
+          \item Find the rate: $r = \frac{\ln 2}{30} \approx 0.02310$
+
+            The function is: \fbox{$m(t) = 10 e^{-0.02310 t}$}
+
+          \item $m(60) \approx \boxed{\unit[1.575]{g}}$
+
+          \item
+            \begin{align*}
+              2 & = 10 e^{-0.02310 t} \\
+              t  & \approx \boxed{\unit[69.66]{yr}} \\
+            \end{align*}
+
+        \end{enumerate}
+
     \end{description}
 
   \else
