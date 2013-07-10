@@ -1,0 +1,117 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3824,        108]
+NotebookOptionsPosition[      3462,         90]
+NotebookOutlinePosition[      3817,        106]
+CellTagsIndexPosition[      3774,        103]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"1", "-", 
+    RowBox[{"2", "^", "x"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "4"}], ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5822829943337593`*^9, 3.5822830375943213`*^9}, {
+  3.582283073034252*^9, 3.5822830791359787`*^9}, {3.5822831707445917`*^9, 
+  3.582283174085054*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  GraphicsBox[{{}, {}, 
+    {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJwB4QQe+yFib1JlAgAAAE0AAAACAAAALj8W6v//D8Bf5zP8///tP2/5I4j5
++g/AmH/i4SD/7T+wszEm8/UPwEaqWWZB/u0/MihNYubrD8D/MfhKgfztPzcR
+hNrM1w/AWlxPfvz47T9A4/HKma8PwJqn82fg8e0/UofNqzNfD8D+AqYXXePt
+P3fPhG1nvg7AS5xILiDF7T/U1AvqwWENwECcPZSgfe0/HcBvFDccDMCjYkrl
+zTLtP7VrxAUP3QrAkUNHp/7g7D9gjDHw2YIJwA0UQI6qfew/+JJ7iL8/CMBC
+3TVX2xXsP6MO3hmY4QbAKZtQ5cSX6z+cSjFy04kFwCSrYUOPDOs/gmxheClJ
+BMBxvBWJQ3vqP3sDqndy7QLAXHR/H9TK6T9hgM8k1qgBwKzWkGRIEuk/lb3l
+mJxqAMDPDTiNlEjoP7rfKAysIv6/CIL5rrRT5z8jEEBCVJ77vy4sqBvqU+Y/
+siqIauLj+L98EZvWQR3lP9/FsSA2Nva/XlrxKWXG4z/lLJUyv7bzv4q66dG5
+YOI/EX6pNi4B8b+WNnLCcK7gPyw27yyl8+y/ftz+p9fQ3T+DRO3QuXjnvxh2
+gWzegdk/FVSukFkX4r8+R+Xc1b/UP7L2xQ/IJNq/RNld1UuQzz+l2+WN6YTO
+v1g3KDqpf8M/XVEctNtjtL/Ab9CSIoCrP7kKe9XCdbM/IBz2c16zq7814gEe
+gVjPPxi4kvwdrse/I/C7+TrC2T8wnG+5ApjUv0mj2c1OWOI/fAkjbMo5379F
+TRID9bXnP3qqft8ze+W/j1/XgDC37D/q0VXA4prrv8dOHQ1QEvE/CNsjIj6F
+8b/tIRV+0przP57gIpGaaPW/dXQrYY8W9j+4Ivh+WKj5v9fcEFJmyPg/Yma4
+u9zQ/r9geTznB0z7P4Wh95P9GQLAwys3isMF/j8dmj6KbV8FwCYJvOikSABA
+KB+LqujLCMAdvGtFBYgBQAD0O6dQigzAAPoCqXLiAkD+O4Gl/YoQwPdRvV7F
+JQRAzKCMCyXrEsDbNF8bJYQFQDKR8TbUzRXAcFcQESLcBkB6XxAmdf0YwBmU
+5FgEHQhA1GSdN9lQHMCuW6Cn83gJQBt9MlBdLSDAVz1/SMi9CkAbKLv6IUoi
+wLFebSI6/AtAgumHAzqZJMD4CkMDuVUNQA4e0wPaZifAUtE7Nh2YDkDgZfQs
+j1QqwAo7C8G8nQ5A5g8GF2BiKsDBpNpLXKMOQFTl9703cCrAMHh5YZuuDkAt
+aaJP+4sqwA4ft4wZxQ5Aaxx53tPDKsDJbDLjFfIOQFVNrJLNNCvAQAgpkA5M
+D0DT9PLu+hsswPhx+BquUQ9ARnVQ8qkqLMCv28elTVcPQAkw3h5gOSzAHq9m
+u4xiD0B7DoQB4lYswPxVpOYKeQ9AlxItTzySLMC3ox89B6YPQFNnMyNOCi3A
+bg3vx6arD0BS52RgcRktwCZ3vlJGsQ9A/Ot0/5soLcCUSl1ohbwPQBncmHEH
+Ry3AcvGakwPTD0ClRy2LN4QtwCpbah6j2A9Aup6DPJaTLcDhxDmpQt4PQFsC
+t2z8oi3AUJjYvoHpD0BA3lVY38EtwAgCqEkh7w9AyEMWG1zRLcC/a3fUwPQP
+QB2SXWvg4C3AdtVGX2D6D0CVudpMbPAtwC4/Fur//w9AYXY+w///LcCTI1tG
+
+      "]]}},
+   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+   Axes->True,
+   AxesLabel->{None, None},
+   AxesOrigin->{0, 0},
+   Method->{},
+   PlotRange->{{-4, 4}, {-14.999998189329917`, 0.9374999929270692}},
+   PlotRangeClipping->True,
+   PlotRangePadding->{
+     Scaled[0.02], 
+     Scaled[0.02]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.582283012197912*^9, 3.58228303907193*^9}, 
+   3.5822830802047653`*^9, 3.582283174776704*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Log", "[", 
+     RowBox[{"x", ",", "27"}], "]"}], "\[Equal]", 
+    RowBox[{"3", "/", "2"}]}], ",", "x", ",", "Reals"}], "]"}]], "Input"]
+},
+WindowSize->{740, 596},
+WindowMargins->{{52, Automatic}, {Automatic, 4}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 381, 10, 28, "Input"],
+Cell[963, 34, 2270, 45, 238, "Output"]
+}, Open  ]],
+Cell[3248, 82, 210, 6, 28, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
