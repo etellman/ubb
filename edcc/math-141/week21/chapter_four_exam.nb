@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      3824,        108]
-NotebookOptionsPosition[      3462,         90]
-NotebookOutlinePosition[      3817,        106]
-CellTagsIndexPosition[      3774,        103]
+NotebookDataLength[      4330,        127]
+NotebookOptionsPosition[      3860,        105]
+NotebookOutlinePosition[      4215,        121]
+CellTagsIndexPosition[      4172,        118]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -86,7 +86,22 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"Log", "[", 
      RowBox[{"x", ",", "27"}], "]"}], "\[Equal]", 
-    RowBox[{"3", "/", "2"}]}], ",", "x", ",", "Reals"}], "]"}]], "Input"]
+    RowBox[{"3", "/", "2"}]}], ",", "x", ",", "Reals"}], "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  RowBox[{"Log", "[", 
+   RowBox[{"x", "^", "2"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.582406615884778*^9, 3.582406632721756*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"log", "(", 
+   SuperscriptBox["x", "2"], ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.5824066269444313`*^9, 3.582406633453286*^9}}]
+}, Open  ]]
 },
 WindowSize->{740, 596},
 WindowMargins->{{52, Automatic}, {Automatic, 4}},
@@ -109,7 +124,11 @@ Cell[CellGroupData[{
 Cell[579, 22, 381, 10, 28, "Input"],
 Cell[963, 34, 2270, 45, 238, "Output"]
 }, Open  ]],
-Cell[3248, 82, 210, 6, 28, "Input"]
+Cell[3248, 82, 210, 6, 28, "Input"],
+Cell[CellGroupData[{
+Cell[3483, 92, 179, 4, 28, "Input"],
+Cell[3665, 98, 179, 4, 35, "Output"]
+}, Open  ]]
 }
 ]
 *)
