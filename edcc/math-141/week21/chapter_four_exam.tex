@@ -35,10 +35,13 @@
   % \makebox[\textwidth]{Name:\enspace\hrulefill}
   % \vspace{0.2in}
 
-  \begin{center}
-  \gradetable[h][pages]
-  \bonusgradetable[h][pages]
-  \end{center}
+  \ifprintanswers
+  \else
+    \begin{center}
+      \gradetable[h][pages]
+      \bonusgradetable[h][pages]
+    \end{center}
+  \fi
 
   % \section{Instructions}
   % \begin{itemize}
@@ -121,6 +124,10 @@
                                                    & = \boxed{ 2 \log x + 2 \log y - \log z } \\
             \end{align*}
           \end{solution}
+
+        \ifprintanswers
+          \pagebreak
+        \fi
 
         \part[7]
           \[
@@ -206,7 +213,7 @@
               x                                  & = \frac{2 \pm \sqrt{4 - 4 (-5)}}{2} \\
                                                  & = \frac{2 \pm \sqrt{24}}{2} \\
                                                  & = \frac{2 \pm 2 \sqrt{6}}{2} \\
-                                                 & = 1 \pm \sqrt{6} \\
+                                                 & = \boxed{ 1 \pm \sqrt{6} } \\
             \end{align*}
           \end{solution}
 
@@ -219,6 +226,10 @@
             \end{align*}
           \end{solution}
 
+        \ifprintanswers
+          \pagebreak
+        \fi
+
           \part[10] $3^{2x} = 4^{x - 1}$
           \begin{solution}
             \begin{align*}
@@ -228,7 +239,8 @@
               2x \ln 3            & = x \ln 4 - \ln 4 \\
               x \ln 4 - 2x \ln 3  & =  \ln 4 \\
               x (\ln 4 - 2 \ln 3) & =  \ln 4 \\
-              x                   & = \frac{\ln 4}{\ln 4 - 2 \ln 3} \\
+              x                   & = \boxed{ \frac{\ln 4}{\ln 4 - 2 \ln 3} } \\
+                                  % & \approx \boxed{ 1.7095 } \\
             \end{align*}
           \end{solution}
           
@@ -241,10 +253,14 @@
               8x - 1                                     & = x^2 - 1 \\
               x^2 - 8x                                   & = 0 \\
               x(x - 8)                                   & = 0 \\
-              x                                          & = 8 \\
+              x                                          & = \boxed{ 8 } \\
             \end{align*}
           \end{solution}
       \end{parts}
+
+    \ifprintanswers
+      \pagebreak
+    \fi
 
     \question[7]
       If you deposit \$1,000 in a savings account with interest compounded continuously and have \$1568.31 10 years later,
@@ -257,7 +273,7 @@
           \ln 1.56831 & = 10 r \\
           r           & = \frac{\ln 1.56831}{10} \\
                       & \approx 0.045 \\
-                      & = 4.5\% \\
+                      & = \boxed{ 4.5\% } \\
         \end{align*}
       \end{solution}
 
@@ -281,7 +297,7 @@
           0.2     & = e^{-0.0001210 t} \\
           \ln 0.2 & = -0.0001210 t \\
           t       & = \frac{\ln 0.2}{-0.0001210} \\
-                  & \approx \unit[13,305]{years} \\
+                  & \approx \boxed{ \unit[13,305]{years} } \\
         \end{align*}
       \end{solution}
 
@@ -299,28 +315,51 @@
           85       & = 10 \log \frac{I}{10^{-12}} \\
           8.5      & = \log \frac{I}{10^{-12}} \\
           10^{8.5} & = \frac{I}{10^{-12}} \\
-          I        & = 10^{-3.5} \\
+          I        & = \boxed{ 10^{-3.5} } \\
         \end{align*}
       \end{solution}
+
+    \ifprintanswers
+      \pagebreak
+    \fi
 
     \question $f(x) = 1 - 2^{-x}$
       \begin{parts}
         \part[2] what is the domain?
+          \begin{solution}
+            $\boxed{ (-\infty, \infty) }$
+          \end{solution}
 
         \part[2] what is the range?
+          \begin{solution}
+            $\boxed{ (-\infty, 1) }$
+          \end{solution}
 
         \part[2] what is the x-intercept?
-        \begin{solution}
-          \begin{align*}
-            1 - 2^{-x}    & = 0 \\
-            2^{-x}        & = 1 \\
-            \frac{1}{2^x} & = 1 \\
-            2^x           & = 1 \\
-            x             & = 0 \\
-          \end{align*}
-        \end{solution}
+          \begin{solution}
+            \begin{align*}
+              1 - 2^{-x}    & = 0 \\
+              2^{-x}        & = 1 \\
+              \frac{1}{2^x} & = 1 \\
+              2^x           & = 1 \\
+              x             & = 0 \\
+            \end{align*}
+          \end{solution}
+
+          The x-intercept is: $\boxed{ (0, 0) }$
 
         \part[2] what is the y-intercept?
+          \begin{solution}
+            \[
+              f(0) = 1 - 2^0 = 0
+            \]
+
+            The y-intercept is: $\boxed{ (0, 0) }$
+          \end{solution}
+
+        \ifprintanswers
+          \pagebreak
+        \fi
 
         \part[5] plot the graph
           \begin{solution}
@@ -336,12 +375,43 @@
     \question $f(x) = \log_2 (x + 2)$
       \begin{parts}
         \part[2] what is the domain?
+          \begin{solution}
+            \begin{align*}
+              x + 2 & > 0 \\
+              x     & > -2 \\
+            \end{align*}
+
+            Domain: $\boxed{ (-2, \infty) }$
+          \end{solution}
 
         \part[2] what is the range?
+          \begin{solution}
+            Range: $\boxed{ (-\infty, \infty) }$  
+          \end{solution}
+
+        \ifprintanswers
+          \pagebreak
+        \fi
 
         \part[2] what is the x-intercept?
+          \begin{solution}
+            \begin{align*}
+              \log_2 (x + 2) & = 0 \\
+              x + 2          & = 1 \\
+              x              & = -1 \\
+            \end{align*}
+
+            x-intercept: $\boxed{ (-1, 0) }$
+          \end{solution}
 
         \part[2] what is the y-intercept?
+          \begin{solution}
+            \[
+              f(0) = \log_2(0 + 2) = 1
+            \]
+
+            y-intercept: $\boxed{ (0, 1) }$
+          \end{solution}
 
         \part[5] plot the graph
           \begin{solution}
