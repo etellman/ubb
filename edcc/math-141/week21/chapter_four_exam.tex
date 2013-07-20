@@ -31,6 +31,16 @@
 
   \maketitle  
 
+  \ifprintanswers
+    \begin{itemize}
+      \item You can get the intercepts, domain, and range from the graph.  The values for these things should match the
+        graph.
+
+      \item Be careful about parenthesizing the denominator when converting a single logarithm of a fraction into multiple
+        logarithms (problem 4c).
+    \end{itemize}
+  \fi
+
   % \vspace{0.2in}
   % \makebox[\textwidth]{Name:\enspace\hrulefill}
   % \vspace{0.2in}
@@ -125,10 +135,6 @@
             \end{align*}
           \end{solution}
 
-        \ifprintanswers
-          \pagebreak
-        \fi
-
         \part[7]
           \[
             \ln \left[ \frac{ \sqrt{x + 2} \sqrt[3]{x - 1} }{ (x + 3)^4 } \right]
@@ -184,10 +190,6 @@
             \end{align*}
           \end{solution}
 
-      \ifprintanswers
-        \pagebreak
-      \fi
-
         \part[7] $\log (x - 1) + \log(x + 1) - 2 \log \left( x^2 - 1 \right)$
           \begin{solution}
             \begin{align*}
@@ -207,10 +209,6 @@
         $\boxed{ \log_5 7 = \frac{\log 7}{\log 5} }$
       \end{solution}
 
-    \ifprintanswers
-      \pagebreak
-    \fi
-
     \question Solve for $x$
       \begin{parts}
         \part[7] $e^{2x} x^2 - 2 e^{2x} x - 5 e^{2x} = 0$
@@ -218,7 +216,9 @@
             \begin{align*}
               e^{2x} x^2 - 2 e^{2x} x - 5 e^{2x} & = 0 \\
               e^{2x} \left( x^2 - 2x - 5 \right) & = 0 \\
-              \\
+            \end{align*}
+
+            \begin{align*}
               x & = \frac{2 \pm \sqrt{4 - 4 (-5)}}{2} \\
                 & = \frac{2 \pm \sqrt{24}}{2} \\
                 & = \frac{2 \pm 2 \sqrt{6}}{2} \\
@@ -234,10 +234,6 @@
               x                                              & = \boxed{ \ln 4 } \\
             \end{align*}
           \end{solution}
-
-        \ifprintanswers
-          \pagebreak
-        \fi
 
           \part[10] $3^{2x} = 4^{x - 1}$
           \begin{solution}
@@ -256,20 +252,16 @@
           \part[10] $\log_2(3x - 1) - \log_2(x - 1) = \log_2(x + 1)$
           \begin{solution}
             \begin{align*}
-              \log_2(8x - 1) - \log_2(x - 1)             & = \log_2(x + 1) \\
-              \log_2 \left( \frac{8x - 1}{x - 1} \right) & = \log_2(x + 1) \\
-              \frac{8x - 1}{x - 1}                       & = x + 1 \\
-              8x - 1                                     & = x^2 - 1 \\
-              x^2 - 8x                                   & = 0 \\
-              x(x - 8)                                   & = 0 \\
-              x                                          & = \boxed{ 8 } \\
+              \log_2(3x - 1) - \log_2(x - 1)             & = \log_2(x + 1) \\
+              \log_2 \left( \frac{3x - 1}{x - 1} \right) & = \log_2(x + 1) \\
+              \frac{3x - 1}{x - 1}                       & = x + 1 \\
+              3x - 1                                     & = x^2 - 1 \\
+              x^2 - 3x                                   & = 0 \\
+              x(x - 3)                                   & = 0 \\
+              x                                          & = \boxed{ 3 } \\
             \end{align*}
           \end{solution}
       \end{parts}
-
-    \ifprintanswers
-      \pagebreak
-    \fi
 
     \question[7]
       If you deposit \$1,000 in a savings account with interest compounded continuously and have \$1568.31 10 years later,
@@ -324,13 +316,10 @@
           85       & = 10 \log \frac{I}{10^{-12}} \\
           8.5      & = \log \frac{I}{10^{-12}} \\
           10^{8.5} & = \frac{I}{10^{-12}} \\
-          I        & = \boxed{ 10^{-3.5} } \\
+          I        & = 10^{-3.5} \\
+                   & \approx \boxed{ 0.0003162 } \\
         \end{align*}
       \end{solution}
-
-    \ifprintanswers
-      \pagebreak
-    \fi
 
     \question $f(x) = 1 - 2^{-x}$
       \begin{parts}
@@ -353,9 +342,11 @@
               2^x           & = 1 \\
               x             & = 0 \\
             \end{align*}
+
+            The x-intercept is: $\boxed{ (0, 0) }$
+            
           \end{solution}
 
-          The x-intercept is: $\boxed{ (0, 0) }$
 
         \part[2] what is the y-intercept?
           \begin{solution}
@@ -366,16 +357,12 @@
             The y-intercept is: $\boxed{ (0, 0) }$
           \end{solution}
 
-        \ifprintanswers
-          \pagebreak
-        \fi
-
         \part[5] plot the graph
           \begin{solution}
             \begin{figure}[H]
               \centering
               \includegraphics[scale=0.9]{graph_1.eps}
-              \caption*{$f(x) = 1 - 2^x$}
+              \caption*{$f(x) = 1 - 2^{-x}$}
             \end{figure}
           \end{solution}
 
@@ -397,10 +384,6 @@
           \begin{solution}
             Range: $\boxed{ (-\infty, \infty) }$  
           \end{solution}
-
-        \ifprintanswers
-          \pagebreak
-        \fi
 
         \part[2] what is the x-intercept?
           \begin{solution}
