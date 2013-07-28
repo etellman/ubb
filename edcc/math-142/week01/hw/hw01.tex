@@ -50,15 +50,24 @@
   Section 5.1: 7-10, 15-50
 
   \section{Extra Credit}
-  Section 5.1: 55 and 56
 
-  \ifprintanswers
-    \begin{solution}
-      TO DO
-    \end{solution}
-  \fi
+  Imagine that you have three boxes. One contains two black marbles, one contains two white marbles, and the third,
+  one black marble and one white marble. The boxes were labeled for their contents---BB, BW, WW---but someone switched the
+  labels so that every box is now incorrectly labeled. You are allowed to take one marble at a time out of any box,
+  without looking inside, and by this process of sampling you are to determine the contents of all three boxes. What is
+  the smallest number of drawings needed to do this?
+   
+  \begin{solution}
+    You can identify all the boxes by taking a single marble from the BW box.  You know all the boxes are labeled
+    incorrectly, so this box is actually either the WW box or the BB box.  You can tell which of these it is by the color
+    of the marble.
 
-  \pagebreak
+    Suppose you draw a white marble.  You now know that the box labeled BW is actually the WW box.  You have two boxes
+    left to identify, and you know that they are both labeled incorrectly.  Therefore, the box labeled WW must be the BB
+    box and the box labeled BB must be the BW box.
+    
+    Similar reasoning applies if the marble you draw originally is black.
+  \end{solution}
 
   \ifprintanswers
     \section{Section 5.1}
