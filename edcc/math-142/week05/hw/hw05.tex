@@ -144,7 +144,7 @@
           \item 
             \begin{figure}[H]
               \centering
-              \includegraphics{exercise28.eps}
+              \includegraphics[scale=0.6]{exercise28.eps}
 
               Exercise 28
             \end{figure}
@@ -225,11 +225,11 @@
           \boxed{ v(t) = 310 \cos 200 \pi t }
         \]
 
-        The rms voltage is: $\frac{310}{\sqrt{2}} \approx \unit[ 220 ]{ volt }$ 
+        The rms voltage is: $\frac{310}{\sqrt{2}} \approx \boxed{ \unit[ 220 ]{ volt } }$ 
 
       \item[40]
         \[
-          \omega = {2 \pi}{24} = \frac{\pi}{12}
+          \omega = \frac{2 \pi}{24} = \frac{\pi}{12}
         \]
 
         Since the pressure various by $\pm 20$, the amplitude is $20$.
@@ -242,16 +242,65 @@
         \]
 
       \item[41]
-        \begin{itemize}[(a)]
-          \item $\boxed{ v_max = 45 }$
+        \begin{enumerate}[(a)]
+          \item $\boxed{ v_{max} = 45 }$
 
           \item The generator completes 4 cycles in 0.1 seconds, so the frequency is $\boxed{ \unit[ 40 ]{cps} }$
 
           \item The armature is rotating at $\boxed{ \unit[ 40 ]{rpm} }$
 
-          \item $v(t) = 45 \cos 80 \pi t$
+          \item $\boxed{ v(t) = 45 \cos 80 \pi t }$
 
-        \end{itemize}
+        \end{enumerate}
+
+      \item[42]
+        \begin{enumerate}[(a)]
+          \item 
+            \begin{itemize*}
+              \item moving towards: $f = 500 \cdot \frac{1130}{1130 - 110} \approx \boxed{ \unit[554]{Hz} }$
+              \item moving away: $f = 500 \cdot \frac{1130}{1130 + 110} \approx \boxed{ \unit[456]{Hz} }$
+            \end{itemize*}
+
+          \item 
+            \begin{itemize*}
+              \item moving towards: $f = A \sin 554 \cdot 2 \pi = \boxed{ A \sin 3481 }$
+              \item moving away: $f = A \sin 456 \cdot 2 \pi = \boxed{ A \sin 2865 }$
+            \end{itemize*}
+
+        \end{enumerate}
+
+      \item[44]
+        \begin{align*}
+          e^{-3c} & = 0.25 \\
+          -3c     & = \ln 0.25 \\
+          c       & = - \frac{\ln 0.25}{3} \\
+                  & \approx \boxed{ 0.4621 } \\
+        \end{align*}
+
+      \item[46]
+        \begin{enumerate}[(a)]
+          \item 
+            First find by what factor the amplitude has decreased:
+            \begin{align*}
+              0.6 & = x \cdot 3 \\
+              x   & = 0.2 \\
+            \end{align*}
+
+            now find the damping factor:
+            \begin{align*}
+              e^{-2c} & = 0.2 \\
+              -2c     & = \ln 0.2 \\
+              c       & = - \frac{\ln 0.2}{2} \\
+                      & \approx \boxed{ 0.8047 } \\
+            \end{align*}
+
+          \item 
+            \begin{align*}
+              f(t) & = e^{-0.8047t} 3 \cos 165 \cdot 2 \pi \\
+                   & = \boxed{ e^{-0.8047t} 3 \cos 330 \pi } \\
+            \end{align*}
+
+        \end{enumerate}
 
     \end{description}
 
