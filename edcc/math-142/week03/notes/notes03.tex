@@ -33,7 +33,7 @@
 % \bottomrule
 % \end{tabular}
 
-\title{Math 142 Notes \\ Section 5.1}
+\title{Math 142 Notes \\ Section 5.3}
 
 \date{\today}
 
@@ -42,89 +42,52 @@
   \maketitle
   \tableofcontents
 
-  \section{Unit Circle}
-
-  \subsection{Description}
-  \begin{itemize*}
-    \item circle with radius one centered at origin.
-    \item points on unit circle satisfy $x^2 + y^2 = 1$
-  \end{itemize*}
-
-  \subsection{Verifying Points}
-  Verify following points are on unit circle:
-  \begin{itemize*}
-    \item $(1, 0)$
-    \item $(0, 1)$
-    \item $\left( \frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2} \right)$
-    \item $\left( \frac{1}{3}, - \frac{2 \sqrt{2}}{3} \right)$
-  \end{itemize*}
-
-  \subsection{Finding Points}
-  
-  To find points given an x or y coordinate and a quadrant:
-  \begin{itemize*}
-    \item solve $x^2 + y^2 = 1$ for missing coordinate
-    \item choose sign which puts point in correct quadrant
-  \end{itemize*}
-
+  \section{Periodicity}
   \begin{itemize}
-    \item $\left( x, \frac{1}{2} \right)$, quadrant II
-    \item $\left( -\frac{3}{4}, y \right)$, quadrant III
-    \item etc.
+    \item sine, cosine, etc., repeat as you go around the unit circle again
+    \item $\sin(t \pm 2n \pi = \sin t$ for any integer $n$, etc.
+    \item a function is periodic if there is some $p$ where $f(t + p) = f(t)$ for any value of $t$.  The smallest
+      $p$ that works is the {\em period} of $f$.
+    \item to graph a periodic function, you only need one period
+    \item The period of sine, cosine, secant, and cosecant is $2 \pi$.  The period of tangent and cotangent is
+      $\pi$
   \end{itemize}
 
-  \section{Terminal Points}
+  \section{Graphing Sine and Cosine} 
 
-  \subsection{Description}
-  For terminal point determined by $t$, start at $(1, 0)$ and go counter-clockwise around unit circle distance $t$.  The
-  point you reach is the terminal point for $t$.
-
-  For negative $t$, go clockwise.
-
-  \subsection{Examples}
+  \subsection{Basic Graph}
   \begin{itemize}
-    \item $\pi$, $2 \pi$, $\frac{\pi}{2}$, $-\pi$, $-\frac{3 \pi}{2}$, $8 \pi$, etc.
-    \item $P = \left( \frac{1}{3}, \frac{\sqrt{6}}{3} \right)$, find terminal points for:
-      \begin{enumerate}[a]
-        \item $t + \pi$
-        \item $-t$
-        \item $\pi - t$
-        \item $2 \pi + t$
-      \end{enumerate}
+    \item draw single period of sine using known points
+    \item draw single period of cosine using known points
+    \item shift up and down by adding a constant
   \end{itemize}
 
-  \subsection{Interesting Points}
+  \subsection{Amplitude}
+  For vertical scaling: $f(x) = a \sin x$, $|a|$ is the {\em amplitude } which determines how big the peaks and valleys
+  are.
 
-  \begin{itemize}
-    \item $\frac{\pi}{4}$ is half way between $(1, 0)$ and $(0, 1)$, so $y = x$ and point is 
-      $\left( \frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2} \right)$
+  \subsection{Period}
+  For horizontal scaling, $f(x) = \sin kx$, period is $\frac{2 \pi}{k}$.  The graph repeats every 
+  $\frac{2 \pi}{k}$
 
-    \item Draw equilateral triangle with side length one and one side on x-axis to find terminal point for
-      $\frac{\pi}{3}$ is $\left( \frac{1}{2}, \frac{\sqrt{3}}{2} \right)$.
+  The graph shrinks if $k > 1$ and stretches if $k < 1$ (small period means high frequency).
 
-      Draw three equilateral triangles, with middle one upside down, all three inscribed in unit circle to demonstrate
-      that angle is \sfrac{1}{3} of a circle.  
+  \subsection{Phase}
+  To shift left/right, add/subtract a constant: $f(x) = \sin(x - b)$.  $b$ is the {\em phase}.
 
-    \item Same figure with triangles along y-axis to find terminal point for $\frac{\pi}{6}$ 
-      is $\left( \frac{1}{2}, \frac{\sqrt{3}}{2} \right)$
+  \subsection{General Form}
+  \[
+    y = a \sin k(x - b)
+  \]
 
-    \item Show same points in other quadrants
-
-  \end{itemize}
-
-  \section{Reference Number}
-  \subsection{Description}
-  Distance from x-axis determines absolute value of coordinates of terminal points.  Quadrant determines sign.  The
-  ``reference number'' is the shortest distance along unit circle from x-axis to point.
-
-  To find the reference number:
   \begin{itemize*}
-    \item subtract suitable multiple of $\pi$
-    \item take absolute value
+    \item $|a|$ is the amplitude
+    \item $\frac{2 \pi}{k}$ is the period
+    \item $b$ is the phase shift
+
+    \item to graph one period, graph from $b$ to $b + \frac{2 \pi}{k}$
   \end{itemize*}
 
-  \subsection{Examples}
-  Find reference number for $\frac{\pi}{3}$, $- \frac{\pi}{3}$, $\frac{2 \pi}{3}$, $\frac{7 \pi}{3}$, etc.
 
 
 \end{document}

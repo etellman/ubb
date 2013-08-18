@@ -1,5 +1,5 @@
 # Makefile
 
-TARGETS = syllabus.pdf notes01.pdf
+TARGETS = notes02.pdf
 include ../../../../Makefile
 	
