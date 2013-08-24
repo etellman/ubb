@@ -51,8 +51,7 @@
   \begin{itemize*}
     \item sine---y coordinate on unit circle
     \item cosine---x coordinate on unit circle
-    \item tangent---$\frac{y}{x}$ ($x \neq 0$)
-    \item sine and cosine defined for any value, tangent undefined for $\frac{\pi}{2}$, etc.
+    \item tangent---$\sfrac{y}{x}$ ($x \neq 0$)
   \end{itemize*}
 
   \subsection{Examples}
@@ -61,14 +60,22 @@
     \item fill in table with 0, $\pi$, $\frac{\pi}{2}$, $\frac{\pi}{6}$, $\frac{\pi}{4}$, $\frac{\pi}{3}$ (first
       quadrant only)
     \item examples in all quadrants
-    \item sign positive in quadrants I and II, etc.
+    \item show quadrant sign chart for all
   \end{itemize*}
 
   \section{Secant/Cosecant/Cotangent}
   \begin{itemize*}
-    \item $\frac{1}{x}$, $\frac{1}{y}$, $\frac{y}{x}$
-    \item Inverse of sine, etc.
-    \item secant undefined for $x = y$, cosecant and cotangent undefined for $y = 0$
+    \item secant--\sfrac{1}{x} ($x \neq 0$)
+    \item cosecant--\sfrac{1}{y} ($y \neq 0$)
+    \item cotangent--\sfrac{x}{y} ($y \neq 0$)
+  \end{itemize*}
+
+  \subsection{Examples}
+
+  \begin{itemize*}
+    \item fill in table with 0, $\pi$, $\frac{\pi}{2}$, $\frac{\pi}{6}$, $\frac{\pi}{4}$, $\frac{\pi}{3}$ (first
+      quadrant only)
+    \item examples in all quadrants
     \item show quadrant sign chart for all
   \end{itemize*}
 
@@ -82,21 +89,32 @@
 
   Do examples like $\frac{2 \pi}{3}$, $\frac{5 \pi}{4}$, $- \frac{\pi}{2}$, etc.
 
+  \section{Domains}
+  \begin{tabular}[H]{ll}
+    $\sin$, $\cos$ & all real numbers \\
+    $\tan$, $\sec$ & $t \neq \sfrac{\pi}{2} + n \pi$  \\
+    $\cot$, $\csc$ & $t \neq n \pi$  \\
+  \end{tabular}
+
   \section{Even/Odd}
   \subsection{Overview}
   \begin{itemize*}
     \item review even/odd definitions
+    \item $\sin (-t) = -y = - \sin t$
+    \item $\tan (-t) = - \sfrac{y}{x} = - \tan t$
+    \item $\cos (-t) = x = \cos t$
     \item sine, cosecant, tangent, and cotangent are odd
-
     \item cosine and secant are even
-
   \end{itemize*}
 
   \subsection{Examples}
   \begin{itemize*}
-    \item $\sin x - \cos x$
-    \item $\sin x \cos x$
-    \item $x \cos x$ 
+    \item $\sin (- \sfrac{\pi}{2}) = - \sin \sfrac{\pi}{2} = \sfrac{\sqrt{2}}{2}$
+    \item $\cos (- \sfrac{\pi}{2}) = \cos \sfrac{\pi}{2} = \sfrac{\sqrt{2}}{2}$
+
+    \item $\sin x - \cos x$ (neither)
+    \item $\sin x \cos x$ (odd)
+    \item $x^2 \cos x$ (even)
   \end{itemize*}
 
   \section{Identities}
@@ -111,11 +129,24 @@
 
   \subsection{Applications}
 
-  \begin{itemize}
+  \begin{enumerate}
     \item if $\sin t = \frac{2}{5}$ and $t$ is in quadrant II, find the values of the other trigonometric functions
-    \item write $\sin t$ in terms of $\cos t$ where $t$ is in quadrant IV, etc.
-  \end{itemize}
 
+      \begin{align*}
+        \left( \frac{4}{5} \right)^2 + \cos^2 x & = 1 \\
+        \cos x                                  & = - \frac{3}{5} \\
+        \\
+        \tan x & = \frac{\sin x}{\cos x} \\
+               & = \frac{2}{5} \times \frac{-5}{3} \\
+               & = - \frac{2}{3} \\
+      \end{align*}
 
+    \item write $\sin t$ in terms of $\cos t$ where $t$ is in quadrant IV
+      \begin{align*}
+        \sin^2 t + \cos^2 t & = 1 \\
+        \sin^2 t            & = 1 - \cos^2 t \\
+        \sin t              & = - \sqrt{ 1 - \cos^2 t } \\
+      \end{align*}
+  \end{enumerate}
 
 \end{document}
