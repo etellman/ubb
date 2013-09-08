@@ -82,39 +82,48 @@
   \]
 
   \subsection{Shorter Period}
-  $y = \sin 2x$
+  \[
+    y = \sin 2x
+  \]
 
   \begin{tabular}[H]{lrr}
+    \toprule
+    $x$                & $2x$               & $\sin 2x$ \\
+    \midrule
     $0$                & $0$                & $0$ \\
     $\sfrac{\pi}{4}$   & $\sfrac{\pi}{2}$   & $1$ \\
     $\sfrac{\pi}{2}$   & $\pi$              & $0$ \\
     $\sfrac{3 \pi}{4}$ & $\sfrac{3 \pi}{2}$ & $-1$ \\
     $\pi$              & $2 \pi$            & $0$ \\
+    \bottomrule
   \end{tabular}
 
   Cycle repeats every $\pi$
 
   \subsection{Longer Period}
-  $y = \sin \frac{1}{2} x$
+  \[
+    y = \sin \frac{1}{2} x
+  \]
 
   \begin{tabular}[H]{lrr}
+    \toprule
+    $x$     & $\sfrac{x}{2}$     & $\sin \sfrac{x}{2}$ \\
+    \midrule
     $0$     & $0$                & $0$ \\
     $\pi$   & $\sfrac{\pi}{2}$   & $1$ \\
     $2 \pi$ & $\pi$              & $0$ \\
     $3\pi$  & $\sfrac{3 \pi}{2}$ & $-1$ \\
     $4 \pi$ & $2 \pi$            & $0$ \\
+    \bottomrule
   \end{tabular}
 
   Cycle repeats every $4 \pi$
 
   \subsection{General}
   \begin{align*}
-    f(x)  & = \sin(x + 2 \pi n) \\
-          & = \sin x \\
-    \\
-    f(kx) & = \sin(kx + 2 \pi n) \\
-    f(kx) & = \sin(k (x + \frac{2 \pi}{k} n) \\
-          & = \sin(kx) \\
+    \sin(kx) & = \sin(kx + 2 \pi n) \\
+    \sin(kx) & = \sin(kx + 2 \pi n) \\
+             & = \sin \left[ k \left(x + \frac{2 \pi}{k} n \right) \right ] \\
   \end{align*}
 
   \begin{itemize*}
@@ -139,9 +148,9 @@
 
   \begin{itemize*}
     \item $|a|$ is the amplitude---determines how big the peaks and valleys are
-    \item $\frac{2 \pi}{k}$ is the period---determines the horizontal compression
+    \item $\sfrac{2 \pi}{k}$ is the period---determines the horizontal compression
     \item $b$ is the phase shift---determines the horizontal shift
-    \item to graph one period, graph from $b$ to $b + \frac{2 \pi}{k}$
+    \item to graph one period, graph from $b$ to $b + \sfrac{2 \pi}{k}$
   \end{itemize*}
 
   \section{Examples}

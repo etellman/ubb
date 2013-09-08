@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      7471,        234]
-NotebookOptionsPosition[      6522,        195]
-NotebookOutlinePosition[      6876,        211]
-CellTagsIndexPosition[      6833,        208]
+NotebookDataLength[      9597,        317]
+NotebookOptionsPosition[      8206,        262]
+NotebookOutlinePosition[      8560,        278]
+CellTagsIndexPosition[      8517,        275]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -191,6 +191,73 @@ Cell[BoxData[
   FractionBox["1", 
    SqrtBox["2"]], TraditionalForm]], "Output",
  CellChangeTimes->{3.5840116032464733`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Reduce", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "^", "2"}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"2", "/", "5"}], ")"}], "^", "2"}]}], "\[Equal]", "1"}], ",", 
+   "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.587421891154442*^9, 3.587421903220995*^9}, {
+  3.587422006491775*^9, 3.587422008554472*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"x", "\[LongEqual]", 
+    RowBox[{"-", 
+     FractionBox[
+      SqrtBox["21"], "5"]}]}], "\[Or]", 
+   RowBox[{"x", "\[LongEqual]", 
+    FractionBox[
+     SqrtBox["21"], "5"]}]}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.587421903827009*^9, 3.587422009328142*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sqrt", "[", 
+  RowBox[{"1", "-", 
+   RowBox[{"49", "/", "625"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.587422213155293*^9, 3.587422223402302*^9}, {
+  3.587422254333235*^9, 3.58742226094701*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox["24", "25"], TraditionalForm]], "Output",
+ CellChangeTimes->{3.58742222387733*^9, 3.587422261601001*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"49", "^", "2"}]], "Input",
+ CellChangeTimes->{{3.587422268550418*^9, 3.587422269472946*^9}}],
+
+Cell[BoxData[
+ FormBox["2401", TraditionalForm]], "Output",
+ CellChangeTimes->{3.58742227011862*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "-", 
+  RowBox[{"49", "/", "625"}]}]], "Input",
+ CellChangeTimes->{{3.587422276503853*^9, 3.587422280232914*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox["576", "625"], TraditionalForm]], "Output",
+ CellChangeTimes->{3.587422281152473*^9}]
 }, Open  ]]
 },
 WindowSize->{740, 604},
@@ -234,7 +301,23 @@ Cell[5907, 172, 165, 3, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[6109, 180, 260, 6, 28, "Input"],
-Cell[6372, 188, 134, 4, 87, "Output"]
+Cell[6372, 188, 134, 4, 53, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6543, 197, 364, 11, 28, "Input"],
+Cell[6910, 210, 317, 10, 52, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7264, 225, 221, 5, 28, "Input"],
+Cell[7488, 232, 142, 3, 48, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7667, 240, 116, 2, 28, "Input"],
+Cell[7786, 244, 100, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7923, 251, 141, 3, 28, "Input"],
+Cell[8067, 256, 123, 3, 82, "Output"]
 }, Open  ]]
 }
 ]
