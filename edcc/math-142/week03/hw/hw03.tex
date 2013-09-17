@@ -18,20 +18,7 @@
 \newcommand{\degree}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
-% \begin{figure}[H]
-%   \centering
-%   \includegraphics[scale=.3]{question7.eps}
-%   \caption*{question 7}
-% \end{figure}
-
-% \begin{tabular}{cc}
-%   \toprule
-%   period & amplitude \\
-%     $\pi$ & $2$ \\
-%   \bottomrule
-% \end{tabular}
-
-% \printanswers
+\printanswers
 \excludecomment{comment}
 
 \ifprintanswers 
@@ -53,6 +40,18 @@
   Section 5.3: 82
 
   \ifprintanswers
+
+    If $n$ is any integer:
+    \begin{align*}
+      y  & = \sin (x - \pi + 2n\pi) \\
+      y  & = - \sin (x + 2n \pi) \\
+      \\
+      y  & = \cos \left( x - \frac{3 \pi}{2} + 2n\pi\right ) \\
+      y  & = - \cos \left( x - \frac{\pi}{2} + 2n\pi\right ) \\
+    \end{align*}
+
+    For either the sine or cosine graph, you can start with the inverted or non-inverted form.  With either form, you can
+    add any multiple of $2 \pi$ to get the same graph.
 
     \section{Section 5.3}
     \begin{description}
@@ -336,6 +335,8 @@
           phase shift & $- \sfrac{\pi}{4}$ \\
           \bottomrule
         \end{tabular}
+
+      \pagebreak
 
       \item[33]
         \[
