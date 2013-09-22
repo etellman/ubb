@@ -18,20 +18,7 @@
 \newcommand{\degree}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
-% \begin{figure}[H]
-%   \centering
-%   \includegraphics[scale=.3]{question7.eps}
-%   \caption*{question 7}
-% \end{figure}
-
-% \begin{tabular}{cc}
-%   \toprule
-%   period & amplitude \\
-%     $\pi$ & $2$ \\
-%   \bottomrule
-% \end{tabular}
-
-\printanswers
+% \printanswers
 \excludecomment{comment}
 
 \ifprintanswers 
@@ -46,15 +33,22 @@
 
   \maketitle
 
-  \section{Homework}
-  Section 5.5: 
+  \ifprintanswers
+  \else
+    \section{Calendar}
+    \begin{itemize*}
+      \item October 2: Chapter 5 Review
+      \item October 9: Chapter 5 Exam
+    \end{itemize*}
+  \fi
 
-  \section{Extra Credit}
-  TO DO
+  \section{Homework}
+  Section 5.5: 9-19, 25-30, 32, 34-35, 37, 39-41, 42, 44, 46
+
+  % \section{Extra Credit}
+  % Section 5.5: 42
 
   \ifprintanswers
-
-    \pagebreak
 
     \section{Section 5.5}
     \begin{description}
@@ -99,7 +93,6 @@
         \end{figure}
 
       \item[25]
-        \pagebreak
         \begin{enumerate}[(a)]
           \item $f = \frac{20 \pi}{2 \pi} = \boxed{ 10 }$
 
@@ -122,7 +115,6 @@
         \end{align*}
 
       \item[27]
-        \pagebreak
         \begin{enumerate}[(a)]
           \item $y_{max} = \boxed{ \unit[9800]{animals} }$
 
@@ -133,6 +125,7 @@
         \end{enumerate}
 
       \item[28]
+        \pagebreak
         \begin{enumerate}[(a)]
           \item 
             \begin{align*}
@@ -232,7 +225,7 @@
           \omega = \frac{2 \pi}{24} = \frac{\pi}{12}
         \]
 
-        Since the pressure various by $\pm 20$, the amplitude is $20$.
+        Since the pressure varies by $\pm 20$, the amplitude is $20$.
 
         The maximum occurs 14 hours after midnight, so the phase shift is 14 hours.
 
@@ -266,7 +259,6 @@
               \item moving towards: $f = A \sin 554 \cdot 2 \pi = \boxed{ A \sin 3481 }$
               \item moving away: $f = A \sin 456 \cdot 2 \pi = \boxed{ A \sin 2865 }$
             \end{itemize*}
-
         \end{enumerate}
 
       \item[44]
@@ -305,13 +297,13 @@
     \end{description}
 
   \else
-    \vspace{1 cm}
+    \vspace{10 cm}
     \begin{quote}
       \begin{em}
-        TO DO
+        Your vision will become clear only when you look into your heart \dots Who looks outside, dreams. Who looks inside, awakens.
       \end{em}
     \end{quote}
-    \hspace{1 cm} --Shunryu Suzuki
+    \hspace{1 cm} --Carl Jung
   \fi
 
 \end{document}
