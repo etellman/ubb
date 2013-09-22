@@ -28,6 +28,8 @@
   \maketitle
   \tableofcontents
 
+  \pagebreak
+
   \section{Homework}
   \begin{itemize*}
     \item be careful about offset vs. amplitude
@@ -35,17 +37,179 @@
     \item absolute value graphs should have sharper corners at x-axis
   \end{itemize*}
 
-  \section{Harmonic Motion}
-    Draw picture of spring and graph of motion.
+  \section{Simple Harmonic Motion}
 
+  \subsection{Definitions}
+    Draw picture of spring and graph of motion.
     \begin{align*}
-      \omega & = \unit[ \frac{2 \pi}{p} ]{\frac{rad}{s}} \\
       p      & = \unit[ \frac{2 \pi}{\omega} ]{s} \\
       f      & = \frac{1}{p} = \unit[ \frac{\omega}{2 \pi} ]{cycles/s} \\
+      \omega & = \unit[ \frac{2 \pi}{p} ]{\frac{rad}{s}} \\
     \end{align*}
 
-    Do examples from other books
+    Draw velocity and acceleration graphs below position graph.
 
+  \subsection{Masses on Springs}
+  \subsubsection{Definitions}
+  \[
+    T = 2 \pi \sqrt{\frac{m}{k}}
+  \]
+          
+  \subsubsection{Examples}
+  \begin{enumerate}
+    \item mass on a spring:
+      \[
+        y = 3 \cos \frac{2}{3} \pi t
+      \]
+      \begin{parts}
+        \part what is the period?
+        \begin{solution}
+          \[
+            p = \frac{2 \pi}{\sfrac{2}{3}} = \unit[3 \pi]{s}
+          \]
+        \end{solution}
+
+        \part what is the first time the mass will be at position $y = 0$?
+        \begin{solution}
+          one fourth of the way through, or $\unit[\sfrac{3 \pi}{4}]{s}$
+        \end{solution}
+
+      \end{parts}
+
+    \item mass oscillates on a spring with a period of 1.5 seconds and an amplitude of 6 cm.  
+      If it starts at 6 cm at $t = 0$, what is the equation?
+
+      \begin{solution}
+        \begin{align*}
+          \omega & = \frac{2 \pi}{1.5} = \frac{4}{3} \pi \\
+          y(t)   & = 6 \cos \frac{4}{3} \pi t \\
+        \end{align*}
+      \end{solution}
+
+    \item a mass on a spring has a period 8 and an amplitude of 10.  If it starts out moving up at position and time 0,
+      where is it at times 1, 2, 4, and 6 seconds?
+
+      \begin{solution}
+        \begin{align*}
+          \omega & = \frac{2 \pi}{8} \\
+                 & = \frac{\pi}{4} \\
+          \\
+          y(t)   & = 10 \sin \frac{\pi}{4} t \\
+        \end{align*}
+
+        \begin{tabular}[H]{lr}
+          \toprule
+          time & position \\
+          \midrule
+          1 & $5 \sqrt{2}$ \\
+          2 & $10$ \\
+          4 & $0$ \\
+          6 & $-10$ \\
+          \bottomrule
+        \end{tabular}
+      \end{solution}
+
+    \item A mass on a spring with period T.  In the time $\sfrac{3T}{2}$, the object moves a total distance of 12 cm.  
+      What is the amplitude?
+
+      \begin{solution}
+        In one and a half cycles, the object will have traveled 6 times the amplitude.
+
+        \begin{align*}
+          12 & = 6 A \\
+          A  & = \unit[2]{cm} \\
+        \end{align*}
+        
+      \end{solution}
+    \item A mass oscillates with a period of 3 seconds and starts from rest at a position $y = \unit[5]{cm}$.
+      \begin{parts}
+        \part where is it at time $t = \unit[7]{s}$?
+          \begin{solution}
+            \begin{align*}
+              y(t) &= 5 \cos \frac{2 \pi}{3} t \\
+              \\
+              \frac{14 \pi}{3} = 4 \pi + \frac{2 \pi}{3} \\
+              y(7) &= - \frac{5}{2} \\
+            \end{align*}
+          \end{solution}
+
+        \part is it moving up or down at this time?
+        \begin{solution}
+          it hasn't yet reached the bottom, which happens half way between 6 and 9, so it's moving down
+        \end{solution}
+      \end{parts}
+
+    \item car engine at 2,500 rpm.  What is the period and frequency?
+      \begin{solution}
+        \begin{align*}
+          \omega &= 2500 \cdot 2 \pi \\
+          f &= 2,500 \\
+          p &= 
+        \end{align*}
+      \end{solution}
+  \end{enumerate}
+
+  \subsection{Pendulums}
+
+  \subsubsection{Definitions}
+  \[
+    T = 2 \pi \sqrt{\frac{L}{g}}
+  \]
+
+  \subsubsection{Examples}
+  \begin{enumerate}
+    \item How long is a pendulum with a period of 2 seconds?
+      \begin{solution}
+        \begin{align*}
+          2 & = 2 \pi \sqrt{\frac{L}{9.81}} \\
+          L & \approx \unit[0.994]{m} \\
+        \end{align*}
+      \end{solution}
+
+    \item Should you shorten or lengthen the pendulum on a clock that is running slow?
+      \begin{solution}
+        You want to decrease the period, so you need to decrease the length.
+      \end{solution}
+
+    \item Would a pendulum clock run fast or slow on the moon?
+      \begin{solution}
+        Since $g$ is lower on the moon, the period is longer and the clock runs slower than a similar clock on earth.
+      \end{solution}
+
+    \item There is a pendulum at the UN building with a 90 kg weight and 23 meter length.  If the maximum height of the
+      swing is 2 meters, Find an equation for its motion.
+
+      \begin{solution}
+        The mass doesn't matter.
+
+        \begin{align*}
+          T      & = 2 \pi \sqrt{\frac{23}{9.8}} \\
+                 & = \unit[9.62]{s} \\
+            \\
+          \omega & = \frac{2 \pi}{9.62} \\
+                 & \approx 0.653 \\
+            \\
+          h(t)   & = 2 \cos 0.653 t \\
+        \end{align*}
+      \end{solution}
+  \end{enumerate}
+
+  \section{Damped Harmonic Motion}
+
+  Real springs don't oscillate forever:
+  \[
+    y = k e^{-ct} \cos \omega t
+  \]
+
+  amplitude function:
+  \[
+    a(t) = k e^{-ct}
+  \]
+
+  \begin{description*}
+    \item[k] initial amplitude
+    \item[c] damping constant
+  \end{description*}
 
   \section{RMS}
 
@@ -84,23 +248,6 @@
   \end{align*}
 
   Draw graph with all three.
-
-  \section{Damped Harmonic Motion}
-
-  Real springs don't oscillate forever:
-  \[
-    y = k e^{-ct} \cos \omega t
-  \]
-
-  amplitude function:
-  \[
-    a(t) = k e^{-ct}
-  \]
-
-  \begin{description*}
-    \item[k] initial amplitude
-    \item[c] damping constant
-  \end{description*}
 
   \section{Discrete Time Fourier Transform}
 
