@@ -44,18 +44,22 @@
     \begin{align*}
       p      & = \unit[ \frac{2 \pi}{\omega} ]{s} \\
       f      & = \frac{1}{p} = \unit[ \frac{\omega}{2 \pi} ]{cycles/s} \\
+      \\
       \omega & = \unit[ \frac{2 \pi}{p} ]{\frac{rad}{s}} \\
+             & = \unit[ 2 \pi f ]{\frac{rad}{s}} \\
     \end{align*}
 
     Draw velocity and acceleration graphs below position graph.
 
-  \subsection{Masses on Springs}
-  \subsubsection{Definitions}
+  \subsection{Examples}
+
+  \section{Masses on Springs}
+  \subsection{Definitions}
   \[
     T = 2 \pi \sqrt{\frac{m}{k}}
   \]
           
-  \subsubsection{Examples}
+  \subsection{Examples}
   \begin{enumerate}
     \item mass on a spring:
       \[
@@ -149,14 +153,14 @@
       \end{solution}
   \end{enumerate}
 
-  \subsection{Pendulums}
+  \section{Pendulums}
 
-  \subsubsection{Definitions}
+  \subsection{Definitions}
   \[
     T = 2 \pi \sqrt{\frac{L}{g}}
   \]
 
-  \subsubsection{Examples}
+  \subsection{Examples}
   \begin{enumerate}
     \item How long is a pendulum with a period of 2 seconds?
       \begin{solution}
@@ -196,12 +200,13 @@
 
   \section{Damped Harmonic Motion}
 
+  \subsection{Description}
   Real springs don't oscillate forever:
   \[
     y = k e^{-ct} \cos \omega t
   \]
 
-  amplitude function:
+  amplitude function (instead of amplitude constant):
   \[
     a(t) = k e^{-ct}
   \]
@@ -210,6 +215,49 @@
     \item[k] initial amplitude
     \item[c] damping constant
   \end{description*}
+
+  Draw graph of $e^{-ct}$, graph of sine, envelope
+
+  \subsection{Examples}
+
+  \begin{enumerate}
+    \item A spring's oscillation amplitude has dropped from 8 cm to 4 cm after 5 seconds.  What is the damping constant?
+      \begin{solution}
+        \begin{align*}
+          4       & = 8 e^{-5k} \\
+          e^{-5k} & = \frac{1}{2} \\
+          -5k     & = \ln \frac{1}{2} \\
+          k       & = 0.1386 \\
+        \end{align*}
+      \end{solution}
+
+    \item Spring with damping factor 0.1.
+      \begin{enumerate}[(a)]
+        \item What is the equation if spring is released 5 cm above equilibrium at $t = 0$ and the frequency is 2 cycles
+          per second.
+
+          \begin{solution}
+            \[
+              y(t) = 5 e^{-0.1 t} \cos 2 \pi t
+            \]
+          \end{solution}
+
+        \item What is the amplitude after 2 seconds?
+          \begin{solution}
+            \[
+              y(2) = 5 e^{-0.2} \approx \unit[4.09]{cm}
+            \]
+          \end{solution}
+
+        \item when will the amplitude be one fifth the starting amplitude?
+          \begin{align*}
+            5 e^{-0.1 t} & = 1 \\
+            e^{-0.1 t}   & = \frac{1}{5} \\
+            -0.1 t       & = \ln \frac{1}{5}
+            t            & \approx 16 \\
+          \end{align*}
+      \end{enumerate}
+  \end{enumerate}
 
   \section{RMS}
 
