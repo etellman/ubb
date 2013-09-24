@@ -1,0 +1,76 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1613,         66]
+NotebookOptionsPosition[      1291,         49]
+NotebookOutlinePosition[      1645,         65]
+CellTagsIndexPosition[      1602,         62]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"5", 
+     RowBox[{"x", "^", "2"}]}], "\[Equal]", "1"}], ",", "x"}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.588972817179221*^9, 3.588972828063946*^9}, {
+  3.588973133926303*^9, 3.588973150659926*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox["1", 
+        SqrtBox["5"]]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", "\[Rule]", 
+      FractionBox["1", 
+       SqrtBox["5"]]}], "}"}]}], "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.588972829202935*^9, {3.588973142121976*^9, 3.5889731512735453`*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 604},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 275, 8, 28, "Input"],
+Cell[857, 32, 418, 14, 111, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
