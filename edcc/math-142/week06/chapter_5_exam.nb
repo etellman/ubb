@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      1613,         66]
-NotebookOptionsPosition[      1291,         49]
-NotebookOutlinePosition[      1645,         65]
-CellTagsIndexPosition[      1602,         62]
+NotebookDataLength[      4626,        187]
+NotebookOptionsPosition[      3650,        146]
+NotebookOutlinePosition[      4004,        162]
+CellTagsIndexPosition[      3961,        159]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -45,6 +45,103 @@ Cell[BoxData[
        SqrtBox["5"]]}], "}"}]}], "}"}], TraditionalForm]], "Output",
  CellChangeTimes->{
   3.588972829202935*^9, {3.588973142121976*^9, 3.5889731512735453`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Csc", "[", 
+  RowBox[{"8", 
+   RowBox[{"Pi", "/", "3"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.589020060963852*^9, 3.589020065096936*^9}, {
+  3.5890201254097233`*^9, 3.5890201299111557`*^9}, {3.589020214557424*^9, 
+  3.589020226779134*^9}, {3.589020287801379*^9, 3.589020288665724*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox["2", 
+   SqrtBox["3"]], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.589020066053483*^9, 3.589020130464006*^9, {3.5890202193686533`*^9, 
+   3.589020227275447*^9}, 3.58902028914548*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AlgebraicNumberNorm", "[", 
+  FractionBox["2", 
+   SqrtBox["3"]], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"-", 
+   FractionBox["4", "3"]}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.5890203232423363`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MinimalPolynomial", "[", 
+  RowBox[{
+   FractionBox["2", 
+    SqrtBox["3"]], ",", "x"}], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"3", " ", 
+    SuperscriptBox["x", "2"]}], "-", "4"}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.589020311998074*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  FractionBox["2", 
+   SqrtBox["3"]], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ FormBox["1.1547005383792517`", TraditionalForm]], "Output",
+ CellChangeTimes->{3.589020296348171*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RealDigits", "[", "1.1547005383792517`", "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "1", ",", "5", ",", "4", ",", "7", ",", "0", ",", "0", ",", 
+      "5", ",", "3", ",", "8", ",", "3", ",", "7", ",", "9", ",", "2", ",", 
+      "5", ",", "1"}], "}"}], ",", "1"}], "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.589020303518011*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Pi", "/", "2"}], "+", 
+  RowBox[{"8", "Pi"}]}]], "Input",
+ CellChangeTimes->{{3.58902039832335*^9, 3.589020402860714*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"17", " ", "\[Pi]"}], "2"], TraditionalForm]], "Output",
+ CellChangeTimes->{3.589020403329197*^9}]
 }, Open  ]]
 },
 WindowSize->{740, 604},
@@ -66,11 +163,34 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[579, 22, 275, 8, 28, "Input"],
-Cell[857, 32, 418, 14, 111, "Output"]
+Cell[857, 32, 418, 14, 53, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1312, 51, 313, 6, 28, "Input"],
+Cell[1628, 59, 230, 6, 53, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1895, 70, 127, 4, 54, "Input"],
+Cell[2025, 76, 140, 4, 48, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2202, 85, 150, 5, 54, "Input"],
+Cell[2355, 92, 171, 5, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2563, 102, 109, 4, 54, "Input"],
+Cell[2675, 108, 116, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2828, 115, 102, 2, 28, "Input"],
+Cell[2933, 119, 356, 9, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3326, 133, 157, 4, 28, "Input"],
+Cell[3486, 139, 148, 4, 106, "Output"]
 }, Open  ]]
 }
 ]
 *)
 
 (* End of internal cache information *)
-
