@@ -42,11 +42,11 @@
   \subsection{Definitions}
     Draw picture of spring and graph of motion.
     \begin{align*}
-      p      & = \unit[ \frac{2 \pi}{\omega} ]{s} \\
+      p      & = \unit[ \frac{2 \pi}{\omega} ]{s/cycle} \\
       f      & = \frac{1}{p} = \unit[ \frac{\omega}{2 \pi} ]{cycles/s} \\
       \\
-      \omega & = \unit[ \frac{2 \pi}{p} ]{\frac{rad}{s}} \\
-             & = \unit[ 2 \pi f ]{\frac{rad}{s}} \\
+      \omega & = \unit[ \frac{2 \pi}{p} ]{rad/s} \\
+             & = \unit[ 2 \pi f ]{rad/s} \\
     \end{align*}
 
     Draw velocity and acceleration graphs below position graph.
@@ -60,14 +60,14 @@
   \section{Masses on Springs}
   \subsection{Definitions}
   \[
-    T = 2 \pi \sqrt{\frac{m}{k}}
+    \omega = \sqrt{\frac{k}{m}}
   \]
           
   \subsection{Examples}
   \begin{enumerate}
-    \item mass on a spring:
+    \item 
       \[
-        y = 3 \cos \frac{2}{3} \pi t
+        y = 3 \cos \frac{2 \pi}{3} t
       \]
       \begin{parts}
         \part what is the period?
@@ -85,7 +85,7 @@
       \end{parts}
 
     \item mass oscillates on a spring with a period of 1.5 seconds and an amplitude of 6 cm.  
-      If it starts at 6 cm at $t = 0$, what is the equation?
+      If it starts at rest at 6 cm at $t = 0$, what is the equation?
 
       \begin{solution}
         \begin{align*}
@@ -161,8 +161,14 @@
 
   \subsection{Definitions}
   \[
-    T = 2 \pi \sqrt{\frac{L}{g}}
+    \omega = \sqrt{\frac{g}{L}}
   \]
+
+  \begin{itemize*}
+    \item all the weight at end of pendulum
+    \item swings faster with higher gravity
+    \item swings faster with shorter length
+  \end{itemize*}
 
   \subsection{Examples}
   \begin{enumerate}
@@ -201,6 +207,50 @@
         \end{align*}
       \end{solution}
   \end{enumerate}
+
+  \section{More Examples}
+  Section 5.5: 43, 45
+
+  \begin{description}
+    \item[31]
+      \begin{align*}
+        \omega & = \frac{\pi}{6} \\
+        f(t)   & = 21 \sin \frac{\pi}{6} \\
+      \end{align*}
+
+    \item[33]
+      \begin{align*}
+        period & = \unit[1]{s} \\
+        \omega & = 2 \pi \\
+        \\
+        f(t)   & = 5 \cos 2 \pi t \\
+      \end{align*}
+
+    \item[36]
+      \begin{align*}
+        period & = \unit[2]{s} \\
+        \omega & = \pi \\
+        \\
+        f(t)   & = 10 \cos \pi t \\
+      \end{align*}
+
+    \item[38]
+      \begin{align*}
+        period & = \unit[5.4]{days} \\
+        \omega & = \frac{2 \pi}{5.4} \\
+               & \approx 1.16 \\
+        \\
+        f(t)   & = 20 + 1.5 \sin 1.16 t \\
+      \end{align*}
+
+    \item[43]
+      \begin{align*}
+        \omega & = \pi \\
+        \\
+        f(t)   & = e^{-0.9 t} \sin \pi t \\
+      \end{align*}
+
+  \end{description}
 
   \section{Damped Harmonic Motion}
 
@@ -262,6 +312,9 @@
           \end{align*}
       \end{enumerate}
   \end{enumerate}
+
+  \subsection{More Examples}
+  Section 5.5: 20-24
 
   \section{RMS}
 
