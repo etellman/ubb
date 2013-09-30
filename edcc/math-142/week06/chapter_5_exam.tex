@@ -18,13 +18,12 @@
 \newcommand{\degree}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
-% \printanswers
+\printanswers
 \excludecomment{comment}
 
 \ifprintanswers 
   \usepackage{2in1, lscape} 
 \fi
-
 
 \author{}
 \date{October 9, 2013}
@@ -34,11 +33,12 @@
 
   \maketitle
 
-  \begin{center}
-    \gradetable[h][pages]
-    % \vspace{.5 cm}
-    % \bonusgradetable[h][pages]
-  \end{center}
+  % \begin{center}
+  %   \gradetable[h][pages]
+  %   \bonusgradetable[h][pages]
+  % \end{center}
+
+  \section{Questions}
 
   \begin{questions}
     
@@ -92,7 +92,7 @@
 
       \end{solution}
 
-      \question Find the exact value of each expression.
+    \question Find the exact value of each expression.
       \begin{parts}
 
         \part[2] $\sin \frac{7 \pi}{6}$
@@ -117,120 +117,241 @@
 
       \end{parts}
 
-      \question[10] Express $\tan x$ in terms of $\csc x$ if the terminal point is in quadrant IV.
-        \begin{solution}
-          \begin{align*}
-            \tan^2 x & = \frac{\sin^2 x}{\cos^2 x} \\
-                     & = \frac{\sin x}{1 - \sin^2 x} \\
-                     & = \frac{1}{\csc^2 x (1 - \sin^2 x)} \\
-                     & = \frac{1}{\csc^2 x - 1} \\
-            \tan x   & = \frac{1}{\sqrt{\csc^2 x - 1}} \\
-          \end{align*}
+    \question
+      \begin{parts}
+        \part[5] Express $\csc x$ in terms of $\cos x$ if the  terminal point is in quadrant II.
+          \begin{solution}
+            \begin{align*}
+              \csc^2 x  & = \frac{1}{\sin^2 x} \\
+                        & = \frac{1}{1 - \cos^2 x} \\
+              \csc x    & = \pm \frac{1}{ \sqrt{1 - \cos^2 x} } \\
+            \end{align*}
 
-          Tangent is negative in quadrant IV, so in quadrant IV:
-          \[
-            \tan x = \frac{1}{\sqrt{\csc^2 x - 1}} \\
-          \]
+            Cosecant is positive in quadrant II, so in quadrant II:
+            \[
+              \csc x = \frac{1}{ \sqrt{1 - \cos^2 x} } 
+            \]
+          \end{solution}
 
-        \end{solution}
+        \part[8] Express $\tan x$ in terms of $\csc x$ if the terminal point is in quadrant IV.
+          \begin{solution}
+            \begin{align*}
+              \tan^2 x & = \frac{\sin^2 x}{\cos^2 x} \\
+                       & = \frac{\sin x}{1 - \sin^2 x} \\
+                       & = \frac{1}{\csc^2 x (1 - \sin^2 x)} \\
+                       & = \frac{1}{\csc^2 x - 1} \\
+              \tan x   & = \frac{1}{\sqrt{\csc^2 x - 1}} \\
+            \end{align*}
 
-      \question[10]
-        Find the period and graph:
+            Tangent is negative in quadrant IV, so in quadrant IV:
+            \[
+              \tan x = - \frac{1}{\sqrt{\csc^2 x - 1}}
+            \]
+          \end{solution}
+
+      \end{parts}
+    
+    \question $f(x) = - 10 \sin \left( 3x - \frac{\pi}{5} \right)$
+      \begin{parts}
+        \part[2] What is the amplitude?
+        \part[2] What is the period?
+        \part[3] What is the phase shift?
+      \end{parts}
+
+    \question[10]
+      What is an equation for this graph?
+      
+      \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.7]{find_equation.eps}
+        \caption{Find the equation}
+      \end{figure}
+
+      \begin{solution}
+        \begin{itemize*}
+          \item The period is $\pi$
+          \item The amplitude is 3
+          \item The shape is an inverted sine graph
+        \end{itemize*}
+
+        The equation is:
         \[
-          f(x) = 5 \sin \left( \frac{1}{2} x - \frac{\pi}{3} \right)
+          f(x) = - 3 \sin 2 \left( x - \frac{\pi}{4} \right) \\
         \]
 
-        \begin{solution}
-          \[
-            f(x) = 5 \sin \left[ \frac{1}{2} \left( x - \frac{2 \pi}{3} \right) \right]
-          \]
+      \end{solution}
 
-          \begin{figure}[H]
-            \centering
-            \includegraphics{graph1.eps}
-            \caption{$f(x) = 5 \sin \left( \frac{1}{2} x - \frac{\pi}{3} \right)$}
-          \end{figure}
+    \question[10]
+      Find the period and graph:
+      \[
+        f(x) = 5 \sin \left( \frac{1}{2} x - \frac{\pi}{3} \right)
+      \]
 
-        \end{solution}
+      \begin{solution}
+        \[
+          f(x) = 5 \sin \left[ \frac{1}{2} \left( x - \frac{2 \pi}{3} \right) \right]
+        \]
 
+        \begin{figure}[H]
+          \centering
+          \includegraphics{graph1.eps}
+          \caption{$f(x) = 5 \sin \left( \frac{1}{2} x - \frac{\pi}{3} \right)$}
+        \end{figure}
 
-        \question[10]
-          Find the period and graph:
-          \[
-            f(x) = \cot \left( \pi x - \frac{\pi}{4} \right)
-          \]
+      \end{solution}
+
+    \question[10]
+      Find the period and graph:
+      \[
+        f(x) = \cot \left( \pi x - \frac{\pi}{4} \right)
+      \]
+
+      \begin{solution}
+        \[
+          f(x) = \cot \left( \pi x - \frac{\pi}{4} \right) = \cot \left[ \pi \left( x - \frac{1}{4} \right) \right ]
+        \]
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics{graph2.eps}
+          \caption{$f(x) = \cot \left( \pi x - \frac{\pi}{4} \right)$}
+        \end{figure}
+
+      \end{solution}
+
+    \question[10]
+    Find the period and graph:
+      \[
+        f(x) = 2 - 2 \sec x
+      \]
+
+      \begin{solution}
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale=1.0]{graph3.eps}
+          \caption{$f(x) = 2 - 2 \sec x $}
+        \end{figure}
+
+      \end{solution}
+
+    \question[8]
+      A mass is suspended on a spring.  The mass is raised to 10 cm above its rest position and released at time $t =
+      0$.  One second after the mass is released it reaches its lowest point.  Find an equation for the motion of the mass.
+      
+      \begin{solution}
+        \begin{itemize*}
+          \item Since the mass was initially 10 cm above the rest position, the amplitude is 10.
+          \item The motion is starting out at the maximum amplitude at time zero, so the motion follows a cosine
+            function.
+          \item Since half a cycle takes 1 second, a full cycle takes 2 seconds and $\omega = \frac{2 \pi}{2} = \pi$ 
+        \end{itemize*}
+
+        The equation is:
+        \[
+          h(t) = 10 \cos \pi t
+        \]
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale=1.0]{spring.eps}
+          \caption{Weight Height}
+        \end{figure}
+
+      \end{solution}
+
+    \question[10] 
+      Harry and Ron are hovering 1 foot off the ground in the Flying Ford Anglia before setting off for Hogwarts.  The
+      wheels have a radius of 9 inches and are spinning at a steady 3 revolutions per second.  Find an equation for the
+      height in inches from the ground of a Cornish Pixie squashed on the bottom of one of the wheels.
+
+      \begin{solution}
+        \begin{itemize*}
+          \item The angular velocity is: $\omega = 3 \cdot 2 \pi = 6 \pi$
+          \item The offset is the height off the ground plus the radius or 21 inches.
+          \item The amplitude is $\unit[9]{inches}$
+        \end{itemize*}
+
+        The equation is: $h(t) = 21 + 9 \sin 6 \pi t$ 
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale=1.0]{graph5.eps}
+          \caption{Cornish Pixie Height}
+        \end{figure}
+
+      \end{solution}
+
+    \uplevel{ \section{Extra Credit} }
+
+    \bonusquestion
+      An astronaut takes a pendulum clock from earth to the planet Zircon where he finds that it runs more slowly
+      because of the low Zirconian gravity.      He coordinates with mission control and finds that his clock is running
+      15 minutes slow each hour.  In other words, after the clock on earth says one hour has elapsed, the clock on
+      Zircon says only 45 minutes have elapsed.
+
+      On earth, the equation for the pendulum's motion is:
+      \[
+        h(t) = \cos 2 \pi t
+      \]
+
+      \begin{parts}
+          
+        \bonuspart[8]
+          What is the equation for the motion on Zircon?
 
           \begin{solution}
+            On earth, the period is:
             \[
-              f(x) = \cot \left( \pi x - \frac{\pi}{4} \right) = \cot \left[ \pi \left( x - \frac{1}{4} \right) \right ]
+              p_e = \frac{2 \pi}{2 \pi} = \unit[1]{s}
             \]
 
-            \begin{figure}[H]
-              \centering
-              \includegraphics{graph2.eps}
-              \caption{$f(x) = \cot \left( \pi x - \frac{\pi}{4} \right)$}
-            \end{figure}
-
-          \end{solution}
-
-        \question[10]
-        Find the period and graph:
-          \[
-            f(x) = 2 - 2 \sec x
-          \]
-
-          \begin{solution}
-            \begin{figure}[H]
-              \centering
-              \includegraphics[scale=1.0]{graph3.eps}
-              \caption{$f(x) = 2 - 2 \sec x $}
-            \end{figure}
-
-          \end{solution}
-
-        \question[10]
-          What is the equation for this graph?
-          
-          \begin{figure}[H]
-            \centering
-            \includegraphics[scale=1.0]{graph4.eps}
-            \caption{Find the equation}
-          \end{figure}
-
-          \begin{solution}
-            \begin{itemize*}
-              \item Since the graph goes between 1 and 5, the amplitude is 2.
-              \item The zero point is shifted up by 3.
-            \end{itemize*}
-
-            You could think of the graph as either an inverted sine graph or a shifted cosine graph:
+            45 Zircon periods are equal to 60 earth periods:
             \begin{align*}
-              f(x) &= 3 - 2 \sin x \\
-              g(x) &= 3 + 2 \cos \left( x + \frac{\pi}{2} \right) \\
+              45 p_z & = 60 p_e \\
+              p_z    & = \frac{ 60 p_e }{45} \\
+                     & = \frac{ 4 p_e }{3} \\
+            \end{align*}
+
+            Find $\omega_z$:
+            \begin{align*}
+              \omega_z & = \frac{2 \pi}{p_z} \\
+                       & = 2 \pi \cdot \frac{3}{4} \\
+                       & = \frac{3 \pi}{2} \\
+            \end{align*}
+
+            The Zircon equation for the motion is:
+            \[
+              h_z = 5 \cos \frac{3 \pi}{2} t
+            \]
+
+          \end{solution}
+
+        \bonuspart[4]
+          For a pendulum, $\omega = \sqrt{ \frac{g}{L}}$ where $g$ is the acceleration due to gravity and
+          $L$ is the length of the pendulum.
+
+          On earth: $g_e \approx \unit[10]{m/s^2}$
+
+          What is value of $g$ on Zircon?
+
+          \begin{solution}
+            Find the length of the pendulum:
+            \begin{align*}
+              \sqrt{ \frac{10}{L} } & = 2 \pi \\
+              \frac{10}{L}          & = 4 \pi^2 \\
+              L                     & = \frac{5}{2 \pi^2} \\
+            \end{align*}
+
+            Find $g_z$:
+            \begin{align*}
+              \frac{3 \pi}{2} & = \sqrt{ \frac{2 \pi^2 g_z}{5}} \\
+              \frac{3}{2}     & = \sqrt{ \frac{2 g_z}{5}} \\
+              \frac{9}{4}     & = \frac{2 g_z}{5} \\
+              g_z             & = \frac{45}{8} \\
             \end{align*}
 
           \end{solution}
-
-          \question[10] Arthur Weasley's Flying Ford Anglia is hovering 1 foot off the ground.  The wheels have a radius
-          of 9 inches and are spinning at a steady 3 revolutions per second.  Find an equation for the height in inches
-          from the ground of a Cornish Pixie squashed on the bottom of one of the wheels.
-
-          \begin{solution}
-            \begin{itemize*}
-              \item The angular velocity is: $\omega = 3 \cdot 2 \pi = 6 \pi$
-              \item The offset is the height off the ground plus the radius or 21 inches.
-              \item The amplitude is $\unit[9]{inches}$
-            \end{itemize*}
-
-            The equation is: $h(t) = 21 + 9 \sin 6 \pi t$ 
-
-            \begin{figure}[H]
-              \centering
-              \includegraphics[scale=1.0]{graph5.eps}
-              \caption{Cornish Pixie Height}
-            \end{figure}
-
-          \end{solution}
+      \end{parts}
 
   \end{questions}
 \end{document}
