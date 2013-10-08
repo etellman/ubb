@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      4626,        187]
-NotebookOptionsPosition[      3650,        146]
-NotebookOutlinePosition[      4004,        162]
-CellTagsIndexPosition[      3961,        159]
+NotebookDataLength[      5096,        207]
+NotebookOptionsPosition[      4011,        162]
+NotebookOutlinePosition[      4365,        178]
+CellTagsIndexPosition[      4322,        175]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -142,6 +142,22 @@ Cell[BoxData[
   FractionBox[
    RowBox[{"17", " ", "\[Pi]"}], "2"], TraditionalForm]], "Output",
  CellChangeTimes->{3.589020403329197*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Csc", "[", 
+  RowBox[{"5", 
+   RowBox[{"Pi", "/", "3"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.590093799528632*^9, 3.5900938034175777`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"-", 
+   FractionBox["2", 
+    SqrtBox["3"]]}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.5900938039038143`*^9}]
 }, Open  ]]
 },
 WindowSize->{740, 604},
@@ -187,7 +203,11 @@ Cell[2933, 119, 356, 9, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[3326, 133, 157, 4, 28, "Input"],
-Cell[3486, 139, 148, 4, 106, "Output"]
+Cell[3486, 139, 148, 4, 48, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3671, 148, 167, 4, 28, "Input"],
+Cell[3841, 154, 154, 5, 87, "Output"]
 }, Open  ]]
 }
 ]

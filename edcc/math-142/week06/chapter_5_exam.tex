@@ -13,12 +13,13 @@
 \usepackage{fullpage}
 \usepackage{comment}
 \usepackage{enumerate}
+\usepackage{parskip}
 \usepackage{xfrac}
 
 \newcommand{\degree}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
-\printanswers
+% \printanswers
 \excludecomment{comment}
 
 \ifprintanswers 
@@ -57,7 +58,7 @@
       \end{solution}
 
     \question[8]
-      If $\cot t = - \frac{1}{3}$ and $t$ is in quadrant IV, find the values of all six trigonometric functions.
+      If $\cot t = - \frac{1}{3}$ and $t$ is in quadrant IV, find the values of $\sin t$, $\cos t$, $\tan t$.
 
       \begin{solution}
         First find the terminal point.  Since the point is in quadrant IV, the $y$ coordinate is negative and the $x$
@@ -83,9 +84,9 @@
         \begin{center}
           \begin{tabular}[H]{cccccc}
             \toprule
-            $\sin t$                  & $\cos t$               & $\tan t$ & $\csc t$       & $\sec t$    & $\cot t$ \\
+            $\sin t$                  & $\cos t$               & $\tan t$ \\
             \midrule
-            $-3 \frac{\sqrt{10}}{10}$ & $\frac{\sqrt{10}}{10}$ & $-3$     & $\sfrac{5}{3}$ & $\sqrt{10}$ & $- \frac{1}{3}$ \\
+            $-3 \frac{\sqrt{10}}{10}$ & $\frac{\sqrt{10}}{10}$ & $-3$     \\
             \bottomrule
           \end{tabular}
         \end{center}
@@ -105,9 +106,9 @@
             $\cot \frac{3 \pi}{4} = -1$
           \end{solution}
 
-        \part[2] $\csc \frac{5 \pi}{4}$
+        \part[2] $\csc \frac{5 \pi}{3}$
           \begin{solution}
-            $\csc \frac{8 \pi}{3} = \csc \left( \frac{2 \pi}{3} + 2 \pi \right) = \csc \frac{2 \pi}{3} = \frac{2 \sqrt{3}}{3}$
+            $\csc \frac{5 \pi}{3} = - \frac{ 2 \sqrt{3}}{3}$
           \end{solution}
 
         \part[2] $\cos \frac{17 \pi}{2}$
@@ -158,8 +159,10 @@
         \part[3] What is the phase shift?
       \end{parts}
 
+    \pagebreak
+
     \question[10]
-      What is an equation for this graph?
+      Find an equation for this graph.
       
       \begin{figure}[H]
         \centering
@@ -203,18 +206,18 @@
     \question[10]
       Find the period and graph:
       \[
-        f(x) = \cot \left( \pi x - \frac{\pi}{4} \right)
+        f(x) = \cot \left( \pi x + \frac{\pi}{4} \right)
       \]
 
       \begin{solution}
         \[
-          f(x) = \cot \left( \pi x - \frac{\pi}{4} \right) = \cot \left[ \pi \left( x - \frac{1}{4} \right) \right ]
+          f(x) = \cot \left( \pi x + \frac{\pi}{4} \right) = \cot \left[ \pi \left( x + \frac{1}{4} \right) \right ]
         \]
 
         \begin{figure}[H]
           \centering
           \includegraphics{graph2.eps}
-          \caption{$f(x) = \cot \left( \pi x - \frac{\pi}{4} \right)$}
+          \caption{$f(x) = \cot \left( \pi x + \frac{\pi}{4} \right)$}
         \end{figure}
 
       \end{solution}
@@ -222,14 +225,14 @@
     \question[10]
     Find the period and graph:
       \[
-        f(x) = 2 - 2 \sec x
+        f(x) = - \sec 2x
       \]
 
       \begin{solution}
         \begin{figure}[H]
           \centering
           \includegraphics[scale=1.0]{graph3.eps}
-          \caption{$f(x) = 2 - 2 \sec x $}
+          \caption{$f(x) = - \sec 2x $}
         \end{figure}
 
       \end{solution}
@@ -327,12 +330,10 @@
           \end{solution}
 
         \bonuspart[4]
-          For a pendulum, $\omega = \sqrt{ \frac{g}{L}}$ where $g$ is the acceleration due to gravity and
+          For a pendulum, $\omega = \sqrt{ \sfrac{g}{L}}$ where $g$ is the acceleration due to gravity and
           $L$ is the length of the pendulum.
 
-          On earth: $g_e \approx \unit[10]{m/s^2}$
-
-          What is value of $g$ on Zircon?
+          On earth: $g_e \approx \unit[10]{m/s^2}$.  What is the value of $g$ on Zircon?
 
           \begin{solution}
             Find the length of the pendulum:
