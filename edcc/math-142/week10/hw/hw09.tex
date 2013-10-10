@@ -27,7 +27,7 @@
 
 \author{}
 \date{\today}
-\title{Math 142 \\ Homework Nine}
+\title{Math 142 \\ Homework Ten}
 
 \begin{document}
 
@@ -37,7 +37,112 @@
   Section 6.4: 
 
   \section{Extra Credit}
-  Section 6.4: 29 and 30
+  Section 6.4: 41
+
+  \ifprintanswers
+  \else
+    This problem is a lot of work and took me several hours and numerous sheets of paper to figure out.  I'm interested to
+    see if anyone has an easier way of solving it.
+  \fi
+
+  \begin{description}
+    \item[41]
+
+      There are three different triangles, and each triangle provides three equations.  Instead of writing $\sin 60$,
+      $\sin A$, etc., I used $w$, $x$,$y$, for the sines of the angles.  Since all of the sines cancel out in the end,
+      this works out fine.
+
+      The equations you need are:
+      \begin{align*}
+        \frac{z}{a} &= \frac{x}{c + d} \\
+        \frac{x}{d} &= \frac{y}{r} \\
+        \frac{z}{a} &= \frac{w}{r} \\
+        \frac{x}{c} &= \frac{y}{a} \\
+        \frac{w}{b} &= \frac{x}{c} \\
+      \end{align*}
+
+      The procedure is:
+      \begin{itemize*}
+        \item solve one of the equations for a variable you want to get rid of (anything other than $a$, $b$, or
+          $r$).
+        \item substitute the result into the other equations
+        \item repeat until you end up with an equation with $a$, $b$, and $r$
+        \item solve this equation for $r$
+      \end{itemize*}
+
+      Get rid of $w$
+      \begin{align*}
+        \frac{w}{b} & = \frac{x}{c} \\
+        w           & = \frac{xb}{c} \\
+        \\
+        \frac{z}{a} & = \frac{xb}{rc} \\
+      \end{align*}
+
+      The equations now are:
+      \begin{align*}
+        \frac{z}{a} & = \frac{x}{c + d} \\
+        \frac{x}{d} & = \frac{y}{r} \\
+        \frac{x}{c} & = \frac{y}{a} \\
+        \frac{z}{a} & = \frac{xb}{rc} \\
+      \end{align*}
+
+      Get rid of $z$:
+      \begin{align*}
+        \frac{z}{a}     & = \frac{xb}{rc} \\
+        z               & = \frac{abx}{rc} \\
+        \\
+        \frac{z}{a}     & = \frac{x}{c + d} \\
+        \frac{abx}{arc} & = \frac{x}{c + d} \\
+        \frac{b}{rc}    & = \frac{1}{c + d} \\
+      \end{align*}
+
+      The equations now are:
+      \begin{align*}
+        \frac{b}{rc} & = \frac{1}{c + d} \\
+        \frac{x}{d}  & = \frac{y}{r} \\
+        \frac{x}{c}  & = \frac{y}{a} \\
+      \end{align*}
+
+      Get rid of $d$:
+      \begin{align*}
+        \frac{x}{d}  & = \frac{y}{r} \\
+        d            & = \frac{xr}{y} \\
+        \\
+        \frac{b}{rc} & = \frac{1}{c + \sfrac{xr}{y}} \\
+        \frac{b}{rc} & = \frac{y}{yc + xr} \\
+      \end{align*}
+
+      The equations now are:
+      \begin{align*}
+        \frac{x}{c}  & = \frac{y}{a} \\
+        \frac{b}{rc} & = \frac{y}{yc + xr} \\
+      \end{align*}
+
+      Get rid of $y$:
+      \begin{align*}
+        \frac{x}{c}  & = \frac{y}{a} \\
+        y            & = \frac{xa}{c} \\
+        \\
+        \frac{b}{rc} & = \frac{y}{yc + xr} \\
+        \frac{b}{rc} & = \frac{xa}{c(xa + xr)} \\
+      \end{align*}
+
+      $x$ and $c$ both cancel:
+      \begin{align*}
+        \frac{b}{rc} & = \frac{xa}{c(xa + xr)} \\
+        \frac{b}{r} & = \frac{xa}{x(a + r)} \\
+        \frac{b}{r}  & = \frac{a}{a + r} \\
+      \end{align*}
+
+      solve for $r$:
+      \begin{align*}
+        \frac{b}{r} & = \frac{a}{a + r} \\
+        b(a + r)    & = ra \\
+        ab + rb     & = ra \\
+        ra - rb     & = ab \\
+        r           & = \frac{ab}{a - b} \\
+      \end{align*}
+  \end{description}
 
   \ifprintanswers
 
@@ -333,6 +438,83 @@
           \frac{\sin 66.4 \dg}{105} & = \frac{\sin 29.2 \dg}{h} \\
           h                         & \approx \boxed{ \unit[56]{m} } \\
         \end{align*}
+
+      \item[36] 
+        \begin{align*}
+          \frac{\sin C}{165} & = \frac{\sin 67 \dg}{180} \\
+          C                  & \approx 57.54 \dg \\
+          \\
+          B & = 180 \dg - 67 \dg - 57.54 \dg \\
+            & = 55.46 \dg \\
+          \\
+          \frac{\sin 55.46 \dg}{b} & = \frac{\sin 67 \dg}{180} \\
+          b                        & \approx \boxed{ \unit[161]{ft} } \\
+        \end{align*}
+
+      \item[37] 
+        Find the angle at the top of the tree:
+        \begin{align*}
+          A & = 180 \dg - 52 \dg - 90 \dg \\
+            & = 38 \dg \\
+        \end{align*}
+
+        Find the height:
+        \begin{align*}
+          \frac{\sin 38 \dg}{215} & = \frac{\sin 30 \dg}{h} \\
+          h                       & \approx \boxed{ \unit[175]{ft} } \\
+        \end{align*}
+
+      \item[38] 
+        Find the angle at the top of the tower:
+        \begin{align*}
+          A & = 180 \dg - 58 \dg - 12 \dg - 90 \dg \\
+            & = 20 \dg \\
+        \end{align*}
+
+        Find the remaining angle:
+        \begin{align*}
+          B & = 180 \dg - 20 \dg - 12 \dg \\
+            & = 148 \dg \\
+        \end{align*}
+
+        Find the length of the wire:
+        \begin{align*}
+          \frac{\sin 20 \dg}{100} & = \frac{\sin 148 \dg}{a} \\
+          a                       & \approx \boxed{ \unit[155]{m} } \\
+        \end{align*}
+
+      \item[40] 
+        Find the angle at the top of the tower:
+        \begin{align*}
+          \frac{\sin 8 \dg}{30} & = \frac{\sin A}{120} \\
+          A                     & \approx 33.83 \dg \\
+        \end{align*}
+
+        The angle of inclination of the hill completes a right triangle:
+        \begin{align*}
+          B & = 90 \dg - 33.83 \dg - 8 \dg \\
+            & = \boxed{ 48.17 \dg } \\
+        \end{align*}
+
+      \item[41] 
+        Find the angle between Sun-Earth-Venus
+        \begin{align*}
+          \frac{\sin 39.4 \dg}{0.723} & = \frac{\sin A}{1} \\
+          A                     & \approx 118.61 \dg \\
+        \end{align*}
+
+        Find the remaining angle:
+        \begin{align*}
+          B & = 180 \dg - 118.61 \dg - 39.4 \dg \\
+            & = 22 \dg \\
+        \end{align*}
+
+        Find the distance:
+        \begin{align*}
+          \frac{\sin 39.4 \dg}{0.723} & = \frac{\sin 22 \dg}{d} \\
+          A                     & \approx \boxed{ \unit[0.4267]{AU} } \\
+        \end{align*}
+
     \end{description}
 
   \else
