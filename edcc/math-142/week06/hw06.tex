@@ -18,12 +18,8 @@
 \newcommand{\degree}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
-% \printanswers
+\printanswers
 \excludecomment{comment}
-
-\ifprintanswers 
-  \usepackage{2in1, lscape} 
-\fi
 
 \author{}
 \date{October 9, 2013}
@@ -40,7 +36,17 @@
   usual.  Assuming that the wife always drives at a constant speed, and that on this occasion she left just in time to
   meet the 5:00 train, can you determine how long the husband walked before he was picked up?
 
-  \vspace{4 cm}
+  \begin{solution}
+    The wife saved 5 minutes off of each direction of her round trip, so she must have found the husband at 4:55.
+    Since he started walking at 4:00, he walked for 55 minutes.
+  \end{solution}
+
+  \ifprintanswers
+    \vspace{2 cm}
+  \else
+    \vspace{4 cm}
+  \fi
+
   \begin{quote}
     \begin{em}
       \begin{verse}
