@@ -52,7 +52,7 @@
           \toprule
           $\sin t$               & $\cos t$      & $\tan t$               & $\csc t$                 & $\sec t$      & $\cot t$ \\
           \midrule
-          $- \frac{\sqrt{5}}{3}$ & $\frac{2}{3}$ & $- \frac{\sqrt{5}}{2}$ & $- \frac{3 \sqrt{5}}{5}$ & $\frac{2}{3}$ & $- \frac{\sqrt{5}}{3}$ \\
+          $- \frac{\sqrt{5}}{3}$ & $\frac{2}{3}$ & $- \frac{\sqrt{5}}{2}$ & $- \frac{3 \sqrt{5}}{5}$ & $\frac{3}{2}$ & $- \frac{2 \sqrt{5}}{5}$ \\
           \bottomrule
         \end{tabular}
       \end{solution}
@@ -137,11 +137,10 @@
         \part[8] Express $\tan x$ in terms of $\csc x$ if the terminal point is in quadrant IV.
           \begin{solution}
             \begin{align*}
-              \tan^2 x & = \frac{\sin^2 x}{\cos^2 x} \\
-                       & = \frac{\sin x}{1 - \sin^2 x} \\
-                       & = \frac{1}{\csc^2 x (1 - \sin^2 x)} \\
-                       & = \frac{1}{\csc^2 x - 1} \\
-              \tan x   & = \frac{1}{\sqrt{\csc^2 x - 1}} \\
+              \cot^2 t + 1 & = \csc^2 t \\
+              \cot^2 t     & = \csc^2 t - 1 \\
+              \tan^2 t     & = \frac{1}{\csc^2 t - 1} \\
+              \tan t       & = \pm \frac{1}{ \sqrt{\csc^2 t - 1} } \\
             \end{align*}
 
             Tangent is negative in quadrant IV, so in quadrant IV:
