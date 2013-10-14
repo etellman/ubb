@@ -137,10 +137,10 @@
         \part[8] Express $\tan x$ in terms of $\csc x$ if the terminal point is in quadrant IV.
           \begin{solution}
             \begin{align*}
-              \cot^2 t + 1 & = \csc^2 t \\
-              \cot^2 t     & = \csc^2 t - 1 \\
-              \tan^2 t     & = \frac{1}{\csc^2 t - 1} \\
-              \tan t       & = \pm \frac{1}{ \sqrt{\csc^2 t - 1} } \\
+              \csc^2 t & = \cot^2 t + 1 \\
+              \cot^2 t & = \csc^2 t - 1 \\
+              \tan^2 t & = \frac{1}{\csc^2 t - 1} \\
+              \tan t   & = \pm \frac{1}{ \sqrt{\csc^2 t - 1} } \\
             \end{align*}
 
             Tangent is negative in quadrant IV, so in quadrant IV:
@@ -154,11 +154,30 @@
     \question $f(x) = - 10 \sin \left( 3x - \frac{\pi}{5} \right)$
       \begin{parts}
         \part[2] What is the amplitude?
-        \part[2] What is the period?
-        \part[3] What is the phase shift?
-      \end{parts}
+          \begin{solution}
+            $A = |-10| = 10$
+          \end{solution}
 
-    \pagebreak
+        \part[2] What is the period?
+          \begin{solution}
+            $p = \frac{2 \pi}{3}$
+          \end{solution}
+
+        \ifprintanswers
+          \pagebreak
+        \fi
+
+        \part[3] What is the phase shift?
+          \begin{solution}
+            \begin{align*}
+              f(x)  & = - 10 \sin \left( 3x - \frac{\pi}{5} \right) \\
+                    & = - 10 \sin 3 \left( x - \frac{\pi}{15} \right) \\
+              \\
+              phase & = \frac{\pi}{15} \\
+            \end{align*}
+          \end{solution}
+
+      \end{parts}
 
     \question[10]
       Find an equation for this graph.
@@ -171,8 +190,9 @@
 
       \begin{solution}
         \begin{itemize*}
-          \item The period is $\pi$
+          \item Since period is $\pi$, $\omega = \sfrac{2 \pi}{\pi} = 2$
           \item The amplitude is 3
+          \item The phase is $\sfrac{\pi}{4}$
           \item The shape is an inverted sine graph
         \end{itemize*}
 
@@ -191,7 +211,7 @@
 
       \begin{solution}
         \[
-          f(x) = 5 \sin \left[ \frac{1}{2} \left( x - \frac{2 \pi}{3} \right) \right]
+          f(x) = 5 \sin \frac{1}{2} \left( x - \frac{2 \pi}{3} \right) 
         \]
 
         \begin{figure}[H]
@@ -202,6 +222,10 @@
 
       \end{solution}
 
+    \ifprintanswers
+      \pagebreak
+    \fi
+
     \question[10]
       Find the period and graph:
       \[
@@ -209,9 +233,12 @@
       \]
 
       \begin{solution}
-        \[
-          f(x) = \cot \left( \pi x + \frac{\pi}{4} \right) = \cot \left[ \pi \left( x + \frac{1}{4} \right) \right ]
-        \]
+        \begin{align*}
+          f(x) & = \cot \left( \pi x + \frac{\pi}{4} \right) \\
+               & = \cot \pi \left( x + \frac{1}{4} \right) \\
+          \\
+          period & = \frac{\pi}{\pi} = 1 \\
+        \end{align*}
 
         \begin{figure}[H]
           \centering
@@ -221,6 +248,10 @@
 
       \end{solution}
 
+    \ifprintanswers
+      \pagebreak
+    \fi
+
     \question[10]
     Find the period and graph:
       \[
@@ -228,13 +259,21 @@
       \]
 
       \begin{solution}
+        \[
+          period = \frac{2 \pi}{2} = \pi \\
+        \]
+
         \begin{figure}[H]
           \centering
-          \includegraphics[scale=1.0]{graph3.eps}
+          \includegraphics[scale=0.9]{graph3.eps}
           \caption{$f(x) = - \sec 2x $}
         \end{figure}
 
       \end{solution}
+
+    \ifprintanswers
+      \pagebreak
+    \fi
 
     \question[8]
       A mass is suspended on a spring.  The mass is raised to 10 cm above its rest position and released at time $t =
@@ -253,6 +292,7 @@
           h(t) = 10 \cos \pi t
         \]
 
+        Here's what the graph looks like:
         \begin{figure}[H]
           \centering
           \includegraphics[scale=1.0]{spring.eps}
@@ -261,14 +301,18 @@
 
       \end{solution}
 
+    \ifprintanswers
+      \pagebreak
+    \fi
+
     \question[10] 
-      Harry and Ron are hovering 1 foot off the ground in the Flying Ford Anglia before setting off for Hogwarts.  The
-      wheels have a radius of 9 inches and are spinning at a steady 3 revolutions per second.  Find an equation for the
-      height in inches from the ground of a Cornish Pixie squashed on the bottom of one of the wheels.
+      Harry and Ron are hovering 1 foot off the ground in Arthur Weasley's flying car before setting off for Hogwarts.
+      The wheels have a radius of 9 inches and are spinning at a steady 3 revolutions per second.  Find an equation for
+      the height in inches from the ground of a Cornish Pixie squashed on the bottom of one of the wheels.
 
       \begin{solution}
         \begin{itemize*}
-          \item The angular velocity is: $\omega = 3 \cdot 2 \pi = 6 \pi$
+          \item The angular velocity is: $\omega = 3 \times 2 \pi = 6 \pi$
           \item The offset is the height off the ground plus the radius or 21 inches.
           \item The amplitude is $\unit[9]{inches}$
         \end{itemize*}
@@ -282,6 +326,10 @@
         \end{figure}
 
       \end{solution}
+
+    \ifprintanswers
+      \pagebreak
+    \fi
 
     \uplevel{ \section{Extra Credit} }
 
@@ -321,9 +369,9 @@
                        & = \frac{3 \pi}{2} \\
             \end{align*}
 
-            The Zircon equation for the motion is:
+            The equation for the motion on Zircon is:
             \[
-              h_z = 5 \cos \frac{3 \pi}{2} t
+              h_z = \cos \frac{3 \pi}{2} t
             \]
 
           \end{solution}
@@ -339,7 +387,7 @@
             \begin{align*}
               \sqrt{ \frac{10}{L} } & = 2 \pi \\
               \frac{10}{L}          & = 4 \pi^2 \\
-              L                     & = \frac{5}{2 \pi^2} \\
+              L                     & = \unit[\frac{5}{2 \pi^2}]{m} \\
             \end{align*}
 
             Find $g_z$:
@@ -347,7 +395,7 @@
               \frac{3 \pi}{2} & = \sqrt{ \frac{2 \pi^2 g_z}{5}} \\
               \frac{3}{2}     & = \sqrt{ \frac{2 g_z}{5}} \\
               \frac{9}{4}     & = \frac{2 g_z}{5} \\
-              g_z             & = \frac{45}{8} \\
+              g_z             & = \unit[\frac{45}{8}]{m/s^2} \\
             \end{align*}
 
           \end{solution}
