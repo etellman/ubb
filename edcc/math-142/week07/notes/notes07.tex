@@ -67,16 +67,18 @@
                & \approx 1 + 0.0009765625 i \\
     e^{i/512}  & = \left( e^{1/1024} \right)^2 \\
                & \approx 0.999998093 + 0.00195312376 i \\
-    \vdots
+    \vdots \\
     e^{i} &= 0.540302306 + 0.841470985 i \\
   \end{align*}
 
   Fill in graphs and plot and find that real part is cosine graph and imaginary part is sine graph:
   \begin{align*}
-    e^{i \theta} & = \cos \theta + i \sin \theta \\
-    e^{\pi i}    & = 1 \\
-    e^{\pi i} -1 & = 0 \\
+    e^{i \theta}  & = \cos \theta + i \sin \theta \\
+    e^{\pi i}     & = -1 \\
+    e^{\pi i} + 1 & = 0 \\
   \end{align*}
+
+  Equation contains all important numbers: $e$, $i$, $\pi$, and $i$.
 
   \section{Angles}
 
@@ -86,11 +88,11 @@
   Radians is either:
   \begin{itemize*}
     \item arc length around unit circle
-    \item length around any circle divided by the radius.  circumference is $2 \pi r$--scale by $r$ to get number
+    \item length around any circle divided by the radius.  Circumference is $2 \pi r$--scale by $r$ to get number
       between $0$ and $2 \pi$.
   \end{itemize*}
 
-  Degrees may have came from the approximate number of days in a year, 6 times 60 from Babylonians.
+  Degrees may have came from the approximate number of days in a year or 6 times 60 from Babylonians.
 
   conversions:
   \begin{itemize*}
@@ -132,23 +134,68 @@
 
   \section{Arc Length}
 
-  \begin{itemize*}
-    \item find angle in radians
-    \item multiply by radius
-  \end{itemize*}
+  \subsection{Description}
+  For a unit circle, the arc length is the same as the angle in radians.  For circle with any other radius, you need to
+  scale by the radius to get the arc length.
 
+  \begin{align*}
+    \theta & = \frac{s}{r} \\
+    s      & = r \theta \\
+  \end{align*}
+
+  % \begin{itemize*}
+  %   \item find angle in radians
+  %   \item multiply by radius
+  % \end{itemize*}
+
+  \subsection{Examples}
   \begin{enumerate}
-    \item $\theta = \sfrac{\pi}{5}$, $r = 3$
+    \item $\theta = \frac{\pi}{5}$, $r = 3$  Find the arc length.
+      \begin{solution}
+        $s = r \theta = \frac{3 \pi}{5}$
+      \end{solution}
+
     \item $\theta = 135 \dg$, $r = 8$
+      \begin{solution}
+        convert theta to radians: $\theta = 135 \dg \times \frac{2 \pi}{360} = \frac{3 \pi}{4}$
+
+        find the length: $s = \frac{3 \pi}{4} \times 8 = 6 \pi$
+      \end{solution}
+
   \end{enumerate}
 
   \section{Angular Velocity}
 
   \subsection{Definition}
-  \begin{itemize*}
-    \item linear velocity: $v = \sfrac{\Delta d}{\Delta t}$
-    \item angular velocity: $v = \sfrac{\Delta \theta}{\Delta t}$
-  \end{itemize*}
+
+  \begin{align*}
+    v      & = \frac{\Delta s}{\Delta t} \\
+    \omega & = \frac{\Delta \theta}{\Delta t} \\
+  \end{align*}
+
+  With the same linear velocity, the angular velocity is smaller for large circles and larger for small circles.
+
+  For example, with a circular race track with a 1 mile radius, and a linear velocity of $\unit[100]{mph}$, the
+  angular velocity is $\unit[100]{rad/h}$.  
+  
+  If you increase the radius to 2 miles, it takes twice as long to get around the track since the car now has to
+  travel $\unit[4 \pi]{mi}$ instead of $\unit[2 \pi]{mi}$.  The linear velocity is the same, but the angular velocity is 
+  now $\unit[50]{rad/h}$.
+
+  In general:
+  \begin{align*}
+    s      & = r \theta \\
+    \omega & = \frac{\Delta \theta}{\Delta t} \\
+    \\
+    v & = \frac{\Delta s}{\Delta t} \\
+      & = \frac{\Delta (r \theta)}{\Delta t} \\
+      & = \frac{\Delta r \theta}{\Delta t} \\
+      & = r \frac{\Delta \theta}{\Delta t} \\
+      & = r \omega \\
+    \\
+    \omega &= \frac{v}{r} \\
+  \end{align*}
+
 
   \subsection{Examples}
 
