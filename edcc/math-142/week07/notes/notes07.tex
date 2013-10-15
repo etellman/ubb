@@ -13,6 +13,7 @@
 \usepackage{fullpage}
 \usepackage{xfrac}
 \usepackage{enumerate}
+\usepackage{parskip}
 
 \newcommand{\dg}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
@@ -42,15 +43,54 @@
   \maketitle
   \tableofcontents
 
+  \section{Exam}
+  \begin{itemize*}
+    \item review problems from the beginning of the chapter
+    \item if you find yourself doing a page of calculations for one problem, you're probably on the wrong track
+    \item do in class: 
+      \begin{itemize*}
+        \item first few problems
+        \item word problems
+      \end{itemize*}
+  \end{itemize*}
+
+  \section{Imaginary Powers of e}
+
+  for large $n$
+  \begin{align*}
+    e       & \approx \left( 1 + 1/n \right)^n \\
+    \\
+    e^{1/n} & \approx \left( 1 + 1/n \right)^{n/n} \\
+            & \approx 1 + 1/n \\
+    \\
+    e^{i/1024} & \approx 1 + \frac{1}{1/1024} i \\
+               & \approx 1 + 0.0009765625 i \\
+    e^{i/512}  & = \left( e^{1/1024} \right)^2 \\
+               & \approx 0.999998093 + 0.00195312376 i \\
+    \vdots
+    e^{i} &= 0.540302306 + 0.841470985 i \\
+  \end{align*}
+
+  Fill in graphs and plot and find that real part is cosine graph and imaginary part is sine graph:
+  \begin{align*}
+    e^{i \theta} & = \cos \theta + i \sin \theta \\
+    e^{\pi i}    & = 1 \\
+    e^{\pi i} -1 & = 0 \\
+  \end{align*}
+
   \section{Angles}
 
-  Degrees may have came from the approximate number of days in a year, 6 times 60 from Babylonians.
+  Chapter 5 was about repetitive motion (wheels, oscillating springs, pendulums, sound waves).  Chapter 6 is about
+  static measurements (distances, construction, surveys, etc.).
 
   Radians is either:
   \begin{itemize*}
     \item arc length around unit circle
-    \item length around any circle divided by the radius
+    \item length around any circle divided by the radius.  circumference is $2 \pi r$--scale by $r$ to get number
+      between $0$ and $2 \pi$.
   \end{itemize*}
+
+  Degrees may have came from the approximate number of days in a year, 6 times 60 from Babylonians.
 
   conversions:
   \begin{itemize*}
