@@ -162,6 +162,85 @@
         find the length: $s = \frac{3 \pi}{4} \times 8 = 6 \pi$
       \end{solution}
 
+    \item How many revolutions of a 24 inch diameter tire to travel one mile?
+      \begin{solution}
+        The radius is 1 foot.
+
+        \begin{align*}
+          C   & = \unit[2 \pi]{ft} \\
+          \\
+          rev & = \frac{5280}{2 \pi} \\
+              & \approx 840 \\
+        \end{align*}
+
+      \end{solution}
+
+    \item 
+      Seattle's latitude is approximately $48 \dg$ and San Francisco's latitude is approximately $38 \dg$.  How far
+      apart are they if Seattle is directly north of San Francisco and the radius of the earth is 3960 miles?
+      earth is 
+
+      \begin{solution}
+        \begin{align*}
+          10 \dg & \approx \unit[0.1745]{rad} \\
+          s      & = r \theta \\
+                 & = 3960 \times 0.1745 \\
+                 & \approx \unit[691]{mi} \\
+        \end{align*}
+
+        The actual distance is 800 miles on I-5.
+
+      \end{solution}
+
+  \end{enumerate}
+
+  \section{Sector Area}
+
+  \subsection{Definition}
+  Area of circle is $A = \pi r^2$
+
+  Area of quarter circle is $A = \frac{1}{4} \pi r^2$.  Another way of looking at it is:
+  \begin{enumerate}
+    \item $\theta = \frac{\pi}{2}$
+    \item percentage of circle: $\frac{\sfrac{\pi}{2}}{2 \pi} = \frac{1}{4}$
+    \item $A = \frac{1}{4} \pi r^2$
+  \end{enumerate}
+
+  In general, percentage of circle: $\frac{\theta}{2 \pi}$
+
+  \begin{align*}
+    A & = \frac{\theta}{2 \pi} \times \pi r^2 \\
+      & = \frac{1}{2} r^2 \theta \\
+  \end{align*}
+
+  \subsection{Examples}
+
+  \begin{enumerate}
+    \item $r = 2$, $\theta = \frac{3 \pi}{8}$
+      \begin{solution}
+        \[
+          A = \frac{1}{2} 2^2 \times \frac{3 \pi}{8} = \boxed{ \frac{3 \pi}{4} } 
+        \]
+      \end{solution}
+
+    \item $r = 3$, $\theta = 22 \dg$
+      \begin{solution}
+        \begin{align*}
+          \theta & = 22 \dg \times \frac{2 \pi}{360 \dg} \\
+                 & \approx 0.384 \\
+          A      & = \frac{1}{2} 3^2 \times 0.384 \\
+                 & \approx \boxed{ 1.728 } \\
+        \end{align*}
+      \end{solution}
+
+    \item $r = 3$, $A = 2 \pi$.  Find $\theta$
+      \begin{solution}
+        \begin{align*}
+          2 \pi  & = \frac{1}{2} 3^2 \theta \\
+          % 2 \pi  & = \frac{9}{2} \theta \\
+          \theta & = \boxed{ \frac{4 \pi}{9} } \\
+        \end{align*}
+      \end{solution}
   \end{enumerate}
 
   \section{Angular Velocity}
@@ -196,7 +275,45 @@
     \omega &= \frac{v}{r} \\
   \end{align*}
 
-
   \subsection{Examples}
+
+  \begin{enumerate}
+
+    \item Upgrade tires from diameter $\unit[24.3]{in}$ to $\unit[26.1]{in}$.  How fast is the car now going when the
+      speedometer reads $\unit[65]{mph}$ ?
+
+      \begin{solution}
+        The speed of the car is the same as the linear speed of a point on the outside of the wheel.  The speedometer
+        measures the angular velocity of the wheels.
+
+        \begin{align*}
+          \omega & = \frac{65}{r_1} \\
+          \\
+          v & = r_2 \times \omega \\
+            & = \frac{r_2}{r_1} \times 65 \\
+            & = \frac{13.05}{12.15} \times 65 \\
+            & \approx \unit[69.8]{mph} \\
+        \end{align*}
+
+      \end{solution}
+
+    \item NASA has a centrifuge with a 58 foot diameter arm.  They put astronauts on the ends and spin them.  If the
+      linear speed of the astronauts is 200 mph, what is the angular velocity of the device?
+
+      \begin{solution}
+        \begin{align*}
+          r & = \frac{58}{2 \cdot 5280} \\
+            & \approx \unit[0.00549242424]{mi} \\
+          \\
+          \omega & = \frac{v}{r} \\
+                 & = \frac{200}{0.00549242424} \\
+                 & \approx \unit[36,414]{rad/h} \\
+                 & \approx \unit[10.11]{rad/h} \\
+        \end{align*}
+      \end{solution}
+
+      \item If the device is rotating at 1 rev/s, what is the linear speed of the astronauts?
+
+  \end{enumerate}
 
 \end{document}
