@@ -14,26 +14,12 @@
 \usepackage{xfrac}
 \usepackage{enumerate}
 
-\newcommand{\degree}{\ensuremath{^\circ}} 
+\newcommand{\dg}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
 \printanswers
 
-% \begin{figure}[H]
-%   \centering
-%   \includegraphics[scale=.3]{problem_7.eps}
-%   \caption*{Problem 7}
-% \end{figure}
-
-% \begin{tabular}{cc}
-% \toprule
-% period & amplitude \\
-% \midrule
-%   $\pi$ & $2$ \\
-% \bottomrule
-% \end{tabular}
-
-\title{Math 142 Notes \\ Section 6.1}
+\title{Math 142 Notes \\ Section 6.2}
 
 \date{\today}
 
@@ -41,5 +27,61 @@
 
   \maketitle
   \tableofcontents
+
+  \section{Trigonometric Ratios}
+
+  \subsection{Notes}
+  \begin{itemize*}
+    \item Show sine, cosine, etc. as ratios of sides of right triangles.
+    \item use $3/4/5$ and $1/2/\sqrt{5}$ triangles
+  \end{itemize*}
+
+  \subsection{Examples}
+  Draw a triangle that matches and find all the other trigonometric ratios:
+  \begin{enumerate}
+    \item $\sin \theta = \frac{2}{3}$  
+    \item $\tan \theta = 3$
+    \item etc.
+  \end{enumerate}
+
+  \section{Special Triangles}
+
+  \begin{itemize*}
+    \item $45 \dg$ from 1x1 square 
+    \item $30 \dg$ and $60 \dg$ from equilateral triangle with side length 1 (use perpendicular bisector)
+  \end{itemize*}
+
+  \section{Applications}
+
+  \subsection{Notes}
+  ``Solve a triangle'' means find all sides and angles given some sides and angles.  Future sections will include
+  techniques for solving non-right triangles.
+
+  useful rules:
+  \begin{align*}
+    \sin \theta & = \frac{a}{r} \\
+    a           & = r \sin \theta \\
+    \\
+    \cos \theta & = \frac{b}{r} \\
+    b           & = r \cos \theta \\
+  \end{align*}
+
+  \subsection{Examples}
+
+  \begin{enumerate}
+    \item Solve example right triangles given any one angle and any side.  Include a few examples with radians.
+
+    \item If tree casts a 50 foot shadow with an angle of $30 \dg$, how tall is the tree?
+
+    \item If kite's string is 200 feet long and the angle the string makes with the ground is $45 \dg$, how high is the
+      kite?
+
+    \item A 30 foot ladder is 5 feet from the base of a building
+      \begin{parts}
+        \part What angle does the ladder make with the ground?
+        \part How high does the ladder reach on the building?
+      \end{parts}
+
+  \end{enumerate}
 
 \end{document}
