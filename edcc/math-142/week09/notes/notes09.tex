@@ -1,0 +1,154 @@
+\documentclass{exam}
+
+\usepackage{units} 
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{xfrac}
+\usepackage{enumerate}
+
+\newcommand{\dg}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+\printanswers
+
+\title{Math 142 Notes \\ Section 6.3}
+
+\date{\today}
+
+\begin{document}
+
+  \maketitle
+  \tableofcontents
+
+  \section{Bonus Topics}
+  \subsection{Imaginary Powers of e}
+
+  for large $n$
+  \begin{align*}
+    e       & \approx \left( 1 + 1/n \right)^n \\
+    \\
+    e^{1/n} & \approx \left( 1 + 1/n \right)^{n/n} \\
+            & \approx 1 + 1/n \\
+    \\
+    e^{i/1024} & \approx 1 + \frac{1}{1/1024} i \\
+               & \approx 1 + 0.0009765625 i \\
+    e^{i/512}  & = \left( e^{1/1024} \right)^2 \\
+               & \approx 0.999998093 + 0.00195312376 i \\
+    \vdots \\
+    e^{i} &= 0.540302306 + 0.841470985 i \\
+  \end{align*}
+
+  Fill in graphs and plot and find that real part is cosine graph and imaginary part is sine graph:
+  \begin{align*}
+    e^{i \theta}  & = \cos \theta + i \sin \theta \\
+    e^{\pi i}     & = -1 \\
+    e^{\pi i} + 1 & = 0 \\
+  \end{align*}
+
+  Equation contains all important numbers: $e$, $i$, $\pi$, and $i$.
+
+  \subsection{Eratosthenes Distance to Sun}
+
+  \begin{enumerate}
+    \item When the sun is directly overhead in Syene, in Alexandria there is a 1.2 foot shadow from a 10 foot pole.
+    What is the angle to the sun?  Assume the sun is infinitely far away.
+
+      \begin{solution}
+        \begin{align*}
+          \sin \theta &= \frac{1.2}{10} \\
+          \theta &\approx 7 \dg \\
+        \end{align*}
+      \end{solution}
+
+    \item If the distance between the two cities is 5000 stadia, what is the radius of the earth in stadia?
+      \begin{solution}
+        convert degrees to radians:
+        \[
+          7 \dg \approx 0.122
+        \]
+
+        Find the radius:
+        \begin{align*}
+          s & = r \theta \\
+          r & = \frac{s}{\theta} \\
+            & = \frac{5000}{0.122} \\
+            & \approx \unit[41,000]{stadia} \\
+        \end{align*}
+
+        Actual stadium unit may have been 
+        \begin{itemize*}
+          \item 157 meters, leading to an estimate of 6400 km.  
+          \item 185 meters, leading to an estimate of 7571 km.  
+        \end{itemize*}
+
+        The actual value for the radius is 6371 km.
+
+        A flaw in the plan is that the cities aren't actually directly north of each other, so the apparent precision
+        involved a bit of luck.
+
+      \end{solution}
+  \end{enumerate}
+
+  \section{Trigonometric Functions of Angles}
+
+  \subsection{Notes}
+  \begin{itemize*}
+    \item same as unit circle with larger radius
+    \item reference angle determines value, quadrant determines sign
+  \end{itemize*}
+
+  \subsection{Examples}
+
+  \begin{enumerate}
+    \item find various reference angles in degrees and radians, positive and negative angles
+
+    \item find values of sine, cosine, etc. of common angles ($30 \dg$, etc.)
+      with angles greater than $90 \dg$, negative angles, etc.
+
+    \item Given $\tan \theta = \frac{2}{3}$ or similar, find values of other trignometric functions.
+  \end{enumerate}
+
+  \section{Pythagorean Identities}
+
+  \subsection{Notes}
+
+  \begin{align*}
+    x^2 + y^2                                                   & = r^2 \\
+    \left( \frac{y}{r} \right)^2 + \left( \frac{x}{r} \right)^2 & = 1 \\
+    \sin^2 \theta + \cos^2 \theta                               & = 1 \\
+    \\
+    \tan^2 \theta + 1 &= \sec^2 \theta \\
+    \cot^2 \theta + 1 &= \csc^2 \theta \\
+  \end{align*}
+
+  \subsection{Examples}
+
+  \begin{enumerate}
+    \item $\cos \theta$ in terms of $\sin \theta$ Q-II
+    \item $\tan \theta$ in terms of $\sin \theta$ Q-I
+    \item $\sec \theta$ in terms of $\tan \theta$ Q-IV
+    \item etc.
+  \end{enumerate}
+
+  \section{Area of Triangles}
+  \subsection{Notes}
+
+  \begin{itemize*}
+    \item show that if $\theta$ is angle between $a$ and $b$, $A = \frac{1}{2} ab \sin \theta$ because $h = b \sin
+      \theta$
+    \item demonstrate when included angle is greater than or less than $90 \dg$
+  \end{itemize*}
+
+  \subsection{Examples}
+
+  Find area of various triangles given two sides and included angle.
+
+\end{document}

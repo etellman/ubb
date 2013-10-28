@@ -37,7 +37,11 @@
   Section 6.1: 1-5, 13-17, 25-28, 32-36, 39-42, 45-54, 59-62, 67-69, 71-73, 80-81
 
   \section{Extra Credit}
-  Section 6.1: 76 and 84
+
+  \ifprintanswers
+  \else
+    Section 6.1: 76 and 84
+  \fi
 
   \ifprintanswers
 
@@ -45,15 +49,15 @@
       \item[76]
         There are four different quarter circles the cow can graze in:
         \begin{align*}
-          A_1 &= \frac{1}{4} \pi \times 100^2 \approx \unit[3927 \pi]{ft^2} \\
-          A_2 &= \frac{1}{4} \pi \times 50^2 \approx \unit[982]{ft^2} \\
-          A_3 &= \frac{1}{4} \pi \times 30^2 \approx \unit[353]{ft^2} \\
-          A_4 &= \frac{1}{4} \pi \times 40^2 \approx \unit[628]{ft^2} \\
+          A_1 &= \frac{\pi \cdot 100^2}{4} \approx \unit[7854]{ft^2} \\
+          A_2 &= \frac{\pi \cdot 50^2}{4}  \approx \unit[1963]{ft^2} \\
+          A_4 &= \frac{\pi \cdot 40^2}{4}  \approx \unit[1257]{ft^2} \\
+          A_3 &= \frac{\pi \cdot 30^2}{4}  \approx \unit[707]{ft^2} \\
         \end{align*}
 
         The total is:
         \[
-          \unit[3927 \pi]{ft^2} + \unit[982]{ft^2} + \unit[353]{ft^2} + \unit[628]{ft^2} = \boxed{ \unit[5890]{ft^2} }
+          \unit[7854]{ft^2} + \unit[1963]{ft^2} + \unit[1257]{ft^2} + \unit[707]{ft^2} = \boxed{ \unit[11,781]{ft^2} }
         \]
         
       \item[84]
@@ -164,10 +168,10 @@
 
       \item[28] 
         \begin{align*}
-          \frac{11 \pi}{4} + 2 \pi & = \boxed{ \frac{19 \pi}{4} } \\
-          \frac{11 \pi}{4} + 4 \pi & = \boxed{ \frac{27 \pi}{4} } \\
-          \frac{11 \pi}{4} - 4 \pi & = \boxed{ - \frac{5 \pi}{4} } \\
-          \frac{11 \pi}{4} - 6 \pi & = \boxed{ - \frac{13 \pi}{4} } \\
+          \frac{11 \pi}{6} + 2 \pi & = \boxed{ \frac{23 \pi}{6} } \\
+          \frac{11 \pi}{6} + 4 \pi & = \boxed{ \frac{35 \pi}{6} } \\
+          \frac{11 \pi}{6} - 2 \pi & = \boxed{ - \frac{\pi}{6} } \\
+          \frac{11 \pi}{6} - 4 \pi & = \boxed{ - \frac{13 \pi}{6} } \\
         \end{align*}
 
       % \item[31] $430 \degree = 70 \degree + 360 \degree$
@@ -208,7 +212,7 @@
 
       \item[47] $\frac{17 \pi}{4} - 4 \pi = \boxed{ \frac{\pi}{4} }$
 
-      \item[48] $\frac{51 \pi}{2} - 25 \pi = \boxed{ \frac{\pi}{2} }$
+      \item[48] $\frac{51 \pi}{2} - 24 \pi = \boxed{ \frac{3 \pi}{2} }$
 
       \item[49]
         Find the angle in radians:
@@ -246,7 +250,7 @@
 
       \item[53]
         \[
-          2 \times \unit[2]{m} = \boxed{ \unit[4]{m} } 
+          2 \times 2 = \boxed{ \unit[4]{mi} } 
         \]
 
       \item[54]
@@ -383,6 +387,8 @@
           \unit[ 3960 ]{mi} \times \frac{\pi}{10,800} \approx \boxed{ \unit[1.15]{mi} }
         \]
 
+      \pagebreak
+
       \item[80]
         The time required for a rotation in hours is: 
         \[
@@ -391,12 +397,12 @@
 
         The angular velocity is:
         \[
-          \omega = 23.934 \times 2 \pi = \unit[150.4]{rad/hr}
+          \omega = \frac{2 \pi}{23.934} \approx \unit[0.2625]{rad/hr}
         \]
 
         The linear velocity is:
         \[
-          \unit[150.4]{rad/hr} \times \unit[3960]{mi} \approx \boxed{ \unit[ 595,000 ]{mi/hr} }
+          \unit[0.2625]{rad/hr} \times \unit[3960]{mi} \approx \boxed{ \unit[ 1040 ]{mi/hr} }
         \]
 
       \item[81]
