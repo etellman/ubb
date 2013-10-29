@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     11119,        342]
-NotebookOptionsPosition[      9845,        293]
-NotebookOutlinePosition[     10201,        309]
-CellTagsIndexPosition[     10158,        306]
+NotebookDataLength[     13125,        403]
+NotebookOptionsPosition[     11642,        346]
+NotebookOutlinePosition[     11998,        362]
+CellTagsIndexPosition[     11955,        359]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -115,18 +115,28 @@ Cell[BoxData[{
   3.591396367878668*^9, 3.591396383086651*^9}, {3.591396714345825*^9, 
   3.591396714813734*^9}, {3.591396923035647*^9, 3.591396932507913*^9}, {
   3.5913971356295023`*^9, 3.5913972222374153`*^9}, {3.591439483453699*^9, 
-  3.591439512498034*^9}, {3.5914395646556263`*^9, 3.591439578695158*^9}}],
+  3.591439512498034*^9}, {3.5914395646556263`*^9, 3.591439578695158*^9}, {
+  3.5919591675277243`*^9, 3.5919591680675173`*^9}}],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"[", 
-  RowBox[{"80.46", ",", "70"}], "]"}]], "Input",
+ RowBox[{"sideA", "[", 
+  RowBox[{"10", ",", "18", ",", "40"}], "]"}]], "Input",
  CellChangeTimes->{{3.5913951232948236`*^9, 3.5913951331280823`*^9}, {
   3.591395321076627*^9, 3.5913953267535887`*^9}, {3.5913953621877937`*^9, 
   3.591395367746911*^9}, {3.591395430840003*^9, 3.5913954342381773`*^9}, {
   3.591396032857535*^9, 3.591396038255168*^9}, {3.591396265928975*^9, 
   3.591396266274231*^9}, {3.5913967855010853`*^9, 3.591396792436243*^9}, {
   3.591397334343259*^9, 3.591397354499873*^9}, {3.591439518377903*^9, 
-  3.591439583161395*^9}, {3.5914405938301992`*^9, 3.5914405963800707`*^9}}],
+  3.591439583161395*^9}, {3.5914405938301992`*^9, 3.5914405963800707`*^9}, {
+  3.591957969049952*^9, 3.59195798450881*^9}, {3.591959148457695*^9, 
+  3.5919591575630713`*^9}}],
+
+Cell[BoxData[
+ FormBox["25.77009317396455`", TraditionalForm]], "Output",
+ CellChangeTimes->{3.591957985245906*^9, 3.5919591612644997`*^9}]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -289,6 +299,49 @@ Cell[BoxData[
  FormBox["180.`", TraditionalForm]], "Output",
  CellChangeTimes->{3.591439845111026*^9, 3.591439978568736*^9, 
   3.591440032596569*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Sin", " ", "[", 
+       RowBox[{"100", "Degree"}], "]"}], "/", "50"}], "==", 
+     RowBox[{
+      RowBox[{"Sin", "[", 
+       RowBox[{"30", "Degree"}], "]"}], "/", "x"}]}], "//", "N"}], ",", "x"}],
+   "]"}]], "Input",
+ CellChangeTimes->{{3.591958197875723*^9, 3.5919583561302757`*^9}, {
+  3.591958408569193*^9, 3.591958410082046*^9}, {3.591958860247404*^9, 
+  3.591958881883053*^9}, {3.5919593392926283`*^9, 3.591959351641032*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"Solve", "::", "ratnz"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"Solve was unable to solve the system with inexact \
+coefficients. The answer was obtained by solving a corresponding exact system \
+and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::ratnz\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.5919588823290663`*^9, 3.591959352026475*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", "25.38566529714363`"}], "}"}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.591958356799282*^9, 3.591958413916625*^9, {3.591958872351001*^9, 
+   3.5919588823320217`*^9}, 3.591959352028769*^9}]
 }, Open  ]]
 },
 WindowSize->{740, 604},
@@ -308,41 +361,49 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 3321, 97, 182, "Input"],
-Cell[3881, 119, 591, 9, 28, "Input"],
+Cell[557, 20, 3374, 98, 182, "Input"],
 Cell[CellGroupData[{
-Cell[4497, 132, 309, 9, 28, InheritFromParent],
-Cell[4809, 143, 281, 9, 86, "Output"]
+Cell[3956, 122, 707, 11, 28, "Input"],
+Cell[4666, 135, 139, 2, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5127, 157, 252, 6, 28, "Input"],
-Cell[5382, 165, 594, 12, 31, "Message"],
-Cell[5979, 179, 311, 9, 44, "Output"]
+Cell[4842, 142, 309, 9, 28, "Input"],
+Cell[5154, 153, 281, 9, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6327, 193, 1013, 16, 28, "Input"],
-Cell[7343, 211, 341, 6, 28, "Output"]
+Cell[5472, 167, 252, 6, 28, "Input"],
+Cell[5727, 175, 594, 12, 31, "Message"],
+Cell[6324, 189, 311, 9, 44, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7721, 222, 185, 3, 28, "Input"],
-Cell[7909, 227, 153, 3, 28, "Output"]
-}, Open  ]],
-Cell[8077, 233, 177, 4, 48, InheritFromParent],
-Cell[CellGroupData[{
-Cell[8279, 241, 256, 5, 28, "Input"],
-Cell[8538, 248, 161, 3, 28, "Output"]
+Cell[6672, 203, 1013, 16, 28, "Input"],
+Cell[7688, 221, 341, 6, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8736, 256, 241, 5, 28, "Input"],
-Cell[8980, 263, 141, 2, 28, "Output"]
+Cell[8066, 232, 185, 3, 28, "Input"],
+Cell[8254, 237, 153, 3, 28, "Output"]
+}, Open  ]],
+Cell[8422, 243, 177, 4, 48, "Input"],
+Cell[CellGroupData[{
+Cell[8624, 251, 256, 5, 28, "Input"],
+Cell[8883, 258, 161, 3, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9158, 270, 139, 2, 28, "Input"],
-Cell[9300, 274, 104, 2, 28, "Output"]
+Cell[9081, 266, 241, 5, 28, "Input"],
+Cell[9325, 273, 141, 2, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9441, 281, 236, 4, 28, "Input"],
-Cell[9680, 287, 149, 3, 28, "Output"]
+Cell[9503, 280, 139, 2, 28, "Input"],
+Cell[9645, 284, 104, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9786, 291, 236, 4, 28, "Input"],
+Cell[10025, 297, 149, 3, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10211, 305, 534, 14, 28, "Input"],
+Cell[10748, 321, 580, 12, 41, "Message"],
+Cell[11331, 335, 295, 8, 86, "Output"]
 }, Open  ]]
 }
 ]
