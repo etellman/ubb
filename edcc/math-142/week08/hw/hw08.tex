@@ -321,8 +321,8 @@
           \tan \theta & = \frac{x}{4} \\
           x           & = \boxed{ 4 \tan \theta } \\
           \\
-          \sec \theta & = \frac{y}{4} \\
-          y           & = \boxed{ 4 \sec \theta } \\
+          \cos \theta & = \frac{4}{y} \\
+          y           & = \boxed{ \frac{4}{\cos \theta} } \\
         \end{align*}
 
       \item[17] 
@@ -336,12 +336,12 @@
           \toprule
 
           $\sin$         & $\cos$         & $\tan$         \\
-          $\sfrac{4}{5}$ & $\sfrac{3}{5}$ & $\sfrac{4}{3}$ \\
+          $\sfrac{3}{5}$ & $\sfrac{4}{5}$ & $\sfrac{3}{4}$ \\
 
           \midrule
 
           $\csc$         & $\sec$         & $\cot$ \\
-          $\sfrac{5}{4}$ & $\sfrac{5}{3}$ & $\sfrac{3}{4}$ \\
+          $\sfrac{5}{3}$ & $\sfrac{5}{4}$ & $\sfrac{4}{3}$ \\
 
           \bottomrule
         \end{tabular}
@@ -374,8 +374,8 @@
 
       \item[24]
         \begin{align*}
-          \sin 30 \dg + \csc 30 \dg & = \frac{1}{2} + 2 \\
-                                            & = \boxed{ \frac{5}{2} } \\
+          \sin 30 \dg \cdot \csc 30 \dg & = \frac{1}{2} \cdot 2 \\
+                                        & = \boxed{ 1 } \\
         \end{align*}
 
       \item[25]
@@ -444,8 +444,6 @@
           \cos 68 \dg & = \frac{x}{1000} \\
           x           & \approx \boxed{ 374.61 } \\
         \end{align*}
-
-      \pagebreak
 
       \item[39]
         Divide $x$ into a left and right half and then add them up to get the total.
@@ -562,23 +560,21 @@
 
       \item[56]
         \begin{align*}
-            \tan 35 \dg & = \frac{d_1}{5150} \\
-            d_1         & \approx \unit[3606]{ft} \\
-            \\
-            \tan 52 \dg & = \frac{d_2}{5150} \\
-            d_2         & \approx \unit[6592]{ft} \\
-            \\
-            d & = 3606 + 6592 \\
-              & = \unit[10,198]{ft} \\
-              & \approx \boxed{ \unit[1.9]{mi} } \\
+          \cos 35 \dg & = \frac{d_1}{5150} \\
+          d_1         & \approx \unit[4219]{ft} \\
+          \\
+          \cos 52 \dg & = \frac{d_2}{5150} \\
+          d_2         & \approx \unit[3171]{ft} \\
+          \\
+          d & \approx 4219 + 3171 \\
+            & = \boxed{ \unit[7389]{ft} } \\
         \end{align*}
 
       \item[57]
         The distances are the same but you need to subtract them now:
         \begin{align*}
-          d & = 6592 - 3606  \\
-            & = \unit[2986]{ft} \\
-            & \approx \boxed{ \unit[0.6]{mi} } \\
+          d & \approx 4219 - 3171 \\
+            & = \boxed{ \unit[1048]{ft} } \\
         \end{align*}
 
       \item[59]
@@ -608,13 +604,13 @@
 
           \item Find the distance from the center of the earth to the moon:
             \begin{align*}
-              \cos 89.05 \dg & = \frac{3960}{d} \\
-              d_{center}     & \approx \unit[ 238,843 ]{mi} \\
+              \cos 89.05 \dg & = \frac{3960}{d + 3960} \\
+              d_{center}     & \approx \unit[ 234,884 ]{mi} \\
             \end{align*}
 
             Subtract the radius of the earth:
             \[
-              d_{surface} = 238,843 - 3960 = \boxed{ \unit[234,883]{mi} } 
+              d_{surface} \approx 234,884 - 3960 = \boxed{ \unit[230,934]{mi} } 
             \]
 
         \end{enumerate}
