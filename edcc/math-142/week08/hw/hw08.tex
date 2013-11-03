@@ -122,13 +122,17 @@
       inches, find an equation for the distance from the ground of a point on the wheel.
 
       \begin{solution}
+        find $\omega$:
         \begin{align*}
           \omega & = 2 \pi f \\
                  & = 2 \pi \times 1.5 \\
                  & = 3 \pi \\
         \end{align*}
 
-        The equation is:
+        You need to add an offset of 12 inches because the center of the wheel is 12 inches from the ground and the
+        lowest point the wheel reaches is zero.
+
+        The final equation is:
         \[
           h(t) = 12 + 12 \cos 3 \pi t 
         \]
@@ -169,6 +173,8 @@
 
           \bottomrule
         \end{tabular}
+
+      \pagebreak
 
       \item[3] 
         Find the missing side:
@@ -232,6 +238,8 @@
           \bottomrule
         \end{tabular}
 
+      \pagebreak
+
       \item[6] 
         Find the missing side:
         \begin{align*}
@@ -252,8 +260,6 @@
 
           \bottomrule
         \end{tabular}
-
-      \pagebreak
 
       \item[7]
         Find the missing side:
@@ -347,6 +353,8 @@
 
           \bottomrule
         \end{tabular}
+
+      \pagebreak
 
       \item[18] 
         Find the missing side:
@@ -445,8 +453,6 @@
           x           & \approx \boxed{ 374.61 } \\
         \end{align*}
 
-      \pagebreak
-
       \item[39]
         Divide $x$ into a left and right half and then add them up to get the total.
 
@@ -508,15 +514,13 @@
           \item 
             \begin{align*}
               \sin 22 \dg & = \frac{35,000}{d} \\
-              d           & \approx \unit[93,431]{ft} \\
-                          & \approx \boxed{ \unit[17.7]{mi} } \\
+              d           & \approx \boxed{ \unit[93,431]{ft} } \\
             \end{align*}
 
           \item 
             \begin{align*}
               \tan 22 \dg & = \frac{35,000}{d} \\
-              d           & \approx \unit[86,628]{ft} \\
-                          & \approx \boxed{ \unit[16.4]{mi} } \\
+              d           & \approx \boxed{ \unit[86,628]{ft} } \\
             \end{align*}
 
         \end{enumerate}
@@ -562,21 +566,28 @@
 
       \item[56]
         \begin{align*}
-          \cos 35 \dg & = \frac{d_1}{5150} \\
-          d_1         & \approx \unit[4219]{ft} \\
+          \tan 35 \dg & = \frac{5150}{d_1} \\
+          d_1         & \approx \unit[7355]{ft} \\
           \\
-          \cos 52 \dg & = \frac{d_2}{5150} \\
-          d_2         & \approx \unit[3171]{ft} \\
+          \tan 52 \dg & = \frac{5150}{d_2} \\
+          d_2         & \approx \unit[4023]{ft} \\
           \\
-          d & \approx 4219 + 3171 \\
-            & = \boxed{ \unit[7389]{ft} } \\
+          d           & = d_1 + d_2 \\
+          d           & \approx 7355 + 4023 \\
+                      & = \boxed{ \unit[11,379]{ft} } \\
         \end{align*}
 
       \item[57]
-        The distances are the same but you need to subtract them now:
         \begin{align*}
-          d & \approx 4219 - 3171 \\
-            & = \boxed{ \unit[1048]{ft} } \\
+          \tan 38 \dg & = \frac{5150}{d_1} \\
+          d_1         & \approx \unit[6592]{ft} \\
+          \\
+          \tan 52 \dg & = \frac{5150}{d_2} \\
+          d_2         & \approx \unit[4023]{ft} \\
+          \\
+          d           & = d_1 - d_2 \\
+                      & \approx 6592 - 4023 \\
+                      & = \boxed{ \unit[2568]{ft} } \\
         \end{align*}
 
       \item[59]
@@ -601,13 +612,13 @@
 
             The angle is:
             \[
-              \frac{6155}{24,881} \cdot 360 \dg = \boxed{ 89.05 \dg }
+              \frac{6155}{24,881} \cdot 360 \dg \approx \boxed{ 89.0544 \dg }
             \]
 
           \item Find the distance from the center of the earth to the moon:
             \begin{align*}
-              \cos 89.05 \dg & = \frac{3960}{d + 3960} \\
-              d              & \approx \boxed{ \unit[ 234,884 ]{mi} } \\
+              \cos 89.0544 \dg & = \frac{3960}{d + 3960} \\
+              d                & \approx \boxed{ \unit[ 235,995 ]{mi} } \\
             \end{align*}
 
         \end{enumerate}

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     28678,        936]
-NotebookOptionsPosition[     24133,        770]
-NotebookOutlinePosition[     24487,        786]
-CellTagsIndexPosition[     24444,        783]
+NotebookDataLength[     33577,       1106]
+NotebookOptionsPosition[     28093,        907]
+NotebookOutlinePosition[     28447,        923]
+CellTagsIndexPosition[     28404,        920]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -766,6 +766,143 @@ Cell[BoxData[
  FormBox[
   FractionBox["4", "5"], TraditionalForm]], "Output",
  CellChangeTimes->{{3.5912970644703836`*^9, 3.591297081447274*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Sqrt", "[", "13", "]"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.5923888968093367`*^9, 3.59238890206374*^9}}],
+
+Cell[BoxData[
+ FormBox["3.605551275463989`", TraditionalForm]], "Output",
+ CellChangeTimes->{3.592388902654891*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SqrtBox["13"], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.5923889260416727`*^9, 3.592388933127014*^9}}],
+
+Cell[BoxData[
+ FormBox["3.605551275463989`", TraditionalForm]], "Output",
+ CellChangeTimes->{3.592388934194969*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SqrtBox["13"], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.592388993959879*^9, 3.5923890155017347`*^9}}],
+
+Cell[BoxData[
+ FormBox["3.605551275463989`", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.592389012381836*^9, 3.592389016176321*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"7", 
+   RowBox[{"Sqrt", "[", "31", "]"}]}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.5923891574613323`*^9, 3.592389163786409*^9}, {
+  3.592389204100316*^9, 3.592389204290086*^9}, {3.5923892638990192`*^9, 
+  3.592389266281008*^9}, {3.592389299562398*^9, 3.592389305023963*^9}, {
+  3.592389338697154*^9, 3.592389343871175*^9}, {3.59238954293113*^9, 
+  3.59238954642594*^9}}],
+
+Cell[BoxData[
+ FormBox["38.97435053981015`", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.592389160748084*^9, 3.592389164193387*^9}, 
+   3.592389205582375*^9, 3.59238926759699*^9, 3.592389305850149*^9, 
+   3.592389344956798*^9, 3.5923895473281097`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"100", "/", 
+   RowBox[{"Sin", "[", 
+    RowBox[{"75", "Degree"}], "]"}]}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.592389822552268*^9, 3.5923898341174707`*^9}}],
+
+Cell[BoxData[
+ FormBox["103.52761804100831`", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.592389829171527*^9, 3.592389834538157*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"12", 
+   RowBox[{"Sqrt", "[", "2", "]"}]}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.592391646726741*^9, 3.5923916513851357`*^9}}],
+
+Cell[BoxData[
+ FormBox["16.970562748477143`", TraditionalForm]], "Output",
+ CellChangeTimes->{3.59239165186663*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Cos", "[", 
+      RowBox[{"89.0544", "Degree"}], "]"}], "\[Equal]", 
+     RowBox[{"3960", "/", 
+      RowBox[{"(", 
+       RowBox[{"d", "+", "3960"}], ")"}]}]}], "//", "N"}], ",", "d"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.592396215051206*^9, 3.59239624197346*^9}, {
+  3.592396297069951*^9, 3.592396299789044*^9}, {3.5924800629471292`*^9, 
+  3.592480063080844*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"Solve", "::", "ratnz"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"Solve was unable to solve the system with inexact \
+coefficients. The answer was obtained by solving a corresponding exact system \
+and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::ratnz\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.592396242728025*^9, 3.592396302400271*^9, 
+  3.592480064731065*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"d", "\[Rule]", "235995.1471822482`"}], "}"}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{3.592396242729445*^9, 3.592396302403227*^9, 
+  3.592480064734468*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sqrt", "[", "1519", "]"}]], "Input",
+ CellChangeTimes->{{3.59241687754535*^9, 3.59241688284833*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"7", " ", 
+   SqrtBox["31"]}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.592416884084395*^9}]
 }, Open  ]]
 },
 WindowSize->{740, 604},
@@ -936,7 +1073,40 @@ Cell[23588, 750, 165, 3, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[23790, 758, 179, 4, 28, "Input"],
-Cell[23972, 764, 145, 3, 82, "Output"]
+Cell[23972, 764, 145, 3, 48, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24154, 772, 149, 3, 28, "Input"],
+Cell[24306, 777, 115, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24458, 784, 131, 3, 34, "Input"],
+Cell[24592, 789, 115, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24744, 796, 131, 3, 34, "Input"],
+Cell[24878, 801, 139, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25054, 808, 411, 8, 28, "Input"],
+Cell[25468, 818, 258, 4, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25763, 827, 200, 5, 28, "Input"],
+Cell[25966, 834, 140, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26143, 841, 169, 4, 28, "Input"],
+Cell[26315, 847, 115, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26467, 854, 459, 13, 28, "Input"],
+Cell[26929, 869, 603, 13, 41, "Message"],
+Cell[27535, 884, 243, 7, 86, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27815, 896, 124, 2, 28, "Input"],
+Cell[27942, 900, 135, 4, 33, "Output"]
 }, Open  ]]
 }
 ]
