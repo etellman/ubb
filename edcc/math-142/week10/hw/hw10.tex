@@ -1,6 +1,7 @@
 \documentclass{exam}
 
 \usepackage{units} 
+\usepackage{parskip} 
 \usepackage{graphicx}
 \usepackage[fleqn]{amsmath}
 \usepackage{cancel}
@@ -18,7 +19,7 @@
 \newcommand{\dg}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
-\printanswers
+% \printanswers
 \excludecomment{comment}
 
 \ifprintanswers 
@@ -26,7 +27,7 @@
 \fi
 
 \author{}
-\date{\today}
+\date{November 6, 2013}
 \title{Math 142 \\ Homework Ten}
 
 \begin{document}
@@ -34,16 +35,12 @@
   \maketitle
 
   \section{Homework}
-  Section 6.4: 
+  Section 6.4: 1-8, 11-12, 17-22, 27-28, 31-38, 40-41
 
   \section{Extra Credit}
-  Section 6.4: 41
+  Section 6.4: 42 (pretty hard)
 
   \ifprintanswers
-  \else
-    This problem is a lot of work and took me several hours and numerous sheets of paper to figure out.  I'm interested to
-    see if anyone has an easier way of solving it.
-  \fi
 
   \begin{description}
     \item[41]
@@ -144,6 +141,28 @@
       \end{align*}
   \end{description}
 
+  \fi
+
+  \section{Review}
+
+  \begin{enumerate}
+    \item A bike with 26 inch diameter wheels is traveling at 15 mph.  What is the RPM for the wheels?
+
+    \item Find an equation for this graph:
+      \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.7]{review.eps}
+        \caption{Find the Equation}
+      \end{figure}
+
+      \begin{solution}
+        \[
+          f(t) = -2 \sin 2 \pi t
+        \]
+      \end{solution}
+
+  \end{enumerate}
+  
   \ifprintanswers
 
     \section{Section 6.4}
@@ -521,13 +540,13 @@
     \vspace{1 cm}
     \begin{quote}
       \begin{em}
-        The enemy aggressor is always pursuing a course of larceny, murder, rapine and barbarism. We are always moving
-        forward with high mission, a destiny imposed by the Deity to regenerate our victims while incidentally capturing
-        their markets, to civilise savage and senile and paranoid peoples while blundering accidentally into their oil
-        wells. 
+        As during the time of kings it would have been naive to think that the king’s firstborn son would be the fittest to
+        rule, so in our time it is naive to think that the democratically elected ruler will be the fittest. The rule of
+        succession is not a formula for identifying the best ruler, it is a formula for conferring legitimacy on someone or
+        other and thus forestalling civil conflict.
       \end{em}
     \end{quote}
-    \hspace{1 cm} --John T. Flynn
+    \hspace{1.5 cm} --J.M. Coetzee (from {\em Diary of a Bad Year})
   \fi
 
 \end{document}
