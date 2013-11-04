@@ -18,7 +18,7 @@
 \newcommand{\dg}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
-% \printanswers
+\printanswers
 \excludecomment{comment}
 
 \ifprintanswers 
@@ -92,15 +92,46 @@
 
   \fi
 
+  \ifprintanswers
+    \pagebreak
+  \fi
+
   \section{Review}
   Find the period and graph:
 
   \begin{enumerate}
     \item $y = \tan 2 \pi x$
+      \ifprintanswers
+        \[
+          p = \frac{\pi}{2 \pi} = \frac{1}{2}
+        \]
+        
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale=0.7]{review1.eps}
+          \caption{Review One}
+        \end{figure}
+      \fi
+
     \item $y = 2 \sec 3x$
+      \ifprintanswers
+        \[
+          p = \frac{2 \pi}{3}
+        \]
+        
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale=0.7]{review2.eps}
+          \caption{Review Two}
+        \end{figure}
+      \fi
+
   \end{enumerate}
 
   \ifprintanswers
+
+  \pagebreak
+
     \section{Section 6.3}
 
     \begin{description}
