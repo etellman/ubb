@@ -21,11 +21,38 @@
 
 \title{Math 142 Notes \\ Section 6.5}
 
-\date{\today}
+\date{November 13, 2013}
 
 \begin{document}
 
   \maketitle
   \tableofcontents
+
+  \section{Law of Cosines}
+
+  \subsection{Proof}
+  \begin{enumerate}
+    \item Draw right triangle with $\angle A$ at the origin, hypotenuse labeled $b$, and top point labeled $C$.  Show that:
+      \[
+        C = (b \cos A, b \sin A)
+      \]
+
+    \item Draw second right triangle with common side at $h$, hypotenuse labeled $a$ and bottom side on the x axis.  The
+      total of the two sides on the bottom is $c$.  The two triangles together make a new non-right triangle. 
+      
+      Show that:
+      \[
+        a^2 = \left( b \sin A \right)^2 + \left( c - b \cos A \right)^2 
+      \]
+
+    \item Simplify:
+      \begin{align*}
+        a^2 & = \left( b \sin A \right)^2 + \left( c - b \cos A \right)^2  \\
+            & = b^2 \sin^2 A + c^2 - 2bc \cos A  + b^2 \cos^2 A \\
+            & = b^2 \sin^2 A + c^2 - 2bc \cos A  + b^2 \cos^2 A \\
+            & = b^2 + c^2 - 2bc \cos A \\
+      \end{align*}
+
+  \end{enumerate}
 
 \end{document}
