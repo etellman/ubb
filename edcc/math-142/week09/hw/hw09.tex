@@ -68,9 +68,9 @@
           A_{circle} = \pi 12^2 = 144 \pi
         \]
 
-        The sector is one third of the circle or: 
+        The area of the sector is: 
         \[
-          A_{sector} = \frac{144 \pi}{3}
+          A_{sector} = \frac{1}{2} r^2 \theta = 24 \pi
         \]
 
         The area of the triangle is: 
@@ -80,13 +80,13 @@
 
         The area of the unshaded region is the difference between the area of the sector and the area of the triangle:
         \[
-          A_{unshaded} = A_{sector} - A_{triangle} = \frac{144 \pi}{3} - 36 \sqrt{3} \approx 88.44
+          A_{unshaded} = A_{sector} - A_{triangle} = 24 \pi - 36 \sqrt{3} \approx 13.04
         \]
 
         The area of the shaded region is the difference between the area of the circle and the area of the unshaded
         region:
         \[
-          A_{shaded} = A_{circle} - A_{unshaded} = 144 \pi - 88.44 \approx \boxed{ 363.95 }
+          A_{shaded} = A_{circle} - A_{unshaded} \approx 144 \pi - 13.04 \approx \boxed{ 439.34 }
         \]
       \end{description}
 
@@ -147,7 +147,7 @@
         \begin{enumerate}[(a)]
           \item $180 \dg - 120 \dg = \boxed{ 60 \dg }$
           \item $180 \dg - 210 \dg = \boxed{ 30 \dg }$
-          \item $780 \dg - 720 \dg = \boxed{ 30 \dg }$
+          \item $780 \dg - 720 \dg = \boxed{ 60 \dg }$
         \end{enumerate}
 
       \item[3] 
@@ -240,7 +240,7 @@
 
       \item[26]
         \[
-          \cos \frac{5 \pi}{6} = - \cos \frac{\pi}{6} = \boxed{ - \frac{\sqrt{3}}{2} }
+          \tan \frac{5 \pi}{6} = - \tan \frac{\pi}{6} = \boxed{ - \frac{\sqrt{3}}{3} }
         \]
 
       \item[33] III
@@ -250,26 +250,40 @@
 
       \item[37]
         \begin{align*}
-          \tan^2 \theta + 1 & = \sec^2 \theta \\
-          \tan^2 \theta + 1 & = \frac{1}{\cos^2 \theta} \\
-          \tan^2 \theta     & = \frac{1}{\cos^2 \theta} - 1 \\
-          \tan \theta       & = \boxed{ \sqrt{\frac{1}{\cos^2 \theta} - 1} } \\
+          \tan^2 \theta & = \frac{\sin^2 \theta}{\cos^2 \theta} \\
+                        & = \frac{1 - \cos^2 \theta}{\cos^2 \theta} \\
+          \tan \theta   & = \pm \frac{\sqrt{1 - \cos^2 \theta}}{\cos \theta} \\
         \end{align*}
+
+        In quadrant III:
+        \[
+          \tan \theta = \boxed{ - \frac{\sqrt{1 - \cos^2 \theta}}{\cos \theta} } \\
+        \]
+
 
       \item[38]
         \begin{align*}
-          \cot^2 \theta + 1 & = \csc^2 \theta \\
-          \cot^2 \theta + 1 & = \frac{1}{\sin^2 \theta} \\
-          \cot^2 \theta     & = \frac{1}{\sin^2 \theta} - 1 \\
-          \cot \theta       & = \boxed{ - \sqrt{ \frac{1}{\sin^2 \theta} - 1 } } \\
+          \cot^2 \theta & = \frac{\cos^2 \theta}{\sin^2 \theta} \\
+                        & = \frac{1 - \sin^2 \theta}{\sin^2 \theta} \\
+          \cot \theta   & = \pm \frac{\sqrt{1 - \sin^2 \theta}}{\sin \theta} \\
         \end{align*}
+
+        In quadrant II:
+        \[
+          \cot \theta = \boxed{ - \frac{\sqrt{1 - \sin^2 \theta}}{\sin \theta} } \\
+        \]
 
       \item[39]
         \begin{align*}
           \sin^2 \theta + \cos^2 \theta & = 1 \\
           \cos^2 \theta                 & = 1 - \sin^2 \theta \\
-          \cos \theta                   & = \boxed{ \sqrt{ 1 - \sin^2 \theta } } \\
+          \cos \theta                   & = \pm \sqrt{ 1 - \sin^2 \theta } \\
         \end{align*}
+
+        In quadrant IV:
+        \[
+          \cos \theta = \boxed{ \sqrt{ 1 - \sin^2 \theta } } \\
+        \]
 
       \item[40]
         \begin{align*}
@@ -277,20 +291,35 @@
           \sin^2 \theta + \frac{1}{\sec^2 \theta} & = 1 \\
           \frac{1}{\sec^2 \theta}                 & = 1 - \sin^2 \theta \\
           \sec^2 \theta                           & = \frac{1}{1 - \sin^2 \theta} \\
-          \sec \theta                             & = \boxed{ \sqrt{ \frac{1}{1 - \sin^2 \theta} } } \\
+          \sec \theta                             & = \pm \sqrt{ \frac{1}{1 - \sin^2 \theta} } \\
         \end{align*}
+
+        In quadrant I:
+        \[
+          \sec \theta = \boxed{ \sqrt{ \frac{1}{1 - \sin^2 \theta} } } \\
+        \]
 
       \item[41]
         \begin{align*}
           \sec^2 \theta & = 1 + \tan^2 \theta \\
-          \sec \theta   & = \boxed{ - \sqrt{ 1 + \tan^2 \theta } } \\
+          \sec \theta   & = \pm \sqrt{ 1 + \tan^2 \theta } \\
         \end{align*}
+
+        In quadrant II:
+        \[
+          \sec \theta = \boxed{ - \sqrt{ 1 + \tan^2 \theta } } \\
+        \]
 
       \item[42]
         \begin{align*}
           \csc^2 \theta & = 1 + \cot^2 \theta \\
-          \csc \theta   & = \boxed{ - \sqrt{ 1 + \cot^2 \theta } } \\
+          \csc \theta   & = \pm \sqrt{ 1 + \cot^2 \theta } \\
         \end{align*}
+
+        In quadrant IV:
+        \[
+          \csc \theta = \boxed{ - \sqrt{ 1 + \cot^2 \theta } } \\
+        \]
 
       \item[43]
         \begin{tabular}[H]{ccc}
@@ -306,6 +335,8 @@
 
           \bottomrule
         \end{tabular}
+
+      \pagebreak
 
       \item[44]
         \begin{align*}
