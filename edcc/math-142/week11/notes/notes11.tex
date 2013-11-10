@@ -14,7 +14,7 @@
 \usepackage{xfrac}
 \usepackage{enumerate}
 
-\newcommand{\degree}{\ensuremath{^\circ}} 
+\newcommand{\dg}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
 \printanswers
@@ -38,7 +38,7 @@
 
   \section{Law of Cosines}
 
-  \subsection{Notes}
+  \subsection{Definition and Proof}
   \begin{enumerate}
     \item Draw right triangle with $\angle A$ at the origin, hypotenuse labeled $b$, and top point labeled $C$.  Show that:
       \[
@@ -62,7 +62,37 @@
       \end{align*}
 
   \end{enumerate}
+  
+  \subsection{Notes}
 
+  procedure:
+  \begin{itemize*}
+    \item Use the Law of Cosines to get a side
+    \item Use the Law of Sines to find other sides.    
+  \end{itemize*}
+
+  Note that only one triangle fits with Law of Cosines--there is never ambiguity, but you have to be careful when you
+  find the remaining sides using the Law of Sines.
+
+  For example: $b = 3$, $c = 4$, $\angle A = 30 \dg$.  
+  \begin{itemize*}
+    \item Use Law of Cosines to find $a$
+
+    \item Use Law of Sines to find $\angle C$.  The possibilities are $72 \dg$ and $180 - 72 \dg = 108 \dg$ and the
+      second possibility is correct because it puts the largest angle across from the longest side.
+
+    \item The final angle is $180 \dg - 30 \dg - 108 \dg = 42 \dg$.
+  \end{itemize*}
+
+  \subsection{Examples}
+  \begin{enumerate}
+    \item $a = 3$, $c = 4$, $\angle B = 100 \dg$
+
+    \item $a = 5$, $c = 6$, $\angle B = 170 \dg$
+
+  \end{enumerate}
+
+  \subsection{SSS Case}
   The Law of Cosines can also be used to find an angle given all three sides:
   \begin{align*}
     a^2             & = b^2 + c^2 - 2bc \cos A \\
@@ -70,8 +100,61 @@
     A               & = \cos^{-1} \left( \frac{b^2 + c^2 - a^2}{2bc} \right) \\
   \end{align*}
 
+  Example: $a = 6$, $b = 2$, and $c = 5$
+
+  \begin{itemize*}
+    \item First solve for $\angle A$ first and use Law of Sines for others.
+    \item Then solve for $\angle B$ first and use Law of Sines for others.  Note that you have to check both
+      possibilities for ambiguous case for $\angle A$ because $\angle A$ is actually obtuse.
+  \end{itemize*}
+
   \subsection{Examples}
 
-  \section{Area}
+  \begin{enumerate}
+
+    \item $a = 4$, $c = 4$, $c = 5$
+
+    \item $a = 8$, $c = 5$, $c = 6$
+
+  \end{enumerate}
+
+  \subsection{Word Problems from Other Books}
+
+  \section{Bearing}
+  \subsection{Notes}
+  \begin{itemize*}
+    \item N $30 \dg$ E
+    \item S $15 \dg$ W
+  \end{itemize*}
+
+  Angle is always less than $90 \dg$.
+
+  \subsection{Examples}
+  \begin{enumerate}
+    \item One plane flew due north at 500 mph.  A second plane left from the same airport and flew S $30 \dg$ E at 400
+      mph.  How far apart are the planes after 3 hours?
+
+    \item A plane flew north at 250 mph for 2 hours and then turned N $30 \dg$ W, slowed down to 200 mph, and flew for
+      another hour.  How far is it from its starting point?
+
+  \end{enumerate}
+
+  \section{Heron's Formula for Area}
+
+  \subsection{Formula}
+  \begin{align*}
+    A & = \sqrt{s (s - a)(s - b)(s - c)} \\
+    s & = \frac{a + b + c}{2} \\
+  \end{align*}
+
+  \subsection{Examples}
+  
+  Find the area:
+  \begin{enumerate}
+    \item $a = 4$, $c = 7$, $c = 11$
+    \item $a = 3$, $c = 2$, $c = 5$
+
+    \item problem 61 from other book
+  \end{enumerate}
 
 \end{document}
