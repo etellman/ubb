@@ -141,10 +141,32 @@
 
   \section{Heron's Formula for Area}
 
-  \subsection{Formula}
+  \subsection{Notes}
+  With LoS and LoC you can find area by solving triangle.  But there's a slightly easier way if you have three sides.
   \begin{align*}
-    A & = \sqrt{s (s - a)(s - b)(s - c)} \\
+    Area   & = \frac{1}{2} a b \sin C \\
+    Area^2 & = \frac{1}{4} a^2 b^2 \sin^2 C \\
+           & = \frac{1}{4} a^2 b^2 \left( 1 - \cos^2 C \right) \\
+           & = \frac{1}{4} a^2 b^2 ( 1 - \cos C )( 1 + \cos C ) \\
+    \\
+    1 + \cos C & = 1 + \frac{a^2 + b^2 - c^2}{2ab} \\
+               & = \frac{(a + b)^2 - c^2}{2ab} \\
+               & = \frac{(a + b + c)(a + b - c)}{2ab} \\
+    \\
+    1 - \cos C & = 1 - \frac{a^2 + b^2 - c^2}{2ab} \\
+               & = \frac{2ab - a^2 - b^2 + c^2}{2ab} \\
+               & = \frac{c^2 - (a^2 - 2ab + b^2)}{2ab} \\
+               & = \frac{c^2 - (a - b)^2 }{2ab} \\
+               & = \frac{(c + (a - b))(c - (a - b))}{2ab} \\
+               & = \frac{(c + a - b)(c - a + b)}{2ab} \\
+    \\
     s & = \frac{a + b + c}{2} \\
+    \\
+    Area^2 & = \frac{1}{4} a^2 b^2 \cdot \frac{(a + b + c)(a + b - c)(c + a - b)(c - a + b)}{8a^2b^2} \\
+           & = \frac{a + b + c}{2} \cdot \frac{a + b - c}{2} \cdot \frac{c + a - b}{2} \cdot \frac{c - a + b}{2} \\
+           & = s (s - a)(s - b)(s - c) \\
+    \\
+    A & = \sqrt{s (s - a)(s - b)(s - c)} \\
   \end{align*}
 
   \subsection{Examples}
