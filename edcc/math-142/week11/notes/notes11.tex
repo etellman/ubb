@@ -38,7 +38,9 @@
 
   \section{Law of Cosines}
 
-  \subsection{Definition and Proof}
+  \subsection{Notes}
+
+  \subsubsection{Proof}
   \begin{enumerate}
     \item Draw right triangle with $\angle A$ at the origin, hypotenuse labeled $b$, and top point labeled $C$.  Show that:
       \[
@@ -63,7 +65,7 @@
 
   \end{enumerate}
   
-  \subsection{Notes}
+  \subsubsection{Problem Solving}
 
   procedure:
   \begin{itemize*}
@@ -90,9 +92,12 @@
 
     \item $a = 5$, $c = 6$, $\angle B = 170 \dg$
 
+    \item word problems
+
   \end{enumerate}
 
-  \subsection{SSS Case}
+  \section{SSS Case}
+  \subsection{Notes}
   The Law of Cosines can also be used to find an angle given all three sides:
   \begin{align*}
     a^2             & = b^2 + c^2 - 2bc \cos A \\
@@ -112,13 +117,39 @@
 
   \begin{enumerate}
 
-    \item $a = 4$, $c = 4$, $c = 5$
+    \item $a = 7$, $b = 4$, $c = 5$
+
+      \begin{solution}
+        \begin{align*}
+          \cos A & = \frac{4^2 + 5^2 - 7^2}{2 \cdot 4 \cdot 5} \\
+          A      & \approx 101 \dg \\
+          \\
+          \frac{\sin 101 \dg}{7} & = \frac{\sin B}{4} \\
+          B                      & \approx 34 \dg
+          \\
+          C & \approx 180 \dg - 101 \dg - 34 \dg \\
+            & = 45 \dg \\
+        \end{align*}
+
+        alternate:
+        \begin{align*}
+          \cos B & = \frac{7^2 + 5^2 - 4^2}{2 \cdot 7 \cdot 5} \\
+          B      & \approx 34 \dg \\
+          \\
+          \frac{\sin 34 \dg}{4} & = \frac{\sin A}{7} \\
+          A                      & \approx 78.5 \dg \text{ or } 101.5 \\
+          \\
+          C & \approx 180 \dg - 101 \dg - 34 \dg \\
+            & = 45 \dg \\
+        \end{align*}
+
+      \end{solution}
 
     \item $a = 8$, $c = 5$, $c = 6$
 
-  \end{enumerate}
+    \item word problems
 
-  \subsection{Word Problems from Other Books}
+  \end{enumerate}
 
   \section{Bearing}
   \subsection{Notes}
@@ -154,19 +185,24 @@
                & = \frac{(a + b + c)(a + b - c)}{2ab} \\
     \\
     1 - \cos C & = 1 - \frac{a^2 + b^2 - c^2}{2ab} \\
-               & = \frac{2ab - a^2 - b^2 + c^2}{2ab} \\
+               % & = \frac{2ab - a^2 - b^2 + c^2}{2ab} \\
                & = \frac{c^2 - (a^2 - 2ab + b^2)}{2ab} \\
                & = \frac{c^2 - (a - b)^2 }{2ab} \\
-               & = \frac{(c + (a - b))(c - (a - b))}{2ab} \\
+               % & = \frac{(c + (a - b))(c - (a - b))}{2ab} \\
                & = \frac{(c + a - b)(c - a + b)}{2ab} \\
+    \\
+    Area^2 & = \frac{1}{4} a^2 b^2 \cdot \frac{(a + b + c)(a + b - c)}{2ab} \cdot \frac{(c + a - b)(c - a + b)}{2ab} \\
+           & = \frac{a + b + c}{2} \cdot \frac{a + b - c}{2} \cdot \frac{c + a - b}{2} \cdot \frac{c - a + b}{2} \\
     \\
     s & = \frac{a + b + c}{2} \\
     \\
-    Area^2 & = \frac{1}{4} a^2 b^2 \cdot \frac{(a + b + c)(a + b - c)(c + a - b)(c - a + b)}{8a^2b^2} \\
-           & = \frac{a + b + c}{2} \cdot \frac{a + b - c}{2} \cdot \frac{c + a - b}{2} \cdot \frac{c - a + b}{2} \\
-           & = s (s - a)(s - b)(s - c) \\
+    \frac{a + b - c}{2} & = \frac{a + b - c + c - c}{2} \\
+                        & = \frac{a + b + c - 2c}{2} \\
+                        & = \frac{a + b + c}{2} - c \\
+                        & = s - c \\
     \\
-    A & = \sqrt{s (s - a)(s - b)(s - c)} \\
+    Area^2 & = s (s - a)(s - b)(s - c) \\
+    Area^2 & = \sqrt{s (s - a)(s - b)(s - c)} \\
   \end{align*}
 
   \subsection{Examples}
