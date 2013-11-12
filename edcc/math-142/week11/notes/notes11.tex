@@ -76,18 +76,26 @@
   Note that only one triangle fits with Law of Cosines--there is never ambiguity, but you have to be careful when you
   find the remaining sides using the Law of Sines.
 
-  For example: $b = 3$, $c = 4$, $\angle A = 30 \dg$.  
-  \begin{itemize*}
-    \item Use Law of Cosines to find $a$
-
-    \item Use Law of Sines to find $\angle C$.  The possibilities are $72 \dg$ and $180 - 72 \dg = 108 \dg$ and the
-      second possibility is correct because it puts the largest angle across from the longest side.
-
-    \item The final angle is $180 \dg - 30 \dg - 108 \dg = 42 \dg$.
-  \end{itemize*}
-
   \subsection{Examples}
   \begin{enumerate}
+    \item $b = 3$, $c = 4$, $\angle A = 30 \dg$.  
+      \begin{solution}
+        \begin{align*}
+          a^2 &= 3^2 + 4^2 - 2 \cdot 3 \cdot 4 \cdot \cos 30 \dg \\
+          a &\approx 2.05 \\
+          \\
+          \frac{\sin C}{4} &= \frac{\sin 30 \dg}{2.05} \\
+          \angle C &= 77 \dg { or } 103 \dg \\
+          \\
+          B &= 180 - 77 - 30 = 73 \dg
+          B &= 180 - 103 - 30 = 47 \dg
+          \\
+          \frac{\sin B}{3} &= \frac{\sin 30 \dg}{2.05} \\
+          \\
+          \angle B &= 47 \dg \\
+        \end{align*}
+      \end{solution}
+
     \item $a = 3$, $c = 4$, $\angle B = 100 \dg$
 
     \item $a = 5$, $c = 6$, $\angle B = 170 \dg$
@@ -183,14 +191,18 @@
     1 + \cos C & = 1 + \frac{a^2 + b^2 - c^2}{2ab} \\
                & = \frac{(a + b)^2 - c^2}{2ab} \\
                & = \frac{(a + b + c)(a + b - c)}{2ab} \\
-    \\
+   \end{align*}
+
+  \begin{align*}
     1 - \cos C & = 1 - \frac{a^2 + b^2 - c^2}{2ab} \\
                % & = \frac{2ab - a^2 - b^2 + c^2}{2ab} \\
                & = \frac{c^2 - (a^2 - 2ab + b^2)}{2ab} \\
                & = \frac{c^2 - (a - b)^2 }{2ab} \\
                % & = \frac{(c + (a - b))(c - (a - b))}{2ab} \\
                & = \frac{(c + a - b)(c - a + b)}{2ab} \\
-    \\
+   \end{align*}
+
+   \begin{align*}
     Area^2 & = \frac{1}{4} a^2 b^2 \cdot \frac{(a + b + c)(a + b - c)}{2ab} \cdot \frac{(c + a - b)(c - a + b)}{2ab} \\
            & = \frac{a + b + c}{2} \cdot \frac{a + b - c}{2} \cdot \frac{c + a - b}{2} \cdot \frac{c - a + b}{2} \\
     \\
@@ -202,7 +214,7 @@
                         & = s - c \\
     \\
     Area^2 & = s (s - a)(s - b)(s - c) \\
-    Area^2 & = \sqrt{s (s - a)(s - b)(s - c)} \\
+    Area   & = \sqrt{s (s - a)(s - b)(s - c)} \\
   \end{align*}
 
   \subsection{Examples}
