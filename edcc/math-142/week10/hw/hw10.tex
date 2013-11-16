@@ -43,113 +43,127 @@
   \ifprintanswers
 
   \begin{description}
-    \item[41]
+    \item[42]
 
-      There are three different triangles, and each triangle provides three equations.  Instead of writing 
-      $\sin 60 \dg$, $\sin A$, etc., I used $w$, $x$, and $y$ for the sines of the angles.  Since all of the sines
-      cancel out in the end, this works out fine.
+      \begin{parts}
+        
+        \part
+          There are three different triangles, and each triangle provides three equations.  Instead of writing $\sin 60
+          \dg$, $\sin A$, etc., I used $w$, $x$, and $y$ for the sines of the angles.  Since all of the sines cancel out
+          in the end, this works out fine.
 
-      Here are the variables I used:
-      \begin{align*}
-        w &= \sin ABC \\
-        x &= \sin BCA = \sin ACD = \sin BCD \\
-        y &= \sin CAD \\
-        z &= \sin CDA \\
-        \\
-        c &= BA \\
-        d &= AD \\
-      \end{align*}
+          Here are the variables I used:
+          \begin{align*}
+            w &= \sin ABC \\
+            x &= \sin BCA = \sin ACD = \sin BCD \\
+            y &= \sin CAD \\
+            z &= \sin CDA \\
+            \\
+            c &= BA \\
+            d &= AD \\
+          \end{align*}
 
-      The equations you need are:
-      \begin{align*}
-        \frac{z}{a} &= \frac{x}{c + d} \\
-        \frac{x}{d} &= \frac{y}{r} \\
-        \frac{z}{a} &= \frac{w}{r} \\
-        \frac{x}{c} &= \frac{y}{a} \\
-        \frac{w}{b} &= \frac{x}{c} \\
-      \end{align*}
+          The equations you need are:
+          \begin{align*}
+            \frac{z}{a} &= \frac{x}{c + d} \\
+            \frac{x}{d} &= \frac{y}{r} \\
+            \frac{z}{a} &= \frac{w}{r} \\
+            \frac{x}{c} &= \frac{y}{a} \\
+            \frac{w}{b} &= \frac{x}{c} \\
+          \end{align*}
 
-      The procedure is:
-      \begin{itemize*}
-        \item solve one of the equations for a variable you want to get rid of (anything other than $a$, $b$, or
-          $r$).
-        \item substitute the result into the other equations
-        \item repeat until you end up with an equation with $a$, $b$, and $r$
-        \item solve this equation for $r$
-      \end{itemize*}
+          The procedure is:
+          \begin{itemize*}
+            \item solve one of the equations for a variable you want to get rid of (anything other than $a$, $b$, or
+              $r$).
+            \item substitute the result into the other equations
+            \item repeat until you end up with an equation with $a$, $b$, and $r$
+            \item solve this equation for $r$
+          \end{itemize*}
 
-      Get rid of $w$
-      \begin{align*}
-        \frac{w}{b} & = \frac{x}{c} \\
-        w           & = \frac{xb}{c} \\
-        \\
-        \frac{z}{a} & = \frac{xb}{rc} \\
-      \end{align*}
+          Get rid of $w$
+          \begin{align*}
+            \frac{w}{b} & = \frac{x}{c} \\
+            w           & = \frac{xb}{c} \\
+            \\
+            \frac{z}{a} & = \frac{xb}{rc} \\
+          \end{align*}
 
-      The equations now are:
-      \begin{align*}
-        \frac{z}{a} & = \frac{x}{c + d} \\
-        \frac{x}{d} & = \frac{y}{r} \\
-        \frac{x}{c} & = \frac{y}{a} \\
-        \frac{z}{a} & = \frac{xb}{rc} \\
-      \end{align*}
+          The equations now are:
+          \begin{align*}
+            \frac{z}{a} & = \frac{x}{c + d} \\
+            \frac{x}{d} & = \frac{y}{r} \\
+            \frac{x}{c} & = \frac{y}{a} \\
+            \frac{z}{a} & = \frac{xb}{rc} \\
+          \end{align*}
 
-      Get rid of $z$:
-      \begin{align*}
-        \frac{z}{a}     & = \frac{xb}{rc} \\
-        z               & = \frac{abx}{rc} \\
-        \\
-        \frac{z}{a}     & = \frac{x}{c + d} \\
-        \frac{abx}{arc} & = \frac{x}{c + d} \\
-        \frac{b}{rc}    & = \frac{1}{c + d} \\
-      \end{align*}
+          Get rid of $z$:
+          \begin{align*}
+            \frac{z}{a}     & = \frac{xb}{rc} \\
+            z               & = \frac{abx}{rc} \\
+            \\
+            \frac{z}{a}     & = \frac{x}{c + d} \\
+            \frac{abx}{arc} & = \frac{x}{c + d} \\
+            \frac{b}{rc}    & = \frac{1}{c + d} \\
+          \end{align*}
 
-      The equations now are:
-      \begin{align*}
-        \frac{b}{rc} & = \frac{1}{c + d} \\
-        \frac{x}{d}  & = \frac{y}{r} \\
-        \frac{x}{c}  & = \frac{y}{a} \\
-      \end{align*}
+          The equations now are:
+          \begin{align*}
+            \frac{b}{rc} & = \frac{1}{c + d} \\
+            \frac{x}{d}  & = \frac{y}{r} \\
+            \frac{x}{c}  & = \frac{y}{a} \\
+          \end{align*}
 
-      Get rid of $d$:
-      \begin{align*}
-        \frac{x}{d}  & = \frac{y}{r} \\
-        d            & = \frac{xr}{y} \\
-        \\
-        \frac{b}{rc} & = \frac{1}{c + \sfrac{xr}{y}} \\
-        \frac{b}{rc} & = \frac{y}{yc + xr} \\
-      \end{align*}
+          Get rid of $d$:
+          \begin{align*}
+            \frac{x}{d}  & = \frac{y}{r} \\
+            d            & = \frac{xr}{y} \\
+            \\
+            \frac{b}{rc} & = \frac{1}{c + \sfrac{xr}{y}} \\
+            \frac{b}{rc} & = \frac{y}{yc + xr} \\
+          \end{align*}
 
-      The equations now are:
-      \begin{align*}
-        \frac{x}{c}  & = \frac{y}{a} \\
-        \frac{b}{rc} & = \frac{y}{yc + xr} \\
-      \end{align*}
+          The equations now are:
+          \begin{align*}
+            \frac{x}{c}  & = \frac{y}{a} \\
+            \frac{b}{rc} & = \frac{y}{yc + xr} \\
+          \end{align*}
 
-      Get rid of $y$:
-      \begin{align*}
-        \frac{x}{c}  & = \frac{y}{a} \\
-        y            & = \frac{xa}{c} \\
-        \\
-        \frac{b}{rc} & = \frac{y}{yc + xr} \\
-        \frac{b}{rc} & = \frac{xa}{c(xa + xr)} \\
-      \end{align*}
+          Get rid of $y$:
+          \begin{align*}
+            \frac{x}{c}  & = \frac{y}{a} \\
+            y            & = \frac{xa}{c} \\
+            \\
+            \frac{b}{rc} & = \frac{y}{yc + xr} \\
+            \frac{b}{rc} & = \frac{xa}{c(xa + xr)} \\
+          \end{align*}
 
-      $x$ and $c$ both cancel:
-      \begin{align*}
-        \frac{b}{rc} & = \frac{xa}{c(xa + xr)} \\
-        \frac{b}{r} & = \frac{xa}{x(a + r)} \\
-        \frac{b}{r}  & = \frac{a}{a + r} \\
-      \end{align*}
+          $x$ and $c$ both cancel:
+          \begin{align*}
+            \frac{b}{rc} & = \frac{xa}{c(xa + xr)} \\
+            \frac{b}{r} & = \frac{xa}{x(a + r)} \\
+            \frac{b}{r}  & = \frac{a}{a + r} \\
+          \end{align*}
 
-      solve for $r$:
-      \begin{align*}
-        \frac{b}{r} & = \frac{a}{a + r} \\
-        b(a + r)    & = ra \\
-        ab + rb     & = ra \\
-        ra - rb     & = ab \\
-        r           & = \frac{ab}{a - b} \\
-      \end{align*}
+          solve for $r$:
+          \begin{align*}
+            \frac{b}{r} & = \frac{a}{a + r} \\
+            b(a + r)    & = ra \\
+            ab + rb     & = ra \\
+            ra - rb     & = ab \\
+            r           & = \frac{ab}{a - b} \\
+          \end{align*}
+
+        \part
+          \[
+            r = \frac{4 \cdot 3}{4 - 3} = \boxed{ \unit[12]{cm} }
+          \]
+
+        \part
+          If the radii are nearly equal, the radius becomes a very large number.  The side of a circle with a vary large
+          radius is nearly a plane.
+
+    \end{parts}
   \end{description}
 
   \fi
@@ -161,7 +175,7 @@
       \begin{solution}
         Find the velocity in inches per minute:
         \[
-          v = \frac{\unit[15]{miles}}{\unit[1]{hr}} = \unit[15,840]{in/minute}
+          v = \unit[15]{mph} = \unit[15,840]{in/minute}
         \]
 
         The circumference of the wheel is:
@@ -171,10 +185,14 @@
 
         The RPM is:
         \[
-          \frac{15,840}{81.68} \approx \unit[193.9]{rpm}
+          \frac{15,840}{81.68} \approx \unit[194]{rpm}
         \]
 
       \end{solution}
+
+      \ifprintanswers
+        \pagebreak
+      \fi
 
     \item Find an equation for this graph:
       \begin{figure}[h]
@@ -232,7 +250,7 @@
       \item[6] 
         \begin{align*}
           \frac{\sin 102 \dg}{185} & = \frac{\sin 50 \dg}{x} \\
-          x                        & \approx \boxed{ 144.9 } \\
+          x                        & \approx \boxed{ 144.88 } \\
         \end{align*}
 
       \item[7] 
@@ -247,10 +265,10 @@
       \item[8] 
         \begin{align*}
           \frac{\sin 50 \dg}{2} & = \frac{\sin 30 \dg}{a} \\
-          a                       & \approx \boxed{ 1.305 } \\
+          a                       & \approx \boxed{ 1.31 } \\
           \\
           \frac{\sin 50 \dg}{2} & = \frac{\sin 100 \dg}{c} \\
-          c                       & \approx \boxed{ 2.571 } \\
+          c                       & \approx \boxed{ 2.57 } \\
         \end{align*}
 
       \item[11] 
@@ -276,7 +294,7 @@
           \frac{\sin 110 \dg}{28} & = \frac{\sin B}{15} \\
           B                       & \approx \boxed{ 30.2 \dg } \\
           \\
-          C & = 180 \dg - 110 \dg - 30 \dg \\
+          C & = 180 \dg - 110 \dg - 30.2 \dg \\
             & = \boxed{ 39.8 \dg } \\
           \\
           \frac{\sin 110 \dg}{28} & = \frac{\sin 40 \dg}{c} \\
@@ -321,7 +339,7 @@
           \frac{\sin 38 \dg}{42} & = \frac{\sin B}{45} \\
           B                      & \approx \boxed{ 41.3 \dg } \\
           \\
-          C & = 180 \dg - 38 \dg - 41.3 \dg  \\
+          A & = 180 \dg - 38 \dg - 41.3 \dg  \\
             & = \boxed{ 100.7 \dg } \\ 
           \\
           \frac{\sin 38 \dg}{42} & = \frac{\sin 100.7 \dg}{a} \\
@@ -332,7 +350,7 @@
         \begin{align*}
           B & \approx 180 \dg - 41.3 \dg = 138.7 \dg \\
           \\
-          C & = 180 \dg - 38 \dg - 138.7 \dg  \\
+          A & = 180 \dg - 38 \dg - 138.7 \dg  \\
             & = \boxed{ 3.3 \dg } \\ 
           \\
           \frac{\sin 38 \dg}{42} & = \frac{\sin 3.3 \dg}{a} \\
@@ -523,14 +541,15 @@
       \pagebreak
 
       \item[36] 
+        Find the angle the longer wire makes with the ground:
         \begin{align*}
-          \frac{\sin C}{165} & = \frac{\sin 113 \dg}{180} \\
+          \frac{\sin C}{165} & = \frac{\sin 67 \dg}{180} \\
           C                  & \approx 57.54 \dg \\
           \\
-          B & \approx 180 \dg - 113 \dg - 57.54 \dg = 9.46 \dg \\
+          B & \approx 180 \dg - 67 \dg - 57.54 \dg = 55.5 \dg \\
           \\
-          \frac{\sin 9.46 \dg}{b} & = \frac{\sin 113 \dg}{180} \\
-          b                       & \approx \boxed{ \unit[32.13]{ft} } \\
+          \frac{\sin 55.5 \dg}{b} & = \frac{\sin 113 \dg}{180} \\
+          b                       & \approx \boxed{\unit[161.1]{ft}} \\
         \end{align*}
 
       \item[37] 
