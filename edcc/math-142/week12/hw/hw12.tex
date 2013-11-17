@@ -14,11 +14,12 @@
 \usepackage{comment}
 \usepackage{enumerate}
 \usepackage{xfrac}
+\usepackage{parskip}
 
 \newcommand{\dg}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
-\printanswers
+% \printanswers
 \excludecomment{comment}
 
 \ifprintanswers 
@@ -26,7 +27,7 @@
 \fi
 
 \author{}
-\date{\today}
+\date{December 10, 2014}
 \title{Math 142 \\ Homework Twelve}
 
 \begin{document}
@@ -34,13 +35,41 @@
   \maketitle
 
   \section{Homework}
-  Section 7.1: 
+  Section 7.1: 1-14, 20-24, 30-34, 40-44, 50-54, 60-64, 70-74, 80-86, 89-92
+
+  For problem 83, use the {\em Sum of Two Cubes} formula from the front cover.
 
   \section{Extra Credit}
-  Section 7.1: 
+  Section 7.1: 87-88
 
   \ifprintanswers
     \pagebreak
+    \begin{enumerate}
+
+      \item[87] 
+        \begin{align*}
+          (\tan x + \cot x)^4 & = \left[ (\tan x + \cot x)^2 \right]^2 \\
+                              & = \left( \tan^2 x + 2 \tan x \cot x + \cot^2 x \right)^2 \\
+                              & = \left( \tan^2 x + 2 + \cot^2 x \right)^2 \\
+                              & = \left( \sec^2 x - 1 + 2 + \csc^2 x - 1 \right)^2 \\
+                              & = \left( \sec^2 x + \csc^2 x \right)^2 \\
+                              & = \left( \frac{1}{\cos^2 x} + \frac{1}{\sin^2 x} \right)^2 \\
+                              & = \left( \frac{\sin^2 x + \cos^2 x}{\sin^2 x \cos^2 x} \right)^2 \\
+                              & = \left( \frac{1}{\sin^2 x \cos^2 x} \right)^2 \\
+                              & = \csc^4 x \sec^4 x \\
+        \end{align*}
+
+      \item[88] 
+        \begin{align*}
+          (\sin x & - \tan x)(\cos x - \cot x) \\
+                  & = \sin x \cos x - \sin x \cot x - \cos x \tan x + \tan x \cot x \\
+                  & = \sin x \cos x - \sin x \cdot \frac{\cos x}{\sin x} - \cos x \cdot \frac{\sin x}{\cos x} + 1  \\
+                  & = \sin x \cos x - \sin x - \cos x + 1  \\
+                  & = \sin x(\cos x - 1) - (\cos x - 1) \\
+                  & = (\sin x - 1)(\cos x - 1)
+        \end{align*}
+
+    \end{enumerate}
   \fi
 
   \section{Review}
@@ -180,37 +209,38 @@
                                          & = \boxed{ 1 - \sin x } \\
         \end{align*}
 
-      \item[25] 
-        \begin{align*}
-          \frac{\sin \theta}{\tan \theta} & = \sin \theta \cdot \frac{\cos \theta}{\sin \theta} \\
-                                          & = \cos \theta \\
-        \end{align*}
 
-      \item[26] 
-        \begin{align*}
-          \frac{\tan \theta}{\sec \theta} & = \frac{\sin \theta}{\cos \theta} \cdot \cos \theta \\
-                                          & = \sin \theta \\
-        \end{align*}
+      % \item[25] 
+      %   \begin{align*}
+      %     \frac{\sin \theta}{\tan \theta} & = \sin \theta \cdot \frac{\cos \theta}{\sin \theta} \\
+      %                                     & = \cos \theta \\
+      %   \end{align*}
 
-      \item[27] 
-        \begin{align*}
-          \frac{\cos u \sec u}{\tan u} & = \frac{\cos u \cdot \sfrac{1}{\cos u}}{\tan u} \\
-                                       & = \frac{1}{\tan u} \\
-                                       & = \cot u \\
-        \end{align*}
+      % \item[26] 
+      %   \begin{align*}
+      %     \frac{\tan \theta}{\sec \theta} & = \frac{\sin \theta}{\cos \theta} \cdot \cos \theta \\
+      %                                     & = \sin \theta \\
+      %   \end{align*}
 
-      \item[28] 
-        \begin{align*}
-          \frac{\cot x \sec x}{\csc x} & = \frac{\cos x}{\sin x} \cdot \frac{1}{\cos} \cdot \sin x \\
-                                       & = 1 \\
-        \end{align*}
+      % \item[27] 
+      %   \begin{align*}
+      %     \frac{\cos u \sec u}{\tan u} & = \frac{\cos u \cdot \sfrac{1}{\cos u}}{\tan u} \\
+      %                                  & = \frac{1}{\tan u} \\
+      %                                  & = \cot u \\
+      %   \end{align*}
 
-      \item[29] 
-        \begin{align*}
-          \frac{\tan y}{\csc y} & = \frac{\sin^2 y}{\cos y} \\
-                                & = \frac{1 - \cos^2 y}{\cos y} \\
-                                & = \sec y - \cos y \\
-        \end{align*}
+      % \item[28] 
+      %   \begin{align*}
+      %     \frac{\cot x \sec x}{\csc x} & = \frac{\cos x}{\sin x} \cdot \frac{1}{\cos} \cdot \sin x \\
+      %                                  & = 1 \\
+      %   \end{align*}
+
+      % \item[29] 
+      %   \begin{align*}
+      %     \frac{\tan y}{\csc y} & = \frac{\sin^2 y}{\cos y} \\
+      %                           & = \frac{1 - \cos^2 y}{\cos y} \\
+      %                           & = \sec y - \cos y \\
+      %   \end{align*}
 
       \item[30] 
         \begin{align*}
@@ -378,6 +408,130 @@
                                                 & = \frac{\tan v - \sin v}{\tan v \sin v } \\
         \end{align*}
 
+      \item[71] 
+        \begin{align*}
+          \sec^4 x - \tan^4 x & = (\sec^2 x + \tan^2 x)(\sec^2 x - \tan^2 x) \\
+                              & = \sec^2 x + \tan^2 x \\
+        \end{align*}
+
+      \item[72] 
+        \begin{align*}
+          \frac{\cos \theta}{1 - \sin \theta} & = \frac{\cos \theta}{1 - \sin \theta} \cdot \frac{1 + \sin \theta}{1 + \sin \theta} \\
+                                              & = \frac{\cos \theta (1 + \sin \theta)}{1 - \sin^2 \theta} \\
+                                              & = \frac{\cos \theta (1 + \sin \theta)}{\cos^2 \theta} \\
+                                              & = \frac{1 + \sin \theta}{\cos \theta} \\
+                                              & = \sec \theta + \tan \theta \\
+        \end{align*}
+
+      \item[73] 
+        \begin{align*}
+          \frac{\sin \theta - \csc \theta}{\cos \theta - \cot \theta} & = \frac{\sin \theta - \sfrac{1}{\sin \theta}}{\cos \theta - \sfrac{\cos \theta}{\sin \theta}} \\
+            & = \frac{\sfrac{ \left( \sin^2 \theta - 1 \right) }{\sin \theta}}{\sfrac{ (\sin \theta \cos \theta - \cos \theta) }{\sin \theta}} \\
+            & = \frac{\sin^2 \theta - 1}{\sin \theta \cos \theta - \cos \theta} \\
+            & = \frac{- \cos^2 \theta}{\sin \theta \cos \theta - \cos \theta} \\
+            & = \frac{\cos^2 \theta}{\cos \theta - \sin \theta \cos \theta} \\
+            & = \frac{\cos \theta}{1 - \sin \theta} \\
+        \end{align*}
+
+      \item[74] 
+        \begin{align*}
+          \frac{1 + \tan x}{1 - \tan x} & = \frac{1 + \sfrac{\sin x}{\cos x}}{1 - \sfrac{\sin x}{\cos x}} \\
+                                        & = \frac{\sfrac{ (\cos x + \sin x) }{\cos x}}{\sfrac{ (\cos x - \sin x) }{\cos x}} \\
+                                        & = \frac{\cos x + \sin x}{\cos x - \sin x} \\
+        \end{align*}
+
+      \item[80] 
+        \begin{align*}
+          \tan^2 x - \cot^2 x & = \left( 1 + \sec^2 x \right) - \left( 1 + \csc^2 x \right) \\
+                              & = 1 + \sec^2 x - 1 - \csc^2 x \\
+                              & = \sec^2 x - \csc^2 x \\
+        \end{align*}
+
+      \item[81] 
+        \begin{align*}
+          \frac{\sec x - 1}{\sec x + 1} & = \frac{\sfrac{1}{\cos x} - 1}{\sfrac{1}{\cos x} + 1} \\
+                                        & = \frac{\sfrac{1}{\cos x} - 1}{\sfrac{1}{\cos x} + 1} \cdot \frac{\cos x}{\cos x} \\
+                                        & = \frac{1 - \cos x}{1 + \cos x} \\
+        \end{align*}
+
+      \item[81] 
+        \begin{align*}
+          \frac{\cot x - 1}{\cot x + 1} & = \frac{\sfrac{\cos x}{\sin x} - 1}{\sfrac{\cos x}{\sin x} + 1} \\
+                                        & = \frac{\sfrac{( \cos x - \sin x )}{\sin x}}{\sfrac{( \cos x + \sin x )}{\sin x}} \\
+                                        & = \frac{\cos x - \sin x}{\cos x + \sin x} \\
+                                        & = \frac{\sfrac{( \cos x - \sin x )}{\cos x}}{\sfrac{( \cos x + \sin x )}{\cos x}} \\
+                                        & = \frac{1 - \tan x}{1 + \tan x} \\
+        \end{align*}
+
+      \item[82] 
+        \begin{align*}
+          \frac{\cot x - 1}{\cot x + 1} & = \frac{\sfrac{\cos x}{\sin x} - 1}{\sfrac{\cos x}{\sin x} + 1} \\
+                                        & = \frac{\sfrac{( \cos x - \sin x )}{\sin x}}{\sfrac{( \cos x + \sin x )}{\sin x}} \\
+                                        & = \frac{\cos x - \sin x}{\cos x + \sin x} \\
+                                        & = \frac{\sfrac{( \cos x - \sin x )}{\cos x}}{\sfrac{( \cos x + \sin x )}{\cos x}} \\
+                                        & = \frac{1 - \tan x}{1 + \tan x} \\
+        \end{align*}
+
+      \item[83] 
+        Use the {\em Sum of Two Cubes} formula from the front cover:
+        \begin{align*}
+          \frac{\sin^3 x + \cos^3 x}{\sin x + \cos x} & = \frac{(\sin x + \cos x) \left( \sin^2 x - \sin x \cos x + \cos^2 x \right)}{\sin x + \cos x} \\
+                                                      & = \sin^2 x + \cos^2 x - \sin x \cos x  \\
+                                                      & = 1 - \sin x \cos x  \\
+        \end{align*}
+
+      \item[84] 
+        \begin{align*}
+          \frac{\tan v - \cot v}{\tan^2 v - \cot^2 v} & = \frac{\tan v - \cot v}{( \tan v - \cot v )( \tan v + \cot v )} \\
+                                                      & = \frac{1}{\tan v + \cot v} \\
+                                                      & = \frac{1}{\sfrac{\sin v}{\cos v} + \sfrac{\cos v}{\sin v}} \\
+                                                      & = \frac{1}{\sfrac{\left( \sin^2 v + \cos^2 v \right)}{\sin v \cos v}} \\
+                                                      & = \frac{\sin v \cos v}{\sin^2 v + \cos^2 v} \\
+                                                      & = \sin v \cos v \\
+        \end{align*}
+
+      \item[85] 
+        \begin{align*}
+          \frac{1 + \sin x}{1 - \sin x} & = \frac{1 + \sin x}{1 - \sin x} \cdot \frac{1 + \sin x}{1 + \sin x} \\
+                                        & = \frac{1 + 2 \sin x + \sin^2 x}{1 - \sin^2 x} \\
+                                        & = \frac{1 + 2 \sin x + \sin^2 x}{\cos^2 x} \\
+                                        & = \sec^2 x + 2 \sec x \tan x + \tan^2 x \\
+                                        & = (\sec x + \tan x)^2 \\
+        \end{align*}
+
+      \item[86] 
+        \begin{align*}
+          \frac{\tan x + \tan y}{\cot x + \cot y} & = \frac{\sfrac{\sin x}{\cos x} + \sfrac{\sin y}{\cos y}}{\sfrac{\cos x}{\sin x} + \sfrac{\cos y}{\sin y}} \\
+                                                  & = \frac{\sin x \cos y + \sin y \cos x}{\cos x \cos y} \cdot \frac{\sin x \sin y}{\sin y \cos x + \cos y \sin x} \\
+                                                  & = \tan x \tan y \\
+        \end{align*}
+
+      \item[89] 
+        \begin{align*}
+          \frac{\sin \theta}{\sqrt{1 - \sin^2 \theta}} & = \frac{\sin \theta}{\sqrt{\cos^2 \theta}} \\
+                                                       & = \frac{\sin \theta}{\cos \theta} \\
+                                                       & = \tan \theta \\
+        \end{align*}
+
+      \item[90] 
+        \begin{align*}
+          \sqrt{1 + \tan^2 \theta} & = \sqrt{\sec^2 \theta} \\
+                                   & = \sec \theta \\
+        \end{align*}
+
+      \item[91] 
+        \begin{align*}
+          \sqrt{\sec^2 \theta - 1} & = \sqrt{\tan^2 \theta} \\
+                                   & = \tan \theta \\
+        \end{align*}
+
+      \item[92] 
+        \begin{align*}
+          \frac{1}{4 \tan^2 \theta \sqrt{4 + 4 \tan^2 \theta}} & = \frac{1}{8 \tan^2 \theta \sqrt{1 + \tan^2 \theta}} \\
+                                                               & = \frac{1}{8 \tan^2 \theta \sqrt{\sec^2 \theta}} \\
+                                                               & = \frac{1}{8 \tan^2 \theta \sec \theta} \\
+        \end{align*}
+
     \end{description}
 
   \else
@@ -385,11 +539,14 @@
 
     \begin{quote}
       \begin{em}
-        Our inventions are wont to be pretty toys, which distract our attention from serious things. They are but
-        improved means to an unimproved end, an end which it was already but too easy to arrive at.
+        Then we were down at the harbor, driving past the boats.  Most of them were sailboats and people were fiddling
+        about on deck.  They were dressed in their special sailing clothes, caps, dark shades.  Somehow, most of them
+        had apparently escaped the daily grind of living.  They had never been caught up in that grind and never would
+        be.  Such were the rewards of the Chosen in the land of the free.  After a fashion, these people looked silly to
+        me.  And, of course, I wasn't even in their thoughts.
       \end{em}
     \end{quote}
-    \hspace{1 cm} --Henry David Thoreau
+    \hspace{1 cm} --Charles Bukowski (from {\em Hollywood})
   \fi
 
 \end{document}
