@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      3027,         93]
-NotebookOptionsPosition[      2595,         72]
-NotebookOutlinePosition[      2950,         88]
-CellTagsIndexPosition[      2907,         85]
+NotebookDataLength[      3191,         99]
+NotebookOptionsPosition[      2758,         78]
+NotebookOutlinePosition[      3113,         94]
+CellTagsIndexPosition[      3070,         91]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,10 +23,13 @@ Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"Simplify", "[", 
   RowBox[{
-   RowBox[{"Cos", "[", "x", "]"}], "/", 
    RowBox[{"(", 
-    RowBox[{"1", "+", 
-     RowBox[{"Tan", "[", "x", "]"}]}], ")"}]}], "]"}]], "Input",
+    RowBox[{
+     RowBox[{
+      RowBox[{"Sec", "[", "x", "]"}], "^", "2"}], "+", 
+     RowBox[{
+      RowBox[{"Csc", "[", "x", "]"}], "^", "2"}]}], ")"}], "^", "2"}], 
+  "]"}]], "Input",
  CellChangeTimes->{{3.5933023978301287`*^9, 3.593302421201358*^9}, {
   3.593302456284582*^9, 3.5933024700949087`*^9}, {3.593302585609125*^9, 
   3.593302600469751*^9}, {3.593302671231193*^9, 3.593302679884616*^9}, {
@@ -37,20 +40,23 @@ Cell[BoxData[
   3.593600550700408*^9, 3.593600556930787*^9}, {3.593600703508473*^9, 
   3.593600722865336*^9}, {3.59360083797885*^9, 3.593600846016027*^9}, {
   3.593600933463765*^9, 3.593600945150344*^9}, {3.5936011649180613`*^9, 
-  3.593601174573107*^9}}],
+  3.593601174573107*^9}, {3.59369256696028*^9, 3.5936925927639713`*^9}}],
 
 Cell[BoxData[
  FormBox[
-  FractionBox[
-   RowBox[{"cos", "(", "x", ")"}], 
+  RowBox[{
    RowBox[{
-    RowBox[{"tan", "(", "x", ")"}], "+", "1"}]], TraditionalForm]], "Output",
+    SuperscriptBox["csc", "4"], "(", "x", ")"}], " ", 
+   RowBox[{
+    SuperscriptBox["sec", "4"], "(", "x", ")"}]}], TraditionalForm]], "Output",\
+
  CellChangeTimes->{{3.593302414216667*^9, 3.593302421743926*^9}, {
    3.593302459717553*^9, 3.593302470500794*^9}, 3.593302601336153*^9, 
    3.593302680380396*^9, 3.593303064335671*^9, 3.59330330553344*^9, 
    3.5933035153605223`*^9, 3.5933036219588833`*^9, 3.593303810370226*^9, 
    3.593600381169284*^9, 3.5936005573809223`*^9, 3.5936007234778223`*^9, 
-   3.593600846485564*^9, 3.5936009456460323`*^9, 3.593601175012886*^9}]
+   3.593600846485564*^9, 3.5936009456460323`*^9, 3.593601175012886*^9, 
+   3.593692593190984*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -88,12 +94,12 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 950, 17, 28, "Input"],
-Cell[1532, 41, 591, 11, 84, "Output"]
+Cell[579, 22, 1056, 20, 28, "Input"],
+Cell[1638, 44, 648, 14, 67, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2160, 57, 264, 7, 28, "Input"],
-Cell[2427, 66, 152, 3, 28, "Output"]
+Cell[2323, 63, 264, 7, 28, "Input"],
+Cell[2590, 72, 152, 3, 28, "Output"]
 }, Open  ]]
 }
 ]
