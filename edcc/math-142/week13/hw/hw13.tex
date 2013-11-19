@@ -225,7 +225,46 @@
       \item[33] 
         \begin{align*}
           \cot(x - y) & = \frac{1}{\tan(x - y)} \\
-          % &= \frac{1 + tt x tt y}{tt x - tt y} \\
+                      & = \frac{1 + \tan x \tan y}{\tan x - \tan y} \cdot \frac{\sfrac{1}{\tan x \tan y}}{\sfrac{1}{\tan x \tan y}} \\
+                      & = \frac{\cot x \cot y + 1}{\cot y - \cot x} \\
+        \end{align*}
+
+      \item[34] 
+        \begin{align*}
+          \cot(x + y) & = \frac{1}{\tan(x + y)} \\
+                      & = \frac{1 - \tan x \tan y}{\tan x + \tan y} \cdot \frac{\sfrac{1}{\tan x \tan y}}{\sfrac{1}{\tan x \tan y}} \\
+                      & = \frac{\cot x \cot y - 1}{\cot x + \cot y} \\
+        \end{align*}
+
+      \item[35] 
+        \begin{align*}
+          \frac{\sin(x - y)}{\cos x \cos y} & = \frac{\sin x \cos y - \cos x \sin y}{\cos x \cos y} \\
+                                            & = \tan x - \tan y \\
+        \end{align*}
+
+      \item[36] 
+        \begin{align*}
+          \frac{\cos(x + y)}{\cos x \cos y} & = \frac{\cos x \cos y - \sin x \sin y}{\cos x \cos y} \\
+                                            & = 1 - \tan x \tan y \\
+        \end{align*}
+
+      \item[37] 
+        \begin{align*}
+          & \frac{\sin(x + y) - \sin(x - y)}{\cos(x + y) + \cos(x - y)} \\
+          & = \frac{(\sin x \cos y + \cos x \sin y) - (\sin x \cos y - \cos x \sin y)}{(\cos x \cos y - \sin x \sin y) + (\cos x \cos y + \sin x \sin y)} \\
+          & = \frac{\sin x \cos y + \cos x \sin y - \sin x \cos y + \cos x \sin y}{\cos x \cos y - \sin x \sin y + \cos x \cos y + \sin x \sin y} \\
+          & = \frac{2 \cos x \sin y}{2 \cos x \cos y} \\
+          & = \tan y \\
+        \end{align*}
+
+      \item[38] 
+        \begin{align*}
+          \cos(x + y) \cos(x - y) & = ( \cos x \cos y - \sin x \sin y )( \cos x \cos y + \sin x \sin y ) \\
+                                  & = \cos^2 x \cos^2 y - \sin^2 x \sin^2 y \\
+                                  & = \cos^2 x \left( 1 - \sin^2 y \right) - \sin^2 x \sin^2 y \\
+                                  & = \cos^2 x - \cos^2 x \sin^2 y  - \sin^2 x \sin^2 y \\
+                                  & = \cos^2 x - \sin^2 y \left( \cos^2 x + \sin^2 x \right) \\
+                                  & = \cos^2 x - \sin^2 y \\
         \end{align*}
 
     \end{description}
