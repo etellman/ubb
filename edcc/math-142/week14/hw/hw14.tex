@@ -94,7 +94,7 @@
                    & = \left( \frac{1 - \cos 2x}{2} \right)^2 \\
                    & = \frac{1 - 2 \cos 2x + \cos^2 2x}{4} \\
                    &= \frac{1}{4} - \frac{\cos 2x}{2} + \frac{\cos^2 2x}{4} \\
-                   &= \frac{1}{4} - \frac{\cos 2x}{2} + \frac{1 + \cos 4x}{8} \\
+                   &= \boxed{ \frac{1}{4} - \frac{\cos 2x}{2} + \frac{1 + \cos 4x}{8} } \\
         \end{align*}
 
       \item[10]
@@ -103,7 +103,7 @@
                    & = \left( \frac{1 + \cos 2x}{2} \right)^2 \\
                    & = \frac{1 + 2 \cos 2x + \cos^2 2x}{4} \\
                    &= \frac{1}{4} + \frac{\cos 2x}{2} + \frac{\cos^2 2x}{4} \\
-                   &= \frac{1}{4} + \frac{\cos 2x}{2} + \frac{1 + \cos 4x}{8} \\
+                   &= \boxed{ \frac{1}{4} + \frac{\cos 2x}{2} + \frac{1 + \cos 4x}{8} } \\
         \end{align*}
 
       \item[11]
@@ -115,95 +115,251 @@
                             & = \frac{1}{8} \left( 1 - \frac{1 + \cos 4x}{2} - \cos 2x + \cos 2x \left( \frac{1 + \cos 4x}{2} \right) \right) \\
                             & = \frac{1}{8} \left( 1 - \frac{1}{2} - \frac{\cos 4x}{2} - \cos 2x + \frac{\cos 2x}{2} + \frac{\cos 2x \cos 4x}{2} \right) \\
                             & = \frac{1}{8} \left( \frac{1}{2} - \frac{\cos 2x}{2} - \frac{\cos 4x}{2} + \frac{\cos 2x \cos 4x}{2} \right) \\
-                            & = \frac{1}{16} ( 1 - \cos 2x - \cos 4x + \cos 2x \cos 4x ) \\
+                            & = \boxed{ \frac{1}{16} ( 1 - \cos 2x - \cos 4x + \cos 2x \cos 4x ) } \\
         \end{align*}
 
       \item[12]
         \begin{align*}
-          \cos^4 x \sin^2 x & = \left( \cos^2 x \right)^2 \sin^2 x \\
-                            & = \left( \frac{1 + \cos 2x}{2} \right) \left( \frac{1 + \cos 2x}{2} \right) \left( \frac{1 - \cos 2x}{2} \right) \\
-                            & = \left( \frac{1 + \cos 2x}{4} \right) \left( \frac{1 - \cos^2 2x}{2} \right) \\
-                            & = \frac{1}{8} \left( 1 - \cos^2 2x + \cos 2x - \cos^3 2x \right) \\
-                            & = \frac{1}{8} \left( 1 + \cos 2x - \frac{1 + \cos 4x}{2}  - \frac{\cos 2x}{2} \left( \frac{1 + \cos 4x}{2} \right) \right) \\
-                            & = \frac{1}{8} \left( 1 + \cos 2x - \frac{1}{2}  - \frac{\cos 4x}{2} - \frac{\cos 2x}{2} - \frac{\cos 2x \cos 4x}{2} \right) \\
-                            & = \frac{1}{8} \left( \frac{1}{2} + \frac{\cos 2x}{2} - \frac{\cos 4x}{2}  - \frac{\cos 2x \cos 4x}{2} \right) \\
-                            & = \frac{1}{16} \left( 1 + \cos 2x - \cos 4x  - \cos 2x \cos 4x \right) \\
+          \cos^4 x & \sin^2 x = \left( \cos^2 x \right)^2 \sin^2 x \\
+                   & = \left( \frac{1 + \cos 2x}{2} \right) \left( \frac{1 + \cos 2x}{2} \right) \left( \frac{1 - \cos 2x}{2} \right) \\
+                   & = \left( \frac{1 + \cos 2x}{4} \right) \left( \frac{1 - \cos^2 2x}{2} \right) \\
+                   & = \frac{1}{8} \left( 1 - \cos^2 2x + \cos 2x - \cos^3 2x \right) \\
+                   & = \frac{1}{8} \left( 1 + \cos 2x - \frac{1 + \cos 4x}{2}  - \frac{\cos 2x}{2} \left( \frac{1 + \cos 4x}{2} \right) \right) \\
+                   & = \frac{1}{8} \left( 1 + \cos 2x - \frac{1}{2}  - \frac{\cos 4x}{2} - \frac{\cos 2x}{2} - \frac{\cos 2x \cos 4x}{2} \right) \\
+                   & = \frac{1}{8} \left( \frac{1}{2} + \frac{\cos 2x}{2} - \frac{\cos 4x}{2}  - \frac{\cos 2x \cos 4x}{2} \right) \\
+                   & = \boxed{ \frac{1}{16} \left( 1 + \cos 2x - \cos 4x  - \cos 2x \cos 4x \right) } \\
         \end{align*}
 
       \item[13]
         \begin{align*}
-          \cos^4 x \sin^4 x & = \left( \frac{1 - \cos 2x}{2} \right)^2 \left( \frac{1 + \cos 2x}{2} \right)^2 \\
-                            & = \left( \frac{1 - \cos^2 2x}{4} \right)^2 \\
-                            % & = \left( \frac{1}{4} - \frac{\cos^2 2x}{4} \right)^2 \\
-                            & = \left( \frac{1}{4} - \frac{1 + \cos 4x}{8} \right)^2 \\
-                            & = \left( \frac{1}{8} - \frac{\cos 4x}{8} \right)^2 \\
-                            & = \frac{1}{64} \left( 1 - \cos 4x \right)^2 \\
-                            & = \frac{1}{64} \left( 1 - 2 \cos 4x + \cos^2 4x \right) \\
-                            & = \frac{1}{64} \left( 1 - 2 \cos 4x + \frac{1 + \cos 8x}{2} \right) \\
-                            % & = \frac{1}{64} \left( \frac{3}{2} - 2 \cos 4x + \frac{\cos 8x}{2} \right) \\
-                            & = \frac{1}{128} \left( 3 - 4 \cos 4x + \cos 8x \right) \\
+          \cos^4 x & \sin^4 x = \left( \frac{1 - \cos 2x}{2} \right)^2 \left( \frac{1 + \cos 2x}{2} \right)^2 \\
+                   & = \left( \frac{1 - \cos^2 2x}{4} \right)^2 \\
+                   & = \left( \frac{1}{8} - \frac{\cos 4x}{8} \right)^2 \\
+                   & = \frac{1}{64} \left( 1 - \cos 4x \right)^2 \\
+                   & = \frac{1}{64} \left( 1 - 2 \cos 4x + \cos^2 4x \right) \\
+                   & = \frac{1}{64} \left( 1 - 2 \cos 4x + \frac{1 + \cos 8x}{2} \right) \\
+                   & = \boxed{ \frac{1}{128} \left( 3 - 4 \cos 4x + \cos 8x \right) } \\
         \end{align*}
 
       \item[15]
         \begin{align*}
           \sin 15 \dg & = \sin \frac{30 \dg}{2} \\
-                      & = \sqrt{  \frac{1 - \sfrac{\sqrt{3}}{2}}{2} }
-                      & = \frac{1}{2} \sqrt{2 - \sqrt{3}} \\
+                      & = \sqrt{  \frac{1 - \sfrac{\sqrt{3}}{2}}{2} } \\
+                      & = \boxed{ \frac{1}{2} \sqrt{2 - \sqrt{3}} } \\
         \end{align*}
 
       \item[16]
         \begin{align*}
           \tan 15 \dg & = \tan \frac{30 \dg}{2} \\
                       & = \frac{ 1 - \sfrac{\sqrt{3}}{2} }{ \sfrac{1}{2} } \\
-                      & = 2 - \sqrt{3}
+                      & = \boxed{ 2 - \sqrt{3} } \\
         \end{align*}
 
       \item[17]
         \begin{align*}
           \tan 22.5 \dg & = \tan \frac{45 \dg}{2} \\
                         & = \frac{1 - \sfrac{\sqrt{2}}{2}}{\sfrac{\sqrt{2}}{2}} \\
-                        & = \sqrt{2} - 1 \\
+                        & = \boxed{ \sqrt{2} - 1 } \\
         \end{align*}
 
       \item[18]
         \begin{align*}
           \sin 75 \dg & = \sin \frac{150 \dg}{2} \\
                       & = \sqrt{ \frac{1 - (\sfrac{\sqrt{3}}{2})}{2} } \\
-                      & = \frac{1}{2} \sqrt{2 + \sqrt{3}} \\
+                      & = \boxed{ \frac{1}{2} \sqrt{2 + \sqrt{3}} } \\
         \end{align*}
 
       \item[19]
-        Since $165 \dg$ is in Q-II, $\cos 165 dg < 0$
+        Since $165 \dg$ is in Q-II, $\cos 165 \dg < 0$
         \begin{align*}
           \cos 165 \dg & = - \cos \frac{330 \dg}{2}  \\
                        & = - \sqrt{ \frac{1 + \sfrac{\sqrt{3}}{2}}{2} } \\
-                       & = - \frac{1}{2} \sqrt{ 2 + \sqrt{3} } \\
+                       & = \boxed{ - \frac{1}{2} \sqrt{ 2 + \sqrt{3} } } \\
         \end{align*}
 
       \item[23]
         \begin{align*}
           \cos \frac{\pi}{12} & = \cos \frac{\sfrac{\pi}{6}}{2} \\
                               & = \sqrt{ \frac{1 + \sfrac{\sqrt{3}}{2}} {2} } \\
-                              & = \frac{1}{2} \sqrt{2 + \sqrt{3}} \\
+                              & = \boxed{ \frac{1}{2} \sqrt{2 + \sqrt{3}} } \\
         \end{align*}
 
       \item[24]
-        \[
-          \tan \frac{5 \pi}{12} = \tan \frac{\sfrac{5 \pi}{6}}{2} = 2 + \sqrt{3}
-        \]
-
-      \item[25]
         \begin{align*}
-          \sin \frac{9 \pi}{8} & = \sin \frac{\sfrac{9 \pi}{4}}{2} \\
-                               & = \pm \sqrt{ \frac{1 - \sfrac{1}{\sqrt{2}}}{2} } \\
-                               % & = \pm \sqrt{ \frac{2 - \sqrt{2}}{4} } \\
-                               & = \pm \frac{1}{2} \sqrt{ 2 - \sqrt{2} } \\
+          \tan \frac{5 \pi}{12} & = \tan \frac{\sfrac{5 \pi}{6}}{2} \\
+                                & = \frac{ 1 - \left( - \sfrac{\sqrt{3}}{2} \right) }{\sfrac{1}{2}} \\
+                                & = \boxed{ 2 + \sqrt{3} } \\
         \end{align*}
 
-        Since $\frac{9 \pi}{8}$ is in Q-III:
+      \item[25]
+        Since $\sfrac{9 \pi}{8}$ is in Q-III, $\sin \sfrac{9 \pi}{8} < 0$.
+        \begin{align*}
+          \sin \frac{9 \pi}{8} & = \sin \frac{\sfrac{9 \pi}{4}}{2} \\
+                               & = - \sqrt{ \frac{1 - \sfrac{1}{\sqrt{2}}}{2} } \\
+                               & = \boxed{ - \frac{1}{2} \sqrt{ 2 - \sqrt{2} } } \\
+        \end{align*}
+
+      \item[26]
+        Since $\sfrac{11 \pi}{12}$ is in Q-II, $\sin \sfrac{11 \pi}{12} > 0$.
+        \begin{align*}
+          \sin \frac{11 \pi}{12} & = \sin \frac{\sfrac{11 \pi}{6}}{2} \\
+                                 & = \sqrt{ \frac{1 - \sfrac{\sqrt{3}}{\sqrt{2}}}{2} } \\
+                                 & = \boxed{ \frac{1}{2} \sqrt{ 2 - \sqrt{3} } } \\
+        \end{align*}
+
+      \item[27]
+        \begin{parts}
+          \part 
+            \[
+              2 \sin 18 \dg \cos 18 \dg = \boxed{ \sin 36 \dg }
+            \]
+
+          \part 
+            \[
+              2 \sin 3 \theta \cos 3 \theta = \boxed{ \sin 6 \theta }
+            \]
+        \end{parts}
+
+      \item[28]
+        \begin{parts}
+          \part 
+            \[
+              \frac{2 \tan 7 \dg}{1 - \tan^2 7 \dg} = \boxed{ \tan 14 \dg }
+            \]
+
+          \part 
+            \[
+              \frac{2 \tan 7 \theta}{1 - \tan^2 7 \theta} = \boxed{ \tan 14 \theta }
+            \]
+        \end{parts}
+
+      \item[29]
+        \begin{parts}
+          \part 
+            \[
+              \cos^2 34 \dg - \sin^2 34 \dg = \boxed{ \cos 68 \dg }
+            \]
+
+          \part 
+            \[
+              \cos^2 5 \theta  - \sin^2 5 \theta = \boxed{ \cos 10 \theta }
+            \]
+        \end{parts}
+
+      \item[30]
+        \begin{parts}
+          \part 
+            \[
+              \cos^2 \frac{\theta}{2}  - \sin^2 \frac{\theta}{2} = \boxed{ \cos \theta }
+            \]
+
+            \[
+              2 \sin \frac{\theta}{2} \cos \frac{\theta}{2} = \boxed{ \sin \theta }
+            \]
+        \end{parts}
+
+      \item[41]
         \[
-          \sin \frac{9 \pi}{8} = - \frac{1}{2} \sqrt{ 2 - \sqrt{2} } 
+          \sin 2x \cos 3x = \boxed{ \frac{1}{2} \left[ \sin 5x - \sin x \right] }
         \]
+
+      \item[42]
+        \[
+          \sin x \sin 5x = \boxed{ \frac{1}{2} \left[ \cos 4x - \cos 6x \right] }
+        \]
+
+      \item[43]
+        \[
+          \sin 4x \cos x = \boxed{ \frac{1}{2} \left[ \sin 5x + \sin 3x \right] } 
+        \]
+
+      \item[44]
+        \[
+          \cos 5x \cos 3x = \boxed{ \frac{1}{2} \left[ \cos 8x + \cos 2x \right] } 
+        \]
+
+      \item[45]
+        \[
+          3 \cos 4x \cos 7x = \boxed{ \frac{3}{2} \left[ \cos 11x + \cos 3x \right] } 
+        \]
+
+      \item[46]
+        \[
+          11 \sin \frac{x}{2} \cos \frac{x}{4} = \boxed{ \frac{11}{2} \left[ \cos \frac{3x}{4} + \cos \frac{x}{4} \right] } 
+        \]
+
+      \item[47]
+        \begin{align*}
+          \sin 5x + \sin 3x & = 2 \sin \frac{5x + 3x}{2} \cos \frac{5x - 3x}{2} \\
+                            & = \boxed{ 2 \sin 4x \cos x } \\
+        \end{align*}
+
+      \item[48]
+        \begin{align*}
+          \sin x - \sin 4x & = 2 \cos \frac{x + 4x}{2} \sin \frac{x - 4x}{2} \\
+                           & = - 2 \cos \frac{5x}{2} \sin \left( -\frac{3x}{2} \right) \\
+                           & = \boxed{ 2 \cos \frac{5x}{2} \sin \frac{3x}{2} } \\
+        \end{align*}
+
+      \item[49]
+        \begin{align*}
+          \cos 4x - \cos 6x & = - 2 \sin \frac{4x + 6x}{2} \sin \frac{4x - 6x}{2} \\
+                            & = -2 \sin 5x \sin (-x) \\
+                            & = \boxed{ 2 \sin 5x \sin x } \\
+        \end{align*}
+
+      \item[50]
+        \begin{align*}
+          \cos 9x + \cos 2x & = 2 \cos \frac{9x + 2x}{2} \cos \frac{9x - 2x}{2} \\
+                            & = \boxed{ 2 \cos \frac{11x}{2} \cos \frac{7x}{2} } \\
+        \end{align*}
+
+      \item[61]
+        \begin{align*}
+          (\sin x + \cos x)^2 & = \sin^2 x + 2 \sin x \cos x + \cos^2 x \\
+                              & = 1 + 2 \sin x \cos x \\
+                              & = 1 + \sin 2x \\
+        \end{align*}
+
+      \item[62]
+        \begin{align*}
+          \frac{2 \tan x}{1 + \tan^2 x} & = \frac{2 \sfrac{\sin x}{\cos x}}{1 + \sfrac{\sin^2 x}{\cos^2 x}} \\
+                                        & = \frac{2 \sin x \cos x}{\cos^2 x + \sin^x x} \\
+                                        & = 2 \sin x \cos x \\
+                                        & = \sin 2x \\
+        \end{align*}
+
+      \item[63]
+        \begin{align*}
+          \frac{\sin 4x}{\sin x} & = \frac{2 \sin 2x \cos 2x}{\sin x} \\
+                                 & = \frac{4 \sin x \cos x \cos 2x}{\sin x} \\
+                                 & = 4 \cos x \cos 2x \\
+        \end{align*}
+
+      \item[64]
+        \begin{align*}
+          \frac{1 + \sin 2x}{\sin 2x} & = \frac{1}{\sin 2x} + 1 \\
+                                      & = 1 + \frac{1}{2 \sin x \cos x} \\
+                                      & = 1 + \frac{1}{2} \sec x \csc x \\
+        \end{align*}
+
+      \item[70]
+        \begin{align*}
+          \cos \left( x + \frac{\pi}{2} \right) & = \cos x \cos \frac{\pi}{2} - \sin x \sin \frac{\pi}{2} \\
+                                                & = - \sin x \\
+          \\
+          \tan^2 \left( \frac{x}{2} + \frac{\pi}{4} \right) 
+            &= \frac{1 - \cos \left( x + \sfrac{\pi}{2} \right)}{1 + \cos \left( x + \sfrac{\pi}{2} \right)} \\
+            &= \frac{1 - (- \sin x)}{1 + (- \sin x)} \\
+            &= \frac{1 + \sin x}{1 - \sin x} \\
+        \end{align*}
+
+      \item[71]
+        \begin{align*}
+          \frac{\sin x + \sin 5x}{\cos x + \cos 5x} & = \frac{2 \sin (3x) \cos (-2x)}{2 \cos(3x) \cos (-2x)} \\
+                                                    & = \frac{\sin 3x}{\cos 3x} \\
+                                                    & = \tan 3x \\
+        \end{align*}
 
     \end{description}
 
