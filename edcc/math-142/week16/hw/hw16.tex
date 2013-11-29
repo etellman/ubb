@@ -1,0 +1,85 @@
+\documentclass{exam}
+
+\usepackage{units} 
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{xfrac}
+\usepackage{parskip}
+
+\newcommand{\dg}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+\printanswers
+\excludecomment{comment}
+
+\ifprintanswers 
+  \usepackage{2in1, lscape} 
+\fi
+
+\author{}
+\date{\today}
+\title{Math 142 \\ Homework Sixteen}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Homework}
+  Section 7.5:
+
+  \section{Extra Credit}
+  Section 7.5: 
+
+  \ifprintanswers
+    \begin{description}
+      \item[48]
+        \begin{align*}
+          \sin x &= \pm \frac{1}{\sqrt{1 + \sfrac{1}{\tan^2 x}}} \\
+          \cos x &= \pm \frac{1}{\sqrt{1 + \tan^2 x}} \\
+          \\
+          \sin(x - y) &= \sin x \cos y - \cos x \sin y \\
+                      &= \begin{cases}
+                            - \sqrt{ \frac{1 - x^2}{1 + \sfrac{1}{x^2}}} + \frac{x}{\sqrt{1 + x^2}} & \mbox{if } -1 \leq x < 0 \\
+                            0                                                                       & \mbox{if } x = 0 \\
+                            \sqrt{ \frac{1 - x^2}{1 + \sfrac{1}{x^2}}} + \frac{x}{\sqrt{1 + x^2}}   & \mbox{if } 0 < x \leq 1 \\
+                          \end{cases}
+        \end{align*}
+
+    \end{description}
+  \fi
+
+  \ifprintanswers
+    \section{Section 7.5}
+    \begin{description}
+
+      \item[1] 
+        \begin{parts}
+          \part $\sin^{-1} \frac{1}{2} = \boxed{ \frac{\pi}{6} }$
+          \part $\cos^{-1} \frac{1}{2} = \boxed{ \frac{\pi}{3} }$
+          \part $\cos^{-1} 2$ is not defined
+        \end{parts}
+
+    \end{description}
+
+  \else
+    \vspace{5 cm}
+
+    \begin{quote}
+      \begin{em}
+      \end{em}
+    \end{quote}
+    \hspace{1 cm} --TO DO
+  \fi
+
+\end{document}
+
