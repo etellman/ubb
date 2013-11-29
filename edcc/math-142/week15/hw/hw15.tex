@@ -38,64 +38,68 @@
   Section 7.4:
 
   \section{Extra Credit}
-  Section 7.4: 89
+  Section 7.4: 48 and 56
 
   \ifprintanswers
-    Since the angles form a triangle, they add up to $180 \dg$:
-    \begin{align*}
-      A + B + C & = 180 \dg \\
-      C         & = 180 \dg - (A + B) \\
-      \\
-      \cos C & = \cos (180 \dg - (A + B)) \\
-             & = \cos 180 \dg \cos (A + B) + \sin 180 \dg \sin (A + B) \\
-             & = - \cos (A + B) \\
-             & = \sin A \sin B - \cos A \cos B \\
-             \\
-      \cos A &= \sin B \sin C - \cos B \cos C \\
-      \cos B &= \sin A \sin C - \cos A \cos C \\
-      \\
-      \sin (A + B) & = \sin (180 \dg - C) \\
-                   & = \sin C \\
-      \\
-      \cos (A + B) & = \cos (180 \dg - C) \\
-                   & = - \cos C \\
-    \end{align*}
+    \begin{description}
+      \item[48]
+        \begin{align*}
+          \sin x &= \pm \frac{1}{\sqrt{1 + \sfrac{1}{\tan^2 x}}} \\
+          \cos x &= \pm \frac{1}{\sqrt{1 + \tan^2 x}} \\
+          \\
+          \sin(x - y) &= \sin x \cos y - \cos x \sin y \\
+                      &= \begin{cases}
+                            - \sqrt{ \frac{1 - x^2}{1 + \sfrac{1}{x^2}}} + \frac{x}{\sqrt{1 + x^2}} & \mbox{if } -1 \leq x < 0 \\
+                            0                                                                       & \mbox{if } x = 0 \\
+                            \sqrt{ \frac{1 - x^2}{1 + \sfrac{1}{x^2}}} + \frac{x}{\sqrt{1 + x^2}}   & \mbox{if } 0 < x \leq 1 \\
+                          \end{cases}
+        \end{align*}
 
-    Some other useful facts are:
-    \begin{align*}
-      \sin (A + B) &= \sin A \cos B + \cos A \sin B \\
-      \\
-      \cos (A + B)  & = \cos A \cos B - \sin A \sin B \\
-      \cos A \cos B & = \cos (A + B) + \sin A \sin B \\
-    \end{align*}
-    
-    \pagebreak
+      \item[56]
+        Use radians for $\theta$ to make the arc length calculations easier.
 
-    You can substitute the above expressions at the appropriate spots to get to the desired final expression:
-    \begin{align*}
-      \sin 2A & + \sin 2B + \sin 2C  = 2 \sin A \cos A + 2 \sin B \cos B + 2 \sin C \cos C \\
-              & = 2 \sin A ( \sin B \sin C - \cos B \cos C ) \\
-                & \qquad{} + 2 \sin B ( \sin A \sin C - \cos A \cos C ) \\
-                & \qquad{} + 2 \sin C ( \sin A \sin B - \cos A \cos B ) \\
-              & = 6 \sin A \sin B \sin C  - 2 (\sin A \cos B \cos C \\
-                & \qquad{} + \cos A \sin B \cos C + \cos A \cos B \sin C) \\
-              & = 6 \sin A \sin B \sin C  - 2 ( \cos C ( \sin A \cos B + \cos A \sin B ) \\
-                & \qquad{} + \cos A \cos B \sin C) \\
-              & = 6 \sin A \sin B \sin C  - 2 ( \cos C \sin (A + B) + \cos A \cos B \sin C) \\
-              & = 6 \sin A \sin B \sin C  - 2 ( \cos C \sin (A + B) \\
-                & \qquad{} + ( \cos (A + B) + \sin A \sin B ) \sin C) \\
-              & = 6 \sin A \sin B \sin C \\
-                & \qquad{} - 2 ( \cos C \sin C + ( - \cos C + \sin A \sin B ) \sin C) \\
-              & = 6 \sin A \sin B \sin C \\
-                & \qquad{} - 2 ( \cos C \sin C  - \cos C \sin C + \sin A \sin B \sin C) \\
-              & = 6 \sin A \sin B \sin C  - 2 \sin A \sin B \sin C \\
-              & = 4 \sin A \sin B \sin C \\
-    \end{align*}
+        \begin{parts}
+          \part 
+            \begin{align*}
+              \cos \theta & = \frac{r}{h + r} \\
+              \theta      & = \boxed{ \cos^{-1} \frac{r}{h + r} } \\
+            \end{align*}
+
+          \part
+            \[
+              s(\theta) = \boxed{ r \theta }
+            \]
+
+          \part
+            \[
+              s(h) = \boxed{ r \cos^{-1} \frac{r}{h + r} }
+            \]
+
+          \part
+            \begin{align*}
+              s(100) & = 3960 \cos^{-1} \frac{3960}{100 + 3960} \\
+                     & \approx \boxed{ \unit[881]{mi} } \\
+            \end{align*}
+
+          \part
+            \begin{align*}
+              s                & = r \cos^{-1} \frac{r}{h + r} \\
+              % \frac{s}{r}      & = \cos^{-1} \frac{r}{h + r} \\
+              % \cos \frac{s}{r} & = \frac{r}{h + r} \\
+              h                & = r \left( \sec \frac{s}{r} - 1 \right) \\
+              \\
+              h(2450) & = 3960 \left( \sec \frac{2450}{3960} - 1 \right) \\
+                      & \approx \boxed{ \unit[901]{mi} } \\
+            \end{align*}
+
+        \end{parts}
+
+    \end{description}
   \fi
 
-  % \section{Review}
+  % $x = 0$ is a special case to avoid dividing by zero.
 
-  \pagebreak
+  % \section{Review}
 
   \ifprintanswers
     \section{Section 7.4}
@@ -261,22 +265,129 @@
           \sec \left( \sin^{-1} \frac{12}{13} \right) = \boxed{ \frac{13}{5} } 
         \]
 
-      \item[37]
+      % \item[37]
+      %   \begin{align*}
+      %     \sin \left( 2 \cos^{-1} \frac{3}{5} \right) & = 2 \sin \left( \cos^{-1} \frac{3}{5} \right) \cos \left( \cos^{-1} \frac{3}{5} \right) \\
+      %                                                 & = 2 \cdot \frac{4}{5} \cdot \frac{3}{5} \\
+      %                                                 & = \boxed{ \frac{24}{25} } \\
+      %   \end{align*}
+
+      % \item[38]
+      %   \begin{align*}
+      %     \tan \left( 2 \tan^{-1} \frac{5}{13} \right) & = \frac{ 2 \tan \left( \tan^{-1} \sfrac{5}{13} \right) }
+      %                                                           { 1 - \tan^2 \left( \tan^{-1} \sfrac{5}{13} \right) } \\
+      %                                                  & = \frac{ 2 \cdot \sfrac{5}{13} }{1 - \left( \sfrac{5}{13} \right)^2 } \\
+      %                                                  % & = \frac{10}{13 ( 1 - \sfrac{25}{13^2} )} \\
+      %                                                  % & = \frac{10}{13 - \sfrac{25}{13} } \\
+      %                                                  & = \boxed{ \frac{65}{72} } \\
+      %   \end{align*}
+
+      \item[41]
         \begin{align*}
-          \sin \left( 2 \cos^{-1} \frac{3}{5} \right) & = 2 \sin \left( \cos^{-1} \frac{3}{5} \right) \cos \left( \cos^{-1} \frac{3}{5} \right) \\
-                                                      & = 2 \cdot \frac{4}{5} \cdot \frac{3}{5} \\
-                                                      & = \boxed{ \frac{24}{25} } \\
+          \cos x &= \pm \sqrt{1 - \sin^2 x } \\
+          \cos \left( \sin^{-1} x \right) & = \boxed{ \sqrt{ 1 - x^2} } \\
         \end{align*}
 
-      \item[38]
+      \item[42]
         \begin{align*}
-          \tan \left( 2 \tan^{-1} \frac{5}{13} \right) & = \frac{ 2 \tan \left( \tan^{-1} \sfrac{5}{13} \right) }
-                                                                { 1 - \tan^2 \left( \tan^{-1} \sfrac{5}{13} \right) } \\
-                                                       & = \frac{ 2 \cdot \sfrac{5}{13} }{1 - \left( \sfrac{5}{13} \right)^2 } \\
-                                                       % & = \frac{10}{13 ( 1 - \sfrac{25}{13^2} )} \\
-                                                       % & = \frac{10}{13 - \sfrac{25}{13} } \\
-                                                       & = \boxed{ \frac{65}{72} } \\
+          \sin^2 x & = \frac{\sin^2 x}{\cos^2 x} \cdot \cos^2 x \\
+                   & = \tan^2 x \cdot \cos^2 x \\
+                   & = \frac{\tan^2 x}{\sec^2 x} \\
+                   & = \frac{\tan^2 x}{1 + \tan^2 x} \\
+          \sin x   & = \pm \frac{ \tan x }{ \sqrt{1 + \tan^2 x} } \\
+          \\
+          \sin \left( \tan^{-1} x \right) &= \boxed{ \frac{x}{\sqrt{1 + x^2}} } \\
         \end{align*}
+
+      \item[43]
+        \begin{align*}
+          \tan x & = \frac{\sin x}{\sqrt{1 - \sin^2 x}} \\
+          \\
+          \tan \left( \sin^{-1} x \right) &= \boxed{ \frac{x}{\sqrt{1 - x^2}} } \\
+        \end{align*}
+
+      \item[44]
+        \begin{align*}
+           \sec^2 x &= \tan^2 x + 1 \\
+           \frac{1}{\cos^2 x} &= \tan^2 x + 1 \\
+           \cos x &= \frac{1}{\sqrt{tan^2 x + 1}} \\
+           \\
+           \cos \left( \tan^{-1} x \right) &= \frac{1}{\sqrt{x^2 + 1}} \\
+        \end{align*}
+
+      \item[45]
+        \begin{align*}
+          \cos 2x & = 2 \cos^2 x - 1 \\
+                  & = \frac{1}{\tan^2 x + 1} - 1 \\
+                  & = \frac{1- \tan^2 x}{\tan^2 x + 1} \\
+          \\
+          \cos \left( 2 \tan^{-1} x \right) & = \boxed{ \frac{1 - x^2}{1 + x^2} } \\
+        \end{align*}
+
+      \item[46]
+        \begin{align*}
+          \sin 2x & = 2 \sin x \cos x \\
+                  & = 2 \sin x \sqrt{1 - \sin^2 x} \\
+                  \\
+          \sin \left( 2 \sin^{-1} x \right) & = \boxed{ 2x \sqrt{1 - x^2} } \\
+        \end{align*}
+
+      \item[47]
+        \begin{align*}
+          \cos(x + y) & = \cos x \cos y - \sin x \sin y \\
+                      & = \cos x \sqrt{1 - \sin^2 y} -  \sin y \sqrt{1 - \sin^2 x} \\
+                      \\
+          \cos(\cos^{-1} x + \sin^{-1} y) & = x \sqrt{1 - x^2} - x \sqrt{1 - x^2} \\
+                                          & = \boxed{ 0 } \\
+        \end{align*}
+
+      \item[53]
+        \begin{parts}
+          \part
+            \begin{align*}
+              \tan \theta & = \frac{h}{2} \\
+              h           & = \boxed{ 2 \tan \theta } \\
+            \end{align*}
+
+          \part
+            \begin{align*}
+              \tan \theta & = \frac{h}{2} \\
+              \theta      & = \boxed{ \tan^{-1} \frac{h}{2} } \\
+            \end{align*}
+
+        \end{parts}
+
+      \item[54]
+        \begin{parts}
+          \part
+            \begin{align*}
+              \tan \theta & = \frac{50}{s} \\
+              \theta      & = \boxed{ \tan^{-1} \frac{50}{s} } \\
+            \end{align*}
+
+          \part
+            \begin{align*}
+              \theta & = \tan^{-1} \frac{50}{20} \\
+                     & \approx \boxed{ 69.2 \dg } \\
+            \end{align*}
+
+        \end{parts}
+
+      \item[55]
+        \begin{parts}
+          \part
+            \begin{align*}
+              \sin \theta & = \frac{h}{680} \\
+              \theta & = \boxed{ \sin^{-1} \frac{h}{680} } \\
+            \end{align*}
+
+          \part
+            \begin{align*}
+              \theta & = \sin^{-1} \frac{500}{680} \\
+                     & \approx \boxed{ 47.3 \dg } \\
+            \end{align*}
+
+        \end{parts}
 
     \end{description}
 
