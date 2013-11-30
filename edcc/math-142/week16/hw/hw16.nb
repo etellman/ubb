@@ -1,0 +1,111 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3072,        101]
+NotebookOptionsPosition[      2638,         80]
+NotebookOutlinePosition[      2994,         96]
+CellTagsIndexPosition[      2951,         93]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Tan", "[", "x", "]"}], "+", 
+     RowBox[{"Sqrt", "[", "3", "]"}]}], "\[Equal]", "0"}], ",", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.59481940976143*^9, 3.594819417965006*^9}, {
+   3.5948197067027617`*^9, 3.5948197094517307`*^9}, 3.5948200223383913`*^9, 
+   3.594820053634182*^9, {3.59482011292146*^9, 3.5948201179672127`*^9}, {
+   3.594820420110033*^9, 3.5948204262039633`*^9}, {3.594820591964368*^9, 
+   3.594820592698203*^9}, {3.594820809762117*^9, 3.59482081110371*^9}, {
+   3.594820899545175*^9, 3.594820899900017*^9}, {3.594820956746594*^9, 
+   3.594820956862133*^9}, {3.5948210175756073`*^9, 3.594821028658266*^9}, {
+   3.594823439014223*^9, 3.5948234766358223`*^9}, {3.594823623028516*^9, 
+   3.594823625353332*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"ConditionalExpression", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[Pi]", " ", 
+         SubscriptBox[
+          TagBox["c",
+           C], "1"]}], "-", 
+        FractionBox["\[Pi]", "3"]}], ",", 
+       RowBox[{
+        SubscriptBox[
+         TagBox["c",
+          C], "1"], "\[Element]", 
+        TagBox["\[DoubleStruckCapitalZ]",
+         Function[{}, Integers]]}]}], "]"}]}], "}"}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.5948194191061687`*^9, 3.594819709932414*^9, 3.594820022874372*^9, 
+   3.594820054227507*^9, 3.594820118604083*^9, 3.594820426739736*^9, 
+   3.594820593090889*^9, 3.594820811711465*^9, 3.594820900295329*^9, 
+   3.5948209573077507`*^9, 3.5948210296054564`*^9, {3.594823444476116*^9, 
+   3.59482347791682*^9}, 3.594823625813672*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ArcTan", "[", "3", "]"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.594823484070819*^9, 3.594823492475123*^9}}],
+
+Cell[BoxData[
+ FormBox["1.2490457723982544`", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.594823487552596*^9, 3.594823492870263*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 604},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 820, 16, 28, "Input"],
+Cell[1402, 40, 891, 25, 103, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2330, 70, 149, 3, 28, "Input"],
+Cell[2482, 75, 140, 2, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
