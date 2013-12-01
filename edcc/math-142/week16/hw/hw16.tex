@@ -38,27 +38,45 @@
   Section 7.5:
 
   \section{Extra Credit}
-  Section 7.5: 
+  Section 7.5: 85 part a
 
   \ifprintanswers
     \begin{description}
-      \item[48]
+      \item[85a]
+        Since the two pulleys have the same angles and different radii, you only need to analyze one of them and then
+        use the same equation with the other radius.
+
+        Find the length of belt touching the pulley.  Let $\alpha$ be the interior angle:
+        \[
+          \alpha = \frac{\pi}{2} - \frac{\theta}{2} = \frac{\pi - \theta}{2}
+        \]
+        The belt touching the pulley is:
+        \[
+          2 \pi r - 2r \alpha = 2 \pi r - \pi r - \theta r = r (\theta + \pi)
+        \]
+
+        If $L_r1$ is the length of belt between the pulley and the crossing point:
         \begin{align*}
-          \sin x &= \pm \frac{1}{\sqrt{1 + \sfrac{1}{\tan^2 x}}} \\
-          \cos x &= \pm \frac{1}{\sqrt{1 + \tan^2 x}} \\
-          \\
-          \sin(x - y) &= \sin x \cos y - \cos x \sin y \\
-                      &= \begin{cases}
-                            - \sqrt{ \frac{1 - x^2}{1 + \sfrac{1}{x^2}}} + \frac{x}{\sqrt{1 + x^2}} & \mbox{if } -1 \leq x < 0 \\
-                            0                                                                       & \mbox{if } x = 0 \\
-                            \sqrt{ \frac{1 - x^2}{1 + \sfrac{1}{x^2}}} + \frac{x}{\sqrt{1 + x^2}}   & \mbox{if } 0 < x \leq 1 \\
-                          \end{cases}
+          \tan \frac{\theta}{2} & = \frac{r}{L_{r1}} \\
+          L_{r1}                & = r \cot \frac{\theta}{2} \\
+        \end{align*}
+
+        The total belt for one side is:
+        \begin{align*}
+          L_r & = r (\theta + \pi) + 2 r \cot \frac{\theta}{2} \\
+              & = r \left( \theta + \pi + 2 \cot \frac{\theta}{2} \right) \\
+        \end{align*}
+
+        The total belt is:
+        \begin{align*}
+          L                                 & = (R + r) \left( \theta + \pi + 2 \cot \frac{\theta}{2} \right) \\
+          \theta  + 2 \cot \frac{\theta}{2} & = \frac{L}{R + r} - \pi \\
         \end{align*}
 
     \end{description}
-  \fi
 
-  \ifprintanswers
+    \pagebreak
+
     \section{Section 7.5}
     \begin{description}
 
@@ -298,6 +316,8 @@
           x                             & = \boxed{ \left\{ 4 \pi + 6k \pi, 5 \pi + 6k \pi \right\} } \\
         \end{align*}
 
+      \pagebreak
+
       \item[35] 
         \begin{align*}
           \tan^5 x - 9 \tan x                                            & = 0 \\
@@ -427,6 +447,43 @@
           2 \theta & = 1.8944 \dg \mbox{ or } 178.1056 \\
           \theta   & = \boxed{ 0.9472 \dg \mbox{ or } 89.0528 \dg } \\
         \end{align*}
+
+      \item[80]
+        \begin{align*}
+          4 e^{-3t} \sin 2 \pi t & = 0 \\
+          \sin 2 \pi t           & = 0 \\
+          2 \pi t                & = k \pi \\
+          t                      & = \boxed{ \frac{k}{2} } \\
+        \end{align*}
+
+      \item[84]
+        \begin{parts}
+
+          \part
+            \begin{align*}
+              \frac{1}{2} (1 - \cos \theta) & = 0 \\
+              \theta                        & = \boxed{ 0 } \\
+            \end{align*}
+
+          \part
+            \begin{align*}
+              \frac{1}{2} (1 - \cos \theta) & = \frac{1}{4} \\
+              \theta                        & = \boxed{ \pm \frac{\pi}{3} } \\
+            \end{align*}
+
+          \part
+            \begin{align*}
+              \frac{1}{2} (1 - \cos \theta) & = \frac{1}{2} \\
+              \theta                        & = \boxed{ \pm \frac{\pi}{2} } \\
+            \end{align*}
+
+          \part
+            \begin{align*}
+              \frac{1}{2} (1 - \cos \theta) & = 1 \\
+              \theta                        & = \boxed{ \pi } \\
+            \end{align*}
+
+        \end{parts}
 
     \end{description}
 
