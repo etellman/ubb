@@ -19,7 +19,7 @@
 
 \printanswers
 
-\title{Math 142 Notes \\ Section 7.1}
+\title{Math 142 Notes \\ Section 7.3}
 
 \date{\today}
 
@@ -27,5 +27,37 @@
 
   \maketitle
   \tableofcontents
+
+  \section{Double Angle Formulas}
+
+  \subsection{$\cos 2s$}
+  \begin{align*}
+    \cos(s + s) & = \cos s \cos s - \sin s \sin s \\
+    \cos 2s     & = \cos^2 s - \sin^2 s \\
+                & = 1 - 2 \sin^2 s \\
+                & = 2 \cos^2 s - 1 \\
+  \end{align*}
+
+  \subsection{$\sin 2s$}
+  \begin{align*}
+    \sin(s + s) & = \sin s \cos s + \cos s \sin s \\
+    \sin 2s     & = 2 \cos s \sin s \\
+  \end{align*}
+
+  \subsection{$\tan 2s$}
+  \begin{align*}
+    \tan 2s & = \frac{\sin 2s}{\cos 2s} \\
+            & = \frac{2 \cos s \sin s}{\cos^2 s - \sin^2 s} \\
+            & = \frac{2 \cos s \sin s}{\cos^2 s - \sin^2 s} \cdot \frac{\sfrac{1}{\cos^2 s}}{\sfrac{1}{\cos^2 s}} \\
+            & = \frac{2 \tan s}{1 - \tan^2 s} \\
+  \end{align*}
+
+  \section{Power Lowering Formulas}
+
+  \subsection{$\sin^2 s$}
+  \begin{align*}
+    \cos 2s  & = 1 - 2 \sin^2 s \\
+    \sin^2 x & = \frac{1 - \cos 2x}{2} \\
+  \end{align*}
 
 \end{document}
