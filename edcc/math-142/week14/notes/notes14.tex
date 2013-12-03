@@ -30,34 +30,87 @@
 
   \section{Double Angle Formulas}
 
-  \subsection{$\cos 2s$}
+  \subsection{$\cos 2x$}
   \begin{align*}
-    \cos(s + s) & = \cos s \cos s - \sin s \sin s \\
-    \cos 2s     & = \cos^2 s - \sin^2 s \\
-                & = 1 - 2 \sin^2 s \\
-                & = 2 \cos^2 s - 1 \\
+    \cos(x + x) & = \cos x \cos x - \sin x \sin x \\
+    \cos 2x     & = \cos^2 x - \sin^2 x \\
+                & = 1 - 2 \sin^2 x \\
+                & = 2 \cos^2 x - 1 \\
   \end{align*}
 
   \subsection{$\sin 2s$}
   \begin{align*}
-    \sin(s + s) & = \sin s \cos s + \cos s \sin s \\
-    \sin 2s     & = 2 \cos s \sin s \\
+    \sin(x + x) & = \sin x \cos x + \cos x \sin x \\
+    \sin 2x     & = 2 \cos x \sin x \\
   \end{align*}
 
   \subsection{$\tan 2s$}
   \begin{align*}
-    \tan 2s & = \frac{\sin 2s}{\cos 2s} \\
-            & = \frac{2 \cos s \sin s}{\cos^2 s - \sin^2 s} \\
-            & = \frac{2 \cos s \sin s}{\cos^2 s - \sin^2 s} \cdot \frac{\sfrac{1}{\cos^2 s}}{\sfrac{1}{\cos^2 s}} \\
-            & = \frac{2 \tan s}{1 - \tan^2 s} \\
+    \tan 2x & = \frac{\sin 2x}{\cos 2x} \\
+            & = \frac{2 \cos x \sin x}{\cos^2 x - \sin^2 x} \\
+            & = \frac{2 \cos x \sin x}{\cos^2 x - \sin^2 x} \cdot \frac{\sfrac{1}{\cos^2 x}}{\sfrac{1}{\cos^2 x}} \\
+            & = \frac{2 \tan x}{1 - \tan^2 x} \\
   \end{align*}
 
   \section{Power Lowering Formulas}
 
   \subsection{$\sin^2 s$}
   \begin{align*}
-    \cos 2s  & = 1 - 2 \sin^2 s \\
+    \cos 2x  & = 1 - 2 \sin^2 x \\
     \sin^2 x & = \frac{1 - \cos 2x}{2} \\
   \end{align*}
+
+  \subsection{$\cos^2 x$}
+  \begin{align*}
+    \cos 2x  & = 2 \cos^2 x - 1 \\
+    \cos^2 x & = \frac{1 + \cos 2x}{2} \\
+  \end{align*}
+
+  \subsection{$\tan^2 s$}
+  \[
+    \tan^2 x = \frac{1 - \cos 2x}{1 + \cos 2x}
+  \]
+
+  \section{Half Angle Formulas}
+
+  \subsection{$\sin \sfrac{x}{2}$}
+  \begin{align*}
+    \sin^2 x         & = \frac{1 - \cos 2x}{2} \\
+    \sin x           & = \pm \sqrt{ \frac{1 - \cos 2x}{2} } \\
+    \sin \frac{x}{2} & = \pm \sqrt{ \frac{1 - \cos x}{2} } \\
+  \end{align*}
+
+  \subsection{$\cos \sfrac{x}{2}$}
+  \begin{align*}
+    \cos^2 x         & = \frac{1 + \cos 2x}{2} \\
+    \cos x           & = \pm \sqrt{ \frac{1 + \cos 2x}{2} } \\
+    \cos \frac{x}{2} & = \pm \sqrt{ \frac{1 + \cos x}{2} } \\
+  \end{align*}
+
+  \subsection{$\tan \sfrac{x}{2}$}
+  \begin{align*}
+    \tan^2 x           & = \frac{1 - \cos 2x}{1 + \cos 2x} \\
+    \tan^2 \frac{x}{2} & = \frac{1 - \cos x}{1 + \cos x} \\
+    \tan \frac{x}{2}   & = \pm \sqrt{ \frac{1 - \cos x}{1 + \cos x} } \\
+                       & = \pm \sqrt{ \frac{1 - \cos x}{1 + \cos x} \cdot \frac{1 - \cos x}{1 - \cos x} } \\
+                       & = \pm \sqrt{ \frac{(1 - \cos x)^2}{1 - \cos^2 x} } \\
+                       & = \pm \sqrt{ \frac{(1 - \cos x)^2}{\sin^2 x} } \\
+                       & = \pm \left| \frac{1 - \cos x}{\sin x} \right| \\
+                       & = \frac{1 - \cos x}{\sin x} \\
+  \end{align*}
+
+  $\sin x$ and $\tan \sfrac{x}{2}$ always have the same sign.
+
+  \begin{align*}
+    \sin 2x          & = 2 \sin x \cos x \\
+    \sin x           & = 2 \sin \frac{x}{2} \cos \frac{x}{2} \\
+    \tan \frac{x}{2} & = \frac{\sin \sfrac{x}{2}}{\cos \sfrac{x}{2}} \\
+  \end{align*}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.8]{sinx_tanx2}
+    \caption{$sin x$ and $tan \sfrac{x}{2}$}
+  \end{figure}
 
 \end{document}
