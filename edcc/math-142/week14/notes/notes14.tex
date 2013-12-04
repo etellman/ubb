@@ -99,7 +99,7 @@
                        & = \frac{1 - \cos x}{\sin x} \\
   \end{align*}
 
-  $\sin x$ and $\tan \sfrac{x}{2}$ always have the same sign.
+  $\sin x$ and $\tan \sfrac{x}{2}$ always have the same sign and $1 - \cos x \geq 0$.
 
   \begin{align*}
     \sin 2x          & = 2 \sin x \cos x \\
@@ -112,5 +112,40 @@
     \includegraphics[scale=0.8]{sinx_tanx2}
     \caption{$sin x$ and $tan \sfrac{x}{2}$}
   \end{figure}
+
+  \section{Product to Sum Formulas}
+  \begin{align*}
+    \sin(u + v) - \sin(u - v) & = (\sin u \cos v + \cos u \sin v) - (\sin u \cos v - \cos u \sin v) \\
+                              & = 2 \cos u \sin v \\
+    \cos u \sin v             & = \frac{1}{2} [ \sin(u + v) - \sin(u - v) ] \\
+    \\
+    \cos(u + v) - \cos(u - v) & = (\cos u \cos v - \sin u \sin v) - (\cos u \cos v + \sin u \sin v) \\
+                              & = - 2 \sin u \sin v \\
+    \sin u \sin v             & = \frac{1}{2} [ \cos(u - v) - \cos(u + v) ] \\
+    \\
+    \cos(u + v) + \cos(u - v) & = (\cos u \cos v - \sin u \sin v) + (\cos u \cos v + \sin u \sin v) \\
+                              & = 2 \cos u \cos v \\
+    \cos u \cos v             & = \frac{1}{2} [ \cos(u + v) + \cos(u - v) ] \\
+   \end{align*}
+
+  \section{Sum to Product Formulas}
+  \begin{align*}
+    u &= \frac{x + y}{2} \\
+    v &= \frac{x - y}{2} \\
+    \\
+    u + v &= x \\
+    u - v &= y \\
+    \\
+  \end{align*}
+
+  \begin{align*}
+    \cos u \sin v                             & = \frac{1}{2} [ \sin(u + v) - \sin(u - v) ] \\
+    \cos \frac{x + y}{2} \sin \frac{x - y}{2} & = \frac{1}{2} [ \sin x - \sin y ] \\
+    \sin x + \sin y                           & = 2 \cos \frac{x + y}{2} \sin \frac{x - y}{2} \\
+    \\
+    \cos u \cos v                             & = \frac{1}{2} [ \cos(u + v) + \cos(u - v) ] \\
+    \cos \frac{x + y}{2} \cos \frac{x + y}{2} & = \frac{1}{2} [ \cos x + \cos y ] \\
+    \cos x + \cos y                           & = 2 \cos \frac{x + y}{2} \cos \frac{x - y}{2} \\
+  \end{align*}
 
 \end{document}
