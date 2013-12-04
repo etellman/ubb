@@ -19,7 +19,7 @@
 
 \printanswers
 
-\title{Math 142 Notes \\ Section 7.1}
+\title{Math 142 Notes \\ Section 7.4}
 
 \date{\today}
 
@@ -28,4 +28,59 @@
   \maketitle
   \tableofcontents
 
+  \section{Inverse Trigonometric Functions}
+
+  \begin{itemize*}
+    \item draw picture with sets
+    \item draw vertical line picture
+    \item analogy with square root of negative numbers
+  \end{itemize*}
+
+  \begin{tabular}[H]{lrr}
+    \toprule
+           & domain    & range \\
+    \midrule
+      sine & $[-1, 1]$ & $[- \frac{\pi}{2}, \frac{\pi}{2}]$ \\
+    \midrule
+      cos  & $[-1, 1]$ & $[0, \pi]$ \\
+    \midrule
+      tan  & $[-\infty, \infty]$ & $[- \frac{\pi}{2}, \frac{\pi}{2}]$ \\
+    \bottomrule
+  \end{tabular}
+
+  \begin{align*}
+    \cos(\cos^{-1} x) & = x \\
+    \sin(\sin^{-1} x) & = x \\
+    \tan(\tan^{-1} x) & = x \\
+  \end{align*}
+
+  \begin{itemize*}
+    \item The other direction only works if $x$ is in the proper range.
+    \item examples where large angle gets mapped to different angle in proper range after arcsine of sine, etc.:
+      \[
+        \sin^{-1}(\sin \sfrac{9 \pi}{4}) = \sfrac{\pi}{4}
+      \]
+  \end{itemize*}
+
+  \section{Composing Inverse Trigonometric Functions}
+
+  \subsection{Triangles}
+  Find $\cos \sin^{-1}{\sfrac{2}{3}}$ by drawing a triangle, finding the hypotenuse, and then finding the cosine.
+
+  \subsection{Algebraic}
+
+  Find $\cos \left( \sin^{-1}{\sfrac{2}{3}} \right)$ by drawing a triangle, finding the hypotenuse, and then finding the
+  cosine.
+
+  \begin{itemize*}
+    \item write cosine in terms of sine
+    \item substitute number
+    \item check sign
+  \end{itemize*}
+
+  \begin{align*}
+    \cos x                           & = \sqrt{1 - \sin^2 x} \\
+    \cos ( \sin^{-1}{\sfrac{2}{3}} ) & = \sqrt{1 - \frac{4}{9}} \\
+                                     & = \frac{\sqrt{5}}{3} \\
+  \end{align*}
 \end{document}
