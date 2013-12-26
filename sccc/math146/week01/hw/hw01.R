@@ -14,6 +14,3 @@ plot <- ggplot(ex26, aes(x = reorder(cause, -deaths), y = deaths)) +
 print(plot)
 ggsave("ex26.eps")
 
-str(ex26)
-?xtable
-
