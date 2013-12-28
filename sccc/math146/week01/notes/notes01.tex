@@ -1,0 +1,60 @@
+\documentclass{exam}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+% \printanswers
+
+\ifprintanswers 
+  \usepackage{2in1, lscape} 
+\fi
+
+\author{}
+\date{January 22, 2014}
+\title{Statistics \\ Week One}
+
+\begin{document}
+
+  \maketitle
+  \section{Death Penalty}
+  
+  \subsection{By Race}
+
+  \begin{table}[ht]
+    \begin{tabular}{rrrr}
+      \toprule
+            & Death & Not Death & Total \\
+      \midrule
+      black & 17.00 & 149.00    & 166.00 \\
+      white & 19.00 & 121.00    & 140.00 \\
+       \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \begin{table}[ht]
+    \begin{tabular}{rrr}
+      \toprule
+                & Death & Not Death \\
+      \midrule
+      black     & 0.10  & 0.90 \\
+      white     & 0.14  & 0.86 \\
+       \bottomrule
+    \end{tabular}
+  \end{table}
+\end{document}
+
