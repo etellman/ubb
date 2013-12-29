@@ -3,22 +3,29 @@ library(reshape)
 library(xtable)
 
 # apply your skills 6.8
-dp <- read.delim("death_penalty.dat", header = TRUE, sep = ',')
+dp <- read.delim("death_penalty.dat", header = TRUE, sep = '\t')
 
-contingencyTable <- xtabs(data = dp, count ~ defendent + outcome)
-addmargins(contingencyTable, 2)
-xtable(prop.table(contingencyTable, 1))
+sink("r.tex")
+print(xtable(dp))
+sink()
 
-# black kill black: 6%
-# black kill white: 21%
-# black overall: 10%
+blackDefendant <- data.frame(prop.table(xtabs(data = subset(dp, defendant == "black"), count ~ victim + outcome), 1))
+whiteDefendant <- data.frame(prop.table(xtabs(data = subset(dp, defendant == "white"), count ~ victim + outcome), 1))
 
-# white kill black: 0%
-# white kill white: 14%
-# white overall: 12%
+whiteDefendant$defendant = c("white", "white", "white", "white")
 
-countByRace <- function(race) xtabs(data = subset(dp, defendent == race), count ~ victim + outcome)
-probabilityByRace <- function(race) prop.table(xtabs(data = subset(dp, defendent == race), count ~ victim + outcome), 1)
+allDefendents <- rbind(blackDefendant, whiteDefendant)
+
+allDefendents <- subset(allDefendents, outcome == "death", c(defendant, victim, Freq))
+
+withMargins <- addmargins(dpTable, 2)
+percentages <- prop.table(dpTable, 1)
+
+xtable(withMargins, digits = 0)
+print(percentages, digits = 1)
+
+countByRace <- function(race) xtabs(data = subset(dp, defendant == race), count ~ victim + outcome)
+probabilityByRace <- function(race) prop.table(xtabs(data = subset(dp, defendant == race), count ~ victim + outcome), 1)
 
 outcomeByRace <- function(race) { 
   list(
@@ -32,3 +39,5 @@ outcomeByRace <- function(race) {
 lapply(c( "black", "white"), outcomeByRace)
 
 xtabs(data = dp, count ~ victim + outcome + defendent)
+
+RSiteSearch("merge dataframes")
