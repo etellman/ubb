@@ -48,22 +48,22 @@ pbs <- read.delim("prisonersByState.txt", header = TRUE, sep = '\t')
 
 xtabs(data = fiveYear, prison.population ~ region + year)
 
-washington <- xtabs(data = subset(fiveYear, state == "Washington"), incarceration.rate ~ year)
+la <- xtabs(data = subset(fiveYear, state == "Louisiana"), incarceration.rate ~ year)
 
 rate.by.region <- as.data.frame(as.list(by(pbs2010, pbs2010$region, function(df) { 100000 * sum(df$prison.population, na.rm = TRUE) / sum(df$state.population, na.rm = TRUE) })))
 
-pbs1980 <- subset(pbs, year == 1980)
-pbs1980 <- pbs1980[order(pbs1980$prison.population, decreasing = TRUE),]
-pbs1980[1,]
+pbs2010 <- subset(pbs, year == 2010)
+pbs2010 <- pbs2010[order(pbs2010$prison.population, decreasing = TRUE),]
+pbs2010[1,]
 
-plot <- ggplot(pbs2010[1:5,], aes(x = reorder(state, -prison.population), y = prison.population / 1000)) + 
+plot <- ggplot(melt(la), aes(x = year, y = value)) + 
   geom_bar(stat = "identity", fill = "lightblue", color = "black") +
   # geom_point() + coord_flip() +
-  labs(x = "State", y = "Population (thousands)") +
-  ggtitle("2010 Top Five by Prison Population")
+  labs(x = "Year", y = "Incarceration Rate") +
+  ggtitle("Louisiana Incarceration Rate")
 print(plot)
 
-ggsave("top_five_2010.eps", width = 5, height = 3)
+ggsave("la_rate.eps", width = 5, height = 3)
 
 plot <- ggplot(data = subset(pbs, year == 2010 & state != "District of Columbia"), aes(x = incarceration.rate)) + 
   geom_histogram(fill = "lightblue", color = "black", binwidth = 100) +
@@ -73,4 +73,25 @@ print(plot)
 
 ggsave("2010_rate_histogram.eps", width = 5, height = 3)
 
+?read.delim
 
+world.rates <- read.delim("data/world_incarceration_rates.txt", header = TRUE, strip.white = TRUE, sep = '\t')
+ 
+sample.rates <- subset(world.rates, country == "United States" | country == "Cuba" | country == "Russia" | country == "England and Wales" | country == "France" | country == "Japan"| country == "India" | country == "South Africa")
+
+plot <- ggplot(sample.rates, aes(x = reorder(country, rate), y = rate)) + 
+  geom_bar(stat = "identity", fill = "lightblue", color = "black") +
+  coord_flip() +
+  labs(x = "Country", y = "Incarceration Rate") +
+  ggtitle("Sample World Incarceration Rates")
+print(plot)
+
+plot <- ggplot(data = world.rates, aes(x = rate)) + 
+  geom_histogram(fill = "lightblue", color = "black", binwidth = 50) +
+  labs(x = "Incarceration Rate", y = "Number Countries") +
+  ggtitle("World Incarceration Rates")
+print(plot)
+
+ggsave("world_rate_histogram.eps", width = 5, height = 3)
+
+median(world.rates$rate)
