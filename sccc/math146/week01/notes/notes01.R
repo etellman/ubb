@@ -43,10 +43,12 @@ print(percentages, digits = 1)
 
 
 # prison population
-pbs <- read.delim("prisonersByState.txt", header = TRUE, sep = '\t')
-
+pbs <- read.delim("prisoners_by_state.txt", header = TRUE, sep = '\t')
+# write.csv(pbs, "prisoners_by_state.txt")
 
 xtabs(data = fiveYear, prison.population ~ region + year)
+
+edit(pbs)
 
 la <- xtabs(data = subset(fiveYear, state == "Louisiana"), incarceration.rate ~ year)
 
@@ -79,11 +81,11 @@ world.rates <- read.delim("data/world_incarceration_rates.txt", header = TRUE,�
  
 sample.rates <- subset(world.rates, country == "United States" | country == "Cuba" | country == "Russia" | country == "England and Wales" | country == "France" | country == "Japan"| country == "India" | country == "South Africa")
 
-plot <- ggplot(sample.rates, aes(x = reorder(country, rate), y = rate)) + 
+plot <- ggplot(rate.by.region.f, aes(x = reorder(region, -rate), y = rate)) + 
   geom_bar(stat = "identity", fill = "lightblue", color = "black") +
-  coord_flip() +
-  labs(x = "Country", y = "Incarceration Rate") +
-  ggtitle("Sample World Incarceration Rates")
+  # coord_flip() +
+  labs(x = "Region", y = "Incarceration Rate") +
+  ggtitle("Regional Incarceration Rates")
 print(plot)
 
 plot <- ggplot(data = world.rates, aes(x = rate)) + 
@@ -92,6 +94,33 @@ plot <- ggplot(data = world.rates, aes(x = rate)) +
   ggtitle("World Incarceration Rates")
 print(plot)
 
-ggsave("world_rate_histogram.eps", width = 5, height = 3)
+ggsave("rate_by_region.eps", width = 5, height = 3)
 
 median(world.rates$rate)
+
+pbs.m <- melt(pbs, id = c("state", "region", "sub.region", "year"))
+str(pbs.m)
+
+rates <- with(pbs, rate(prison.population, state.population))
+str(rates)
+
+pbs <- edit(cbind(pbs, state.rate = rates))
+
+
+pbs.m <- subset(pbs2010.m, variable != "year" & variable != "X")
+
+by.state <- cast(pbs.m, year + state ~ variable, sum)
+
+str(by.state)
+
+rate <- function(prison.population, total.population) {
+  round(100000 * prison.population / total.population)
+}
+
+rate.by.region <- rate(population.by.region$prison.population, population.by.region$state.population)
+
+rate.by.region.f <- data.frame(region = population.by.region$region, rate = rate.by.region)
+
+rate.by.region
+
+as.data.frame(as.list(by(pbs2010, pbs2010$region, function(df) { 100000 * sum(df$prison.population, na.rm = TRUE) / sum(df$state.population, na.rm = TRUE) })))

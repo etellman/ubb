@@ -20,143 +20,60 @@
 \begin{document}
 
   \maketitle
-  \section{Death Penalty}
-  
-  \subsection{Data}
-  \begin{table}[ht]
-  \centering
-  \begin{tabular}{rlllr}
-    \toprule
-          & defendant & victim & sentence  & count \\
-    \midrule
-    1     & white & white & death     & 19 \\
-    2     & white & black & death     & 0 \\
-    3     & white & white & not death & 112 \\
-    4     & white & black & not death & 9 \\
-    5     & black & white & death     & 11 \\
-    6     & black & black & death     & 6 \\
-    7     & black & white & not death & 52 \\
-    8     & black & black & not death & 97 \\
-    \midrule
-    total &       &       &           & 306 \\
-    \bottomrule
-  \end{tabular}
-  \end{table}
 
-  \subsection{By Sentence}
+  \section{Data Sets}
+  \begin{itemize*}
+    \item {\em Observation} is one row
+    \item Columns are {\em variables}
+    \item Continuous variables are numbers that can take on any value
+    \item Category variables are things like male/female, state, car model, etc.
+  \end{itemize*}
 
-  12\% of the death penalty eligible cases with convictions resulted in death penalties.
+  \section{Time Graphs}
 
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{lll}
-      \toprule
-      Death     & Not Death  & Total \\
-      \midrule
-      36 (12\%) & 270 (88\%) & 306 \\
-       \bottomrule
-    \end{tabular}
-    \caption{Ignoring race}
-  \end{table}
+  \subsection{Overview}
 
-  \subsection{By Defendant Race}
+  Time graphs show how a continuous variable changes over time.  
 
-  White defendants are more likely to get the death penalty than black defendants.
+  \begin{itemize*}
+    \item x-axis is time
+    \item y-axis is the quantity being measured
+    \item can use line or bar
+  \end{itemize*}
 
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{llll}
-      \toprule
-      Defendant & Death     & Not Death  & Total \\
-      \midrule
-      black     & 17 (10\%) & 149 (90\%) & 166 \\
-      white     & 19 (14\%) & 121 (86\%) & 140 \\
-      \bottomrule
-    \end{tabular}
-    \caption{By defendant race}
-  \end{table}
-
-  \subsection{By Defendant Race and Victim Race}
-
-  For any race of victim, black defendants are more likely to get the death penalty than white defendants.
-
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{llll}
-      \toprule
-      Victim & Death     & Not Death & Total \\
-      \midrule
-      black  & 6 (6\%)   & 97 (94\%) & 103 \\
-      white  & 11 (17\%) & 52 (83\%) & 63 \\
-      \bottomrule
-    \end{tabular}
-    \caption{Black Defendant}
-  \end{table}
-
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{llll}
-      \toprule
-      Victim & Death     & Not Death  & Total \\
-      \midrule
-      black  & 0 (0\%)   & 9 (100\%)  & 9 \\
-      white  & 19 (15\%) & 112 (85\%) & 131 \\
-      \bottomrule
-    \end{tabular}
-    \caption{White Defendant}
-  \end{table}
-
-  \subsection{By Victim}
-
-  Cases with white victims are much more likely to result in the death penalty than cases with black victims.
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{llll}
-      \toprule
-      Victim & Death     & Not Death  & Total \\
-      \midrule
-      black  & 6 (5\%)   & 106 (95\%) & 112 \\
-      white  & 30 (15\%) & 164 (85\%) & 194 \\
-      \bottomrule
-    \end{tabular}
-  \end{table}
-
-  \subsection{Summary}
-  The race of the victim is an important factor in determining whether a case will result in the death penalty.  White
-  defendants get the death penalty at a higher rate than black defendants because people tend to kill people of the same
-  race.
-
+  \subsection{US}
+  The total US population has been growing:
   \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.9]{death_penalty.eps}
-    \caption{Death Penalty Summary}
+    \includegraphics[scale = 0.9]{figures/us_population.eps}
+    \caption{US population 1980 to 2010}
   \end{figure}
 
-  \section{State Prison Population}
-
-  \subsection{US 1980 to 2010}
-  The prison population has been growing steadily since 1980:
+  so has the prison population:
   \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.9]{us_prison_population.eps}
+    \includegraphics[scale = 0.9]{figures/us_prison_population.eps}
   \end{figure}
 
-  Total population has been growing, but not as fast
+  You can make the US population growth look more impressive by changing the y-axis:
   \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.9]{us_population.eps}
+    \includegraphics[scale = 0.9]{figures/us_prison_population.eps}
+    \caption{US population with y-axis starting at 200}
   \end{figure}
 
-  \subsection{WA 1980 to 2010}
-  WA is typical
+  \subsection{Washington Graphs}
+
   \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.9]{wa_prison_population.eps}
+    \includegraphics[scale = 0.9]{figures/wa_population.eps}
+    \caption(WA population 1980-2010)
   \end{figure}
 
   \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.9]{wa_population.eps}
+    \includegraphics[scale = 0.9]{figures/wa_prison_population.eps}
+    \caption(WA prison population 1980-2010)
   \end{figure}
 
   \subsection{State Prison Populations}
@@ -194,10 +111,12 @@
 
   \subsubsection{1980}
   \begin{itemize*}
-    \item 22 states had rates below 100
-    \item highest rate was 280
-    \item highest rate was North Carolina with a rate of 245 and prison population of 15,615
-    \item lowest rate was North Dakota with a rate of 28 and prison population of 332
+    \item median 104
+    \item mean 121
+    \item highest rate was 265 (North Carolina)
+    \item lowest rate was 34 (New Hampshire)
+    \item highest population was 29,892 (Texas)
+    \item lowest population was 313 (New Hampshire)
     \item skewed right
   \end{itemize*}
 
@@ -208,16 +127,22 @@
 
   \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.9]{rates_1980.eps}
+    \includegraphics[scale = 0.9]{rate_by_state_1980.eps}
+    \caption{1980 incarceration rates by state}
   \end{figure}
 
   \subsubsection{2010}
   \begin{itemize*}
-    \item 25 states had rates below 400
-    \item highest rate was Louisiana with 868
-    \item lowest rate was Maine with 146
-    \item skewed right
+    \item median rate 367
+    \item mean rate 360
+    \item highest rate was 710 (Delaware)
+    \item lowest rate was 147 (Maine)
+    \item highest population was 160,651 (California)
+    \item lowest population was 1,416 (North Dakota)
+    \item Delaware is outlier
+    \item symmetric
   \end{itemize*}
+
   \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.9]{2010_rate_histogram.eps}
@@ -225,7 +150,8 @@
 
   \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.9]{rates_2010.eps}
+    \includegraphics[scale = 0.9]{rate_by_state_2010.eps}
+    \caption{2010 incarceration rates by state}
   \end{figure}
 
   \subsection{WA Rate over Time}
