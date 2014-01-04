@@ -9,6 +9,7 @@
 \usepackage{fullpage}
 \usepackage{enumerate}
 \usepackage{graphicx}
+
 \usepackage{2in1, lscape} 
 
 \everymath{\displaystyle}
@@ -25,10 +26,71 @@
   \begin{itemize*}
     \item {\em Observation} is one row
     \item Columns are {\em variables}
-    \item Continuous variables are numbers that can take on any value
+    \item Quantitative variables are numbers that can take on any value
     \item Category variables are things like male/female, state, car model, etc.
   \end{itemize*}
 
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{lrrrl}
+      \toprule
+      State       & Year & Population & Prison & region    \\
+      \midrule
+      Alabama     & 2010   & 4779736  & 26321  & South     \\
+      Alaska      & 2010   & 710231   & 3771   & West      \\
+      Arizona     & 2010   & 6392017  & 34774  & West      \\
+      Arkansas    & 2010   & 2915918  & 14192  & South     \\
+      California  & 2010   & 37253956 & 160651 & West      \\
+      Colorado    & 2010   & 5029196  & 18254  & West      \\
+      Connecticut & 2010   & 3574097  & 17746  & Northeast \\
+      Delaware    & 2010   & 897934   & 6378   & South     \\
+      Florida     & 2010   & 18801310 & 90274  & South     \\
+      Georgia     & 2010   & 9687653  & 47561  & South     \\
+      Hawaii      & 2010   & 1360301  & 3363   & West      \\
+      Idaho       & 2010   & 1567582  & 4999   & West      \\
+      \vdots      \\
+      % Illinois       & 2010 & 12830632   & 48418  & Midwest   \\
+      % Indiana        & 2010 & 6483802    & 24456  & Midwest   \\
+      % Iowa           & 2010 & 3046355    & 9457   & Midwest   \\
+      % Kansas         & 2010 & 2853118    & 9055   & Midwest   \\
+      % Kentucky       & 2010 & 4339367    & 12374  & South     \\
+      % Louisiana      & 2010 & 4533372    & 16087  & South     \\
+      % Maine          & 2010 & 1328361    & 1954   & Northeast \\
+      % Maryland       & 2010 & 5773552    & 22786  & South     \\
+      % Massachusetts  & 2010 & 6547629    & 11162  & Northeast \\
+      % Michigan       & 2010 & 9883640    & 44113  & Midwest   \\
+      % Minnesota      & 2010 & 5303925    & 9397   & Midwest   \\
+      % Mississippi    & 2010 & 2967297    & 11213  & South     \\
+      % Missouri       & 2010 & 5988927    & 30577  & Midwest   \\
+      % Montana        & 2010 & 989415     & 1635   & West      \\
+      % Nebraska       & 2010 & 1826341    & 4608   & Midwest   \\
+      % Nevada         & 2010 & 2700551    & 12192  & West      \\
+      % New Hampshire  & 2010 & 1316470    & 2617   & Northeast \\
+      % New Jersey     & 2010 & 8791894    & 21647  & Northeast \\
+      % New Mexico     & 2010 & 2059179    & 3754   & West      \\
+      % New York       & 2010 & 19378102   & 56420  & Northeast \\
+      % North Carolina & 2010 & 9535483    & 40167  & South     \\
+      % North Dakota   & 2010 & 672591     & 1416   & Midwest   \\
+      % Ohio           & 2010 & 11536504   & 48671  & Midwest   \\
+      % Oklahoma       & 2010 & 3751351    & 18128  & South     \\
+      % Oregon         & 2010 & 3831074    & 13859  & West      \\
+      % Pennsylvania   & 2010 & 12702379   & 47072  & Northeast \\
+      % Rhode Island   & 2010 & 1052567    & 3159   & Northeast \\
+      % South Carolina & 2010 & 4625364    & 22992  & South     \\
+      % South Dakota   & 2010 & 814180     & 3388   & Midwest   \\
+      % Tennessee      & 2010 & 6346105    & 14917  & South     \\
+      % Texas          & 2010 & 25145561   & 141087 & South     \\
+      % Utah           & 2010 & 2763885    & 5442   & West      \\
+      % Vermont        & 2010 & 625741     & 1517   & Northeast \\
+      % Virginia       & 2010 & 8001024    & 30351  & South     \\
+      % Washington     & 2010 & 6724540    & 17028  & West      \\
+      % West Virginia  & 2010 & 1852994    & 5072   & South     \\
+      % Wisconsin      & 2010 & 5686986    & 21983  & Midwest   \\
+      % Wyoming        & 2010 & 563626     & 1875   & West      \\
+      \bottomrule
+    \end{tabular}
+    % \caption{Population and prison population for 2010}
+  \end{table}
   \section{Time Graphs}
 
   \subsection{Overview}
@@ -49,17 +111,16 @@
     \caption{US population 1980 to 2010}
   \end{figure}
 
-  so has the prison population:
   \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.9]{figures/us_prison_population.eps}
+    \includegraphics[scale = 0.9]{figures/us_population_limited_range.eps}
+    \caption{US population with y-axis starting at 200}
   \end{figure}
 
-  You can make the US population growth look more impressive by changing the y-axis:
   \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.9]{figures/us_prison_population.eps}
-    \caption{US population with y-axis starting at 200}
+    \caption{US prison population}
   \end{figure}
 
   \subsection{Washington Graphs}
@@ -67,13 +128,37 @@
   \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.9]{figures/wa_population.eps}
-    \caption(WA population 1980-2010)
+    \caption{WA population 1980-2010}
   \end{figure}
 
   \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.9]{figures/wa_prison_population.eps}
-    \caption(WA prison population 1980-2010)
+    \caption{WA prison population 1980-2010}
+  \end{figure}
+
+  \section{Bar Graphs}
+
+  \subsection{Overview}
+  Bar graphs show the choices for a categorical variable on the x-axis and the value for each category on the y-axis.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.9]{figures/top_five_1980.eps}
+    \caption{1980 top five states by prison population}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.9]{figures/top_five_2010.eps}
+    \caption{2010 top five states by prison population}
+  \end{figure}
+
+  You can use the color to add a second categorical variable.
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.9]{figures/1980_to_2010_top_five.eps}
+    \caption{2010 vs. 1980 top five states by prison population}
   \end{figure}
 
   \subsection{State Prison Populations}
@@ -83,26 +168,11 @@
     \includegraphics[scale = 0.9]{1980_pp_histogram.eps}
   \end{figure}
 
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.9]{top_five_1980.eps}
-  \end{figure}
 
   \subsubsection{2010}
   \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.9]{2010_pp_histogram.eps}
-  \end{figure}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.9]{top_five_2010.eps}
-  \end{figure}
-
-  \subsection{Top 5 2010 vs. 1980}
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.9]{1980_to_2010_top_five.eps}
   \end{figure}
 
   \pagebreak
