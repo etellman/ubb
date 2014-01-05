@@ -53,7 +53,8 @@ plot <- ggplot(subset(pbs, state == "Washington" & year %% 10 == 0), aes(x = yea
 print(plot)
 ggsave("figures/wa_population.eps", width = 5, height = 3)
 
-plot <- ggplot(subset(pbs, state == "Washington"), aes(x = year, y = prison.population)) + 
+plot <- ggplot(subset(pbs, state == "Washington"), 
+               aes(x = year, y = prison.population / 1000)) + 
   geom_line() +
   labs(x = "Year", y = "Population (thousands)") +
   ggtitle("WA Prison Population")
