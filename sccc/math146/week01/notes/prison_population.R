@@ -5,7 +5,7 @@ library(plyr)
 
 # data
 pbs <- read.delim("prisoners_by_state.txt", header = TRUE, sep = '\t')
-pbs.m <- melt(pbs, id = c("state", "region", "sub.region", "year"))
+pbs.m <- melt(pbs, id = c("state", "region", "year"))
 
 # data for a year ordered by prison population
 for.year <- function(df, target.year) {
@@ -13,6 +13,13 @@ for.year <- function(df, target.year) {
   data <- data[order(data$prison.population, decreasing = TRUE),]
 
   data
+}
+
+# returns a new data frame with an incarceration rate column added and rows
+# without a rate removed
+add.rates <- function(df) {
+  with.rates <- transform(df, rate = round( prison.population / state.population * 100000))
+  subset(with.rates, !is.na(rate))
 }
 
 # *** time plots ***
@@ -170,7 +177,7 @@ print(plot)
 
 # *** incarceration rates ***
 rate.histogram <- function(df, target.year, bw) {
-  plot <- ggplot(data = subset(df, year == target.year), aes(x = state.rate)) + 
+  plot <- ggplot(data = subset(add.rates(df), year == target.year), aes(x = rate)) + 
     geom_histogram(fill = "lightblue", color = "black", binwidth = bw) +
     labs(x = "Rate", y = "Number of States") +
     ggtitle(paste(target.year, "Incarceration Rate"))
@@ -185,13 +192,14 @@ ggsave("figures/rate_histogram_1980.eps", width = 5, height = 3)
 rate.histogram(pbs, 2010, 100)
 ggsave("figures/rate_histogram_2010.eps", width = 5, height = 3)
 
-with.rate.ranks <- ddply(pbs, .(year), transform, 
-                         rank = rank(-state.rate, ties.method = "first"))
-
-
+# plots a histogram of state rates
 state.rates <- function(df, target.year) {
-  plot <- ggplot(subset(df, year == target.year), 
-                 aes(x = reorder(state, -rank), y = state.rate)) + 
+
+  with.rates <- ddply(add.rates(df), .(year), transform, 
+                         rank = rank(-rate, ties.method = "first"))
+
+  plot <- ggplot(subset(with.rates, year == target.year), 
+                 aes(x = reorder(state, -rank), y = rate)) + 
     geom_point() +
     # geom_bar(stat = "identity", fill = "lightblue", color = "black") +
     labs(x = "State", y = "Rate") +
@@ -201,6 +209,7 @@ state.rates <- function(df, target.year) {
   plot
 }
 
+
 state.rates(with.rate.ranks, 1980)
 ggsave("figures/state_rates_1980.eps", width = 5, height = 7)
 
@@ -208,10 +217,7 @@ state.rates(with.rate.ranks, 2010)
 ggsave("figures/state_rates_2010.eps", width = 5, height = 7)
 
 # regional rates
-with.rates <- transform(cast(pbs.m, year + region ~ variable, sum), 
-                        rate = 100000 * prison.population / state.population) 
-
-with.rates <- subset(with.rates, !is.na(rate), select = c(year, region, rate))
+with.rates <- add.rates(cast(pbs.m, year + region ~ variable, sum))
 
 plot <- ggplot(subset(with.rates, year == 2010), 
                aes(x = reorder(region, -rate), y = rate)) + 
@@ -223,10 +229,7 @@ print(plot)
 ggsave("figures/regional_rates_2010.eps", width = 5, height = 3)
 
 # US rate
-with.rates <- transform(cast(pbs.m, year ~ variable, sum), 
-                        rate = 100000 * prison.population / state.population) 
-
-with.rates <- subset(with.rates, !is.na(rate), select = c(year, rate))
+with.rates <- add.rates(cast(pbs.m, year ~ variable, sum))
 
 plot <- ggplot(with.rates, aes(x = year, y = rate)) + 
   geom_bar(stat = "identity", fill = "lightblue", color = "black") +
@@ -237,8 +240,7 @@ ggsave("figures/us_rate_over_time.eps", width = 5, height = 3)
 
 
 # WA rate
-plot <- ggplot(subset(pbs, state == "Washington" & !is.na(state.rate)), 
-               aes(x = year, y = state.rate)) + 
+plot <- ggplot(subset(add.rates(pbs), state == "Washington"), aes(x = year, y = rate)) + 
   geom_bar(stat = "identity", fill = "lightblue", color = "black") +
   labs(x = "Year", y = "Rate") +
   ggtitle("WA Incarceration Rate")
@@ -276,4 +278,9 @@ plot <- ggplot(sample.rates, aes(x = reorder(country, rate), y = rate)) +
   ggtitle("World Incarceration Rates")
 print(plot)
 ggsave("figures/sample_world_rates.eps", width = 5, height = 3)
+
+pbs
+sink("data_2010.tex")
+xtable(subset(pbs, year == 2010))
+sink()
 
