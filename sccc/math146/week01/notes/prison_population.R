@@ -165,7 +165,7 @@ population.histogram <- function(df, target.year, bw) {
 population.histogram(pbs, 1980, 2)
 ggsave("figures/population_histogram_1980.eps", width = 5, height = 3)
 
-population.histogram(pbs, 2010, 1)
+population.histogram(pbs, 2010, 10)
 ggsave("figures/population_histogram_2010_small_bins.eps", width = 5, height = 3)
 
 # all years doesn't make much sense
@@ -208,7 +208,6 @@ state.rates <- function(df, target.year) {
   print(plot)
   plot
 }
-
 
 state.rates(with.rate.ranks, 1980)
 ggsave("figures/state_rates_1980.eps", width = 5, height = 7)

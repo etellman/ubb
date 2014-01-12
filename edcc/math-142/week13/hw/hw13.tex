@@ -44,18 +44,32 @@
     \pagebreak
     \begin{description}
 
-      \item[87] 
+      \item[48]
         \begin{align*}
-          (\tan x + \cot x)^4 & = \left[ (\tan x + \cot x)^2 \right]^2 \\
-                              & = \left( \tan^2 x + 2 \tan x \cot x + \cot^2 x \right)^2 \\
-                              & = \left( \tan^2 x + 2 + \cot^2 x \right)^2 \\
-                              & = \left( \sec^2 x - 1 + 2 + \csc^2 x - 1 \right)^2 \\
-                              & = \left( \sec^2 x + \csc^2 x \right)^2 \\
-                              & = \left( \frac{1}{\cos^2 x} + \frac{1}{\sin^2 x} \right)^2 \\
-                              & = \left( \frac{\sin^2 x + \cos^2 x}{\sin^2 x \cos^2 x} \right)^2 \\
-                              & = \left( \frac{1}{\sin^2 x \cos^2 x} \right)^2 \\
-                              & = \csc^4 x \sec^4 x \\
+          \frac{\cos(x + h) - \cos(x)}{h} & = \frac{\cos x \cos h - \sin x \sin h - \cos x}{h} \\
+                                          & = \frac{\cos x (\cos h - 1) - \sin x \sin h}{h} \\
+                                          & = \frac{- \cos x (1 - \cos h) - \sin x \sin h}{h} \\
         \end{align*}
+
+      \item[49]
+        \begin{parts}
+          \part if you call the remaining angles of the two small triangles $a$ and $b$:
+            \begin{align*}
+              a & = 90 \dg - \alpha \\
+              b & = 90 \dg - \beta \\
+              \\
+              \gamma + a + b                            & = 180 \dg \\
+              \gamma + 90 \dg - \alpha + 90 \dg - \beta & = 180 \dg \\
+              \gamma                                    & =   \alpha + \beta \\
+            \end{align*}
+
+          \part
+            \begin{align*}
+              \tan \gamma & = \tan (\alpha + \beta) \\
+                          & = \frac{ \sfrac{2}{3} + \sfrac{3}{4}}{1 - \sfrac{2}{3} \cdot \sfrac{3}{4}} \\
+                          & = \frac{17}{6} \\
+            \end{align*}
+        \end{parts}
 
     \end{description}
   \fi
@@ -119,9 +133,9 @@
 
       \item[12] 
         \begin{align*}
-          \cos \left( \sfrac{7 \pi}{12} \right) & = \cos \left( \sfrac{3 \pi}{12} + \sfrac{4 \pi}{12} \right) \\
-                                                & = \cos \left( \sfrac{\pi}{4} + \sfrac{\pi}{3} \right) \\
-                                                & = \boxed{ \frac{\sqrt{2} - \sqrt{6}}{4} } \\
+          \tan \left( \sfrac{7 \pi}{12} \right) & = \tan \left( \sfrac{3 \pi}{12} + \sfrac{4 \pi}{12} \right) \\
+                                                & = \tan \left( \sfrac{\pi}{4} + \sfrac{\pi}{3} \right) \\
+                                                & = \boxed{ -2 - \sqrt{3} } \\
         \end{align*}
 
       \item[13] 
@@ -150,23 +164,31 @@
         \begin{align*}
           \frac{\tan \frac{\pi}{18} + \tan \frac{\pi}{9}}{1 - \tan \frac{\pi}{18} \tan \frac{\pi}{9}} 
             &= \tan \left( \frac{\pi}{18} + \frac{\pi}{9} \right) \\
-            &= \tan \frac{\pi}{3} \\
-            &= \boxed{ \sqrt{3} } \\
+            &= \tan \frac{\pi}{6} \\
+            &= \boxed{ \frac{\sqrt{3}}{3} } \\
         \end{align*}
 
       \item[17] 
         \begin{align*}
-          \sin \left( \frac{\pi}{2} - u \right) & = \sin \frac{\pi}{2} \cos u - \cos \frac{\pi}{2} \sin u \\
-                                                & = \cos u \\
-          \\
-          \cos \left( \frac{\pi}{2} - u \right) & = \cos \frac{\pi}{2} \cos u + \sin \frac{\pi}{2} \sin u \\
-                                                & = \sin u \\
-          \\
-          \tan \left( \frac{\pi}{2} - u \right) 
-            & = \frac{\sin \left( \sfrac{\pi}{2} - u \right)}{\cos \left( \sfrac{\pi}{2} - u \right)} \\
-            & = \frac{\cos u}{\sin u} \\
-            & = \cot u \\
+          \frac{\tan 73 \dg + \tan 13 \dg}{1 - \tan 73 \dg \tan 13 \dg} 
+            &= \tan (73 \dg - 13 \dg) \\
+            &= \tan 60 \dg \\
+            &= \boxed{ \sqrt{3} } \\
         \end{align*}
+        
+      % \item[19] 
+      %   \begin{align*}
+      %     \sin \left( \frac{\pi}{2} - u \right) & = \sin \frac{\pi}{2} \cos u - \cos \frac{\pi}{2} \sin u \\
+      %                                           & = \cos u \\
+      %     \\
+      %     \cos \left( \frac{\pi}{2} - u \right) & = \cos \frac{\pi}{2} \cos u + \sin \frac{\pi}{2} \sin u \\
+      %                                           & = \sin u \\
+      %     \\
+      %     \tan \left( \frac{\pi}{2} - u \right) 
+      %       & = \frac{\sin \left( \sfrac{\pi}{2} - u \right)}{\cos \left( \sfrac{\pi}{2} - u \right)} \\
+      %       & = \frac{\cos u}{\sin u} \\
+      %       & = \cot u \\
+      %   \end{align*}
 
       \item[23] 
         \begin{align*}
@@ -249,7 +271,8 @@
       \item[37] 
         \begin{align*}
           & \frac{\sin(x + y) - \sin(x - y)}{\cos(x + y) + \cos(x - y)} \\
-          & = \frac{(\sin x \cos y + \cos x \sin y) - (\sin x \cos y - \cos x \sin y)}{(\cos x \cos y - \sin x \sin y) + (\cos x \cos y + \sin x \sin y)} \\
+          & = \frac{(\sin x \cos y + \cos x \sin y) - (\sin x \cos y - \cos x \sin y)}
+                   {(\cos x \cos y - \sin x \sin y) + (\cos x \cos y + \sin x \sin y)} \\
           & = \frac{\sin x \cos y + \cos x \sin y - \sin x \cos y + \cos x \sin y}{\cos x \cos y - \sin x \sin y + \cos x \cos y + \sin x \sin y} \\
           & = \frac{2 \cos x \sin y}{2 \cos x \cos y} \\
           & = \tan y \\
@@ -257,13 +280,16 @@
 
       \item[38] 
         \begin{align*}
-          \cos(x + y) \cos(x - y) & = ( \cos x \cos y - \sin x \sin y )( \cos x \cos y + \sin x \sin y ) \\
-                                  & = \cos^2 x \cos^2 y - \sin^2 x \sin^2 y \\
-                                  & = \cos^2 x \left( 1 - \sin^2 y \right) - \sin^2 x \sin^2 y \\
-                                  & = \cos^2 x - \cos^2 x \sin^2 y  - \sin^2 x \sin^2 y \\
-                                  & = \cos^2 x - \sin^2 y \left( \cos^2 x + \sin^2 x \right) \\
-                                  & = \cos^2 x - \sin^2 y \\
+          \cos(x + y) & \cos(x - y)  \\
+                      & = ( \cos x \cos y - \sin x \sin y )( \cos x \cos y + \sin x \sin y ) \\
+                      & = \cos^2 x \cos^2 y - \sin^2 x \sin^2 y \\
+                      & = \cos^2 x \left( 1 - \sin^2 y \right) - \sin^2 x \sin^2 y \\
+                      & = \cos^2 x - \cos^2 x \sin^2 y  - \sin^2 x \sin^2 y \\
+                      & = \cos^2 x - \sin^2 y \left( \cos^2 x + \sin^2 x \right) \\
+                      & = \cos^2 x - \sin^2 y \\
         \end{align*}
+
+      \pagebreak
 
       \item[41] 
         find k:
