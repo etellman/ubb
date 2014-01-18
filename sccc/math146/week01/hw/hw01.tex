@@ -18,74 +18,96 @@
 \newcommand{\degree}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
-% \printanswers
+% printanswers
 
 \ifprintanswers 
   \usepackage{2in1, lscape} 
 \fi
-
+\title{Statistics \\ Homework One}
 \author{}
 \date{January 22, 2014}
-\title{Statistics \\ Homework One}
 
 \begin{document}
 
   \maketitle
-  \section{Chapter One Homework}
-
-  \begin{itemize*}
-    \item read Chapter 1 
-    \item answer the questions in ``Check Your Skills'' and check the answers in the back of the book
-    \item hand in exercises 23-24, 26, 28, 30-32, 34, 39-41
-  \end{itemize*}
 
   \ifprintanswers
-    \section{Chapter 1}
+  \else
+    \begin{itemize}
+      \item read Chapter 1 
+      \item answer the questions in ``Check Your Skills.''  Check your answers in the back of the book, but you don't
+        have to hand this in.
+      \item do exercises: 23-26, 29-35, 37, 39-41, 44-45 (hand in next week)
+    \end{itemize}
+  \fi
+
+  \ifprintanswers
     \begin{description}
       \item[23]
         \begin{parts}
-          \part categorical
-          \part categorical
-          \part quantitative
-          \part categorical
-          \part quantitative
+          \part Laurie Abrams, Gordon Brown, Maria Cabrera and Miranda Ismael 
+
+          \part
+          \begin{tabular}[H]{ll}
+            \toprule
+            Variable         & Type \\
+            \midrule
+            Medical School   & categorical \\
+            Sex              & categorical \\
+            Age              & quantitative \\
+            USMILE           & quantitative \\
+            Specialty sought & categorical \\
+            \bottomrule
+          \end{tabular}
         \end{parts}
 
       \item[24]
         \begin{parts}
-          \part David Ortiz, Laynce Nix, Antonio Perez, Mike Piazza, and Scott Rolen
-          \part team, position, age, height, weight, salary
-          \part years, feet and inches, pounds, dollars
+          \part categorical
+          \part categorical
+          \part quantitative
+          \part categorical
+          \part quantitative
         \end{parts}
 
-      \pagebreak
+      \item[25]
+          \[
+            other = 100 - 19 - 18 - 16 - 13 - 12 - 12 - 5 = 5
+          \]
+
+          \begin{figure}[H]
+            \centering
+            \includegraphics{figures/ex25.eps}
+            \caption{Exercise 25}
+          \end{figure}
 
       \item[26]
-        To create a pie chart, you would also need to know the number of deaths from all other causes.
+        The data show the percentage of each age group that bought music.  A pie chart might show what percentage of
+        the total online music market went to each age group, which is a completely different set of numbers.
 
         \begin{figure}[H]
           \centering
-          \includegraphics[scale = 0.7]{ex26.eps}
+          \includegraphics{figures/ex26.eps}
           \caption{Exercise 26}
         \end{figure}
 
-      \item[28]
-        \begin{parts}
-          \part
-            \begin{figure}[H]
-              \centering
-              \includegraphics[scale = 0.7]{ex28.eps}
-              \caption{Exercise 28}
-            \end{figure}
+      \pagebreak
 
-            The main feature of the data is that people watch fewer movies as they get older.
+      \item[29]
+        \begin{figure}[H]
+          \centering
+          \includegraphics{figures/ex29a.eps}
+          \caption{Exercise 29 Ordered Alphabetically}
+        \end{figure}
 
-          \part no--the graph shows the percentage of each age group, not percentages of a single total number of people
-
-          \part To answer this question you would need to know how many are in each age group.
-        \end{parts}
+        \begin{figure}[H]
+          \centering
+          \includegraphics{figures/ex29b.eps}
+          \caption{Exercise 29 Ordered by Percentage}
+        \end{figure}
 
       \item[30]
+      \pagebreak
         \begin{parts}
           \part
             \begin{itemize*}
@@ -102,6 +124,13 @@
 
       \item[31]
         \begin{parts}
+          \part The shape is symmetric with a center around 110.  Ignoring the outliers, the spread is 50 (86 to 136).
+
+          \part 64 out of 78 or 82\% of the students had scores over 100.
+        \end{parts}
+
+      \item[32]
+        \begin{parts}
           \part Ignoring the outliers, the shape looks symmetric.
 
           \part The center seems to be around 2\%.
@@ -111,7 +140,7 @@
           \part About a third of the months had a return less than zero.
         \end{parts}
 
-      \item[32]
+      \item[33]
         \begin{enumerate}
           \item Graph b and graph c both have two choices.  The number of females/males is probably more even than the
             number of left handed/right handed, so graph c is the female/male graph.
@@ -126,80 +155,108 @@
 
       \item[34]
         \begin{parts}
+          \part
+            \begin{figure}[H]
+              \centering
+              \includegraphics{figures/ex34.eps}
+              \caption{Exercise 34}
+            \end{figure}
+
+          \part The distribution is left-skewed.  Most of the oils have a low ratio.
+
+          \part All the fish oils have ratios greater than or equal to 2 which makes them pretty healthy.
+
+        \end{parts}
+
+      \pagebreak
+
+      \item[35]
+        \begin{parts}
           \part Since the states have varying numbers of people, it's more interesting to know the ratio of doctors to
           people than the total number of doctors.
 
           \part 
             \begin{figure}[H]
               \centering
-              \includegraphics[scale = 0.7]{ex34.eps}
-              \caption{Exercise 34}
+              \includegraphics{figures/ex35.eps}
+              \caption{Exercise 35}
             \end{figure}
 
             The histogram is right-skewed with a center around 230.  Washington DC is an outlier, probably because
-            it is a city instead of a state.
+            it is a city and not a state.
 
         \end{parts}
 
+      \item[37]
+        \begin{figure}[H]
+          \centering
+          \includegraphics{figures/ex37.eps}
+          \caption{Exercise 37}
+        \end{figure}
+
+        The histogram is left-skewed with a center around 1000. and a spread of 3000, ignoring the one outlier.  1987
+        was an outlier. 
+
       \item[39]
+        \begin{figure}[H]
+          \centering
+          \includegraphics{figures/ex39.eps}
+          \caption{Exercise 39}
+        \end{figure}
+
+        The fish recruitment increased until 1989 and then declined.
+
+      \item[40]
         \begin{parts}
           \part You would expect the categories with the most drivers to have the most accidents, regardless of any
-          effect pot might have on the accident rate.  
+          effect pot might have.  
 
           \part 
             \begin{figure}[H]
               \centering
-              \includegraphics[scale = 0.7]{ex39.eps}
-              \caption{Exercise 39}
+              \includegraphics{figures/ex40.eps}
+              \caption{Exercise 40}
             \end{figure}
+
+            It looks like the pot smokers tend to get in more car accidents.
 
         \end{parts}
 
-      \item[40]
+      \item[41]
         Most coins you would find would probably have been made in the last decade.  However, coins have a long life, so
         you might find a few coins which are 40 or 50 years old.
 
-      \item[41]
-        The important points are:
-        \begin{itemize*}
-          \item Toyota is consistently better than GM, but the gap has narrowed slightly since 1998.
-          \item Toyota improved substantially between 1998 and 2000 and has been relatively constant since then.
-          \item GM improved substantially between 1998 and 2002 and has been relatively constant since then.
-        \end{itemize*}
-
-        \begin{figure}[H]
-          \centering
-          \includegraphics[scale = 0.7]{ex41.eps}
-          \caption{Exercise 41}
-        \end{figure}
-
-      \item[41]
-        In each year, the prices are highest around July and lowest around January.  There is a long term year over year increase in
-        the prices.
-
       \item[44]
         \begin{parts}
+          \part In each year, the prices are highest around July and lowest around January.  
+          
+            \part There is a long term year over year increase in the prices.
+
+            \part Prices plummeted in 2007
+
+        \end{parts}
+
+      \item[45]
+        \begin{parts}
           \part
-            The center is around 10.  About half the years had less than 10 attacks and about half the years had 10 or more
-            attacks.  The data is right skewed--there are a few years with more than 20 attacks and, of course, no years
-            with less than zero attacks.
+            The center is around 13.  About half the years had less than 13 attacks and about half the years had 13 or more
+            attacks.  
 
             \begin{figure}[H]
               \centering
-              \includegraphics[scale = 0.7]{ex44Histogram.eps}
-              \caption{Attacks Histogram}
+              \includegraphics{figures/ex45a.eps}
+              \caption{Exercise 45a}
             \end{figure}
 
           \part
-            There were 6 years with 0-4 attacks but they all occurred before 1986.  There were 15 years with more than 10
-            attacks, and they all occurred after 1986.  If you are interested in what's likely to happen in 2006, you should
-            pay attention to the more recent numbers and ignore the data from 20 years ago.
-
             \begin{figure}[H]
               \centering
-              \includegraphics[scale = 0.7]{ex44Time.eps}
-              \caption{Attacks by Time}
+              \includegraphics{figures/ex45b.eps}
+              \caption{Exercise 45b}
             \end{figure}
+
+            14 of the 21 years between 1986 and 2007 had more than 13 attacks per year.
+
         \end{parts}
 
 
@@ -209,15 +266,11 @@
     \vspace{11 cm}
     \begin{quote}
       \begin{em}
-        Even voting for the right is doing nothing for it. It is only expressing to men feebly your desire that it
-        should prevail. 
-        % A wise man will not leave the right to the mercy of chance, nor wish it to prevail through the power of the
-        % majority. There is but little virtue in the action of masses of men. When the majority shall at length vote for
-        % the abolition of slavery, it will be because they are indifferent to slavery, or because there is but little
-        % slavery left to be abolished by their vote. 
+        A nation that continues year after year to spend more money on military defense than on programs of social
+        uplift is approaching spiritual doom.
       \end{em}
     \end{quote}
-    \hspace{1 cm} --Henry David Thoreau
+    \hspace{1 cm} --Martin Luther King
   \fi
 
 \end{document}

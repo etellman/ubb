@@ -9,6 +9,7 @@
 \usepackage{caption}
 \usepackage{mdwlist}
 \usepackage{parskip}
+\usepackage{booktabs}
 
 \newcommand{\degree}{\ensuremath{^\circ}} 
 
@@ -16,33 +17,148 @@
 \setlength{\mathindent}{1 cm}
 
 \title{Introduction to Statistics}
-\author{Ed Tellman}
+\author{University Beyond Bars}
 \date{\today}
 
 \begin{document}
 
   \maketitle
 
-  \section{Overview}
-  This course will cover parts I and II of {\em The Basic Practice}, by David Moore.  
+  \section{Textbook}
+  The course will cover parts I through III of {\em The Basic Practice of Statistics}, by David Moore.  
 
-  This course assumes that you are familiar with basic math concepts like fractions and percentages.  No other math is
-  required.
+  \section{Prerequisites}
+  You should be familiar with basic math concepts including fractions, percentages and square roots.  No other math
+  background is required.
 
   \section{Homework and Exams}
 
   You should expect to spend three or four hours each week doing homework.  Feel free to work together with other students
   on the homework.
 
-  Each chapter will be followed by an in-class test.  
+  Each part from the textbook will be followed by an in-class test.  There will also be a final exam which covers both parts.
+
+  \section{Calculators}
+  A calculator will be required for some of the homework.  A very basic calculator which can do square roots will be
+  adequate.  A slightly fancier calculator which can also compute standard deviation and mean will speed things up for
+  some of the homework.
+
+  If you don't have a calculator, UBB has some calculators you can check out during Saturday study hall.  
+
+  The book also has some problems which really require a computer instead of a calculator, but I'll try to not assign
+  any of these.  Usually they're possible to do with a calculator, but so time consuming that a reasonable person
+  wouldn't want to bother.  
 
   \section{Credit}
   Unfortunately we don't have a way to get college credit for this course today.  We're working with Seattle Central to
   provide some way for students to test out of math 146 in the future, but can't promise anything.
 
-  \section{Topics}
+  \section{Overview}
+  Statistics is a set of tools for making sense out of large numbers of numbers.  
 
-  \subsection{Part I--Exploring Data}
+  For example, if you manage a fantasy football team, not that you do, of course, you might want to compare two
+  quarterbacks for draft purposes.  Since what matters is what they've done recently, you would want to look at the
+  numbers for the last season.
+
+  The things you might want to consider include:
+  \begin{itemize*}
+    \item number of completions
+    \item number of interceptions
+    \item number of touchdowns
+    \item number of attempts
+    \item total passing yards
+  \end{itemize*}
+
+  Comparing all the numbers individually for two quarterbacks is difficult.  Drew Brees has the largest total number of
+  passing yards, but this is because he also has nearly the top number of attempts.  Eli Manning has a decent number of
+  passing yards, but way too many interceptions and not enough touchdowns.
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rlrrrrrrrrrr}
+      \toprule
+      Rk & Player             & Comp & Att & Pct  & Att/G & Yds   & Avg & Yds/G & TD & Int & Sck \\
+      \midrule 
+      1  & Drew Brees         & 446  & 650 & 68.6 & 40.6  & 5,162 & 7.9 & 322.6 & 39 & 12  & 37   \\
+      2  & Matthew Stafford   & 371  & 634 & 58.5 & 39.6  & 4,650 & 7.3 & 290.6 & 29 & 19  & 23  \\
+      3  & Matt Ryan          & 439  & 651 & 67.4 & 40.7  & 4,515 & 6.9 & 282.2 & 26 & 17  & 44  \\
+      4  & Carson Palmer      & 362  & 572 & 63.3 & 35.8  & 4,274 & 7.5 & 267.1 & 24 & 22  & 41  \\
+      5  & Tony Romo          & 342  & 535 & 63.9 & 35.7  & 3,828 & 7.2 & 255.2 & 31 & 10  & 35  \\
+      6  & Eli Manning        & 317  & 551 & 57.5 & 34.4  & 3,818 & 6.9 & 238.6 & 18 & 27  & 39  \\
+      7  & Cam Newton         & 292  & 473 & 61.7 & 29.6  & 3,379 & 7.1 & 211.2 & 24 & 13  & 43  \\
+      8  & Russell Wilson     & 257  & 407 & 63.1 & 25.4  & 3,357 & 8.2 & 209.8 & 26 & 9   & 44   \\
+      9  & Robert Griffin III & 274  & 456 & 60.1 & 35.1  & 3,203 & 7   & 246.4 & 16 & 12  & 38  \\
+      10 & Colin Kaepernick   & 243  & 416 & 58.4 & 26    & 3,197 & 7.7 & 199.8 & 21 & 8   & 39  \\
+      \bottomrule 
+    \end{tabular}
+    \caption{Quarterbacks ordered by total yards}
+  \end{table}
+
+  The NFL very helpfully hired some football playing statisticians and came up with a formula for an overall quarterback
+  rating.  The quarterback rating provides a single number which summarizes completions, attempts, touchdowns, and
+  interceptions.  
+
+  You can easily compare two quarterbacks, just by looking at their rating.
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rlr}
+      \toprule
+      Rk & Player             &  Rate \\
+      \midrule 
+      1  & Drew Brees         &  104.7 \\
+      2  & Russell Wilson     &  101.2 \\
+      3  & Tony Romo          &  96.7 \\
+      4  & Colin Kaepernick   &  91.6 \\
+      5  & Matt Ryan          &  89.6 \\
+      6  & Cam Newton         &  88.8 \\
+      7  & Matthew Stafford   &  84.2 \\
+      8  & Carson Palmer      &  83.9 \\
+      9  & Robert Griffin III &  82.2 \\
+      10 & Eli Manning        &  69.4 \\
+      \bottomrule 
+    \end{tabular}
+    \caption{Quarterbacks ordered by NFL passer rating}
+  \end{table}
+
+  Drew Brees still comes out on top, but now you can see that Russell Wilson is also quite valuable, even though his
+  total number of passing yards isn't particularly high.
+
+  Of course, you might not agree with the NFL's formula.  The people at ESPN came up with their own formula which puts
+  the quarterbacks in a different order:
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rlr}
+      \toprule
+      Rk & Player           & QBR \\
+      \midrule 
+      1  & Josh McCown      & 85.1 \\
+      2  & Drew Brees       & 70.5 \\
+      3  & Nick Foles       & 69 \\
+      4  & Aaron Rodgers    & 68.7 \\
+      5  & Colin Kaepernick & 68.6 \\
+      6  & Jay Cutler       & 66.4 \\
+      7  & Matt Ryan        & 61.1 \\
+      8  & Tony Romo        & 59.5 \\
+      9  & Russell Wilson   & 58.9 \\
+      10 & Cam Newton       & 56.2 \\
+      \bottomrule 
+    \end{tabular}
+    \caption{Quarterbacks ordered by QBR}
+  \end{table}
+
+  In addition to talking about football, some of the other things we'll discuss are:
+
+  \begin{itemize*}
+    \item visualizing data with graphs
+    \item summarizing data by finding central tendency and spread
+    \item sampling and making inferences about a population from a sample
+    \item prison statistics
+    \item probability
+    \item basketball
+  \end{itemize*}
+  
 
 \end{document}
 
