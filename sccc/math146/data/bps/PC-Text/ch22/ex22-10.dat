@@ -1,0 +1,9 @@
+Age	Phone	Count
+Age18-29	Landline	108
+Age30-49	Landline	264
+Age50-64	Landline	202
+Age65up	Landline	178
+Age18-29	CellOnly	96
+Age30-49	CellOnly	70
+Age50-64	CellOnly	26
+Age65up	CellOnly	8
