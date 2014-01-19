@@ -49,14 +49,14 @@
 
   \begin{table}[H]
     \centering
-    \begin{tabular}{lll}
+    \begin{tabular}{rlrrr}
       \toprule
-      Death     & Not Death  & Total \\
+      & Cases & DP & Percent \\
       \midrule
-      36 (12\%) & 270 (88\%) & 306 \\
-       \bottomrule
+      & 306   & 36 & 12 \\
+     \bottomrule
     \end{tabular}
-    \caption{Ignoring race}
+    \caption{All Cases}
   \end{table}
 
   \subsection{By Defendant Race}
@@ -65,12 +65,12 @@
 
   \begin{table}[H]
     \centering
-    \begin{tabular}{llll}
+    \begin{tabular}{rlrrr}
       \toprule
-      Defendant & Death     & Not Death  & Total \\
+        & Defendant & Cases & DP & Percent \\
       \midrule
-      black     & 17 (10\%) & 149 (90\%) & 166 \\
-      white     & 19 (14\%) & 121 (86\%) & 140 \\
+      1 & black     & 166   & 17 & 10 \\
+      2 & white     & 140   & 19 & 14 \\
       \bottomrule
     \end{tabular}
     \caption{By defendant race}
@@ -82,63 +82,38 @@
 
   \begin{table}[H]
     \centering
-    \begin{tabular}{llll}
-      \toprule
-      Victim & Death     & Not Death & Total \\
-      \midrule
-      black  & 6 (6\%)   & 97 (94\%) & 103 \\
-      white  & 11 (17\%) & 52 (83\%) & 63 \\
-      \bottomrule
+    \begin{tabular}{rllrrr}
+      \hline
+          & Defendant & Victim & Cases & DP & Percent \\
+       1  & black     & black  & 103   & 6  & 6 \\
+       2  & black     & white  & 63    & 11 & 17 \\
+       3  & white     & black  & 9     & 0  & 0 \\
+       4  & white     & white  & 131   & 19 & 15 \\
+       \hline
     \end{tabular}
-    \caption{Black Defendant}
+    \caption{By defendant race}
   \end{table}
 
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{llll}
-      \toprule
-      Victim & Death     & Not Death  & Total \\
-      \midrule
-      black  & 0 (0\%)   & 9 (100\%)  & 9 \\
-      white  & 19 (15\%) & 112 (85\%) & 131 \\
-      \bottomrule
-    \end{tabular}
-    \caption{White Defendant}
-  \end{table}
-
-  \subsection{By Victim}
+  \subsection{By Victim Race}
 
   Cases with white victims are much more likely to result in the death penalty than cases with black victims.
   \begin{table}[H]
     \centering
-    \begin{tabular}{llll}
+    \begin{tabular}{rlrrr}
       \toprule
-      Victim & Death     & Not Death  & Total \\
+        & Victim & Cases & DP & Percent \\
       \midrule
-      black  & 6 (5\%)   & 106 (95\%) & 112 \\
-      white  & 30 (15\%) & 164 (85\%) & 194 \\
+      1 & black  & 112   & 6  & 5 \\
+      2 & white  & 194   & 30 & 15 \\
       \bottomrule
     \end{tabular}
   \end{table}
-
-  \subsection{Summary}
-  The race of the victim is an important factor in determining whether a case will result in the death penalty.  White
-  defendants get the death penalty at a higher rate than black defendants because people tend to kill people of the same
-  race.
 
   \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.9]{figures/death_penalty.eps}
     \caption{Death Penalty Summary}
   \end{figure}
-
-  \section{Course Areas}
-
-  \subsection{Graphs}
-
-  \subsection{Summary Statistics}
-
-  \subsection{Sampling and Data Gathering}
 
 \end{document}
 

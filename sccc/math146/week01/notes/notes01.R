@@ -4,43 +4,34 @@ library(xtable)
 
 # death penalty
 # apply your skills 6.8
-dp <- read.delim("data/death_penalty.dat", header = TRUE, sep = '\t')
+dp <- read.delim("death_penalty.dat", header = TRUE, sep = '\t')
 
-countByRace <- function(race) xtabs(data = subset(dp, defendant == race), count ~ victim + outcome)
-probabilityByRace <- function(race) prop.table(countByRace(race), 1)
-countByRaceWithTotals <- function(race) addmargins(countByRace(race), 2)
-
-blackDefendant <- probabilityByRace("black")
-whiteDefendant <- probabilityByRace("white")
-
-toFrame <- function(table, race) {
-  frame <- data.frame(table)
-  frame$defendant = c(race, race, race, race)
-
-  frame
+# percentage of cases that resulted in the death penalty
+death.percent <- function(df) {
+  round(100 * dp.count(df) / sum(df$count))
 }
 
-blackDefendantFrame <- toFrame(blackDefendant, "black")
-whiteDefendantFrame <- toFrame(whiteDefendant, "white")
+dp.count <- function(df) {
+  sum(subset(df, outcome == "death", select = count))
+}
 
-blackDefendantFrame
+dp.summary <- function(df) {
+  c(Cases = sum(df$count), DP = dp.count(df), "Percent" = death.percent(df))
+}
 
-allDefendents <- subset(rbind(blackDefendantFrame, whiteDefendantFrame), outcome == "death", c(defendant, victim, Freq))
+df <- ddply(dp, c(Victim = "victim"), dp.summary)
 
-plot <- ggplot(allDefendents, aes(x = reorder(victim, -Freq), y = Freq, fill = defendant)) + 
+df
+sink("~/Documents/U/ubb/sccc/math146/week01/notes/r.tex")
+xtable(df, digits = 0)
+sink()
+
+plot <- ggplot(df, aes(x = reorder(victim, -dp.percent), y = dp.percent, fill = defendant)) + 
   geom_bar(stat = "identity", position = "dodge", color = "black") +
-  scale_fill_grey() +
-  labs(x = "Victim", y = "Frequency")
+  labs(x = "Victim", y = "Death Penalty Percentage")
 print(plot)
 
-ggsave("death_penalty.eps", width = 5, height = 3)
-
-withMargins <- addmargins(dpTable, 2)
-percentages <- prop.table(dpTable, 1)
-
-xtable(withMargins, digits = 0)
-print(percentages, digits = 1)
-
+ggsave("~/Documents/U/ubb/sccc/math146/week01/notes/figures/death_penalty.eps", width = 5, height = 3)
 
 # prison population
 pbs <- read.delim("prisoners_by_state.txt", header = TRUE, sep = '\t')
@@ -67,13 +58,15 @@ print(plot)
 
 ggsave("la_rate.eps", width = 5, height = 3)
 
-plot <- ggplot(data = subset(pbs, year == 2010 & state != "District of Columbia"), aes(x = incarceration.rate)) + 
-  geom_histogram(fill = "lightblue", color = "black", binwidth = 100) +
+str(pbs)
+
+plot <- ggplot(data = subset(pbs, year == 2010 & state != "District of Columbia"), aes(x = prison.population / 1000)) + 
+  geom_histogram(fill = "lightblue", color = "black", binwidth = 1) +
   labs(x = "Incarceration Rate", y = "Number of States") +
   ggtitle("2010 Incarceration Rate")
 print(plot)
 
-ggsave("2010_rate_histogram.eps", width = 5, height = 3)
+ggsave("~/Documents/U/ubb/sccc/math146/week01/notes/figures/population_histogram_2010_small_bins.eps", width = 5, height = 3)
 
 ?read.delim
 
