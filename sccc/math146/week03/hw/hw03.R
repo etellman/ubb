@@ -19,20 +19,48 @@ print(plot)
 
 qgsave("~/Documents/U/ubb/sccc/math146/week03/hw/figures/ex28c.eps", width = 4, height = 2.5)
 
-# exercise 30
-qnorm(0.1, 100, 50)
-pnorm(5, 5.4, 0.54)
-pnorm((5 - 5.4)/0.54)
+# exercise 46
+ex46 <- read.delim("ex03-46.dat", header = TRUE, sep = '\t')
+str(ex46)
 
-z <- (750 - 499)/110
-round(z, digits = 4)
+plot <- ggplot(ex46, aes(x = IQ)) + 
+  geom_histogram(fill = "lightblue", color = "black", binwidth = 10) +
+  labs(x = "IQ", y = "Count") +
+  ggtitle("IQ")
+print(plot)
 
-round(1 - pnorm(750, 499, 110), digits = 4)
-round(1 - pnorm(2.2818), digits = 4)
+ggsave("~/Documents/U/ubb/sccc/math146/week03/hw/figures/ex46.eps", width = 4, height = 2.5)
 
-pnorm(500, 250, 175.78)
-round(qnorm(c(0.1, 0.9), 250, 175.78), digits = 2)
+iq <- ex46$IQ
 
-round((750 - 533)/116, digits = 4)
+round(mean(iq), digits = 2)
+round(sd(iq), digits = 2)
 
-(475-250)/1.28
+ex46.expected.1sd <- round( .68 * 31 )
+ex46.actual.1sd <- length(iq[mean(iq) - 1 * sd(iq) < iq & iq < mean(iq) + 1 * sd(iq)])
+
+ex46.expected.2sd <- round( .95 * 31 )
+ex46.actual.2sd <- length(iq[mean(iq) - 2 * sd(iq) < iq & iq < mean(iq) + 2 * sd(iq)])
+
+ex46.expected.1sd
+ex46.actual.1sd
+
+ex46.expected.2sd
+ex46.actual.2sd
+
+round(mean(iq) - 2 * sd(iq), digits = 2)
+
+# exercise 48
+ex48 <- c(4.33, 5.05, 5.44, 5.79, 6.81)
+diff(ex48)
+
+z1 <- round((5.05 - 5.43)/0.54, digits = 4)
+round(pnorm(z2), 4)
+
+z2 <- round((5.79 - 5.43)/0.54, digits = 4)
+round(pnorm(z2), 4)
+z2
+
+pnorm(5.05, 5.43, 0.54)
+pnorm(5.79, 5.43, 0.54)
+

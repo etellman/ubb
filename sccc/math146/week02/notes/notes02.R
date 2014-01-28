@@ -17,7 +17,8 @@ print(plot)
 
 wa.fulltime$field
 
-ggsave("~/Documents/U/ubb/sccc/math146/week02/notes/figures/wa_wage_histogram.eps", width = 6, height = 4)
+ggsave("~/Documents/U/ubb/sccc/math146/week02/notes/figures/wa_wage_histogram.eps", 
+       width = 6, height = 4)
 
 
 
@@ -42,7 +43,8 @@ plot <- ggplot(df,
   ggtitle("WA Education by Race")
 print(plot)
 
-ggsave("~/Documents/U/ubb/sccc/math146/week02/notes/figures/wa_education_by_race.eps", width = 6, height = 6)
+ggsave("~/Documents/U/ubb/sccc/math146/week02/notes/figures/wa_education_by_race.eps", 
+       width = 6, height = 6)
 
 education.stats <- ddply(wa.fulltime, c("education"), function(df) c(education.median.wage = median(df$wagp)))
 df <- join(wa.fulltime, education.stats)
@@ -65,7 +67,8 @@ sink("~/Documents/U/ubb/sccc/math146/week02/notes/r.tex")
   xtable(education.by.race, digits = 0)
 sink()
 
-ggsave("~/Documents/U/ubb/sccc/math146/week02/notes/figures/wa_age_by_sex.eps", width = 6, height = 5)
+ggsave("~/Documents/U/ubb/sccc/math146/week02/notes/figures/wa_age_by_sex.eps", 
+       width = 6, height = 5)
 
 df <- subset(wa.fulltime, wagp != 373000)
 df <- ddply(df, "field.of.study", function(df) extended.summary(df$wagp))
@@ -79,7 +82,8 @@ sink()
 df <- join(wa.fulltime, top.fields, by = "field.of.study")
 df <- subset(df, !is.na(field.of.study))
 
-df <- ddply(wa.fulltime, c("race"), function(df) c(degree.count = 100 * nrow(subset(df, schl >= 20)) / nrow(df)))
+df <- ddply(wa.fulltime, c("race"), 
+            function(df) c(degree.count = 100 * nrow(subset(df, schl >= 20)) / nrow(df))) 
 df <- subset(df, !is.na(race))
 
 plot <- ggplot(df, aes(x = reorder(race, degree.count), y = degree.count)) + 
@@ -97,5 +101,16 @@ plot <- ggplot(subset(wa.fulltime, field.of.study == "Computer Science" & wagp >
   ggtitle("CS Wages")
 print(plot)
 
-ggsave("~/Documents/U/ubb/sccc/math146/week02/notes/figures/wa_cs_wages.eps", width = 6, height = 4)
+ggsave("~/Documents/U/ubb/sccc/math146/week02/notes/figures/wa_cs_wages.eps", 
+       width = 6, height = 4)
 
+s <- sample(20, 15, replace = TRUE)
+s
+sd(c(0, 20, 40, 50, 60, 80, 100))
+sd(c(0, 48, 49, 50, 51, 52, 100))
+sd(c(0, 1, 2, 50, 98, 99, 100))
+sd(c(1, 1, 16))
+
+sink("~/Documents/U/ubb/sccc/math146/week02/notes/r.tex")
+  xtable(t(as.matrix(summary(s))))
+sink()
