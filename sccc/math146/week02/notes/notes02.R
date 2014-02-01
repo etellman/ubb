@@ -35,7 +35,8 @@ df <- subset(df, !is.na(race))
 plot <- ggplot(df, 
                # aes(x = 1, y = wagp / 1000)) + 
                aes(x = reorder(race, race.median.education), y = schl)) + 
-  geom_boxplot(color = "black", fill = "lightblue", outlier.shape = 21, outlier.size = 0) +
+  geom_boxplot(color = "black", fill = "lightblue", 
+               outlier.shape = 21, outlier.size = 0) +
   stat_summary(fun.y = "mean", geom = "point", shape = 23, size = 2, fill = "white") +
   labs(x = "", y = "School (years)") +
   scale_y_continuous(limits = c(10, 25)) +

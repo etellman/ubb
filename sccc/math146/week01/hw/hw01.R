@@ -52,7 +52,8 @@ plot <- ggplot(ex29, aes(x = reorder(Type, Pct), y = Pct)) +
   ggtitle("Spam")
 print(plot)
 
-ggsave("~/Documents/U/ubb/sccc/math146/week01/hw/figures/ex29b.eps", width = 4, height = 2.5)
+ggsave("~/Documents/U/ubb/sccc/math146/week01/hw/figures/ex29b.eps", 
+       width = 4, height = 2.5)
 
 # exercise 34
 ex34 <- read.delim("ta01-04.dat", header = TRUE, sep = '\t')
@@ -63,7 +64,8 @@ plot <- ggplot(ex34, aes(x = Ratio)) +
   ggtitle("Fatty Acids")
 print(plot)
 
-ggsave("~/Documents/U/ubb/sccc/math146/week01/hw/figures/ex34.eps", width = 4, height = 2.5)
+ggsave("~/Documents/U/ubb/sccc/math146/week01/hw/figures/ex34.eps", 
+       width = 4, height = 2.5)
 
 # exercise 35
 ex35 <- read.delim("ta01-05.dat", header = TRUE, sep = '\t')
@@ -74,7 +76,8 @@ plot <- ggplot(ex35, aes(x = MDs)) +
   ggtitle("Doctors")
 print(plot)
 
-ggsave("~/Documents/U/ubb/sccc/math146/week01/hw/figures/ex35.eps", width = 4, height = 2.5)
+ggsave("~/Documents/U/ubb/sccc/math146/week01/hw/figures/ex35.eps", 
+       width = 4, height = 2.5)
 
 # exercise 37
 ex37 <- read.delim("ex01-37.dat", header = TRUE, sep = '\t')
@@ -86,7 +89,8 @@ plot <- ggplot(ex37, aes(x = sole)) +
   ggtitle("Rock Sole")
 print(plot)
 
-ggsave("~/Documents/U/ubb/sccc/math146/week01/hw/figures/ex37.eps", width = 4, height = 2.5)
+ggsave("~/Documents/U/ubb/sccc/math146/week01/hw/figures/ex37.eps", 
+       width = 4, height = 2.5)
 
 # exercise 39
 ex39 <- read.delim("ex01-37.dat", header = TRUE, sep = '\t')
@@ -99,7 +103,8 @@ plot <- ggplot(ex39, aes(x = year, y = sole)) +
   ggtitle("Rock Sole")
 print(plot)
 
-ggsave("~/Documents/U/ubb/sccc/math146/week01/hw/figures/ex39.eps", width = 4, height = 2.5)
+ggsave("~/Documents/U/ubb/sccc/math146/week01/hw/figures/ex39.eps", 
+       width = 4, height = 2.5)
 
 # exercise 40
 ex40.pot = factor(c("Never", "1-10 Times", "11-50 Times", "51+ Times"))
@@ -108,6 +113,17 @@ ex40.accidents = c(59, 36, 15, 50)
 
 ex40 <- data.frame(pot = ex40.pot, drivers = ex40.drivers, accidents = ex40.accidents)
 str(ex40)
+
+?ddply
+rates <- ddply(ex40, "pot", function(df) df$accidents / df$drivers)
+rates <- merge(ex40, rates)
+
+rates <- rates[order(rates$V1),]
+edit(rates)
+
+sink("~/Documents/U/ubb/sccc/math146/week01/hw/r.tex")
+  xtable(rates, digits = 2)
+sink()
 
 plot <- ggplot(ex40, aes(x = reorder(pot, accidents / drivers), y = accidents / drivers)) + 
   geom_bar(stat = "identity", fill="lightblue", color = "black") +

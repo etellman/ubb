@@ -32,17 +32,15 @@
   \maketitle
 
   \section{Homework}
-  \ifprintanswers
-  \else
     \begin{itemize*}
       \item read Chapter 1 
       \item answer the questions in ``Check Your Skills.''  Check your answers
         in the back of the book, but you don't have to hand this in.
-      \item do exercises: 23-26, 29-35, 37, 39-41, 44-45 (hand in next week)
+      \item do exercises: 23-26, 29-35, 39-41, 44-45 (hand in next week)
     \end{itemize*}
-  \fi
 
   \ifprintanswers
+    \section{Solutions}
     \begin{description}
       \item[23]
         \begin{parts}
@@ -93,8 +91,6 @@
           \caption{Exercise 26}
         \end{figure}
 
-      \pagebreak
-
       \item[29]
         \begin{figure}[H]
           \centering
@@ -109,7 +105,6 @@
         \end{figure}
 
       \item[30]
-      \pagebreak
         \begin{parts}
           \part
             \begin{itemize*}
@@ -122,7 +117,7 @@
               \item The spread is from 0 servings to 8 servings.
             \end{itemize*}
 
-          \part 26 out of 74 or 30\% eat less than 2 servings per day
+          \part 26 out of 74 or 35\% eat less than 2 servings per day
         \end{parts}
 
       \item[31]
@@ -130,7 +125,7 @@
           \part The shape is symmetric with a center around 110.  Ignoring the
           outliers, the spread is 50 (86 to 136).
 
-          \part 64 out of 78 or 82\% of the students had scores over 100.
+          \part 62 out of 78 or 79\% of the students had scores over 100.
         \end{parts}
 
       \item[32]
@@ -139,26 +134,30 @@
 
           \part The center seems to be around 2\%.
 
-          \part The smallest return was around -12\% and the largest return was around 14\%.
+          \part The smallest return was around -12\% and the largest return was
+          around 12\%.
 
-          \part About a third of the months had a return less than zero.
+          \part About a third, or 33\% of the months had a return less than
+          zero.
         \end{parts}
 
+      \pagebreak
+
       \item[33]
-        \begin{enumerate}
-          \item Graph b and graph c both have two choices.  The number of
+        \begin{description}
+          \item[c] Graph b and graph c both have two choices.  The number of
             females/males is probably more even than the number of left
             handed/right handed, so graph c is the female/male graph.
 
-          \item graph b
+          \item[b] graph b
 
-          \item Graph d is evenly distributed around some average number, so
+          \item[d] Graph d is evenly distributed around some average number, so
             this is probably the height.
 
-          \item Graph a shows a bunch of people who don't study at all, with
+          \item[a] Graph a shows a bunch of people who don't study at all, with
             gradually diminishing numbers of people who study more hours per
             night.
-        \end{enumerate}
+        \end{description}
 
       \item[34]
         \begin{parts}
@@ -169,7 +168,8 @@
               \caption{Exercise 34}
             \end{figure}
 
-          \part The distribution is left-skewed.  Most of the oils have a low ratio.
+          \part The distribution is right-skewed.  Most of the oils have a low
+            ratio but there are a few outliers on the high end.
 
           \part All the fish oils have ratios greater than or equal to 2 which
           makes them pretty healthy.
@@ -196,15 +196,16 @@
 
         \end{parts}
 
-      \item[37]
-        \begin{figure}[H]
-          \centering
-          \includegraphics{figures/ex37.eps}
-          \caption{Exercise 37}
-        \end{figure}
+      % this problem asks you to do a split stem plot which doesn't make sense
+      % \item[37]
+      %   \begin{figure}[H]
+      %     \centering
+      %     \includegraphics{figures/ex37.eps}
+      %     \caption{Exercise 37}
+      %   \end{figure}
 
-        The histogram is left-skewed with a center around 1000. and a spread of
-        3000, ignoring the one outlier.  1987 was an outlier. 
+      %   The histogram is right-skewed with a center around 1000. and a spread of
+      %   3000, ignoring the one outlier.  1987 was an outlier. 
 
       \item[39]
         \begin{figure}[H]
@@ -219,6 +220,29 @@
         \begin{parts}
           \part You would expect the categories with the most drivers to have
           the most accidents, regardless of any effect pot might have.  
+
+          To find the accident rate per driver, divide the number of accidents in each
+          category by the number of drivers in each category.
+
+          \begin{table}[H]
+            \centering
+            \begin{tabular}{lrrr}
+              \toprule
+              Usage       & Drivers & Accidents & Rate \\
+              \midrule
+              Never       & 452.00  & 59.00     & 0.13 \\
+              1-10 Times  & 229.00  & 36.00     & 0.16 \\
+              11-50 Times & 70.00   & 15.00     & 0.21 \\
+              51+ Times   & 156.00  & 50.00     & 0.32 \\
+              \bottomrule
+            \end{tabular}
+          \end{table}
+
+          It isn't part of the question, but it's also interesting that the 11-50
+          category has so few drivers.  Probably there are quite a few people who never
+          smoke pot, quite a few who smoke occasionally at parties, and then a decent
+          number of regular pot smokers.  There aren't many in the intermediate 11-50
+          category.
 
           \part 
             \begin{figure}[H]
@@ -265,7 +289,7 @@
               \caption{Exercise 45b}
             \end{figure}
 
-            14 of the 21 years between 1986 and 2007 had more than 13 attacks per year.
+            16 of the 21 years between 1986 and 2007 had more than 13 attacks per year.
 
         \end{parts}
 

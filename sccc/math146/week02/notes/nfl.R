@@ -29,7 +29,8 @@ plot <- ggplot(sea.completions, aes(x = YDS)) +
   geom_histogram(binwidth = 2, color = "black", fill = "lightblue") +
   labs(x = "Yards", y = "Plays") +
   # scale_x_continuous(limits = c(-10, 20)) +
-  ggtitle("Completions")
+  ggtitle("Completions") +
+  theme_grey( base_size = 16, base_family ="Times")
 print(plot)
 
 ggsave("completions_histogram.eps", width = 4, height = 2.5)

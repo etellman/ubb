@@ -10,7 +10,7 @@
 \usepackage{enumerate}
 \usepackage{graphicx}
 
-% \usepackage{2in1, lscape} 
+\usepackage{2in1, lscape} 
 
 \everymath{\displaystyle}
 
@@ -20,8 +20,69 @@
 
 \begin{document}
 
-\maketitle
-\tableofcontents
+  \maketitle
+  \tableofcontents
+  \section{Homework 1}
+
+  \begin{itemize}
+    \item Histograms are always counts on the y access and thing being counted on the x
+      axis.   A few people did bar chart of fish oil.
+
+    \item draw histogram of old coins
+
+    \item bigger bin size sometimes gives more information and takes less work
+  \end{itemize}
+
+  \section{Coin Flips}
+
+  Flip coin 10 times and count how many heads occur.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/coins/20_10.eps}
+    \caption{20 trials}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/coins/100_10.eps}
+    \caption{100 trials}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/coins/10000_10.eps}
+    \caption{10,000 trials}
+  \end{figure}
+
+  With 10,000 trials, all heads came up 8 times and all tails came up 7 times.
+
+  \begin{table}[ht]
+    \centering
+    \begin{tabular}{rr}
+      \toprule
+      Min.    & 0.00 \\
+      1st Qu. & 4.00 \\
+      Median  & 5.00 \\
+      Mean    & 5.01 \\
+      3rd Qu. & 6.00 \\
+      Max.    & 10.00 \\
+      s       & 1.58441 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/coins/10000_10_percent.eps}
+    \caption{10,000 trials, percentages}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/coins/10000_100.eps}
+    \caption{10,000 trials, 100 flips per trial, percentages}
+  \end{figure}
 
   \section{Exercise 50}
   If you do a histogram with a bin width of 100, the distribution looks like there
