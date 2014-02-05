@@ -13,6 +13,8 @@
 
 \usepackage{2in1, lscape} 
 
+\printanswers
+
 \everymath{\displaystyle}
 
 \author{}
@@ -59,7 +61,7 @@
 
   With 10,000 trials, all heads came up 8 times and all tails came up 7 times.
 
-  \begin{table}[ht]
+  \begin{table}[H]
     \centering
     \begin{tabular}{rr}
       \toprule
@@ -186,7 +188,7 @@
   heads?''
 
   Table of z-scores to proportions:
-  \begin{table}[ht]
+  \begin{table}[H]
     \centering
     \begin{tabular}{rrr}
       \toprule
@@ -226,57 +228,135 @@
     \item subtract: $p = 0.9984 - 0.8371 = 0.1613$ or 16.13\%
   \end{itemize*}
 
-  \section{Rushing Yards}
+
+  \section{NFL}
+
+  \subsection{Rushing Yards per Game}
 
   \begin{figure}[H]
     \centering
-    \includegraphics{figures/rushes.eps}
-    \caption{Rushing yards with normal curve.}
+    \includegraphics{figures/nfl/rush_yds_per_game.eps}
+    \caption{Rushing yards per game.}
   \end{figure}
 
-  \begin{align*}
-    \mu    & =3.287859 \\
-    \sigma & = 3.839132
-  \end{align*}
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rr}
+      \toprule
+      summary.Min.    & -19.00 \\
+      summary.1st Qu. & 76.00 \\
+      summary.Median  & 107.00 \\
+      summary.Mean    & 113.70 \\
+      summary.3rd Qu. & 145.00 \\
+      summary.Max.    & 407.00 \\
+      sd              & 52.41 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
 
-  If you need 5 yards for a first down, how likely are you to get it with a running
-  play?
+  What fraction of the games does a team rush for 27 or fewer yards?
+  \begin{solution}
+    $0.0472$
+  \end{solution}
 
-  \begin{enumerate}
-    \item Compute z-score.  ($z_5 = 0.4459709$)
+  \subsection{Points per Game}
 
-    \item Use table A to find proportion less than this. ($p = 0.6722$)
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/nfl/pts_per_game_bw5.eps}
+    \caption{Points per game (bin width 5).}
+  \end{figure}
+  
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/nfl/pts_per_game.eps}
+    \caption{Points per game (bin width 7).}
+  \end{figure}
 
-    \item Subtract from 1 to get proportion greater: 32.78\%
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rr}
+      \toprule
+      summary.Min.    & 0.00 \\
+      summary.1st Qu. & 14.00 \\
+      summary.Median  & 21.00 \\
+      summary.Mean    & 21.47 \\
+      summary.3rd Qu. & 28.00 \\
+      summary.Max.    & 62.00 \\
+      sd              & 10.39 \\
+      \bottomrule
+    \end{tabular}
+    \caption{2000-2012 Statistics}
+  \end{table}
 
-    \item Model isn't perfect.  Actual result from all plays is 30\% (fraction of
-      rushing plays for more than 5 yards)
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rr}
+      \toprule
+      summary.Min. & 0.00 \\ 
+      summary.1st Qu. & 15.00 \\ 
+      summary.Median & 23.00 \\ 
+      summary.Mean & 22.89 \\ 
+      summary.3rd Qu. & 30.00 \\ 
+      summary.Max. & 59.00 \\ 
+      sd & 10.53 \\ 
+      \bottomrule
+    \end{tabular}
+    \caption{2012 Statistics}
+  \end{table}
 
-  \end{enumerate}
+  \begin{itemize}
+    \item What is the fraction of games in which one team scores at least 43 points?
+      \begin{solution}
+        $1 - 0.9759 = 0.0241$ or 2.5\%
+      \end{solution}
 
-  What percentage of running plays lose yards?
-  \begin{enumerate}
-    \item Compute z-score.  ($z_0 = -0.8564068$)
+    \item What is the fraction of games in which one team scores at 8 or less points?
+      \begin{solution}
+        $0.0975$ or 10\%
+      \end{solution}
 
-    \item Use table A to find proportion less than this. ($p = 0.1959$)
-
-    \item Actual result from all plays is 13\% 
-
-  \end{enumerate}
+    \item Offense is up in recent years.  What is the fraction of games in which one
+      team scores at 8 or less points (2012 only)?
+      \begin{solution}
+        $0.0787$
+      \end{solution}
+  \end{itemize}
 
   \section{Students}
-
   \begin{figure}[H]
     \centering
-    \includegraphics{figures/students/mean70.eps}
-    \caption{Hard test}
+    \includegraphics{figures/two_tests.eps}
+    \caption{Two tests}
   \end{figure}
 
-  \begin{figure}[H]
-    \centering
-    \includegraphics{figures/students/mean80.eps}
-    \caption{Easy test}
-  \end{figure}
+  \begin{itemize*}
+    \item $\mu = 70$ and $\sigma = 15$
+    \item $\mu = 60$ and $\sigma = 25$
+  \end{itemize*}
 
+  \begin{itemize*}
+    \item What does a score of 50 mean in each test?
+      \begin{solution}
+        \begin{itemize*}
+          \item 0.3446 on 60 mean test
+          \item 0.0912 on 75 mean test
+        \end{itemize*}
+      \end{solution}
+
+    \item What score do you need for 95th percentile in each test?
+      \begin{solution}
+        \begin{itemize*}
+          \item 101 on 60 mean test
+          \item 95 on 75 mean test
+        \end{itemize*}
+      \end{solution}
+
+    \item What does a score of 85 mean in each test?
+      \begin{solution}
+        $0.8413$ in both tests.  85 is one standard deviation above the mean in both
+        cases.
+      \end{solution}
+  \end{itemize*}
 \end{document}
 

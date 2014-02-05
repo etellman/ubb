@@ -87,8 +87,6 @@ score.80 <- as.data.frame(score.80)
 scores <- cbind(score.70, score.80)
 
 plot <- ggplot(NULL, aes(x = 0:120)) + 
-  # geom_histogram(aes(y = ..count../sum(..count..)), fill = "lightblue", 
-  #                color = "black", binwidth = 1) +
   stat_function(fun = dnorm, args = c(70, 15)) +
   stat_function(fun = dnorm, args = c(60, 25)) +
   labs(x = "Score", y = "Fraction") +
@@ -100,7 +98,8 @@ ggsave("~/Documents/U/ubb/sccc/math146/week03/notes/figures/two_tests.eps",
 
 ?dnorm
 
-qnorm(.10, 80, 10)
+round(qnorm(0.95, 60, 25), 4)
+round(qnorm(0.95, 70, 15), 4)
 
 sd(score.70$score.70)
 
@@ -110,48 +109,6 @@ ggsave("~/Documents/U/ubb/sccc/math146/week03/notes/figures/students/mean70.eps"
 # what is a score of 70 in each class?
 (95 - 80)/10
 
-# exercise 50
-ex50 <- read.delim("ex03-50.dat", header = TRUE, sep = '\t')
-str(ex50)
-ex50
-
-ex50.s <- round(summary(ex50$Rain))
-sd(ex50$Rain)
-
-round(qnorm(c(0.25, 0.5, 0.75), ex50.s["Mean"], sd(ex50$Rain)))
-ex50.s
-
-plot <- ggplot(ex50, aes(x = Rain)) + 
-  geom_histogram(fill = "lightblue", color = "black", binwidth = 20) +
-  labs(x = "Rain", y = "Years") +
-  ggtitle("Rain with Bin Width 20")
-print(plot)
-
-ggsave("~/Documents/U/ubb/sccc/math146/week03/hw/figures/ex50_histogram_20.eps", 
-       width = 4, height = 2.5)
-
-plot <- ggplot(ex50, aes(x = 1, y = Rain)) + 
-  geom_boxplot(color = "black", fill = "lightblue", outlier.shape = 21, 
-               outlier.size = 1.5) +
-  stat_summary(fun.y = "mean", geom = "point", shape = 23, size = 2, fill = "white") +
-  labs(x = "", y = "Rain") +
-  coord_flip() +
-  ggtitle("Rain Box Plot")
-print(plot)
-
-ggsave("~/Documents/U/ubb/sccc/math146/week03/hw/figures/ex50_box.eps", 
-       width = 4, height = 2.5)
-
-sink("~/Documents/U/ubb/sccc/math146/week03/hw/r.tex")
-xtable(as.matrix(ex50.s))
-sink()
-
-ex50.s["Median"] - ex50.s["1st Qu."]
-ex50.s["Median"] - ex50.s["3rd Qu."]
-
-ex50.s["Median"] - ex50.s["Min."]
-ex50.s["Median"] - ex50.s["Max."]
-
 # NFL
 
 rush <- read.delim("RUSH.csv", header = TRUE, sep = ',', strip.white = TRUE)
@@ -160,6 +117,7 @@ players <- read.delim("PLAYERS.csv", as.is = c(2, 3, 4), header = TRUE, sep 
 games <- read.delim("GAMES.csv", as.is = c(2, 3, 4), header = TRUE, sep = ',', 
                     strip.white = TRUE)
 core <- read.delim("CORE.csv", header = TRUE, sep = ',', strip.white = TRUE)
+team <- read.delim("TEAM.csv", header = TRUE, sep = ',', strip.white = TRUE)
 
 str(rush)
 
@@ -183,3 +141,54 @@ print(plot)
 
 ggsave("~/Documents/U/ubb/sccc/math146/week03/hw/figures/rushes.eps", 
        width = 4, height = 2.5)
+
+# NFL
+rush <- read.delim("rush.csv", header = TRUE, sep = ',')
+core <- read.delim("core.csv", header = TRUE, sep = ',')
+games <- read.delim("games.csv", header = TRUE, sep = ',')
+offense <- read.delim("offense.csv", header = TRUE, sep = ',')
+kickoffs <- read.delim("kickoffs.csv", header = TRUE, sep = ',')
+
+rush.and.game <- merge(rush, core, by = "PID")
+
+rushes.by.game <- ddply(rush.and.game, c("GID", "OFF"), 
+                         function(df) c(nrush = nrow(df), yds = sum(df$YDS)))
+
+nfl.summary <- function(stat) {
+  rbind(c(summary = summary(stat), sd = sd(stat)))
+}
+
+str(games)
+
+team.and.game <- merge(team, games, by = "GID")
+team.and.game.2012 <- subset(team.and.game, SEAS == 2012)
+
+str(team.and.game)
+
+kickoffs <- subset(kickoffs, KRY > 0)
+nfl.summary(team.and.game.2012$PTS)
+
+pnorm(8, 22.89, 10.53)
+
+sink("~/Documents/U/ubb/sccc/math146/week03/notes/r.tex")
+  xtable(t(nfl.summary(team.and.game.2012$PTS)))
+sink()
+
+plot <- ggplot(subset(rush, -10 < YDS & YDS < 15), aes(x = YDS)) + 
+  geom_histogram(binwidth = 1, fill = "lightblue", color = "black") +
+  labs(x = "Yards", y = "Games") +
+  ggtitle("Rushes")
+print(plot)
+
+ggsave("~/Documents/U/ubb/sccc/math146/week03/notes/figures/nfl/kickoff_returns.eps", 
+       width = 4, height = 2.5)
+
+plot <- ggplot(rushes.per.game, aes(x = yds)) + 
+  geom_histogram(aes(y = ..count../sum(..count..)), 
+                 fill = "lightblue", color = "black") +
+  # stat_function(fun = dnorm, 
+  #               args = c(mean(rushes.per.game$yds), sd(rushes.per.game$yds))) +
+  labs(x = "Statistic", y = "Percent") +
+  ggtitle("NFL")
+print(plot)
+
