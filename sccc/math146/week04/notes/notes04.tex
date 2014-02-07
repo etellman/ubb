@@ -10,7 +10,7 @@
 \usepackage{enumerate}
 \usepackage{graphicx}
 
-% \usepackage{2in1, lscape} 
+\usepackage{2in1, lscape} 
 
 \everymath{\displaystyle}
 
@@ -23,71 +23,33 @@
 \maketitle
 \tableofcontents
 
-  \section{Exercise 50}
-  If you do a histogram with a bin width of 100, the distribution looks like there
-  is a normal distribution.
+  \section{NFL}
 
-  \begin{figure}[H]
-    \centering
-    \includegraphics{figures/ex50_histogram_100.eps}
-    \caption{Exercise 50 Histogram (bin width 100)}
-  \end{figure}
+  \subsection{Passing Attempts vs. Yards}
 
-  Here's the five number summary:
-  \begin{table}[H]
+  \begin{table}[ht]
     \centering
-    \begin{tabular}{rr}
+    \begin{tabular}{lrrrrrrrrrr}
       \toprule
-      Min.    & 651 \\
-      1st Qu. & 788 \\
-      Median  & 861 \\
-      3rd Qu. & 905 \\
-      Max.    & 1020 \\
-      \bottomrule
-    \end{tabular}
-    \caption{Exercise 50 Summary}
-  \end{table}
-
-  The mean is smaller than the median:
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{rr}
-      \toprule
-      Mean    & 848 \\
-      Median  & 861 \\
-      \bottomrule
-    \end{tabular}
-    \caption{Exercise 50 mean and median}
-  \end{table}
-
-  The gaps are bigger on the low end:
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{lr}
-      \toprule
-      median to first quartile & 73 \\
-      median to third quartile & 44 \\
+      PA & 22  & 56  & 31  & 37  & 27  & 38  & 40  & 22  & 27  & 26 \\
+      PY & 100 & 428 & 206 & 169 & 206 & 207 & 284 & 208 & 261 & 220 \\
       \midrule
-      median to minimum & 210 \\
-      median to maximum & 159 \\
-      \bottomrule
+      PA & 20  & 50  & 27  & 53  & 28  & 34  & 39  & 57  & 35  & 46 \\
+      PY & 120 & 388 & 421 & 399 & 269 & 295 & 201 & 419 & 234 & 300 \\
+       \bottomrule
     \end{tabular}
-    \caption{Exercise 50 Gaps}
+    \caption{Passing attempts vs. yards}
   \end{table}
 
-  You can also see this in the box plot:
   \begin{figure}[H]
     \centering
-    \includegraphics{figures/ex50_box.eps}
-    \caption{Exercise 50 box plot}
+    \includegraphics{figures/nfl/passing_attempts_vs_yds.eps}
+    \caption{Passing attempts vs. yards}
   \end{figure}
 
-  A histogram with smaller bin width shows that the distribution is left skewed.
-  \begin{figure}[H]
-    \centering
-    \includegraphics{figures/ex50_histogram_20.eps}
-    \caption{Exercise 50 Histogram (bin width 20)}
-  \end{figure}
+  \[
+    c = 0.7225
+  \]
 
 \end{document}
 

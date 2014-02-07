@@ -110,7 +110,6 @@ ggsave("~/Documents/U/ubb/sccc/math146/week03/notes/figures/students/mean70.eps"
 (95 - 80)/10
 
 # NFL
-
 rush <- read.delim("RUSH.csv", header = TRUE, sep = ',', strip.white = TRUE)
 players <- read.delim("PLAYERS.csv", as.is = c(2, 3, 4), header = TRUE, sep = ',', 
                       strip.white = TRUE)
