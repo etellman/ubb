@@ -1,8 +1,10 @@
-library(ggplot2) 
-library(reshape)
-library(xtable)
-library(plyr)
+root.dir <- "~/Documents/U/ubb/sccc/math146"
+hw.dir <- paste(root.dir, "week02/hw", sep = "/")
+figures.dir <- paste(hw.dir, "figures", sep = "/")
 
+data.dir <- paste(root.dir, "data/bps/PC-Text/ch02", sep = "/")
+setwd(data.dir)
+ 
 # exercise 29
 ex29 <- read.delim("ta02-01.dat", header = TRUE, sep = '\t')
 str(ex29)
@@ -73,14 +75,15 @@ print(plot)
 ggsave("~/Documents/U/ubb/sccc/math146/week02/hw/figures/ex43.eps", width = 4, height = 2.5)
 
 # exercise 44
-ex44 <- read.delim("ta02-03.dat", header = TRUE, sep = '\t')
+ex44 <- read.delim("ex02-44.dat", header = TRUE, sep = '\t')
 str(ex44)
 
-ex44.summary <- ddply(ex44, "Odor", function(df) summary(df$Euros))
-ex44.summary <- subset(ex44.summary, select = c("Odor", "Median", "Mean"))
+ex44.summary <- as.data.frame(as.matrix(summary(ex44$Return)))
+ex44.summary
 
-sink("~/Documents/U/ubb/sccc/math146/week02/hw/r.tex")
-xtable(ex44.summary, digits = 0)
+hw.dir
+sink(paste(hw.dir, "r.tex", sep = "/"))
+  xtable(ex44.summary, digits = 2)
 sink()
 
 plot <- ggplot(ex44, aes(x = reorder(Odor, Euros), y = Euros)) + 
@@ -91,6 +94,26 @@ plot <- ggplot(ex44, aes(x = reorder(Odor, Euros), y = Euros)) +
 print(plot)
 
 ggsave("~/Documents/U/ubb/sccc/math146/week02/hw/figures/ex44.eps", width = 4, height = 2.5)
+
+# exercise 45
+ex45 <- read.delim("ta02-03.dat", header = TRUE, sep = '\t')
+str(ex45)
+
+ex45.summary <- ddply(ex45, "Odor", function(df) summary(df$Euros))
+ex45.summary <- subset(ex45.summary, select = c("Odor", "Median", "Mean"))
+
+sink("~/Documents/U/ubb/sccc/math146/week02/hw/r.tex")
+xtable(ex45.summary, digits = 0)
+sink()
+
+plot <- ggplot(ex45, aes(x = reorder(Odor, Euros), y = Euros)) + 
+  geom_boxplot(color = "black", fill = "lightblue", outlier.shape = 21, outlier.size = 1.5) +
+  stat_summary(fun.y = "mean", geom = "point", shape = 23, size = 2, fill = "white") +
+  labs(x = "Odor", y = "Euros") +
+  ggtitle("Restaurant Odors")
+print(plot)
+
+ggsave("~/Documents/U/ubb/sccc/math146/week02/hw/figures/ex45.eps", width = 4, height = 2.5)
 
 # exercise 50
 ex50 <- read.delim("../ch01/ta01-06.dat", header = TRUE, sep = '\t')
