@@ -156,8 +156,3 @@ round(cor(to.diff.s$to, to.diff.s$pts), 4)
 stats <- with(to.diff.s, cor.stats(to, pts))
 str(stats)
 
-?ddply
-
-n <- c(1,2,8,9,100)
-
-summary(n)
