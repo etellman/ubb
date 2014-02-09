@@ -86,11 +86,10 @@ sink(paste(hw.dir, "r.tex", sep = "/"))
   xtable(ex44.summary, digits = 2)
 sink()
 
-plot <- ggplot(ex44, aes(x = reorder(Odor, Euros), y = Euros)) + 
-  geom_boxplot(color = "black", fill = "lightblue", outlier.shape = 21, outlier.size = 1.5) +
-  stat_summary(fun.y = "mean", geom = "point", shape = 23, size = 2, fill = "white") +
-  labs(x = "Odor", y = "Euros") +
-  ggtitle("Restaurant Odors")
+plot <- ggplot(ex44, aes(x = Return)) + 
+  geom_histogram(binwidth = 5, fill = "lightblue", color = "black") +
+  labs(x = "Return", y = "Years") +
+  ggtitle("Exercise 44")
 print(plot)
 
 ggsave("~/Documents/U/ubb/sccc/math146/week02/hw/figures/ex44.eps", width = 4, height = 2.5)
@@ -141,3 +140,5 @@ plot <- ggplot(subset(ex50), aes(x = CO2)) +
 print(plot)
 
 ggsave("~/Documents/U/ubb/sccc/math146/week02/hw/figures/ex50.eps", width = 4, height = 2.5)
+
+summary(c(4,2,8,3,9))
