@@ -123,10 +123,6 @@ print(plot)
 file <- paste(figures.dir, "nfl/to_vs_pts.eps", sep = "/");
 ggsave(file, width = 4, height = 2.5)
 
-sink(paste(notes.dir, "r.tex", sep = "/"))
-  xtable(t(stats))
-  # xtable(as.matrix(nfl.stats), digits = 0)
-sink()
 
 mean.and.sd <- function(x) {
   c(m = mean(x), s = sd(x))
@@ -136,12 +132,27 @@ cor.stats <- function(x, y) {
   data.frame(t(c(x = mean.and.sd(x), y = mean.and.sd(y), c = round(cor(x, y), 4))))
 }
 
-to.diff.s
+str(to.diff.s)
+
+pts.scaled <- scale(to.diff.s$pts)
+to.scaled <- scale(to.diff.s$to)
+
+nrow(to.diff.s.scaled)
+
+to.diff.s.scaled <- cbind(to.diff.s, to.scaled, pts.scaled)
+
+to.diff.s.scaled <- subset(to.diff.s.scaled, select = -GID)
+
+str(to.diff.s.scaled)
 
 to.diff.s.m <- melt(to.diff.s, id = "GID")
-cast(to.diff.s.m, variable ~ ., function(x) c(m = mean(x), s = sd(x)))
+to.stats <- cast(to.diff.s.m, variable ~ ., function(x) c(m = mean(x), s = sd(x)))
 
-cor(to.diff.s$to, to.diff.s$pts)
+sink(paste(notes.dir, "r.tex", sep = "/"))
+  xtable(to.stats)
+sink()
+
+round(cor(to.diff.s$to, to.diff.s$pts), 4)
 stats <- with(to.diff.s, cor.stats(to, pts))
 str(stats)
 

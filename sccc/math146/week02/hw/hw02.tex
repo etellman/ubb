@@ -40,7 +40,7 @@
       \item read Chapter 2 
       \item answer the questions in ``Check Your Skills'' and check the answers
         in the back of the book
-      \item hand in exercises 25-27, 29-30, 37-39, 41-45, 50-51
+      \item hand in exercises 25-27, 29-30, 37-39, 41-43, 45, 50-51
     \end{itemize*}
   \fi
 
@@ -187,10 +187,10 @@
           \begin{tabular}{rr}
             \toprule
             Min.    & 380,000 \\
-            1st Qu. & 425,000 \\
+            1st Qu. & 424,500 \\
             Median  & 2,800,000 \\
             Mean    & 5,066,000 \\
-            3rd Qu. & 8,250,000 \\
+            3rd Qu. & 8,625,000 \\
             Max.    & 17,020,000 \\
             \bottomrule
           \end{tabular}
@@ -222,6 +222,7 @@
 
         Some interesting points are:
         \begin{itemize}
+          \item The mean return of around 13\% sounds pretty good.
           \item The mean is smaller than the median so the data is left skewed.
           \item About 25\% of the time the return is close to zero or worse
           \item The worst year (1974) was immediately followed by the best year
@@ -235,29 +236,29 @@
           \caption{Exercise 44}
         \end{figure}
 
-      \item[45]
-        \begin{table}[H]
-          \centering
-          \begin{tabular}{rlrr}
-            \toprule
-              & Odor     & Median & Mean \\
-            \midrule
-            1 & Lavender & 22     & 21 \\
-            2 & Lemon    & 18     & 18 \\
-            3 & No Odor  & 17     & 18 \\
-            \bottomrule
-          \end{tabular}
-          \caption{Exercise 45}
-        \end{table}
+      % \item[45]
+      %   \begin{table}[H]
+      %     \centering
+      %     \begin{tabular}{rlrr}
+      %       \toprule
+      %         & Odor     & Median & Mean \\
+      %       \midrule
+      %       1 & Lavender & 22     & 21 \\
+      %       2 & Lemon    & 18     & 18 \\
+      %       3 & No Odor  & 17     & 18 \\
+      %       \bottomrule
+      %     \end{tabular}
+      %     \caption{Exercise 45}
+      %   \end{table}
 
-        \begin{figure}[H]
-          \centering
-          \includegraphics{figures/ex45.eps}
-          \caption{Exercise 45}
-        \end{figure}
+      %   \begin{figure}[H]
+      %     \centering
+      %     \includegraphics{figures/ex45.eps}
+      %     \caption{Exercise 45}
+      %   \end{figure}
 
-        It looks like either odor makes people spend more money but lavender is
-        more effective than lemon.
+      %   It looks like either odor makes people spend more money but lavender is
+      %   more effective than lemon.
 
       \item[50]
         \begin{table}[H]
@@ -276,7 +277,6 @@
         \end{table}
 
         Since the mean is larger than the median, the distribution is right-skewed.
-
         According to the rule:
         \[
           outlier = 7.2 + 1.5 \cdot (7.2 - 0.975) \approx 16.54 \\
@@ -291,7 +291,13 @@
           \caption{Exercise 50}
         \end{figure}
 
-      \item[51] None of the players are outliers according to the formula.
+      \item[51] 
+        For a player to be an outlier, he would have to make more than:
+        \[
+          8,250,000 + (8,250,000 - 425,000) \cdot 1.5 = \$19,987,500
+        \]
+
+        None of the players makes this much.
 
     \end{description}
 

@@ -1,0 +1,153 @@
+\documentclass{exam}
+
+\usepackage{units} 
+\usepackage[fleqn]{amsmath}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+% \usepackage{2in1, lscape} 
+
+\everymath{\displaystyle}
+
+\author{}
+\title{Statistics \\ Week Four Data}
+\date{\today}
+
+\begin{document}
+
+  % \maketitle
+  % \tableofcontents
+
+  \section{Passing Attempts vs. Yards}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rlrr}
+      \toprule
+        &          & mean & sd \\
+      \midrule
+      1 & attempts & 36   & 12 \\
+      2 & yards    & 267  & 100 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Passing attempts/yards}
+  \end{table}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rrrrr}
+      \toprule
+         & \multicolumn{2}{c}{Raw} & \multicolumn{2}{c}{z-score } \\
+      \cmidrule(r){2-3} \cmidrule(r){4-5} 
+         & Attempts & Yards  & Attempts & Yards \\
+      \midrule
+      1  & 22.00    & 179.00 & -1.18    & -0.45 \\
+      2  & 39.00    & 269.00 & 0.95     & 0.56 \\
+      3  & 18.00    & 100.00 & -1.68    & -1.33 \\
+      4  & 19.00    & 126.00 & -1.55    & -1.04 \\
+      5  & 31.00    & 246.00 & -0.05    & 0.30 \\
+      6  & 30.00    & 314.00 & -0.18    & 1.06 \\
+      7  & 35.00    & 235.00 & 0.45     & 0.18 \\
+      8  & 42.00    & 297.00 & 1.33     & 0.87 \\
+      9  & 36.00    & 232.00 & 0.58     & 0.14 \\
+      10 & 33.00    & 204.00 & 0.20     & -0.17 \\
+      11 & 36.00    & 165.00 & 0.58     & -0.60 \\
+      12 & 36.00    & 440.00 & 0.58     & 2.46 \\
+      13 & 25.00    & 219.00 & -0.80    & 0.00 \\
+      14 & 39.00    & 220.00 & 0.95     & 0.01 \\
+      15 & 30.00    & 63.00  & -0.18    & -1.74 \\
+      16 & 37.00    & 228.00 & 0.70     & 0.10 \\
+      17 & 18.00    & 76.00  & -1.68    & -1.60 \\
+      18 & 45.00    & 332.00 & 1.70     & 1.26 \\
+      19 & 32.00    & 219.00 & 0.08     & 0.00 \\
+      20 & 25.00    & 217.00 & -0.80    & -0.02 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  % \begin{figure}[H]
+  %   \centering
+  %   \includegraphics{figures/nfl/passing_attempts_vs_yds.eps}
+  %   \caption{Passing attempts vs. yards}
+  % \end{figure}
+
+  % \[
+  %   c = 0.7225
+  % \]
+
+  \section{Turnover Differential}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rlrr}
+      \toprule
+        &           & mean  & s \\
+      \midrule
+      1 & turnovers & -0.03 & 2.41 \\
+      2 & points    & -1.12 & 18.39 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Turnover Summary}
+  \end{table}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rrrrr}
+      \toprule
+           & \multicolumn{2}{c}{Raw} & \multicolumn{2}{c}{z-score } \\
+      \cmidrule(r){2-3} \cmidrule(r){4-5} 
+      GID  & Turnovers & Points & Turnovers & Points\\
+      \midrule
+      369  & 2         & 4      & 0.84      & 0.28 \\
+      2796 & 0         & -3     & 0.01      & -0.10 \\
+      3322 & -4        & -18    & -1.65     & -0.92 \\
+      1702 & -2        & -6     & -0.82     & -0.27 \\
+      2467 & 1         & 2      & 0.42      & 0.17 \\
+      1909 & -5        & -20    & -2.06     & -1.03 \\
+      917  & 0         & -7     & 0.01      & -0.32 \\
+      1311 & 6         & 14     & 2.50      & 0.82 \\
+      146  & -2        & -8     & -0.82     & -0.37 \\
+      842  & 0         & 24     & 0.01      & 1.37 \\
+      1928 & -3        & -7     & -1.23     & -0.32 \\
+      2798 & -2        & -31    & -0.82     & -1.62 \\
+      962  & 3         & 19     & 1.25      & 1.09 \\
+      1791 & -2        & -11    & -0.82     & -0.54 \\
+      2184 & -2        & -34    & -0.82     & -1.79 \\
+      880  & 0         & 5      & 0.01      & 0.33 \\
+      2299 & 5         & 28     & 2.08      & 1.58 \\
+      1541 & 4         & 28     & 1.67      & 1.58 \\
+      136  & -3        & -16    & -1.23     & -0.81 \\
+      3433 & -1        & -35    & -0.40     & -1.84 \\
+      1813 & 0         & -24    & 0.01      & -1.24 \\
+      832  & 2         & 7      & 0.84      & 0.44 \\
+      790  & -1        & 3      & -0.40     & 0.22 \\
+      1727 & 2         & -4     & 0.84      & -0.16 \\
+      873  & 0         & 36     & 0.01      & 2.02 \\
+      151  & 3         & 14     & 1.25      & 0.82 \\
+      8    & 0         & 5      & 0.01      & 0.33 \\
+      2678 & -2        & -4     & -0.82     & -0.16 \\
+      2194 & -4        & -3     & -1.65     & -0.10 \\
+      3141 & 0         & -3     & 0.01      & -0.10 \\
+      3441 & 1         & -35    & 0.42      & -1.84 \\
+      1017 & -1        & -16    & -0.40     & -0.81 \\
+      2790 & -1        & -12    & -0.40     & -0.59 \\
+      2885 & 3         & 8      & 1.25      & 0.50 \\
+      3388 & 0         & 10     & 0.01      & 0.60 \\
+      3118 & 0         & 27     & 0.01      & 1.53 \\
+      86   & 1         & -7     & 0.42      & -0.32 \\
+      637  & 2         & 31     & 0.84      & 1.75 \\
+      3453 & 0         & 4      & 0.01      & 0.28 \\
+      2206 & -1        & -10    & -0.40     & -0.48 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Turnover Differential}
+  \end{table}
+
+
+\end{document}
+

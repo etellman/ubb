@@ -58,7 +58,12 @@ mean(big.states$PctFor)
 ex43 <- read.delim("ta02-02.dat", header = TRUE, sep = '\t')
 ex43.summary <- as.data.frame(as.matrix(summary(ex43$Salary)))
 
+ex43.summary
+
+8250000 + (8250000 - 425000) * 1.5
 ex43 <- cbind(ex43, rank = rank(-ex43$Salary))
+
+quantile(ex43$Salary, type = 6)
 
 sum(subset(ex43, rank <= 3, select = "Salary")) / sum(ex43$Salary)
 
@@ -141,4 +146,3 @@ print(plot)
 
 ggsave("~/Documents/U/ubb/sccc/math146/week02/hw/figures/ex50.eps", width = 4, height = 2.5)
 
-summary(c(4,2,8,3,9))
