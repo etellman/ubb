@@ -25,22 +25,62 @@
 
   \section{Homework}
 
-  \begin{description*}
-    \item[30]
-    \item[32] I didn't mean to assign such a tedious problem.  My bad.
-  \end{description*}
+  \begin{itemize*}
+    \item do problem 30
+    \item Sorry about problem 32. I didn't mean to assign such a tedious problem.  
+    \item Try to be a little more in depth with descriptions and analysis.
+  \end{itemize*}
 
   \section{NFL}
 
   \subsection{Passing Attempts vs. Yards}
+
+  \begin{table}[H]
+    \centering
+      \begin{tabular}{rrrrr}
+        \toprule
+           & \multicolumn{2}{c}{Raw} & \multicolumn{2}{c}{z-score } \\
+        \cmidrule(r){2-3} \cmidrule(r){4-5} 
+           & Attempts & Yards & Attempts & Yards \\
+        \midrule
+        1  & 17       & 70    & -1.80    & -1.86 \\
+        2  & 40       & 305   & 1.16     & 1.53 \\
+        3  & 34       & 248   & 0.39     & 0.71 \\
+        4  & 33       & 175   & 0.26     & -0.35 \\
+        5  & 40       & 266   & 1.16     & 0.96 \\
+        6  & 26       & 124   & -0.64    & -1.08 \\
+        7  & 24       & 138   & -0.90    & -0.88 \\
+        8  & 39       & 277   & 1.03     & 1.12 \\
+        9  & 21       & 144   & -1.28    & -0.79 \\
+        10 & 43       & 212   & 1.54     & 0.19 \\
+        11 & 33       & 209   & 0.26     & 0.14 \\
+        12 & 25       & 189   & -0.77    & -0.15 \\
+        13 & 33       & 286   & 0.26     & 1.25 \\
+        14 & 24       & 126   & -0.90    & -1.05 \\
+        15 & 33       & 217   & 0.26     & 0.26 \\
+        \bottomrule
+      \end{tabular}
+  \end{table}
+
+  \begin{table}[ht]
+    \centering
+    \begin{tabular}{rlrr}
+      \toprule
+        & variable & mean   & sd \\
+      \midrule
+      1 & pa       & 31.00  & 8.00 \\
+      2 & py       & 199.00 & 69.00 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  correlation coefficient: $r = 0.8450$
 
   \begin{figure}[H]
     \centering
     \includegraphics{figures/nfl/passing_attempts_vs_yds.eps}
     \caption{Passing attempts vs. yards}
   \end{figure}
-
-  correlation coefficient: 0.7225
 
   \subsection{Turnover Differential}
 
@@ -50,6 +90,6 @@
     \caption{Turnovers vs. Points}
   \end{figure}
 
-  correlation coefficient: 0.5808
+  correlation coefficient: $r = 0.5808$
 \end{document}
 

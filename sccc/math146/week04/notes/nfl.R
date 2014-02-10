@@ -35,14 +35,6 @@ visitor.offense.s <- visitor.offense[sample(nrow(visitor.offense), 50),]
 
 visitor.defense.s
 
-plot <- ggplot(visitor.offense.s, aes(x = fpts, y = ptsv)) + 
-  geom_point() +
-  labs(x = "Offense Fantasy Points", y = "Offense Points") +
-  ggtitle("Offense Fantasy Points vs. Offense Points")
-print(plot)
-
-str(visitor.defense)
-
 fumbles.games <- merge(fumbles.core, games, id = "GID")
 
 str(fumbles.games)
@@ -66,23 +58,38 @@ diffs <- function(df) {
   c(fumble.diff =  fumble.diff, pts.diff = pts.diff)
 }
 
+# passing
+team.sample <- team[sample(nrow(team), 15),]
 
+plot <- ggplot(team.sample, aes(x = PA, y = PY)) + 
+  geom_point() +
+  labs(x = "Pass Attempts", y = "Yards") +
+  ggtitle("Pass Attempts vs. Yards")
+print(plot)
 
-
-nfl.stats <- with(team.sample, round(cor.stats(PA, PY), 4))
-nfl.stats
-
-passing.scaled <- with(team.sample, data.frame(cbind(pa = PA, scale(team.sample$PA), 
-                                          py = PY, scale(team.sample$PY))))
-
-team.sample.m <- melt(subset(team.sample, select = c(PA, PY)))
-
-nfl.stats <- cast(team.sample.m, variable ~ ., function(x) round(c(mean = mean(x), sd = sd(x))))
-
-round(with(team.sample, cor(PA, PY)), 4)
-
-file <- paste(root.dir, "figures/nfl/passing_attempts_vs_yds.eps", sep = "/");
+file <- paste(figures.dir, "nfl/passing_attempts_vs_yds.eps", sep = "/");
 ggsave(file, width = 4, height = 2.5)
+
+passing.scaled <- with(team.sample, data.frame(GID, pa = PA, py = PY, 
+                                               pa.z = scale(team.sample$PA), 
+                                               py.z = scale(team.sample$PY)))
+
+passing.scaled.m <- melt(subset(passing.scaled, select = c(GID, pa, py)), id = "GID")
+passing.summary <- cast(passing.scaled.m, variable ~ ., 
+                        function(x) round(c(mean = mean(x), sd = sd(x))))
+
+
+round(with(passing.scaled, cor(pa, py)), 4)
+
+sink(paste(notes.dir, "r.tex", sep = "/"))
+  xtable(passing.summary)
+sink()
+
+# turnovers
+
+to.diff.s.m <- melt(to.diff.s, id = "GID")
+to.stats <- cast(to.diff.s.m, variable ~ ., function(x) c(m = mean(x), s = sd(x)))
+
 
 sink(paste(notes.dir, "r.tex", sep = "/"))
   xtable(passing.scaled)

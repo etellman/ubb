@@ -14,18 +14,19 @@
 \usepackage{comment}
 \usepackage{enumerate}
 \usepackage{graphicx}
+\usepackage{parskip}
 
 \everymath{\displaystyle}
 
-\printanswers
+% \printanswers
 
 \ifprintanswers 
   \usepackage{2in1, lscape} 
 \fi
 
-\author{}
-\date{\today}
 \title{Statistics \\ Homework Four}
+\date{\today}
+\author{}
 
 \begin{document}
 
@@ -33,12 +34,20 @@
 
   \ifprintanswers
   \else
+
     \begin{itemize*}
       \item read Chapter 4 
-      \item answer the questions in ``Check Your Skills'' and check the answers in the
-        back of the book
-      \item hand in exercises TO DO
+      \item take a look at the ``Check Your Skills'' exercises
+      \item exercises: 25-29, 31-32, 34, 36-39, 43-44
     \end{itemize*}
+
+    If you don't have a calculator with a correlation button or access to a computer
+    that can do correlation, you can skip 29c and 32b.  
+    
+    Figuring out the correlation for a large data set is tedious without a computer.
+    The other problems that ask for correlation only have a few points, so figuring
+    it out by hand shouldn't be too bad.
+
   \fi
 
   \ifprintanswers
@@ -46,8 +55,8 @@
       \item[25]     
         \begin{parts}
           \part yes
-          \part One kid got a 10 out of 100 on the test but estimated himself as a 4 out
-          of 5 reader.  
+          \part One student got a 10 out of 100 on the test but estimated himself as
+            a 4 out of 5 reader.  
         \end{parts}
     
       \item[26]
@@ -119,7 +128,9 @@
               \bottomrule
             \end{tabular}
 
-            TO DO: explain why
+            The outlier has large positive z-scores for both neural activity and
+            behavior, so it makes a large contribution to the total when computing
+            the correlation.
 
         \end{parts}
 
@@ -165,9 +176,9 @@
           \part Subtracting 6 from all the men's heights doesn't change the correlation
           either.  This is just like changing the scale.
 
-          The correlation just indicates that tall women tend to date tall men.  It
-          doesn't say anything about whether the women like to date men that are taller
-          than they are.
+          The correlation just indicates that women tend to date men of similar
+          heights.  It doesn't say anything about whether the women (tall or not)
+          tend to date men that are taller than they are.
 
           \part In this case the correlation would be a perfect 1.
         \end{parts}
@@ -181,11 +192,11 @@
         the same direction because both small and large companies do well or badly for the
         same reasons.
 
-        An investor which didn't want to take risks would invest in the fund which only
-        moved 10\%.  He wouldn't make too much money but he also wouldn't lose too much
-        money.  Another investor who didn't mind a bit more risk might invest in the small
-        company stock.  He would have a chance to make more money, but that would come
-        with a chance to lose more as well.
+        An investor which didn't want to take risks would invest in the fund which
+        only moved 10\%.  He wouldn't make too much money but he also wouldn't lose
+        too much money.  Another investor who didn't mind more risk might invest in
+        the small company stocks.  He would have a chance to make more money, but
+        that would come with a chance to lose more as well.
 
       \item[37]
         \begin{parts}
