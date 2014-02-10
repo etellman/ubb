@@ -28,17 +28,17 @@ crime.scale <- function(df) {
 }
 
 sink(paste(notes.dir, "r.tex", sep = "/"))
-  xtable(crime.scale(after.1991))
+  xtable(crime.scale(before.1991))
   # xtable(as.matrix(nfl.stats), digits = 0)
 sink()
 
-crime.s.m <- melt(crime.s, id = "year")
-crime.s.stats <- cast(crime.s.m, variable ~ ., function(x) c(m = mean(x), s = sd(x)))
+crime.s
 
-crime.s.stats
+after.1991.m <- melt(after.1991, id = "year")
+after.1991.stats <- cast(after.1991.m, variable ~ ., function(x) c(m = mean(x), s = sd(x)))
 
 sink(paste(notes.dir, "r.tex", sep = "/"))
-  xtable(crime.s.stats)
+  xtable(after.1991.stats)
 sink()
 
 with(before.1991, cor(crime.rate, incarceration.rate))
@@ -70,5 +70,3 @@ plot <- ggplot(crime, aes(x = year, y = crime.rate)) +
   ggtitle("Crime Rate")
 print(plot)
 
-max(crime$crime.rate)
-subset(crime, crime.rate == max(crime.rate))
