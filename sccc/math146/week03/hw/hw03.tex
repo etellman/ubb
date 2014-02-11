@@ -18,15 +18,15 @@
 \newcommand{\degree}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
-% \printanswers
+\printanswers
 
 \ifprintanswers 
   \usepackage{2in1, lscape} 
 \fi
 
-\author{}
-\date{\today}
 \title{Statistics \\ Homework Three}
+\date{\today}
+\author{}
 
 \begin{document}
 
@@ -40,13 +40,14 @@
     \end{itemize*}
 
   \ifprintanswers
+  \section{Solutions}
     \begin{description}
       \item[26] 95\% of the people will be within two standard deviations of the mean.  
 
         mildly obese:
         \begin{align*}
-          x_{min} &= 373 - 67 * 2 = 239 \\
-          x_{max} &= 373 + 67 * 2 = 507 \\
+          x_{min} &= 373 - 67 \cdot 2 = 239 \\
+          x_{max} &= 373 + 67 \cdot 2 = 507 \\
         \end{align*}
 
         95\% of the mildly obese people will have between 239 and 507 minutes of activity
@@ -54,8 +55,8 @@
 
         lean:
         \begin{align*}
-          x_{min} &= 526 - 107 * 2 = 312 \\
-          x_{min} &= 526 + 107 * 2 = 740 \\
+          x_{min} &= 526 - 107 \cdot 2 = 312 \\
+          x_{min} &= 526 + 107 \cdot 2 = 740 \\
         \end{align*}
 
         95\% of the lean people will have between 312 and 740 minutes of activity per day.
@@ -105,7 +106,7 @@
 
         Use table A: 
         \[
-          proportion = 0.0022 
+          proportion = \boxed{ 0.0022 } 
         \]
 
       \item[31]
@@ -116,7 +117,7 @@
 
         Use table A: 
         \[
-          proportion = 0.2296 
+          proportion = \boxed{ 0.2296 } 
         \]
 
       \item[32]
@@ -209,7 +210,7 @@
 
         Use table A: 
         \[
-          p = 92.86 \% \\
+          p = \boxed{ 92.86 \% } \\
         \]
 
       \item[36]
@@ -226,14 +227,14 @@
       \item[37]
         Use table A: 
         \begin{align*}
-          z_{.25} &= \unit[-0.6745]{sd}
-          z_{.75} &= \unit[0.6745]{sd}
+          z_{.25} &= \unit[-0.6745]{sd} \\
+          z_{.75} &= \unit[0.6745]{sd} \\
         \end{align*}
 
         Convert to MPG
         \begin{align*}
-          x_{0.25} &= 18.7 - 0.6745 \cdot 4.3 = \unit[15.8]{MPG}
-          x_{0.75} &= 18.7 + 0.6745 \cdot 4.3 = \unit[21.6]{MPG}
+          x_{0.25} &= 18.7 - 0.6745 \cdot 4.3 = \boxed{ \unit[15.8]{MPG} } \\
+          x_{0.75} &= 18.7 + 0.6745 \cdot 4.3 = \boxed{ \unit[21.6]{MPG} } \\
         \end{align*}
 
       \item[43]
@@ -300,8 +301,8 @@
 
         \begin{tabular}[H]{llrr}
           \toprule
-          \midrule
           $\sigma$s & Range             & Expected & Actual \\
+          \midrule
           1         & $(120.11, 91.57)$ & 21       & 23 \\
           2         & $(77.30, 104.38)$ & 29       & 29 \\
           \bottomrule

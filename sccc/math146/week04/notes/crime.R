@@ -7,17 +7,20 @@ crime <- read.delim("crime.csv", header = TRUE, sep = ',', strip.white = TRU
 
 before.1991 <- subset(crime, year <= 1991)
 after.1991 <- subset(crime, 1991 <= year & year < 2007)
-between.1980.and.2000 <- subset(crime, 1980 < year & year < 2000)
-
 crime.s <- crime[sample(nrow(crime), 15),]
 
-plot <- ggplot(after.1991, aes(x = crime.rate, y = incarceration.rate)) + 
+plot <- ggplot(crime.s, aes(x = crime.rate, y = incarceration.rate)) + 
   geom_point() +
   labs(x = "Crime Rate", y = "Incarceration Rate") +
-  ggtitle("Crime vs. Incarceration Rate (1978 - 1991)")
+  ggtitle("Crime vs. Incarceration Rate (Random Sample Years)")
 print(plot)
 
+ggsave(paste(figures.dir, "crime/crime_vs_incarceration_sample.eps", sep = "/"),
+             width = 4, height = 2.5)
+
 cor(subset(after.1991, select = c(crime.rate, incarceration.rate)))
+cor(subset(before.1991, select = c(crime.rate, incarceration.rate)))
+cor(subset(crime.s, select = c(crime.rate, incarceration.rate)))
 
 # adds scaled columns to a crime/incarceration rate data frame
 crime.scale <- function(df) {
@@ -49,14 +52,6 @@ plot <- ggplot(after.1991, aes(x = crime.rate, y = incarceration.rate)) +
   labs(x = "Crime Rate", y = "Incarceration Rate") +
   ggtitle("Crime vs. Incarceration Rate (1992 - 2012)")
 print(plot)
-
-plot <- ggplot(after.1991, aes(x = crime.rate, y = incarceration.rate)) + 
-  geom_point() +
-  labs(x = "Crime Rate", y = "Incarceration Rate") +
-  coord_flip() +
-  ggtitle("Crime vs. Incarceration Rate (1992 - 2012)")
-print(plot)
-
 
 plot <- ggplot(crime, aes(x = year, y = incarceration.rate)) + 
   geom_line() +
