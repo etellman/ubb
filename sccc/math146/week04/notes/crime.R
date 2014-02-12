@@ -9,13 +9,13 @@ before.1991 <- subset(crime, year <= 1991)
 after.1991 <- subset(crime, 1991 <= year & year < 2007)
 crime.s <- crime[sample(nrow(crime), 15),]
 
-plot <- ggplot(crime.s, aes(x = crime.rate, y = incarceration.rate)) + 
+plot <- ggplot(after.1991, aes(x = crime.rate, y = incarceration.rate)) + 
   geom_point() +
   labs(x = "Crime Rate", y = "Incarceration Rate") +
-  ggtitle("Crime vs. Incarceration Rate (Random Sample Years)")
+  ggtitle("1991-2006")
 print(plot)
 
-ggsave(paste(figures.dir, "crime/crime_vs_incarceration_sample.eps", sep = "/"),
+ggsave(paste(figures.dir, "crime/crime_vs_incarceration_1991-2006.eps", sep = "/"),
              width = 4, height = 2.5)
 
 cor(subset(after.1991, select = c(crime.rate, incarceration.rate)))

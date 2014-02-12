@@ -59,16 +59,19 @@ diffs <- function(df) {
 }
 
 # passing
-team.sample <- team[sample(nrow(team), 15),]
+with.weather <- merge(team, games, by = "GID")
+team.sample <- with.weather[sample(nrow(with.weather), 30),]
+with(with.weather, cor(PU, PTS))
 
-plot <- ggplot(team.sample, aes(x = PA, y = PY)) + 
+plot <- ggplot(team.sample, aes(x = PU, y = PTS)) + 
   geom_point() +
-  labs(x = "Pass Attempts", y = "Yards") +
-  ggtitle("Pass Attempts vs. Yards")
+  labs(x = "Punts", y = "Points") +
+  ggtitle("Punts vs. Points")
 print(plot)
 
-file <- paste(figures.dir, "nfl/passing_attempts_vs_yds.eps", sep = "/");
+file <- paste(figures.dir, "nfl/punts_vs_points.eps", sep = "/");
 ggsave(file, width = 4, height = 2.5)
+
 
 passing.scaled <- with(team.sample, data.frame(GID, pa = PA, py = PY, 
                                                pa.z = scale(team.sample$PA), 
@@ -119,18 +122,6 @@ turnovers <- ddply(defense.scores, c("TEAM", "GID"),
                    function(df) with(df, c( PTS = PTS[1], TO = sum(INT, FORC))))
 
 to.diff <- ddply(turnovers, "GID", function(df) c(to = diff(df$TO), pts = diff(df$PTS)))
-to.diff.s <- to.diff[sample(nrow(to.diff), 40),]
-
-plot <- ggplot(to.diff.s, aes(x = to, y = pts)) + 
-  geom_point() +
-  labs(x = "Turnovers", y = "Points") +
-  ggtitle("Turnover vs. Point Differential")
-print(plot)
-
-file <- paste(figures.dir, "nfl/to_vs_pts.eps", sep = "/");
-ggsave(file, width = 4, height = 2.5)
-
-
 mean.and.sd <- function(x) {
   c(m = mean(x), s = sd(x))
 }
@@ -139,27 +130,34 @@ cor.stats <- function(x, y) {
   data.frame(t(c(x = mean.and.sd(x), y = mean.and.sd(y), c = round(cor(x, y), 4))))
 }
 
-str(to.diff.s)
+to.diff.s <- to.diff[sample(nrow(to.diff), 600),]
+cor(to.diff.s)
+
+cor(to.diff)
+
+plot <- ggplot(to.diff.s, aes(x = to, y = pts)) + 
+  geom_point() +
+  labs(x = "Turnovers", y = "Points") +
+  ggtitle("Turnover vs. Point Differential")
+print(plot)
+
+file <- paste(figures.dir, "nfl/to_vs_pts_all.eps", sep = "/");
+ggsave(file, width = 4, height = 2.5)
 
 pts.scaled <- scale(to.diff.s$pts)
 to.scaled <- scale(to.diff.s$to)
 
-nrow(to.diff.s.scaled)
-
-to.diff.s.scaled <- cbind(to.diff.s, to.scaled, pts.scaled)
-
-to.diff.s.scaled <- subset(to.diff.s.scaled, select = -GID)
-
-str(to.diff.s.scaled)
-
-to.diff.s.m <- melt(to.diff.s, id = "GID")
-to.stats <- cast(to.diff.s.m, variable ~ ., function(x) c(m = mean(x), s = sd(x)))
+to.pts.scaled <- data.frame(to = to.diff.s$to, pts = to.diff.s$pts, 
+                            to.z = to.scaled, pts.z = pts.scaled)
 
 sink(paste(notes.dir, "r.tex", sep = "/"))
-  xtable(to.stats)
+  xtable(to.pts.scaled)
+  xtable(cast(to.diff.s.m, variable ~ ., function(x) c(m = mean(x), s = sd(x))))
 sink()
 
-round(cor(to.diff.s$to, to.diff.s$pts), 4)
-stats <- with(to.diff.s, cor.stats(to, pts))
-str(stats)
+to.diff.s.m <- melt(to.diff.s, id = "GID")
+cast(to.diff.s.m, variable ~ ., function(x) c(m = mean(x), s = sd(x)))
+
+
+str(to.stats)
 
