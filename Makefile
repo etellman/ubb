@@ -6,8 +6,8 @@ default: $(TARGETS)
 	dvipdf $<
 
 # doesn't work perfectly 
-# %.pdf : %.tex
-	# pdflatex $<
+%.pdf : %.tex
+	pdflatex $<
 
 %.dvi : %.tex
 	latex $<
