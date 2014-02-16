@@ -8,10 +8,6 @@ figures.dir <- paste(hw.dir, "figures", sep = "/")
 
 setwd(hw5.data.dir)
 
-data.dir
-
-hw5.data.dir
-
 # exercise 27
 dd <- function(d) 2.69 + 0.0138 * d
 dd(200)
@@ -121,3 +117,48 @@ print(plot)
 
 ggsave(paste(figures.dir, "ex38d.pdf", sep = "/"), width = 4, height = 2.5)
 
+# exercise 47
+ex47 <- function(x) 61.93 + 0.18 * x
+ex47(c(70, 80))
+
+# exercise 51
+ex51 <- read.delim("ex05-51.dat", header = TRUE, sep = '\t')
+str(ex51)
+
+ex51.lm <- lm(Larvae ~ Stumps, data = ex51)
+summary(ex51.lm)
+round(coef(ex51.lm), 4)
+cor(ex51)
+
+plot <- ggplot(ex51, aes(x = Stumps, y = Larvae)) + 
+  geom_point() +
+  stat_smooth(method = "lm") +
+  labs(x = "Stumps", y = "Larvae") +
+  ggtitle("Exercise 51")
+print(plot)
+
+ggsave(paste(figures.dir, "ex51.pdf", sep = "/"), width = 4, height = 2.5)
+
+# exercise 53
+ex53 <- read.delim("ex05-53.dat", header = TRUE, sep = '\t')
+str(ex53)
+
+ex53 <- subset(ex53, Year != 2005)
+
+ex53.lm <- lm(Observed ~ Forecast, data = ex53)
+summary(ex53.lm)
+round(coef(ex53.lm), 4)
+with(ex53, cor(Forecast, Observed))
+
+residuals(ex53.lm)
+
+round(predict(ex53.lm, data.frame(Forecast = c(16))), 2)
+
+plot <- ggplot(ex53, aes(x = Forecast, y = residuals(ex53.lm))) + 
+  geom_point() +
+  stat_smooth(method = "lm") +
+  labs(x = "Forecast", y = "Residuals") +
+  ggtitle("Exercise 53 Residuals")
+print(plot)
+
+ggsave(paste(figures.dir, "ex53_residuals.pdf", sep = "/"), width = 4, height = 2.5)

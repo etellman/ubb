@@ -1,5 +1,6 @@
-\documentclass{exam}
+\documentclass[landscape]{exam}
 
+\usepackage{2in1, lscape} 
 \usepackage{units} 
 \usepackage[fleqn]{amsmath}
 \usepackage{float}
@@ -10,7 +11,7 @@
 \usepackage{enumerate}
 \usepackage{graphicx}
 
-\usepackage{2in1, lscape} 
+\printanswers
 
 \everymath{\displaystyle}
 
@@ -41,8 +42,20 @@
 
   \begin{figure}[H]
     \centering
+    \includegraphics{figures/nfl/ht_10_final.pdf}
+    \caption{Final score with a halftime score of 10}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
     \includegraphics{figures/nfl/ht_vs_median_final.pdf}
     \caption{Halftime vs. Median Final Score}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/nfl/ht_vs_median_final_scaled.pdf}
+    \caption{Halftime vs. Median Final (scaled)}
   \end{figure}
 
 \end{document}

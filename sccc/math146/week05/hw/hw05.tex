@@ -6,7 +6,6 @@
 \usepackage{2in1, lscape} 
 \printanswers
 
-
 \usepackage{units} 
 \usepackage{xfrac} 
 \usepackage[fleqn]{amsmath}
@@ -38,17 +37,19 @@
     \begin{itemize*}
       \item read Chapter 5 
       \item take a look at the ``Check Your Skills'' exercises
-      \item exercises: 
+      \item exercises: TO DO
     \end{itemize*}
 
   \ifprintanswers
   \else
-    Here are the calculations for problems which require an expensive
-    calculator.
+    Here are the numbers, if you don't have a calculator that does this stuff.
+    % Some of the problems are very tedious to do without a calculator or computer
+    % that can compute correlation and regression lines.  To make things easier, I
+    % did this stuff on my computer so you'll have the numbers even if you don't
+    % have an expensive calculator.
 
     \begin{description}
-      \item[34] .
-
+      \item[34]
         \begin{tabular}[H]{lr}
           \toprule
           slope     & 0.527 \\
@@ -57,28 +58,47 @@
           \bottomrule
         \end{tabular}
 
-      \item[37] .
-
-        \begin{tabular}[H]{lrr}
-          \toprule
-                    & With Outlier & Without Outlier \\
-          \midrule
-          slope     & 0.0088       & 0.0089 \\
-          intercept & 0.5850       & 0.5858 \\
-          $r^2$     & 0.7201       & 0.4920 \\
-          \bottomrule
-        \end{tabular}
+      \item[37]
+          \begin{tabular}[H]{lrr}
+            \toprule
+                      & With Outlier & Without Outlier \\
+            \midrule
+            slope     & 0.0088       & 0.0089 \\
+            intercept & 0.5850       & 0.5858 \\
+            $r^2$     & 0.7201       & 0.4920 \\
+            \bottomrule
+          \end{tabular}
 
       \item[38]
         All the data sets have about the same numbers:
 
+          \begin{tabular}[H]{lr}
+            \toprule
+            slope     & 0.5   \\
+            intercept & 3.0   \\
+            $r^2$     & 0.666 \\
+            \bottomrule
+          \end{tabular}
+
+      \item[51]
         \begin{tabular}[H]{lr}
           \toprule
-          slope     & 0.5   \\
-          intercept & 3.0   \\
-          $r^2$     & 0.666 \\
+          slope     & 11.89 \\
+          intercept & -1.29 \\
+          $r^2$     & 0.8391 \\
           \bottomrule
         \end{tabular}
+
+      \item[53]
+        \begin{tabular}[H]{lrr}
+          \toprule
+                    & With 2005 & Without 2005 \\
+          slope     & 0.9031    & 0.6224 \\
+          intercept & 1.8028    & 4.4207 \\
+          $r^2$     & 0.2798    & 0.2260 \\
+          \bottomrule
+        \end{tabular}
+
     \end{description}
   \fi
 
@@ -88,7 +108,7 @@
       \item[27]     
         \begin{figure}[H]
           \centering
-          \includegraphics{figures/ex27.eps}
+          \includegraphics{figures/ex27.pdf}
           \caption{Exercise 27}
         \end{figure}
 
@@ -149,7 +169,7 @@
           \part
             \begin{figure}[H]
               \centering
-              \includegraphics{figures/ex31.eps}
+              \includegraphics{figures/ex31.pdf}
               \caption{Exercise 31}
             \end{figure}
 
@@ -291,19 +311,118 @@
       \end{description}
 
       \item[42]
-        People use artificial sweeteners because they are already overweight, so
-        weight is causing the sweetener use rather than the other way around.
+        People use artificial sweeteners because they are already overweight.
+        Weight is probably causing the sweetener use rather than the other way
+        around.
+
+      \item[44]
+        Some of the people that previously got B's are now getting A's since A's
+        are easier to get.  The SAT hasn't changed, however, so this same group
+        of people is still not doing as well on the SAT, bringing the overall
+        average for the A group down.
+
+        The same reasoning applies to the other grades.
+
+      \item[45]
+        As people get older, they tend to make more money, up to the point when
+        they retire.  Consequently, if there are more older but not retired
+        people in the workforce, the mean income for the entire workforce goes
+        up.
+
+        This argument still applies, even if the median income for older people
+        is decreasing over time, as long as it doesn't decrease so much that
+        older people no longer make more than younger people.
+
+      \item[47]
+        \begin{tabular}[H]{rr}
+          \toprule
+          First Round & Second Round \\
+          \midrule
+          70          & 74.53 \\
+          80          & 76.33 \\
+          \bottomrule
+        \end{tabular}
+
+      \item[48]
+        Since the regression line passes through $(\bar{x}, \bar{y})$:
+        \begin{align*}
+          \bar{y} & = 46.6 + 0.41 \bar{x} \\
+          \bar{x} & = \frac{\bar{y} - 46.6}{0.41} \\
+        \end{align*}
+
+        Antonio's predicted score on the final is:
+        \begin{align*}
+          \hat{y} & = 46.6 + 0.41 (\bar{x} + 10) \\
+                  & = 50.7 + 0.41 \bar{x} \\
+        \end{align*}
+
+        We can plug the first equation into the second one to find Antonio's
+        final score relative to the final mean:
+
+        \begin{align*}
+          \hat{y} & = 50.7 + 0.41 \bar{x} \\
+                  & = 50.7 + 0.41 \left( \frac{\bar{y} - 46.6}{0.41} \right) \\
+                  & = \bar{y} + 4.1 \\
+        \end{align*}
+
+        He should expect to be 4.1 points over the mean on the final.
+
+      \item[51]
+        Since $r^2 = 8391$, the stumps account for about 84\% of the variation
+        in the larvae.  We can conclude that the beavers are helping the beetles
+        by creating the stumps.
+
+        The regression line for larvae based on stumps is:
+        \[
+          \hat{y} = 11.8937 x - 1.2861 
+        \]
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics{figures/ex51.pdf}
+          \caption{Exercise 51}
+        \end{figure}
+
+      \item[53]
+        With all the data, $r^2 = 0.2798$.  The prediction accounts for about
+        28\% of the variation.  
+        
+        If you throw out 2005, when he correctly predicted a very bad year, 
+        $r^2 = 0.2260$ or only 23\%.
+
+        Either way, the prediction isn't great.
+
+        Including 2005, the regression equation is:
+        \[
+          \hat{y} = 0.9031 x + 1.8028
+        \]
+
+        For a year when he predicts 16 hurricanes, you should actually expect
+        around 14 hurricanes.
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics{figures/ex53.pdf}
+          \caption{Exercise 53}
+        \end{figure}
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics{figures/ex53_residuals.pdf}
+          \caption{Exercise 53 Residuals}
+        \end{figure}
 
     \end{description}
 
   \else
-    \vspace{10 cm}
+    \vspace{1.5 cm}
     \begin{quote}
       \begin{em}
-        The more corrupt a society, the more numerous its laws.
+        Value judgments are destructive to our proper business, which is
+        curiosity and awareness. 
       \end{em}
     \end{quote}
-    \hspace{1 cm} --Edward Abbey
+    \hspace{1 cm} --John Cage
   \fi
 
 \end{document}
