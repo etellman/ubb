@@ -25,7 +25,7 @@ ggsave(file, width = 4, height = 2.5)
 
 # plot final points for games with 10 points at halftime
 plot <- ggplot(subset(team, HPTS == 10), aes(x = PTS)) + 
-  geom_histogram(fill = "lightblue", color = "black", binwidth = 5) +
+  geom_histogram(fill = "lightblue", color = "black", binwidth = 7) +
   labs(x = "Points", y = "Games") +
   ggtitle("Final With Halftime 10")
 print(plot)
@@ -33,13 +33,14 @@ print(plot)
 file <- paste(figures.dir, "ht_10_final.pdf", sep = "/");
 ggsave(file, width = 4, height = 2.5)
 
-# plot halftime points vs. median final
+# plot halftime points vs. mean final
 mean.pts <- ddply(team, "HPTS", summarize, 
                   pts.m = mean(PTS),
                   hpts.s = mean(hpts.s), 
                   pts.s = mean(pts.s), 
                   games = length(GID))
 
+# points
 plot <- ggplot(mean.pts, aes(x = HPTS, y = pts.m)) + 
   geom_point(aes(size = games)) +
   stat_smooth(method = "lm") +
@@ -47,45 +48,54 @@ plot <- ggplot(mean.pts, aes(x = HPTS, y = pts.m)) +
   ggtitle("Halftime vs. Median Final Score")
 print(plot)
 
-lm(PTS ~ HPTS, data = team)
+# z-scores
+plot <- ggplot(mean.pts, aes(x = hpts.s, y = pts.s)) + 
+  geom_point(aes(size = games)) +
+  stat_smooth(method = "lm") +
+  labs(x = "Half Time", y = "Final") +
+  ggtitle("Halftime vs. mean Final Scaled")
+print(plot)
 
-0.73 * 10 / 7
-
-file <- paste(figures.dir, "ht_vs_median_final.pdf", sep = "/");
+file <- paste(figures.dir, "ht_vs_mean_final_scaled.pdf", sep = "/");
 ggsave(file, width = 4, height = 2.5)
 
-# plot halftime points vs. median final using z-scores
-team$hpts.s <- scale(team$HPTS)
-team$pts.s <- scale(team$PTS)
+# find regression line
 
-
+# common halftime scores
 common <- round(subset(mean.pts, games > 500, select = -games), 4)
-common
 
-with(common, diff(pts.m) / diff(HPTS))
+sink(paste(notes.dir, "r.tex", sep = "/"))
+  xtable(common)
+  with(common, diff(pts.m) / diff(HPTS))
+sink()
+
+
+lm(PTS ~ HPTS, data = team)
+
 
 with(common, 0.73 * diff(pts.m) / diff(HPTS))
 
 sd(team$PTS)
 sd(team$HPTS)
 
-mean(with(common, diff(pts.s) / diff(hpts.s)))
+mean(with(subset(mean.pts, games > 100), diff(pts.s) / diff(hpts.s)))
+with(subset(mean.pts, games > 100), cor(PTS, HPTS))
 
 with(team, cor(HPTS, PTS))
 
-plot <- ggplot(median.pts, aes(x = hpts.s, y = pts.s)) + 
-  geom_point(aes(size = games)) +
-  stat_smooth(method = "lm") +
-  labs(x = "Half Time", y = "Final") +
-  ggtitle("Halftime vs. Median Final Scaled")
-print(plot)
+diff(common$pts.s)
+diff(common$hpts.s)
 
-file <- paste(figures.dir, "ht_vs_median_final_scaled.pdf", sep = "/");
-ggsave(file, width = 4, height = 2.5)
+common
+
+with(team, cor(HPTS, PTS))
+
 
 subset(median.pts, hpts == 10)
 subset(median.pts, hpts == 14)
 subset(median.pts, hpts == 21)
+
+(-.81 + 1.15)/(-1.07 + 1.48)
 
 (0.24 + 0.14) / (0.43 + 0.11)
 (0.917 - 0.244) / (1.39 - 0.43) 
