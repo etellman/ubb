@@ -1,3 +1,8 @@
+install.packages("Hmisc")
+
+library("plyr")
+library("ggplot2")
+
 root.dir <- "~/Documents/U/ubb/sccc/math146"
 notes.dir <- paste(root.dir, "week05/notes", sep = "/")
 figures.dir <- paste(notes.dir, "figures/nfl", sep = "/")
@@ -11,6 +16,7 @@ team <- read.delim("TEAM.csv", header = TRUE, sep = ',', strip.white = TRUE)
 
 # add halftime points column
 team$HPTS <- team$X1QP + team$X2QP
+team$pts.s <- scale(team$PTS)
 
 # plot halftime vs. final points 
 plot <- ggplot(team, aes(x = HPTS, PTS)) + 
@@ -103,6 +109,9 @@ subset(median.pts, hpts == 21)
 
 with(team, cor(HPTS, PTS))
 
-with(team, sd(PTS))
 with(team, data.frame(sd(HPTS), mean(HPTS)))
+with(team, data.frame(sd(PTS), mean(PTS)))
 
+scale(team$HPTS, 7)
+
+?scale

@@ -72,18 +72,70 @@
       17       & 27.81      & 0.84       & 0.61    & 0.75 \\
       \bottomrule
     \end{tabular}
-    \caption{Common halftime scores}
+    \caption{Common halftime scores (at least 500 games)}
   \end{table}
 
-  \begin{tabular}[H]{rr}
+  \begin{tabular}[H]{lrr}
     \toprule
-    Min Games & Mean Slope $ $r$ \\
+             & mean & standard deviation \\
     \midrule
-    500       & 0.76 \\
-    100       & 0.73 \\
-    1         & 0.84 \\
+    halftime & 10.9 & 7.4 \\
+    final    & 21.5 & 10.4 \\
     \bottomrule
   \end{tabular}
+
+  \begin{tabular}[H]{rrl}
+    \toprule
+    Min Games & Mean Slope & Notes \\
+    \midrule
+    500       & 0.76       & not enough samples\\
+    all       & 0.84       & outliers for only a few games affect result \\
+    100       & 0.73       & just right \\
+    \bottomrule
+  \end{tabular}
+
+    $r = 0.7376$
+
+    Line goes through $(0, 0)$, so the equation is:
+    \[
+      z_y = r z_x
+    \]
+
+
+    examples:
+    \begin{tabular}[H]{rrrr}
+      x & $z_x$ & $\hat{z_y}$ & y \\
+      7 & 
+    \end{tabular}
+    If we want things in points instead of standard deviations, we have to convert
+    everything:
+
+    slope:
+    \[
+      a = r \cdot \frac{s_y}{s_x}
+    \]
+
+    Line goes through $(\bar{z_x}, \bar{z_y})$.  Find y-intercept:
+
+    \begin{align*}
+      \bar{z_y} & = a \bar{z_x} + b \\
+      b         & = \bar{z_y} - a \bar{z_x} \\
+    \end{align*}
+
+    For this example:
+    \begin{itemize*}
+      \item $r$ is number of y standard deviations change for each x standard
+        deviation change 
+
+      \item $r = \pm 1$ for exact match
+
+      \item $r = 0$ for no correlation.  If you change x, you don't expect any
+        corresponding change in y
+
+      \item minimizes square of differences from prediction
+    \end{itemize*}
+
+    Average slope of means approximately $r$.
 
 \end{document}
 
