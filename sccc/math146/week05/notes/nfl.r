@@ -1,7 +1,8 @@
-install.packages("Hmisc")
+install.packages("reshape")
 
 library("plyr")
 library("ggplot2")
+library("reshape")
 
 root.dir <- "~/Documents/U/ubb/sccc/math146"
 notes.dir <- paste(root.dir, "week05/notes", sep = "/")
@@ -16,7 +17,6 @@ team <- read.delim("TEAM.csv", header = TRUE, sep = ',', strip.white = TRUE)
 
 # add halftime points column
 team$HPTS <- team$X1QP + team$X2QP
-team$pts.s <- scale(team$PTS)
 
 # plot halftime vs. final points 
 plot <- ggplot(team, aes(x = HPTS, PTS)) + 
@@ -51,16 +51,21 @@ plot <- ggplot(mean.pts, aes(x = HPTS, y = pts.m)) +
   geom_point(aes(size = games)) +
   stat_smooth(method = "lm") +
   labs(x = "Half Time", y = "Final") +
-  ggtitle("Halftime vs. Median Final Score")
+  ggtitle("Halftime vs. Mean Final Score")
 print(plot)
+
+file <- paste(figures.dir, "ht_vs_mean_final.pdf", sep = "/");
+ggsave(file, width = 4, height = 2.5)
 
 # z-scores
 plot <- ggplot(mean.pts, aes(x = hpts.s, y = pts.s)) + 
   geom_point(aes(size = games)) +
   stat_smooth(method = "lm") +
   labs(x = "Half Time", y = "Final") +
-  ggtitle("Halftime vs. mean Final Scaled")
+  ggtitle("Halftime vs. Mean Final Scaled")
 print(plot)
+
+figures.dir
 
 file <- paste(figures.dir, "ht_vs_mean_final_scaled.pdf", sep = "/");
 ggsave(file, width = 4, height = 2.5)
@@ -76,8 +81,14 @@ sink(paste(notes.dir, "r.tex", sep = "/"))
 sink()
 
 
-lm(PTS ~ HPTS, data = team)
+pts.hpts.lm <- lm(PTS ~ HPTS, data = team)
+hpts.pts.lm <- lm(HPTS ~ PTS, data = team)
 
+with(team, mean(HPTS) - 0.5195 * mean(PTS))
+hpts.pts.lm
+
+predict(pts.hpts.lm, data.frame(HPTS = 3))
+predict(hpts.pts.lm, data.frame(PTS = 10))
 
 with(common, 0.73 * diff(pts.m) / diff(HPTS))
 
@@ -92,10 +103,18 @@ with(team, cor(HPTS, PTS))
 diff(common$pts.s)
 diff(common$hpts.s)
 
-common
+z.x <- round(with(team, (17 - mean(HPTS)) / sd(HPTS)), 2)
+round(0.7376 * z.x, 2)
+mean(team$PTS) + 0.62 * sd(team$PTS)
+
+round(21.5 - 1.04 * 10.9, 2)
+
+lm(team$PTS ~ team$HPTS)
+
+sd(team$PTS)
+
 
 with(team, cor(HPTS, PTS))
-
 
 subset(median.pts, hpts == 10)
 subset(median.pts, hpts == 14)
@@ -114,4 +133,6 @@ with(team, data.frame(sd(PTS), mean(PTS)))
 
 scale(team$HPTS, 7)
 
-?scale
+# examples
+
+.4 * 100/80
