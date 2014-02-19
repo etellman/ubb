@@ -1,4 +1,4 @@
-install.packages("reshape")
+install.packages("xtable")
 
 library("plyr")
 library("ggplot2")

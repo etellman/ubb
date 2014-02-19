@@ -59,6 +59,16 @@ y(300)
 ex34 <- read.delim("ex05-34.dat", header = TRUE, sep = '\t')
 ex34.lm <- lm(Sister ~ Brother, data = ex34)
 
+ex34.m <- melt(ex34)
+ex34.s <- ddply(ex34.m, "variable", summarize, 
+      mean = round(mean(value), 2), sd = round(sd(value), 2))
+
+cor(ex34$Brother, ex34$Sister)
+
+sink(paste(hw.dir, "r.tex", sep = "/"))
+xtable(ex34.s)
+sink()
+
 plot <- ggplot(ex34, aes(x = Brother, y = Sister)) + 
   geom_point() +
   stat_smooth(method = "lm") +
@@ -73,7 +83,16 @@ summary(ex34.lm)
 
 # exercise 37
 ex37 <- read.delim("../ch04/ex04-29.dat", header = TRUE, sep = '\t')
-ex37
+
+ex37.m <- melt(ex37.no.outlier)
+ex37.s <- ddply(ex37.m, "variable", summarize, 
+      mean = round(mean(value), 2), sd = round(sd(value), 2))
+
+cor(ex37)
+
+sink(paste(hw.dir, "r.tex", sep = "/"))
+  xtable(ex37.s)
+sink()
 
 ex37.lm <- lm(Behave ~ Neural, data = ex37)
 summary(ex37.lm)
@@ -102,6 +121,16 @@ ex38b <- read.delim("ta05-01b.dat", header = TRUE, sep = '\t')
 ex38c <- read.delim("ta05-01c.dat", header = TRUE, sep = '\t')
 ex38d <- read.delim("ta05-01d.dat", header = TRUE, sep = '\t')
 
+ex38.m <- melt(ex38a)
+ex38.s <- ddply(ex38.m, "variable", summarize, 
+      mean = round(mean(value), 2), sd = round(sd(value), 2))
+
+cor(ex38d)
+
+sink(paste(hw.dir, "r.tex", sep = "/"))
+  xtable(ex38.s)
+sink()
+
 ex38.lm <- lm(y ~ x, data = ex38c)
 coef(ex38.lm)
 summary(ex38.lm)
@@ -123,7 +152,16 @@ ex47(c(70, 80))
 
 # exercise 51
 ex51 <- read.delim("ex05-51.dat", header = TRUE, sep = '\t')
-str(ex51)
+
+ex51.m <- melt(ex51)
+ex51.s <- ddply(ex51.m, "variable", summarize, 
+      mean = round(mean(value), 2), sd = round(sd(value), 2))
+
+cor(ex51)
+
+sink(paste(hw.dir, "r.tex", sep = "/"))
+  xtable(ex51.s)
+sink()
 
 ex51.lm <- lm(Larvae ~ Stumps, data = ex51)
 summary(ex51.lm)
@@ -141,9 +179,17 @@ ggsave(paste(figures.dir, "ex51.pdf", sep = "/"), width = 4, height = 2.5)
 
 # exercise 53
 ex53 <- read.delim("ex05-53.dat", header = TRUE, sep = '\t')
-str(ex53)
-
 ex53 <- subset(ex53, Year != 2005)
+
+ex53.m <- melt(ex53)
+ex53.s <- ddply(ex53.m, "variable", summarize, 
+      mean = round(mean(value), 2), sd = round(sd(value), 2))
+
+cor(ex53)
+
+sink(paste(hw.dir, "r.tex", sep = "/"))
+  xtable(ex53.s)
+sink()
 
 ex53.lm <- lm(Observed ~ Forecast, data = ex53)
 summary(ex53.lm)

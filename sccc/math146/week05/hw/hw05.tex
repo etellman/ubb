@@ -1,10 +1,10 @@
 % no answer key
-% \documentclass[letterpaper]{exam}
+\documentclass[letterpaper]{exam}
 
 % answer key
-\documentclass[letterpaper, landscape]{exam}
-\usepackage{2in1, lscape} 
-\printanswers
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -42,62 +42,102 @@
 
   \ifprintanswers
   \else
-    Here are the numbers, if you don't have a calculator that does this stuff.
-    % Some of the problems are very tedious to do without a calculator or computer
-    % that can compute correlation and regression lines.  To make things easier, I
-    % did this stuff on my computer so you'll have the numbers even if you don't
-    % have an expensive calculator.
+    \section{Calculations}
+
+    Some of the problems are very tedious to do without a calculator or
+    computer that can compute correlation and regression lines.  To make things
+    easier, I did some of the calculations on my computer so you'll have the
+    numbers even if you don't have a statistics calculator.
 
     \begin{description}
-      \item[34]
-        \begin{tabular}[H]{lr}
+      \item[34] $r = 0.5581$
+
+        \begin{tabular}{rlrr}
           \toprule
-          slope     & 0.527 \\
-          intercept & 27.635 \\
-          $r^2$     & 0.3114 \\
+            & variable & mean & sd \\
+          \midrule
+          1 & Brother & 69.00 & 2.72 \\
+          2 & Sister  & 64.00 & 2.57 \\
           \bottomrule
         \end{tabular}
 
       \item[37]
-          \begin{tabular}[H]{lrr}
-            \toprule
-                      & With Outlier & Without Outlier \\
-            \midrule
-            slope     & 0.0088       & 0.0089 \\
-            intercept & 0.5850       & 0.5858 \\
-            $r^2$     & 0.7201       & 0.4920 \\
-            \bottomrule
-          \end{tabular}
+        \begin{itemize}
+          \item with outlier: $r \approx 0.8486$
+
+            \begin{tabular}{rlrr}
+              \toprule
+                & variable & mean & sd \\
+              \midrule
+              1 & Neural   & 8.11 & 49.29 \\
+              2 & Behave   & 0.66 & 0.51 \\
+              \bottomrule
+            \end{tabular}
+
+          \item without outlier: $r \approx 0.7015$
+
+            \begin{tabular}{rlrr}
+              \toprule
+                 & variable & mean  & sd \\
+              \midrule
+              1  & Neural   & -1.70 & 30.90 \\
+              2  & Behave   & 0.57  & 0.39 \\
+              \bottomrule
+            \end{tabular}
+
+        \end{itemize}
 
       \item[38]
         All the data sets have about the same numbers:
 
-          \begin{tabular}[H]{lr}
-            \toprule
-            slope     & 0.5   \\
-            intercept & 3.0   \\
-            $r^2$     & 0.666 \\
-            \bottomrule
-          \end{tabular}
+        $r \approx 0.8164$
 
-      \item[51]
-        \begin{tabular}[H]{lr}
+        \begin{tabular}{rlrr}
           \toprule
-          slope     & 11.89 \\
-          intercept & -1.29 \\
-          $r^2$     & 0.8391 \\
+             & variable & mean & sd \\
+          \midrule
+          1  & x        & 9.00 & 3.32 \\
+          2  & y        & 7.50 & 2.03 \\
           \bottomrule
         \end{tabular}
+
+      \item[51] $r \approx 0.9160$
+
+        \begin{tabular}{rlrr}
+          \toprule
+             & variable & mean  & sd \\
+          \midrule
+          1  & Stumps   & 2.22  & 1.20 \\
+          2  & Larvae   & 25.09 & 15.64 \\
+          \bottomrule
+        \end{tabular}
+
 
       \item[53]
-        \begin{tabular}[H]{lrr}
-          \toprule
-                    & With 2005 & Without 2005 \\
-          slope     & 0.9031    & 0.6224 \\
-          intercept & 1.8028    & 4.4207 \\
-          $r^2$     & 0.2798    & 0.2260 \\
-          \bottomrule
-        \end{tabular}
+        \begin{itemize}
+          \item with 2005: $r \approx 0.5289$
+
+            \begin{tabular}{rlrr}
+              \toprule
+                & variable & mean  & sd \\
+              \midrule
+              1 & Forecast & 11.29 & 2.76 \\
+              2 & Observed & 12.00 & 4.71 \\
+              \bottomrule
+            \end{tabular}
+
+
+          \item without 2005: $r \approx 0.4754$
+
+          \begin{tabular}{rlrr}
+            \toprule
+              & variable & mean  & sd \\
+            \midrule
+            1 & Forecast & 11.13 & 2.70 \\ 
+            2 & Observed & 11.35 & 3.54 \\ 
+            \bottomrule
+          \end{tabular}
+        \end{itemize}
 
     \end{description}
   \fi
@@ -415,7 +455,7 @@
     \end{description}
 
   \else
-    \vspace{1.5 cm}
+    \vspace{12 cm}
     \begin{quote}
       \begin{em}
         Value judgments are destructive to our proper business, which is
