@@ -133,8 +133,3 @@ with(team, data.frame(sd(PTS), mean(PTS)))
 
 scale(team$HPTS, 7)
 
-# examples
-
-.4 * 1.28
-
-pnorm(.4 * 1.28)
