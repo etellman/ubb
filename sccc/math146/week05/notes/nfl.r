@@ -6,7 +6,7 @@ library("reshape")
 
 root.dir <- "~/Documents/U/ubb/sccc/math146"
 notes.dir <- paste(root.dir, "week05/notes", sep = "/")
-figures.dir <- paste(notes.dir, "figures/nfl", sep = "/")
+figures.dir <- paste(notes.dir, "figures", sep = "/")
 
 # NFL
 setwd(paste(root.dir, "data/nfl", sep = "/"))
@@ -133,3 +133,33 @@ with(team, data.frame(sd(PTS), mean(PTS)))
 
 scale(team$HPTS, 7)
 
+x = c(1:7)
+y = c(1, 2, 3, 14, 5, 6, 7)
+
+cor(x, y)
+
+df <- data.frame(x, y)
+
+plot <- ggplot(df, aes(x = x, y = y)) + 
+  geom_point() +
+  stat_smooth(method = "lm") +
+  labs(x = "", y = "") +
+  ggtitle("Regression")
+print(plot)
+
+file <- paste(figures.dir, "middle_outlier.pdf", sep = "/");
+ggsave(file, width = 4, height = 2.5)
+
+lm(x ~ y)
+sqrt(sum(residuals(lm(x ~ y))^2) / 6) 
+
+
+residuals.sd <- sd(residuals(lm(x ~ y)))
+
+sd(y)
+sqrt(1 - r^2) * sd(y)
+
+
+sink(paste(notes.dir, "r.tex", sep = "/"))
+  xtable(t(df), digits = 0)
+sink()

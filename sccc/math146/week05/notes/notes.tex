@@ -319,29 +319,85 @@
       lbs in weight.  T/F: men who are 176 lbs average 73 inches tall?
   \end{itemize}
 
-  \section{Regression to the Mean}
-  For any repeated test, people tend to be closer to the mean on the second attempt.
+  \section{Residuals}
 
   \begin{itemize*}
-    \item pilots with bad/good landings and instructor criticism/praise.
-    \item retake of standardized tests
+    \item r.m.s. ``average'' error
+    \item sum of residuals always zero
+    \item draw graph of residuals from mean and show is same as standard deviation
+    \item residuals vs. linear regression less than residuals vs. mean by factor of
+      $\sqrt{1- r^2}$.  Show r = 1, 0, -1
+
+    \item $r^2$ is measure how much regression explains variation in y based on
+      variation in x.
+
   \end{itemize*}
 
-  \section{Error}
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{r|rrrrrrr}
+      \toprule
+      x & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\ 
+      y & 1 & 2 & 3 & 5 & 4 & 6 & 7 \\ 
+     \bottomrule
+    \end{tabular}
+  \end{table}
 
-  \begin{itemize*}
-    \item minimize the square of the errors
-    \item residuals
-  \end{itemize*}
+  \begin{align*}
+    s_y                & = 2.1602 \\
+    r                  & = 0.9643 \\
+    rms                & = 0.5722 \\
+    s_y \sqrt{1 - r^2} & = 0.5722 \\
+  \end{align*}
+
 
   \section{Outliers}
 
+  \subsection{Middle}
+
+  Outliers in middle of x range don't have much effect because the line can't move to
+  accommodate them.  $r$ doesn't change much because high $z_y$ is multiplied by
+  $z_x$ close to zero.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/middle_outlier.pdf}
+    \caption{Outlier in Middle}
+  \end{figure}
+
+  $r = 0.4962168$
+
+  \subsection{End}
+
+  Outliers at end of x range have large effect because the line can move to
+  accommodate them.  
+  
+  $r$ decreases dramatically because high $z_y$ is multiplied by
+  large negative $z_x$.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/end_outlier.pdf}
+    \caption{Outlier at End}
+  \end{figure}
+
+  $r = -0.05157106$
+
+  \subsection{Middle Outlier}
   \begin{itemize*}
     \item outliers in middle of x range don't have much effect because the line can't
       move to accommodate them
 
     \item outliers at either end of the x range have a big effect because the line
       moves to fit them in
+  \end{itemize*}
+
+  \section{Regression to the Mean}
+  For any repeated test, people tend to be closer to the mean on the second attempt.
+
+  \begin{itemize*}
+    \item pilots with bad/good landings and instructor criticism/praise.
+    \item retake of standardized tests
   \end{itemize*}
 
 \end{document}
