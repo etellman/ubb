@@ -258,24 +258,48 @@
 
       $r = 0.4$
 
-      What is the expected GPA for a student with an SAT score of 650?
+      \begin{parts}
+        \part
+          What is the expected GPA for a student with an SAT score of 650?
 
-      \begin{solution}
-        \[
-          z_x = \frac{650 - 550}{80} = 1.25
-        \]
+          \begin{solution}
+            \[
+              z_x = \frac{650 - 550}{80} = 1.25
+            \]
 
-        1.25 SD above mean.
+            1.25 SD above mean.
 
-        \[
-          \hat{z}_y = 0.4 \cdot 1.25 = 0.5
-        \]
+            \[
+              \hat{z}_y = 0.4 \cdot 1.25 = 0.5
+            \]
 
-        Convert back to GPA:
-        \[
-          2.6 + 0.5 \cdot 0.6 = 2.9
-        \]
-      \end{solution}
+            Convert back to GPA:
+            \[
+              2.6 + 0.5 \cdot 0.6 = 2.9
+            \]
+          \end{solution}
+
+        \part
+          What is the expected GPA percentile for a student in the 90th percentile
+          for SAT scores?
+
+          \begin{solution}
+            convert to z-score: $z_{SAT} \approx 1.28$
+
+            calculate expected GPA z-score: 
+            \[
+              \hat{z}_{GPA} \approx 0.4 \cdot 1.28 = 0.512
+            \]
+
+            convert back to percentile:
+            \[
+              GPA \approx 0.6957
+            \]
+
+            He should expect to be around the 70th percentile.
+
+          \end{solution}
+    \end{parts}
 
     \item The mean age 45-54 in the HANES sample had an average height of 69
       inches.  This is the same as the overall average height.

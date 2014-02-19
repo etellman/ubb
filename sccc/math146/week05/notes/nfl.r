@@ -135,4 +135,6 @@ scale(team$HPTS, 7)
 
 # examples
 
-.4 * 100/80
+.4 * 1.28
+
+pnorm(.4 * 1.28)
