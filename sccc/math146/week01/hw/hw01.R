@@ -20,7 +20,8 @@ plot <- ggplot(ex25, aes(x = reorder(Color, -Popular), y = Popular)) +
   ggtitle("Car and Truck Colors")
 print(plot)
 
-ggsave("~/Documents/U/ubb/sccc/math146/week01/hw/figures/ex25.eps", width = 4, height = 2.5)
+ggsave("~/Documents/U/ubb/sccc/math146/week01/hw/figures/ex25.eps", 
+       width = 4, height = 2.5)
 
 # exercise 26
 ex26 <- read.delim("ex01-26.dat", header = TRUE, sep = '\t')

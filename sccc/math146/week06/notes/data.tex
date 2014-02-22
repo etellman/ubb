@@ -1,0 +1,136 @@
+% no answer key
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
+
+\usepackage{units} 
+\usepackage[fleqn]{amsmath}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\printanswers
+
+\everymath{\displaystyle}
+
+\printanswers
+
+\title{Statistics \\ Berkeley Sex Discrimination Case}
+\date{\today}
+\author{}
+
+\begin{document}
+
+\maketitle
+% \tableofcontents
+
+  In the 1970's, the University of California at Berkeley was accused of sex
+  discrimination in graduate admissions.  They commissioned a study to determine if
+  this was true.
+
+  Analyze the data from the study and answer:
+  \begin{itemize*}
+    \item Is there evidence of sex discrimination for the university as a whole?
+    \item Is the sex discrimination more prevalent in particular departments?
+  \end{itemize*}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rllrr}
+      \toprule
+         & department & sex & applicants & admissions \\
+      \midrule
+      1  & A          & M   & 825        & 511 \\
+      2  & A          & F   & 108        & 89 \\
+      \midrule
+      3  & B          & M   & 560        & 353 \\
+      4  & B          & F   & 25         & 17 \\
+      \midrule
+      5  & C          & M   & 325        & 120 \\
+      6  & C          & F   & 593        & 202 \\
+      \midrule
+      7  & D          & M   & 417        & 139 \\
+      8  & D          & F   & 375        & 131 \\
+      \midrule
+      9  & E          & M   & 191        & 53 \\
+      10 & E          & F   & 393        & 94 \\
+      \midrule
+      11 & F          & M   & 272        & 16 \\
+      12 & F          & F   & 341        & 24 \\
+      \midrule
+      13 & G          & M   & 16         & 5 \\
+      14 & G          & F   & 6          & 1 \\
+      \midrule
+      15 & other      & M   & 2017       & 807 \\
+      16 & other      & F   & 1507       & 603 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Berkeley Sex Discrimination Study}
+  \end{table}
+
+  \ifprintanswers
+    \pagebreak
+    \section{Analysis}
+
+    The overall admission rate for the university is 0.4.
+
+    \begin{table}[ht]
+      \centering
+      \begin{tabular}{rlrrr}
+        \toprule
+          & sex & applicants & admissions & proportion \\
+        \midrule
+        1 & M   & 4623       & 2004       & 0.43 \\
+        2 & F   & 3348       & 1161       & 0.35 \\
+        \bottomrule
+      \end{tabular}
+      \caption{By Sex}
+    \end{table}
+  
+    \begin{table}[ht]
+      \centering
+      \begin{tabular}{rlrr}
+        \toprule
+           & department & M    & F \\
+        \midrule
+        1  & A          & 0.62 & 0.82 \\
+        2  & B          & 0.63 & 0.68 \\
+        3  & C          & 0.37 & 0.34 \\
+        4  & D          & 0.33 & 0.35 \\
+        5  & E          & 0.28 & 0.24 \\
+        6  & F          & 0.06 & 0.07 \\
+        7  & G          & 0.31 & 0.17 \\
+        8  & other      & 0.40 & 0.40 \\
+        \bottomrule
+      \end{tabular}
+      \caption{Department and Sex}
+    \end{table}
+
+    \begin{table}[H]
+      \centering
+      \begin{tabular}{rlrrr}
+        \toprule
+          & department & applicants & admissions & proportion \\
+        \midrule
+        1 & A          & 933        & 600        & 0.64 \\
+        2 & B          & 585        & 370        & 0.63 \\
+        3 & C          & 918        & 322        & 0.35 \\
+        4 & D          & 792        & 270        & 0.34 \\
+        5 & E          & 584        & 147        & 0.25 \\
+        6 & F          & 613        & 40         & 0.07 \\
+        7 & G          & 22         & 6          & 0.27 \\
+        8 & other      & 3524       & 1410       & 0.40 \\
+        \bottomrule
+      \end{tabular}
+      \caption{By Department}
+    \end{table}
+  \fi
+\end{document}
+

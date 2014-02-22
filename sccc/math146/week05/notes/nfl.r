@@ -1,4 +1,4 @@
-install.packages("xtable")
+install.packages("xts")
 
 library("plyr")
 library("ggplot2")
