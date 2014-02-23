@@ -1,3 +1,9 @@
+root.dir <- "~/Documents/U/ubb/sccc/math146"
+
+data.dir <- paste(root.dir, "data/bps/PC-Text", sep = "/")
+hw4.data.dir <- paste(data.dir, "ch04", sep = "/")
+
+setwd(hw4.data.dir)
 
 # exercise 26
 ex26 <- read.delim("ex04-26.dat", header = TRUE, sep = '\t')
@@ -105,6 +111,8 @@ plot <- ggplot(ex43, aes(x = DD, y = Gas, shape = Data)) +
 print(plot)
 
 ggsave("~/Documents/U/ubb/sccc/math146/week04/hw/figures/ex43.eps", width = 4, height = 2.5)
+
+with(ex43, cor(DD, Gas))
 
 # exercise 44
 ex44 <- read.delim("ex04-44.dat", header = TRUE, sep = '\t')
