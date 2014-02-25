@@ -1,0 +1,171 @@
+% no answer key
+\documentclass[letterpaper]{exam}
+
+% answer key
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers
+
+\usepackage{units} 
+\usepackage{parskip} 
+\usepackage[fleqn]{amsmath}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\printanswers
+
+\everymath{\displaystyle}
+
+\printanswers
+
+\title{Statistics \\ Stop and Frisk}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Introduction}
+  The city of New York has a ``Stop and Frisk'' policy which allows policemen to
+  stop and frisk people without suspecting them of committing a specific crime.
+
+  There have been some allegations that the policy isn't effective and isn't
+  being fairly applied to all of New Yorkers.  The mayor has asked you to do a
+  study to determine whether this is true.
+
+  This data is for all the 514,725 ``Stop and Frisk'' stops in made 2012.
+
+  \section{Data}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{lr}
+      \toprule
+      age         & count \\
+      \midrule
+      under 5     & 517724 \\
+      5 to 9      & 473159 \\
+      10 to 14    & 468154 \\
+      15 to 19    & 535833 \\
+      20 to 24    & 642585 \\
+      25 to 29    & 730190 \\
+      30 to 34    & 662255 \\
+      35 to 39    & 587407 \\
+      40 to 44    & 567280 \\
+      45 to 49    & 565692 \\
+      50 to 54    & 541684 \\
+      55 to 59    & 475535 \\
+      60 to 64    & 414477 \\
+      65 to 69    & 297167 \\
+      70 to 74    & 234294 \\
+      75 to 79    & 178019 \\
+      80 to 84    & 142272 \\
+      85 and over & 141406 \\
+      total       & 8175133 \\
+      \bottomrule
+    \end{tabular}
+    \caption{NYC by Age}
+  \end{table}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{lr}
+      \toprule
+      race     & count \\
+      \midrule
+      white    & 2722904 \\
+      black    & 1861295 \\
+      Indian   & 17427 \\
+      Asian    & 1028119 \\
+      Hispanic & 2336076 \\
+      other    & 209312 \\
+      \bottomrule
+    \end{tabular}
+    \caption{NYC by Race}
+  \end{table}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rrrrrrrr}
+      \toprule
+       race    & 0 to 14 & 15 to 24 & 25 to 34 & 35 to 44 & 45 to 54 & over 55 & (all) \\
+      \midrule
+      black    & 7750    & 138235   & 67785    & 31693    & 26337    & 10175   & 281975 \\
+      hisp/b   & 694     & 18098    & 8792     & 4235     & 2585     & 970     & 35374 \\
+      hisp/w   & 2176    & 61432    & 34256    & 17149    & 9707     & 3517    & 128237 \\
+      white    & 566     & 22179    & 12993    & 6721     & 5003     & 2505    & 49967 \\
+      Asian    & 265     & 8657     & 4057     & 2001     & 1267     & 689     & 16936 \\
+      Indian   & 43      & 1096     & 523      & 277      & 197      & 100     & 2236 \\
+      (all)    & 11494   & 249697   & 128406   & 62076    & 45096    & 17956   & 514725 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Stops by race and age}
+  \end{table}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rrrrr}
+      \toprule
+      race     & total  & frisked & searched & force used \\
+      \midrule
+      black    & 282803 & 162495  & 22580    & 58489 \\
+      hisp/b   & 35446  & 20823   & 3077     & 8602 \\
+      hisp/w   & 128501 & 74244   & 11292    & 28660 \\
+      white    & 50102  & 21976   & 4404     & 7811 \\
+      Asian    & 16974  & 8078    & 1457     & 3128 \\
+      Indian   & 2240   & 1051    & 196      & 403 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Actions by race}
+  \end{table}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rrrrrrr}
+      \toprule
+      race              & black  & hisp/b & hisp/w & white & Asian & Indian \\
+      \midrule
+      suspicious.object & 5997   & 878    & 3702   & 1895  & 491   & 62 \\
+      description       & 45816  & 6398   & 20746  & 8541  & 2933  & 385 \\
+      casing            & 97028  & 11482  & 47446  & 20302 & 7366  & 854 \\
+      lookout           & 51130  & 6629   & 25038  & 10724 & 3635  & 443 \\
+      clothing          & 14667  & 1702   & 5461   & 1697  & 541   & 67 \\
+      drug.trans        & 20822  & 2800   & 8772   & 4241  & 850   & 136 \\
+      furtive           & 152784 & 18081  & 64685  & 22116 & 7778  & 990 \\
+      violent.crime     & 32013  & 3802   & 15402  & 3642  & 1805  & 237 \\
+      suspicious.bulge  & 22844  & 3110   & 9435   & 1929  & 542   & 83 \\
+      other             & 44301  & 5255   & 19390  & 8592  & 2846  & 365 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Reason for stop by race}
+  \end{table}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{lrrr}
+      \toprule
+                          & total  & pistol found & arrest made \\
+      \midrule
+      suspicious.object   & 13025  & 43           & 2323 \\
+      description         & 84819  & 201          & 9731 \\
+      casing              & 184478 & 63           & 5399 \\
+      lookout             & 97599  & 38           & 2870 \\
+      clothing            & 24135  & 36           & 1117 \\
+      drug.trans          & 37621  & 28           & 4713 \\
+      furtive             & 266434 & 405          & 14094 \\
+      violent.crime       & 56901  & 120          & 3024 \\
+      suspicious.bulge    & 37943  & 119          & 2050 \\
+      other               & 80749  & 169          & 7665 \\
+       \bottomrule
+    \end{tabular}
+    \caption{Outcomes by reason for stop}
+  \end{table}
+
+\end{document}
+
