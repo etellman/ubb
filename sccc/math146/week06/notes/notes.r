@@ -38,13 +38,20 @@ ucb.m <- melt(ucb, id = c('department', 'sex'))
 
 
 # overall
+overall <- with(ucb, data.frame(admissions = sum(admissions), applicants = sum(applicants)))
 with(ucb, round(sum(admissions) / sum(applicants), 2))
+
+sink(paste(notes.dir, 'r.tex', sep = '/'))
+  xtable(overall, digits = 0)
+sink()
 
 # by sex
 by.sex <- ddply(ucb, .(sex), summarize, 
                 applicants = sum(applicants), 
                 admissions = sum(admissions), 
                 proportion = round(sum(admissions) / sum(applicants), 2))
+
+by.sex
 
 # by department and sex
 by.department.sex <- ddply(ucb, .(department, sex), summarize, 
@@ -61,7 +68,4 @@ by.department <- ddply(ucb, .(department), summarize,
                        admissions = sum(admissions), 
                        proportion = round(sum(admissions) / sum(applicants), 2))
 
-sink(paste(notes.dir, 'r.tex', sep = '/'))
-  xtable(by.department, digits = 2)
-sink()
 

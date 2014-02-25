@@ -76,7 +76,6 @@ ex21 <- ddply(ta6.2, c("marital.status"),
 ex21
 
 ta62.m <- melt(ta6.2, id = c("marital.status", "job.grade"))
-
 cast(ta62.m, marital.status ~ job.grade, function(x) sum(x), margins = T)
 
 337/955

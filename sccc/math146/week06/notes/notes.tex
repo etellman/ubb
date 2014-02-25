@@ -23,8 +23,166 @@
 
 \begin{document}
 
-\maketitle
-\tableofcontents
+  \maketitle
+  \tableofcontents
 
+  \section{Analysis}
+
+  The overall admission rate for the university is 40 \%.
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rrr}
+      \toprule
+      admitted & rejected & total \\
+      \midrule
+      1749     & 2676     & 4425 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  Break down by sex:
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rlrrr}
+      \toprule
+                & sex   & admitted & rejected & (all) \\
+      \midrule
+      1         & M     & 1192     & 1398     & 2590 \\
+      2         & F     & 557      & 1278     & 1835 \\
+      3         & (all) & 1749     & 2676     & 4425 \\
+       \bottomrule
+    \end{tabular}
+    \caption{By sex}
+  \end{table}
+
+  Each row is a ``conditional distribution.'' All the values for a row have the
+  same value for the categorical variable.
+
+  The totals are ``marginal distributions.'' In this case, they tell you:
+  \begin{itemize*}
+    \item total number of men
+    \item total number of women
+    \item total number of admitted
+    \item total number of rejected
+  \end{itemize*}
+
+  A table of proportions is more useful:
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rlrr}
+      \toprule
+                & sex & admitted & rejected \\
+      \midrule
+      1         & M   & 0.46     & 0.54 \\
+      2         & F   & 0.30     & 0.70 \\
+       \bottomrule
+    \end{tabular}
+  \end{table}
+
+  Things looked suspicious, so they decided to do a breakdown by department:
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rllrrr}
+      \toprule
+                 & department & sex   & admitted & rejected & (all) \\
+      \midrule
+      1          & A          & M     & 511      & 314      & 825 \\
+      2          & A          & F     & 89       & 19       & 108 \\
+      3          & A          & (all) &          & 333      & 933 \\
+      \midrule
+      4          & B          & M     & 353      & 207      & 560 \\
+      5          & B          & F     & 17       & 8        & 25 \\
+      6          & B          & (all) & 370      & 215      & 585 \\
+      \midrule
+      7          & C          & M     & 120      & 205      & 325 \\
+      8          & C          & F     & 202      & 391      & 593 \\
+      9          & C          & (all) & 322      & 596      & 918 \\
+      \midrule
+      10         & D          & M     & 139      & 278      & 417 \\
+      11         & D          & F     & 131      & 244      & 375 \\
+      12         & D          & (all) & 270      & 522      & 792 \\
+      \midrule
+      13         & E          & M     & 53       & 138      & 191 \\
+      14         & E          & F     & 94       & 299      & 393 \\
+      15         & E          & (all) & 147      & 437      & 584 \\
+      \midrule
+      16         & F          & M     & 16       & 256      & 272 \\
+      17         & F          & F     & 24       & 317      & 341 \\
+      18         & F          & (all) & 40       & 573      & 613 \\
+      \midrule
+      19         & (all)      & (all) & 1749     & 2676     & 4425 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  The percentages are more useful;
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rlrr}
+      \toprule
+               & department & M    & F \\
+      \midrule
+      1        & A          & 0.62 & 0.82 \\
+      2        & B          & 0.63 & 0.68 \\
+      3        & C          & 0.37 & 0.34 \\
+      4        & D          & 0.33 & 0.35 \\
+      5        & E          & 0.28 & 0.24 \\
+      6        & F          & 0.06 & 0.07 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Admissions proportions by department and sex.}
+  \end{table}
+
+  Department A has a bias towards women and all the other departments are
+  evenly balanced
+
+  Which departments are the most selective:
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rlr}
+      \toprule
+               & department & admitted \\
+      \midrule
+      1        & A          & 0.64 \\
+      2        & B          & 0.63 \\
+      3        & C          & 0.35 \\
+      4        & D          & 0.34 \\
+      5        & E          & 0.25 \\
+      6        & F          & 0.07 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Proportion admitted for each department}
+  \end{table}
+
+  A is the easiest and F is the toughest.
+
+  Where do men and women most frequently apply:
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rrrr}
+      \toprule
+               & department & women & men \\
+      \midrule
+      1        & A          & 0.06  & 0.32 \\
+      2        & B          & 0.01  & 0.21 \\
+      3        & C          & 0.32  & 0.12 \\
+      4        & D          & 0.20  & 0.16 \\
+      5        & E          & 0.21  & 0.07 \\
+      6        & F          & 0.19  & 0.10 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \begin{itemize*}
+    \item 62 \% of the men apply to the two easiest departments.
+    \item 17 \% of the men apply to the two hardest departments.
+    \item 7 \% of the women apply to the two easiest departments.
+    \item 40 \% of the women apply to the two hardest departments.
+  \end{itemize*}
 \end{document}
 
