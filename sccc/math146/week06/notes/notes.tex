@@ -56,9 +56,6 @@
     \caption{By sex}
   \end{table}
 
-  Each row is a ``conditional distribution.'' All the values for a row have the
-  same value for the categorical variable.
-
   The totals are ``marginal distributions.'' In this case, they tell you:
   \begin{itemize*}
     \item total number of men
@@ -80,6 +77,9 @@
        \bottomrule
     \end{tabular}
   \end{table}
+
+  Each row is a ``conditional distribution.'' All the values for a row have the
+  same value for the categorical variable.
 
   Things looked suspicious, so they decided to do a breakdown by department:
 
@@ -223,6 +223,58 @@
 
       $10161 / 14172 = 0.72$ are in the 18 to 24 age group
 
+    \item[3]
+      \begin{table}[H]
+        \centering
+        \begin{tabular}{rlrrr}
+          \toprule
+                   & consumer & higher & same & lower \\
+          \midrule
+          1        & buyer    & 0.56   & 0.19 & 0.25 \\
+          2        & nonbuyer & 0.30   & 0.26 & 0.44 \\
+          \bottomrule
+        \end{tabular}
+      \end{table}
+                                
+      \begin{table}[H]
+      \centering
+      \begin{tabular}{rlrr}
+        \toprule
+                 & inclination & buyer & nonbuyer \\
+        \midrule
+        1        & higher      & 0.41  & 0.59 \\
+        2        & same        & 0.22  & 0.78 \\
+        3        & lower       & 0.17  & 0.83 \\
+        \bottomrule
+      \end{tabular}
+      \end{table}
+
+    \item[4]
+      \begin{table}[H]
+        \centering
+        \begin{tabular}{rlrr}
+          \toprule
+                   & age    & female & male \\
+          \midrule
+          1        & 15to17 & 0.66   & 0.34 \\
+          2        & 18to24 & 0.54   & 0.46 \\
+          3        & 25to34 & 0.62   & 0.38 \\
+          4        & over34 & 0.64   & 0.36 \\
+           \bottomrule
+        \end{tabular}
+      \end{table}
+
+      \begin{table}[H]
+        \centering
+        \begin{tabular}{rlrrrr}
+          \toprule
+                   & sex    & 15to17 & 18to24 & 25to34 & over34 \\
+          \midrule
+          1        & female & 0.01   & 0.69   & 0.17   & 0.13 \\
+          2        & male   & 0.01   & 0.76   & 0.13   & 0.10 \\
+           \bottomrule
+        \end{tabular}
+      \end{table}
   \end{description}
 
 \end{document}
