@@ -1,8 +1,3 @@
-library(ggplot2) 
-library(reshape)
-library(xtable)
-library(plyr) 
-
 # data
 pbs <- read.delim("prisoners_by_state.txt", header = TRUE, sep = '\t')
 pbs.m <- melt(pbs, id = c("state", "region", "year"))

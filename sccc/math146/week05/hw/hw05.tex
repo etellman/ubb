@@ -148,7 +148,7 @@
       \item[27]     
         \begin{figure}[H]
           \centering
-          \includegraphics{figures/ex27.pdf}
+          \includegraphics[scale = 0.9]{figures/ex27.pdf}
           \caption{Exercise 27}
         \end{figure}
 
@@ -158,60 +158,62 @@
 
         \part 
           \[
-            DD(200) = 2.69 + 0.0138 \cdot 200 \approx \unit[5.45]{s}
+            \hat{y}(200) = 2.69 + 0.0138 \cdot 200 \approx \boxed{ \unit[5.45]{min} }
           \]
         \end{parts}
     
       \item[28]
         \begin{parts}
-          \part for every $\unit[1.507]{mg/l}$ increase in the concentration of TOC,
-            there is a $\unit[1]{mg/l}$ increase in the concentration of BOD.
+          \part for every $\unit[1]{mg/l}$ increase in the concentration of TOC,
+            there is a  $\unit[1.507]{mg/l}$ increase in the concentration of BOD.
 
-          \part The predicted value is $\unit[-55.43]{mg/l}$.  Perhaps nothing can
-            live when the total organic carbon is close to zero, so the BOD value
-            doesn't make sense.
+          \part The predicted value is \boxed{ $\unit[-55.43]{mg/l}$}. Perhaps
+          nothing can live when the total organic carbon is close to zero, so
+          the BOD value doesn't make sense.
         \end{parts}
 
       \item[30]
         \begin{parts}
           \part 
             \begin{align*}
-              y &= 157.68 - 2.993 x \\
-              y(30) &= 67.88 \% \\
+              y     & = 157.68 - 2.993 x \\
+              y(30) & = \boxed{ 67.88 \% } \\
             \end{align*}
 
-          \part From Figure 5.11, $r^2 = 63.1 \%$
+          \part From Figure 5.11, $r^2 = \boxed{ 63.1 \% }$
             
           \part Since the correlation coefficient doesn't depend on the order,
           it would be the same magnitude and sign.  The line slopes down, so the
           correlation coefficient is negative:
           \[
-            r = - \sqrt{67.88} = -8.24
+            r = - \sqrt{0.631} = \boxed{ - 0.794 }
           \]
 
         \end{parts}
 
+      \pagebreak
+
       \item[31]
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale = 0.9]{figures/ex31.pdf}
+          \caption{Exercise 31}
+          \label{fig:31}
+        \end{figure}
+
         \begin{parts}
-          \begin{align*}
-            b  & = 0.5 \cdot \frac{2.8}{2.7} \\
-               & = 0.5185
-            \\
-            a  & = 69 - 0.5185 \cdot 64 \\
-               & = 35.82 \\
-          \end{align*}
-
-          The equation is:
-          \[
-            \hat{y} = 35.82 + 0.5185 \hat{x}
-          \]
-
           \part
-            \begin{figure}[H]
-              \centering
-              \includegraphics{figures/ex31.pdf}
-              \caption{Exercise 31}
-            \end{figure}
+            \begin{align*}
+              b  & = 0.5 \cdot \frac{2.8}{2.7} \approx 0.5185 \\
+              a  & = 69.3 - 0.5185 \cdot 64 \approx 36.1 \\
+            \end{align*}
+            \[
+              \boxed{ \hat{y} = 36.1 + 0.5185 x }
+            \]
+
+          \part Figure \ref{fig:31}.  
+          
+          A 67 inch wife is expected to have a 70.5 inch husband.
 
           \part The estimate isn't very accurate:
             \[
@@ -227,23 +229,18 @@
         \begin{parts}
           \part
             \begin{align*}
-              a & = 0.6 \cdot \frac{75}{280} \\
-                & = 0.1607 \\
-            \end{align*}
-
-            \begin{align*}
+              a & = 0.6 \cdot \frac{75}{280} \approx 0.1607 \\
+              \\
               75 & = 0.1607 \cdot 280 + b \\
-              b  & = 30.04 \\
-            \end{align*} 
-
-            The equation is:
+              b  & \approx 30.04 \\
+            \end{align*}
             \[
-              \hat{y} = 30.04 + 0.1607 x
+              \boxed{ \hat{y} = 30.04 + 0.1607 x }
             \]
 
           \part 
             \[
-              y(300) = 78.25
+              y(300) = \boxed{ 78.25 }
             \]
 
           \part
@@ -254,11 +251,13 @@
       \item[33]
         \begin{align*}
           r^2 & = 0.16 \\
-          r   & = 0.4 \\
+          r   & = \boxed{ 0.4 } \\
         \end{align*}
 
         $r$ is positive because the more classes you attend, the better your
         grade.
+
+      \newpage
 
       \item[34]
         \begin{parts}
@@ -266,7 +265,7 @@
             $y = 0.527x + 27.635$
             \begin{figure}[H]
               \centering
-              \includegraphics{figures/ex34.pdf}
+              \includegraphics[scale = 0.9]{figures/ex34.pdf}
               \caption{Exercise 34}
             \end{figure}
 
@@ -277,66 +276,77 @@
         \end{parts}
 
       \item[37]
-        \begin{description}
-          \item[a-b]
-            \begin{figure}[H]
-              \centering
-              \includegraphics{figures/ex37.pdf}
-              \caption{Exercise 37}
-            \end{figure}
+        \begin{figure}[ht]
+          \centering
+          \includegraphics[scale = 0.9]{figures/ex37.pdf}
+          \caption{Exercise 37}
+          \label{fig:37}
+        \end{figure}
 
-          \item[c]
+        \begin{parts}
+          \part Figure \ref{fig:37}
+
+          \part Figure \ref{fig:37}
+
+          \part
             The outlier increases the correlation because it adds a term
             with a high value in both the x and y dimensions.  The outlier
             doesn't affect the regression line much because it is exactly on the
             regression line.
 
-          \item[d]
-            \begin{tabular}[H]{lrr}
-              \toprule
-                        & With Outlier & Without Outlier \\
-              \midrule
-              slope     & 0.0088       & 0.0089 \\
-              intercept & 0.5850       & 0.5858 \\
-              $r$       & 0.8486       & 0.7015 \\
-              \bottomrule
-            \end{tabular}
-        \end{description}
+            \part 
+              \begin{tabular}[H]{lrr}
+                \toprule
+                          & With Outlier & Without Outlier \\
+                \midrule
+                slope     & 0.0088       & 0.0089 \\
+                intercept & 0.5850       & 0.5858 \\
+                $r$       & 0.8486       & 0.7015 \\
+                \bottomrule
+              \end{tabular}
+
+        \end{parts}
 
       \item[38]
         \begin{figure}[H]
           \centering
-          \includegraphics{figures/ex38a.pdf}
+          \includegraphics[scale = 0.9]{figures/ex38a.pdf}
           \caption{Exercise 38 (a)}
+          \label{fig:38a}
         \end{figure}
 
         \begin{figure}[H]
           \centering
-          \includegraphics{figures/ex38b.pdf}
+          \includegraphics[scale = 0.9]{figures/ex38b.pdf}
           \caption{Exercise 38 (b)}
+          \label{fig:38b}
         \end{figure}
 
         \begin{figure}[H]
           \centering
-          \includegraphics{figures/ex38c.pdf}
+          \includegraphics[scale = 0.9]{figures/ex38c.pdf}
           \caption{Exercise 38 (c)}
+          \label{fig:38c}
         \end{figure}
 
         \begin{figure}[H]
           \centering
-          \includegraphics{figures/ex38d.pdf}
+          \includegraphics[scale = 0.9]{figures/ex38d.pdf}
           \caption{Exercise 38 (d)}
+          \label{fig:38d}
         \end{figure}
 
-        \begin{description}
-          \item[a]
+        \begin{parts}
+          \part
             All of the data sets are about the same.
             \begin{align*}
-              y & = 0.5 x + 3 \\
-              r & \approx 0.816 \\
+              \hat{y} & \approx 0.5 x + 3 \\
+              r       & \approx 0.816 \\
             \end{align*}
 
-          \item[c]
+          \part Figures \ref{fig:38a}-\ref{fig:38d}
+
+          \part
             \begin{itemize*}
               \item Graph a looks like a linear relationship, with some minor
                 variations.
@@ -344,11 +354,11 @@
               \item Graphs b and d don't look like linear relationships.
 
               \item Graph c looks like a linear relationship with one outlier.
-                I would discard the outlier and compute a new regression line.
-                It looks like the outlier is drawing the line away from
-                where it should be.
+                You might consider removing the outlier and computing a new
+                regression line.  It looks like the outlier is drawing the line
+                slightly away from where it should be.
             \end{itemize*}
-      \end{description}
+      \end{parts}
 
       \item[42]
         People use artificial sweeteners because they are already overweight.
@@ -373,64 +383,75 @@
         is decreasing over time, as long as it doesn't decrease so much that
         older people no longer make more than younger people.
 
-      \item[47]
-        \begin{tabular}[H]{rr}
-          \toprule
-          First Round & Second Round \\
-          \midrule
-          70          & 74.53 \\
-          80          & 76.33 \\
-          \bottomrule
-        \end{tabular}
+      \newpage
+
+      \item[47].
+        \begin{table}[H]
+          \centering
+          \begin{tabular}{rr}
+            \toprule
+            First Round & Second Round \\
+            \midrule
+            80          & 76.33 \\
+            70          & 74.53 \\
+            \bottomrule
+          \end{tabular}
+        \end{table}
 
       \item[48]
-        Since the regression line passes through $(\bar{x}, \bar{y})$:
-        \begin{align*}
-          \bar{y} & = 46.6 + 0.41 \bar{x} \\
-          \bar{x} & = \frac{\bar{y} - 46.6}{0.41} \\
-        \end{align*}
+        Since $r = 0.41$, every point above the mean on the midterm accounts for
+        0.41 points above the mean on the final.  Since he scored 10 points
+        above the mean on the midterm, he will probably score about 4.1 points
+        above the mean on the final.
 
-        Antonio's predicted score on the final is:
-        \begin{align*}
-          \hat{y} & = 46.6 + 0.41 (\bar{x} + 10) \\
-                  & = 50.7 + 0.41 \bar{x} \\
-        \end{align*}
+        % Since the regression line passes through $(\bar{x}, \bar{y})$:
+        % \begin{align*}
+        %   \bar{y} & = 46.6 + 0.41 \bar{x} \\
+        %   \bar{x} & = \frac{\bar{y} - 46.6}{0.41} \\
+        % \end{align*}
 
-        We can plug the first equation into the second one to find Antonio's
-        final score relative to the final mean:
+        % Antonio's predicted score on the final is:
+        % \begin{align*}
+        %   \hat{y} & = 46.6 + 0.41 (\bar{x} + 10) \\
+        %           & = 50.7 + 0.41 \bar{x} \\
+        % \end{align*}
 
-        \begin{align*}
-          \hat{y} & = 50.7 + 0.41 \bar{x} \\
-                  & = 50.7 + 0.41 \left( \frac{\bar{y} - 46.6}{0.41} \right) \\
-                  & = \bar{y} + 4.1 \\
-        \end{align*}
+        % We can plug the first equation into the second one to find Antonio's
+        % final score relative to the final mean:
 
-        He should expect to be 4.1 points over the mean on the final.
+        % \begin{align*}
+        %   \hat{y} & = 50.7 + 0.41 \bar{x} \\
+        %           & = 50.7 + 0.41 \left( \frac{\bar{y} - 46.6}{0.41} \right) \\
+        %           & = \bar{y} + 4.1 \\
+        % \end{align*}
+
+        % He should expect to be 4.1 points over the mean on the final.
 
       \item[51]
-        Since $r^2 = 8391$, the stumps account for about 84\% of the variation
+        Since $r^2 = 0.8391$, the stumps account for about 84\% of the variation
         in the larvae.  We can conclude that the beavers are helping the beetles
         by creating the stumps.
 
         The regression line for larvae based on stumps is:
         \[
-          \hat{y} = 11.8937 x - 1.2861 
+          \hat{y} = 11.89 x - 1.29
         \]
 
         \begin{figure}[H]
           \centering
-          \includegraphics{figures/ex51.pdf}
+          \includegraphics[scale = 0.9]{figures/ex51.pdf}
           \caption{Exercise 51}
         \end{figure}
+
+      \pagebreak
 
       \item[53]
         With all the data, $r^2 = 0.2798$.  The prediction accounts for about
         28\% of the variation.  
         
-        If you throw out 2005, when he correctly predicted a very bad year, 
-        $r^2 = 0.2260$ or only 23\%.
-
-        Either way, the prediction isn't great.
+        If you throw out 2005, when he correctly predicted a very bad year,
+        although the reality turned out to be even worse, $r^2 = 0.2260$ or only
+        23\%.
 
         Including 2005, the regression equation is:
         \[
@@ -438,17 +459,17 @@
         \]
 
         For a year when he predicts 16 hurricanes, you should actually expect
-        around 14 hurricanes.
+        around 16.25 hurricanes.
 
         \begin{figure}[H]
           \centering
-          \includegraphics{figures/ex53.pdf}
+          \includegraphics[scale = 0.9]{figures/ex53_forecast.pdf}
           \caption{Exercise 53}
         \end{figure}
 
         \begin{figure}[H]
           \centering
-          \includegraphics{figures/ex53_residuals.pdf}
+          \includegraphics[scale = 0.9]{figures/ex53_residuals.pdf}
           \caption{Exercise 53 Residuals}
         \end{figure}
 

@@ -10,17 +10,13 @@ setwd(hw5.data.dir)
 
 # exercise 27
 dd <- function(d) 2.69 + 0.0138 * d
-dd(200)
 
 plot <- ggplot(data.frame(x = c(40,300)), aes(x = x)) + 
   stat_function(fun = dd) +
-  labs(x = "Depth", y = "Duration") +
-  # scale_x_continuous(limits = c(-10, 30)) +
-  ggtitle("Exercise 27: Penguin Dives")
+  labs(x = 'Depth (meters)', y = 'Duration (minutes)') 
 print(plot)
 
-ggsave(paste(figures.dir, "ex27.pdf", sep = "/"), width = 4, height = 2.5)
-
+ggsave(paste(figures.dir, "ex27.pdf", sep = "/"))
 
 # exercise 30
 ex30 <- read.delim("../ch04/ex04-44.dat", header = TRUE, sep = '\t')
@@ -40,14 +36,15 @@ summary(lm(Pairs ~ Pct, data = ex30))
 
 # exercise 31
 ex31 <- function(x) 35.82 + 0.5185 * x
+
 plot <- ggplot(data.frame(x = c(56, 72)), aes(x = x)) + 
   stat_function(fun = ex31) +
-  labs(x = "Wife Height", y = "Husband Height") +
-  # scale_x_continuous(limits = c(-10, 30)) +
-  ggtitle("Exercise 31: Spouse Heights")
-print(plot)
+  labs(x = 'Wife', y = 'Husband')
 
-ggsave(paste(figures.dir, "ex31.pdf", sep = "/"), width = 4, height = 2.5)
+print(plot)
+ggsave(paste(figures.dir, "ex31.pdf", sep = "/"))
+
+ex31(67)
 
 # exercise 32
 .6 * 75/280
@@ -72,11 +69,11 @@ sink()
 plot <- ggplot(ex34, aes(x = Brother, y = Sister)) + 
   geom_point() +
   stat_smooth(method = "lm") +
-  labs(x = "Brother", y = "Sister") +
-  ggtitle("Exercise 34: Sibling Heights")
+  labs(x = "Brother", y = "Sister")
+
 print(plot)
 
-ggsave(paste(figures.dir, "ex34.pdf", sep = "/"), width = 4, height = 2.5)
+ggsave(paste(figures.dir, "ex34.pdf", sep = "/"))
 
 round(predict(ex34.lm, data.frame(Brother = c(70))), 2)
 summary(ex34.lm)
@@ -99,7 +96,6 @@ summary(ex37.lm)
 round(coef(ex37.lm), 4)
 round(cor(ex37), 4)
 
-
 ex37.no.outlier <- subset(ex37, Neural < 150)
 ex37.no.outlier.lm <- lm(Behave ~ Neural, data = ex37.no.outlier)
 summary(ex37.no.outlier.lm)
@@ -109,11 +105,11 @@ round(cor(ex37.no.outlier), 4)
 plot <- ggplot(ex37, aes(x = Neural, y = Behave)) + 
   geom_point() +
   stat_smooth(method = "lm") +
-  labs(x = "Neural", y = "Behavioral") +
-  ggtitle("Exercise 37: Loss Aversion")
+  labs(x = "Neural", y = "Behavioral")
+
 print(plot)
 
-ggsave(paste(figures.dir, "ex37.pdf", sep = "/"), width = 4, height = 2.5)
+ggsave(paste(figures.dir, "ex37.pdf", sep = "/"))
 
 # exercise 38
 ex38a <- read.delim("ta05-01a.dat", header = TRUE, sep = '\t')
@@ -140,11 +136,10 @@ cor(ex38)
 plot <- ggplot(ex38d, aes(x = x, y = y)) + 
   geom_point() +
   stat_smooth(method = "lm") +
-  labs(x = "", y = "") +
-  ggtitle("Exercise 38 (d)")
-print(plot)
+  labs(x = "", y = "")
 
-ggsave(paste(figures.dir, "ex38d.pdf", sep = "/"), width = 4, height = 2.5)
+print(plot)
+ggsave(paste(figures.dir, "ex38d.pdf", sep = "/"))
 
 # exercise 47
 ex47 <- function(x) 61.93 + 0.18 * x
@@ -165,17 +160,16 @@ sink()
 
 ex51.lm <- lm(Larvae ~ Stumps, data = ex51)
 summary(ex51.lm)
-round(coef(ex51.lm), 4)
+round(coef(ex51.lm), 2)
 cor(ex51)
 
 plot <- ggplot(ex51, aes(x = Stumps, y = Larvae)) + 
   geom_point() +
   stat_smooth(method = "lm") +
-  labs(x = "Stumps", y = "Larvae") +
-  ggtitle("Exercise 51")
+  labs(x = "Stumps", y = "Larvae")
 print(plot)
 
-ggsave(paste(figures.dir, "ex51.pdf", sep = "/"), width = 4, height = 2.5)
+ggsave(paste(figures.dir, "ex51.pdf", sep = "/"))
 
 # exercise 53
 ex53 <- read.delim("ex05-53.dat", header = TRUE, sep = '\t')
@@ -193,18 +187,28 @@ sink()
 
 ex53.lm <- lm(Observed ~ Forecast, data = ex53)
 summary(ex53.lm)
-round(coef(ex53.lm), 4)
+round(coef(ex53.lm), 3)
 with(ex53, cor(Forecast, Observed))
 
 residuals(ex53.lm)
 
 round(predict(ex53.lm, data.frame(Forecast = c(16))), 2)
 
-plot <- ggplot(ex53, aes(x = Forecast, y = residuals(ex53.lm))) + 
+str(ex53)
+
+plot <- ggplot(ex53, aes(x = Forecast, y = Observed)) + 
   geom_point() +
   stat_smooth(method = "lm") +
-  labs(x = "Forecast", y = "Residuals") +
-  ggtitle("Exercise 53 Residuals")
+  labs(x = "Forecast", y = "Storms")
 print(plot)
 
-ggsave(paste(figures.dir, "ex53_residuals.pdf", sep = "/"), width = 4, height = 2.5)
+ggsave(paste(figures.dir, "ex53_forecast.pdf", sep = "/"))
+
+plot <- ggplot(ex53, aes(x = Forecast, y = residuals(ex53.lm))) + 
+  geom_point() +
+  # stat_smooth(method = "lm") +
+  labs(x = "Forecast", y = "Residuals")
+print(plot)
+
+ggsave(paste(figures.dir, "ex53_residuals.pdf", sep = "/"))
+

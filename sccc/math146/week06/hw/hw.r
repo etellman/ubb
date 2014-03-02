@@ -18,6 +18,9 @@ ex19 <- rbind(
 ex19.rates <- ddply(ex19, "treatment", summarize, 
                     success.rate = success / subjects)
 
+ex19
+ex19.rates
+
 plot <- ggplot(ex19.rates, 
                aes(x = reorder(treatment, -success.rate), y = success.rate)) + 
   geom_bar(stat = "identity", fill="lightblue", color = "black") +
