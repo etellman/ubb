@@ -1,3 +1,12 @@
+root.dir <- "~/Documents/U/ubb/sccc/math146"
+
+data.dir <- paste(root.dir, "data/bps/PC-Text", sep = "/")
+hw3.data.dir <- paste(data.dir, "ch03", sep = "/")
+
+hw.dir <- paste(root.dir, "week03/hw", sep = "/")
+figures.dir <- paste(hw.dir, "figures", sep = "/")
+
+setwd(hw3.data.dir)
 
 # exercise 25
 ex25.range <- function(mean, sd) {
@@ -12,12 +21,13 @@ pnorm(70, 100, 15)
 # exercise 28
 plot <- ggplot(data.frame(x = c(-25, 525)), aes(x = x)) +
   stat_function(fun = function(x) dnorm(x, 250, 176)) +
-  stat_function(fun = limit.domain(function(x) dnorm(x, 250, 176), -25, 25), geom = "area", fill = "lightblue") +
-  stat_function(fun = limit.domain(function(x) dnorm(x, 250, 176), 475, 525), geom = "area", fill = "lightblue") +
-  ggtitle("Exercise 28 (c)")
+  stat_function(fun = limit.domain(function(x) dnorm(x, 250, 176), -25, 25), 
+                geom = "area", fill = "lightblue") +
+  stat_function(fun = limit.domain(function(x) dnorm(x, 250, 176), 475, 525), 
+                geom = "area", fill = "lightblue") 
 print(plot)
 
-qgsave("~/Documents/U/ubb/sccc/math146/week03/hw/figures/ex28c.eps", width = 4, height = 2.5)
+ggsave(paste(figures.dir, 'ex28c.pdf', sep = '/'))
 
 # exercise 46
 ex46 <- read.delim("ex03-46.dat", header = TRUE, sep = '\t')
