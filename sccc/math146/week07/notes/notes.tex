@@ -26,6 +26,95 @@
   \maketitle
   \tableofcontents
 
+  \section{Review}
+  \subsection{Chapter One: Visualizing Data}
+  \begin{itemize*}
+    \item categorical vs. quantitative variables
+    \item time series graphs---time on the x axis
+    \item bar graphs---categorical vs. quantitative
+    \item histograms---quantitative on x axis
+  \end{itemize*}
+
+  \subsection{Chapter Two: Describing Data Numerically}
+  \begin{itemize*}
+    \item measures of center---mean and median
+    \item measures of spread---standard deviation and quartiles
+    \item variance is $s^2$
+    \item outliers---anything past Q3 + 1.5 IQR or Q1 - 1.5 IQR
+    \item median and quartiles are resistant, mean and standard deviation aren't
+    \item mean and standard deviation are likely to be the same for any
+      reasonably sized sample of a large population.  median and quartiles are
+      likely to vary a bit from sample to sample.
+  \end{itemize*}
+
+  \subsection{Chapter 3: Density Curves and Normal Distribution}
+  \begin{itemize*}
+    \item area under density curve always adds up to 1
+    \item area of region under curve to the left of a value is the percentage of
+      values less than that value
+    \item median of density curve is equal area point
+    \item mean of density curve is center of mass 
+    \item Normal distribution common for large number of trials for chance
+      operation, large populations of animals, etc.
+    \item Normal distribution facts:
+      \begin{itemize*}
+        \item change of curvature is at 1 sd from center
+        \item 68\% within 1 sd of mean
+        \item 95\% within 2 sd of mean
+        \item 99.7\% within 3 sd of mean
+        \item standard normal distribution of N(0, 1) is in table A
+      \end{itemize*}
+
+    \item z-score is way of describing a measurement in distance from mean in sd
+      units
+
+    \item find proportion of values less than x
+
+    \item find a value given a proportion
+
+  \end{itemize*}
+
+  \subsection{Chapter 4: Scatterplots and Correlation}
+
+  \begin{itemize*}
+    \item scatterplot shows relationship between two variables
+    \item close to straight line means closely related, cloud means not at all
+      related
+    \item $r$ is number between $-1$ and $1$ showing strength of relationship.  
+
+    \item $r$ is average (n - 1) of product of z-scores
+
+    \item review quadrant reasoning behind $r$ calculation
+
+    \item order doesn't matter for $r$ calculation
+  \end{itemize*}
+
+  \subsection{Chapter 5: Regression}
+
+  \begin{itemize*}
+    \item line that predicts other values from the ones you have
+    \item only works if relationship is fairly linear
+    \item residual is distance from a data point to line
+    \item linear regression minimizes sum of residuals squared
+    \item mean of residuals (unsquared) is always zero
+    \item slope is $r$ scaled by sd ratio
+    \item always goes through $(\bar{x}, \bar{y})$
+    \item association does not imply causation
+    \item different line if you swap role of explanatory/response variables
+    \item outlier in x likely to be influential
+    \item outlier in y only not likely to be influential
+  \end{itemize*}
+
+  \subsection{Chapter 6: Two-Way Tables}
+  \begin{itemize*}
+    \item table with categorical variable in both rows and columns
+    \item marginal distribution
+    \item conditional distributions---percentage of second variable while
+      holding first variable fixed
+    \item Simpson's paradox
+  \end{itemize*}
+
+  \section{Chapter 7 Exercises}
   \begin{enumerate}
     \item[5]
       \begin{figure}[H]

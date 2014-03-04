@@ -9,11 +9,12 @@ percentage <- function(score, points) {
   c(actual = actual, percentage = round(100 * (actual) / points))
 }
 
-possible <- points(c(23:26, 29:35, 39:41, 44:45))
-percentage(6, possible)
+possible <- points(c(27:28, 30:34, 37:38, 42, 44:45, 47:48, 51, 53))
+percentage(7, possible)
 
-setwd("~/Documents/U/ubb/sccc/math146/grades")
-grades <- read.delim("grades.csv", header = TRUE, strip.white = T, sep = ',')
+grades.dir <- "~/Documents/U/ubb/sccc/math146/grades"
+grades.file <- paste(grades.dir, 'grades.csv', sep = '/')
+grades <- read.delim(grades.file, header = TRUE, strip.white = T, sep = ',')
 
 grades.m <- melt(grades, id = "id")
 str(grades.m)

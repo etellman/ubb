@@ -59,8 +59,11 @@ ex34.lm <- lm(Sister ~ Brother, data = ex34)
 ex34.m <- melt(ex34)
 ex34.s <- ddply(ex34.m, "variable", summarize, 
       mean = round(mean(value), 2), sd = round(sd(value), 2))
+ex34.s
 
-cor(ex34$Brother, ex34$Sister)
+cor(ex34$Brother, ex34$Sister, method = 'kendall')
+cor(ex34$Brother, ex34$Sister, method = 'spearman')
+cor(ex34$Brother, ex34$Sister, method = 'pearson')
 
 sink(paste(hw.dir, "r.tex", sep = "/"))
 xtable(ex34.s)
@@ -81,7 +84,8 @@ summary(ex34.lm)
 # exercise 37
 ex37 <- read.delim("../ch04/ex04-29.dat", header = TRUE, sep = '\t')
 
-ex37.m <- melt(ex37.no.outlier)
+mean(ex37$Behave)
+ex37.m <- melt(ex37)
 ex37.s <- ddply(ex37.m, "variable", summarize, 
       mean = round(mean(value), 2), sd = round(sd(value), 2))
 

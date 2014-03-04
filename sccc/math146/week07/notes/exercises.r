@@ -186,8 +186,6 @@ asian  <-  sum(subset(ex34, Origin == 'Asian', select = 'Count'))
 ex34[ex34$Origin == 'Amer',"total"]  <-  american
 ex34[ex34$Origin == 'Asian',"total"]  <-  asian
 
-ex34
-
 conditional <- ddply(ex34, .(Reason, Origin), summarize, value = Count / total)
 conditional.c <- cast(conditional, Reason ~ Origin)
 conditional.c
@@ -195,3 +193,4 @@ conditional.c
 sink(paste(notes.dir, 'r.tex', sep = '/'))
   xtable(conditional.c, digits = 2)
 sink()
+
