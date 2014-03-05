@@ -18,17 +18,13 @@ ex19 <- rbind(
 ex19.rates <- ddply(ex19, "treatment", summarize, 
                     success.rate = success / subjects)
 
-ex19
-ex19.rates
-
 plot <- ggplot(ex19.rates, 
                aes(x = reorder(treatment, -success.rate), y = success.rate)) + 
   geom_bar(stat = "identity", fill="lightblue", color = "black") +
-  labs(x = "Treatment", y = "Success Rate") +
-  ggtitle("Exercise 19")
+  labs(x = "Treatment", y = "Success Rate")
 print(plot)
 
-ggsave(paste(figures.dir, "ex19.pdf", sep = '/'), width = 4, height = 2.5)
+ggsave(paste(figures.dir, "ex19.pdf", sep = '/'))
 
 sink(paste(hw.dir, 'r.tex', sep = '/'))
   xtable(ex19.rates, digits = 2)
