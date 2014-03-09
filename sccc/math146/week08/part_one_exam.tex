@@ -127,20 +127,20 @@
         \centering
         \begin{tabular}{lr|lr}
           \toprule
-          \midrule
           Player                   & Points & Player                 & Points\\
-          Trey Burke               & 12.30  & LeBron James           & 27.20 \\
-          Kentavious Caldwell-Pope & 6.00   & Michael Kidd-Gilchrist & 7.40 \\
-          Tyson Chandler           & 9.30   & Robin Lopez            & 10.80 \\
-          Glen Davis               & 12.10  & Kevin Martin           & 19.20 \\
-          Jared Dudley             & 7.30   & Ben McLemore           & 7.60 \\
-          Kevin Durant             & 31.80  & Chandler Parsons       & 16.60 \\
-          Raymond Felton           & 10.00  & Kendrick Perkins       & 3.40 \\
-          Randy Foye               & 12.60  & Zach Randolph          & 17.10 \\
-          Marc Gasol               & 13.70  & Terrence Ross          & 10.70 \\
-          Paul George              & 22.20  & Jared Sullinger        & 12.90 \\
-          Spencer Hawes            & 13.00  & P.J. Tucker            & 9.30 \\
-          Dwight Howard            & 18.90  & Evan Turner            & 16.60 \\
+          \midrule
+          Trey Burke               & 12.3   & LeBron James           & 27.2 \\
+          Kentavious Caldwell-Pope & 6.0    & Michael Kidd-Gilchrist & 7.4 \\
+          Tyson Chandler           & 9.3    & Robin Lopez            & 10.8 \\
+          Glen Davis               & 12.1   & Kevin Martin           & 19.2 \\
+          Jared Dudley             & 7.3    & Ben McLemore           & 7.6 \\
+          Kevin Durant             & 31.8   & Chandler Parsons       & 16.6 \\
+          Raymond Felton           & 10.0   & Kendrick Perkins       & 3.4 \\
+          Randy Foye               & 12.6   & Zach Randolph          & 17.1 \\
+          Marc Gasol               & 13.7   & Terrence Ross          & 10.7 \\
+          Paul George              & 22.2   & Jared Sullinger        & 12.9 \\
+          Spencer Hawes            & 13.0   & P.J. Tucker            & 9.3 \\
+          Dwight Howard            & 18.9   & Evan Turner            & 16.6 \\
           \bottomrule
         \end{tabular}
       \end{table}
@@ -179,8 +179,6 @@
           \end{solution}
 
       \end{parts}
-
-    \newpage
 
     \question
       There is heated debate this year about whether Kevin Durant or
@@ -323,100 +321,104 @@
 
         \end{parts}
         
-        \uplevel{
-          Table \ref{tab:sbp} shows the shots made and missed by
-              position for NBA players in the 2013-14 season.
+      \newpage
 
-          Use Table \ref{tab:sbp} to answer questions \ref{q:sbp.first}-\ref{q:sbp.last}.
+      \uplevel{
+        Table \ref{tab:sbp} shows the shots made and missed by
+            position for NBA players in the 2013-14 season.
 
-          \begin{table}[H]
-            \centering
-            \begin{tabular}{lrr}
-              \toprule
-              position       & missed & made \\
-              \midrule
-              Center         & 11105  & 11372 \\
-              Power Forward  & 18972  & 17601 \\
-              Small Forward  & 19583  & 15090 \\
-              Shooting Guard & 20721  & 15617 \\
-              Point Guard    & 20791  & 15087 \\
-              \bottomrule
-            \end{tabular}
-            \caption{Shots by position}
-            \label{tab:sbp}
-          \end{table}
-        }
+        Use Table \ref{tab:sbp} to answer questions \ref{q:sbp.first}-\ref{q:sbp.last}.
 
-        \question[5] Make a bar chart showing shots made for each position.  Order
-          the bars by number of shots made, with the most productive position first.
-          \label{q:sbp.first}
+        \begin{table}[H]
+          \centering
+          \begin{tabular}{lrr}
+            \toprule
+            position       & missed & made \\
+            \midrule
+            Center         & 11105  & 11372 \\
+            Power Forward  & 18972  & 17601 \\
+            Small Forward  & 19583  & 15090 \\
+            Shooting Guard & 20721  & 15617 \\
+            Point Guard    & 20791  & 15087 \\
+            \bottomrule
+          \end{tabular}
+          \caption{Shots by position}
+          \label{tab:sbp}
+        \end{table}
+      }
 
-        \question[5] Make a table showing the marginal distributions of shots made
-        for each position.
+      \question[5] Make a bar chart showing shots made for each position.  Order
+        the bars by number of shots made, with the most productive position first.
+        \label{q:sbp.first}
 
-        \question 
-          \label{q:sbp.last}
-          \begin{parts}
-            \part[5] Make a table showing the conditional distributions of percentage
-            of shots made and missed for each position.  
+      \question[5] Make a table showing the marginal distributions of shots made
+      for each position.
 
-            \part[2] Which position seems to contain the most accurate shooters?  Do
-            you think this is because they are the most skilled shooters or is there
-            a lurking variable that explains the shooting percentage differences?
-            
-          \end{parts}
-        
-        \question
-          \label{q:draft}
-
-          \begin{figure}[H]
-            \centering
-            \includegraphics[scale = 1]{figures/draft.pdf}
-            \caption{Question \ref{q:draft}}
-            \label{fig:draft}
-          \end{figure}
-
-          \begin{table}[H]
-            \centering
-            \begin{tabular}{lrr}
-              \toprule
-                       & mean   & s \\
-              \midrule
-              Pick     & 30.5   & 17.5 \\
-              Minutes  & 5218.9 & 5697.6 \\
-              \bottomrule
-            \end{tabular}
-            \caption{Question \ref{q:draft}}
-          \end{table}
-
-          Figure \ref{fig:draft} shows the total number of minutes played vs.  draft
-          order for the 2008 draft.  The better players are generally drafted first
-          and also usually play more, so there is a negative correlation of 
-          $r = -0.6020$ between draft order and minutes played.
-
-          The first two selections in the 2008 draft were Greg Oden and Kevin Durant.
-          As you can see in the chart, Greg Oden has had an injury plagued career and
-          has only played 1940 minutes while Devin Durant has had a successful and so
-          far mostly injury free career and has played nearly 20,000 minutes
-
+      \question 
+        \label{q:sbp.last}
         \begin{parts}
-          \part[7]
-            Find the equation for the regression line using the draft pick as the
-            explanatory variable and minutes played as the response variable.
+          \part[5] Make a table showing the conditional distributions of percentage
+          of shots made and missed for each position.  
 
-          \part[5] Graph the regression line.
-
-          \part[2] What percentage of the variation in the minutes played is
-          accounted for by the linear regression line?
-
-          \part[3] Mark Gasol and Ramon Sessions are outliers because they were late
-          round draft picks (pick 48 and 56) who have had a successful NBA careers
-          with over 11,000 minutes each so far.
-
-          Would removing these data points from the graph have a significant effect
-          on the regression line?  Why or why not? 
-
+          \part[2] Which position seems to contain the most accurate shooters?  Do
+          you think this is because they are the most skilled shooters or is there
+          a lurking variable that explains the shooting percentage differences?
+          
         \end{parts}
+      
+      \newpage
+
+      \question
+        \label{q:draft}
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale = 1]{figures/draft.pdf}
+          \caption{Question \ref{q:draft}}
+          \label{fig:draft}
+        \end{figure}
+
+        \begin{table}[H]
+          \centering
+          \begin{tabular}{lrr}
+            \toprule
+                     & mean   & s \\
+            \midrule
+            Pick     & 30.5   & 17.5 \\
+            Minutes  & 5218.9 & 5697.6 \\
+            \bottomrule
+          \end{tabular}
+          \caption{Question \ref{q:draft}}
+        \end{table}
+
+        Figure \ref{fig:draft} shows the total number of minutes played vs.  draft
+        order for the 2008 draft.  The better players are generally drafted first
+        and also usually play more, so there is a negative correlation of 
+        $r = -0.6020$ between draft order and minutes played.
+
+        The first two selections in the 2008 draft were Greg Oden and Kevin Durant.
+        As you can see in the chart, Greg Oden has had an injury plagued career and
+        has only played 1940 minutes while Devin Durant has had a successful and so
+        far mostly injury free career and has played nearly 20,000 minutes
+
+      \begin{parts}
+        \part[7]
+          Find the equation for the regression line using the draft pick as the
+          explanatory variable and minutes played as the response variable.
+
+        \part[5] Graph the regression line.
+
+        \part[2] What percentage of the variation in the minutes played is
+        accounted for by the linear regression line?
+
+        \part[3] Mark Gasol and Ramon Sessions are outliers because they were late
+        round draft picks (pick 48 and 56) who have had a successful NBA careers
+        with over 11,000 minutes each so far.
+
+        Would removing these data points from the graph have a significant effect
+        on the regression line?  Why or why not? 
+
+      \end{parts}
 
 
   \end{questions}
