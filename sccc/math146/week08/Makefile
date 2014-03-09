@@ -1,5 +1,5 @@
 # Makefile
 
-TARGETS = chapter_one_exam.pdf 
+TARGETS = part_one_exam.pdf 
 include ../../../Makefile
 	
