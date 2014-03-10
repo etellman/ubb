@@ -30,7 +30,7 @@ sink(paste(hw.dir, 'r.tex', sep = '/'))
   xtable(ex19.rates, digits = 2)
 sink()
 
-# exercise 30
+# exercise 21-24
 ta6.2 <- read.delim("ta06-02.dat", header = TRUE, sep = '\t')
 
 ta6.2 <- rbind(
@@ -55,10 +55,10 @@ ta6.2 <- rbind(
   data.frame(job.grade = 4 , marital.status = "widowed"  , employees = 4)
 )
 
-ex30.by.grade <- ddply(ta6.2, "job.grade", summarize, 
+by.grade <- ddply(ta6.2, "job.grade", summarize, 
       employees = round(sum(employees) / sum(ta6.2$employees), 2))
 
-ex30.by.marital <- ddply(ta6.2, "marital.status", summarize, 
+by.marital <- ddply(ta6.2, "marital.status", summarize, 
       employees = round(sum(employees) / sum(ta6.2$employees), 2))
 
 ddply(ta6.2, c("marital.status", "job.grade"), summarize, 
@@ -109,17 +109,20 @@ ex30
 
 by.oil <- ddply(ex30, "Oil", summarize, Cancer = Cancer, 
                    pct = 100 * round(Count / sum(Count), 3))
-by.oil.c <- cast(by.oil, Oil ~ Cancer, value = .(pct), fun = sum)
+by.oil.2way <- cast(by.oil, Oil ~ Cancer, value = .(pct), fun = sum)
 
 by.cancer <- ddply(ex30, "Cancer", summarize, Oil = Oil, 
                    pct = 100 * round(Count / sum(Count), 3))
-by.cancer.c <- cast(by.cancer, Cancer ~ Oil, value = .(pct), fun = sum)
+by.cancer.2way <- cast(by.cancer, Cancer ~ Oil, value = .(pct), fun = sum)
 
-by.oil.c
-by.cancer.c
+by.oil.2way
+by.cancer.2way
+
+by.cancer
 
 sink(paste(hw.dir, 'r.tex', sep = '/'))
-  xtable(by.oil.c, digits = 2)
+  xtable(by.oil.2way, digits = 1)
+  xtable(by.cancer.2way, digits = 1)
 sink()
 
 # exercise 31
