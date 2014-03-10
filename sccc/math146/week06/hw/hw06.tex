@@ -37,7 +37,7 @@
     \begin{itemize*}
       \item read Chapter 6 
       \item take a look at the ``Check Your Skills'' exercises
-      \item exercises: 19-24, 27, 30-31
+      \item exercises: 19-24, 27, 29-31
     \end{itemize*}
 
   \ifprintanswers
@@ -48,32 +48,40 @@
           \centering
           \includegraphics[scale = 0.8]{figures/ex19.pdf}
           \caption{Exercise 19}
+          \label{fig:ex19}
         \end{figure}
 
         \begin{table}[H]
           \centering
           \begin{tabular}{rlr}
             \toprule
-              & Treatment   & Success Rate \\
+              & Treatment   & Success \\
             \midrule
-            1 & lithium     & 0.25 \\
-            2 & placebo     & 0.17 \\
-            3 & desipramine & 0.58 \\
+            1 & lithium     & 25\% \\
+            2 & placebo     & 17\% \\
+            3 & desipramine & 58\% \\
             \bottomrule
           \end{tabular}
+          \caption{Exercise 19}
+          \label{tab:ex19}
         \end{table}
+
+        \begin{parts}
+          \part Figure \ref{fig:ex19}
+          \part Table \ref{tab:ex19}
+        \end{parts}
 
       \item[20]
         \begin{table}[H]
           \centering
-          \begin{tabular}{rrr}
+          \begin{tabular}{lr}
             \toprule
-              & Job Grade & Percent \\
+            Job Grade & Percent \\
             \midrule
-            1 & 1         & 12 \% \\
-            2 & 2         & 51 \% \\
-            3 & 3         & 30 \% \\
-            4 & 4         & 7 \% \\
+            1         & 12\% \\
+            2         & 51\% \\
+            3         & 30\% \\
+            4         & 7\% \\
             \bottomrule
           \end{tabular}
           \caption{By Job Grade}
@@ -81,20 +89,21 @@
 
         \begin{table}[H]
           \centering
-          \begin{tabular}{rrr}
+          \begin{tabular}{lr}
             \toprule
-              & Marital Status & Percent \\
+            Marital Status & Percent \\
             \midrule
-            1 & single         & 4 \% \\
-            2 & married        & 94 \% \\
-            3 & divorced       & 2 \% \\
-            4 & widowed        & 1 \% \\
+            single         & 4\% \\
+            married        & 94\% \\
+            divorced       & 2\% \\
+            widowed        & 1\% \\
             \bottomrule
           \end{tabular}
           \caption{By Marital Status}
         \end{table}
 
-      The percentages don't add up to exactly 100\% because of rounding.
+      The percentages might not add up to exactly 100\% because of rounding, but
+      they should be close.
       
     \item[21]
       There are 58 single men with grade 1 jobs and 955 grade 1 jobs, 
