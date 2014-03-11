@@ -102,6 +102,27 @@ by.degree <- ddply(ex27, "Degree", summarise, Work = Work,
 by.degree.c <- cast(by.degree, Degree ~ Work, value = .(pct), 
                      fun = sum, margins = "grand_col")
 
+# exercise 29
+ex29 <- rbind(data.frame(degree = 'associates', sex = 'F', degrees = 447),
+              data.frame(degree = 'associates', sex = 'M', degrees = 268),
+              data.frame(degree = 'bachelors', sex = 'F', degrees = 945),
+              data.frame(degree = 'bachelors', sex = 'M', degrees = 651),
+              data.frame(degree = 'masters', sex = 'F', degrees = 397),
+              data.frame(degree = 'masters', sex = 'M', degrees = 251),
+              data.frame(degree = 'professional', sex = 'F', degrees = 49),
+              data.frame(degree = 'professional', sex = 'M', degrees = 44),
+              data.frame(degree = 'doctors', sex = 'F', degrees = 26),
+              data.frame(degree = 'doctors', sex = 'M', degrees = 25)
+)
+
+by.degree <- ddply(ex29, "degree", summarize, sex = sex, 
+                   pct = round(100 * degrees / sum(degrees)))
+by.degree.c <- cast(by.degree, degree ~ sex, value = .(pct), fun = sum)
+
+sink(paste(hw.dir, 'r.tex', sep = '/'))
+  xtable( by.degree.c, digits = 0)
+sink()
+
 # exercise 30
 ex30 <- read.delim("ex06-30.dat", header = TRUE, sep = '\t')
 
