@@ -14,24 +14,27 @@ james <- read.delim('james_2013-14.csv', header = TRUE, sep = ',', strip.whi
 durant <- transform(durant, Player = 'Durant')
 james <- transform(james, Player = 'James')
 
-plot <- ggplot(data = james, aes(x = PTS)) + 
-  geom_histogram(fill = 'lightblue', color = 'black', binwidth = 5) +
-  labs(x = 'Points', y = 'Games')
+durant <- c( 13, 17, 19, 24, 26, 28, 29, 31, 32, 32, 32, 37, 41, 42, 42)
+james  <- c(13, 15, 17, 19, 25, 25, 25, 26, 29, 30, 32, 33, 35, 36, 36)
 
-durant.sample <- durant[sample(nrow(durant), 15),]
-james.sample <- james[sample(nrow(james), 15),]
+mvps <- melt(cbind(James = James, Durant = Durant))
+mvps <- rename(mvps, c('X2' = 'player'))
+mvps <- rename(mvps, c('value' = 'points'))
 
-mvps <- rbind(durant, james)
+sink(paste(exam.dir, 'r.tex', sep = '/'))
+  xtable(ddply(mvps, .(player), function(df) summary(df$points)))
+sink()
 
-durant.sample <- transform(durant.sample, ID = 'Durant')
-james.sample <- transform(james.sample, ID = 'James')
-nba.sample <- rbind(durant.sample, james.sample)
+str(as.data.frame(summary(durant)))
 
-plot <- ggplot(data = mvps, aes(x = ID, y = PTS)) + 
+plot <- ggplot(data = mvps, aes(x = player, y = points)) + 
   geom_boxplot(fill = 'lightblue', color = 'black') +
   labs(x = 'Player', y = 'Points')
 
 print(plot)
+
+file <- paste(figures.dir, 'james_vs_durant.pdf', sep = '/')
+ggsave(file, plot, width = 4, height = 2.5)
 
 # save for later to reconstruct the answer key
 data.file <- paste(exam.data.dir, 'points_sample.csv', sep = '/')
@@ -150,8 +153,10 @@ print(plot)
 
 pnorm(.42, .36, .05)
 qnorm(.20, 36, 5)
+qnorm(.20)
 
-
+.36 - .05 * .8416
+                -0.8416 &= {x - 0.36}{0.05} \\
 # histogram of points scored
 player.totals <- read.delim('player_totals_2013-14.csv', header = TRUE, 
                         sep = ',', strip.white = TRUE)
@@ -166,21 +171,21 @@ shooting.condition <- ddply(shooting, .(position), summarize,
       missed.pct = sum(fg.missed) / sum(fg.made, fg.missed)
 )
 
-shooting.melted <- melt(shooting, id.vars = c('Player', 'position'), 
-    measure.vars = c('fg.made', 'fg.missed'))
+shooting.melted <- melt(shooting, id = c('Player', 'position'))
 
-two.way <- cast(shooting.melted, position ~ variable, fun = sum)
 
-str(shooting)
+shooting.by.position <- ddply(
+  shooting, .(position), summarize, 
+    position = first(position), 
+    missed = sum(fg.missed), 
+    made = sum(fg.made),
+    total.shots = sum(fg.missed, fg.made)
+)
 
-two.way <- ddply(shooting, .(position), summarize, 
-                 position = first(position), 
-                 missed = sum(fg.missed), 
-                 made = sum(fg.made)
-                 )
+cast(shooting.by.position, position ~ ., margins = T, fun = sum)
 
 sink(paste(exam.dir, 'r.tex', sep = '/'))
-  xtable(two.way)
+  xtable(cast(shooting.melted, position ~ variable, margins = T, fun = sum))
 sink()
 
 
@@ -200,11 +205,14 @@ mean(c(1, 5, 8, 12))
 # draft
 
 draft <- read.delim('draft_2007.csv', header = TRUE,  sep = ',', strip.white = TRUE)
+draft$MP <- draft$MP / 1000
 
 plot <- ggplot(data = draft, aes(x = Pk, y = MP)) + 
   geom_point() +
   # stat_smooth(method = "lm") +
-  labs(x = 'Pick', y = 'Minutes')
+  labs(x = 'Pick', y = 'Minutes (thousands)')
+
+with(draft, lm(Pk ~ MP))
 
 print(plot)
 

@@ -23,19 +23,19 @@ sink(paste(exam.dir, 'r.tex', sep = '/'))
   sort(team.sample$PTS)
 sink()
 
-# scatter plots
-exams <- rbind(
-  data.frame(student = 'A', midterm = 20, final = 20),
-  data.frame(student = 'B', midterm = 70, final = 70),
-  data.frame(student = 'C', midterm = 40, final = 100),
-  data.frame(student = 'D', midterm = 70, final = 30),
-  data.frame(student = 'E', midterm = 90, final = 10),
-  data.frame(student = 'F', midterm = 45, final = 48),
-  data.frame(student = 'G', midterm = 30, final = 55),
-  data.frame(student = 'H', midterm = 30, final = 70),
-  data.frame(student = 'I', midterm = 90, final = 20),
-  data.frame(student = 'J', midterm = 60, final = 25)
-)
+# # scatter plots
+# exams <- rbind(
+#   data.frame(student = 'A', midterm = 20, final = 20),
+#   data.frame(student = 'B', midterm = 70, final = 70),
+#   data.frame(student = 'C', midterm = 40, final = 100),
+#   data.frame(student = 'D', midterm = 70, final = 30),
+#   data.frame(student = 'E', midterm = 90, final = 10),
+#   data.frame(student = 'F', midterm = 45, final = 48),
+#   data.frame(student = 'G', midterm = 30, final = 55),
+#   data.frame(student = 'H', midterm = 30, final = 70),
+#   data.frame(student = 'I', midterm = 90, final = 20),
+#   data.frame(student = 'J', midterm = 60, final = 25)
+# )
 
 exams <- rbind(
   data.frame(student = 'A', midterm = 65, final = 80),
@@ -52,42 +52,32 @@ exams <- rbind(
   data.frame(student = 'L', midterm = 47, final = 62)
 )
 
-mean(exams$midterm)
+more.than.60 <- subset(exams, midterm > 60, select = 'final')
+mean(more.than.60$final)
 
 exams.melted <- melt(exams, id = 'student')
 
 midterms <- subset(exams.melted, variable == 'midterm')
 median(midterms$value)
 
-exams.box <- cast(exams.melted, student + variable ~ ., )
-exams.box <- rename(exams.box, c(variable = 'exam', '(all)' = 'score'))
-exams.box
+exams.cast <- cast(exams.melted, student + variable ~ ., )
+exams.box <- rename(exams.cast, c(variable = 'exam', '(all)' = 'score'))
 
-midterms <- subset(exams.box, exam == 'midterm')
-median(midterms$score)
-
-exams.box <- rename(exams.casted, c(variable = 'exam', '(all)' = 'score'))
-
-midterms <- subset(exams.box, exam == 'midterm', select = c('score'))
-finals <- subset(exams.box, exam == 'final', select = c('score'))
 
 exams.box
-
-median(midterms$score)
 
 plot <- ggplot(exams.box, aes(x = exam, y = score)) +
   geom_boxplot() + 
   labs(x = 'Exam', y = 'Score')
 print(plot)
 
-ggsave(paste(figures.dir, 'exam_box.pdf', sep = '/'), height = 4, width = 6)
+ggsave(paste(figures.dir, 'exams_box.pdf', sep = '/'), height = 3, width = 5)
 
 plot <- ggplot(exams, aes(x = midterm, y = final)) +
   geom_point() + 
   labs(x = 'Midterm', y = 'Final')
 
 print(plot)
-
 ggsave(paste(figures.dir, 'exams_scatter.pdf', sep = '/'), height = 4, width = 6)
 
 with(exams, data.frame(cor(midterm, final), mean(midterm), mean(final)))

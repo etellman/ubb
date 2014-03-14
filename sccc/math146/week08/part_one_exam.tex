@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
 
 \usepackage{units} 
 \usepackage{graphicx}
@@ -28,7 +28,7 @@
 \excludecomment{comment}
 \addpoints
 
-\title{Math 142 \\ Chapter One Exam}
+\title{Math 142 \\ Part One Exam}
 \date{\today}
 \author{}
 
@@ -36,11 +36,11 @@
 
   \maketitle
 
-  \begin{center}
-    \gradetable[h][pages]
-  \end{center}
+  % \begin{center}
+  %   \gradetable[h][pages]
+  % \end{center}
 
-  \section{Questions}
+  % \section{Questions}
 
   Figure \ref{fig:exams} is a scatter plot of midterm vs. final exam test scores
   for a class.
@@ -89,6 +89,12 @@
         \item about 90
       \end{enumerate}
 
+      \begin{solution}
+        The students who scored more than 60 on the midterm are the students in the
+        top right quadrant of the graph.  The mean on the final for these
+        students is about 80.
+      \end{solution}
+
     \question[3] Estimate the correlation coefficient:
       \begin{enumerate}[(a)]
         \item about 0.5
@@ -96,16 +102,26 @@
         \item about 0.99
       \end{enumerate}
 
+      \begin{solution}
+        0.5 would be a more widely dispersed cloud of points and 0.99 would be
+        a nearly straight line.  The actual coefficient is around 0.8.
+      \end{solution}
+
     \question
       \label{q:exams.last}
       \begin{parts}
         
         \part[8] Draw box plots for the midterm and final
+          \label{q:exams_box}
+          \begin{solution}
+            Figure \ref{fig:exams_box}
+          \end{solution}
+
           \ifprintanswers
             \begin{figure}[H]
               \centering
               \includegraphics[scale = 0.8]{figures/exams_box.pdf}
-              \caption{Question \ref{q:exams}}
+              \caption{Question 3 (\ref{q:exams_box})}
               \label{fig:exams_box}
             \end{figure}
           \fi
@@ -116,6 +132,11 @@
             \item easier
             \item about the same difficulty
           \end{enumerate}
+
+          \begin{solution}
+            The scores were generally higher on the final, so the test was
+            probably easier than the midterm.
+          \end{solution}
 
       \end{parts}
 
@@ -143,6 +164,7 @@
           Dwight Howard            & 18.9   & Evan Turner            & 16.6 \\
           \bottomrule
         \end{tabular}
+        \caption{Points per game}.
       \end{table}
 
       \begin{parts}
@@ -194,103 +216,45 @@
 
       \begin{parts}
         \part[8] Find the 5-number summary for both players
+          \begin{solution}
+            
+            \begin{table}[H]
+              \centering
+              \begin{tabular}{lrrrrrr}
+                \toprule
+                Player & Min. & 1st Qu. & Median & 3rd Qu. & Max. \\
+                \midrule
+                Durant & 13   & 25      & 31     & 34.50   & 42 \\
+                James  & 13   & 22      & 26     & 32.50   & 36 \\
+                \bottomrule
+              \end{tabular}
+            \end{table}
+
+          \end{solution}
+
         \part[6] Draw a box plot for both players
+          \begin{solution}
+            See Figure \ref{fig:james_vs_durant}
+          \end{solution}
+
+          \ifprintanswers
+            \begin{figure}[H]
+              \centering
+              \includegraphics{figures/james_vs_durant.pdf}
+              \caption{James vs. Durant Points}
+              \label{fig:james_vs_durant}
+            \end{figure}
+          \fi
         \part[3] Which player seems to be the MVP, based solely on points scored in
-        these games? 
+          these games? 
+          \begin{solution}
+            All of Durant's 5-number summary numbers except the minimum are
+            better, and the minimum is the same.  The sample is representative
+            of all the games.  If the award was based solely on scoring Durant
+            would be the MVP.
+          \end{solution}
       \end{parts}
 
-    % \question
-    %   The MVP award is about how much you help your team, particularly in close
-    %   games.  Tables \ref{tab:durant_diff} and \ref{tab:james_diff} show the points
-    %   scored by each player in games which were decided by less than 5 points.  The
-    %   ``Final Score'' is the difference between the Durant/James team and the score
-    %   of whoever they were playing.
-
-    %   The correlation coefficients and standard deviations are:
-
-    %   \begin{table}[ht]
-    %     \centering
-    %     \begin{tabular}{rr}
-    %       \toprule
-    %       Points & Final Score \\
-    %       \midrule
-    %       42     & 3 \\
-    %       33     & 1 \\
-    %       20     & -1 \\
-    %       38     & 2 \\
-    %       25     & 1 \\
-    %       27     & 2 \\
-    %       28     & 3 \\
-    %       34     & 4 \\
-    %       37     & -4 \\
-    %       24     & -2 \\
-    %       48     & 4 \\
-    %       37     & -3 \\
-    %       41     & 2 \\
-    %       29     & -1 \\
-    %       36     & 3 \\
-    %       43     & 4 \\
-    %       \bottomrule
-    %     \end{tabular}
-    %     \caption{Durant points and final score differential}
-    %     \label{tab:durant_pt_diff}
-    %   \end{table}
-
-    %   \begin{table}[ht]
-    %     \centering
-    %     \begin{tabular}{rrr}
-    %       \toprule
-    %       Points & Final Score \\
-    %       \midrule
-    %       25     & -1 \\
-    %       22     & -3 \\
-    %       31     & 4 \\
-    %       26     & 3 \\
-    %       24     & 3 \\
-    %       36     & 1 \\
-    %       26     & 1 \\
-    %       38     & 2 \\
-    %       25     & -4 \\
-    %       22     & 2 \\
-    %       \bottomrule
-    %     \end{tabular}
-    %     \caption{James points and final score differential}
-    %     \label{tab:james_pt_diff}
-    %   \end{table}
-
-    %   \begin{parts}
-    %     \part[10] Make a scatter plot for each player using points as the explanatory
-    %       variable and point differential as the response variable.
-
-    %     \part[10] Find the equation for the regression line for each player and add
-    %     regression lines to the two scatter plots.
-
-    %     \part[3] If LeBron scores 30 points in a close game, what would you expect
-    %     his team's margin of victory to be?
-
-    %     \part[2] How confident can you be in the accuracy of the prediction from part c?
-
-    %     \part[3] Based on this analysis, which player deservers the MVP award?
-    %   \end{parts}
-
-    %   \question
-    %     Tables \ref{tab:durant_pt_diff} and \ref{tab:james_pt_diff} can also be used
-    %     to predict how many points the two players would need to score in order to
-    %     win a close game.
-
-    %     \begin{parts}
-    %       \part[5]
-    %         Find the equation for the regression line for Kevin Durant with the final
-    %         score as the explanatory variable and Durant's parts as the response
-    %         variable.
-
-    %       \part[5] Use the regression line to determine about how many points Durant would
-    %       need to score in order for his team to win a close game by 2 points.
-
-    %       \part[2] How confident can you be in the accuracy of the prediction from 
-    %         part b?
-    %     \end{parts}
-        
       \question
         Three point shooting accuracy in 2013 is a roughly Normal distribution with a
         mean of 0.36 and a standard deviation of 0.05.
@@ -308,20 +272,31 @@
           \part[5] What percentage of the three point shooters in the NBA are less
             accurate than Melo?
             \begin{solution}
-              about 0.8849 or 88.5\%
+              If you look up Carmelo's z-score in table A, you find that about
+              \fbox{ 0.8849 or 88.5\% } of players have scores lower than 1.2.
             \end{solution}
 
           \part[5]
-            What is the three shooting accuracy for someone who is better than 20\%
-            of the three point shooters?
+            What is the three point shooting accuracy for someone who is better
+            than 20\% of the three point shooters?
 
             \begin{solution}
-              about 0.3179 
+              For this problem you need to reverse the process.  From table A,
+              the z-score that corresponds to 0.2 is -0.8416.
+
+              You have to convert this back to a shooting percentage:
+              \begin{align*}
+                -0.8416 & = {x - 0.36}{0.05} \\
+                x       & \approx \boxed{ 0.3179 } \\
+              \end{align*}
             \end{solution}
 
         \end{parts}
         
-      \newpage
+      \ifprintanswers
+      \else
+        \newpage
+      \fi
 
       \uplevel{
         Table \ref{tab:sbp} shows the shots made and missed by
@@ -351,8 +326,32 @@
         the bars by number of shots made, with the most productive position first.
         \label{q:sbp.first}
 
-      \question[5] Make a table showing the marginal distributions of shots made
-      for each position.
+      \question[5] Make a table showing the marginal distributions of shots
+      taken by position, shots missed, shots made, and total number of shots
+      taken.
+
+      \begin{solution}
+        
+        \begin{table}[H]
+          \centering
+          \begin{tabular}{lrrr}
+            \toprule
+            position & made  & missed & total \\
+            \midrule
+            C        & 11372 & 11105  & 22477 \\
+            PF       & 17601 & 18972  & 36573 \\
+            PG       & 15087 & 20791  & 35878 \\
+            SF       & 15090 & 19583  & 34673 \\
+            SG       & 15617 & 20721  & 36338 \\
+            \midrule
+            total    & 74767 & 91172  & 165939 \\
+            \bottomrule
+          \end{tabular}
+          \caption{Marginal distributions of shots made and missed}
+          \label{tab:marginal_shots}
+        \end{table}
+
+      \end{solution}
 
       \question 
         \label{q:sbp.last}
@@ -360,9 +359,9 @@
           \part[5] Make a table showing the conditional distributions of percentage
           of shots made and missed for each position.  
 
-          \part[2] Which position seems to contain the most accurate shooters?  Do
-          you think this is because they are the most skilled shooters or is there
-          a lurking variable that explains the shooting percentage differences?
+          \part[2] Which position seems to contain the most accurate shooters?
+          Is this is because they are the best shooters or is there a lurking
+          variable that explains the shooting percentage differences?
           
         \end{parts}
       
@@ -374,7 +373,7 @@
         \begin{figure}[H]
           \centering
           \includegraphics[scale = 1]{figures/draft.pdf}
-          \caption{Question \ref{q:draft}}
+          \caption{2008 NBA draft order vs. minutes played}
           \label{fig:draft}
         \end{figure}
 
@@ -388,7 +387,7 @@
             Minutes  & 5218.9 & 5697.6 \\
             \bottomrule
           \end{tabular}
-          \caption{Question \ref{q:draft}}
+          \caption{2008 NBA Draft}
         \end{table}
 
         Figure \ref{fig:draft} shows the total number of minutes played vs.  draft
@@ -396,10 +395,15 @@
         and also usually play more, so there is a negative correlation of 
         $r = -0.6020$ between draft order and minutes played.
 
-        The first two selections in the 2008 draft were Greg Oden and Kevin Durant.
-        As you can see in the chart, Greg Oden has had an injury plagued career and
-        has only played 1940 minutes while Devin Durant has had a successful and so
-        far mostly injury free career and has played nearly 20,000 minutes
+        The first two selections in the 2008 draft were Greg Oden (bottom left
+        corner) and Kevin Durant (top right corner).  As you can see in the
+        chart, Greg Oden has had an injury plagued career and has only played
+        1940 minutes while Kevin Durant has had a successful and so far mostly
+        injury free career and has played nearly 20,000 minutes
+
+        Many of the players after pick 30 never played in the NBA at all.  Any
+        of them that were underclassmen declaring for the draft early should
+        have stayed in school.
 
       \begin{parts}
         \part[7]
@@ -409,14 +413,14 @@
         \part[5] Graph the regression line.
 
         \part[2] What percentage of the variation in the minutes played is
-        accounted for by the linear regression line?
+          accounted for by the linear regression line?
 
-        \part[3] Mark Gasol and Ramon Sessions are outliers because they were late
-        round draft picks (pick 48 and 56) who have had a successful NBA careers
-        with over 11,000 minutes each so far.
+        \part[3] Mark Gasol and Ramon Sessions (top right corner) are outliers
+        because they were late round draft picks (pick 48 and 56) who have had a
+        successful NBA careers with over 11,000 minutes each so far.
 
-        Would removing these data points from the graph have a significant effect
-        on the regression line?  Why or why not? 
+        Would removing these data points from the graph have a significant
+        effect on the regression line?  Why or why not? 
 
       \end{parts}
 
