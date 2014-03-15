@@ -155,8 +155,6 @@ pnorm(.42, .36, .05)
 qnorm(.20, 36, 5)
 qnorm(.20)
 
-.36 - .05 * .8416
-                -0.8416 &= {x - 0.36}{0.05} \\
 # histogram of points scored
 player.totals <- read.delim('player_totals_2013-14.csv', header = TRUE, 
                         sep = ',', strip.white = TRUE)
@@ -167,70 +165,59 @@ shooting <- ddply(player.totals, .(Player), summarize,
   position = first(Pos), fg.made = sum(FG), fg.missed = sum(FGA) - sum(FG))
 
 shooting.condition <- ddply(shooting, .(position), summarize, 
-      made.pct = sum(fg.made) / sum(fg.made, fg.missed),
-      missed.pct = sum(fg.missed) / sum(fg.made, fg.missed)
+      made.pct = 100 * sum(fg.made) / sum(fg.made, fg.missed),
+      missed.pct = 100 * sum(fg.missed) / sum(fg.made, fg.missed)
 )
+
+shooting.by.position <- ddply(shooting, .(position), summarize, 
+                              made = sum(fg.made),
+                              missed = sum(fg.missed))
+
+shooting.by.position
 
 shooting.melted <- melt(shooting, id = c('Player', 'position'))
+shooting.marginal <- cast(shooting.melted, position ~ variable, margins = T, fun = sum)
 
-
-shooting.by.position <- ddply(
-  shooting, .(position), summarize, 
-    position = first(position), 
-    missed = sum(fg.missed), 
-    made = sum(fg.made),
-    total.shots = sum(fg.missed, fg.made)
-)
-
-cast(shooting.by.position, position ~ ., margins = T, fun = sum)
-
-sink(paste(exam.dir, 'r.tex', sep = '/'))
-  xtable(cast(shooting.melted, position ~ variable, margins = T, fun = sum))
-sink()
-
-
-ggplot(data = two.way, aes(x = reorder(position, -made), y = made / 1000)) +
+plot <- ggplot(data = shooting.by.position, 
+  aes(x = reorder(position, -made), y = made / 1000)) +
   geom_bar(stat = 'identity', color = 'black', fill = 'lightblue') +
-  labs(x = 'Position', y = 'Field Goals Made')
+  labs(x = 'Position', y = 'Made (thousands)')
 
-str(shooting.condition)
-
-ggplot(data = shooting.condition,
-       aes(x = reorder(position, -made.pct), y = made.pct)) +
-  geom_bar(stat = 'identity', color = 'black', fill = 'lightblue') +
-  labs(x = 'Position', y = 'Shooting Percentage')
-
-mean(c(1, 5, 8, 12))
+file <- paste(figures.dir, 'shots_made.pdf', sep = '/')
+ggsave(file, plot, width = 4, height = 2.5)
 
 # draft
 
 draft <- read.delim('draft_2007.csv', header = TRUE,  sep = ',', strip.white = TRUE)
 draft$MP <- draft$MP / 1000
 
+cor(draft$Pk, draft$MP, )
+
+summary(with(draft, lm(Pk ~ MP)))
+mean(draft$Pk)
+     
+mean(draft$MP)
+
 plot <- ggplot(data = draft, aes(x = Pk, y = MP)) + 
   geom_point() +
-  # stat_smooth(method = "lm") +
+  stat_smooth(method = "lm") +
+  stat_smooth(data = subset(draft, Pk != 56 & Pk != 48), method = "lm") +
   labs(x = 'Pick', y = 'Minutes (thousands)')
 
-with(draft, lm(Pk ~ MP))
+plot
 
-print(plot)
-
-file <- paste(figures.dir, 'draft.pdf', sep = '/')
-ggsave(file, plot, width = 5, height = 3)
+file <- paste(figures.dir, 'draft_with_regression.pdf', sep = '/')
+ggsave(file, plot, width = 4, height = 2.5)
 
 draft$MP
 dnp <- subset(draft, is.na(MP))
-draft[which(is.na(draft$WS)),'WS']  <- 0
+draft[which(is.na(draft$MP)),'MP']  <- 0
 
 draft.melted <- melt(draft)
-draft.melted
-
-str(draft.melted)
-?mean
 
 draft.stats <- ddply(subset(draft.melted, variable %in% c('Pk', 'MP')), 
   .(variable), summarize, mean = mean(value), sd = sd(value))
+draft.stats
 
 sink(paste(exam.dir, 'r.tex', sep = '/'))
   xtable(draft.stats, digits = 1)
@@ -238,4 +225,4 @@ sink()
 
 subset(draft, select = c('Pk', 'Player', 'MP'))
 
-with(subset(draft, Pk != 56 & Pk != 48), cor(Pk, MP))
+with(subset(draft, Pk != 56 & Pk != 48), lm(Pk ~ MP))

@@ -214,10 +214,13 @@
         James  & \{ 13, 15, 17, 19, 25, 25, 25, 26, 29, 30, 32, 33, 35, 36, 36 \} \\ 
       \end{tabular}
 
+      \ifprintanswers
+        \newpage
+      \fi
+
       \begin{parts}
         \part[8] Find the 5-number summary for both players
           \begin{solution}
-            
             \begin{table}[H]
               \centering
               \begin{tabular}{lrrrrrr}
@@ -245,6 +248,11 @@
               \label{fig:james_vs_durant}
             \end{figure}
           \fi
+
+        \ifprintanswers
+          \newpage
+        \fi
+
         \part[3] Which player seems to be the MVP, based solely on points scored in
           these games? 
           \begin{solution}
@@ -322,9 +330,22 @@
         \end{table}
       }
 
-      \question[5] Make a bar chart showing shots made for each position.  Order
+      \question[5] Make a bar plot showing shots made for each position.  Order
         the bars by number of shots made, with the most productive position first.
         \label{q:sbp.first}
+
+        \begin{solution}
+          See Figure \ref{fig:sbp}.
+        \end{solution}
+
+        \ifprintanswers
+          \begin{figure}[H]
+            \centering
+            \includegraphics{figures/shots_made.pdf}
+            \caption{Question \ref{q:sbp.first}: shots made by position}
+            \label{fig:sbp}
+          \end{figure}
+        \fi
 
       \question[5] Make a table showing the marginal distributions of shots
       taken by position, shots missed, shots made, and total number of shots
@@ -336,15 +357,15 @@
           \centering
           \begin{tabular}{lrrr}
             \toprule
-            position & made  & missed & total \\
+            position       & made  & missed & total \\
             \midrule
-            C        & 11372 & 11105  & 22477 \\
-            PF       & 17601 & 18972  & 36573 \\
-            PG       & 15087 & 20791  & 35878 \\
-            SF       & 15090 & 19583  & 34673 \\
-            SG       & 15617 & 20721  & 36338 \\
+            Center         & 11372 & 11105  & 22477 \\
+            Power Forward  & 17601 & 18972  & 36573 \\
+            Small Forward  & 15087 & 20791  & 35878 \\
+            Shooting Guard & 15090 & 19583 & 34673 \\
+            Point Guard    & 15617 & 20721 & 36338 \\
             \midrule
-            total    & 74767 & 91172  & 165939 \\
+            total          & 74767 & 91172 & 165939 \\
             \bottomrule
           \end{tabular}
           \caption{Marginal distributions of shots made and missed}
@@ -359,10 +380,33 @@
           \part[5] Make a table showing the conditional distributions of percentage
           of shots made and missed for each position.  
 
+          \begin{solution}
+            \begin{table}[H]
+              \centering
+              \begin{tabular}{rlrr}
+                \toprule
+                position       & made & missed \\
+                \midrule
+                Center         & 51\% & 49\% \\
+                Power Forward  & 48\% & 52\% \\
+                Small Forward  & 44\% & 56\% \\
+                Shooting Guard & 43\% & 57\% \\
+                Point Guard    & 42\% & 58\% \\
+                \bottomrule
+              \end{tabular}
+            \end{table}
+          \end{solution}
+
           \part[2] Which position seems to contain the most accurate shooters?
-          Is this is because they are the best shooters or is there a lurking
-          variable that explains the shooting percentage differences?
+            Is this is because they are the best shooters or is there a lurking
+            variable that explains the shooting percentage differences?
           
+            \begin{solution}
+              The centers are the most accurate shooters. This is because most
+              of them are 7 feet tall and never venture more than 3 feet from
+              the basket or attempt a shot more difficult than a dunk.
+            \end{solution}
+
         \end{parts}
       
       \newpage
@@ -372,7 +416,11 @@
 
         \begin{figure}[H]
           \centering
-          \includegraphics[scale = 1]{figures/draft.pdf}
+          \ifprintanswers
+            \includegraphics[scale = 0.8]{figures/draft_with_regression.pdf}
+          \else
+            \includegraphics[scale = 0.8]{figures/draft.pdf}
+          \fi
           \caption{2008 NBA draft order vs. minutes played}
           \label{fig:draft}
         \end{figure}
@@ -381,10 +429,10 @@
           \centering
           \begin{tabular}{lrr}
             \toprule
-                     & mean   & s \\
+                                & mean & s \\
             \midrule
-            Pick     & 30.5   & 17.5 \\
-            Minutes  & 5218.9 & 5697.6 \\
+            Pick                & 30.5 & 17.5 \\
+            Minutes (thousands) & 5.29 & 5.70 \\
             \bottomrule
           \end{tabular}
           \caption{2008 NBA Draft}
@@ -408,12 +456,33 @@
       \begin{parts}
         \part[7]
           Find the equation for the regression line using the draft pick as the
-          explanatory variable and minutes played as the response variable.
+          explanatory variable and minutes played as the response variable.  
+          \begin{solution}
+            Use the correlation coefficient and the standard deviations to find
+            the slope of the regression line:
+            \[
+              b = -0.6020 \cdot \frac{17.5}{5.7} \approx -1.845
+            \]
 
+            Use the slope and the means to find the y-intercept:
+            \begin{align*}
+              \bar{y} & = -1.845 \bar{x} + a \\
+              5.7     & = -1.845 \cdot 30.5 + a \\
+              a       & \approx 40.13 \\
+            \end{align*}
+
+          \end{solution}
         \part[5] Graph the regression line.
+        \begin{solution}
+          See Figure \ref{fig:draft} (slightly steeper regression line).
+        \end{solution}
 
         \part[2] What percentage of the variation in the minutes played is
           accounted for by the linear regression line?
+
+          \begin{solution}
+            $r^2 \approx 0.3625$
+          \end{solution}
 
         \part[3] Mark Gasol and Ramon Sessions (top right corner) are outliers
         because they were late round draft picks (pick 48 and 56) who have had a
@@ -422,6 +491,24 @@
         Would removing these data points from the graph have a significant
         effect on the regression line?  Why or why not? 
 
+        \begin{solution}
+          It depends on what you mean by ``significant.''  You could say ``yes''
+          because they are away from the center of the graph, so they are sort
+          of outliers on the x axis.  On the other hand, you could say ``no''
+          because there are 7 other points in the same x-range right around
+          zero, so the line can't follow the outliers very well.  
+
+          Either answer is correct, as long as you provided a reasonable
+          explanation.
+
+          The actual numbers without those two players are:
+          \begin{align*}
+            r &\approx -0.6975 \\
+            \hat{y} &= -2.146 + 40.407 \\
+          \end{align*}
+
+          Both regression lines are in Figure \ref{fig:draft}.
+        \end{solution}
       \end{parts}
 
 

@@ -57,17 +57,11 @@ mean(more.than.60$final)
 
 exams.melted <- melt(exams, id = 'student')
 
-midterms <- subset(exams.melted, variable == 'midterm')
-median(midterms$value)
-
 exams.cast <- cast(exams.melted, student + variable ~ ., )
 exams.box <- rename(exams.cast, c(variable = 'exam', '(all)' = 'score'))
 
-
-exams.box
-
 plot <- ggplot(exams.box, aes(x = exam, y = score)) +
-  geom_boxplot() + 
+  geom_boxplot(fill = 'lightblue', color = 'black') + 
   labs(x = 'Exam', y = 'Score')
 print(plot)
 
