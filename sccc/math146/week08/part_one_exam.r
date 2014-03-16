@@ -79,4 +79,5 @@ ggsave(paste(figures.dir, 'exams_scatter.pdf', sep = '/'), height = 4, width = 6
 
 with(exams, data.frame(cor(midterm, final), mean(midterm), mean(final)))
 
-
+5218.9 + 195 * 30.5
+(5218 - 30) / .6
