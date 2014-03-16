@@ -113,18 +113,15 @@
         
         \part[8] Draw box plots for the midterm and final
           \label{q:exams_box}
-          \begin{solution}
-            Figure \ref{fig:exams_box}
-          \end{solution}
 
-          \ifprintanswers
+          \begin{solution}
             \begin{figure}[H]
               \centering
-              \includegraphics[scale = 0.8]{figures/exams_box.pdf}
+              \includegraphics[scale = 0.6]{figures/exams_box.pdf}
               \caption{Question 3 (\ref{q:exams_box})}
               \label{fig:exams_box}
             \end{figure}
-          \fi
+          \end{solution}
 
         \part[2] Compared to the midterm, was the final exam 
           \begin{enumerate}[(a)]
@@ -169,6 +166,16 @@
 
       \begin{parts}
         \part[10] Draw a histogram with a bin width of 5 points for these players.
+
+        \begin{solution}
+          Raymond Felton has an average of exactly 10, so you have a choice of
+          what group to include him in.  I made the each bar include the lower
+          boundary and exclude the upper boundary, but it is equally valid to do
+          it the other way around also.
+
+          Figure \ref{fig:point.histogram} contains the histogram.
+        \end{solution}
+
         \ifprintanswers
           \begin{figure}[H]
             \centering
@@ -183,7 +190,7 @@
           right-skewed
         \end{solution}
 
-        \part[3] Is the mean higher or lower than the median?  Explain how you
+        \part[3] Is the mean larger or smaller than the median?  Explain how you
           can know the answer without calculating the actual values.
           \begin{solution}
             Because the distribution is right-skewed, the mean while be larger than
@@ -214,9 +221,9 @@
         James  & \{ 13, 15, 17, 19, 25, 25, 25, 26, 29, 30, 32, 33, 35, 36, 36 \} \\ 
       \end{tabular}
 
-      \ifprintanswers
-        \newpage
-      \fi
+      % \ifprintanswers
+      %   \newpage
+      % \fi
 
       \begin{parts}
         \part[8] Find the 5-number summary for both players
@@ -225,33 +232,33 @@
               \centering
               \begin{tabular}{lrrrrrr}
                 \toprule
-                Player & Min. & 1st Qu. & Median & 3rd Qu. & Max. \\
+                Player & Min. & Q1 & Median & Q2 & Max. \\
                 \midrule
-                Durant & 13   & 25      & 31     & 34.50   & 42 \\
-                James  & 13   & 22      & 26     & 32.50   & 36 \\
+                Durant & 13   & 24 & 31     & 37 & 42 \\
+                James  & 13   & 19 & 26     & 33 & 36 \\
                 \bottomrule
               \end{tabular}
             \end{table}
 
           \end{solution}
 
-        \part[6] Draw a box plot for both players
-          \begin{solution}
-            See Figure \ref{fig:james_vs_durant}
-          \end{solution}
-
-          \ifprintanswers
-            \begin{figure}[H]
-              \centering
-              \includegraphics{figures/james_vs_durant.pdf}
-              \caption{James vs. Durant Points}
-              \label{fig:james_vs_durant}
-            \end{figure}
-          \fi
-
         \ifprintanswers
           \newpage
         \fi
+
+        \part[6] Draw a box plot for both players
+          \begin{solution}
+            \begin{figure}[H]
+              \centering
+              \includegraphics[scale = 0.7]{figures/james_vs_durant.pdf}
+              \caption{James vs. Durant Points}
+              \label{fig:james_vs_durant}
+            \end{figure}
+          \end{solution}
+
+        % \ifprintanswers
+        %   \newpage
+        % \fi
 
         \part[3] Which player seems to be the MVP, based solely on points scored in
           these games? 
@@ -281,7 +288,7 @@
             accurate than Melo?
             \begin{solution}
               If you look up Carmelo's z-score in table A, you find that about
-              \fbox{ 0.8849 or 88.5\% } of players have scores lower than 1.2.
+              0.8849 or \fbox{ 88.5\% } of players have scores lower than 1.2.
             \end{solution}
 
           \part[5]
@@ -290,11 +297,11 @@
 
             \begin{solution}
               For this problem you need to reverse the process.  From table A,
-              the z-score that corresponds to 0.2 is -0.8416.
+              the z-score that corresponds to $0.2$ is $-0.8416$.
 
               You have to convert this back to a shooting percentage:
               \begin{align*}
-                -0.8416 & = {x - 0.36}{0.05} \\
+                -0.8416 & = \frac{x - 0.36}{0.05} \\
                 x       & \approx \boxed{ 0.3179 } \\
               \end{align*}
             \end{solution}
@@ -335,21 +342,39 @@
         \label{q:sbp.first}
 
         \begin{solution}
-          See Figure \ref{fig:sbp}.
-        \end{solution}
-
-        \ifprintanswers
           \begin{figure}[H]
             \centering
-            \includegraphics{figures/shots_made.pdf}
+            \includegraphics[scale = 0.8]{figures/shots_made.pdf}
             \caption{Question \ref{q:sbp.first}: shots made by position}
             \label{fig:sbp}
           \end{figure}
-        \fi
 
-      \question[5] Make a table showing the marginal distributions of shots
+        \end{solution}
+      \question[5] Fill in the table showing the marginal distributions of shots
       taken by position, shots missed, shots made, and total number of shots
       taken.
+
+      \ifprintanswers
+      \else
+        \begin{table}[H]
+          \centering
+          \begin{tabular}{lrrr}
+            \toprule
+            position       & made  & missed & total \\
+            \midrule
+            Center         & 11372 & 11105  &       \\
+            Power Forward  & 17601 & 18972  &       \\
+            Small Forward  & 15087 & 20791  &       \\
+            Shooting Guard & 15090 & 19583  &       \\
+            Point Guard    & 15617 & 20721  &       \\
+            \midrule
+            total          &       &        &        \\
+            \bottomrule
+          \end{tabular}
+          \caption{Marginal distributions}
+          \label{tab:marginal_shots}
+        \end{table}
+      \fi
 
       \begin{solution}
         
@@ -368,7 +393,7 @@
             total          & 74767 & 91172 & 165939 \\
             \bottomrule
           \end{tabular}
-          \caption{Marginal distributions of shots made and missed}
+          \caption{Marginal distributions}
           \label{tab:marginal_shots}
         \end{table}
 
@@ -409,7 +434,10 @@
 
         \end{parts}
       
-      \newpage
+      \ifprintanswers
+      \else
+        \newpage
+      \fi
 
       \question
         \label{q:draft}
@@ -432,7 +460,7 @@
                                 & mean & s \\
             \midrule
             Pick                & 30.5 & 17.5 \\
-            Minutes (thousands) & 5.29 & 5.70 \\
+            Minutes (thousands) & 5219 & 5698 \\
             \bottomrule
           \end{tabular}
           \caption{2008 NBA Draft}
@@ -461,21 +489,30 @@
             Use the correlation coefficient and the standard deviations to find
             the slope of the regression line:
             \[
-              b = -0.6020 \cdot \frac{17.5}{5.7} \approx -1.845
+              b = -0.6020 \cdot \frac{5698}{17.5} \approx -196
             \]
 
             Use the slope and the means to find the y-intercept:
             \begin{align*}
-              \bar{y} & = -1.845 \bar{x} + a \\
-              5.7     & = -1.845 \cdot 30.5 + a \\
-              a       & \approx 40.13 \\
+              \bar{y} & = -196 \bar{x} + a \\
+              5219    & = -196 \cdot 30.5 + a \\
+              a       & \approx 11,197 \\
             \end{align*}
+
+            The equation is:
+            \[
+              \boxed{ \hat{y} = 11,197 - 196 x }
+            \]
 
           \end{solution}
         \part[5] Graph the regression line.
         \begin{solution}
-          See Figure \ref{fig:draft} (slightly steeper regression line).
+          See Figure \ref{fig:draft} (slightly less steep regression line).
         \end{solution}
+
+        \ifprintanswers
+          \newpage
+        \fi
 
         \part[2] What percentage of the variation in the minutes played is
           accounted for by the linear regression line?
@@ -503,11 +540,12 @@
 
           The actual numbers without those two players are:
           \begin{align*}
-            r &\approx -0.6975 \\
-            \hat{y} &= -2.146 + 40.407 \\
+            r       & \approx -0.6975 \\
+            \hat{y} & = -2.146 + 40.407 \\
           \end{align*}
 
-          Both regression lines are in Figure \ref{fig:draft}.
+          Both regression lines are in Figure \ref{fig:draft}.  The line without
+          the outliers is slightly steeper (lower on the right side).
         \end{solution}
       \end{parts}
 

@@ -62,6 +62,7 @@ exams.box <- rename(exams.cast, c(variable = 'exam', '(all)' = 'score'))
 
 plot <- ggplot(exams.box, aes(x = exam, y = score)) +
   geom_boxplot(fill = 'lightblue', color = 'black') + 
+  scale_y_continuous(breaks = seq(40, 90, by = 10)) +
   labs(x = 'Exam', y = 'Score')
 print(plot)
 
@@ -69,9 +70,11 @@ ggsave(paste(figures.dir, 'exams_box.pdf', sep = '/'), height = 3, width = 5)
 
 plot <- ggplot(exams, aes(x = midterm, y = final)) +
   geom_point() + 
+  scale_x_continuous(breaks = seq(30, 90, by = 10)) +
+  scale_y_continuous(breaks = seq(30, 90, by = 10)) +
   labs(x = 'Midterm', y = 'Final')
-
 print(plot)
+
 ggsave(paste(figures.dir, 'exams_scatter.pdf', sep = '/'), height = 4, width = 6)
 
 with(exams, data.frame(cor(midterm, final), mean(midterm), mean(final)))

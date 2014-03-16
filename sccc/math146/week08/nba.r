@@ -17,7 +17,7 @@ james <- transform(james, Player = 'James')
 durant <- c( 13, 17, 19, 24, 26, 28, 29, 31, 32, 32, 32, 37, 41, 42, 42)
 james  <- c(13, 15, 17, 19, 25, 25, 25, 26, 29, 30, 32, 33, 35, 36, 36)
 
-mvps <- melt(cbind(James = James, Durant = Durant))
+mvps <- melt(cbind(James = james, Durant = durant))
 mvps <- rename(mvps, c('X2' = 'player'))
 mvps <- rename(mvps, c('value' = 'points'))
 
@@ -25,12 +25,10 @@ sink(paste(exam.dir, 'r.tex', sep = '/'))
   xtable(ddply(mvps, .(player), function(df) summary(df$points)))
 sink()
 
-str(as.data.frame(summary(durant)))
-
 plot <- ggplot(data = mvps, aes(x = player, y = points)) + 
   geom_boxplot(fill = 'lightblue', color = 'black') +
+  scale_y_continuous( breaks = seq(10, 40, by = 5)) +
   labs(x = 'Player', y = 'Points')
-
 print(plot)
 
 file <- paste(figures.dir, 'james_vs_durant.pdf', sep = '/')
@@ -38,76 +36,67 @@ ggsave(file, plot, width = 4, height = 2.5)
 
 # save for later to reconstruct the answer key
 data.file <- paste(exam.data.dir, 'points_sample.csv', sep = '/')
-write.csv(nba.sample, file = data.file)
+# write.csv(nba.sample, file = data.file)
+nba.sample <- read.delim(data.file, header = TRUE, sep = ',', strip.white = TRUE)
 
 ddply(nba.sample, 'ID', summarize, summary = t(summary(PTS)), mean = mean(PTS))
 ddply(nba, 'ID', summarize, summary = t(summary(PTS)), mean = mean(PTS))
 
-james$plus.minus
-
-# compare GmSc
-plot <- ggplot(data = mvps, aes(x = ID, y = GmSc)) + 
-  geom_boxplot(fill = 'lightblue', color = 'black') +
-  labs(x = 'Player', y = 'Points')
-
-durant.close <- subset(durant, abs(pt.diff) < 5)
-james.close <- subset(james, abs(pt.diff) < 5)
-
-durant.close.sample <- durant.close[sample(nrow(durant.close), 10), ]
-james.close.sample <- james.close[sample(nrow(james.close), 10), ]
-
-close = rbind(durant.close, james.close)
-
-close.sample = rbind(durant.close.sample, james.close.sample)
-
-plot <- ggplot(data = durant.close, aes(x = PTS, y = pt.diff)) + 
-  geom_point() +
-  stat_smooth(method = "lm") +
-  labs(x = 'Game Score', y = 'Final Score')
-
-print(plot)
-
-with(durant.close, cor(PTS, pt.diff))
-with(james.close, cor(PTS, pt.diff))
-
-?melt
-
-close.sample.melted <- melt(close.sample, id.vars = "ID", 
-                            measure.vars = c("GmSc", "plus.minus"))
-
-subset(durant.close.sample, select = c("GmSc", "plus.minus"))
-
-cast(close.sample.melted, ID ~ ...)
-
-sink(paste(exam.dir, 'r.tex', sep = '/'))
-  xtable(subset(durant.close, select = c("PTS", "pt.diff")))
-  xtable(subset(james.close.sample, select = c("PTS", "pt.diff")))
-sink()
 
 # histogram of points scored
 players <- read.delim('players_2013-14.csv', header = TRUE, sep = ',', strip.white = TRUE)
 
 starters <- subset(players, GS > 30)
-str(starters)
 
 mvps <- subset(starters, Player %in% c("LeBron James", "Kevin Durant"))
 other.starters <- subset(starters, 
                          !(Player %in% c("LeBron James", "Kevin Durant")))
 
+mean(durant)
+mean(james)
+
+starters.sample = subset(starters, 
+                         Player %in% c('Trey Burke', 'Kentavious Caldwell-Pope',
+                                       'Tyson Chandler', 'Glen Davis',
+                                       'Jared Dudley', 'Kevin Durant',
+                                       'Raymond Felton', 'Randy Foye',
+                                       'Marc Gasol', 'Paul George',
+                                       'Spencer Hawes', 'Dwight Howard',
+                                       'LeBron James', 'Michael Kidd-Gilchrist',
+                                       'Robin Lopez', 'Kevin Martin',
+                                       'Ben McLemore', 'Chandler Parsons',
+                                       'Kendrick Perkins', 'Zach Randolph',
+                                       'Terrence Ross', 'Jared Sullinger',
+                                       'P.J. Tucker', 'Evan Turner'
+                                       ))
+
+# remove duplicates
+starters.sample <- subset(starters.sample, 
+                          PTS != 11.5 & PTS != 13.2 & PTS != 17.4,
+                          select = c(Player, PTS))
+
+median(starters.sample$PTS)
+
+
+bin <- subset(starters.sample, 10 <= PTS & PTS < 15, select = 'PTS')
+
+f <- cut(starters.sample$PTS, seq(0, 40, by = 5), right = F)
+summary(f)
+
 # starters.sample <- rbind(starters.sample, mvps)
 # starters.sample <- rbind(starters.sample, klay)
 
-starters.sample <- other.starters[sample(nrow(other.starters), 22),]
-starters.sample <- rbind(starters.sample, mvps)
+# starters.sample <- other.starters[sample(nrow(other.starters), 22),]
+# starters.sample <- rbind(starters.sample, mvps)
 
 plot <- ggplot(data = starters.sample, aes(x = PTS)) +
   geom_histogram(fill = 'lightblue', color = 'black', binwidth = 5) +
+  scale_y_continuous( breaks = c(1:10)) +
   labs(x = 'Points', y = 'Games')
-
 print(plot)
 
 file <- paste(figures.dir, 'point_histogram.pdf', sep = '/')
-ggsave(file, plot, width = 5, height = 3)
+ggsave(file, plot, width = 4, height = 2.5)
 
 nrow(starters.sample)
 starters.sample$Player
@@ -115,7 +104,8 @@ starters.sample$Player
 subset(starters, select = c('Player', 'PTS'))
 
 data.file <- paste(exam.data.dir, 'starters_sample.csv', sep = '/')
-write.csv(starters.sample, file = data.file)
+# write.csv(starters.sample, file = data.file)
+starters.sample <- read.delim(data.file, header = TRUE, sep = ',', strip.white = TRUE)
 
 starters.sample
 
@@ -147,9 +137,7 @@ plot <- ggplot(data = three.pt.shooters, aes(x = X3PP)) +
   geom_histogram(fill = 'lightblue', color = 'black', binwidth = 0.05) +
   labs(x = 'Points', y = 'Games')
 
-print(plot)
-
-(.42 - .36)/.05
+plot
 
 pnorm(.42, .36, .05)
 qnorm(.20, 36, 5)
@@ -191,27 +179,28 @@ ggsave(file, plot, width = 4, height = 2.5)
 draft <- read.delim('draft_2007.csv', header = TRUE,  sep = ',', strip.white = TRUE)
 draft$MP <- draft$MP / 1000
 
-cor(draft$Pk, draft$MP, )
+dnp <- subset(draft, is.na(MP))
+draft[which(is.na(draft$MP)),'MP']  <- 0
 
-summary(with(draft, lm(Pk ~ MP)))
-mean(draft$Pk)
-     
-mean(draft$MP)
+cor(draft$Pk, draft$MP)
 
-plot <- ggplot(data = draft, aes(x = Pk, y = MP)) + 
+with(draft, lm(MP ~ Pk))
+
+-0.6020 * 5698/17.5
+5219 + 196 * 30.5
+
+plot <- ggplot(data = draft, aes(x = Pk, y = MP / 1000)) + 
   geom_point() +
   stat_smooth(method = "lm") +
-  stat_smooth(data = subset(draft, Pk != 56 & Pk != 48), method = "lm") +
+  # stat_smooth(data = subset(draft, Pk != 56 & Pk != 48), method = "lm") +
+  scale_x_continuous(breaks = seq(0, 70, by = 10)) +
+  scale_y_continuous(breaks = seq(0, 20, by = 5)) +
   labs(x = 'Pick', y = 'Minutes (thousands)')
-
-plot
+print(plot)
 
 file <- paste(figures.dir, 'draft_with_regression.pdf', sep = '/')
 ggsave(file, plot, width = 4, height = 2.5)
 
-draft$MP
-dnp <- subset(draft, is.na(MP))
-draft[which(is.na(draft$MP)),'MP']  <- 0
 
 draft.melted <- melt(draft)
 
@@ -226,3 +215,5 @@ sink()
 subset(draft, select = c('Pk', 'Player', 'MP'))
 
 with(subset(draft, Pk != 56 & Pk != 48), lm(Pk ~ MP))
+
+-2.05 * .05 + .36
