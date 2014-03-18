@@ -10,6 +10,7 @@
 \usepackage{fullpage}
 \usepackage{enumerate}
 \usepackage{graphicx}
+\usepackage{parskip}
 
 \printanswers
 
@@ -17,7 +18,7 @@
 
 \printanswers
 
-\title{Statistics \\ Week Six}
+\title{Statistics \\ Week Nine}
 \date{\today}
 \author{}
 
@@ -26,256 +27,179 @@
   \maketitle
   \tableofcontents
 
-  \section{Berkeley Sex Discrimination}
-
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{rrr}
-      \toprule
-      admitted & rejected & total \\
-      \midrule
-      1749     & 2676     & 4425 \\
-      \bottomrule
-    \end{tabular}
-  \end{table}
-
-  The overall admission rate for the university is 40 \%.
-
-  Break down by sex:
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{rlrrr}
-      \toprule
-                & sex   & admitted & rejected & (all) \\
-      \midrule
-      1         & M     & 1192     & 1398     & 2590 \\
-      2         & F     & 557      & 1278     & 1835 \\
-      3         & (all) & 1749     & 2676     & 4425 \\
-       \bottomrule
-    \end{tabular}
-    \caption{By sex}
-  \end{table}
-
-  The totals are ``marginal distributions.'' In this case, they tell you:
+  \section{Statistical Inference vs. Exploratory Data Analysis}
+  
+  Exploratory:
   \begin{itemize*}
-    \item total number of men
-    \item total number of women
-    \item total number of admitted
-    \item total number of rejected
-    \item total number of applicants
+    \item given data, draw conclusions
+    \item conclusions only apply to data you actually have
   \end{itemize*}
 
-  A table of proportions is more useful:
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{rlrr}
-      \toprule
-                & sex & admitted & rejected \\
-      \midrule
-      1         & M   & 0.46     & 0.54 \\
-      2         & F   & 0.30     & 0.70 \\
-       \bottomrule
-    \end{tabular}
-  \end{table}
-
-  Each row is a ``conditional distribution.'' All the values for a row have the
-  same value for the categorical variable.
-
-  Things looked suspicious, so they decided to do a breakdown by department:
-
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{rllrrr}
-      \toprule
-                 & department & sex   & admitted & rejected & (all) \\
-      \midrule
-      1          & A          & M     & 511      & 314      & 825 \\
-      2          & A          & F     & 89       & 19       & 108 \\
-      3          & A          & (all) & 600      & 333      & 933 \\
-      \midrule
-      4          & B          & M     & 353      & 207      & 560 \\
-      5          & B          & F     & 17       & 8        & 25 \\
-      6          & B          & (all) & 370      & 215      & 585 \\
-      \midrule
-      7          & C          & M     & 120      & 205      & 325 \\
-      8          & C          & F     & 202      & 391      & 593 \\
-      9          & C          & (all) & 322      & 596      & 918 \\
-      \midrule
-      10         & D          & M     & 139      & 278      & 417 \\
-      11         & D          & F     & 131      & 244      & 375 \\
-      12         & D          & (all) & 270      & 522      & 792 \\
-      \midrule
-      13         & E          & M     & 53       & 138      & 191 \\
-      14         & E          & F     & 94       & 299      & 393 \\
-      15         & E          & (all) & 147      & 437      & 584 \\
-      \midrule
-      16         & F          & M     & 16       & 256      & 272 \\
-      17         & F          & F     & 24       & 317      & 341 \\
-      18         & F          & (all) & 40       & 573      & 613 \\
-      \midrule
-      19         & (all)      & (all) & 1749     & 2676     & 4425 \\
-      \bottomrule
-    \end{tabular}
-  \end{table}
-
-  The percentages are more useful;
-
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{rlrr}
-      \toprule
-               & department & M    & F \\
-      \midrule
-      1        & A          & 0.62 & 0.82 \\
-      2        & B          & 0.63 & 0.68 \\
-      3        & C          & 0.37 & 0.34 \\
-      4        & D          & 0.33 & 0.35 \\
-      5        & E          & 0.28 & 0.24 \\
-      6        & F          & 0.06 & 0.07 \\
-      \bottomrule
-    \end{tabular}
-    \caption{Admissions proportions by department and sex.}
-  \end{table}
-
-  Department A has a bias towards women and all the other departments are
-  evenly balanced
-
-  Which departments are the most selective:
-
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{rlr}
-      \toprule
-               & department & admitted \\
-      \midrule
-      1        & A          & 0.64 \\
-      2        & B          & 0.63 \\
-      3        & C          & 0.35 \\
-      4        & D          & 0.34 \\
-      5        & E          & 0.25 \\
-      6        & F          & 0.07 \\
-      \bottomrule
-    \end{tabular}
-    \caption{Proportion admitted for each department}
-  \end{table}
-
-  A is the easiest and F is the toughest.
-
-  Where do men and women most frequently apply:
-
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{rrrr}
-      \toprule
-               & department & women & men \\
-      \midrule
-      1        & A          & 0.06  & 0.32 \\
-      2        & B          & 0.01  & 0.21 \\
-      3        & C          & 0.32  & 0.12 \\
-      4        & D          & 0.20  & 0.16 \\
-      5        & E          & 0.21  & 0.07 \\
-      6        & F          & 0.19  & 0.10 \\
-      \bottomrule
-    \end{tabular}
-  \end{table}
-
+  Statistical Inference:
   \begin{itemize*}
-    \item 62 \% of the men apply to the two easiest departments.
-    \item 17 \% of the men apply to the two hardest departments.
-    \item 7 \% of the women apply to the two easiest departments.
-    \item 40 \% of the women apply to the two hardest departments.
+    \item try to gather data to answer a question
+    \item conclusions apply to more than just data actually gathered
+    \item answers come with a statement of how confident we are that they are
+      accurate
   \end{itemize*}
 
-  \section{Apply Your Knowledge}
+  \section{Sample vs. Population}
 
+  \subsection{Notes}
   \begin{description}
-    \item[1] 
-      \begin{table}[H]
-        \centering
-        \begin{tabular}{rlrrrr}
-          \toprule
-                   & consumer & higher & same & lower & (all) \\
-          \midrule
-          1        & buyer    & 20     & 7    & 9     & 36 \\
-          2        & nonbuyer & 29     & 25   & 43    & 97 \\
-          3        & (all)    & 49     & 32   & 52    & 133 \\
-          \bottomrule
-        \end{tabular}
-      \end{table}
-
-    81 out of 133 or 61\% are in the ``same'' or ``higher'' categories.
-
-    \item[2]
-      \begin{table}[H]
-        \centering
-        \begin{tabular}{rlrrr}
-          \toprule
-                   & age    & female & male & (all) \\
-          \midrule
-          1        & 15to17 & 116    & 61   & 177 \\
-          2        & 18to24 & 5470   & 4691 & 10161 \\
-          3        & 25to34 & 1319   & 824  & 2143 \\
-          4        & over34 & 1075   & 616  & 1691 \\
-          5        & (all)  & 7980   & 6192 & 14172 \\
-          \bottomrule
-        \end{tabular}
-      \end{table}
-
-      $10161 / 14172 = 0.72$ are in the 18 to 24 age group
-
-    \item[3]
-      \begin{table}[H]
-        \centering
-        \begin{tabular}{rlrrr}
-          \toprule
-                   & consumer & higher & same & lower \\
-          \midrule
-          1        & buyer    & 0.56   & 0.19 & 0.25 \\
-          2        & nonbuyer & 0.30   & 0.26 & 0.44 \\
-          \bottomrule
-        \end{tabular}
-      \end{table}
-                                
-      \begin{table}[H]
-      \centering
-      \begin{tabular}{rlrr}
-        \toprule
-                 & inclination & buyer & nonbuyer \\
-        \midrule
-        1        & higher      & 0.41  & 0.59 \\
-        2        & same        & 0.22  & 0.78 \\
-        3        & lower       & 0.17  & 0.83 \\
-        \bottomrule
-      \end{tabular}
-      \end{table}
-
-    \item[4]
-      \begin{table}[H]
-        \centering
-        \begin{tabular}{rlrr}
-          \toprule
-                   & age    & female & male \\
-          \midrule
-          1        & 15to17 & 0.66   & 0.34 \\
-          2        & 18to24 & 0.54   & 0.46 \\
-          3        & 25to34 & 0.62   & 0.38 \\
-          4        & over34 & 0.64   & 0.36 \\
-           \bottomrule
-        \end{tabular}
-      \end{table}
-
-      \begin{table}[H]
-        \centering
-        \begin{tabular}{rlrrrr}
-          \toprule
-                   & sex    & 15to17 & 18to24 & 25to34 & over34 \\
-          \midrule
-          1        & female & 0.01   & 0.69   & 0.17   & 0.13 \\
-          2        & male   & 0.01   & 0.76   & 0.13   & 0.10 \\
-           \bottomrule
-        \end{tabular}
-      \end{table}
+    \item[population] entire group
+    \item[sample] group you actually get data from
+    \item[sample design] plan for getting a sample that represents population
   \end{description}
+
+  Planning sample survey:
+  \begin{itemize*}
+    \item What is the population we want to find out about? 
+    \item What do we want to find out from each observation? (What are the variables?)
+  \end{itemize*}
+
+  \subsection{Examples}
+
+  \subsubsection{US Census}
+  \begin{itemize*}
+   \item variables: age, income, race, marital, status, number of children, etc.
+   \item population: US
+  \end{itemize*}
+
+  \subsubsection{Election Polls}
+  \begin{itemize*}
+   \item variables: who are you going to vote for?
+   \item population: probable voters (not just registered voters)
+  \end{itemize*}
+
+  \section{Longitudinal Studies} 
+  Observe changes in the same sample over a long period of time.
+
+  Framingham Heart Study:
+  \begin{itemize*}
+    \item 5209 adult residents of Framingham, MA from 1948 to now
+    \item height, weight, blood pressure, education, etc.
+    \item information on kids 
+    \item 2000 academic articles since 1950, 1000 between 2000 and 2009 on
+      smoking, cholesterol, heart disease, blood pressure, 
+  \end{itemize*}
+
+  With a longitudinal study you don't have to reconstruct the past history of
+  the subjects. You don't need to find someone today and ask him what his blood
+  pressure was when he was 19, for example.
+
+  \section{Difficulties}
+
+  \subsection{Credits}
+  Most of this stuff is from {\em Naked Statistics}.
+
+  \subsection{Selection Bias}
+  Sample is not representative of population.  Every member of the population
+  doesn't have an equal chance of appearing in the sample.
+
+  Example: Republican Iowa straw poll:
+  \begin{itemize*}
+    \item August of year before presidential election
+    \item Iowa only
+    \item \$30 to vote
+  \end{itemize*}
+
+  problems:
+  \begin{itemize*}
+    \item Iowan's may not be representative of Republicans nationwide
+    \item people who are willing to pay \$30 to vote may not be representative
+      of Republicans nationwide
+  \end{itemize*}
+
+  \subsection{Self-Selection Bias}
+  People who sign up for AA may not be representative of drug users.  Did they
+  stop drinking because of AA or did they sign up for AA because they were
+  ready to stop drinking?
+
+  \subsection{Publication Bias}
+  Every study has some possibility of error.
+
+  Suppose study is 95\% likely to be correct.  1 out of 20 times the study
+  returns the wrong result. To demonstrate a new drug is effective, a drug
+  company just needs to do 20 studies, discard the 19 that say the drug does
+  nothing, and publish study number 20.
+
+  The press release says: ``With 95\% certainty, New Miracle Drug cures insomnia.''
+
+  With Prozac, 94\% of the positive studies were published and 14\% of the
+  non-positive studies were published.
+
+  \subsection{Recall Bias}
+  Current events may affect how people remember the past.  
+
+  In 1993 study of diet/breast cancer, people with breast cancer reported high
+  fat diets earlier in life.  Cause was people struggling to think of
+  explanation for cancer rather than actual high-fat diets.
+
+  \begin{em}
+    The diagnosis of breast cancer had not just changed a woman’s present and the
+    future; it had altered her past. Women with breast cancer had (unconsciously)
+    decided that a higher-fat diet was a likely predisposition for their disease
+    and (unconsciously) recalled a high-fat diet.
+  \end{em}
+
+  Longitudinal study wouldn't be susceptible to this problem.
+
+  \subsection{Survivorship Bias}
+  In a longitudinal study, the sample may change over time.
+
+  GPA of high school students who haven't dropped out goes up.  Sophomores do
+  better than freshman, juniors to better than sophomores, etc. because the bad
+  students are the ones that drop out.
+
+  A mutual fund company can start 16 mutual funds.  By chance, 8 are above
+  the index after year 1, 4 after year 2, and 2 after year 3.  Below average
+  funds quietly shut down and above average funds heavily advertised.
+
+  \subsection{Convenience Sample}
+  Sample that is easiest to gather:
+
+  \begin{itemize*}
+    \item ask your friends about their views on something to estimate US population's opinion.
+    \item observe cars in your neighborhood to find most common car in US (my
+      neighborhood has disproportionate number of SUVs)
+    \item UBB students as sample of US prison population (WA may not be typical.
+      UBB students may not be typical)
+  \end{itemize*}
+
+  \subsection{Self-Selecting Sample}
+  \begin{itemize*}
+    \item web poll
+    \item call in radio poll
+    \item Amazon ``Did you find what you were looking for?''
+  \end{itemize*}
+
+  problems:
+
+  For any poll, if the population is the US population:
+  \begin{itemize*}
+    \item People who know about the poll may not be typical (listeners to the
+      show, visitors to the web site)
+    \item People who actually respond may be even less typical (too much time on
+      their hands, feel very strongly)
+  \end{itemize*}
+
+  \section{Polling}
+  \begin{itemize*}
+    \item nonresponse
+    \item rigged questions
+  \end{itemize*}
+
+  \section{Simple Random Sample}
+  \begin{itemize*}
+    \item table of random numbers in back of book
+  \end{itemize*}
+
+  \section{Stratified Sample}
+
+  \section{Examples}
+
+  \subsection{Jury Selection}
 
 \end{document}
 

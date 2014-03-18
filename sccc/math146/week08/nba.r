@@ -214,6 +214,6 @@ sink()
 
 subset(draft, select = c('Pk', 'Player', 'MP'))
 
-with(subset(draft, Pk != 56 & Pk != 48), lm(Pk ~ MP))
+with(subset(draft, Pk != 56 & Pk != 48), cor(MP, Pk))
 
 -2.05 * .05 + .36
