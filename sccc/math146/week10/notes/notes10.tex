@@ -18,7 +18,7 @@
 
 \printanswers
 
-\title{Statistics \\ Week Nine}
+\title{Statistics \\ Week Ten}
 \date{\today}
 \author{}
 
@@ -27,294 +27,108 @@
   \maketitle
   \tableofcontents
 
-  \part{Overview}
+  \section{Tea/Milk Experiment}
 
-  \section{Statistical Inference vs. Exploratory Data Analysis}
+  \subsection{Terminology}
   
-  Exploratory:
+  Goal: determine if subject can tell whether tea was made milk/tea or tea/milk.
+
+  \begin{description*}
+    \item[treatment] thing you are trying to find out (adding cream first)
+    \item[control] no change (usual order)
+    \item[factor] tea/milk order
+  \end{description*}
+
+  \subsection{Experiments}
+  With 2 cup experiment, subject has 50\% of success by chance.
+
+  With 4 cup experiment:
   \begin{itemize*}
-    \item given data, draw conclusions
-    \item conclusions only apply to data you actually have
+    \item $4 \times 3 = 12$ ways to choose 2 cups.  4 choices for first cup and
+      3 choices for second cup.  
+    \item since the order doesn't matter, 6 of the choices are identical and
+      there are 6 different ways to choose 2 out of 4. aabb, abab, abba, bbaa,
+      baba, baab.
+    \item taster has 1 out of 6 or 17\% chance of success by luck
   \end{itemize*}
 
-  Statistical Inference:
+  With 6 cup experiment:
   \begin{itemize*}
-    \item try to gather data to answer a question
-    \item conclusions apply to more than just data actually gathered
-    \item answers come with a statement of how confident we are that they are
-      accurate
+    \item $6 \times 5 \times 4 = 120$ ways to choose 3 cups.  
+    \item $3 \times 2 \times 1 = 6$ duplicates
+    \item taster has 1 out of 20 or 5\% chance of success by luck
   \end{itemize*}
 
-  \section{Sample/Population}
-
-  \subsection{Notes}
-  \begin{description}
-    \item[population] entire group
-    \item[sample] group you actually get data from
-    \item[sample design] plan for getting a sample that represents population
-  \end{description}
-
-  Planning sample survey:
+  With 8 cup experiment:
   \begin{itemize*}
-    \item What is the population we want to find out about? 
-    \item What do we want to find out from each observation? (What are the variables?)
+    \item $8 \times 7 \times 6 \times 5 = 1680$ ways to choose 3 cups.  
+    \item $4 \times 3 \times 2 \times 1 = 24$ duplicates
+    \item taster has 1 out of 70 or 1.4\% chance of success by luck
   \end{itemize*}
 
-  \subsection{Examples}
-
-  \subsubsection{US Census}
-  \begin{itemize*}
-   \item variables: age, income, race, marital, status, number of children, etc.
-   \item population: US
-  \end{itemize*}
-
-  \subsubsection{Election Polls}
-  \begin{itemize*}
-   \item variables: who are you going to vote for?
-   \item population: probable voters (not just registered voters)
-  \end{itemize*}
-
-  \section{Control/Treatment}
-  If you're trying to find out if something has an effect (new drug, drinking,
-  smoking) the subjects are in two groups.  The ``control'' group doesn't
-  drink, smoke, take the new medicine, etc., while the ``treatment'' group does
-  drink, smoke, medicate, etc.
-
-  \section{Longitudinal Studies} 
-  Observe changes in the same sample over a long period of time.
-
-  Framingham Heart Study:
-  \begin{itemize*}
-    \item 5209 adult residents of Framingham, MA from 1948 to now
-    \item height, weight, blood pressure, education, etc.
-    \item information on kids 
-    \item 2000 academic articles since 1950, 1000 between 2000 and 2009 on
-      smoking, cholesterol, heart disease, blood pressure, 
-  \end{itemize*}
-
-  With a longitudinal study you don't have to reconstruct the past history of
-  the subjects. You don't need to find someone today and ask him what his blood
-  pressure was when he was 19, for example.
-
-  \part{Frequent Problems}
-
-  \section{Credits}
-  Most of this stuff is from {\em Naked Statistics}.
-
-  \section{Selection Bias}
-  \subsection{Notes}
-  Sample is not representative of population.  Every member of the population
-  doesn't have an equal chance of appearing in the sample.
-
-  \subsection{Examples}
-  \subsubsection{Republican Iowa straw poll}
+  With 10 cup experiment 1 out of 252: 0.4\% chance of success by luck.
 
   \begin{itemize*}
-    \item August of year before presidential election
-    \item Iowa only
-    \item \$30 to vote
-  \end{itemize*}
-
-  \subsubsection{Convenience Sample}
-  Sample that is easiest to gather:
-
-  \begin{itemize*}
-    \item ask your friends about their views on something to estimate US population's opinion.
-    \item observe cars in your neighborhood to find most common car in US (my
-      neighborhood has disproportionate number of SUVs)
-    \item UBB students as sample of US prison population (WA may not be typical.
-      UBB students may not be typical)
-  \end{itemize*}
-
-  \section{Self-Selection Bias}
-
-  \subsection{Notes}
-  If people assign themselves to either the control or treatment group, there
-  may be something different about the subjects other than control/treatment.
-  
-  \subsection{Examples}
-
-  \subsubsection{Self-Selecting Sample}
-  \begin{itemize*}
-    \item web poll
-    \item call in radio poll
-    \item Amazon ``Did you find what you were looking for?''
-  \end{itemize*}
-
-  % problems:
-
-  % For any poll, if the population is the US population:
-  % \begin{itemize*}
-  %   \item People who know about the poll may not be typical (listeners to the
-  %     show, visitors to the web site)
-  %   \item People who actually respond may be even less typical (too much time on
-  %     their hands, feel very strongly)
-  % \end{itemize*}
-
-  % \subsubsection{AA}
-  % People who sign up for AA may not be representative of drug users.  Did they
-  % stop drinking because of AA or did they sign up for AA because they were
-  % ready to stop drinking?
-
-  \subsubsection{Clofibrate}
-  \begin{table}
-    \centering
-    \begin{tabular}{lrrrr}
-      \toprule
-      & \multicolumn{2}{c}{Clofibrate} & \multicolumn{2}{c}{Placebo} \\
-                   & number & deaths & number & deaths \\
-      \cmidrule(r){2-3} \cmidrule(r){4-5}    
-      adherers     & 708    & 15\%   & 1813   & 15\% \\
-      non-adherers & 357    & 25\%   & 882    & 28\% \\
-      total group  & 1103   & 20\%   & 2789   & 21\% \\
-      \bottomrule
-    \end{tabular}
-    \caption{Clofibrate study}
-    \label{tab:clofibrate}
-  \end{table}
-
-  \subsubsection{Vitamin C}
-  \begin{table}
-    \centering
-    \begin{tabular}{cll}
-      \toprule
-      group & prevention & therapy \\
-      \midrule
-      1     & placebo    & placebo \\
-      2     & vitamin C  & placebo \\
-      3     & placebo    & vitamin C \\
-      4     & vitamin C  & vitamin C \\
-    \end{tabular}
-    \caption{Vitamin C study}
-    \label{tab:vitamin.c}
-  \end{table}
-
-  \begin{itemize*}
-    \item dropout rate was higher for groups 1-3 than 4
-    \item easy to distinguish vitamin from placebo by taste
-    \item among subjects who remained blind vitamin C had no effect
-    \item among subjects who broke blind groups 2 and 4 had fewest colds and
-      groups 3 and 4 had shortest colds
+    \item no number of chances gives 100\% confidence taster can always tell
+    \item usual acceptance of success is 5\% chance of success by luck
   \end{itemize*}
 
 
-  \subsubsection{Smoking Study}
-  A smoking study found:
+  \part{Experiments}
+
+  \section{Salk Polio Vaccine}
+  \subsection{History}
   \begin{itemize*}
-    \item people who had never smoked were slightly healthier than current
-      smokers
-    \item people who had recently stopped smoking were much less healthy than
-      current smokers
+    \item 1916-54, thousands of cases
+    \item 1954 trial of new Jonas Salk vaccine for polio
+    \item Polio affects richer kids more than poorer kids. Poorer kids tend to
+      be exposed to polio early in life and get very mild cases which allows
+      them to develop immunity.
+    \item parental permission required for vaccination
+    \item richer parents were more likely to give permission for vaccination
+    \item disease spreads through proximity with other people with the disease
+    \item vaccine looked promising but it was uncertain whether it would
+      actually help or possibly hurt
   \end{itemize*}
 
-  True or false: you shouldn't start smoking, but if you start you shouldn't
-  stop.  Explain.
+  \subsection{Original Design}
+  The original design was to vaccinate all grade 2 kids whose parents would
+  consent, leaving grades 3 and 4 kids as controls.  This would allow any second
+  grader who wanted the vaccine to get it.
 
-  \begin{solution}
-    The people who just stopped probably stopped because their health was shot.
-  \end{solution}
+  problems:
+  \begin{itemize}
 
-  \section{Publication Bias}
-  \subsection{Notes}
-  Every study has some possibility of error.  With publication bias, the
-  researcher throws away the studies that yield the ``wrong'' result and
-  publishes the few studies that yield the desired result. 
+    \item Parents who consented likely to be richer than parents who didn't.
+      This biased the study against the vaccine since the polio rate is higher
+      among this group.
 
-  \subsection{Example}
+    \item Disease was spread through contact.  Since kids tend to hang out with
+      their own grade level, the incidence of the disease in a particular grade
+      level was likely to be different from the incidence of the disease in the
+      other grade levels. This might bias the study for or against the vaccine,
+      based on chance.
+  \end{itemize}
 
-  Suppose study is 95\% likely to be correct.  1 out of 20 times the study
-  returns the wrong result. To demonstrate a new drug is effective, a drug
-  company just needs to do 20 studies, discard the 19 that say the drug does
-  nothing, and publish study number 20.
+  Problem: both of these problems are that the control group is different from the
+  treatment group.
 
-  The press release says: ``With 95\% certainty, New Miracle Drug cures Cancer.''
+  Solution: treatment and control have to be drawn from the same population
 
-  With Prozac, 94\% of the positive studies were published and 14\% of the
-  non-positive studies were published.
+  \subsection{Final Design}
+  Another problem was how to make the treatment and control groups similar.  One
+  option would be to look at all the characteristics of the kids (race, income,
+  gender, health, number of friends, etc.) and try to get similar kids in each
+  group (stratified sample).  Since it was hard to identify everything that
+  might matter, they used a simple random sample.
 
-  \section{Recall Bias}
-  \subsection{Notes}
-
-  Current events may affect how people remember the past.  
-
-  \subsection{Example}
-
-  In 1993 study of diet/breast cancer, people with breast cancer reported high
-  fat diets earlier in life.  Cause was people struggling to think of
-  explanation for cancer rather than actual high-fat diets.
-
-  \begin{em}
-    The diagnosis of breast cancer had not just changed a woman’s present and the
-    future; it had altered her past. Women with breast cancer had (unconsciously)
-    decided that a higher-fat diet was a likely predisposition for their disease
-    and (unconsciously) recalled a high-fat diet.
-  \end{em}
-
-  Longitudinal study wouldn't be susceptible to this problem.
-
-  \section{Survivorship Bias}
-  \subsection{Notes}
-  In a longitudinal study, the sample may change over time.
-
-  \subsection{Examples}
-  \subsubsection{High School Test Scores}
-  GPA of high school students who haven't dropped out goes up.  Sophomores do
-  better than freshman, juniors to better than sophomores, etc. because the bad
-  students are the ones that drop out.
-
-  \subsubsection{Mutual Fund}
-  A mutual fund company can start 16 mutual funds.  By chance, 8 are above
-  the index after year 1, 4 after year 2, and 2 after year 3.  Below average
-  funds quietly shut down and above average funds heavily advertised.
-
-  \section{Polling}
-  \subsection{Non-Response}
-  It's hard to get people to respond to a poll, particularly with caller ID.
-  People who answer the phone and are willing to talk are probably different
-  (retired, young, unemployed, bored) from people who don't.
-
-  Ways to mitigate:
   \begin{itemize*}
-    \item call repeatedly at all hours of the day to maximize chance of getting
-      people who work at different hours
+    \item 2 million kids
+    \item 500,000 vaccinated (treatment)
+    \item 500,000 selected for vaccination but declined to participate
+    \item 1,000,000 unvaccinated (controls)
+  \end{itemize*}<++>
 
-    \item get response from adult with most recent birthday rather than person
-      who answered phone
-  \end{itemize*}
-
-  \subsection{Non-Representative Sample}
-  See ``Convenience Sample,'' ``Selection Bias,'' etc.
-
-  Phone polls only have a chance to reach people with phones, etc.
-
-  \subsection{Biased Questions}
-  Different ways of phrasing the same question can get wildly different
-  responses.
-
-  examples:
-  \begin{itemize*}
-    \item tax relief (good) vs. tax cut (less good)
-    \item welfare (bad) vs. assistance (good)
-    \item ``reasonable measures to keep us safe from terrorists'' vs.
-      ``governmental monitoring of every phone call.''
-  \end{itemize*}
-
-  \part{Sampling}
-
-  \section{Simple Random Sample}
-  \begin{itemize*}
-    \item make list of subjects and randomly select subset
-    \item use table of random numbers in back of book
-    \item subjects who respond may not be representative of population
-  \end{itemize*}
-
-  \section{Stratified Sample}
-  \subsection{Notes}
-  \begin{itemize*}
-    \item Divide population into groups (age, race, income, etc.).
-    \item Do SRS from each group.
-    \item Helps to get appropriate representation from each group.
-  \end{itemize*}
 
   \part{Miscellaneous Examples}
   \section{Breast Cancer Study}
@@ -409,70 +223,5 @@
       \end{solution}
 
   \end{itemize*}
-
-  \section{Body Fat}
-  Study found heavier kids tend to have more controlling mothers, leading to the
-  headline ``Parents of Fat Kids Should Lighten Up.''
-
-  \begin{itemize*}
-    \item is there an association between the mother's behavior and the kids'
-      weight?
-    \item Is the controlling behavior necessarily causing the overweight kids,
-      or might there be a confounding variable?
-    \item Will following the headline's advice necessarily help the kids lose
-      weight?
-  \end{itemize*}
-
-  \section{Voting}
-  A hypothetical city is divided into 10 wards.  In each ward, the percentage of
-  registered democrats who vote is greater than the percentage of registered
-  republicans who vote.  True or false: the overall percentage of registered
-  democrats who vote is greater than the percentage of republicans who vote?
-
-  \begin{solution}
-    False.  
-    
-    District 1 is democratic with low turnout and district 2 is republican with
-    high turnout.  
-    
-    Specifically, district one has 200 out of 1000 democrats voting and 10 out
-    of 100 republicans voting.  District two has 90 out of 100 democrats voting
-    and 800 out of 1000 republicans voting.  republicans voting.  
-
-    Overall, $290/1100 \approx 26\%$ of democrats vote and 
-    $810/1100 \approx 74\%$ of republicans vote.
-
-  \end{solution}
-  \section{Jury Selection}
-
-  \subsection{Azania vs. State of Indiana}
-
-  pg. 273
-
-  \begin{itemize*}
-    \item Program randomly selected 14,364 voters to be assigned a random
-      number.
-    \item 364 extra because of rounding error.
-    \item Jurors were selected alphabetically by township.  Program stopped
-      after juror 10,000 instead of going all the way to 14,364.    
-    \item All 4,364excluded jurors were in Wayne Township residents.  87\% of
-      Wayne Township was excluded
-    \item Black people are 8.5\% of Allen County, and 75\% of the 8.5\% live in
-      Wayne Township
-  \end{itemize*}
-
-    \begin{itemize*}
-    \item Pool of x\% of population of each town in pool until target reached
-    \item Select juries from pool
-    \item Worked OK until population grew and pool was filled before W's were
-      reached.
-    \item Winthrop (check?) was 74\% black with 0 jurors in pool.
-    \item Sentence overturned because jury wasn't representative of state
-      population
-  \end{itemize*}
-
-  \subsection{Lockhart vs. McCree}
-  Are juries for death penalty cases which exclude anti-death penalty jurors
-  fair?  Supreme court says yes. pg. 238.
 \end{document}
 
