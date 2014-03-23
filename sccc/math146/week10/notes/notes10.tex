@@ -39,40 +39,112 @@
     \item[factor] tea/milk order
   \end{description*}
 
-  \subsection{Experiments}
+  \subsection{One Trial Experiment}
   With 2 cup experiment, subject has 50\% of success by chance.
 
   With 4 cup experiment:
   \begin{itemize*}
-    \item $4 \times 3 = 12$ ways to choose 2 cups.  4 choices for first cup and
-      3 choices for second cup.  
+    \item $4 \times 3 = 12$ ways to choose 2 cups.  
+    \item $2 \times 1 = 6$ duplicates
     \item since the order doesn't matter, 6 of the choices are identical and
       there are 6 different ways to choose 2 out of 4. aabb, abab, abba, bbaa,
       baba, baab.
-    \item taster has 1 out of 6 or 17\% chance of success by luck
+    \item random guess would be correct 1 out of 6 or 17\% of the time
   \end{itemize*}
 
   With 6 cup experiment:
   \begin{itemize*}
     \item $6 \times 5 \times 4 = 120$ ways to choose 3 cups.  
     \item $3 \times 2 \times 1 = 6$ duplicates
-    \item taster has 1 out of 20 or 5\% chance of success by luck
+    \item random guess would be correct 1 out 20 or 5\% of the time
   \end{itemize*}
 
   With 8 cup experiment:
   \begin{itemize*}
-    \item $8 \times 7 \times 6 \times 5 = 1680$ ways to choose 3 cups.  
+    \item $8 \times 7 \times 6 \times 5 = 1680$ ways to choose 4 cups.  
     \item $4 \times 3 \times 2 \times 1 = 24$ duplicates
-    \item taster has 1 out of 70 or 1.4\% chance of success by luck
+    \item random guess would be correct 1 out of 70 or 1.4\% of the time
   \end{itemize*}
 
-  With 10 cup experiment 1 out of 252: 0.4\% chance of success by luck.
+  With 10 cup experiment:
+  \begin{itemize*}
+    \item $10 \times 9 \times 8 \times 7 \times 6 = 30240$ ways to choose 5 cups.  
+    \item $5 \times 4 \times 3 \times 2 \times 1 = 120$ duplicates
+    \item random guess would be correct 1 out of 252 or 0.4\% of the time
+  \end{itemize*}
 
   \begin{itemize*}
-    \item no number of chances gives 100\% confidence taster can always tell
-    \item usual acceptance of success is 5\% chance of success by luck
+    \item with any number of cups, there is always at least a tiny chance of
+      success by chance
+    \item usual definition of ``statistically significant'' is experiment where
+      random guess would be successful less than 5\% of the time
+    \item you need to identify possible outcomes and chance of each before the
+      experiment starts so you design experiment that will answer question to
+      your satisfaction
   \end{itemize*}
 
+  \subsection{Perfection Not Required}
+  If taster can only usually but not always tell the difference, you could
+  define success as 3 out of 4 right in an 8 cup experiment.
+
+  \begin{itemize*}
+    \item 1 way to get 4 out of 4
+    \item 4 ways to pick a cup from set A to get wrong and 4 cups to choose swap
+      it with from set B: 16 ways to get one cup wrong
+    \item random guess would be correct 17 out of 70 or 24\% of the time.  You
+      could say with 76\% confidence that person can tell difference
+  \end{itemize*}
+
+  To get back to 95\% confidence, expand trial to 12 cups and count either 5 or
+  6 correct as success:
+
+  6 out of 6:
+  \begin{itemize*}
+    \item $12 \times 11 \times 10 \times 9 \times 8 \times 7 = 665,280$ ways to
+      choose 6 cups.  
+    \item $6 \times 5 \times 4 \times 3 \times 2 \times 1 = 720$ duplicates
+    \item random guess would be correct 1 out of 924 or 0.1\% of the time
+  \end{itemize*}
+
+  5 out of 6:
+  \begin{itemize*}
+    \item 6 ways to get wrong cup from set A and 6 choices of cup to swap with
+      in set B: 36 ways to get exactly one cup wrong
+    \item random guess would be correct (at least 5 out of 6 right) $36 + 1 =
+      37$ out of 924 or 4\% of the time
+  \end{itemize*}
+
+  Other approaches
+  \begin{itemize*}
+    \item With 10 8 cup trials, where success is 3 out of 4, chance of 6 out of
+      10 successes by chance (3 out of 4 cups identified correctly) is 1.7\%
+      
+    \item With 10 8 cup trials where success is perfect 4 out of 4, chance of
+      getting 2 perfect scores by chance 10 attempts is only 0.85\%
+  \end{itemize*}
+
+  2 out of 4 is too easy: 17 ways to get at least 3 wrong, $70 - 17 = 53$
+      ways to get at least 2 right.  Chance of at least 2 by chance is 53 out of
+      70 or 76\%.
+
+  \subsection{Randomization}
+  Try to minimize differences other than tea/milk order.
+
+  One approach is to try to identify everything: cup color, weight, temperature,
+  etc. and then try hard to make sure each treatment matches in all other
+  variables.  It's impossible to know everything that might matter, so this
+  approach is problematic.
+
+  Another approach is to do everything except for thing that matters (tea/milk
+  order) randomly.  Any chance variation while average out.
+
+  Of course, randomization won't help if there is some dramatic difference, like
+  two kinds of tea (Irish Breakfast and English Breakfast, for example).  If you
+  can't narrow it down to one kind of tea, you should consider a {\em block}
+  design, where you experiment separately on each block (tea type).
+
+  Randomization won't help if there is some huge difference like sugar in the
+  bottom of some of the cups.
 
   \part{Experiments}
 
@@ -127,7 +199,7 @@
     \item 500,000 vaccinated (treatment)
     \item 500,000 selected for vaccination but declined to participate
     \item 1,000,000 unvaccinated (controls)
-  \end{itemize*}<++>
+  \end{itemize*}
 
 
   \part{Miscellaneous Examples}
