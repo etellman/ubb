@@ -29,10 +29,17 @@
 
   \section{Tea/Milk Experiment}
 
-  \subsection{Terminology}
-  
-  Goal: determine if subject can tell whether tea was made milk/tea or tea/milk.
+  \subsection{History}
+  \begin{itemize*}
+    \item determine if subject can tell whether tea was made milk/tea or tea/milk.
 
+    \item party in 1920 in Cambridge
+
+    \item According to second-hand testimony, woman told them apart flawlessly
+
+  \end{itemize*}
+
+  \subsection{Terminology}
   \begin{description*}
     \item[treatment] thing you are trying to find out (adding cream first)
     \item[control] no change (usual order)
@@ -45,9 +52,11 @@
   With 4 cup experiment:
   \begin{itemize*}
     \item $4 \times 3 = 12$ ways to choose 2 cups.  
-    \item $2 \times 1 = 6$ duplicates
-    \item since the order doesn't matter, 6 of the choices are identical and
-      there are 6 different ways to choose 2 out of 4. aabb, abab, abba, bbaa,
+
+    \item $2 \times 1 = 2$ 2 ways to arrange two identical cups, so 2 copies of
+      each selection ($a_1a_2b_1b_2$ and $a_2a_1b_2b_1$ are identical)
+
+    \item 6 unique ways to choose 2 out of 4. aabb, abab, abba, bbaa,
       baba, baab.
     \item random guess would be correct 1 out of 6 or 17\% of the time
   \end{itemize*}
@@ -55,21 +64,21 @@
   With 6 cup experiment:
   \begin{itemize*}
     \item $6 \times 5 \times 4 = 120$ ways to choose 3 cups.  
-    \item $3 \times 2 \times 1 = 6$ duplicates
+    \item $3 \times 2 \times 1 = 6$ copies of each arrangement
     \item random guess would be correct 1 out 20 or 5\% of the time
   \end{itemize*}
 
   With 8 cup experiment:
   \begin{itemize*}
     \item $8 \times 7 \times 6 \times 5 = 1680$ ways to choose 4 cups.  
-    \item $4 \times 3 \times 2 \times 1 = 24$ duplicates
+    \item $4 \times 3 \times 2 \times 1 = 24$ copies of each arrangement
     \item random guess would be correct 1 out of 70 or 1.4\% of the time
   \end{itemize*}
 
   With 10 cup experiment:
   \begin{itemize*}
     \item $10 \times 9 \times 8 \times 7 \times 6 = 30240$ ways to choose 5 cups.  
-    \item $5 \times 4 \times 3 \times 2 \times 1 = 120$ duplicates
+    \item $5 \times 4 \times 3 \times 2 \times 1 = 120$ copies of each arrangement
     \item random guess would be correct 1 out of 252 or 0.4\% of the time
   \end{itemize*}
 
@@ -120,12 +129,12 @@
       10 successes by chance (3 out of 4 cups identified correctly) is 1.7\%
       
     \item With 10 8 cup trials where success is perfect 4 out of 4, chance of
-      getting 2 perfect scores by chance 10 attempts is only 0.85\%
+      getting 2 perfect scores by chance in 10 attempts is only 0.85\%
   \end{itemize*}
 
-  2 out of 4 is too easy: 17 ways to get at least 3 wrong, $70 - 17 = 53$
-      ways to get at least 2 right.  Chance of at least 2 by chance is 53 out of
-      70 or 76\%.
+  2 out of 4 is too easy: 17 ways to get at least 3 wrong, $70 - 17 = 53$ ways
+  to get at least 2 right.  Chance of at least 2 by chance is 53 out of 70 or
+  76\%.
 
   \subsection{Randomization}
   Try to minimize differences other than tea/milk order.
@@ -146,7 +155,30 @@
   Randomization won't help if there is some huge difference like sugar in the
   bottom of some of the cups.
 
-  \part{Experiments}
+  \section{Agriculture}
+  \begin{itemize*}
+    \item before Fisher, agriculture experiments ad-hoc mixture of formulas
+      which tried to account for variations in soil, weather, seeds, etc.
+
+    \item Fisher introduced randomization of everything other than what was
+      being measured.
+
+    \item There was considerable debate with other researchers.  Some
+      researchers thought that the best results were achieved by explicitly
+      accounting for everything that mattered.  Fisher thought you couldn't
+      possibly think of everything that mattered, and it was cheaper, easier,
+      and more effective to acknowledge this and use randomization.
+
+    \item with 3 treatments and control:
+      \begin{enumerate*}
+        \item divide single plot into 4 quadrants.  problem is that one quadrant
+          may have better soil than another
+        \item divide each quadrant into 4 quadrants (16 plots in all) and plant
+          all 4 variations in each quadrant
+        \item use ``Latin Square.'' Each row has one of the treatments and each
+          column has one of the treatments.  Like soduku.
+      \end{enumerate*}
+  \end{itemize*}
 
   \section{Salk Polio Vaccine}
   \subsection{History}
@@ -201,8 +233,6 @@
     \item 1,000,000 unvaccinated (controls)
   \end{itemize*}
 
-
-  \part{Miscellaneous Examples}
   \section{Breast Cancer Study}
   Health Insurance Plan of NY (HIP) study in 1963.
 
@@ -295,5 +325,49 @@
       \end{solution}
 
   \end{itemize*}
+
+  \section{Placebo Effect}
+
+  Drug trial for headache remedy.
+
+  \begin{tabular}[H]{rcccc}
+    \toprule
+    group & week 1 & week 2 & week 3 & week 4 \\
+    \midrule
+    I     & A      & B      & C      & D \\
+    II    & B      & A      & D      & C \\
+    III   & C      & D      & A      & B \\
+    IV    & D      & C      & B      & A \\
+  \end{tabular}
+
+  success rate:
+  \begin{tabular}[H]{cccc}
+    \toprule
+    A  & B  & C  & D \\
+    \midrule
+    84 & 80 & 80 & 52 \\
+    \bottomrule
+  \end{tabular}
+
+  D was the placebo, so its success was surprising.  A was the combination of B
+  and C.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/placebo.pdf}
+    \caption{Placebo Effect}
+    \label{fig:placebo}
+  \end{figure}
+
+  Why is Latin Square better than:
+  \begin{tabular}[H]{rcccc}
+    \toprule
+    group & week 1 & week 2 & week 3 & week 4 \\
+    \midrule
+    I     & A      & B      & C      & D \\
+    II    & A      & B      & C      & D \\
+    III   & A      & B      & C      & D \\
+    IV    & A      & B      & C      & D \\
+  \end{tabular}
 \end{document}
 
