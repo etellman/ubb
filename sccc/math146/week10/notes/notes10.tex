@@ -394,20 +394,52 @@
 
   \begin{figure}[H]
     \centering
-    \includegraphics{figures/placebo.pdf}
+    \includegraphics[scale = 0.8]{figures/placebo.pdf}
     \caption{Placebo Effect}
     \label{fig:placebo}
   \end{figure}
 
-  Why is Latin Square better than:
-  \begin{tabular}[H]{rcccc}
-    \toprule
-    group & week 1 & week 2 & week 3 & week 4 \\
-    \midrule
-    I     & A      & B      & C      & D \\
-    II    & A      & B      & C      & D \\
-    III   & A      & B      & C      & D \\
-    IV    & A      & B      & C      & D \\
-  \end{tabular}
+  Why is Latin Square better than week 1, all groups have treatment A, week 2
+  all groups have treatment B, etc.?
+
+  % \begin{tabular}[H]{rcccc}
+  %   \toprule
+  %   group & week 1 & week 2 & week 3 & week 4 \\
+  %   \midrule
+  %   I     & A      & B      & C      & D \\
+  %   II    & A      & B      & C      & D \\
+  %   III   & A      & B      & C      & D \\
+  %   IV    & A      & B      & C      & D \\
+  % \end{tabular}
+
+  \section{Pairwise Designs}
+
+  \begin{itemize*}
+    \item in a pairwise design, researcher attempts to find people who are
+      similar and put one member of each pair in treatment and the other in
+      control.
+
+    \item one way to get similar people is to use the same person on different
+      days.
+
+    \item In a {\em block design} different similar groups (women, men, income
+      blocks, etc.) are tested separately.  A control/treatment is chosen from
+      each group.  
+  \end{itemize*}
+
+  \section{Block Designs}
+    In a {\em block design} different similar groups (women, men, income blocks,
+    etc.) are tested separately.  A control/treatment is chosen from each group.  
+
+    advantages:
+    \begin{itemize*}
+      \item allows you to draw separate conclusions about each block
+      \item allows you to identify the effects of differences between blocks and
+        account for them
+    \end{itemize*}
+
+    For example, if men tend to get heart disease more than women, a heat
+    disease study could study men/women separately.
+
 \end{document}
 
