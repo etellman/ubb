@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -33,6 +33,8 @@
 
   \maketitle
 
+  \ifprintanswers
+  \else
   \section{Homework}
     \begin{itemize*}
       \item read Chapter 9 
@@ -41,6 +43,7 @@
       \item if you're interested, read the {\em Data Ethics} essay which follows
         Chapter 9.
     \end{itemize*}
+  \fi
 
   \ifprintanswers
     \begin{description}
@@ -71,9 +74,9 @@
                 each subject having an equal chance to end up in either group
             \end{itemize*}
 
-          \item Yes.People who take vitamin E already probably have other
-            healthy habits as well, so they naturally have better health,
-            independent of any effect vitamin E might have.
+          \item People who take vitamin E already probably have other healthy
+            habits as well, so they naturally have better health, independent of
+            any effect vitamin E might have.
         \end{enumerate}
 
       \item[32] If we assume that we'll be able to reach all 544 adults, we can
@@ -87,11 +90,14 @@
         
       \item[34]
         \begin{enumerate}[(a)]
-          \item The treatment group is the people with the strong pot and the
-            control group is the others.  The subjects are randomly assigned to
-            one group or the other.
+          \item Subjects are randomly assigned to treatment (pot) or control (no
+            pot).
 
-          \item TO DO
+          \item numbers: \{ 05, 19, 04, 20, 16, 18, 07, 13, 02, 08 \}
+
+            names: \{ Dubois, Travers, Cheng, Ullmann, Quinones, Thompson, Fluharty,
+            Lucero, Afifi, Gerson \}
+
         \end{enumerate}
 
       \item[36]
@@ -150,29 +156,21 @@
 
       \item[41] 
         \begin{enumerate}[(a)]
-          \item The pairs could be the same person on different days.  You
-            wouldn't want to feed someone two beverages in close succession,
-            because the reaction to the second one would probably generally be
-            different.  
+          \item You could select pairs, but picking pairs of people who are the
+            same gender and about the same age.  
             
             The randomization would be to decide which beverage each subject
             gets first.
 
-          \item Since there are only two treatments, you just have to go through
-            the table and if the number is even, assign treatment 1 and if it is
-            odd assign treatment 2.  Once you have enough of either treatment,
-            assign the remaining samples to the remaining treatment.
+          \item With 20 subjects, you need to find 10 to have the regular
+            beverage first, with the other 10 getting the drinks in the opposite
+            order.
 
-            Using table B, the results would be:
+            If you number the subjects from 01 to 20 and use Table B, the
+            subjects to get the regular drink first would be:
 
-            \begin{tabular}[H]{ll}
-              \toprule
-              treatment     & subjects \\
-              \midrule
-              Regular first & 2, 4, 9, 10, 11, 13, 14, 15, 17, 18 \\
-              Light first   & 1, 3, 5, 6,   7,  8, 12, 16, 19, 20 \\
-              \bottomrule
-            \end{tabular}
+            \{ 12, 16, 02, 08, 17, 10, 05, 09, 19, 06 \}
+
         \end{enumerate}
 
       \item[43]
@@ -181,14 +179,14 @@
         determine whether he got oxygen on day one or day two and compare the
         performance on the two days.
 
-        You wouldn't want to do the test twice on the same day, because the
-        players would be tired for the second run on each day.
+        If the test isn't too tiring, you could also do both trials on the same
+        day with plenty of rest time between each trial.
 
-        One problem is the psychological effect receiving oxygen might have on
-        the players.  If they think the oxygen is helping, they might run
-        faster, even if it isn't actually helping.  On the other hand, the same
-        would be true in a game, so as long as the oxygen has an effect,
-        psychological or otherwise, it's probably worth using.
+        % One problem is the psychological effect receiving oxygen might have on
+        % the players.  If they think the oxygen is helping, they might run
+        % faster, even if it isn't actually helping.  On the other hand, the same
+        % would be true in a game, so as long as the oxygen has an effect,
+        % psychological or otherwise, it's probably worth using.
 
       \item[44]
         \begin{figure}[H]
