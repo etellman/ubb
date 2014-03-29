@@ -11,20 +11,17 @@ percentage <- function(score, points) {
   c(actual = actual, percentage = round(100 * (actual) / points))
 }
 
-possible <- points(c(27:28, 30:34, 37:38, 42, 44:45, 47:48, 51, 53))
-percentage(10, possible)
+possible <- points(c(25, 27:28, 32:36, 38, 41:43, 47))
+percentage(3, possible)
 
 grades.file <- paste(grades.dir, 'grades.csv', sep = '/')
 grades <- read.delim(grades.file, header = TRUE, strip.white = T, sep = ',')
 
 grades.m <- melt(grades, id = "id")
 
-exam1.summary <- summary(subset(grades, select = 'exam1'), na.rm = T)
-exam1.summary
+sd(grades.m$value, na.rm = T)
 
-data.frame(hw5$id, round(scale(hw5$value), 2))
-
-plot <- ggplot(grades, aes(x = exam1)) + 
+plot <- ggplot(grades.m, aes(x = value)) + 
   geom_histogram(binwidth = 5, color = "black", fill = "lightblue") +
   labs(x = "Grade", y = "Students")
 print(plot)

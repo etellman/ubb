@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -47,32 +47,31 @@
         people actually interviewed.
 
       \item[27] If you number the students from 01 to to 40 and use Table B
-        starting at line 117, you get students: 38, 16, 32, 18, 37, 06, 23,
-        19, 03 and 25.
+        starting at line 117, you get students: 
 
-        This is students: Washburn, Garcia, Rodriguez, Helling, Wallace,
-        Cabrera, Morgan, Husain, Batista, Nguyen
+        \fbox{ 38, 16, 32, 18, 37, 06, 23, 19, 03 and 25. }
 
-      \item[28] The first five codes would be: codes 288, 229, 131, 303, and 007.
+      \item[28] The first five codes would be: codes 
+        \fbox{288, 229, 131, 303, and 007}.
 
       \item[32] 
-        \begin{parts}
-          \part There will typically be around four 0's in each row but some
+        \begin{description}
+          \item[false] There will typically be around four 0's in each row but some
             rows will have more and some less.  The mean number of zeros per row
             will be 4.
 
-          \part Since there are 100 different pairs of digits, any particular
+          \item[true] Since there are 100 different pairs of digits, any particular
           pair has a 1/100 chance of appearing, including the pair 00.
 
-          \part This pattern will come up once in a while but not very
+          \item[false] This pattern will come up once in a while but not very
             frequently.
-        \end{parts}
+        \end{description}
 
       \item[33]
         \begin{parts}
           \part The population is all the residential households.
 
-          \part 1169 out of 2000 or 58\% didn't respond.
+          \part 1169 out of 2000 or \fbox{ 58\% } didn't respond.
 
           \part People are likely to telescope the events, thinking that they've
             seen more movies in the last 12 months than they actually have.
@@ -83,13 +82,14 @@
         issuing driver's licenses to illegal immigrants is a bad idea, so they
         don't represent the population as a whole.
 
-      \item[35] 40,927 out of 45,956 or 89\% didn't respond.
+      \item[35] 40,927 out of 45,956 or \fbox{ 89\% } didn't respond.
 
       \item[36] 
         \begin{parts}
           \part If you assign each driver a number between 0001 and 5024 and use
-          line 104 of Table B, the first 5 drivers are: 1388, 0746, 0227, 4001
-          and 1858.
+          line 104 of Table B, the first 5 drivers are: 
+          
+          \fbox{ 1388, 0746, 0227, 4001 and 1858 }
 
           \part People generally don't want to admit they ran a red light, so the
           actual number is probably higher.
@@ -102,8 +102,10 @@
       \item[41] 
         \begin{parts}
           \part The only thing you need Table B for in this example is the
-          starting number.  The first number less than 200 is 193, so you would
-          start with name 193, and then select names 393, 593, 793, and 993.
+          starting number.  After that, you take every 40th number, since
+          $200/5 = 40$. 
+          
+          The numbers you get are: $\boxed{ \{35, 75, 115, 155, 195 \} }$
 
           \part There could be some repeating pattern in the data which shows up
           when you use a systematic sample.  For example, suppose you are
@@ -119,8 +121,9 @@
           numbers are omitted.
 
           \part By selecting random numbers, you can include the people with
-          unlisted numbers.  You'll still miss the people without phones, of
-          course.
+          unlisted numbers and people with cell phones.  You'll still miss the
+          people without phones, of course.
+
         \end{parts}
 
       \item[43]
