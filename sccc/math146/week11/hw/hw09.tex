@@ -1,10 +1,10 @@
 % no answer key
-% \documentclass[letterpaper]{exam}
+\documentclass[letterpaper]{exam}
 
 % answer key
-\documentclass[letterpaper, landscape]{exam}
-\usepackage{2in1, lscape} 
-\printanswers
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -34,11 +34,14 @@
   \maketitle
 
   \section{Homework}
+  \ifprintanswers
+  \else
     \begin{itemize*}
       \item read Chapter 10 
       \item take a look at the ``Check Your Skills'' exercises
-      \item exercises: TO DO
+      \item exercises: 31, 33-38, 40-44, 47-52
     \end{itemize*}
+  \fi
 
   \ifprintanswers
     \begin{description}
@@ -56,19 +59,19 @@
 
         \end{enumerate}
 
-      \item[32]
-        \begin{enumerate}[(a)]
-          \item The probabilities are all less than 1 and add up to 1, so they
-            satisfy the rules of probability.  They aren't the correct
-            probabilities for an actual die, however.
+      % \item[32]
+      %   \begin{enumerate}[(a)]
+      %     \item The probabilities are all less than 1 and add up to 1, so they
+      %       satisfy the rules of probability.  They aren't the correct
+      %       probabilities for an actual die, however.
 
-          \item The probabilities are all less than 1 and add up to 1, so they
-            satisfy the rules of probability.  They aren't the correct
-            probabilities for an actual card deck, however.
+      %     \item The probabilities are all less than 1 and add up to 1, so they
+      %       satisfy the rules of probability.  They aren't the correct
+      %       probabilities for an actual card deck, however.
 
-          \item These probabilities don't add up to exactly 1, so they don't
-            satisfy the rules of probability.  
-        \end{enumerate}
+      %     \item These probabilities don't add up to exactly 1, so they don't
+      %       satisfy the rules of probability.  
+      %   \end{enumerate}
 
       \item[33]
         \begin{enumerate}[(a)]
@@ -139,12 +142,14 @@
           \item 6: 0.2
         \end{itemize*}
 
-      \item[39]
-        With 48 men and 42 women, there are 90 people at the party. 42 of the 90
-        are women, so the chance of a woman winning the prize is:
-        \[
-          42 / 90 \approx \boxed{ 0.4667 }
-        \]
+      % \item[39]
+      %   With 48 men and 42 women, there are 90 people at the party. 42 of the 90
+      %   are women, so the chance of a woman winning the prize is:
+      %   \[
+      %     42 / 90 \approx \boxed{ 0.4667 }
+      %   \]
+
+      \newpage
 
       \item[40]
         \begin{enumerate}[(a)]
@@ -178,7 +183,7 @@
 
       \item[43]
         \begin{enumerate}[(a)]
-          \item $0.11 + 0.13 + 0.03 + 0.11 + 0.16 + 0.02 = 0.56$
+          \item $0.11 + 0.13 + 0.03 + 0.11 + 0.16 + 0.02 = \boxed{ 0.56 }$
 
           \item The probability of living with parents is:
             \[
@@ -194,21 +199,23 @@
       \item[44]
         \begin{enumerate}[(a)]
           \item A word is either right or wrong, (it can't be half right) so the
-            variable is discrete.
+            variable is \fbox{ discrete }.
 
-          \item $P(X \geq 1) = 0.2 + 0.3 + 0.3 + 0.1 = 0.9$
+          \item $P(X \geq 1) = 0.2 + 0.3 + 0.3 + 0.1 = \boxed{ 0.9 }$
 
           \item This is the probability that there were 2 or fewer errors.
           \[
-            P(X \leq 2) = 0.1 + 0.2 + 0.3 = 0.6
+            P(X \leq 2) = 0.1 + 0.2 + 0.3 = \boxed{ 0.6 }
           \]
         \end{enumerate}  
 
-      \item[45]
-        \begin{enumerate}[(a)]
-          \item Each choice has a $1/9 \approx \boxed{ 0.11 }$ chance of being selected.
-          \item $P(X \geq 6) = 4/9 \approx \boxed{ 0.44 }$
-        \end{enumerate}  
+      % \item[45]
+      %   \begin{enumerate}[(a)]
+      %     \item Each choice has a $1/9 \approx \boxed{ 0.11 }$ chance of being selected.
+      %     \item $P(X \geq 6) = 4/9 \approx \boxed{ 0.44 }$
+      %   \end{enumerate}  
+
+      \newpage
 
       \item[47]
         \begin{enumerate}[(a)]
@@ -231,10 +238,11 @@
 
       \item[49]
         \begin{enumerate}[(a)]
-          \item Continuous, since any number may be selected.
-          \item Since the area is 1 and the base is 2, the height is 0.5.
+          \item \fbox{ Continuous }, since any number may be selected.
 
-          \item $P(X \leq 1) = 0.5$
+          \item Since the area is 1 and the base is 2, the height is $\boxed{ 0.5 }$.
+
+          \item $P(X \leq 1) = \boxed{ 0.5 }$
 
         \end{enumerate}  
 
@@ -244,14 +252,14 @@
           \item $P(Y \geq 0.8) = 1 - 0.8 \cdot 0.5= \boxed{ 0.6 }$
         \end{enumerate}  
 
+      \pagebreak
+
       \item[51]
         \begin{enumerate}[(a)]
           \item Convert 0.52 and 0.60 to z-scores:
             \begin{align*}
-              z_1 & = \frac{0.52 - 0.56}{0.019} \\
-                  & \approx -2.1 \\
-              z_2 & = \frac{0.60 - 0.56}{0.019} \\
-                  & \approx 2.1 \\
+              z_1 & = \frac{0.52 - 0.56}{0.019} \approx -2.1 \\
+              z_2 & = \frac{0.60 - 0.56}{0.019} \approx 2.1 \\
             \end{align*}
 
             Use table A to find the fraction below each of these:

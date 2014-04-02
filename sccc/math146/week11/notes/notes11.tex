@@ -18,7 +18,7 @@
 
 \printanswers
 
-\title{Statistics \\ Week Nine}
+\title{Statistics \\ Week Eleven}
 \date{\today}
 \author{}
 
@@ -27,452 +27,491 @@
   \maketitle
   \tableofcontents
 
-  \part{Overview}
+  \section{Combinations and Permutations}
 
-  \section{Statistical Inference vs. Exploratory Data Analysis}
-  
-  Exploratory:
+  For 8 choose 3, for example, numerator is $8 \times 7 \times 6 = 336$.
+  There are 336 different combinations of the letters A-H, without
+  repeating letters.
+
+  If you don't care about the order, for each triplet, there are 3 choices for
+  the first letter, 2 choices for the second letter, and only one choice for the
+  third letter. The number of times each triplet of letters occurs is: 
+  $3 \times 2 \times 1 = 6$.
+
+  The total number of different combinations, not paying attention to order is:
+  \[
+    \frac{336}{6} = 56
+  \]
+
+  \section{Collins Case}
+
+  \subsection{Cast}
+  \begin{description*}
+    \item[Juanita Brooks] elderly victim
+    \item[John Bass] witness
+    \item[Malcolm and Janet Collins] suspects
+  \end{description*}
+
+  \subsection{Investigation}
+  Brooks' son visited nearby gas stations until he found one that mentioned
+  interracial couple.
+
+  \subsection{Evidence}
+  Eyewitness descriptions of suspects:
   \begin{itemize*}
-    \item given data, draw conclusions
-    \item conclusions only apply to data you actually have
+    \item woman with hair ``between light and dark blond'' and ponytail
+    \item yellow car
+    \item bearded and mustached black man
+    \item nobody could positively identify suspects in lineups
+    \item In trial, Bass claimed that Collins was person he saw in car, despite
+      failure to identify him earlier.
   \end{itemize*}
 
-  Statistical Inference:
+  Actual appearance of suspects:
   \begin{itemize*}
-    \item try to gather data to answer a question
-    \item conclusions apply to more than just data actually gathered
-    \item answers come with a statement of how confident we are that they are
-      accurate
+    \item woman light blond hair sometimes in ponytail
+    \item yellow car
+    \item clean shaven black man
   \end{itemize*}
 
-  \section{Sample/Population}
+  The police arrested, interrogated, harassed suspects in unsuccessful attempt
+  to extract confession.
 
-  \subsection{Notes}
-  \begin{description}
-    \item[population] entire group
-    \item[sample] group you actually get data from
-    \item[sample design] plan for getting a sample that represents population
-  \end{description}
+  \subsection{Alibi}
 
-  Planning sample survey:
+  Janet was picked up by Malcolm from work about time crime had been committed
+  but no one was too sure about either time.
+
+  Both claimed to have gone to visit a friend, but exact time couldn't be
+  established.
+
+  Hair color, ponytail, and beard evidence all based on things easily changed.
+
+  \subsection{Trial}
+  Entire case based on probabilities:
   \begin{itemize*}
-    \item What is the population we want to find out about? 
-    \item What do we want to find out from each observation? (What are the variables?)
+    \item Black man with a beard: 1 in 10
+    \item Man with a mustache: 1 in 4
+    \item White woman with blond hair: 1 in 3
+    \item Woman with ponytail: 1 in 10
+    \item Interracial couple in car: 1 in 1000
+    \item Yellow car: 1 in 10
   \end{itemize*}
 
-  \subsection{Examples}
+  Chance of all of the above: 1 in 12,000,000.
 
-  \subsubsection{US Census}
-  \begin{itemize*}
-   \item variables: age, income, race, marital, status, number of children, etc.
-   \item population: US
-  \end{itemize*}
+  Guilty verdict after 8 hours and 5 ballots.
 
-  \subsubsection{Election Polls}
-  \begin{itemize*}
-   \item variables: who are you going to vote for?
-   \item population: probable voters (not just registered voters)
-  \end{itemize*}
+  \subsection{Appeals}
 
-  \section{Control/Treatment}
-  If you're trying to find out if something has an effect (new drug, drinking,
-  smoking) the subjects are in two groups.  The ``control'' group doesn't
-  drink, smoke, take the new medicine, etc., while the ``treatment'' group does
-  drink, smoke, medicate, etc.
+  \subsubsection{Notes}
+  Malcolm lost first appeal.
 
-  \section{Longitudinal Studies} 
-  Observe changes in the same sample over a long period of time.
-
-  Framingham Heart Study:
-  \begin{itemize*}
-    \item 5209 adult residents of Framingham, MA from 1948 to now
-    \item height, weight, blood pressure, education, etc.
-    \item information on kids 
-    \item 2000 academic articles since 1950, 1000 between 2000 and 2009 on
-      smoking, cholesterol, heart disease, blood pressure, 
-  \end{itemize*}
-
-  With a longitudinal study you don't have to reconstruct the past history of
-  the subjects. You don't need to find someone today and ask him what his blood
-  pressure was when he was 19, for example.
-
-  \part{Frequent Problems}
-
-  \section{Credits}
-  Most of this stuff is from {\em Naked Statistics}.
-
-  \section{Selection Bias}
-  \subsection{Notes}
-  Sample is not representative of population.  Every member of the population
-  doesn't have an equal chance of appearing in the sample.
-
-  \subsection{Examples}
-  \subsubsection{Republican Iowa straw poll}
+  In second appeal, 25 year old law clerk Lawrence Tribe pointed out flaws in
+  arguments:
 
   \begin{itemize*}
-    \item August of year before presidential election
-    \item Iowa only
-    \item \$30 to vote
+    \item all statistics made up
+    \item hair color, ponytail, beard, and mustache all easily altered
+    \item no reason to assume actual perpetrators were married 
+    \item product rule doesn't apply when probabilities aren't independent
+
+    \item 40\% probability of at least one other couple in LA area with similar
+      characteristics, even if you accept the original made-up prosecution
+      figures. 
+
   \end{itemize*}
 
-  \subsubsection{Convenience Sample}
-  Sample that is easiest to gather:
+  \subsubsection{Fabricated Statistics}
+  \begin{itemize*}
+    \item all statistics made up
+    \item hair color, ponytail, beard, and mustache all easily altered
+    \item no reason to assume actual perpetrators were married 
+  \end{itemize*}
+
+  From judgement:
+  \begin{quote}
+    \begin{em}
+      The prosecution produced no evidence whatsoever showing, or from which it could
+      be in any way inferred, that only one out of every ten cars which might have
+      been at the scene of the robbery was partly yellow, that only one out of every
+      four men who might have been there wore a mustache, that only one out of every
+      ten girls who might have been there wore a ponytail, or that any of the other
+      individual probability factors listed were even roughly accurate.
+    \end{em}
+  \end{quote}
+
+  \subsubsection{Independence}
+  Product rule doesn't apply when probabilities aren't independent
+
+  From Tribe:
+  \begin{quote}
+    \begin{em}
+      There was another glaring defect in the prosecution’s technique, namely an
+      inadequate proof of the statistical independence of the six factors. No
+      proof was presented that the characteristics selected were mutually
+      independent , even though the witness himself acknowledged that such
+      condition was essential to the proper application of the ``product rule''
+      or ``multiplication rule.'' \dots To the extent that the traits or
+      characteristics were not mutually independent (e.g., Negroes with beards
+      and men with mustaches obviously represent overlapping categories) the
+      ``product rule'' would inevitably yield a wholly erroneous and exaggerated
+      result even if all of the individual components had been determined with
+      precision.
+    \end{em}
+  \end{quote}
+
+  \subsubsection{Wrong Probability to Investigate}
+    40\% probability of at least one other couple in LA area with similar
+    characteristics, even if you accept the original made-up prosecution
+    figures. 
+
+    1/12,000,000 represents supposed probability randomly selected couple will
+    have this particular set of characteristics. Correct probability to look at
+    is probability that the suspects are the correct pair of people with this
+    set of statistics, given there are probably multiple people like this in the
+    LA area.
+
+
+  \subsection{Aftermath}
+  Tribe went on to:
+  \begin{itemize*}
+    \item Defend Gore in Gore vs. Bush
+    \item Become one of Obama's instructors
+    \item Serve in the Obama administration
+    \item Write numerous papers on use of law in trials
+  \end{itemize*}
+
+  \section{Monty Hall Game}
+  Select one of 3 doors, etc., etc.
+
+  \section{Probability}
+
+  \subsection{Definitions}
+
+  \begin{description*}
+    \item[random] coin toss, etc. individual outcome uncertain, but long term
+      average predictable
+
+    \item[probability] proportion of times something happens over many
+      repetitions
+
+  \end{description*}
+
+  \subsection{Probability Models}
+
+  \begin{description*}
+    \item[sample space] all possible outcomes
+
+    \item[event] a particular outcome
+
+    \item[probability model] sample space and way of assigning probabilities to
+      events
+
+  \end{description*}
+
+  \subsection{Probability Rules}
+
+  \begin{itemize}
+    \item probability between 0 and 1
+    \item all possible outcomes add up to probability one
+    \item if events are disjoint (no outcomes in common, can never occur
+      together) probability of either one is sum of individual probabilities
+    \item ``mutually exclusive'' is another term for disjoint. If one event
+      occurs, the other event is excluded from occurring.
+    \item if events are independent, probability of both is product of
+      individual probabilities
+  \end{itemize}
+
+  \section{Discrete Probability Models}
+  Thins like coin tosses, cards, etc., where you can enumerate all possible
+  outcomes.
+
+  \subsection{Pairs}
+  Draw table with 1-6 labeling rows and 1-6 labeling columns and cells sum of
+  row/column labels. 36 ways for dice to land. Show getting a particular number
+  is diagonal going up and to the right.
 
   \begin{itemize*}
-    \item ask your friends about their views on something to estimate US population's opinion.
-    \item observe cars in your neighborhood to find most common car in US (my
-      neighborhood has disproportionate number of SUVs)
-    \item UBB students as sample of US prison population (WA may not be typical.
-      UBB students may not be typical)
+    \item what's the most common roll?
+    \item how many ways are there to get 5?
+    \item how many ways are there to get 12?
   \end{itemize*}
 
-  \section{Self-Selection Bias}
-
-  \subsection{Notes}
-  If people assign themselves to either the control or treatment group, there
-  may be something different about the subjects other than control/treatment.
-  
-  \subsection{Examples}
-
-  \subsubsection{Self-Selecting Sample}
-  \begin{itemize*}
-    \item web poll
-    \item call in radio poll
-    \item Amazon ``Did you find what you were looking for?''
-  \end{itemize*}
-
-  % problems:
-
-  % For any poll, if the population is the US population:
-  % \begin{itemize*}
-  %   \item People who know about the poll may not be typical (listeners to the
-  %     show, visitors to the web site)
-  %   \item People who actually respond may be even less typical (too much time on
-  %     their hands, feel very strongly)
-  % \end{itemize*}
-
-  % \subsubsection{AA}
-  % People who sign up for AA may not be representative of drug users.  Did they
-  % stop drinking because of AA or did they sign up for AA because they were
-  % ready to stop drinking?
-
-  \subsubsection{Clofibrate}
-  \begin{table}
-    \centering
-    \begin{tabular}{lrrrr}
-      \toprule
-      & \multicolumn{2}{c}{Clofibrate} & \multicolumn{2}{c}{Placebo} \\
-                   & number & deaths & number & deaths \\
-      \cmidrule(r){2-3} \cmidrule(r){4-5}    
-      adherers     & 708    & 15\%   & 1813   & 15\% \\
-      non-adherers & 357    & 25\%   & 882    & 28\% \\
-      total group  & 1103   & 20\%   & 2789   & 21\% \\
-      \bottomrule
-    \end{tabular}
-    \caption{Clofibrate study}
-    \label{tab:clofibrate}
-  \end{table}
-
-  \subsubsection{Vitamin C}
-  \begin{table}
-    \centering
-    \begin{tabular}{cll}
-      \toprule
-      group & prevention & therapy \\
-      \midrule
-      1     & placebo    & placebo \\
-      2     & vitamin C  & placebo \\
-      3     & placebo    & vitamin C \\
-      4     & vitamin C  & vitamin C \\
-    \end{tabular}
-    \caption{Vitamin C study}
-    \label{tab:vitamin.c}
-  \end{table}
+  \subsection{Three Dice/Sum 9 or 10}
 
   \begin{itemize*}
-    \item dropout rate was higher for groups 1-3 than 4
-    \item easy to distinguish vitamin from placebo by taste
-    \item among subjects who remained blind vitamin C had no effect
-    \item among subjects who broke blind groups 2 and 4 had fewest colds and
-      groups 3 and 4 had shortest colds
+    \item combinations for 9: 126, 135, 144, 234, 225, 333
+    \item combinations for 10: 145, 136, 226, 235, 244, 334
+    \item $6^3 = 216$ ways for dice to fall
   \end{itemize*}
 
-
-  \subsubsection{Smoking Study}
-  A smoking study found:
+  Galileo analysis:
   \begin{itemize*}
-    \item people who had never smoked were slightly healthier than current
-      smokers
-    \item people who had recently stopped smoking were much less healthy than
-      current smokers
+    \item combinations with all different numbers can come up 
+      $3 \times 2 \times 1 = 6$ ways
+    \item combinations with two different numbers can come up 
+      $3 \times 1 = 3$ ways
+    \item 333 can only come up one way
+    \item actually 25 ways to get 9 and 27 ways to get 10 
+      (because of 333 is only 1 and 334 is 3 and all others match up)
   \end{itemize*}
 
-  True or false: you shouldn't start smoking, but if you start you shouldn't
-  stop.  Explain.
+  \subsection{Dice vs. Cards}
+  A die is rolled twice; a deck of cards is shuffled.
+
+  \begin{parts}
+    \part What's the probability that either the first roll is a one or the
+      second roll is a one?
+
+      \begin{solution}
+      The first roll is a one or the second roll is a 1, subtracting the time
+      when they are both one to avoid counting it twice:
+        \[
+          \frac{1}{6} + \frac{1}{6} - \frac{1}{36} = \frac{11}{36}
+        \]
+
+        The first roll is a one and the second one isn't, or the first roll
+        isn't a one and the second one is, or both are ones:
+        \[
+          \frac{1}{6} \cdot \frac{5}{6} + \frac{5}{6} \cdot \frac{1}{6} +
+            \frac{1}{6} \cdot \frac{1}{6} = \frac{11}{36} 
+        \]
+
+        One minus the probability that neither is a one:
+        \[
+          1 - \frac{5}{6} \cdot \frac{5}{6} = \frac{11}{36} 
+        \]
+
+      \end{solution}
+
+    \part What's the probability that the first card is the ace of spades or the
+      last card is the ace of spades?
+      \begin{solution}
+        Mutually exclusive events: $\frac{1}{52} + \frac{1}{52} = \frac{1}{26}$
+      \end{solution}
+
+    \part What's the probability that the first roll is a 1 and the second roll
+      is a 1?
+      \begin{solution}
+        Independent events: $\frac{1}{36}$
+      \end{solution}
+
+    \part What's the probability that the first card is the ace of spades and
+    the last card is the ace of spades?
+      \begin{solution}
+        Mutually exclusive events: $0$
+      \end{solution}
+  \end{parts}
+
+  \subsection{Card Drawing}
+  Contestants are given a shuffled deck of cards. They win a prize if the first
+  card is the ace of hearts or the second card is the king of hearts.
+
+  \begin{parts}
+    \part What's the probability of winning with the king of hearts?: $1/52$
+    \part What's the probability of winning with the ace of hearts?: $1/52$
+
+    \part What's the overall probability of winning? 
+    
+    \begin{solution}
+      \begin{align*}
+        \frac{1}{52} + \frac{1}{52} - \frac{1}{52^2} & = \frac{103}{51^2} \\
+                                                     & \approx 0.0381
+      \end{align*}
+      
+      If you don't account for the possibility of getting both winning cards,
+      your odds would be about 0.0384.
+      
+      You need to subtract the possibility of getting both cards. The events are
+      not mutually exclusive.
+
+      Win only on the first card or only on the second card or on both cards:
+      \begin{align*}
+        \frac{1}{52} \cdot \frac{51}{52} + \frac{1}{52} \cdot \frac{51}{52} 
+            + \frac{1}{52^2} & = \frac{103}{51^2} \\
+                             & \approx 0.0381
+      \end{align*}
+
+      1 minus chance of losing on both attempts:
+      \begin{align*}
+            1 - \frac{51^2}{52^2} & = \frac{103}{51^2} \\
+                                  & \approx 0.0381
+      \end{align*}
+
+    \end{solution}
+  \end{parts}
+
+  \subsection{Paradox of Chevalier de Moivre}
+
+  Which is more likely:
+  \begin{itemize}
+    \item Getting at least one one with four rolls of a single die.
+    \item Getting at least one pair of ones with 24 rolls of a pair of dice.
+  \end{itemize}
+
+  The naive approach is that the probability of getting at least one one is
+  \[
+    4 \cdot \frac{1}{6} = \frac{2}{3}
+  \]
+
+  Probability of getting at least one pair of ones is
+  \[
+    24 \cdot \frac{1}{36} = \frac{2}{3}
+  \]
+
+  This is incorrect because the events are not mutually exclusive.
 
   \begin{solution}
-    The people who just stopped probably stopped because their health was shot.
+    The probability of getting at least one one is:
+    \[
+      1 - \left( \frac{5}{6} \right)^4 \approx 0.5177
+    \]
+
+    The probability of not getting at least one pair of ones is:
+    \[
+      1 - \left( \frac{35}{36} \right)^{24} \approx 0.4914
+    \]
   \end{solution}
 
-  \section{Publication Bias}
-  \subsection{Notes}
-  Every study has some possibility of error.  With publication bias, the
-  researcher throws away the studies that yield the ``wrong'' result and
-  publishes the few studies that yield the desired result. 
-
-  \subsection{Example}
-
-  Suppose study is 95\% likely to be correct.  1 out of 20 times the study
-  returns the wrong result. To demonstrate a new drug is effective, a drug
-  company just needs to do 20 studies, discard the 19 that say the drug does
-  nothing, and publish study number 20.
-
-  The press release says: ``With 95\% certainty, New Miracle Drug cures Cancer.''
-
-  With Prozac, 94\% of the positive studies were published and 14\% of the
-  non-positive studies were published.
-
-  \section{Recall Bias}
-  \subsection{Notes}
-
-  Current events may affect how people remember the past.  
-
-  \subsection{Example}
-
-  In 1993 study of diet/breast cancer, people with breast cancer reported high
-  fat diets earlier in life.  Cause was people struggling to think of
-  explanation for cancer rather than actual high-fat diets.
-
-  \begin{em}
-    The diagnosis of breast cancer had not just changed a woman’s present and the
-    future; it had altered her past. Women with breast cancer had (unconsciously)
-    decided that a higher-fat diet was a likely predisposition for their disease
-    and (unconsciously) recalled a high-fat diet.
-  \end{em}
-
-  Longitudinal study wouldn't be susceptible to this problem.
-
-  \section{Survivorship Bias}
-  \subsection{Notes}
-  In a longitudinal study, the sample may change over time.
-
-  \subsection{Examples}
-  \subsubsection{High School Test Scores}
-  GPA of high school students who haven't dropped out goes up.  Sophomores do
-  better than freshman, juniors to better than sophomores, etc. because the bad
-  students are the ones that drop out.
-
-  \subsubsection{Mutual Fund}
-  A mutual fund company can start 16 mutual funds.  By chance, 8 are above
-  the index after year 1, 4 after year 2, and 2 after year 3.  Below average
-  funds quietly shut down and above average funds heavily advertised.
-
-  \section{Polling}
-  \subsection{Non-Response}
-  It's hard to get people to respond to a poll, particularly with caller ID.
-  People who answer the phone and are willing to talk are probably different
-  (retired, young, unemployed, bored) from people who don't.
-
-  Ways to mitigate:
-  \begin{itemize*}
-    \item call repeatedly at all hours of the day to maximize chance of getting
-      people who work at different hours
-
-    \item get response from adult with most recent birthday rather than person
-      who answered phone
-  \end{itemize*}
-
-  \subsection{Non-Representative Sample}
-  See ``Convenience Sample,'' ``Selection Bias,'' etc.
-
-  Phone polls only have a chance to reach people with phones, etc.
-
-  \subsection{Biased Questions}
-  Different ways of phrasing the same question can get wildly different
-  responses.
-
-  examples:
-  \begin{itemize*}
-    \item tax relief (good) vs. tax cut (less good)
-    \item welfare (bad) vs. assistance (good)
-    \item ``reasonable measures to keep us safe from terrorists'' vs.
-      ``governmental monitoring of every phone call.''
-  \end{itemize*}
-
-  \part{Sampling}
-
-  \section{Simple Random Sample}
-  \begin{itemize*}
-    \item make list of subjects and randomly select subset
-    \item use table of random numbers in back of book
-    \item subjects who respond may not be representative of population
-  \end{itemize*}
-
-  \section{Stratified Sample}
-  \subsection{Notes}
-  \begin{itemize*}
-    \item Divide population into groups (age, race, income, etc.).
-    \item Do SRS from each group.
-    \item Helps to get appropriate representation from each group.
-  \end{itemize*}
-
-  \part{Miscellaneous Examples}
-  \section{Breast Cancer Study}
-  Health Insurance Plan of NY (HIP) study in 1963.
-
-  Conclusions:
-  \begin{itemize*}
-    \item screening didn't affect diseases other than breast cancer
-    \item poor less likely to accept screening
-    \item most diseases other than breast cancer affect poor more than rich
-  \end{itemize*}
-
-  \begin{table}
-    \centering
-    \begin{tabular}{lrrrrr}
-      & & \multicolumn{2}{c}{Breast Cancer} & \multicolumn{2}{c}{All Other} \\
-                               \cmidrule(r){3-4} \cmidrule(r){5-6}    
-                      &        & number & rate & number & rate \\
-      Treatment group \\
-      examined        & 20,200 & 23     & 1.1  & 428    & 21 \\
-      refused         & 10,800 & 16     & 1.5  & 409    & 38 \\
-      total           & 31,000 & 39     & 1.3  & 837    & 27 \\
-    \midrule
-      control group   & 31,000 & 63     & 2.0  & 879    & 28 \\
-    \end{tabular}
-    \caption{Breast cancer study: cause of death}
-    \label{tab:breast.cancer}
-  \end{table}
-
-  \begin{itemize*}
-    \item does screening save lives?
-    \item why is rate for ``all other'' same for treatment and control groups?
-    \item why is rate for all other causes higher for ``refused'' than
-      ``examined'' groups?
-
-    \item breast cancer affects rich more than poor.  which numbers confirm
-      this?
-
-      \begin{solution}
-        Rich people tend to accept.  Income of groups, in order, is examined,
-        control, refused, since control has mix of rich and poor and
-        examined/refused are segregated by income.  Death rate among control
-        group is higher than death rate among refused, and only thing different
-        is income.
-      \end{solution}
-
-    \item death rate (all causes) among accepted is about half death rate among
-      refused.  Did screening cut the death rate in half?  What explains the
-      difference in death rate?
-
-    \item Is comparing accepted vs. refused a fair comparison?  Is it biased for
-      or against screening?
-
-      \begin{solution}
-        Since the people who accepted the screening tend to have more money, and
-        money is positively correlated with breast cancer incidence, this
-        comparison would be biased against screening.
-      \end{solution}
-
-    \item Someone claims that encouraging women to come in for breast cancer
-      screening encourages their health conciousness so they live longer for
-      that reason.  Is the data consistent or inconsistent with that claim?
-
-      \begin{solution}
-        Inconsistent.  The only thing affected by the screening is the breast
-        cancer rate.
-      \end{solution}
-
-    \item In the first year of the study, 67 breast cancers were found in the
-      ``examined'' group, 12 in the refused group, and 58 in the control group.
-      True or false: screening causes breast cancer.
-
-      \begin{solution}
-        Comparing raw numbers doesn't make sense, since there are different
-        numbers in each group.  It makes more sense to look at the percentages
-        with cancer detected in each group:
-        \begin{itemize*}
-          \item examined: 0.33\%
-          \item refused: 0.11\%
-          \item control: 0.19\%
-        \end{itemize*}
-
-        More cancer is detected among the examined because:
-        \begin{itemize*}
-          \item they have more money, so they are more likely to get breast
-            cancer
-          \item the regular exams detect cases that go undetected in the other
-            groups
-        \end{itemize*}
-
-        Control has more than refused because control is slightly richer.
-      \end{solution}
-
-  \end{itemize*}
-
-  \section{Body Fat}
-  Study found heavier kids tend to have more controlling mothers, leading to the
-  headline ``Parents of Fat Kids Should Lighten Up.''
-
-  \begin{itemize*}
-    \item is there an association between the mother's behavior and the kids'
-      weight?
-    \item Is the controlling behavior necessarily causing the overweight kids,
-      or might there be a confounding variable?
-    \item Will following the headline's advice necessarily help the kids lose
-      weight?
-  \end{itemize*}
-
-  \section{Voting}
-  A hypothetical city is divided into 10 wards.  In each ward, the percentage of
-  registered democrats who vote is greater than the percentage of registered
-  republicans who vote.  True or false: the overall percentage of registered
-  democrats who vote is greater than the percentage of republicans who vote?
+  \subsection{Roulette}
+  In a roulette style game from the 1700's, with a wheel with 32 slots, the
+  players win 27 pounds plus the original pound on a 1 pound bet if their number
+  comes up and they lose otherwise. The players complained that the payoff
+  should have been closer to 31. The casino ``proved'' them wrong by betting
+  even money that any number the player picked would come up within 21 rolls.
+  What is the probability of the casino winning this second bet:
 
   \begin{solution}
-    False.  
-    
-    District 1 is democratic with low turnout and district 2 is republican with
-    high turnout.  
-    
-    Specifically, district one has 200 out of 1000 democrats voting and 10 out
-    of 100 republicans voting.  District two has 90 out of 100 democrats voting
-    and 800 out of 1000 republicans voting.  republicans voting.  
-
-    Overall, $290/1100 \approx 26\%$ of democrats vote and 
-    $810/1100 \approx 74\%$ of republicans vote.
-
+    \[
+      1 - \left( \frac{1}{32} \right)^{22} \approx 0.5027
+    \]
   \end{solution}
-  \section{Jury Selection}
 
-  \subsection{Azania vs. State of Indiana}
+  \subsection{WW II Pilots}
+  If a pilot has a 2\% chance of getting shot down, what's the chance of him
+  surviving 50 missions?
 
-  pg. 273
+  \begin{solution}
+    \[
+      0.98^{50} \approx 0.36
+    \]
+  \end{solution}
 
+  \section{Random Variables}
   \begin{itemize*}
-    \item Program randomly selected 14,364 voters to be assigned a random
-      number.
-    \item 364 extra because of rounding error.
-    \item Jurors were selected alphabetically by township.  Program stopped
-      after juror 10,000 instead of going all the way to 14,364.    
-    \item All 4,364excluded jurors were in Wayne Township residents.  87\% of
-      Wayne Township was excluded
-    \item Black people are 8.5\% of Allen County, and 75\% of the 8.5\% live in
-      Wayne Township
+    \item Like regular variable but value is determined by probability distribution
+    \item Usually upper case letters near end of alphabet
   \end{itemize*}
+
+  \section{Continuous Probability Models}
+  \subsection{Notes}
+  \begin{itemize*}
+    \item Pick a random number between 0 and 1, etc.
+
+    \item Probability density curve from previous chapter. 
+  
+    \item Area under curve is chance of getting outcome from in range.
+
+    \item {\em Uniform Distribution} is flat
+
+    \item {\em Normal Distribution}
+
+    \item $P(X < 2)$, etc. notation
+
+  \end{itemize*}
+
+  \subsection{Packaging Laws}
+  \begin{itemize*}
+    \item too heavy expensive for manufacturer
+    \item too light expensive for consumer
+    \item impossible to be 100\% accurate
+    \item normal distribution around target weight
+  \end{itemize*}
+
+
+  \begin{enumerate}
+    \item If target weight is 1 kg and machine with standard deviation of 40 g,
+      what is the probability the actual weight is less than 950 g?
+
+    \begin{solution}
+      Convert to z-score:
+      \[
+        z = \frac{950 - 1000}{40} = -1.25
+      \]
+
+      Use table A:
+      \[
+        P(X < 980) \approx 0.1056
+      \]
+    \end{solution}
+
+    \item If the same machine is set at a target weight of 1020 g instead, what
+      is the probability the actual weight is less than 1000 g?
+
+    \begin{solution}
+      Convert to z-score:
+      \[
+        z = \frac{1000 - 1020}{40} = -0.5
+      \]
+
+      Use table A:
+      \[
+        P(X < 1000) \approx 0.3085
+      \]
+    \end{solution}
+
+    In Australia, law is that if a package is found to be underweight,
+    everything is cool as long as the average of 12 similar items is not
+    underweight.
 
     \begin{itemize*}
-    \item Pool of x\% of population of each town in pool until target reached
-    \item Select juries from pool
-    \item Worked OK until population grew and pool was filled before W's were
-      reached.
-    \item Winthrop (check?) was 74\% black with 0 jurors in pool.
-    \item Sentence overturned because jury wasn't representative of state
-      population
-  \end{itemize*}
+      \item Average also normal curve
+      \item Same area (1, of course) but steeper and narrower graph
+      \item same mean, $sd = \frac{ sd_{original} }{\sqrt{n}}$
+    \end{itemize*}
 
-  \subsection{Lockhart vs. McCree}
-  Are juries for death penalty cases which exclude anti-death penalty jurors
-  fair?  Supreme court says yes. pg. 238.
+    Strategy is to set machine slightly high, but chance of violating law is
+    much lower with this strategy.
+
+    What is the probability of violating the law when setting the target weight
+    to 1020 with the same machine?
+
+    \begin{solution}
+      Calculate new sd:
+      \[
+        sd = \frac{40}{\sqrt{12}} \approx 11.55
+      \]
+      Convert to z-score:
+      \[
+        z = \frac{1000 - 1020}{11.55} = -1.73
+      \]
+
+      Use table A:
+      \[
+        P(X < 1000) \approx 0.0417
+      \]
+    \end{solution}
+
+  \end{enumerate}
+
+  \subsection{Exercise 10.16}
+    \begin{parts}
+      \part 
+        \begin{solution}
+          $P(X \geq 10)$
+        \end{solution}
+
+      \part 
+        \begin{solution}
+          Convert 10 to a z-score:
+          \[
+            z = \frac{10 - 6.8}{1.6} = 2
+          \]
+
+          $P(Z < 2) = 0.9772$
+        \end{solution}
+    \end{parts}
+
 \end{document}
 
