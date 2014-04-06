@@ -13,5 +13,5 @@ default: $(TARGETS)
 	latex $<
 
 clean:
-	rm -f *.dvi *.aux *.log *~ *.toc *.pdf
+	rm -f *.dvi *.aux *.log *~ *.toc 
 
