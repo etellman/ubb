@@ -1,0 +1,125 @@
+% no answer key
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{parskip}
+
+\everymath{\displaystyle}
+
+
+\title{Statistics \\ Homework Ten}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Homework}
+  \ifprintanswers
+  \else
+    \begin{itemize*}
+      \item read Chapter 11 
+      \item take a look at the ``Check Your Skills'' exercises
+      \item exercises: TO DO
+    \end{itemize*}
+  \fi
+
+  \ifprintanswers
+    \begin{description}
+
+      \item[22] Since this is the mean of the sample and not the total
+        population, it is a \fbox{ statistic }.
+
+      \item[23] Since these are the means for the entire population of the
+        students in each category, they are \fbox{ parameters }.
+
+      \item[24] Making repeated identical bets is increasing the sample size.
+        As the sample size increases, the mean of the sample will approach the
+        mean of the population. In the long run, the gambler should expect to
+        lose about 5.3 cents per bet.
+
+        In 1000 bets, he should expect to lose about \$53. 
+
+      \item[25] The mean of the sampling distribution is the same as the mean of
+        the population, or \fbox{ 6 }.
+
+        The standard deviation for a sample size of 10 is:
+        \[
+          s = \frac{2.4}{\sqrt{10}} \approx \boxed{ 0.7589 }
+        \]
+
+      \item[26]
+        The parameters of the population are:
+        \begin{align*}
+          \sigma & = 2.8 \\
+          \mu    & = 70 \\
+        \end{align*}
+
+        \begin{enumerate}[(a)]
+          \item Find the two z-scores:
+            \begin{align*}
+              z_{69} &= \frac{69 - 70}{2.8} \approx -0.3571 \\
+              z_{71} &= \frac{71 - 70}{2.8} \approx 0.3571 \\
+            \end{align*}
+
+            Use table A and subtract:
+            \begin{align*}
+              P(69 \leq X \leq 71) & \approx 0.6395 - 0.3605 \\
+                                   & = \boxed{ 0.2790 } \\
+            \end{align*}
+
+          \item 
+            The mean of the $\bar{x}$ values is the same as the mean of the
+            population ($\mu$) or $\boxed{ 70 }$
+
+            The standard deviation is:
+            \[
+              s = \frac{2.8}{\sqrt{25}} = \boxed{ 0.56 }
+            \]
+
+          \item Find the two z-scores:
+            \begin{align*}
+              z_{69} &= \frac{69 - 70}{0.56} \approx -1.7858 \\
+              z_{71} &= \frac{71 - 70}{0.56} \approx 1.7858 \\
+            \end{align*}
+
+            Use table A and subtract:
+            \begin{align*}
+              P(69 \leq \bar{x} \leq 71) & \approx 0.9629 - 0.0371 \\
+                                         & = \boxed{ 0.9259 } \\
+            \end{align*}
+
+        \end{enumerate}
+  \end{description}
+
+  \else
+    \vspace{10 cm}
+    \begin{quote}
+      \begin{em}
+        TO DO
+      \end{em}
+    \end{quote}
+    \hspace{1 cm} --Henry David Thoreau
+  \fi
+
+\end{document}
+
