@@ -6,6 +6,13 @@
 \usepackage{2in1, lscape} 
 \printanswers
 
+% for the cent symbol
+\usepackage{textcomp}
+
+% the textcent command eats the space following the symbol
+\usepackage{xspace}
+\newcommand{\cent}{\textcent\xspace}
+
 \usepackage{units} 
 \usepackage{xfrac} 
 \usepackage[fleqn]{amsmath}
@@ -55,7 +62,7 @@
       \item[24] Making repeated identical bets is increasing the sample size.
         As the sample size increases, the mean of the sample will approach the
         mean of the population. In the long run, the gambler should expect to
-        lose about 5.3 cents per bet.
+        lose about 5.3\cent per bet.
 
         In 1000 bets, he should expect to lose about \$53. 
 
@@ -109,6 +116,170 @@
             \end{align*}
 
         \end{enumerate}
+
+      \item[27]
+        The parameters are:
+        \begin{align*}
+          \mu    & = \unit[125]{mg/dl} \\
+          \sigma & = \unit[10]{mg/dl} \\
+        \end{align*}
+
+        \begin{enumerate}[(a)]
+          \item 
+            Converting to z-score and using table A:
+            \[
+              P(X > 140) \approx \boxed{ 0.0668 }
+            \]
+
+          \item 
+            With four measurements, the standard deviation is:
+            \[
+              s = \frac{10}{\sqrt{4}} = \unit[5]{mg/dl}
+            \]
+
+            Converting to z-score and using table A:
+            \[
+              P(\bar{x} > 140) \approx \boxed{ 0.0013 }
+            \]
+        \end{enumerate}
+
+      \item[29]
+        The parameters are:
+        \begin{align*}
+          \mu    & = \unit[125]{mg/dl} \\
+          \sigma & = \unit[10]{mg/dl} \\
+        \end{align*}
+
+        Use table A to find the z-score for 0.95:
+        \[
+          z_{0.95} \approx 1.6449
+        \]
+
+        With four measurements, the standard deviation is:
+        \[
+          s = \frac{10}{\sqrt{4}} = \unit[5]{mg/dl}
+        \]
+
+        Convert the z-score to a glucose level:
+        \begin{align*}
+          1.6449 & = \frac{x - 125}{5} \\
+          x      & \approx \boxed{ \unit[133.2]{mg/dl} } \\
+        \end{align*}
+
+      \item[31]
+        \begin{enumerate}[(a)]
+          \item The sample mean is the same as the population mean and the
+            standard deviation is:
+            \[
+              s = \frac{1.4}{\sqrt{52}} \approx 0.1941
+            \]
+
+            The distribution is: \fbox{ N(2.2, 0.1941) }
+
+          \item $P(\bar{x} < 2) \approx \boxed{ 0.1515 }$
+
+          \item 100 accidents per year would lead to a weekly rate of:
+            \[
+              r = \frac{100}{52} \approx 1.923
+            \]
+
+            The probability of a rate less than this is:
+            \[
+              P(\bar{x} < 1.923) \approx \boxed{ 0.0769 }
+            \]
+        \end{enumerate}
+
+      \item[32]
+        The parameters are:
+        \begin{align*}
+          \mu    & = \unit[0.2]{g/mi} \\
+          \sigma & = \unit[0.05]{g/mi} \\
+        \end{align*}
+
+        Use table A to find the z-score for 0.99:
+        \[
+          z_{0.99} \approx 2.3263
+        \]
+
+        With 25 samples, the standard deviation is:
+        \[
+          s = \frac{0.05}{\sqrt{25}} = \unit[0.01]{g/mi}
+        \]
+
+        Convert the z-score to an NOX rate:
+        \begin{align*}
+          2.3263 & = \frac{x - 0.2}{0.01} \\
+          x     & \approx \boxed{ \unit[0.2233]{g/mi} } \\
+        \end{align*}
+
+      \item[33]
+        The parameters are:
+        \begin{align*}
+          \mu    & = 8.7\% \\
+          \sigma & = 20.2\% \\
+        \end{align*}
+
+        With a sample size of 40, the standard deviation is:
+        \[
+          s = \frac{20.2}{\sqrt{40}} \approx 3.1939\%
+        \]
+
+        Convert to z-scores:
+        \begin{align*}
+          z_{10} & = \frac{10 - 8.7}{3.1939} \approx 0.4070 \\
+          z_{5}  & = \frac{5 - 8.7}{20.2} \approx -1.1585 \\
+        \end{align*}
+
+        Use table A:
+        \begin{align*}
+          P(r > 10\%) & = 1 - P(r < 10\%) \approx \boxed{ 0.3420 } \\
+          P(r < 5\%)  & \approx \boxed{ 0.1233 } \\
+        \end{align*}
+
+      \item[35]
+        \begin{align*}
+          0.5      & = \frac{2.8}{\sqrt{n}} \\
+          \sqrt{n} & = \frac{2.8}{0.5} \\
+                   & = 5.6 \\
+          n        & \approx 31.86 \\
+        \end{align*}
+
+        Since you need a whole number, you'll need a sample size of 
+        \fbox{ 32 students }.
+
+      \item[36]
+        \begin{enumerate}[(a)]
+          \item 99.7\% of the samples are within two standard deviations of the
+            mean:
+            \begin{align*}
+              2s & = 0.5 \\
+              s  & = \boxed{ \unit[0.25]{in} } \\
+            \end{align*}
+
+          \item 
+            \begin{align*}
+              0.25      & = \frac{2.8}{\sqrt{n}} \\
+              \sqrt{n} & = \frac{2.8}{0.25} \\
+                       & = 11.2 \\
+              n        & \approx 125.44 \\
+            \end{align*}
+
+            Since you need a whole number, you'll need a sample size of 
+            \fbox{ 126 students }.
+        \end{enumerate}
+
+      \item[37] Each bet costs him about 40\cent.
+
+      \item[38]
+        \begin{enumerate}[(a)]
+          \item 
+            \begin{align*}
+              m &= \boxed{ 0.6 } \\
+              s &= \frac{18.96}{\sqrt{14,000}} \approx \boxed{ 0.1602 } \\
+            \end{align*}
+            
+        \end{enumerate}
+
   \end{description}
 
   \else
