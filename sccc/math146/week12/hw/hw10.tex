@@ -46,7 +46,7 @@
     \begin{itemize*}
       \item read Chapter 11 
       \item take a look at the ``Check Your Skills'' exercises
-      \item exercises: TO DO
+      \item exercises: 22-27, 29, 31-33, 35-40
     \end{itemize*}
   \fi
 
@@ -62,23 +62,21 @@
       \item[24] Making repeated identical bets is increasing the sample size.
         As the sample size increases, the mean of the sample will approach the
         mean of the population. In the long run, the gambler should expect to
-        lose about 5.3\cent per bet.
-
-        In 1000 bets, he should expect to lose about \$53. 
+        lose about \fbox{ 5.3\cent } per bet.
 
       \item[25] The mean of the sampling distribution is the same as the mean of
-        the population, or \fbox{ 6 }.
+        the population, or $\boxed{ \unit[6]{strikes/year} }$.
 
         The standard deviation for a sample size of 10 is:
         \[
-          s = \frac{2.4}{\sqrt{10}} \approx \boxed{ 0.7589 }
+          s = \frac{2.4}{\sqrt{10}} \approx \boxed{ \unit[0.7589]{strikes/year} }
         \]
 
       \item[26]
         The parameters of the population are:
         \begin{align*}
-          \sigma & = 2.8 \\
-          \mu    & = 70 \\
+          \sigma & = \unit[2.8]{in} \\
+          \mu    & = \unit[70]{in} \\
         \end{align*}
 
         \begin{enumerate}[(a)]
@@ -100,8 +98,10 @@
 
             The standard deviation is:
             \[
-              s = \frac{2.8}{\sqrt{25}} = \boxed{ 0.56 }
+              s = \frac{2.8}{\sqrt{25}} = \boxed{ \unit[0.56]{in} }
             \]
+
+          \newpage
 
           \item Find the two z-scores:
             \begin{align*}
@@ -189,6 +189,8 @@
             \]
         \end{enumerate}
 
+      \newpage
+
       \item[32]
         The parameters are:
         \begin{align*}
@@ -258,17 +260,15 @@
 
           \item 
             \begin{align*}
-              0.25      & = \frac{2.8}{\sqrt{n}} \\
-              \sqrt{n} & = \frac{2.8}{0.25} \\
-                       & = 11.2 \\
-              n        & \approx 125.44 \\
+              0.25 & = \frac{-1.8}{\sqrt{n}} \\
+              n    & \approx 125.44 \\
             \end{align*}
 
             Since you need a whole number, you'll need a sample size of 
             \fbox{ 126 students }.
         \end{enumerate}
 
-      \item[37] Each bet costs him about 40\cent.
+      \item[37] Each bet costs him about \fbox{ 40\cent }.
 
       \item[38]
         \begin{enumerate}[(a)]
@@ -278,8 +278,104 @@
               s &= \frac{18.96}{\sqrt{14,000}} \approx \boxed{ 0.1602 } \\
             \end{align*}
             
+          \item
+            convert to z-scores:
+            \begin{align*}
+              z_{.50} &= \frac{0.5 - 0.6}{0.1602} = -0.6242 \\
+              z_{.70} &= \frac{0.7 - 0.6}{0.1602} = 0.6242 \\
+            \end{align*}
+
+            use table A:
+            \begin{align*}
+              p_{.50} &= 0.2662 \\
+              p_{.70} &= 0.7337 \\
+            \end{align*}
+
+            subtract:
+            \[
+              p = 0.7337 - 0.2662 = \boxed{ 0.4675 }
+            \]
+
+            There is only about a 47\% chance that Joe will average between
+            50\cent and 70\cent after 40 years.
+
         \end{enumerate}
 
+      \item[39]
+        \begin{enumerate}[(a)]
+          \item 
+            \begin{align*}
+              m &= \boxed{ 0.6 \text{\cent} } \\
+              s &= \frac{18.96}{\sqrt{150,000}} \approx 
+                \boxed{ 0.0490 \text{\cent}} \\
+            \end{align*}
+            
+          \item
+            convert to z-scores:
+            \begin{align*}
+              z_{.30} &= \frac{0.3 - 0.4}{0.049} \approx -2.0408 \\ 
+              z_{.50} &= \frac{0.5 - 0.4}{0.049} \approx 2.0408 \\
+            \end{align*}
+
+            use table A:
+            \begin{align*}
+              p_{.30} &= 0.2662 \\
+              p_{.50} &= 0.7337 \\
+            \end{align*}
+
+            subtract:
+            \[
+              p = 0.7337 - 0.2662 = \boxed{ 0.9587 }
+            \]
+
+            There is about a 96\% chance that Casper will make about 40\cent per
+            bet on any particular week.
+
+        \end{enumerate}
+
+      \newpage
+
+      \item[40]
+        \begin{enumerate}[(a)]
+          \item The difference between the two values is:
+            \[
+              \Delta = 0.4961 - 0.4675 = \boxed{ 0.0286 }
+            \]
+
+          \item
+            \begin{align*}
+              s &= \frac{18.96}{\sqrt{3500}} \approx \boxed{ 0.3205 } \\
+            \end{align*}
+            
+          \item
+            convert to z-scores:
+            \begin{align*}
+              z_{.50} &= \frac{0.5 - 0.6}{0.3205} = -0.3120 \\
+              z_{.70} &= \frac{0.7 - 0.6}{0.3205} = 0.3120 \\
+            \end{align*}
+
+            use table A:
+            \begin{align*}
+              p_{.50} & \approx 0.3775 \\
+              p_{.70} & \approx 0.6225 \\
+            \end{align*}
+
+            subtract:
+            \[
+              p = 0.6225 - 0.3775 = 0.2450
+            \]
+
+            This estimate is off from the actual value by:
+            \[
+              \Delta = 0.4048 - 0.245 \approx \boxed{ 0.16 }
+            \]
+            
+          \item Using the 150,000 bet value from exercise 39:
+            \[
+              \Delta = 0.9629 - 0.9587 = \boxed{ 0.0042 }
+            \]
+
+        \end{enumerate}
   \end{description}
 
   \else

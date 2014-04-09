@@ -61,3 +61,26 @@ round(pnorm(-1.1585, 0, 1), 4)
 
 # exercise 38
 18.96 / sqrt(14000)
+.1/.1602
+
+pnorm(0.6242, 0 , 1) - pnorm(-0.6242, 0 , 1)
+
+# exercise 38
+s <- round(18.96 / sqrt(150000), 4)
+s
+round(.1/s, 4)
+
+round(pnorm(2.0408, 0 , 1) - pnorm(-2.0408, 0 , 1), 4)
+
+# exercise 40
+0.4961 - 0.4675
+s <- round(18.96 / sqrt(3500), 4)
+s
+z <- .1/s
+pnorm(-z, 0 , 1)
+round(pnorm(z, 0 , 1) - pnorm(-z, 0 , 1), 4)
+
+p <- pnorm(0.7, .6, s) - pnorm(.5, .6, s)
+
+-(p -.4048)
+0.9629 - 0.9587 
