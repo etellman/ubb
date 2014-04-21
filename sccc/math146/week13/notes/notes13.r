@@ -1,28 +1,30 @@
+root.dir <- '~/Documents/U/ubb/sccc/math146'
+notes.dir <- paste(root.dir, "week13/notes", sep = "/")
+setwd(notes.dir)
 
-(10 - 6.8)/1.6 
+animals <- rbind(
+  data.frame(color = 'white', species = 'dog', count = 30),
+  data.frame(color = 'black', species = 'dog', count = 70),
+  data.frame(color = 'white', species = 'cat', count = 25),
+  data.frame(color = 'black', species = 'cat', count = 25)
+)
 
+cast(animals, species ~ color, margins = T, fun.aggregate = sum)
 
-1/52 + 1/52 - 1/52^2
+by.species.and.color <- ddply(animals, .(species, color), summarise, 
+  species = species, color = color, value = count / 150)
 
-1 - (31/32)^22
+print(by.species.and.color)
 
-(1000 - 1020)/11.55
-pnorm(1000, 1020, 11.55)
+by.color <- ddply(animals, 'color', summarise, species = species, 
+  color = color, value = count / sum(count))
 
-(1000 - 1020)/40
-pnorm(1000, 1020, 40)
+?cast
 
-(950 - 1000)/40
-pnorm(950, 1000, 40)
+cast(by.species.and.color, species ~ color, margins = 'grand_col', 
+  fun.aggregate = sum)
 
-40 / sqrt(12)
-
-336/6
-
-choose(8, 3)
-?choose
-
-combn(8, 3)
-
-??combn
-
+sink('r.tex')
+  xtable(cast(by.species.and.color, species ~ color), digits = 4, 
+         grand_row = T)
+sink()

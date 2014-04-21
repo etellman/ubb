@@ -165,6 +165,24 @@
 
   \subsection{Examples}
   \begin{enumerate}
+    \item 100 Micholob drinkers tried Schlitz live at half time of super bowl in
+      a live taste test (actual Super Bowl commercial from the 80s). 
+      
+      Assuming the two beers are indistinguishable, what's the chance that at
+      least 40 of the Micholob drinkers will prefer Schlitz?
+
+      \begin{solution}
+        If nobody can tell the difference, the expected value is 50.
+
+        The standard error is:
+        \[
+          EV = 10 \sqrt 0.5 = 5
+        \]
+
+        The chance of less than 40 people preferring Schlitz is the chance of
+        being more than 2 SDs less from the mean, or around 1\%
+      \end{solution}
+
     \item Play roulette 100 times, betting \$1 on 10 to win. Winning bet
       pays \$35. How much should you expect to lose?
       \begin{solution}
@@ -443,6 +461,7 @@
 
   \subsection{Examples}
   \begin{enumerate}
+
     \item You want to do a poll to find out how many people have seen the latest
       episode of ``Walking Dead'' with an accuracy of $\pm 1\%$. How big should
       the sample be? 
