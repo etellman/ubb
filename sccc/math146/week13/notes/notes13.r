@@ -16,15 +16,31 @@ by.species.and.color <- ddply(animals, .(species, color), summarise,
 
 print(by.species.and.color)
 
+by.color <- ddply(animals, .(color), summarise,  
+  color = color, species = species, value = count / sum(count))
+
+by.species <- ddply(animals, .(species), summarise,  
+  species = species, color = color, value = count / sum(count))
+
+by.species
+
 by.color <- ddply(animals, 'color', summarise, species = species, 
   color = color, value = count / sum(count))
 
-?cast
+percentages <- cast(by.species.and.color, species ~ color, 
+                    margins = T, fun.aggregate = sum)
 
-cast(by.species.and.color, species ~ color, margins = 'grand_col', 
-  fun.aggregate = sum)
+percentages
 
 sink('r.tex')
-  xtable(cast(by.species.and.color, species ~ color), digits = 4, 
-         grand_row = T)
+  xtable(by.species, digits = 4)
+  xtable(by.color, digits = 4)
 sink()
+
+0.6333 * 0.7368 
+
+0.7 * 250000
+
+0.3 * 0.6 * 0.9 * 25000000 + 0.7 * 250000
+
+1 - 0.7 - 0.3 * 0.6 * 0.9 
