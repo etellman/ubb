@@ -41,6 +41,7 @@
     \item $\frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36}$
   \end{itemize}
 
+
   independence:
   \begin{itemize*}
     \item outcome of A doesn't influence B
@@ -48,6 +49,107 @@
     \item drawing cards without replacement isn't--cards already drawn are gone
       from the deck
   \end{itemize*}
+
+  \subsection{Pick a Number}
+  Everyone in the class pick a number between 1 and 100. What is the probability
+  of at least one match?
+
+  \begin{solution}
+    With 15 people, the probability that all the numbers are different is:
+    \[
+      \frac{100 \cdot 99 \cdot 98 \cdot \ldots}{100^15} \approx 0.33
+    \]
+
+    The probability of at least one pair is
+    \[
+      1 - \frac{100 \cdot 99 \cdot 98 \cdot \ldots}{100^15} \approx \boxed{ 0.67 }
+    \]
+  \end{solution}<++>
+
+  \subsection{Examples}
+  \begin{enumerate}
+    \item What is the probability of rolling three 6s in a row?
+      \begin{solution}
+        \begin{align*}
+          \frac{1}{6^3} & = \frac{1}{216} \\
+                        & \approx \boxed{ 0.0046 } \\
+        \end{align*}
+      \end{solution}
+
+    \item What is the probability of rolling at least one 6?
+      \begin{solution}
+        This one minus the probability of not rolling a 6 three times in a row:
+
+        \begin{align*}
+          1 - \left( \frac{5}{6} \right)^3 & = 1 - \frac{125}{216} \\
+                                           & = \frac{91}{125} \\
+                                           & \approx \boxed{ 0.728 } \\
+        \end{align*}
+
+      \end{solution}
+
+    \item If one of your first two cards in a poker hand is an ace, what is the
+      probability of getting at least one additional ace?
+
+      \begin{solution}
+        If you have one of the aces, there are 3 left in the deck. The
+        probability of getting at least one of them is one minus the probability
+        of not getting any of them:
+
+        \begin{align*}
+          1 - \frac{47}{50} \cdot \frac{46}{49} \cdot \frac{45}{48} \approx 0.173 \\
+        \end{align*}
+      \end{solution}
+
+    \item If one of your first two cards in a poker hand is an ace, what is the
+      probability of getting exactly one additional ace?
+
+      \begin{solution}
+        Exactly one of your three remaining cards needs to be an ace:
+        \begin{align*}
+          P(1st) & = \frac{3}{50} \cdot \frac{47}{49} \cdot \frac{46}{48} \\
+          P(2nd) & = \frac{47}{50} \cdot \frac{3}{49} \cdot \frac{46}{48} \\
+          P(3rd) & = \frac{47}{50} \cdot \frac{46}{49} \cdot \frac{3}{48} \\
+                 & \approx 0.055
+        \end{align*}
+
+        The probabilities are all the same: $0.055$. Since there are three of
+        them, the probability of getting exactly one ace is: 
+        \[
+          3 \cdot 0.055 = 0.165 \\
+        \]
+      \end{solution}
+
+    \item If one of your first two cards in a poker hand is an ace, what is the
+      probability of getting exactly two additional aces?
+
+      \begin{solution}
+        Exactly one of your three remaining cards needs to not be an ace:
+        \begin{align*}
+          P(1st) & = \frac{47}{50} \cdot \frac{3}{49} \cdot \frac{2}{48} \\
+          P(2nd) & = \frac{3}{50} \cdot \frac{47}{49} \cdot \frac{2}{48} \\
+          P(3rd) & = \frac{3}{50} \cdot \frac{2}{49} \cdot \frac{47}{48} \\
+                 & \approx 0.0024 \\
+        \end{align*}
+
+        The probabilities are all the same: $0.055$. Since there are three of
+        them, the probability of getting exactly one ace is: 
+        \[
+          3 \cdot 0.0024 = 0.0072 \\
+        \]
+      \end{solution}
+
+    \item If one of your first two cards in a poker hand is an ace, what is the
+      probability of getting 4 aces?
+
+      \begin{solution}
+        All of your three remaining cards need to be an aces:
+        \begin{align*}
+          P(\text{4 aces}) & = \frac{3}{50} \cdot \frac{2}{49} \cdot \frac{1}{48} \\
+                           & \approx \boxed{ 0.000051 } \\
+        \end{align*}
+      \end{solution}
+  \end{enumerate}
 
   \section{Data Dredging}
   Suppose 
@@ -153,6 +255,41 @@
   \section{Conditional Probability}
 
   \subsection{Definitions}
+  If you turn over two cards in a deck, what is the probability of the second
+  card being the queen of hearts?
+
+  \begin{solution}
+    \[
+      P(\text{2nd card QH}) = \frac{1}{52}
+    \]
+  \end{solution}
+
+  If you turn over two cards in a deck and the first card is the seven of clubs,
+  what is the probability of the second card being the queen of hearts?
+
+  \begin{solution}
+    \[
+      P(\text{QH } | \text{ 7C}) = \frac{1}{51}
+    \]
+  \end{solution}
+
+  \begin{solution}
+    $\frac{1}{52}$
+  \end{solution}
+
+  \subsection{Equations}
+  \[
+    P(\text{A and B}) = P(A) P(B | A) = P(B) P(A | B) \\
+  \]
+
+  The probability that both A and B happens is either:
+  \begin{itemize*}
+    \item the probability that A happens and that B happens given that A already
+      happened.
+    \item the probability that B happens and that A happens given that B already 
+      happened.
+  \end{itemize*}
+
   \begin{align*}
     P(\text{A and B}) & = P(A) P(B | A) \\
     P(B) P(A | B)     & = P(A) P(B | A) \\
@@ -161,6 +298,26 @@
                       & = \frac{P(\text{A and B})}{P(B)} \\
   \end{align*}
 
+  The probability that A happens given that B happens is the proportion of the
+  time that B happened when both A and B happened.
+
+  Back to cards example:
+  \begin{solution}
+    \begin{align*}
+    P(\text{QH } | \text{ 7C})  & = \frac{P(\text{7C and QC})}{P(7C)} \\
+                                & = \frac{\cfrac{1}{52 \cdot 51}}{\cfrac{1}{52}} \\
+                                & = \frac{1}{52} \\
+    \end{align*}
+  \end{solution}
+
+  What is probability of getting tails given the previous three flips were heads?
+  \begin{solution}
+    \[
+      P(T | 3H) = 0.5
+    \]
+  \end{solution}
+
+  \subsection{Dogs and Cats}
   \begin{table}[H]
     \begin{tabular}[H]{lrrr}
       \toprule
@@ -305,10 +462,6 @@
              & = \frac{\cfrac{1}{87,500}}{\cfrac{1}{8800}} \\
              & \approx 0.1 \\
   \end{align*}
-  
-
-
-
 
   \section{Tree Diagram}
   \subsection{Test for Disease}
