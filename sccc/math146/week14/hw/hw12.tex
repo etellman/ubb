@@ -1,0 +1,82 @@
+% no answer key
+\documentclass[letterpaper]{exam}
+
+% answer key
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers
+
+% for the cent symbol
+\usepackage{textcomp}
+
+% the textcent command eats the space following the symbol
+\usepackage{xspace}
+\newcommand{\cent}{\textcent\xspace}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{parskip}
+
+\everymath{\displaystyle}
+
+
+\title{Statistics \\ Homework Twelve}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Homework}
+  \ifprintanswers
+  \else
+    \begin{itemize*}
+      \item read Chapter 13 
+      \item take a look at the ``Check Your Skills'' exercises
+      \item exercises: TO DO
+    \end{itemize*}
+  \fi
+
+  \ifprintanswers
+    \begin{description}
+
+      \item[27] 
+        The probability of each bet losing is 0.75. Since the bets are
+        independent, the probability of all 8 losing is
+        \[
+          p_{fail} = 0.75^8 \approx 0.1
+        \]
+        The probability of winning at least once is the probability of not
+        losing all 8 or:
+        \[
+          p_{win} = 1 - p_{fail} \approx 1 - 0.1 = \boxed{ 0.9 } 
+        \]
+
+  \end{description}
+
+  \else
+    \vspace{11 cm}
+    \begin{quote}
+      \begin{em}
+        A wrongdoer is often a man who has left something undone, not always one
+        who has done something.
+      \end{em}
+    \end{quote}
+    \hspace{1 cm}--Marcus Aurelius
+  \fi
+
+\end{document}
+

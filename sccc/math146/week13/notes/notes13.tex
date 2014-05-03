@@ -27,6 +27,52 @@
   \maketitle
   \tableofcontents
 
+  \section{Sally Clark}
+
+  \subsection{Trial}
+  \begin{itemize*}
+    \item two children died unexplained deaths (SIDS)
+    \item probability of SIDS 1 in 1300
+    \item for Sally Clark's family (affluent non-smokers) probability is 1 in
+      8543.
+    \item overall probability is:
+      \[
+        \frac{1}{8543^2} \approx \frac{1}{73,000,000}
+      \]
+
+    \item with 700,000 births per year, the chance of a double SIDS happening at
+      least once in 100 years is:
+      \[
+        1 - (1 - 1/8543^2)^(700000 * 100) \approx 0.62
+      \]
+
+      This sort of event will only happen about once in every hundred years.
+  \end{itemize*}
+
+  \subsection{Problems}
+
+  The prosecution ignored factors that make Sally's family more likely for
+  SIDS. Both of Sally's kids were boys and boys are more likely to die from
+  SIDS.
+
+  SIDS depends on genetic and environmental factors. If a family has one SIDS
+  death, the chance of a second one is approximately 1 in 130, not 1 in 1300.
+
+  The ``once in a hundred years'' calculation used the high number (8543)
+  which was for a small subset of a population, but then used the whole
+  population.
+
+  With these corrections, the probability of double SIDS would be about:
+  \[
+    \frac{1}{1300} \cdot \frac{1}{130} \approx \frac{1}{169000} 
+  \]
+
+  With 700,000 births a year, the chance of a double-SIDS event in one year is
+  about:
+  \[
+    1 - (1 - 1/169000)^(700000) \approx 0.98
+  \]
+
   \section{Product Rule}
 
   For independent events:
@@ -64,7 +110,7 @@
     \[
       1 - \frac{100 \cdot 99 \cdot 98 \cdot \ldots}{100^15} \approx \boxed{ 0.67 }
     \]
-  \end{solution}<++>
+  \end{solution}
 
   \subsection{Examples}
   \begin{enumerate}
@@ -87,6 +133,52 @@
         \end{align*}
 
       \end{solution}
+
+  \end{enumerate}
+
+  \subsection{Data Dredging}
+  Suppose 
+  \begin{itemize}
+    \item database of 20,000 men.
+    \item 1 out of 10,000 men will match DNA by chance
+    \item search DB and find match
+  \end{itemize}
+
+  What is the probability that the match is guilty?
+
+  \begin{solution}
+    The probability that any one person matches is independent of the
+    probability of anybody else matching.
+
+    The probability that nobody matches is
+    \[
+      0.9999^{20,000} \approx 0.14
+    \]
+
+    The probability that somebody matches:
+    \[
+      1 - 0.1353 \approx 0.86
+    \]
+  \end{solution}
+
+  \section{Addition Rule}
+
+  \[
+    P(\text{A or B}) = P(A) + P(B) - P(\text{A and B})
+  \]
+
+  \begin{itemize*}
+    \item if $P(A and B) = 0$, events are {\em disjoint} or {\em mutually
+      exclusive}
+    \item for disjoint events, if A occurs B can't occur
+    \item draw Venn diagram to explain why subtracting $P(\text{A and B})$ is
+      necessary
+  \end{itemize*}
+
+  \begin{enumerate}
+    \item red cars, compact cars, red compact cars
+
+    \item people with beards, people with mustaches, people with both
 
     \item If one of your first two cards in a poker hand is an ace, what is the
       probability of getting at least one additional ace?
@@ -151,51 +243,6 @@
       \end{solution}
   \end{enumerate}
 
-  \section{Data Dredging}
-  Suppose 
-  \begin{itemize}
-    \item database of 20,000 men.
-    \item 1 out of 10,000 men will match DNA by chance
-    \item search DB and find match
-  \end{itemize}
-
-  What is the probability that the match is guilty?
-
-  \begin{solution}
-    The probability that any one person matches is independent of the
-    probability of anybody else matching.
-
-    The probability that nobody matches is
-    \[
-      0.9999^{20,000} \approx 0.14
-    \]
-
-    The probability that somebody matches:
-    \[
-      1 - 0.1353 \approx 0.86
-    \]
-  \end{solution}
-
-  \section{Addition Rule}
-
-  \[
-    P(\text{A or B}) = P(A) + P(B) - P(\text{A and B})
-  \]
-
-  \begin{itemize*}
-    \item if $P(A and B) = 0$, events are {\em disjoint} or {\em mutually
-      exclusive}
-    \item for disjoint events, if A occurs B can't occur
-    \item draw Venn diagram to explain why subtracting $P(\text{A and B})$ is
-      necessary
-  \end{itemize*}
-
-  examples:
-  \begin{itemize*}
-    \item red cars, compact cars, red compact cars
-    \item people with beards, people with mustaches, people with both
-  \end{itemize*}
-
   \section{Independence vs. Disjoint}
   \begin{itemize*}
     \item two independent events may both happen. event one has no effect on
@@ -205,52 +252,6 @@
       two can't happen
 
   \end{itemize*}
-
-  \section{Sally Clark}
-
-  \subsection{Trial}
-  \begin{itemize*}
-    \item two children died unexplained deaths (SIDS)
-    \item probability of SIDS 1 in 1300
-    \item for Sally Clark's family (affluent non-smokers) probability is 1 in
-      8543.
-    \item overall probability is:
-      \[
-        \frac{1}{8543^2} \approx \frac{1}{73,000,000}
-      \]
-
-    \item with 700,000 births per year, the chance of a double SIDS happening at
-      least once in 100 years is:
-      \[
-        1 - (1 - 1/8543^2)^(700000 * 100) \approx 0.62
-      \]
-
-      This sort of event will only happen about once in every hundred years.
-  \end{itemize*}
-
-  \subsection{Problems}
-
-  The prosecution ignored factors that make Sally's family more likely for
-  SIDS. Both of Sally's kids were boys and boys are more likely to die from
-  SIDS.
-
-  SIDS depends on genetic and environmental factors. If a family has one SIDS
-  death, the chance of a second one is approximately 1 in 130, not 1 in 1300.
-
-  The ``once in a hundred years'' calculation used the high number (8543)
-  which was for a small subset of a population, but then used the whole
-  population.
-
-  With these corrections, the probability of double SIDS would be about:
-  \[
-    \frac{1}{1300} \cdot \frac{1}{130} \approx \frac{1}{169000} 
-  \]
-
-  With 700,000 births a year, the chance of a double-SIDS event in one year is
-  about:
-  \[
-    1 - (1 - 1/169000)^(700000) \approx 0.98
-  \]
 
   \section{Conditional Probability}
 
@@ -464,6 +465,7 @@
   \end{align*}
 
   \section{Tree Diagram}
+
   \subsection{Test for Disease}
 
   \begin{itemize*}
