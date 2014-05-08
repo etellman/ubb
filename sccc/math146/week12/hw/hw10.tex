@@ -207,7 +207,7 @@
           s = \frac{0.05}{\sqrt{25}} = \unit[0.01]{g/mi}
         \]
 
-        Convert the z-score to an NOX rate:
+        Convert the z-score to a NOX rate:
         \begin{align*}
           2.3263 & = \frac{x - 0.2}{0.01} \\
           x     & \approx \boxed{ \unit[0.2233]{g/mi} } \\
@@ -227,15 +227,23 @@
 
         Convert to z-scores:
         \begin{align*}
-          z_{10} & = \frac{10 - 8.7}{3.1939} \approx 0.4070 \\
-          z_{5}  & = \frac{5 - 8.7}{20.2} \approx -1.1585 \\
+          z_{10\%} & = \frac{10 - 8.7}{3.1939} \approx 0.4070 \\
+          z_{5\%}  & = \frac{5 - 8.7}{3.1939} \approx -1.1585 \\
         \end{align*}
 
         Use table A:
         \begin{align*}
-          P(r > 10\%) & = 1 - P(r < 10\%) \approx \boxed{ 0.3420 } \\
-          P(r < 5\%)  & \approx \boxed{ 0.1233 } \\
+          P(r \leq 10\%) & \approx \boxed{ 0.6580 } \\
+          P(r > 10\%)    & = 1 - P(r \leq 10\%) \\
+                         & \approx 1 - 0.6580 \\
+                         & = \boxed{ 0.3420 } \\
+          \\
+          P(r \leq 5\%)  & \approx \boxed{ 0.1233 } \\
         \end{align*}
+
+        There's about a 34\% chance that he'll make more than 10\% on his
+        investment and only about a 12\% chance that he'll make less than 5\% on
+        his investment.
 
       \item[35]
         \begin{align*}
@@ -250,21 +258,21 @@
 
       \item[36]
         \begin{enumerate}[(a)]
-          \item 99.7\% of the samples are within two standard deviations of the
+          \item 99.7\% of the samples are within three standard deviations of the
             mean:
             \begin{align*}
-              2s & = 0.5 \\
-              s  & = \boxed{ \unit[0.25]{in} } \\
+              3s & = 0.5 \\
+              s  & \approx \boxed{ \unit[0.1667]{in} } \\
             \end{align*}
 
           \item 
             \begin{align*}
-              0.25 & = \frac{-1.8}{\sqrt{n}} \\
-              n    & \approx 125.44 \\
+              0.1667 & = \frac{-1.8}{\sqrt{n}} \\
+              n    & \approx 282.24 \\
             \end{align*}
 
             Since you need a whole number, you'll need a sample size of 
-            \fbox{ 126 students }.
+            \fbox{ 283 students }.
         \end{enumerate}
 
       \item[37] Each bet costs him about \fbox{ 40\cent }.
@@ -273,8 +281,8 @@
         \begin{enumerate}[(a)]
           \item 
             \begin{align*}
-              m &= \boxed{ 0.6 } \\
-              s &= \frac{18.96}{\sqrt{14,000}} \approx \boxed{ 0.1602 } \\
+              \mu    & = \boxed{ \$0.6 } \\
+              \sigma & = \frac{18.96}{\sqrt{14,000}} \approx \boxed{ \$0.1602 } \\
             \end{align*}
             
           \item
@@ -286,14 +294,12 @@
 
             use table A:
             \begin{align*}
-              p_{.50} &= 0.2662 \\
-              p_{.70} &= 0.7337 \\
+              P(X \leq 0.5) &\approx 0.2662 \\
+              P(X \leq 0.7) &\approx 0.7337 \\
+              \\
+              P(0.5 \leq X \leq 0.7) & \approx 0.7337 - 0.2662 \\
+                                     & = \boxed{ 0.4675 }
             \end{align*}
-
-            subtract:
-            \[
-              p = 0.7337 - 0.2662 = \boxed{ 0.4675 }
-            \]
 
             There is only about a 47\% chance that Joe will average between
             50\cent and 70\cent after 40 years.
@@ -304,9 +310,8 @@
         \begin{enumerate}[(a)]
           \item 
             \begin{align*}
-              m &= \boxed{ 0.6 \text{\cent} } \\
-              s &= \frac{18.96}{\sqrt{150,000}} \approx 
-                \boxed{ 0.0490 \text{\cent}} \\
+              \mu    & = \boxed{ \$0.4 } \\
+              \sigma & = \frac{18.96}{\sqrt{150,000}} \approx \boxed{ \$0.0490 }\\
             \end{align*}
             
           \item
@@ -318,17 +323,14 @@
 
             use table A:
             \begin{align*}
-              p_{.30} &= 0.2662 \\
-              p_{.50} &= 0.7337 \\
+              P(X \leq 0.3) &= 0.2662 \\
+              P(X \leq 0.5) &= 0.7337 \\
             \end{align*}
 
             subtract:
             \[
-              p = 0.7337 - 0.2662 = \boxed{ 0.9587 }
+              P(0.3 \leq X \leq 0.5) \approx 0.7337 - 0.2662 = \boxed{ 0.9587 }
             \]
-
-            There is about a 96\% chance that Casper will make about 40\cent per
-            bet on any particular week.
 
         \end{enumerate}
 
@@ -341,12 +343,13 @@
               \Delta = 0.4961 - 0.4675 = \boxed{ 0.0286 }
             \]
 
+            Since there are so many numbers, the difference is pretty small.
+
           \item
             \begin{align*}
-              s &= \frac{18.96}{\sqrt{3500}} \approx \boxed{ 0.3205 } \\
+              \sigma &= \frac{18.96}{\sqrt{3500}} \approx 0.3205 \\
             \end{align*}
             
-          \item
             convert to z-scores:
             \begin{align*}
               z_{.50} &= \frac{0.5 - 0.6}{0.3205} = -0.3120 \\
@@ -355,24 +358,30 @@
 
             use table A:
             \begin{align*}
-              p_{.50} & \approx 0.3775 \\
-              p_{.70} & \approx 0.6225 \\
+              P(X \leq 0.5) & \approx 0.3775 \\
+              P(X \leq 0.7) & \approx 0.6225 \\
             \end{align*}
 
             subtract:
             \[
-              p = 0.6225 - 0.3775 = 0.2450
+              P(0.5 \leq X \leq 0.7) \approx 0.6225 - 0.3775 = 0.2450
             \]
 
             This estimate is off from the actual value by:
             \[
-              \Delta = 0.4048 - 0.245 \approx \boxed{ 0.16 }
+              \Delta = 0.4048 - 0.245 = \boxed{ 0.1598 }
             \]
+
+            With a smaller sample, the Normal approximation is farther from the
+            actual value.
             
           \item Using the 150,000 bet value from exercise 39:
             \[
               \Delta = 0.9629 - 0.9587 = \boxed{ 0.0042 }
             \]
+
+            With a larger sample, the Normal approximation is closer to the
+            actual value.
 
         \end{enumerate}
   \end{description}

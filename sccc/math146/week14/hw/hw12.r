@@ -1,113 +1,108 @@
 
 root.dir <- "~/Documents/U/ubb/sccc/math146"
 
-hw.dir <- paste(root.dir, "week11/hw", sep = "/")
-figures.dir <- paste(hw.dir, "figures", sep = "/")
-
+hw.dir <- paste(root.dir, "week14/hw", sep = "/")
 setwd(hw.dir)
 ￼
-# exercise 27
+# exercise 24
+choose(20, 5) * 0.25^5 * 0.75^15
 
-1 - 0.75^8
-1 - 0.1001
+# exercise 25
+success <- 0:5
+ex25 <- data.frame(s = success, p = dbinom(success, size = 5, 0.5))
+ex25
 
-pbinom(0, size = 8, prob = .25, lower.tail = F)
+plot <- ggplot(ex25, aes(x = factor(s), y = p)) + 
+  geom_bar(stat = "identity", fill = "lightblue", color = "black") +
+  xlab("Successes") +
+  theme(axis.title.y = element_blank())
+print(plot)
 
-# exercise 28
-1 - 0.928^10
-pbinom(0, size = 10, prob = .072, lower.tail = F)
+ggsave('ex25.pdf', plot, width = 4, height = 2.5)
 
-# exercise 29
-(2 * 9 * 19 + 11)/20^3
+# ex 26
+dbinom(8, 12, 0.5) + dbinom(9, 12, 0.5) + dbinom(10, 12, 0.5) + dbinom(11, 12, 0.5) + dbinom(12, 12, 0.5)  
 
-# exercise 30
-round(.35^3 + .65^3, 4)
+1 - pbinom(7, 12, 0.5)
 
-dbinom(3, size = 3, prob = 0.35)
+# ex 27
+dbinom(0, 20, 0.05) 
 
-# exercise 31
-.6 * .5
-.5 - .4 * .5
+# ex 28
+sqrt(125)
+x <- (235 - 250)/sqrt(125)
+x
 
-# exercise 32
-0.86 * 0.01 + 0.03
+1 - round(pnorm(x), 4)
+round(1 - pnorm(x), 4)
+1 - pbinom(235, 500, 0.5)
+1 - pnorm(235, 250, sqrt(125))
 
-# exercise 34
-.26/.41
+# ex 31
+choose(8, 6) * 0.75^6 * 0.25^2
+dbinom(6, size = 8, 0.75)
 
+.75 * 80
+z <- 1/sqrt(60 * 0.75 * 0.25)
+pnorm(z)
+1 - pbinom(59, size = 80, 0.75)
 
-# exercise 35
-p <- 0.215 + 0.1 + 0.006 
-p
-.106/p
+# ex 34
+0.13 * 1200
+s <- sqrt(156 * .13 * .87)
+
+156 + 2 * s
+200/.13
+
+# ex 35
+s <- sqrt(150 * .25 * .75)
+print(s)
+
+(140 - 150)/5.303
+
+.7 * 200
+
+pnorm(1.33333) - pnorm(-1.33333)
+
+pnorm(1.886) - pnorm(-1.886)
+pnorm(-1.886) 
+
+pnorm(160, 150, 5.303) - pnorm(140, 150, 5.303)
+
+# ex 36
+s <- sqrt(5000 * .5 * .5)
+print(s)
+
+z <- (5067 - 5000)/s
+
+pnorm(-z)
+
+1 - pnorm(1.886) + pnorm(-1.886) 
+
+pnorm(160, 150, 5.303) - pnorm(140, 150, 5.303)
+
+# ex 38
+.05 * 20
+s <- sqrt(5000 * .5 * .5)
+print(s)
+
+z <- (5067 - 5000)/s
+
+pnorm(-z)
+
+1 - pnorm(1.886) + pnorm(-1.886) 
+
+pnorm(160, 150, 5.303) - pnorm(140, 150, 5.303)
 
 # ex 39
-wd <- round(32/2506, 4)
-print(wd)
-round(32/59, 4)
+choose(20, 2) * 0.05^2 * 0.95^18 + choose(20, 1) * 0.05^1 * 0.95^19 + .95^20
+
+choose(20, 2) * 0.05^2 * 0.95^18 + choose(20, 1) * 0.05^1 * 0.95^19 + .95^20
 
 # ex 40
-m <- 1025/2506
-print(m)
+0.95 * 1400
+sqrt(1330 * 0.95 * 0.05)
+(0.75 * 1400 - 1330) / 7.95 
 
-b <- 1679/2506
-print(b)
+0.75 * 1400
 
-mb <- 693/2506
-print(mb)
-
-round(32/59, 4)
-
-round(693/1025, 4)
-.6761 * .4090
-
-# ex 41
-seedlings <- rbind(
-                   data.frame(cover = 'a', value = 60, damage = T),
-                   data.frame(cover = 'a', value = 151, damage = F),
-
-                   data.frame(cover = 'b', value = 76, damage = T),
-                   data.frame(cover = 'b', value = 158, damage = F),
-
-                   data.frame(cover = 'c', value = 44, damage = T),
-                   data.frame(cover = 'c', value = 177, damage = F),
-
-                   data.frame(cover = 'd', value = 29, damage = T),
-                   data.frame(cover = 'd', value = 176, damage = F)
-                   )
-
-209/871
-
-ex19 <- rbind(
-  data.frame(treatment = "lithium", subjects = 24, success = 6),
-  data.frame(treatment = "placebo", subjects = 24, success = 4),
-  data.frame(treatment = "desipramine", subjects = 24, success = 14)
-)
-
-seedlings
-ddply(seedlings, .(cover), summarize, damage = damage, 
-      p = round(value / sum(value), 2))
-
-cast(seedlings, damage ~ ., fun.aggregate = sum, margins = T)
-cast(seedlings, cover + damage ~ ., fun.aggregate = sum)
-
-# ex 46
-0.05/.4
-
-# ex 47
-6/36 * 30/36
-
-25/6^3
-
-# ex 48
-.59 * .73 + 0.31 * 0.86 * .59 * .73
-
-# ex 49
-.4307/0.5455
-
-# ex 50
-.36/.49
-
-# ex 56
-.75^2 + .25^2
-1 - .75 * .25 * 2
