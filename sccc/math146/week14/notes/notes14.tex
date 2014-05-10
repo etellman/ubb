@@ -1,0 +1,79 @@
+\documentclass[landscape]{exam}
+
+\usepackage{2in1, lscape} 
+\usepackage{units} 
+\usepackage[fleqn]{amsmath}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{parskip}
+
+\printanswers
+
+\everymath{\displaystyle}
+
+\printanswers
+
+\title{Statistics \\ Week Fourteen}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+  \tableofcontents
+
+  \section{Binomial Coefficient}
+
+  Number of ways to chose $k$ things out of $n$ objects, when order doesn't
+  matter:
+  \[
+    \binom{n}{k} = \frac{n!}{k! (n - k)!}
+  \]
+
+  \begin{itemize}
+    \item $n (n - 1)(n - 2) \dots (n - k + 1)$ ways to select $k$ out of
+      $n$ items, paying attention to order
+
+    \item $k!$ ways to rearrange $k$ items if the order doesn't matter
+
+    \item draw a tree for ways to rearrange A, B, C, D
+
+    \item explain factorial
+  \end{itemize}
+
+  \section{Binomial Distribution}
+
+  A box contains one red marble and nine green marbles. What is the chance of
+  getting exactly 2 red marbles, drawing with replacement?
+
+  \begin{itemize}
+    \item RRGGG: $0.1^2 0.9^3$
+    \item RGRGG: $0.1 \cdot 0.9 \cdot 0.1 \cdot 0.9^2 = 0.1^2 0.9^3$
+    \item etc.
+  \end{itemize}
+
+  How many ways are there to chose the positions of the 2 red marbles out of 5:
+  \[
+    \binom{5}{2} = 10
+  \]
+
+  There are 10 patters with the required number of colors. Since each pattern is
+  independently likely, the probability of getting exactly two red marbles is:
+  \[
+    P(\text{2 red}) = 10 \cdot 0.1^2 \cdot 0.9^3 \approx \boxed{ 0.0729 }
+  \]
+
+  In general, if the probability of an event is $p$, the chance of it occurring
+  exactly $k$ times out of $n$ is:
+  \[
+    \binom{n}{k} p^k (1 - p)^{n - k}
+  \]
+
+
+\end{document}
+
