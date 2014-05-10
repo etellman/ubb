@@ -1,10 +1,10 @@
 % no answer key
-% \documentclass[letterpaper]{exam}
+\documentclass[letterpaper]{exam}
 
 % answer key
-\documentclass[letterpaper, landscape]{exam}
-\usepackage{2in1, lscape} 
-\printanswers
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers
 
 % for the cent symbol
 \usepackage{textcomp}
@@ -46,11 +46,20 @@
     \begin{itemize*}
       \item read Chapter 13 
       \item take a look at the ``Check Your Skills'' exercises
-      \item exercises: TO DO
+      \item exercises: 22-26, 28, 31-32, 34-36, 38-39
     \end{itemize*}
   \fi
 
+  \section{Schedule}
+  \begin{itemize*}
+    \item May 21: no class
+    \item May 28: Chapter 14
+    \item June 4: Chapter 15
+    \item June 11: Last Class
+  \end{itemize*}
+
   \ifprintanswers
+    \section{Homework}
     \begin{description}
 
       \item[22] 
@@ -253,92 +262,97 @@
                                & = 0.9407 \\
             \end{align*}
         
-          \item[36]
+        \end{enumerate}
+
+      \item[36]
+        \begin{align*}
+          \mu    & = 0.5 \cdot 10,000 = 5000 \\
+          \sigma & = \sqrt{5000 \cdot 0.5 \cdot 0.5} \approx 35.36 \\
+        \end{align*}
+
+        convert the actual result to a z-score:
+        \begin{align*}
+          z_{max} &= \frac{5067 - 5000}{35.56} \approx 1.895 \\
+          z_{min} &= \frac{4933 - 5000}{35.56} \approx -1.895 \\
+        \end{align*}
+
+        From Table A:
+        \begin{align*}
+          P(X > 5067) & \approx 0.2965 \\
+          P(X < 4933) & \approx 0.0290 \\
+          P(X < 4933 \text{ or } X > 5067 &\approx \boxed{ 0.06 } \\
+        \end{align*}
+
+        The coin may have been slightly biased towards heads.
+
+      \item[38]
+        You can't use the Normal approximation for this problem because the
+        sample size is too small.
+
+        \begin{enumerate}[(a)]
+          \item 
+            $\mu = 0.05 \cdot 20 = \boxed{ 1 }$
+
             \begin{align*}
-              \mu    & = 0.5 \cdot 10,000 = 5000 \\
-              \sigma & = \sqrt{5000 \cdot 0.5 \cdot 0.5} \approx 35.36 \\
+              P(X = 0) & = 0.95^{20} \\
+                       & \approx 0.3585 \\
+              P(X = 1) & = \binom{20}{1} 0.05 \cdot 0.95^{19} \\
+                       & \approx 0.3774 \\
+              P(X = 2) & = \binom{20}{2} 0.05^2 \cdot 0.95^{18} \\
+                       & \approx 0.1887 \\
+                       \\
+              P(X \leq 2) & \approx 0.3585 + 0.3774 + 0.1887 \\
+                          & = \boxed{ 0.9245 }
             \end{align*}
 
-            convert the actual result to a z-score:
+          \item 
+            $\mu = 0.95 \cdot 20 = \boxed{ 19 }$
+
             \begin{align*}
-              z_{max} &= \frac{5067 - 5000}{35.56} \approx 1.895 \\
-              z_{min} &= \frac{4933 - 5000}{35.56} \approx -1.895 \\
+              P(X = 20) & = 0.95^{20} \\
+                        & \approx 0.3585 \\
+              P(X = 19) & = \binom{20}{1} 0.05 \cdot 0.95^{19} \\
+                        & \approx 0.3774 \\
+              P(X = 18) & = \binom{20}{2} 0.05^2 \cdot 0.95^{18} \\
+                        & \approx 0.1887 \\
+                       \\
+              P(X \geq 18) & \approx 0.3585 + 0.3774 + 0.1887 \\
+                           & = \boxed{ 0.9245 }
             \end{align*}
 
-            From Table A:
-            \begin{align*}
-              P(X > 5067) & \approx 0.2965 \\
-              P(X < 4933) & \approx 0.0290 \\
-              P(X < 4933 \text{ or } X > 5067 &\approx \boxed{ 0.06 } \\
-            \end{align*}
+        \end{enumerate}
 
-            The coin may have been slightly biased towards heads.
+      \item[39]
+        \begin{enumerate}[(a)]
+          \begin{align*}
+            \mu &= 0.95 \cdot 1400 = 1330 \\
+            \sigma &= \sqrt{1330 \cdot 0.95 \cdot 0.05} \approx 7.95 \\
+          \end{align*}
 
-        \item[38]
-          You can't use the Normal approximation for this problem because the
-          sample size is too small.
+          75\% of the students is only 1050 students. Convert to z-score:
+          \[
+            z = \frac{1050 - 1330}{7.95} \approx -35
+          \]
 
-          \begin{enumerate}[(a)]
-            \item 
-              $\mu = 0.05 \cdot 20 = \boxed{ 1 }$
+          There is essentially zero chance of less than 75\% of the students
+          contracting the disease.
 
-              \begin{align*}
-                P(X = 0) & = 0.95^{20} \\
-                         & \approx 0.3585 \\
-                P(X = 1) & = \binom{20}{1} 0.05 \cdot 0.95^{19} \\
-                         & \approx 0.3774 \\
-                P(X = 2) & = \binom{20}{2} 0.05^2 \cdot 0.95^{18} \\
-                         & \approx 0.1887 \\
-                         \\
-                P(X \leq 2) & \approx 0.3585 + 0.3774 + 0.1887 \\
-                            & = \boxed{ 0.9245 }
-              \end{align*}
-
-            \item 
-              $\mu = 0.95 \cdot 20 = \boxed{ 19 }$
-
-              \begin{align*}
-                P(X = 20) & = 0.95^{20} \\
-                          & \approx 0.3585 \\
-                P(X = 19) & = \binom{20}{1} 0.05 \cdot 0.95^{19} \\
-                          & \approx 0.3774 \\
-                P(X = 18) & = \binom{20}{2} 0.05^2 \cdot 0.95^{18} \\
-                          & \approx 0.1887 \\
-                         \\
-                P(X \geq 18) & \approx 0.3585 + 0.3774 + 0.1887 \\
-                             & = \boxed{ 0.9245 }
-              \end{align*}
-
-          \end{enumerate}
-
-        \item[39]
-          \begin{enumerate}[(a)]
-            \begin{align*}
-              \mu &= 0.95 \cdot 1400 = 1330 \\
-              \sigma &= \sqrt{1330 \cdot 0.95 \cdot 0.05} \approx 7.95 \\
-            \end{align*}
-
-            75\% of the students is only 1050 students. Convert to z-score:
-            \[
-              z = \frac{1050 - 1330}{7.95} \approx -35
-            \]
-
-            There is essentially zero chance of less than 75\% of the students
-            contracting the disease.
-
-          \end{enumerate}
-
-      \end{enumerate}
+        \end{enumerate}
   \end{description}
 
   \else
-    \vspace{11 cm}
+    \vspace{7 cm}
     \begin{quote}
       \begin{em}
-        TO DO
+        The smart way to keep people passive and obedient is to strictly limit
+        the spectrum of acceptable opinion, but allow very lively debate within
+        that spectrum---even encourage the more critical and dissident views.
+        That gives people the sense that there's free thinking going on, while
+        all the time the presuppositions of the system are being reinforced by
+        the limits put on the range of the debate.
       \end{em}
     \end{quote}
-    \hspace{1 cm}--Marcus Aurelius
+    \hspace{1 cm}--Noam Chomsky
   \fi
 
 \end{document}
