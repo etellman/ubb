@@ -7,9 +7,7 @@ figures.dir <- paste(hw.dir, "figures", sep = "/")
 setwd(hw.dir)
 ￼
 # exercise 27
-
-1 - 0.75^8
-1 - 0.1001
+0.75^8
 
 pbinom(0, size = 8, prob = .25, lower.tail = F)
 
@@ -100,14 +98,18 @@ cast(seedlings, cover + damage ~ ., fun.aggregate = sum)
 25/6^3
 
 # ex 48
-.59 * .73 + 0.31 * 0.86 * .59 * .73
-
-# ex 49
-.4307/0.5455
+p1 <- 0.59 * 0.73
+p2 <-  0.41 * 0.86 * 0.59
+data.frame(p1 = p1, p2 = p2, p12 = p1 + p2)
 
 # ex 50
-.36/.49
+0.4307/0.6387
+
+# ex 50
+0.36/0.58
 
 # ex 56
-.75^2 + .25^2
-1 - .75 * .25 * 2
+.5^2 + 2 * .25^2
+
+.5^2
+.25^2

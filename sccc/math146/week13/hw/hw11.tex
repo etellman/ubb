@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
 
 % for the cent symbol
 \usepackage{textcomp}
@@ -57,12 +57,7 @@
         The probability of each bet losing is 0.75. Since the bets are
         independent, the probability of all 8 losing is
         \[
-          p_{fail} = 0.75^8 \approx 0.1
-        \]
-        The probability of winning at least once is the probability of not
-        losing all 8 or:
-        \[
-          p_{win} = 1 - p_{fail} \approx 1 - 0.1 = \boxed{ 0.9 } 
+          p_{fail} = 0.75^8 \approx \boxed{ 0.1001 }
         \]
 
       \item[28]
@@ -132,7 +127,7 @@
             Another way to figure this out is to find the probability that he
             gets in to either one and then subtract this from 1:
             \begin{align*}
-              p_{accept} & = 0.4 + 0.5 - 0.4 \cdot 0.5 = 0.7
+              p_{accept} & = 0.4 + 0.5 - 0.4 \cdot 0.5 = 0.7 \\
               p_{reject} & = 1 - p_{accept} \\
                          & = 1 - 0.7 \\
                          & = 0.3
@@ -145,8 +140,14 @@
               p = 0.5 - 0.5 \cdot 0.4 = \boxed{ 0.3 }
             \]
             
-          \item The are not independent. If you are able to get in to one of
-            them, you are more likely to be able to get in to the other one.
+          \item Given the Ramon's estimates, the events are independent since:
+            \[
+              P(\text{ Stanford and Princeton}) = P(\text{Stanford}) P(\text{Princeton})
+            \]
+
+            Actually, if you get in to one, you are more likely to be able to
+            get into the other one, so the estimate of 0.2 for the chance of
+            getting into both may be a little low.
 
         \end{enumerate}
 
@@ -176,7 +177,8 @@
       \item[34]
         The probability of studying some language is $1 - 0.59 = 0.41$
         \[
-          P(Spanish | Language) = \frac{0.26}{0.41} \approx 0.63
+          P(\text{Spanish } | \text{ Language}) = \frac{0.26}{0.41} 
+            \approx \boxed{ 0.63 }
         \]
 
       \item[35]
@@ -204,19 +206,14 @@
         \end{enumerate}
 
       \item[37]
-        The part of the square where $y > \sfrac{1}{2}$ is the top half of the
+        The part of the square where $y < \sfrac{1}{2}$ is the bottom half of the
         square.
 
-        The part of the square where $y > x$ if the part of the square above the
+        The part of the square where $y > x$ is the part of the square above the
         diagonal.
 
-        The intersection of these two sections is 3/4 of 1/2 of the square or
-        3/8 of the square. 
-        
-        The probability of landing in this section is 
-        \[
-          p = \frac{3}{8} = \boxed{ 0.375 }
-        \]
+        The intersection of these two sections is one fourth of the part of the
+        square above the diagonal, so the probability is $\boxed{ 0.25 }$.
 
       \item[38]
         \begin{enumerate}[(a)]
@@ -329,7 +326,7 @@
         Julie is very confident.
 
     \item[45]
-      Since there is 0 probability of here getting all three offers, this is just the
+      Since there is 0 probability of her getting all three offers, this is just the
       probability of her getting the other two offers, or \fbox{ 0.1 }.
 
     \item[46]
@@ -366,7 +363,7 @@
     \item[48]
       \begin{figure}[H]
         \centering
-        \includegraphics[scale = 0.4]{ex48.jpg}
+        \includegraphics[scale = 0.2]{ex48.jpg}
         \caption{Exercise 48}
       \end{figure}
 
@@ -376,13 +373,13 @@
       \]
       The chance of winning by getting the second serve in is:
       \[
-        p_{2nd} = 0.31 \cdot 0.86 \cdot 0.59 = 0.1148
+        p_{2nd} = 0.41 \cdot 0.86 \cdot 0.59 = 0.2080
       \]
 
       Since these two events are disjoint, the probability of the serving player
       winning the point is
       \[
-        p_{win} = 0.4307 + 0.1148 \approx \boxed{ 0.5455 }
+        p_{win} = 0.4307 + 0.2080 \approx \boxed{ 0.6387 }
       \]
 
     \item[49]
@@ -397,7 +394,7 @@
         p_{black} = 0.4 \cdot 0.9 = 0.36 \\
         p_{hispanic} = 0.2 \cdot 0.5 = 0.1 \\
         \\
-        p_{total} = 0.12 + 0.36 + 0.1 = \boxed{ 0.49 } \\
+        p_{total} = 0.12 + 0.36 + 0.1 = \boxed{ 0.58 } \\
       \end{align*}
 
     \item[50]
@@ -406,17 +403,19 @@
 
       \begin{align*}
         P(\text{in } | \text{ won}) & = \frac{P(\text{in and won})}{P(\text{won})} \\
-                    & \approx \frac{0.4307}{0.5455} \\
-                    & \approx \boxed{ 0.7896 } \\
+                    & \approx \frac{0.4307}{0.6387} \\
+                    & \approx \boxed{ 0.6743 } \\
       \end{align*}
+
+    \newpage
 
     \item[51]
       Given that the vote was won, what was the probability that the voter was black?
 
       \begin{align*}
-        P(black | won) & = \frac{P(\text{black and won)}}{P(\text{won})} \\
-                       & \approx \frac{0.36}{0.49} \\
-                       & \approx \boxed{ 0.7347 } \\
+        P(\text{black } | \text{ won}) & = \frac{P(\text{black and won)}}{P(\text{won})} \\
+                       & \approx \frac{0.36}{0.58} \\
+                       & \approx \boxed{ 0.6207 } \\
       \end{align*}
 
     \item[54]
@@ -449,25 +448,21 @@
 
     \item[56]
       \begin{enumerate}[(a)]
-        \item There is a 0.75 probability that a single child will have type A and a
-          0.25 probability that a child will have type 0. 
+        \item 
+          With these parents, the possible blood types for the children are: 
+          
+          A (0.5) , AB (0.25), B (0.25)
 
+          The probability of 2 As is 
+          \[
+            0.5^2 = \boxed{ 0.25 }
+          \]
+
+        \item 
           \begin{align*}
-            P(A) &= 0.75 \cdot 0.75 = 0.5625 \\
-            P(0) &= 0.25 \cdot 0.25 = 0.0625 \\
+            P(same) & = 0.5^2 + 0.25^2 + 0.25^2 \\
+                    & = \boxed{ 0.375 }
           \end{align*}
-
-          The probability of one of these two combinations is:
-          \[
-            P(\text{different}) = 0.5625 + 0.0625 = \boxed{ 0.625 }
-          \]
-
-          Another way to look at it is to find the probability type A in the
-          first child and O in the second child or vice versa:
-          \[
-            P(\text{different}) = 1 - 0.25 \cdot 0.75 + 0.75 \cdot 0.25 
-              = \boxed{ 0.625 }
-          \]
       \end{enumerate}
   \end{description}
 
