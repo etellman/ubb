@@ -1,10 +1,10 @@
 % no answer key
-% \documentclass[letterpaper]{exam}
+\documentclass[letterpaper]{exam}
 
 % answer key
-\documentclass[letterpaper, landscape]{exam}
-\usepackage{2in1, lscape} 
-\printanswers
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers
 
 % for the cent symbol
 \usepackage{textcomp}
@@ -41,18 +41,37 @@
   \maketitle
 
   \section{Homework}
+  Chapter 14: 34, 36-38, 40, 42-46, 48-53, 55, 57
+
   \ifprintanswers
   \else
-    \begin{itemize*}
-      \item read Chapter 14 
-      \item take a look at the ``Check Your Skills'' exercises
-      \item exercises: 34, 36-38, 40, 42-46, 48-53, 55, 57
-    \end{itemize*}
+    \section{Calculations}
+    Here are some of the calculations, if you don't have a calculator that can do
+    this stuff quickly:
+
+    \begin{description}
+      \item[50]
+        \begin{align*}
+          \bar{x} & \approx 30,841 \\
+          s       & \approx 670.82 \\
+        \end{align*}
+
+      \item[51]
+        \begin{align*}
+          \bar{x} & = -3.587 \\
+          s       & \approx 0.3647 \\
+        \end{align*}
+
+      \item[55] 
+        \[
+          \bar{x} = 0.1013
+        \]
+
+    \end{description}
   \fi
 
-  \section{Homework}
-
   \ifprintanswers
+    \section{Solutions}
     \begin{description}
 
       \item[34] 
@@ -192,8 +211,9 @@
 
           \item
             \begin{align*}
-              \bar{x}          & = 30,841 \\
-              \sigma_{\bar{x}} & = \frac{3000}{\sqrt{20}} \approx 670.82 \\
+              \bar{x}     & = 30,841 \\
+              s_{\bar{x}} & = \frac{3000}{\sqrt{20}}
+                          & \approx 670.82 \\
               \\
               z_{0.95} & = 1.6445 \\
               z_{0.05} & = -1.6445 \\
@@ -216,8 +236,9 @@
 
           \item
             \begin{align*}
-              \bar{x}          & = -3.587 \\
-              \sigma_{\bar{x}} & = \frac{2.5}{\sqrt{47}} \approx 0.3647 \\
+              \bar{x} & = -3.587 \\
+              s       & = \frac{2.5}{\sqrt{47}} \\
+                      & \approx 0.3647 \\
               \\
               z_{0.995} & = 2.5758 \\
               \\
@@ -304,8 +325,8 @@
 
           \item
             \begin{align*}
-              \sigma  & = 0.22 \\
               \bar{x} & = 0.10125 \\
+              \sigma  & = 0.22 \\
               \mu_0   & = 0 \\
               \\
               \bar{x} - \mu_0  & = 0.10125 \\
@@ -342,13 +363,20 @@
   \end{description}
 
   \else
-    \vspace{7 cm}
+    \vspace{2 cm}
     \begin{quote}
       \begin{em}
-        TO DO
+        And I think that's really something that we all have to remember, is
+        that there are cases---and there have been throughout history, and there
+        will continue to be throughout time---where what is lawful is not
+        necessarily right or necessarily moral. It doesn't take long for an
+        American to think back to periods when things were legal but they
+        weren't echical, when they weren't moral. And I think today when we see
+        similar policies, every citizen has a duty to resist those and to try to
+        build a better, more fair society.
       \end{em}
     \end{quote}
-    \hspace{1 cm}--TO DO
+    \hspace{1 cm}--Edward Snowden
   \fi
 
 \end{document}
