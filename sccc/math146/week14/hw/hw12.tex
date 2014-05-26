@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
 
 % for the cent symbol
 \usepackage{textcomp}
@@ -41,25 +41,11 @@
   \maketitle
 
   \section{Homework}
-  \ifprintanswers
-  \else
-    \begin{itemize*}
-      \item read Chapter 13 
-      \item take a look at the ``Check Your Skills'' exercises
-      \item exercises: 22-26, 28, 31-32, 34-36, 38-39
-    \end{itemize*}
-  \fi
 
-  \section{Schedule}
-  \begin{itemize*}
-    \item May 21: no class
-    \item May 28: Chapter 14
-    \item June 4: Chapter 15
-    \item June 11: Last Class
-  \end{itemize*}
+  Chapter 13: 22-26, 28, 31-32, 34-36, 38-39
 
   \ifprintanswers
-    \section{Homework}
+    \section{Solutions}
     \begin{description}
 
       \item[22] 
@@ -83,18 +69,37 @@
 
       \item[24]
         \begin{enumerate}[(a)]
-          \item $n = 20$; $p = 0.25$
-          \item 5
-          \item $ \binom{20}{5} 0.25^5 \cdot 0.75^5 \approx \boxed{ 0.2023 } $
+          \item \fbox{ $n = 20$; $p = 0.25$ }
+
+          \item $\mu = 20 \cdot 0.5 = \boxed{ 5 }$
+
+          \item $ \binom{20}{5} 0.25^5 \cdot 0.75^{15} \approx \boxed{ 0.2023 } $
         \end{enumerate}
 
       \item[25]
         \begin{enumerate}[(a)]
-          \item $n = 5$; $p = 0.5$
+          \item $n = 5$; $p = 0.65$
 
           \item 0 to 5
 
-          \item see Figure \ref{fig:ex25}
+          \item 
+            \begin{table}[ht]
+              \centering
+              \begin{tabular}{rr}
+                \toprule
+                years & probability \\
+                \midrule
+                0     & 0.0053 \\
+                1     & 0.0488 \\
+                2     & 0.1811 \\
+                3     & 0.3364 \\
+                4     & 0.3124 \\
+                5     & 0.1160 \\
+                \bottomrule
+              \end{tabular}
+            \end{table}
+
+            see Figure \ref{fig:ex25}
 
             \begin{figure}[H]
               \centering
@@ -105,18 +110,24 @@
 
           \item 
             \begin{align*}
-              \mu    & = \boxed{ 2.5 } \\
-              \sigma & = \sqrt{2.5 \cdot 0.5 \cdot 0.5} \approx \boxed{ 0.7906 } \\
+              \mu    & = 0.65 \cdot 5 \\
+                     & = \boxed{ 3.25 } \\
+              \\
+              \sigma & = \sqrt{5 \cdot 0.65 \cdot 0.35} \\
+                     & \approx \boxed{ 1.0665 } \\
             \end{align*}
         \end{enumerate}
 
       \item[26]
         \begin{enumerate}[(a)]
           \item 
-            \begin{align*}
-              \mu    & = \boxed{ 6 } \\
-              \sigma & = \sqrt{6 \cdot 0.5 \cdot 0.5} \approx \boxed{ 1.2248 } \\
-            \end{align*}
+            Binomial distribution with $n = 12$ and $p = 0.5$
+            % \begin{align*}
+            %   \mu    & = $12 \cdot 0.5 \\
+            %   = 6$ \\
+            %   \sigma & = \sqrt{12 \cdot 0.5 \cdot 0.5} \\
+            %   &\approx \boxed{ 1.7321 } \\
+            % \end{align*}
 
           \item The probability of exactly 8 is:
             \[
@@ -124,7 +135,7 @@
             \]
 
             According to my computer, the probability of at least 8 is
-            approximately \fbox{ 0.1938 }
+            approximately 0.1938.
 
         \end{enumerate}
 
@@ -148,9 +159,10 @@
 
       \item[28]
         \begin{align*}
-          \mu    & = 250 \\
-          \sigma & = \sqrt{250 (0.5)} \\
-                 & \approx 11.18 \\
+          \mu     & = 0.5 \cdot 500 \\
+                  & = 250 \\
+          \sigma  & = \sqrt{500 \cdot 0.5 \cdot 0.5} \\
+                  & \approx 11.18 \\
         \end{align*}
 
         Convert 235 to a z-score:
@@ -159,9 +171,11 @@
         \]
 
         Use table A:
-        \[
-          P(X \geq 235) \approx 1 - 0.0899 = \boxed{ 0.9101 }
-        \]
+        \begin{align*}
+          P(X < 235)    & \approx 0.0899 \\
+          P(X \geq 235) & \approx 1 - 0.0899 \\
+                        & = \boxed{ 0.9101 }
+        \end{align*}
 
         According to my computer, the exact binomial probability is
         approximately 0.9172
@@ -190,7 +204,7 @@
 
           \item $\mu = 1000 \cdot 0.004 = \boxed{ 4 }$
 
-          \item $np = 4 < 10$. The Normal approximation should only be used when
+          \item $np = 4$. The Normal approximation should only be used when 
             $np \geq 10$.
         \end{enumerate}
 
@@ -198,18 +212,20 @@
         \begin{enumerate}[(a)]
           \item
             \begin{align*}
-              \mu    & = 0.13 \cdot 1200 = \boxed{ 156 } \\
-              \sigma & = \sqrt{156 \cdot 0.13 \cdot 0.87} \approx \boxed{ 4.2 } \\
+              \mu    & = 0.13 \cdot 1200 \\
+                     & = \boxed{ 156 } \\
+              \sigma & = \sqrt{1200 \cdot 0.13 \cdot 0.87} \\
+                     & \approx \boxed{ 11.65 } \\
             \end{align*}
 
           \item 95\% of the time the sample will be with 2 standard deviations
             of the mean. So 95\% of the time, the result will contain somewhere
-            \fbox{ between 148 and 164 } Hispanics.
+            \fbox{ between 144 and 168 } Hispanics.
 
           \item 
             \begin{align*}
               0.13 n & = 200 \\
-              n      & \approx \boxed{ 1539 } \\
+              n      & = \boxed{ 1539 } \\
             \end{align*}
         
         \end{enumerate}
@@ -220,46 +236,54 @@
             With 100 questions:
 
             \begin{align*}
-              \mu    & = 0.75 \cdot 100 = 75 \\
-              \sigma & = \sqrt{75 \cdot 0.75 \cdot 0.25} \approx 3.75 \\
+              \mu    & = 0.75 \cdot 100 \\
+                     & = 75 \\
+              \sigma & = \sqrt{100 \cdot 0.75 \cdot 0.25} \\
+                     & \approx 4.3301 \\
             \end{align*}
 
             convert to z-scores:
             \begin{align*}
-              z_{70} &= \frac{70 - 75}{3.75} \approx -1.33 \\
-              z_{80} &= \frac{80 - 75}{3.75} \approx 1.33 \\
+              z_{70} & = \frac{70 - 75}{4.3301} \\
+                     & \approx -1.1547 \\
+              z_{80} & = \frac{80 - 75}{4.3301} \\
+                     & \approx 1.1547 \\
             \end{align*}
 
             From Table A:
             \begin{align*}
-              P(X < 70) & \approx 0.0912 \\
-              P(X < 80) & \approx 0.9087 \\
+              P(X < 70) & \approx 0.1241 \\
+              P(X < 80) & \approx 0.8759 \\
               \\
-              P(70 < X < 80) & \approx 0.9087 - 0.0912 \\
-                             & = 0.8176 \\
+              P(70 < X < 80) & \approx 0.8759 - 0.1241 \\
+                             & = \boxed{ 0.7518 } \\
             \end{align*}
 
           \item
-            With 200 questions:
+            With 250 questions:
 
             \begin{align*}
-              \mu    & = 0.75 \cdot 200 = 150 \\
-              \sigma & = \sqrt{150 \cdot 0.75 \cdot 0.25} \approx 5.303 \\
+              \mu    & = 0.75 \cdot 250 \\
+                     & = 187.5 \\
+              \sigma & = \sqrt{250 \cdot 0.75 \cdot 0.25} \\
+                     & \approx 6.8465 \\
             \end{align*}
 
             convert to z-scores:
             \begin{align*}
-              z_{70\%} &= \frac{140 - 150}{5.303} \approx -1.886 \\
-              z_{80\%} &= \frac{160 - 150}{5.303} \approx 1.866 \\
+              z_{175} & = \frac{175 - 187.5}{6.8465} \\
+                      & \approx -1.8257 \\
+              z_{200} & = \frac{200 - 187.5}{6.1237} \\
+                      & \approx 1.8257 \\
             \end{align*}
 
             From Table A:
             \begin{align*}
-              P(X < 140) & \approx 0.0296 \\
-              P(X < 160) & \approx 0.9704 \\
+              P(X < 175) & \approx 0.0339 \\
+              P(X < 200) & \approx 0.9661 \\
               \\
-              P(140 < X < 160) & \approx 0.9704 - 0.0296 \\
-                               & = 0.9407 \\
+              P(175 < X < 200) & \approx 0.9661 - 0.0339 \\
+                               & = \boxed{ 0.9321 } \\
             \end{align*}
         
         \end{enumerate}
@@ -325,17 +349,19 @@
       \item[39]
         \begin{enumerate}[(a)]
           \begin{align*}
-            \mu &= 0.95 \cdot 1400 = 1330 \\
-            \sigma &= \sqrt{1330 \cdot 0.95 \cdot 0.05} \approx 7.95 \\
+            \mu    & = 0.95 \cdot 1400 \\
+                   & = 1330 \\
+            \sigma & = \sqrt{1400 \cdot 0.95 \cdot 0.05} \\
+                   & \approx 8.1547 \\
           \end{align*}
 
-          75\% of the students is only 1050 students. Convert to z-score:
+          75\% of the students is 1050 students. Convert to z-score:
           \[
-            z = \frac{1050 - 1330}{7.95} \approx -35
+            z = \frac{1050 - 1330}{8.1547} \approx -34
           \]
 
-          There is essentially zero chance of less than 75\% of the students
-          contracting the disease.
+          There is essentially a 100\% chance that at least 75\% of the
+          students will contract the disease.
 
         \end{enumerate}
   \end{description}

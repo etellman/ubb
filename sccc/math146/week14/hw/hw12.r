@@ -9,18 +9,27 @@ choose(20, 5) * 0.25^5 * 0.75^15
 
 # exercise 25
 success <- 0:5
-ex25 <- data.frame(s = success, p = dbinom(success, size = 5, 0.5))
+ex25 <- data.frame(s = success, p = dbinom(success, size = 5, 0.65))
 ex25
+
+sink('r.tex')
+  xtable(ex25, digits = 4)
+sink()
 
 plot <- ggplot(ex25, aes(x = factor(s), y = p)) + 
   geom_bar(stat = "identity", fill = "lightblue", color = "black") +
-  xlab("Successes") +
+  xlab("Years") +
   theme(axis.title.y = element_blank())
 print(plot)
 
 ggsave('ex25.pdf', plot, width = 4, height = 2.5)
 
+sqrt(5 * 0.65 * 0.35)
+
 # ex 26
+sqrt(12 * .5 * .5)
+choose(12, 8) * 0.5^8 * 0.5^4
+
 dbinom(8, 12, 0.5) + dbinom(9, 12, 0.5) + dbinom(10, 12, 0.5) + dbinom(11, 12, 0.5) + dbinom(12, 12, 0.5)  
 
 1 - pbinom(7, 12, 0.5)
@@ -29,9 +38,9 @@ dbinom(8, 12, 0.5) + dbinom(9, 12, 0.5) + dbinom(10, 12, 0.5) + dbinom(11, 12, 0
 dbinom(0, 20, 0.05) 
 
 # ex 28
-sqrt(125)
-x <- (235 - 250)/sqrt(125)
-x
+s <- sqrt(500 * .5 * .5)
+z <- (235 - 250)/s
+pnorm(z)
 
 1 - round(pnorm(x), 4)
 round(1 - pnorm(x), 4)
@@ -49,20 +58,30 @@ pnorm(z)
 
 # ex 34
 0.13 * 1200
-s <- sqrt(156 * .13 * .87)
+s <- sqrt(1200 * .13 * .87)
+s
+
+156 + s
 
 156 + 2 * s
 200/.13
 
 # ex 35
-s <- sqrt(150 * .25 * .75)
+s <- sqrt(250 * .25 * .75)
 print(s)
 
-(140 - 150)/5.303
+.75 * 250
+.7 * 250
+.8 * 250
 
-.7 * 200
+z <- (187.5 - 175)/s
+z
 
-pnorm(1.33333) - pnorm(-1.33333)
+pnorm(-z)
+
+pnorm(z) - pnorm(-z)
+
+.75 * 200
 
 pnorm(1.886) - pnorm(-1.886)
 pnorm(-1.886) 
@@ -99,10 +118,13 @@ choose(20, 2) * 0.05^2 * 0.95^18 + choose(20, 1) * 0.05^1 * 0.95^19 + .95^20
 
 choose(20, 2) * 0.05^2 * 0.95^18 + choose(20, 1) * 0.05^1 * 0.95^19 + .95^20
 
+dbinom(0, 20, 0.05) + dbinom(1, 20, 0.05) + dbinom(2, 20, 0.05) 
+dbinom(20, 20, 0.95) + dbinom(19, 20, 0.95) + dbinom(18, 20, 0.95) 
+
 # ex 40
 0.95 * 1400
-sqrt(1330 * 0.95 * 0.05)
-(0.75 * 1400 - 1330) / 7.95 
+s <- sqrt(1400 * 0.95 * 0.05)
+(0.75 * 1400 - 1330) / s 
 
 0.75 * 1400
 
