@@ -11,8 +11,8 @@ percentage <- function(score, points) {
   c(actual = actual, percentage = round(100 * (actual) / points))
 }
 
-possible <- points(c(27:32, 34:40, 44:51, 54:56))
-percentage(20, possible)
+possible <- points(c(22:27, 29, 31:33, 35:40))
+percentage(3, possible)
 
 possible
 
