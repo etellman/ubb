@@ -52,25 +52,26 @@
 
   500 person exit poll showing:
   \begin{itemize*}
-    \item Democrat: 53
-    \item Republican: 45
-    \item Other: 2
+    \item Alice: 265 (53\%)
+    \item Bob: 235 (47\%)
   \end{itemize*}
 
   Can you call the race?
 
-  \[
-    sd \approx \sqrt{\frac{0.53 \cdot 0.47}{500}} = 0.02
-  \]
+  \begin{align*}
+    se & = \sqrt{500 \cdot 0.53 \cdot 0.47} \\
+       & \approx \unit[11]{people} \\
+       \\
+    frac{11}{500} &\approx 2\%
+  \end{align*}
 
   68\% of the time, the sample value will be within one standard deviation of
   the actual value. 
   
   You can say that you are 68\% confident that:
   \begin{itemize*}
-    \item Democrat: between 0.51 and 0.55
-    \item Republican: between 0.43 and 0.47
-    \item Other: doesn't matter
+    \item Alice: between 0.51 and 0.55
+    \item Bob: between 0.45 and 0.49
   \end{itemize*}
 
   32\% of the time you'll be wrong, and you might declare the wrong winner.
@@ -80,9 +81,8 @@
   
   You can say that you are 95\% confident that:
   \begin{itemize*}
-    \item Democrat: between 0.49 and 0.57
-    \item Republican: between 0.41 and 0.49
-    \item Other: doesn't matter
+    \item Alice: between 0.49 and 0.57
+    \item Bob: between 0.43 and 0.51
   \end{itemize*}
 
   Now there is overlap, but you still can't declare a winner. To get more
@@ -90,22 +90,23 @@
 
   If you later in the day you get a bigger poll with 2000 people, the standard
   deviation goes down to:
-  \[
-    sd \approx \sqrt{\frac{0.53 \cdot 0.47}{2000}} = 0.01
-  \]
+  \begin{align*}
+    se & = \sqrt{2000 \cdot 0.53 \cdot 0.47} \\
+       & \approx \unit[22]{people} \\
+       \\
+    frac{22}{2000} &\approx 1\%
+  \end{align*}
 
   Now you can say that you are 95\% confident that:
   \begin{itemize*}
-    \item Democrat: between 0.51 and 0.55
-    \item Republican: between 0.43 and 0.47
-    \item Other: doesn't matter
+    \item Alice: between 0.52 and 0.54
+    \item Bob: between 0.46 and 0.48
   \end{itemize*}
 
   You can also say that you are 99.7\% confident (3 standard deviations) that:
   \begin{itemize*}
-    \item Democrat: between 0.50 and 0.56
-    \item Republican: between 0.42 and 0.48
-    \item Other: doesn't matter
+    \item Alice: between 0.50 and 0.56
+    \item Bob: between 0.44 and 0.50
   \end{itemize*}
 
   Now you can be confident in declaring a winner. Even if you are wrong, there
@@ -182,6 +183,20 @@
 
   is actually wrong.
 
+  \subsection{Notes}
+
+  \begin{itemize}
+    \item There are two parts to an estimate:
+      \begin{itemize*}
+        \item interval: $estimate \pm error$
+        \item confidence level: probability that the interval captures the actual
+          parameter
+      \end{itemize*}
+
+    \item A bigger margin of error goes with higher confidence.
+
+  \end{itemize}
+
   The general procedure is:
   \begin{enumerate*}
     \item decide how much you care about the result being correct (desired
@@ -210,20 +225,76 @@
     \item Smaller margin of error gives you less confidence.
   \end{itemize}
 
+  \subsection{Check Your Skills}
+  \begin{description}
+    \item[14.1] 
+      \begin{enumerate}[(a)]
+
+        \item $ sd = \frac{60}{\sqrt{840}} \approx 2.07$
+
+        \item 4.14
+
+        \item 267.86 to 276.14
+
+      \end{enumerate}
+
+    \item[14.3] 97.5\% is 2.5\% less than 100\%. The value might be either very low
+      or very high, so we're looking for the $z^*$ value that corresponds to
+      1.25\%. From Table A, this is $z^* \approx 2.24$. A z-score less than
+      -2.25 or greater than 2.25 will satisfy the requirements.
+
+    \item[14.4]
+      For a 90\% confidence interval and Table A, $z^* \approx 1.645$. None of
+      the measurements should be more than 1.645 standard deviations from the
+      mean.
+
+      In conductivity units, this corresponds to $\pm 1.645 \cdot 0.2 = \pm
+      0.329$. All of the measurements should be between 4.67 and 5.33.
+
+      They all are, so they can say with 95\% confidence that everything is
+      fine with what they are providing to the customers.
+
+      If any of the samples had been outside this range, we would not have had
+      95\% confidence that the liquid actually had a mean of 5.
+
+    \item[14.5]
+      The mean for the sample is 105.84. 
+
+      For a 99\% confidence interval, $z^* = 2.576$. Converting this to IQ
+      scores gives:
+      \[
+        iq = 2.576 \frac{15}{\sqrt{31}} \approx 6.94
+      \]
+
+      We can be 99\% confident that the actual mean is between and 98.90 and 112.78
+
+    \end{description}
 
   \section{Hypothesis Testing}
-  Another thing we can do with samples is test some hypothesis. The hypothesis
-  is something like ``the mean is x.'' If the hypothesis was true, we calculate
-  the probability of getting the result we got in the sample.
 
+  \subsection{General Idea}
+  \begin{itemize}
+    \item have some theory about a parameter ($\mu = 17$) (null hypothesis)
+    \item measure the relevant statistic ($\bar{x = 25}$)
+    \item if $\bar{x}$ is very unlikely to occur if null hypothesis is true, you
+      can reasonably conclude that null hypothesis is false
+    \item Draw normal curve with shaded regions for one and two sided
+      hypothesis.
+  \end{itemize}
+
+  \subsection{Rushing Example}
+
+  \subsubsection{Hypothesis One}
   For example suppose our hypothesis is that the average rush in the NFL is 5
   yards and we sampled 20 rushes and found that their average was 3.70. 3.70 is
   pretty far from 5.
 
+  We now from past seasons that $\sigma \approx \unit[6.3]{yd}$
+
   With 20 rushes, the standard deviation is:
   \begin{align*}
-    s_{\bar{x}} & = \frac{\sigma}{\sqrt{20}} \\
-                & \approx 1.41 \\
+    s_{20} & = \frac{6.3}{\sqrt{20}} \\
+           & \approx \unit[1.41]{yd} \\
   \end{align*}
 
   Calculate the z-score for the observed $\bar{x}$:
@@ -237,6 +308,7 @@
   number, we can't be very confident in ruling out the possibility that the
   actual mean is 5.
 
+  \subsubsection{Hypothesis Two}
   Suppose we instead theorized that the actual mean was 7. With this mean, the
   z-score is:
   \begin{align*}
@@ -246,13 +318,13 @@
 
   From table A, the chance of getting a result at least $2.34$ standard
   deviations below the mean is approximately 1\%. Since this is a pretty small
-  number, we can't be fairly confident in ruling out the possibility that the
+  number, we can be fairly confident in ruling out the possibility that the
   actual mean is 7. If the mean was really 7, then only 1 out of 100 times we
   took a sample of 20 would we get an $\bar{x}$ as low as 3.7.
 
-  notes:
-  \begin{itemize*}
-    \item With hypothesis testing, the goal is to try to rule out the
+  \subsection{Procedure and Notes}
+  \begin{itemize}
+    \item With hypothesis testing, the goal is to try to rule out the null
       hypothesis. If we get a result that is very unlikely if the hypothesis is
       true, then we can assume with high confidence that the hypothesis is
       false.
@@ -262,11 +334,35 @@
       the hypothesis. A high P-value means that the hypothesis might be true and
       we can't rule it out.
 
-  \end{itemize*}
+    \item P-value from first example was 0.18. P-value from second example was
+      0.01.
 
-  \section{Examples}
+    \item you can never be sure the null hypothesis is incorrect
 
-  \subsection{Education and Salary}
+    \item A ``statistically significant at X'' result means that you got a P-value
+      less than X. Common choices for $X$ are 0.05 and 0.01. You can pick one
+      that is appropriate for your domain.
+
+    \item ``Statistically Significant'' doesn't mean ``Actually Significant.'' A
+      very small difference might be statistically significant but
+      uninteresting.
+
+    \item With a two-sided test, the hypothesis is something like ``the average
+      yards rushing is 7.'' You rule out the null hypothesis if your $\bar{x}$
+      is much larger or smaller than 7.
+
+    \item With a two-sided test, the hypothesis is something like ``the average
+      yards rushing is more than 7.'' You rule out the null hypothesis if your $\bar{x}$
+      is much smaller than 7.
+
+    \item For now, assume you have standard deviation from population and
+      population is fairly Normally distributed
+
+  \end{itemize}
+
+  \subsection{Examples}
+
+  \subsubsection{Education and Salary}
 
   From the 2012 WA population survey (week 2), the mean income from wages for
   people that worked was:
@@ -314,7 +410,7 @@
   money.
 
 
-  \subsection{NBA Field Goal Percentage}
+  \subsubsection{NBA Field Goal Percentage}
 
   For all players:
   \begin{align*}
@@ -330,9 +426,10 @@
     p                & \approx 0.033 \\
   \end{align*}
 
-  For a 2-sided null hypothesis (centers have a different field goal percentage than
-  everyone else) we can reject the null hypothesis at a P-value of 0.066. There
-  is only a 0.066 probability of centers being $\pm 1.84$ standard deviations from the
+  For a 2-sided null hypothesis (centers have a different field goal percentage
+  than everyone else) we can reject the null hypothesis at a P-value of 0.066.
+  There is only a 0.066 probability of centers being $\pm 1.84$ standard
+  deviations from the
   mean.
 
   For a 1-sided null hypothesis (centers have a better field goal percentage
@@ -350,7 +447,7 @@
 
   With a larger sample, we can be more confident of the result.
 
-  \subsection{Adrian Peterson}
+  \subsubsection{Adrian Peterson}
   All rushers:
   \begin{align*}
     \mu    & \approx 4.12 \\
@@ -372,15 +469,38 @@
     \item data is approximately normal
   \end{itemize*}
 
+  \subsection{Check Your Skills}
+  \begin{description}
+    \item[14.6]
+
+      part b:
+
+      \begin{align*}
+        \sigma_{\bar{x}} & = \frac{30}{\sqrt{25}} \\
+                         & = 6 \\
+        \\
+        z_{118.6}        & = \frac{118.6 - 115}{6} \\
+                         & \approx 0.58 \\
+        P_{118.6}        & \approx 0.72 \\
+        \\
+        z_{125.8}        & = \frac{125.8 - 115}{6} \\
+                         & \approx 1.8 \\
+        P_{125.8}        & \approx 0.036 \\
+      \end{align*}
+
+      About 72\% of the time a value as large as 118.6 will come up by random
+      chance for the sample. A value as large as 125.8 will only come up about
+      3.6\% of the time by chance.
+  \end{description}
   \subsection{Luciana De Clerk}
 
   After nurse was present at death of baby, someone noticed that she was often
   present at deaths. The director of the hospital looked through the files for
   other similar unexplained deaths. 
 
-  \begin{table}
+  \begin{table}[H]
     \centering
-    \begin{tabular}{lrrr}[H]
+    \begin{tabular}{lrrr}
       \toprule
       shifts        & without incident & with incident & total \\
       \midrule
@@ -426,69 +546,5 @@
       administering an OD was disproved with medical evidence. 
   \end{itemize*}
 
-  \section{Check Your Skills}
-  \begin{description}
-    \item[14.1] 
-      \begin{enumerate}[(a)]
-
-        \item $ sd = \frac{60}{\sqrt{840}} \approx \boxed{ 2.07 } $
-
-        \item 4.14
-
-        \item 267.86 to 276.14
-
-      \end{enumerate}
-
-    \item[14.3] 97.5\% is 2.5\% less than 100\%. The value might be either very low
-      or very high, so we're looking for the $z^*$ value that corresponds to
-      1.25\%. From Table A, this is $z^* \approx 2.24$. A z-score less than
-      -2.25 or greater than 2.25 will satisfy the requirements.
-
-    \item[14.4]
-      For a 90\% confidence interval and Table A, $z^* \approx 1.645$. None of
-      the measurements should be more than 1.645 standard deviations from the
-      mean.
-
-      In conductivity units, this corresponds to $\pm 1.645 \cdot 0.2 = \pm
-      0.329$. All of the measurements should be between 4.67 and 5.33.
-
-      They all are, so they can say with 95\% confidence that everything is
-      fine with what they are providing to the customers.
-
-      If any of the samples had been outside this range, we would not have had
-      95\% confidence that the liquid actually had a mean of 5.
-
-    \item[14.5]
-      The mean for the sample is 105.84. 
-
-      For a 99\% confidence interval, $z^* = 2.576$. Converting this to IQ
-      scores gives:
-      \[
-        iq = 2.576 \frac{15}{\sqrt{31}} \approx 6.94
-      \]
-
-      We can be 99\% confident that the actual mean is between and 98.90 and 112.78
-
-    \item[14.6]
-
-      part b:
-
-      \begin{align*}
-        \sigma_{\bar{x}} & = \frac{30}{\sqrt{25}} \\
-                         & = 6 \\
-        \\
-        z_{118.6}        & = \frac{118.6 - 115}{6} \\
-                         & \approx 0.58 \\
-        P_{118.6}        & \approx 0.72 \\
-        \\
-        z_{125.8}        & = \frac{125.8 - 115}{6} \\
-                         & \approx 1.8 \\
-        P_{125.8}        & \approx 0.036 \\
-      \end{align*}
-
-      About 72\% of the time a value as large as 118.6 will come up by random
-      chance for the sample. A value as large as 125.8 will only come up about
-      3.6\% of the time by chance.
-  \end{description}
 \end{document}
 
