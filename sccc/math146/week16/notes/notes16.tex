@@ -1,0 +1,83 @@
+\documentclass[landscape]{exam}
+
+\usepackage{2in1, lscape} 
+\usepackage{units} 
+\usepackage[fleqn]{amsmath}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{parskip}
+
+\printanswers
+
+\everymath{\displaystyle}
+
+\printanswers
+
+\title{Statistics \\ Week Fourteen}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+  \tableofcontents
+
+  \section{Check Your Skills}
+  \begin{description}
+    \item[15.1] c---not a random sample
+
+    \item[15.2] c---not a random sample
+      \begin{enumerate}[(a)]
+        \item 
+          For a 95\% confidence interval, we need to within two standard
+          deviations of the mean.
+
+          \begin{align*}
+            \sigma_{\bar{x}} & = \frac{1.83}{\sqrt{880}} \\
+                             & \approx 0.06169 \\
+            \\
+            z^* &\approx 2 \\
+            \\
+            \mu & = 1.92 \pm 2 \cdot 0.06169 \\
+                & \approx 1.92 \pm 0.1209 \\
+                & \approx (1.80, 2.04) \\
+          \end{align*}
+
+        \item The distribution of the sample means is still normal since we have
+          a large sample (Central Limit Theorem).
+
+        \item 
+          \begin{itemize*}
+            \item it only includes people with phones
+            \item it only includes people who answer their phone
+          \end{itemize*}
+      \end{enumerate}
+
+    \item[15.3] Different times of day get different types of people.
+
+    \item[15.4] 
+      \begin{enumerate}[(a)]
+        \item
+
+          \begin{table}[ht]
+          \centering
+          \begin{tabular}{rrrrrrr}
+            \toprule
+              & p    & z    & s.z  & margin.of.error & min   & max \\
+            \midrule
+            1 & 0.90 & 1.64 & 0.29 & 0.48            & 26.32 & 27.28 \\
+            2 & 0.95 & 1.96 & 0.29 & 0.57            & 26.23 & 27.37 \\
+            3 & 0.99 & 2.58 & 0.29 & 0.76            & 26.04 & 27.56 \\
+            \bottomrule
+          \end{tabular}
+          \end{table}
+      \end{enumerate}
+
+  \end{description}
+\end{document}
+
