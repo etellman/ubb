@@ -1,5 +1,5 @@
+library(asbio) 
 
-root.dir <- '~/Documents/U/ubb/sccc/math146'
 notes.dir <- paste(root.dir, "week16/notes", sep = "/")
 setwd(notes.dir)
 
@@ -28,3 +28,21 @@ confidence <- function(p, sample.mean, s, n) {
 sink('r.tex')
   xtable(t(sapply(c(0.9, 0.95, 0.99), function(p) confidence(p, 26.8, 7.5, 654))))
 sink()
+
+.05/pnorm(.2/sqrt(10))
+
+?power.z.test
+power.z.test(n = 10, sigma = 1, alpha = 0.05, effect = 0.8, test = "one.tail")
+
+s = 1/sqrt(10)
+
+qnorm(0.95)
+
+zalpha <- qnorm(.05)
+zalpha
+.8/s
+
+pnorm(zalpha + 0.8/s)
+
+x <- qnorm(0.95) / 3.162
+1 - pnorm((x - 0.8) * sqrt(10))

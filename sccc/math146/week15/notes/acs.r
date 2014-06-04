@@ -3,12 +3,10 @@ data.dir <- paste(root.dir, "data/acs", sep = "/")
 setwd(data.dir)
 
 acs <- read.csv("ss12pwa.csv")
-acs <- subset(acs, !is.na(wagp) & wagp > 0 & wagp < 150000)
+acs <- subset(acs, !is.na(wagp) & wagp > 0)
 
-
-women <- subset(acs, sex == 2)
-men <- subset(acs, sex == 1)
 no.degree <- subset(acs, schl < 20)
+degree <- subset(acs, schl >= 20)
 
 mean(acs$age)
 sd(acs$age)
@@ -21,22 +19,28 @@ mean(men)
 
 # null hypothesis: school doesn't help you make more money
 
-n <- 100
-
-p.value <- function(n, x, mu) {
-  x.sd <- sd(x) / sqrt(n)
+z.test <- function(n, x, sigma, mu.0) {
+  x.sd <- sigma / sqrt(n)
 
   x.mean <- mean(sample(x, n))
-  z <- (x.mean - mu) / x.sd
+  z <- (x.mean - mu.0) / x.sd
 
   p <- 1 - pnorm(z)
   data.frame(x.mean = x.mean, x.sd, z = z, p = p)
 }
 
-samples <- lapply(rep(samplesPerTrial, trials), function(n) sample(rush$yds, n))
-lapply(rep(100, 20), function(n) p.value(n, acs$age, 38))
+n <- 500
+mu.0 <- mean(degree$wagp)
 
-str(women)
+mu.0
+
+mean(no.degree$wagp)
+mean(degree$wagp)
+sd(acs$wagp) / sqrt(500)
+
+lapply(rep(n, 10), function(n) z.test(n, degree$wagp, sd(acs$wagp), mean(acs$wagp)))
+
+(62555 - 46122) / 2329
 
 plot <- ggplot(data = subset(acs), aes(x = agep)) + 
   geom_histogram(binwidth = 5, fill = "lightblue", color = "black") +

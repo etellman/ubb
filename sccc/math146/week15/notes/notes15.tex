@@ -30,9 +30,25 @@
   \section{Homework 11}
   \begin{description}
     \item[31] Events are independent because
+
+      With dependent events:
+      \begin{align*}
+        P( \text{A } | \text{ B} ) & = \frac{ P(\text{A and B}) }{ P(B) } \\
+        P( \text{A and B} )        & = P( \text{A } | \text{ B} ) P(B) \\
+      \end{align*}
+
+      In this example:
       \[
         P(\text{A and B}) = P(A) P(B)
       \]
+
+      Substituting:
+      \begin{align*}
+        P(A) P(B) & = P( \text{A } | \text{ B} ) P(B) \\
+        P(A)      & = P( \text{A } | \text{ B} ) \\
+      \end{align*}
+
+      and the events are independent.
 
       In reality, if you get into one, you have a higher chance of getting into
       the other one, so the estimate of $P(\text{A and B}) = 0.2$ may be a
@@ -46,6 +62,10 @@
       \end{itemize*}
 
   \end{description}
+
+  \section{Roulette}
+  Discuss box models for roulette.
+
   \section{Confidence Intervals}
 
   \subsection{Election}
@@ -365,50 +385,39 @@
   \subsubsection{Education and Salary}
 
   From the 2012 WA population survey (week 2), the mean income from wages for
-  people that worked was:
+  people that worked (wage greater than 0) was:
   \begin{align*}
-    \mu    & = 39,148 \\
-    \sigma & = 31,884 \\
+    \mu    & = 46,122 \\
+    \sigma & = 52,071 \\
   \end{align*}
 
-  The null hypothesis is that a bachelor's degree make no more than people
-  without a bachelor's degree (1-sided).
+  The null hypothesis is that people without a degree make as much as people
+  with a degree.
 
   This example doesn't start with a normal distribution, so it doesn't quite
-  follow the rules.
+  follow the rules. It doesn't matter if you use a large sample size. With a
+  sample size less than 100 there was quite a bit of variation in the p-value
+  from 0.01 to 0.000001, depending on the sample.
 
-  With a sample size of 20:
+  With a sample size of 500:
   \begin{align*}
-    \sigma_{\bar{x}} & = 31,884 / \sqrt{20} \\
-                     & \approx 7129 \\
+    s_{500} & = 52,071 / \sqrt{500} \\
+                     & \approx 2,329 \\
   \end{align*}
 
-  Taking a random sample of 20 people with at least a bachelor's degree, 
-  $\bar{x} = 53,943$
+  Taking a random sample of 500 people with at least an associate's degree, 
+  $\bar{x} = \$64,792$
 
   Calculate z-value:
   \begin{align*}
-    z & = \frac{53,943 - 31,884}{7129} \\
-      & \approx 2.08 \\
+    z & = \frac{64,792 - 46,122}{2,329} \\
+      & \approx 8.02 \\
   \end{align*}
 
-  Use table A to find P-value of 0.02. We can reject the null hypothesis with a
-  P-value of 0.02. There is only a 2\% chance of getting a value this large
-  purely by chance if the null hypothesis is true and a degree doesn't help you
-  earn more money.
-
-  With a sample size of 100 college educated people:
-  \begin{align*}
-    \bar{x}          & = 54,866 \\
-    \sigma_{\bar{x}} & \approx 4509 \\
-    z                & \approx 3.49 \\
-    p                & \approx 0.0002 \\
-  \end{align*}
-
-  With this large of a sample, there is only a 0.02\% chance of getting this
-  large of a value purely by chance if education doesn't help you earn more
-  money.
-
+  This is a P-value of approximately $5 \times 10^{-16}$. There is essentially
+  zero chance of being this many standard deviations away from the mean for all
+  people just by chance. We can safely conclude that getting a degree helps you
+  make more money.
 
   \subsubsection{NBA Field Goal Percentage}
 
@@ -491,6 +500,18 @@
       About 72\% of the time a value as large as 118.6 will come up by random
       chance for the sample. A value as large as 125.8 will only come up about
       3.6\% of the time by chance.
+
+    \item[14.7]
+      \begin{align*}
+        s_6 &= \frac{0.2}{\sqrt{6}} \\
+        &\approx 0.082 \\
+        \\
+        z_{4.98} & = \frac{4.98 - 5}{0.082} \\
+                 & \approx -0.24 \\
+        \\
+        z_{4.7} & = \frac{4.7 - 5}{0.082} \\
+                & \approx -3.7 \\
+      \end{align*}
   \end{description}
   \subsection{Luciana De Clerk}
 
