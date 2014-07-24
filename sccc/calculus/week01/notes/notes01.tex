@@ -1,0 +1,205 @@
+
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
+
+\usepackage{units} 
+\usepackage[fleqn]{amsmath}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\setcounter{tocdepth}{1}
+\everymath{\displaystyle}
+
+\author{}
+\date{\today}
+\title{Calculus I \\ Week One}
+
+\begin{document}
+
+  \maketitle
+  \tableofcontents
+
+  \section{Velocity}
+
+  For a free falling object, the distance traveled, in feet, is given by:
+  \[
+    d(t) = 16 t^2
+  \]
+
+  To approximate the speed at $t = 10$, in feet per second, figure out how far
+  it went between $t = 9$ and $t = 10$, in feet, and divide by the time it took
+  (1 second)
+
+  \begin{align*}
+    d(9)  & = 16 \cdot 9^2 \\
+          & = 1,296 \\
+    d(10) & = 16 \cdot 10^2 \\
+          & = 1,600 \\
+    \\
+    v(10) &\approx \frac{1,600 - 1,296}{1} \\
+          &= \unit[304]{ft/s} \\
+  \end{align*}
+
+  To get a more precise estimate of how fast it was going at $t = 10$, calculate
+  for only the half second preceding $t = 10$:
+
+  \begin{align*}
+    d(9.5) & = 16 \cdot 9^2 \\
+           & = \unit[1,444]{ft} \\
+    \\
+    v(10)  & \approx \frac{1,600 - 1,444}{0.5} \\
+           & = \unit[312]{ft/s} \\
+  \end{align*}
+
+  Repeat for smaller time intervals:
+
+  \begin{tabular}[H]{rrr}
+    \toprule
+    $t_0$ (s) & $d(t_0)$ (ft) & $v(10)$ estimate (ft/s) \\
+    \midrule
+    9         & 1,296         & 304 \\
+    9.5       & 1,444         & 312 \\
+    9.9       & 1,568.16      & 318.4 \\
+    9.99      & 1,596.802     & 319.84 \\
+    9.999     & 1,599.68      & 319.984 \\
+    \bottomrule
+  \end{tabular}
+
+  Try the times just after 10
+  
+  \begin{tabular}[H]{rrr}
+    \toprule
+    $t_0$ (s) & $d(t_0)$ (ft) & $v(10)$ estimate (ft/s) \\
+    \midrule
+    10.1       & 1,632.16      & 321.6 \\
+    10.01      & 1,603.202     & 320.16 \\
+    10.001     & 1,600.32      & 320.016 \\
+    \bottomrule
+  \end{tabular}
+
+  It looks like the velocity at 10 seconds might be 320. Let's see if we can
+  come up with a general formula:
+
+  \begin{align*}
+    v(t) &= \frac{16(t + h)^2 - 16t^2}{h} \\
+         &= 16 \cdot \frac{(t + h)^2 - t^2}{h} \\
+         &= 16 \cdot \frac{t^2 + 2th + h^2 - t^2}{h} \\
+         &= 16 \cdot \frac{2th + h^2}{h} \\
+         &= 16 (2t + h) \\
+         &= 32t \text{ for small values of h} \\
+  \end{align*}
+
+  Try it out:
+  \begin{align*}
+    v(10) & = \unit[320]{ft/s} \\
+    v(1)  & = \unit[32]{ft/s} \\
+    v(5)  & = \unit[160]{ft/s} \\
+  \end{align*}
+
+  The values aren't actually really right because of air resistance.
+
+  \section{Functions}
+
+  \subsection{Definitions}
+  \begin{itemize*}
+    \item machine
+    \item arrow diagram (talk about domain and range)
+  \end{itemize*}
+
+  \begin{itemize}
+    \item table
+    \item equation
+    \item graph
+  \end{itemize}
+
+  \begin{itemize*}
+    \item Describe the vertical line test.
+    \item Draw graph and show:
+      \begin{itemize*}
+        \item domain
+        \item range
+        \item $f(2)$
+        \item find value of $x$ where $f(x) = 2$
+        \item solve $f(x) = 0$
+      \end{itemize*}
+  \end{itemize*}
+
+  \subsection{Domain}
+  For real functions, even roots can't be negative and denominators of functions
+  can't be zero.
+
+  \begin{enumerate}
+    \item $f(x) = \sqrt{x - 3}$ 
+    \item $f(x) = \frac{x - 2}{x^2 - 5x + 6}$. Note that even though factors
+      cancel, the domain is still $x \neq \{2, 3\}|$ because $\frac{0}{0}$ isn't
+      defined.
+  \end{enumerate}
+
+  \subsection{Range}
+  Talk about range for functions like:
+  \begin{align*}
+    f(x) &= x^2 \\
+    f(x) &= 2x + 2 \\
+    f(x) &= -x^2 + 3 \\
+  \end{align*}
+
+  \subsection{Applying Functions}
+  \begin{itemize*}
+    \item $f(a)$, $f(a - 1)$, etc.
+    \item $2 f(a)$ vs $f(2a)$, etc.
+    \item difference function: $\frac{f(x + h) - f(x)}{h}$
+  \end{itemize*}
+
+  \subsection{Graphing}
+
+  \subsubsection{Even and Odd}
+    \begin{itemize*}
+      \item even: $f(-x) = f(x)$
+      \item odd: $f(-x) = -f(x)$
+    \end{itemize*}
+
+  \subsubsection{Increasing and Decreasing}
+    \begin{itemize*}
+      \item increasing: $x_1 \geq x_2 \rightarrow f(x_1) \geq f(x_2)$
+      \item decreasing: $x_1 \leq x_2 \rightarrow f(x_1) \leq f(x_2)$
+    \end{itemize*}
+
+  \subsection{Discontinuous Functions}
+
+  Draw graphs of discontinuous functions and talk about domain and range.
+
+  \subsection{Applications}
+
+  \subsubsection{Problem 56}
+  \begin{itemize*}
+    \item The perimeter of the semicircle at the top is: $P_c = \pi x$
+    \item The perimeter of the rectangle part is: $P_r = x + 2h$
+    \item The total perimeter is $P = x + 2h + \pi x$. This perimeter is 30:
+  \end{itemize*}
+
+  Since we know the perimeter is 20, we can find the height in terms of $x$: 
+  \begin{align*}
+    x + 2h + \pi x & = 20 \\
+    h              & = 10-\frac{1 + \pi}{2} x \\
+  \end{align*}
+
+  \begin{itemize*}
+    \item The area of the semicircle is: $A_c = \frac{\pi  x^2}{8}$
+    \item The area of the rectangle is $A_r = xh$
+    \item The total area is: $A = xh + \frac{\pi  x^2}{8}$
+  \end{itemize*}
+
+  Now we can use the expression for $h$ to get the area as a function of $x$:
+  \begin{align*}
+    A    & = xh + \frac{\pi  x^2}{8} \\
+    A(x) & = x (10-\frac{1 + \pi}{2} x) + \frac{\pi  x^2}{8} \\
+  \end{align*}
+
+\end{document}
+
