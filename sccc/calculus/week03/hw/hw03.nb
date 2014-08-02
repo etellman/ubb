@@ -1,0 +1,133 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3612,        124]
+NotebookOptionsPosition[      3095,        101]
+NotebookOutlinePosition[      3450,        117]
+CellTagsIndexPosition[      3407,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"2", "x"}], "-", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"g", "[", "x_", "]"}], ":=", 
+   RowBox[{"x", "^", "2"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"h", "[", "x_", "]"}], ":=", 
+   RowBox[{"1", "-", "x"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"g", "[", 
+     RowBox[{"h", "[", "x", "]"}], "]"}], "]"}], "//", "Expand"}], "//", 
+  "TraditionalForm"}]}], "Input",
+ CellChangeTimes->{{3.613644625508924*^9, 3.613644749961536*^9}, {
+  3.613644964377331*^9, 3.6136449724393272`*^9}, {3.613645096326396*^9, 
+  3.613645109411797*^9}, {3.613645418165895*^9, 3.613645451850556*^9}, {
+  3.613645788830358*^9, 3.6136458337061157`*^9}, {3.613645925512882*^9, 
+  3.6136459356872587`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"2", " ", 
+    SuperscriptBox["x", "2"]}], "-", 
+   RowBox[{"4", " ", "x"}], "+", "1"}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.613645535815441*^9, {3.613645606446507*^9, 3.61364561170065*^9}, 
+   3.613645666884753*^9, 3.613645834517744*^9, 3.613645936223473*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"sin", "(", 
+    RowBox[{"2", " ", "x"}], ")"}], 
+   RowBox[{
+    RowBox[{"sin", "(", 
+     RowBox[{"2", " ", "x"}], ")"}], "+", "1"}]], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.613645529381377*^9, 3.613645531764514*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"sin", "(", 
+   FractionBox[
+    RowBox[{"2", " ", "x"}], 
+    RowBox[{"x", "+", "1"}]], ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.6136446908365707`*^9, 3.613644750277235*^9}, 
+   3.613644973144884*^9, 3.6136451097839937`*^9, {3.613645429918036*^9, 
+   3.613645452368023*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox["x", 
+   RowBox[{
+    RowBox[{"2", " ", "x"}], "+", "1"}]], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.6136446908365707`*^9, 3.613644750277235*^9}, 
+   3.613644973144884*^9, 3.6136451097839937`*^9, {3.613645429918036*^9, 
+   3.61364545236941*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"sin", "(", 
+   RowBox[{"2", " ", 
+    RowBox[{"sin", "(", 
+     RowBox[{"2", " ", "x"}], ")"}]}], ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.6136446908365707`*^9, 3.613644750277235*^9}, 
+   3.613644973144884*^9, 3.6136451097839937`*^9, {3.613645429918036*^9, 
+   3.6136454523708353`*^9}}]
+}, Open  ]]
+},
+WindowSize->{583, 692},
+WindowMargins->{{Automatic, 12}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 891, 24, 80, "Input"],
+Cell[1473, 48, 323, 8, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1833, 61, 280, 8, 52, InheritFromParent],
+Cell[2116, 71, 326, 8, 59, "Output"],
+Cell[2445, 81, 293, 7, 56, "Output"],
+Cell[2741, 90, 338, 8, 73, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
