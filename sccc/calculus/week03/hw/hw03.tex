@@ -1,15 +1,14 @@
 % no answer key
-% \documentclass[letterpaper]{exam}
+\documentclass[letterpaper]{exam}
 
 % answer key
-\documentclass[letterpaper, landscape]{exam}
-\usepackage{2in1, lscape} 
-\printanswers
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers
 
 \usepackage{units} 
 \usepackage{xfrac} 
 \usepackage[fleqn]{amsmath}
-\usepackage{cancel}
 \usepackage{float}
 \usepackage{mdwlist}
 \usepackage{booktabs}
@@ -21,9 +20,12 @@
 \usepackage{enumerate}
 \usepackage{graphicx}
 
-\newcommand{\dg}{\ensuremath{^\circ}} 
-\everymath{\displaystyle}
+\usepackage{mathtools} 
 
+\newcommand{\dg}{\ensuremath{^\circ}} 
+\newcommand{\sgn}{\operatorname{sgn}}
+
+\everymath{\displaystyle}
 \title{Calculus I \\ Homework Three \\ Section 2.3}
 \author{}
 \date{\today}
@@ -35,7 +37,7 @@
   \section{Homework}
     \begin{itemize*}
       \item read Section 2.3
-      \item exercises: TO DO
+      \item exercises: 1-4, 8-12, 15-45, 47, 55, 56
     \end{itemize*}
 
   \ifprintanswers
@@ -213,17 +215,194 @@
             & = \boxed{ - \frac{4}{5} }
         \end{align*}
 
-    \end{description}
+      \item[35]
+        \[
+          \lim_{x \to 4} 4x - 9 = \lim_{x \to 4} x^2 - 4x + 7 = 7
+        \]
 
+        By the Squeeze Theorem
+        \[
+          \lim_{x \to 4} f(x) = 7
+        \]
+
+      \item[36]
+        \[
+          \lim_{x \to 1} 2x = \lim_{x \to 1} x^4 - x^2 + 2 = 2
+        \]
+
+        By the Squeeze Theorem
+        \[
+          \lim_{x \to 1} f(x) = 2
+        \]
+
+      \item[37]
+        The value of the cosine function is always somewhere between $-1$ and
+        $1$:
+        \[
+          -1 \leq \cos \frac{2}{x} \leq 1
+        \]
+
+        So:
+        \[
+          -x^4 \leq x^4 \cos \frac{2}{x} \leq x^4
+        \]
+
+        \[
+          \lim_{x \to 0} -x^4 = \lim_{x \to 0} x^4 = 0
+        \]
+
+        By the Squeeze Theorem
+        \[
+          \lim_{x \to 0} x^4 \cos \frac{2}{x} = 0
+        \]
+
+      \item[38]
+        \begin{align*}
+          \lim_{x \to 0+} \sqrt{x} &= 0 \\
+          \lim_{x \to 0+} 0 &= 0 \\
+          \\
+          0 \leq \sqrt{x} e^{\sin \sfrac{\pi}{x}} \leq \sqrt{x}
+        \end{align*}
+
+
+        By the Squeeze Theorem
+        \[
+          \lim_{x \to 0} \sqrt{x} e^{\sin \sfrac{\pi}{x}} = 0
+        \]
+
+      \item[39] 
+        \[
+          \lim_{x \to 3} (2x + |x - 3|) = 6 
+        \]
+
+      \item[40]
+        \[
+          f(x) = 
+            \begin{dcases*}
+              - \frac{2x + 12}{x + 6} & if $x < -6$ \\
+              \frac{2x + 12}{x + 6}   & if $x > -6$ \\
+            \end{dcases*}
+        \]
+
+        \[
+          \lim_{x \to -6} \frac{2x + 12}{x + 6} = 0
+        \]
+
+        so:
+        \[
+          \lim_{x \to -6} \frac{2x + 12}{|x + 6|} = \boxed{ 0 }
+        \]
+
+      \item[41]
+        \begin{align*}
+          f(x) & = \frac{2x - 1}{|2x^3 - x^2|} \\
+               & = \frac{1}{x^2} \cdot \frac{2x - 1}{|2x - 1|} \\
+          \\
+          \lim_{x \to 0.5^-} f(x) &= \boxed{ -4 } \\
+        \end{align*}
+        
+      \item[42] 
+        \[
+          \lim_{x \to -2} \frac{2 - |x|}{2 + x} = \boxed{ 1 }
+        \]
+
+      \item[43]
+        For $x < 0$
+        \[
+          f(x) = \frac{1}{x} - \frac{1}{-x} = \frac{2}{x}
+        \]
+
+        So:
+        \[
+          \lim_{x \to 0^-} f(x) = \boxed{ - \infty }
+        \]
+
+      \item[44]
+        For $x > 0$
+        \[
+          f(x) = \frac{1}{x} - \frac{1}{x} = 0
+        \]
+
+        So:
+        \[
+          \lim_{x \to 0^+} f(x) = \boxed{ 0 }
+        \]
+
+      \item[45]
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale = 0.5]{ex45.pdf}
+          \caption{Exercise 45}
+          \label{fig:ex45}
+        \end{figure}
+
+        \begin{enumerate}[(a)]
+          \item see Figure \ref{fig:ex45}
+          \item
+            \begin{enumerate}[(i)]
+              \item $\lim_{x \to 0^+} \sgn x = \boxed{ 1 }$
+              \item $\lim_{x \to 0^-} \sgn x = \boxed{ -1 }$
+              \item $\lim_{x \to 0} \sgn x$ does not exist
+              \item $\lim_{x \to 0} |\sgn x| = 1$
+            \end{enumerate}
+        \end{enumerate}
+
+      \item[47]
+        If $x > 1$:
+        \[
+          f(x) = \frac{x^2 - 1}{x - 1} = x + 1
+        \]
+
+        If $x < 1$:
+        \[
+          f(x) = - \frac{x^2 - 1}{x - 1} = -x - 1
+        \]
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale = 0.5]{ex46.pdf}
+          \caption{Exercise 46}
+          \label{fig:ex46}
+        \end{figure}
+
+        \begin{enumerate}[(a)]
+          \item
+            \begin{enumerate}[(i)]
+              \item $\lim_{x \to 1^+} f(x) = \boxed{ 2 }$
+              \item $\lim_{x \to 1^-} f(x) = \boxed{ -2 }$
+            \end{enumerate}
+          \item no, since there are different limits depending on the direction
+          \item see Figure \ref{fig:ex46}
+        \end{enumerate}
+
+      \item[55]
+        For the limit of the overall function to not be infinite,
+        $\lim_{x \to 0} f(x) = \boxed{ 8 }$
+
+      \item[56]
+        \begin{enumerate}[(a)]
+          \item $\lim_{x \to 0} f(x) = 0$ or the overall limit would be infinite
+
+          \item If you call the original function $g(x)$:
+            \[
+              g(x) = \frac{f(x)}{x} \cdot \frac{1}{x}
+            \]
+
+            $\lim_{x \to 0} \frac{f(x)}{x} = 0$ or the overall limit would
+            be infinite
+
+        \end{enumerate}
+    \end{description}
 
   \else
     \vspace{11 cm}
     \begin{quote}
       \begin{em}
-        TO DO
+        Striving for peace and preparing for war are incompatible with each
+        other, and in our time more so than ever. 
       \end{em}
     \end{quote}
-    \hspace{1 cm} --Malcolm X
+    \hspace{1 cm} --Albert Einstein
   \fi
 
 \end{document}
