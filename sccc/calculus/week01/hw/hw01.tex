@@ -20,6 +20,7 @@
 \usepackage{comment}
 \usepackage{enumerate}
 \usepackage{graphicx}
+\usepackage{mathtools} 
 
 \newcommand{\degree}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
@@ -35,7 +36,7 @@
   \section{Homework}
     \begin{itemize*}
       \item read Section 1.1
-      \item exercises: 1-2, 5-10, 12, 17-19, 21, 23, 26-31, 51-52, 57-58, 61-69
+      \item exercises: 1-2, 5-10, 12, 17-19, 21, 23, 26-31, 51-52, 57-58, 61-70
     \end{itemize*}
 
   \ifprintanswers
@@ -44,26 +45,41 @@
 
       \item[1]
         \begin{enumerate}[(a)]
-          \item $f(-1) = -2$
-          \item $f(2) \approx 2.8$
-          \item $f(-1) = f(1) = 2$
+          \item $f(-1) = \boxed{ -2 }$
+          \item $f(2) \approx \boxed{ 2.8 }$
+          \item $f(x) = 2$ when $\boxed{ x \approx \{-3, 1 \} }$
+          \item $f(x) = 0$ when $\boxed{ x \approx \{ -2.5, 0.3 \} }$
           \item 
             \begin{itemize*}
-              \item domain: $-4 \leq x \leq 2$
-              \item range: $-1 \leq y \leq 3$
+              \item domain: $\boxed{ [-3, 3] }$
+              \item range: $\boxed{ [-1, 3] }$
             \end{itemize*}
+
+          \item $f$ is increasing on $(-1, 3)$.
         \end{enumerate}
 
       \item[2]
         \begin{enumerate}[(a)]
-          \item $f(-4) = -2$; $g(3) = 4$
-          \item $x = \pm 2$
-          \item $x = -3$
-          \item $x > 0$
+          \item $f(-4) = \boxed{ -2 }$; $g(3) = \boxed{ 4 }$
+
+          \item $f(x) = g(x)$ when $x = \boxed{ \pm 2 }$
+
+          \item $f(x) = -1$ when $x = \boxed{ -3 }$
+
+          \item $f$ is decreasing on $\boxed{ (0, 4) }$
+
           \item 
+            The domain and range of $f$ are:
             \begin{itemize*}
-              \item domain: $-4 \leq x \leq 4$
-              \item range: $-2 \leq y \leq 3$
+              \item domain: $\boxed{ [-4, 4] }$
+              \item range: $\boxed{ [-2, 3] }$
+            \end{itemize*}
+
+          \item 
+            The domain and range of $g$ are:
+            \begin{itemize*}
+              \item domain: $\boxed{ [-4, 3] }$
+              \item range: $\boxed{ [0.5, 4] }$
             \end{itemize*}
         \end{enumerate}
 
@@ -71,14 +87,14 @@
 
       \item[6] 
         \begin{itemize*}
-          \item domain: $-2 \leq x \leq 2$
-          \item range: $-1 \leq y \leq 2$
+          \item domain: $\boxed{ [-2, 2] }$
+          \item range: $\boxed{ [-1, 2] }$
         \end{itemize*}
 
       \item[7] 
         \begin{itemize*}
-          \item domain: $-3 \leq x \leq 2$
-          \item range: $-2 \leq y \leq 3$
+          \item domain: $\boxed{ [-3, 2] }$
+          \item range: $\boxed{ [-3, 3] }$
         \end{itemize*}
 
       \item[8] not a function
@@ -102,7 +118,7 @@
         (December 21) and midway points at the two equinoxes (May 21 and
         September 21).
 
-      \item[17] This should look like a saw tooth where the value climbs in a
+      \item[17] This should look like a sawtooth where the value climbs in a
         straight line to Wednesday and then drops back to close to zero every
         Wednesday.
 
@@ -122,28 +138,34 @@
             landing, and 0 in between.
         \end{enumerate}
 
-      \item[19] draw graph
+      \item[19] 
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale = 0.6]{ex19.pdf}
+          \caption{Exercise 19}
+          \label{fig:ex19}
+        \end{figure}
+
+        \begin{enumerate}[(a)]
+          \item see Figure \ref{fig:ex19}
+          \item $f(1995) \approx 100$; $f(1999) \approx 500$
+        \end{enumerate}
 
       \item[21]
-        \begin{tabular}[H]{lr}
-          \toprule
-          $x$ & $f(x)$ \\
-          \midrule
-          $2$          & $12$ \\
-          $-2$         & $16$ \\
-          $a$          & $3a^2 - a + 2$ \\
-          $-a$         & $3a^2 + a + 2$ \\
-          $a + 1$      & $3a^2 + 5a + 4$ \\
-          $2 f(a)$     & $6a^2 - 2a + 4$ \\
-          $f(2a)$      & $12a^2 - 2a + 4$ \\
-          $f(a^2)$     & $3a^4 - 2a^2 + 4$ \\
-          $[ f(a) ]^2$ & $9a^4 - 6a^3 + 13a^2 - 4a +  4$ \\
-          $f(a + h)$   & $3a^2 + 6ah + 3h^2 - a - h + 2$ \\
-        \end{tabular}
+        \begin{align*}
+          f(2)          &= 12 \\
+          f(-2)         &= 16 \\
+          f(a)          &= 3a^2 - a + 2 \\
+          f(-a)         &= 3a^2 + a + 2 \\
+          f(a + 1)      &= 3a^2 + 5a + 4 \\
+          f(2 f(a))     &= 6a^2 - 2a + 4 \\
+          f(2a)      &= 12a^2 - 2a + 2 \\
+          f(a^2)     &= 3a^4 - a^2 + 2 \\
+          [ f(a) ]^2 &= 9a^4 - 6a^3 + 13a^2 - 4a +  4 \\
+          f(a + h)   &= 3a^2 + 6ah + 3h^2 - a - h + 2 \\
+        \end{align*}
 
       \item[23] $-h - 3$
-
-      \item[25] $-\frac{1}{a x}$
 
       \item[26] $-\frac{1}{x+1}$
 
@@ -159,8 +181,6 @@
           (x + 2) (x + 1) & \neq 0 \\
           x               & \neq \{-1, -2\} \\
         \end{align*}
-
-      \item[28] $x \neq -1$ and $x \neq -2$
 
       \item[29] $[0, \infty)$
 
@@ -179,9 +199,9 @@
       \item[52]
         \begin{align*}
           xy & = 16 \\
-          P  & = x + y \\
+          P  & = 2x + 2y \\
           \\
-          P(x)    & = x + \frac{16}{x} \\
+          P(x)    & = 2x + \frac{32}{x} \\
         \end{align*}
 
       % \item[56]
@@ -215,13 +235,19 @@
                & = 4 x^3-64 x^2+240 x \end{align*}
 
       \item[58]
-        20 cents per tenth of a mile is the same as \$2/mile.
-
-        The cost in dollars is: $C(x) = 2 + 2 x$
+        If $d$ is in tenths of a mile, the cost in dollars is: 
+        
+        \[
+          C(d) = 
+            \begin{cases}
+              2                & \text{if } d \leq 10 \\
+              2 + 0.2 (d - 10) & \text{if } d > 10 \\
+            \end{cases}
+        \]
 
         \begin{figure}[H]
           \centering
-          \includegraphics[scale = 0.5]{ex58.pdf}
+          \includegraphics[scale = 0.8]{ex58.pdf}
           \caption{Exercise 58}
           \label{fig:ex58}
         \end{figure}
@@ -236,12 +262,18 @@
           \item $(-5, -3)$
         \end{enumerate}
 
+      \item[64]
+        \begin{enumerate}[(a)]
+          \item symmetric around the y-axis
+          \item symmetric around the origin
+        \end{enumerate}
+
       \item[65] odd
       \item[66] even
       \item[67] neither
       \item[68] odd
       \item[69] even
-      \item[70] odd
+      \item[70] neither
         
     \end{description}
 

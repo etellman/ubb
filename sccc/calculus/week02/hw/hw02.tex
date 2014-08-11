@@ -37,7 +37,7 @@
       \item read Section 2.1 and 2.2
       \item exercises: 
         \begin{itemize*}
-          \item Section 2.1: 1-3, 10-11, 16
+          \item Section 2.1: 1-3 
           \item Section 2.2: 4-10, 13-16, 25-29, 32
         \end{itemize*}
     \end{itemize*}
@@ -53,15 +53,8 @@
         \begin{enumerate}[(a)]
           \item \{ -44, -39, -28, -22, -17 \}
           \item $-30$
-          \item see Figure \ref{fig:ex01}
+          \item graph
         \end{enumerate}
-
-        \begin{figure}[H]
-          \centering
-          \includegraphics[scale = 0.5]{ex01.pdf}
-          \caption{Exercise 1}
-          \label{fig:ex01}
-        \end{figure}
 
       \item[2]
         \begin{enumerate}[(a)]
@@ -75,57 +68,71 @@
         a good thing.
 
       \item[3]
-        \begin{tabular}[H]{rr}
-          \toprule
-          x   & slope \\
-          \midrule
-          0.5 & 0.333333 \\
-          0.9 & 0.263158 \\
-          0.99 & 0.251256 \\
-        \end{tabular}
-
-      \item[10] 
         \begin{enumerate}[(a)]
-          \item The slope is the number of degrees the temperature rises each
-            year. The T-intercept is the average temperature in 1950.
+          \item .
 
-          \item 2100 is 200 years after 1900. $T(200) = \boxed{ 12.5 \dg }$
+            \begin{tabular}[H]{rr}
+              \toprule
+              x     & slope \\
+              \midrule
+              0.5   & 0.333333 \\
+              0.9   & 0.263158 \\
+              0.99  & 0.251256 \\
+              0.999 & 0.250125 \\
+              1.5   & 0.2 \\
+              1.1   & 0.238095 \\
+              1.01  & 0.248756 \\
+              1.001 & 0.249875 \\
+            \end{tabular}
+
+          \item it seems to be 0.25
+
+          \item $y = \frac{1}{4} x + \frac{1}{4}$
+
         \end{enumerate}
 
-      \item[11] 
-        \begin{enumerate}[(a)]
-          \item The slope is $\unit[8.34]{mg/yr}$. This is the number of
-            additional milligrams of medication to be prescribed for each year
-            of age.
+      % \item[10] 
+      %   \begin{enumerate}[(a)]
+      %     \item The slope is the number of degrees the temperature rises each
+      %       year. The T-intercept is the average temperature in 1950.
 
-          \item The dosage for a newborn is $\boxed{ \unit[8.34]{mg} }$
-        \end{enumerate}
+      %     \item 2100 is 200 years after 1900. $T(200) = \boxed{ 12.5 \dg }$
+      %   \end{enumerate}
 
-      \item[16]
-        Find the slope:
-        \[
-          m = \frac{4800 - 2200}{300 - 200} = \unit[13]{dollars/chair}
-        \]
+      % \item[11] 
+      %   \begin{enumerate}[(a)]
+      %     \item The slope is $\unit[8.34]{mg/yr}$. This is the number of
+      %       additional milligrams of medication to be prescribed for each year
+      %       of age.
 
-        Use one of the points to find the y-intercept:
-        \begin{align*}
-          2200 & = 100 \cdot 13 + b \\
-          b    & = \unit[900]{chairs} \\
-        \end{align*}
+      %     \item The dosage for a newborn is $\boxed{ \unit[8.34]{mg} }$
+      %   \end{enumerate}
 
-        The equation is:
-        \[
-          y = 13 x + 900
-        \]
+      % \item[16]
+      %   Find the slope:
+      %   \[
+      %     m = \frac{4800 - 2200}{300 - 200} = \unit[13]{dollars/chair}
+      %   \]
 
-        \begin{itemize*}
-          \item $x$ is the number of chairs produced
-          \item $y$ is the cost to produce $x$ chairs
-          \item $\unit[13]{dollars/chair}$ is the incremental cost to produce
-            one additional chair
-          \item \$900 is the cost to pay the rent and keep the factory open,
-            even if you aren't producing any chairs.
-        \end{itemize*}
+      %   Use one of the points to find the y-intercept:
+      %   \begin{align*}
+      %     2200 & = 100 \cdot 13 + b \\
+      %     b    & = \unit[900]{chairs} \\
+      %   \end{align*}
+
+      %   The equation is:
+      %   \[
+      %     y = 13 x + 900
+      %   \]
+
+      %   \begin{itemize*}
+      %     \item $x$ is the number of chairs produced
+      %     \item $y$ is the cost to produce $x$ chairs
+      %     \item $\unit[13]{dollars/chair}$ is the incremental cost to produce
+      %       one additional chair
+      %     \item \$900 is the cost to pay the rent and keep the factory open,
+      %       even if you aren't producing any chairs.
+      %   \end{itemize*}
     \end{description}
 
     \subsection{Section 2.2}
@@ -133,53 +140,78 @@
 
       \item[4]
         \begin{enumerate}[(a)]
-          \item $\lim_{x \to 0} f(x) = 1$
-          \item $\lim_{x \to 3^-} f(x) = 4$
-          \item $\lim_{x \to 3^+} f(x) = 2$
-          \item $\lim_{x \to 3^+} f(x)$ does not exist because the limit is
-            different depending on which side you are on
-          \item $f(3) = 3$
+          \item $\lim_{x \to 0} f(x) = \boxed{ 3 }$
+          \item $\lim_{x \to 3^-} f(x) = \boxed{ 4 }$
+          \item $\lim_{x \to 3^+} f(x) = \boxed{ 2 }$
+          \item $\lim_{x \to 3^+} f(x)$ \fbox{ does not exist } 
+          \item $f(3) = \boxed{ 3 }$
         \end{enumerate}
+
+      \newpage 
 
       \item[5]
         \begin{enumerate}[(a)]
-          \item $\lim_{x \to 1^-} f(x) = 2$
-          \item $\lim_{x \to 1^+} f(x) = 3$
-          \item $\lim_{x \to 1} f(x)$ does not exist
-          \item $\lim_{x \to 5} f(x) = 4$
-          \item $f(5)$ is undefined
+          \item $\lim_{x \to 1^-} f(x) = \boxed{ 2 }$
+          \item $\lim_{x \to 1^+} f(x) = \boxed{ 3 }$
+          \item $\lim_{x \to 1} f(x)$ \fbox{ does not exist }
+          \item $\lim_{x \to 5} f(x) = \boxed{ 4 }$
+          \item $f(5)$ is \fbox{ undefined }
         \end{enumerate}
 
       \item[6]
         \begin{enumerate}[(a)]
-          \item $\lim_{x \to 0} f(x) = 1$
-          \item $\lim_{x \to 3^-} f(x) = 4$
-          \item $\lim_{x \to 3^+} f(x) = 2$
-          \item $\lim_{x \to 3^+} f(x)$ does not exist because the limit is
-            different depending on which side you are on
-          \item $f(3) = 3$
+          \item $\lim_{x \to 3^-} f(x) \approx \boxed{ 2.8 }$
+          \item $\lim_{x \to 3^+} f(x) \approx \boxed{ 2.8 }$
+          \item $\lim_{x \to -3} f(x) = 4$
+
+          \item $h(-3)$ is \fbox{ undefined }
+
+          \item $\lim_{x \to 0^-} h(x) = \boxed{ 1 }$
+
+          \item $\lim_{x \to 0^+} h(x) = \boxed{ -1 }$
+
+          \item $\lim_{x \to 0} h(x)$ \fbox{ does not exist }
+
+          \item $h(0) = \boxed{ 1 }$
+
+          \item $\lim_{x \to 2} h(x) = \boxed{ 2 }$ 
+
+          \item $h(2)$ is \fbox{ undefined }
+
+          \item $\lim_{x \to 5^+} h(x) = \boxed{ 3 }$
+
+          \item $\lim_{x \to 5^-} h(x)$ \fbox{ does not exist }
+
         \end{enumerate}
 
       \item[7]
         \begin{enumerate}[(a)]
-          \item $\lim_{t \to 0^-} g(t) = -1$
-          \item $\lim_{t \to 0^+} g(t) = -2$
-          \item $\lim_{t \to 0^+} g(t)$ does not exist
+          \item $\lim_{t \to 0^-} g(t) = \boxed{ -1 }$
 
-          \item $\lim_{t \to 2^-} g(t) = 2$
-          \item $\lim_{t \to 2^+} g(t) = 0$
-          \item $\lim_{t \to 2} g(t)$ does not exist
-          \item $g(2) = 0$
+          \item $\lim_{t \to 0^+} g(t) = \boxed{ -2 }$
 
-          \item $\lim_{t \to 4} g(t) = 3$
+          \item $\lim_{t \to 0^+} g(t)$ \fbox{ does not exist }
+
+          \item $\lim_{t \to 2^-} g(t) = \boxed{ 2 }$
+
+          \item $\lim_{t \to 2^+} g(t) = \boxed{ 0 }$
+
+          \item $\lim_{t \to 2} g(t)$ \fbox{ does not exist }
+
+          \item $g(2) = \boxed{ 1 }$
+
+          \item $\lim_{t \to 4} g(t) = \boxed{ 3 }$
         \end{enumerate}
 
       \item[8]
         \begin{enumerate}[(a)]
-          \item $\lim_{x \to 2} R(x) = -\infty$
-          \item $\lim_{x \to 5} R(x) = \infty$
-          \item $\lim_{x \to 3^-} R(x) = -\infty$
-          \item $\lim_{x \to 3^+} R(x) = \infty$
+          \item $\lim_{x \to 2} R(x) = \boxed{ -\infty }$
+
+          \item $\lim_{x \to 5} R(x) = \boxed{ \infty }$
+
+          \item $\lim_{x \to 3^-} R(x) = \boxed{ -\infty }$
+
+          \item $\lim_{x \to 3^+} R(x) = \boxed{ \infty }$
 
           \item
             \begin{align*}
@@ -190,14 +222,37 @@
 
         \end{enumerate}
 
+      \item[9]
+        \begin{enumerate}[(a)]
+          \item $\lim_{x \to 7} f(x) = \boxed{ 1 }$
+
+          \item $\lim_{x \to -3} f(x) = \boxed{ \infty }$
+
+          \item $\lim_{x \to 0} f(x) = \boxed{ \infty }$
+
+          \item $\lim_{x \to 6^-} f(x) = \boxed{ -\infty }$
+
+          \item $\lim_{x \to 6^+} f(x) = \boxed{ \infty }$
+
+          \item
+            \begin{align*}
+              x & = -3 \\
+              x & = 0 \\
+              x & = 6 \\
+            \end{align*}
+
+        \end{enumerate}
+
       \item[10]
         \begin{align*}
-          \lim_{t \to 12-} f(t) &= 150 \\
-          \lim_{t \to 12+} f(t) &= 300 \\
+          \lim_{t \to 12^-} f(t) &= \boxed{ 150 } \\
+          \lim_{t \to 12^+} f(t) &= \boxed{ 300 } \\
         \end{align*}
 
         Before $t = 12$, the level was gradually declining as it was absorbed.
         At $t = 12$ the patient gets a new injection and the level jumps up to 300
+
+      \item[13-16] graphs
 
       % \item[17]
       %   The values seem to be approaching $\frac{2}{3}$. This makes sense,
@@ -211,9 +266,9 @@
       %   The function isn't defined at $x = 2$ but it gets closer and closer to
       %   $\frac{2}{3}$ as $x$ gets closer to 2.
 
-      \item[19] The values get close to 0.5.
+      % \item[19] The values get close to 0.5.
 
-      \item[21] $\lim_{x \to 0} \frac{\sqrt{x + 4} - 2}{x} = \boxed{ \frac{1}{2} }$ 
+      % \item[21] $\lim_{x \to 0} \frac{\sqrt{x + 4} - 2}{x} = \boxed{ \frac{1}{2} }$ 
 
       \item[25] $\lim_{x \to -3^+} \frac{x + 2}{x + 3} = \boxed{ -\infty }$ 
 
@@ -222,6 +277,8 @@
       \item[27] $\lim_{x \to 1} \frac{2 - x}{(x - 1)^2} = \boxed{ \infty }$ 
 
       \item[28] $\lim_{x \to 5^-} \frac{e^x}{(x - 5)^3} = \boxed{ -\infty }$ 
+
+      \item[29] $\lim_{x \to 3^+} \ln \left( x^2 - 9 \right) = \boxed{ -\infty }$ 
 
       \item[32] 
         \begin{align*}
