@@ -1,0 +1,209 @@
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
+
+\usepackage{units} 
+\usepackage[fleqn]{amsmath}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\setcounter{tocdepth}{1}
+\everymath{\displaystyle}
+
+\author{}
+\date{\today}
+\title{Calculus I \\ Week Three}
+
+\begin{document}
+
+  \maketitle
+  \tableofcontents
+
+  \section{Limit Laws}
+
+  \subsection{Addition}
+  \begin{align}
+    \lim_{x \to a} \left[ f(x) + g(x) \right] 
+    &= \lim_{x \to a} f(x) + \lim_{x \to a} g(x) \label{eq:addition} \\
+    \lim_{x \to a} c f(x) &= c \lim_{x \to a} f(x) \label{eq:constant_factor} \\
+    \lim_{x \to a} c &= c \\
+  \end{align}
+
+  \subsection{Subtraction}
+  \begin{align}
+    h(x)                & = -1 \cdot g(x) \\
+    \lim_{x \to a} h(x) & = \lim_{x \to a} \left[ (-1) g(x) \right] \\
+                        & = - \lim_{x \to a} g(x) \\
+    \\
+    \lim_{x \to a} \left[ f(x) + h(x) \right] 
+               & = \lim_{x \to a} f(x) + \lim_{x \to a} h(x) \\
+               & = \lim_{x \to a} f(x) - \lim_{x \to a} g(x) \\
+               & = \lim_{x \to a} \left[ f(x) - g(x) \right]
+  \end{align}
+
+  \subsection{Multiplication and Division}
+  \begin{align}
+    \lim_{x \to a} \left[ f(x) \cdot g(x) \right] 
+      &= \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) \\
+    \lim_{x \to a} \frac{f(x)}{g(x)} 
+      &= \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)} 
+  \end{align}
+
+  \subsection{Powers}
+  \begin{align}
+    \lim_{x \to a} \left[ f(x) \right]^n = \left[ \lim_{x \to a} [f(x)]^n \right] \label{eq:power}
+    \lim_{x \to a} \sqrt[n]{x} = \sqrt[n]{x} \\
+    \lim_{x \to a} \sqrt[n]{ f(x) } = \sqrt[n]{ f(x) } \\
+  \end{align}
+
+  \subsection{Polynomials and Rational}
+  From Equations \ref{eq:power}, \ref{eq:addition}, and
+  \ref{eq:constant_factor}, the limit for a polynomial is the sum of the limit
+  of its terms.
+
+  Do some polynomial examples with justifications for each step.
+
+  Do some rational examples where the limit of the denominator is not zero.
+
+  \section{Rational Functions}
+
+  \subsection{Overview}
+  If the limit of the numerator and denominator are both zero, sometimes things
+  factor and you get an actual number.
+
+  \subsection{Simple Examples}
+
+  \begin{enumerate}
+    \item 
+      \[
+        \lim_{x \to 3} \frac{2x^2 - 5x - 3}{x - 3} = 7 
+      \]
+  \end{enumerate}
+
+  \subsection{Difference of Squares}
+
+  \subsubsection{Formulas}
+  \[
+    a^2 - b^2 = (a + b)(a - b)
+  \]
+
+  \subsubsection{Examples}
+  \begin{enumerate}
+    \item 
+      \[
+        \lim_{x \to 3} \frac{x^2 - 9}{x + 3} = \boxed{ -2 }
+      \]
+
+    \item 
+      \[
+        \lim_{x \to 4} \frac{4 - x}{2 - \sqrt{x}} = \boxed{ 4 }
+      \]
+
+    \item 
+      \[
+        \lim_{x \to 4} \frac{x^4 - 16}{x + 2} = \boxed{ 4 }
+      \]
+  \end{enumerate}
+
+  \subsection{Sum/Difference of Cubes}
+
+  \subsubsection{Formulas}
+  \begin{align*}
+    a^3 + b^3 &= (a+b) \left(a^2-a b+b^2\right) \\
+    a^3 - b^3 &= (a-b) \left(a^2+a b+b^2\right) \\
+  \end{align*}
+
+  Show how to get formulas with polynomial long division.
+
+  \subsubsection{Examples}
+  \begin{enumerate}
+    \item 
+      \[
+        \lim_{x \to -2} \frac{x^3 + 8}{x + 2} = \boxed{ 12 }
+      \]
+
+    \item 
+      \[
+        \lim_{x \to 1} \frac{x - 1}{x^3 - 1} = \boxed{ \frac{1}{3} }
+      \]
+
+    \item 
+      \begin{align*}
+        \lim_{x \to 0} & \frac{(x + 3)^3 - 27}{x} \\
+          & = \lim_{x \to 0} \frac{( (x + 3) - 3) \left( (x + 3)^2 +3(x + 3) + 9 \right)}{x} \\
+          & = \lim_{x \to 0} \left( x^2 + 6x + 9 + 3x + 9 + 9 \right) \\
+          & = \lim_{x \to 0} \left( x^2 + 9x + 27 \right) \\
+          & = \boxed{ 27 } \\
+          \\
+      \end{align*}
+
+  \end{enumerate}
+
+
+  \subsection{Rationalizing the Numerator/Denominator}
+
+  Multiply by the conjugate.
+
+  \begin{enumerate}
+    \item 
+      \[
+        \lim_{x \to 0} \frac{\sqrt{x + 4} - 2}{x} = \boxed{ \frac{1}{4} }
+      \]
+
+    \item 
+      \[
+        \lim_{x \to -1} \frac{x+1}{\sqrt{x+2}-1} = \boxed{ 2 }
+      \]
+  \end{enumerate}
+
+  \subsection{Miscellaneous}
+
+  \begin{enumerate}
+    \item 
+      \[
+        \lim_{x \to 0} \frac{1}{2x} - \frac{1}{x^3 + 2x} = \boxed{ \frac{1}{4} }
+      \]
+  \end{enumerate}
+
+
+  \section{Squeeze Theorem}
+  
+  If $f(x) \leq g(x) \leq h(x)$ near $a$ and 
+  $\lim_{x \to a} f(x) = \lim_{x \to a} h(x)$, then $\lim_{x \to a} g(x) = a$.
+
+  \begin{enumerate}
+    \item 
+      \[
+        \lim_{x \to 0} \left( x^2 + 1 \right) = 0 
+      \]
+
+      use $\lim_{x \to 0} \left( |x| + 1 \right) = 1$
+
+    \item
+      \[
+        \lim_{x \to 0} \frac{|x|}{\sqrt{x^4 + 4x^2 + 7}} = 0
+      \]
+
+      Use $f(x) = 0$ and $g(x) = |x|$
+
+  \end{enumerate}
+
+  \section{Absolute Value}
+
+  Absolute value limits exist when the right and left hand limits match. Show
+  how to write absolute value as two cases.
+
+  \begin{enumerate}
+    \item 
+      \[
+        \lim_{x \to 3} | x - 3 | = \boxed{ 0 }
+      \]
+  \end{enumerate}
+
+\end{document}
+
