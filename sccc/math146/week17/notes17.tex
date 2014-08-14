@@ -1,0 +1,135 @@
+\documentclass[landscape]{exam}
+
+\usepackage{2in1, lscape} 
+\usepackage{units} 
+\usepackage[fleqn]{amsmath}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{parskip}
+
+\printanswers
+
+\everymath{\displaystyle}
+
+\printanswers
+
+\title{Statistics \\ Week Sixteen}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+  \tableofcontents
+
+  \section{Gate Design}
+  \begin{itemize*}
+    \item transistors
+    \item not, nor and nand gates
+    \item two ways to make an xor gate
+    \item truth tables
+  \end{itemize*}
+
+  \section{Binary Numbers}
+  \begin{itemize*}
+    \item base 2 
+    \item adding and multiplying in base 2
+  \end{itemize*}
+
+  \section{Adders}
+
+  half adder:
+  \begin{itemize*}
+    \item two inputs
+    \item sum bit is $A xor B$
+    \item carry bit is $A \cdot B$
+  \end{itemize*}
+
+  full adder is two half adders
+
+  multi-bit adder out of multiple full-adders with $C_0 = 0$.
+
+  \section{Multiplier}
+
+  \section{Computer}
+  \begin{itemize*}
+    \item CPU
+    \item Program Counter
+    \item Instruction Register
+    \item Memory
+    \item Disk
+    \item Cache
+  \end{itemize*}
+
+  \section{Algorithms}
+
+  \subsection{Power}
+
+  show in assembly language, C, and Java.
+
+  \begin{verbatim}
+    r0 <- power
+    r1 <- 1
+    r2 <- base
+    
+    loop: 
+      if r0 == 0 go to done
+      r1 <- r1 * r2
+      r0 <- r0 - 1
+      go to loop
+
+    done:
+      // r1 holds the result
+  \end{verbatim}
+
+  \begin{verbatim}
+    // compute powers
+    int power(int base, int p) {
+      int result = 1;
+      for (int i = 0; i < p; i++) {
+        result *= base;
+      }
+
+      return result;
+    }
+
+    // compute powers
+    int power(int base, int p) {
+      return p == 0 ? 1 : base * power(base, p - 1);
+    }
+
+  \end{verbatim}
+
+  \subsection{Quicksort}
+
+  \begin{verbatim}
+    sort(numbers)
+      if numbers is not empty
+        pick a random number
+        partition into two sets of numbers
+        recursively sort each set
+        merge
+
+      return numbers
+  \end{verbatim}
+
+  draw tree for how many get sorted at each level to show why sorting is $n \log n$ ($2^{10} \cdot 10$)
+
+  \subsection{NP Complete}
+  \begin{itemize*}
+    \item traveling salesman
+    \item shipping methods and order items
+  \end{itemize*}
+
+  \section{Audio}
+  \begin{itemize*}
+    \item sampling
+    \item FFT and MP3
+  \end{itemize*}
+\end{document}
+
