@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -46,7 +46,475 @@
 
     \begin{description}
 
-      \item[1]
+      \item[1] $\delta = \boxed{ \frac{3}{7} }$
+
+      \item[2] $\delta = \boxed{ 0.7 }$
+
+      \item[3]
+        \begin{align*}
+          1.6^2     & \approx 2.56 \\
+          2.4^2     & \approx 5.76 \\
+          \\
+          4 - 1.6^2 & = 1.44 \\
+          2.4^2 - 4 & = 1.76 \\
+          \\
+          \delta    & = \boxed{ 1.44 } \\
+        \end{align*}
+
+      \item[4]
+        \begin{align*}
+          \sqrt{0.5}     & \approx 0.7071 \\
+          \sqrt{1.5}     & \approx 1.2247 \\
+          \\
+          1 - \sqrt{0.5} & \approx 0.2929 \\
+          \sqrt{1.5} - 1 & \approx 0.2247 \\
+          \\
+          \delta    & = \boxed{ 0.2247 } \\
+        \end{align*}
+
+      \item[11]
+        \begin{enumerate}[(a)]
+          \item 
+            \begin{align*}
+              \pi r^2 & = 1000 \\
+              r       & \approx \boxed{ 17.8412 } \\
+            \end{align*}
+
+          \item The area must be between $\unit[999]{cm^2}$ and $\unit[1005]{cm^2}$. This
+            means the radius must be between $\unit[17.1966]{cm}$ and $\unit[17.8588]{cm}$
+
+            This can be accomplished with a tolerance of $r = 17.8412 \pm \boxed{ 0.0176 }$.
+
+          \item 
+            \begin{itemize*}
+              \item $x$ is the radius
+              \item $f(x)$ is the area
+              \item $a$ is the target radius of $\unit[17.8412]{cm}$
+              \item $L$ is the target area of $\unit[1000]{cm^2}$
+              \item $\epsilon$ is $\unit[0.5]{cm^2}$
+              \item $\delta$ is $\unit[0.0176]{cm}$
+            \end{itemize*}
+        \end{enumerate}
+
+      \item[13]
+        \begin{enumerate}[(a)]
+          \item 
+            \begin{align*}
+              |4x - 8|    & = 4 |x - 2| \\
+              4 | x - 2 | & < 0.1 \\
+              |x - 2|     & < 0.025 \\
+              \\
+              \delta      & = \boxed{ 0.025 } \\
+            \end{align*}
+
+          \item $\delta = \boxed{ 0.0025 }$ 
+        \end{enumerate}
+
+      \item[14]
+        \begin{align*}
+          |5x - 7 - 3| & = 5 |x - 2| \\
+          \\
+          5 | x - 2 |  & < \epsilon \\
+          |x - 2|      & < \frac{\epsilon}{5} \\
+        \end{align*}
+
+        \begin{tabular}[H]{rr}
+          \toprule
+          $\epsilon$ & $\delta$ \\
+          \midrule
+          $0.1$      & $0.02$ \\
+          $0.05$     & $0.01$ \\
+          $0.01$     & $0.002$ \\
+          \bottomrule
+        \end{tabular}
+
+      \pagebreak
+
+      \item[15] Prove that $\lim_{x \to 1} 2x + 3 = 5$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x - 1| < \delta$ 
+        
+        then $|(2x + 3) - 5| < \epsilon$
+
+        \paragraph{preliminary investigation}
+        \begin{align*}
+          |(2x + 3) - 5| & = 2|x - 1| \\
+          \delta         & = \frac{\epsilon}{2} \\
+        \end{align*}
+
+        \paragraph{proof}
+        Show that if $\delta = \frac{\epsilon}{2}$ and $0 < |x - 1| < \delta$
+
+        then $|(2x + 3) - 5| < \epsilon$
+        \[
+          |(2x + 3) - 5| = 2|x - 1| < 2 \delta = 2 \cdot \frac{\epsilon}{2} = \epsilon
+        \]
+
+      \newpage
+
+      \item[16] Prove that $\lim_{x \to -2} \left( \frac{1}{2} x + 3 \right) = 2$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x + 2| < \delta$ 
+        
+        then $ \left| \left( \frac{1}{2} x + 3 \right) - 2 \right| < \epsilon$
+
+        \paragraph{preliminary investigation}
+        \begin{align*}
+          \left| \left( \frac{1}{2} x + 3 \right) - 2 \right| & = \frac{1}{2}|x + 2| \\
+          \delta         & = 2 \epsilon \\
+        \end{align*}
+
+        \paragraph{proof}
+        Show that if $\delta = 2 \epsilon$ and $0 < |x + 2| < \delta$
+        then $|(2x + 3) - 5| < \epsilon$
+        \[
+          \left| \left( \frac{1}{2} x + 3 \right) - 2 \right| = \frac{1}{2} |x + 2| < \frac{1}{2} \delta = \epsilon
+        \]
+
+      \item[17] Prove that $\lim_{x \to -3} ( 1 - 4x ) = 13$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x + 3| < \delta$ 
+        
+        then $ | (1 - 4x) - 13 | < \epsilon$
+
+        \paragraph{preliminary investigation}
+        \begin{align*}
+          | (1 - 4x) - 13 | & = 4 |x + 3| \\
+          \delta         & = \frac{\epsilon}{4} \\
+        \end{align*}
+
+        \paragraph{proof}
+        Show that if $\delta = \frac{\epsilon}{4}$ and $0 < |x + 3| < \delta$
+
+        then $|(1 - 4x) - 13| < \epsilon$
+        \[
+          |(1 - 4x) - 13| = 4 |x + 3| < 4 \delta = \epsilon
+        \]
+
+      \item[18] Prove that $\lim_{x \to 4} ( 7 - 3x ) = -5$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x - 4| < \delta$ 
+        
+        then $ | (7 - 3x) + 5 | < \epsilon$
+
+        \paragraph{preliminary investigation}
+        \begin{align*}
+          | (7 - 3x) + 5 | & = 3 |x - 3| \\
+          \delta         & = \frac{\epsilon}{3} \\
+        \end{align*}
+
+        \paragraph{proof}
+        Show that if $\delta = \frac{\epsilon}{3}$ and $0 < |x - 4| < \delta$
+
+        then $|(7 - 3x) + 5| < \epsilon$
+        \[
+          |(7 - 3x) + 5| = 3 |x - 3| < 3 \delta = \epsilon
+        \]
+
+      \newpage
+
+      \item[19] Prove that $\lim_{x \to 3} \frac{x}{5} = \frac{3}{5}$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x - 3| < \delta$ then $ \left| \frac{x}{5} - \frac{3}{5} \right| < \epsilon$
+
+        \paragraph{preliminary investigation}
+        \begin{align*}
+          \left| \frac{x}{5} - \frac{3}{5} \right| & = \frac{1}{5} |x - 3| \\
+          \delta                                   & = 5 \epsilon \\
+        \end{align*}
+
+        \paragraph{proof}
+        Show that if $\delta = 5 \epsilon$ and $0 < |x - 3| < \delta$
+
+        then $\left| \frac{x}{5} - \frac{3}{5} \right| < \epsilon$
+
+        \[
+          \left| \frac{x}{5} - \frac{3}{5} \right| = \frac{1}{5} |x - 3| < \frac{1}{5} \delta = \epsilon
+        \]
+
+      \item[20] Prove that $\lim_{x \to 6} \left( \frac{x}{4} + 3 \right) = \frac{9}{2}$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x - 6| < \delta$ 
+        
+        then $ \left| \left( \frac{x}{4} + 3 \right) - \frac{9}{2} \right| < \epsilon$
+
+        \paragraph{preliminary investigation}
+
+        \begin{align*}
+          \left| \left( \frac{x}{4} + 3 \right) - \frac{9}{2} \right| & = \frac{1}{4} |x - 6| \\
+          \delta                                               & = 4 \epsilon \\
+        \end{align*}
+
+        \paragraph{proof}
+        Show that if $\delta = 4 \epsilon$ and $0 < |x - 6| < \delta$
+
+        then $\left| \left( \frac{x}{4} + 3 \right) - \frac{9}{2} \right| < \epsilon$
+        \[
+          \left| \left( \frac{x}{4} + 3 \right) - \frac{9}{2} \right| = \frac{1}{4} |x - 6| < \frac{1}{4} \delta = \epsilon
+        \]
+
+      \item[21] Prove that $\lim_{x \to 2} \left( \frac{x^2 + x - 6}{x - 2} \right) = 5$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x - 2| < \delta$ then $ \left| \left( \frac{x^2 + x - 6}{x - 2} \right) - 5 \right| < \epsilon$
+
+        \paragraph{preliminary investigation}
+        \begin{align*}
+          \left| \left( \frac{x^2 + x - 6}{x - 2} \right) - 5 \right| & = |x - 2| \\
+          \delta                                                      & = \epsilon \\
+        \end{align*}
+
+        \paragraph{proof}
+        Show that if $\delta = \epsilon$ and $0 < |x - 2| < \delta$
+
+        then $\left| \left( \frac{x^2 + x - 6}{x - 2} \right) - 5 \right| < \epsilon$
+
+        \[
+          \left| \left( \frac{x^2 + x - 6}{x - 2} \right) - 5 \right| = |x - 2| < \delta = \epsilon
+        \]
+
+      \newpage
+
+      \item[22] Prove that $\lim_{x \to 1.5} \left( \frac{9 - 4x^2}{3 + 2x} \right) = 6$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x - 1.5| < \delta$ then $ \left| \left( \frac{9 - 4x^2}{3 + 2x} \right) - 6 \right| < \epsilon$
+
+        \paragraph{preliminary investigation}
+        \begin{align*}
+          \left| \left( \frac{9 - 4x^2}{3 + 2x} \right) - 6 \right| & = 2 |x + 1.5| \\
+          \delta                                                    & = \frac{\epsilon}{2} \\
+        \end{align*}
+
+        \paragraph{proof}
+        Show that if $\delta = \frac{\epsilon}{2}$ and $0 < |x - 1.5| < \delta$
+
+        then $\left| \left( \frac{9 - 4x^2}{3 + 2x} \right) - 6 \right| < \epsilon$
+
+        \[
+          \left| \left( \frac{9 - 4x^2}{3 + 2x} \right) - 6 \right| = 2 |x + 1.5| < 2 \delta = \epsilon
+        \]
+
+      \item[27] Prove that $\lim_{x \to 0} |x| = 0$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x - 0| < \delta$ then $ \left| |x| - 0 \right| < \epsilon$
+
+        \paragraph{proof}
+        Show that if $\delta = \epsilon$ and $0 < |x - 0| < \delta$
+        then $| |x| - 0| < \epsilon$
+
+        \[
+          | |x| - 0| = |x| < \delta = \epsilon
+        \]
+
+      \item[28] Prove that $\lim_{x \to 9^-} \sqrt[4]{9 - x} = 0$
+
+        Let $y = 9 - x$
+
+        Then we need to prove that: $\lim_{y \to 0^+} \sqrt[4]{y} = 0$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |y| < \delta$ 
+        
+        then $ \left| \sqrt[4]{y} \right| < \epsilon$
+
+        \paragraph{proof}
+        Show that if $\delta = \min \{ \epsilon^4, 1 \}$ and 
+        $0 < |y| < \delta$ 
+        
+        then $| \sqrt[4]{y} | < \epsilon$
+
+        \[
+          | \sqrt[4]{y} | = \sqrt[4]{y} < \delta = \epsilon
+        \]
+
+      \item[29] Prove that $\lim_{x \to 2} \left( x^2 - 4x + 5 \right) = 1$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x - 1| < \delta$ then $ \left| \left( x^2 - 4x + 5 \right) - 1 \right| < \epsilon$
+
+        \paragraph{preliminary investigation}
+        \begin{align*}
+          \left| \left( x^2 - 4x + 5 \right) - 1 \right| & = |(x - 2)^2| \\
+          \delta                                         & = \sqrt{ \epsilon } \\
+        \end{align*}
+
+        \paragraph{proof}
+        Show that if $\delta = \sqrt{ \epsilon }$ and 
+        $0 < |x - 2| < \delta$ 
+        
+        then $\left| \left( x^2 + 4x + 5 \right) - 1 \right| < \epsilon$
+
+        \[
+          \left| \left( x^2 + 4x + 5 \right) - 1 \right| = |(x - 2)^2| < \delta^2 = \epsilon
+        \]
+
+      \newpage
+
+      \item[30] Prove that $\lim_{x \to 3} \left( x^2 + x - 4 \right) = 8$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x - 3| < \delta$ then $\left| \left( x^2 + x - 4 \right) - 8 \right| < \epsilon$
+
+        \paragraph{preliminary investigation}
+
+        \[
+          \left| \left( x^2 + x - 4 \right) - 8 \right| = |(x - 3)(x + 4)| 
+        \]
+
+        If we limit $x$ to the range: $2 \leq x \leq 4$, then $6 \leq x + 4 \leq 8$ and
+        \[
+          |(x - 3)(x + 4)| \leq |8 (x - 3)|
+        \]
+
+        Choose $\delta = \min \left\{1, \frac{\epsilon}{8} \right\}$
+
+        \paragraph{proof}
+        Show that if $\delta = \min \left\{ 1, \frac{\epsilon}{8} \right\}$ and 
+        $0 < |x - 3| < \delta$ 
+        
+        then $\left| \left( x^2 + x - 4 \right) - 8 \right| < \epsilon$
+
+        \[
+          \left| \left( x^2 + x - 4 \right) - 8 \right| = |(x - 3)(x + 4)| < 8 \delta \leq \epsilon
+        \]
+
+      \item[31] Prove that $\lim_{x \to -2} \left( x^2 - 1 \right) = 3$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x + 2| < \delta$ then $| \left( x^2 - 1 \right) - 3 | < \epsilon$
+
+        \paragraph{preliminary investigation}
+
+        \[
+          | \left( x^2 - 1 \right) - 3 | = |(x - 2)(x + 2)| 
+        \]
+
+        If we limit $x$ to the range: $-3 \leq x \leq -1$, then $-5 \leq x - 2 \leq -3$ and
+        \[
+          |(x - 2)(x + 2)| \leq |5 (x + 2)|
+        \]
+
+        Choose $\delta = \min \left\{1, \frac{\epsilon}{5} \right\}$
+
+        \paragraph{proof}
+        Show that if $\delta = \min \left\{ 1, \frac{\epsilon}{5} \right\}$ and 
+        $0 < |x + 2| < \delta$ 
+        
+        then $| \left( x^2 - 1 \right) - 3 | < \epsilon$
+
+        \[
+          | \left( x^2 - 1 \right) - 3 | = |(x - 2)(x + 2)| < 5 \delta \leq \epsilon
+        \]
+
+      \item[32] Prove that $\lim_{x \to 2} x^3 = 8$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x - 2| < \delta$ then $| x^3 - 8 | < \epsilon$
+
+        \paragraph{preliminary investigation}
+
+        \[
+          | x^3 - 8 | = |(x - 2) \left(x^2 + 2x + 4\right) | 
+        \]
+
+        If we limit $x$ to the range: $1 \leq x \leq 3$, then $7 \leq x^2 + 2x + 4 \leq 19$ and
+        \[
+          |(x - 2) \left(x^2 + 2x + 4\right) | \leq |19 (x - 2)|
+        \]
+
+        Choose $\delta = \min \left\{1, \frac{\epsilon}{19} \right\}$
+
+        \paragraph{proof}
+        Show that if $\delta = \min \left\{ 1, \frac{\epsilon}{19} \right\}$ and 
+        $0 < |x - 2| < \delta$ 
+        
+        then $| x^3 - 8 | < \epsilon$
+
+        \[
+          | x^3 - 8 | = |(x - 2) \left(x^2 + 2x + 4\right) | < 19 \delta \leq \epsilon
+        \]
+
+      \newpage
+
+      \item[36] Prove that $\lim_{x \to 2} \frac{1}{x} = \frac{1}{2}$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x - 2| < \delta$ 
+        
+        then $\left| \frac{1}{x} - \frac{1}{2} \right| < \epsilon$
+
+        \paragraph{preliminary investigation}
+
+        \[
+          \left| \frac{1}{x} - \frac{1}{2} \right| = \left| \frac{x - 2}{2x} \right| 
+        \]
+
+        If we limit $x$ to the range: $1 \leq x \leq 3$, 
+        
+        then $\frac{1}{6} \leq \frac{1}{2x} \leq 1$ and
+
+        \[
+          \left| \frac{x - 2}{2x} \right| \leq |x - 2|
+        \]
+
+        Choose $\delta = \min \{ 1, \epsilon \}$
+
+        \paragraph{proof}
+        Show that if $\delta = \min \{ 1, \epsilon \}$ and 
+        $0 < |x - 2| < \delta$ 
+        
+        then $\left| \frac{1}{x} - \frac{1}{2} \right| < \epsilon$
+
+        \[
+          \left| \frac{1}{x} - \frac{1}{2} \right| = \left| \frac{x - 2}{2x} \right| < \delta \leq \epsilon
+        \]
+
+        % An alternate and easier approach would be to let $y = \frac{1}{x}$ and prove that
+        % \[
+        %   \lim_{y \to 1/2} = \frac{1}{2}
+        % \]
+
+      \newpage
+
+      \item[37] Prove that $\lim_{x \to a} \sqrt{x} = \sqrt{a}$ for $a > 0$
+
+        Show that for all $\epsilon$ there is a $\delta$ such that if 
+        $0 < |x - a| < \delta$ 
+        
+        then $\left| \sqrt{x} - \sqrt{a} \right| < \epsilon$
+
+        \paragraph{preliminary investigation}
+
+        \[
+          \left| \sqrt{x} - \sqrt{a} \right| = \frac{|x - a|}{\sqrt{x} + \sqrt{a}} 
+        \]
+
+        % If we limit $x$ to the range: $0 \leq x \leq a + 1$, 
+        % then $\sqrt{a} \leq \sqrt{x} + \sqrt{a} \leq \sqrt{a} + \sqrt{a + 1}$ and
+
+        Since $\sqrt{x} \geq 0$:
+        \[
+          \frac{|x - a|}{\sqrt{x} + \sqrt{a}} \leq \frac{|x - a|}{\sqrt{a}}
+        \]
+
+        Choose $\delta = \epsilon$
+
+        \paragraph{proof}
+        Show that if $\delta = \epsilon$ and $0 < |x - a| < \delta$ 
+        
+        then $\left| \sqrt{x} - \sqrt{a} \right| < \epsilon$
+
+        \[
+          \left| \sqrt{x} - \sqrt{a} \right| = \frac{|x - a|}{\sqrt{x} + \sqrt{a}} < \frac{\delta}{\sqrt{a}} < \delta = \epsilon
+        \]
 
     \end{description}
 
