@@ -37,7 +37,7 @@
   \section{Homework}
     \begin{itemize*}
       \item read Section 2.5
-      \item exercises: TO DO
+      \item exercises: 1, 3-6, 9, 16-17, 21-22, 25, 35, 37, 40-41, 45, 61, 63, 65
     \end{itemize*}
 
   \ifprintanswers
@@ -246,12 +246,33 @@
 
         Since $\lim_{x \to 0} f(x) = f(0)$, $f$ is continuous at $x = 0$.
 
-      % \item[65]
-      %   Picture two makes making the trip on the same day, where they both start at 7:00
-      %   AM and one monk starts from the top of the mountain and the other monk starts from
-      %   the bottom of the mountain at the same time. The monks will pass each other on the
-      %   path some time during the day, regardless of how fast they walk.
+      \newpage
 
+      \item[65]
+        Picture two monks making the trip on the same day. Both monks start at 7:00 AM
+        with one monk starting from the top of the mountain and the other monk starting
+        from the bottom of the mountain. The monks will pass each other on the path some
+        time during the day, regardless of how fast they walk.
+
+        In math terms, you can define two functions which give monk distance traveled as a
+        function of time. The first function ($f_1$), for day one, starts at distance 0 at
+        $t = 0$ and ends at distance $D$ (the total distance) at $t = 12$. The second
+        function ($f_2$), for day two, starts at distance $D$ at $t = 0$ and ends at
+        distance 0 at $t = 12$.
+
+        Both functions are continuous since the monk doesn't have access to a Star Trek
+        transporter.
+
+        Define a new function which is the difference between the two original functions:
+        \[
+          d(t) = f_2(t) - f_1(t)
+        \]
+
+        $d(t)$ is continuous since it is the difference of two continuous functions.
+        
+        Since $d(0)$ = D and $d(12) = -D$, by the Intermediate Value Theorem there must
+        be some time between 0 and 12 where $d(t) = 0$ and the monk is at the same place
+        at the same time on the second day as he was on the first day.
 
     \end{description}
 
@@ -259,10 +280,12 @@
     \vspace{10 cm}
     \begin{quote}
       \begin{em}
-        TO DO
+        In long intervals I have expressed an opinion on public issues whenever they
+        appeared to me so bad and unfortunate that silence would have made me feel guilty
+        of complicity. 
       \end{em}
     \end{quote}
-    \hspace{1 cm} --TO DO
+    \hspace{1 cm} --Albert Einstein
   \fi
 
 \end{document}
