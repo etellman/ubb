@@ -1,4 +1,4 @@
-grades.dir <- '~/Documents/U/ubb/sccc/math146/grades'
+grades.dir <- '~/Documents/U/ubb/sccc/calculus/grades'
 
 # returns the number of points for a list of problems
 points <- function(problems) {
@@ -11,8 +11,8 @@ percentage <- function(score, points) {
   c(actual = actual, percentage = round(100 * (actual) / points))
 }
 
-possible <- points(c(1:4, 8:12, 15:30, 35:45, 47, 55, 56))
-percentage(5, possible)
+possible <- points(c(1:4, 11, 13:22, 27:32, 36:37))
+percentage(18, possible)
 
 possible
 

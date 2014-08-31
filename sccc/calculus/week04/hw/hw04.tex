@@ -46,9 +46,15 @@
 
     \begin{description}
 
-      \item[1] $\delta = \boxed{ \frac{3}{7} }$
+      \item[1] 
+        \[
+          \delta = 2 - \frac{10}{7} = \boxed{ \frac{4}{7} }
+        \]
 
-      \item[2] $\delta = \boxed{ 0.7 }$
+      \item[2] 
+        \[
+          \delta = 5.7 - 5 = \boxed{ 0.7 }
+        \]
 
       \item[3]
         \begin{align*}
@@ -77,13 +83,28 @@
           \item 
             \begin{align*}
               \pi r^2 & = 1000 \\
-              r       & \approx \boxed{ 17.8412 } \\
+              r       & = 10 \sqrt{\frac{10}{\pi}} \\
+                      & \approx \boxed{ 17.8412 } \\
             \end{align*}
 
-          \item The area must be between $\unit[999]{cm^2}$ and $\unit[1005]{cm^2}$. This
-            means the radius must be between $\unit[17.1966]{cm}$ and $\unit[17.8588]{cm}$
+          \newpage
 
-            This can be accomplished with a tolerance of $r = 17.8412 \pm \boxed{ 0.0176 }$.
+          \item The area must be between $\unit[995]{cm^2}$ and $\unit[1005]{cm^2}$. 
+            
+            The formula for radius in terms of area is:
+            \[
+              r = \sqrt{\frac{A}{\pi}}
+            \]
+
+            For the tolerance we need, 
+            \[
+              \sqrt{\frac{995}{\pi}} \leq r \leq \sqrt{\frac{1005}{\pi}}
+            \]
+
+            This can be accomplished with a tolerance of 
+            \[
+              r = 17.8412 \pm \boxed{ 0.04457 }
+            \]
 
           \item 
             \begin{itemize*}
@@ -92,7 +113,7 @@
               \item $a$ is the target radius of $\unit[17.8412]{cm}$
               \item $L$ is the target area of $\unit[1000]{cm^2}$
               \item $\epsilon$ is $\unit[0.5]{cm^2}$
-              \item $\delta$ is $\unit[0.0176]{cm}$
+              \item $\delta$ is $\unit[0.04457]{cm}$
             \end{itemize*}
         \end{enumerate}
 
@@ -127,8 +148,6 @@
           $0.01$     & $0.002$ \\
           \bottomrule
         \end{tabular}
-
-      \pagebreak
 
       \item[15] Prove that $\lim_{x \to 1} 2x + 3 = 5$
 
@@ -234,7 +253,8 @@
         then $\left| \frac{x}{5} - \frac{3}{5} \right| < \epsilon$
 
         \[
-          \left| \frac{x}{5} - \frac{3}{5} \right| = \frac{1}{5} |x - 3| < \frac{1}{5} \delta = \epsilon
+          \left| \frac{x}{5} - \frac{3}{5} \right| 
+            = \frac{1}{5} |x - 3| < \frac{1}{5} \delta = \epsilon
         \]
 
       \item[20] Prove that $\lim_{x \to 6} \left( \frac{x}{4} + 3 \right) = \frac{9}{2}$
@@ -256,13 +276,15 @@
 
         then $\left| \left( \frac{x}{4} + 3 \right) - \frac{9}{2} \right| < \epsilon$
         \[
-          \left| \left( \frac{x}{4} + 3 \right) - \frac{9}{2} \right| = \frac{1}{4} |x - 6| < \frac{1}{4} \delta = \epsilon
+          \left| \left( \frac{x}{4} + 3 \right) - \frac{9}{2} \right| 
+            = \frac{1}{4} |x - 6| < \frac{1}{4} \delta = \epsilon
         \]
 
       \item[21] Prove that $\lim_{x \to 2} \left( \frac{x^2 + x - 6}{x - 2} \right) = 5$
 
         Show that for all $\epsilon$ there is a $\delta$ such that if 
-        $0 < |x - 2| < \delta$ then $ \left| \left( \frac{x^2 + x - 6}{x - 2} \right) - 5 \right| < \epsilon$
+        $0 < |x - 2| < \delta$ then 
+        $ \left| \left( \frac{x^2 + x - 6}{x - 2} \right) - 5 \right| < \epsilon$
 
         \paragraph{preliminary investigation}
         \begin{align*}
@@ -284,7 +306,8 @@
       \item[22] Prove that $\lim_{x \to 1.5} \left( \frac{9 - 4x^2}{3 + 2x} \right) = 6$
 
         Show that for all $\epsilon$ there is a $\delta$ such that if 
-        $0 < |x - 1.5| < \delta$ then $ \left| \left( \frac{9 - 4x^2}{3 + 2x} \right) - 6 \right| < \epsilon$
+        $0 < |x - 1.5| < \delta$ then 
+        $\left| \left( \frac{9 - 4x^2}{3 + 2x} \right) - 6 \right| < \epsilon$
 
         \paragraph{preliminary investigation}
         \begin{align*}
@@ -298,7 +321,8 @@
         then $\left| \left( \frac{9 - 4x^2}{3 + 2x} \right) - 6 \right| < \epsilon$
 
         \[
-          \left| \left( \frac{9 - 4x^2}{3 + 2x} \right) - 6 \right| = 2 |x + 1.5| < 2 \delta = \epsilon
+          \left| \left( \frac{9 - 4x^2}{3 + 2x} \right) - 6 \right| 
+            = 2 |x + 1.5| < 2 \delta = \epsilon
         \]
 
       \item[27] Prove that $\lim_{x \to 0} |x| = 0$
@@ -332,7 +356,7 @@
         then $| \sqrt[4]{y} | < \epsilon$
 
         \[
-          | \sqrt[4]{y} | = \sqrt[4]{y} < \delta = \epsilon
+          | \sqrt[4]{y} | = \sqrt[4]{y} < \sqrt[4]{\delta} \leq \sqrt[4]{\epsilon^4} = \epsilon
         \]
 
       \item[29] Prove that $\lim_{x \to 2} \left( x^2 - 4x + 5 \right) = 1$
