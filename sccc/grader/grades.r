@@ -21,7 +21,7 @@ grades <- read.delim(grades.file, header = TRUE, strip.white = T, sep = ',')
 
 grades.m <- melt(grades, id = "id")
 
-sd(grades.m$value, na.rm = T)
+median(grades.m$value, na.rm = T)
 
 plot <- ggplot(grades.m, aes(x = value)) + 
   geom_histogram(binwidth = 5, color = "black", fill = "lightblue") +
