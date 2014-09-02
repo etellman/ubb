@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -49,16 +49,13 @@
       \item[1] $\lim_{x \to 4} f(x) = f(4)$
 
       \item[3] 
-        \begin{itemize}
-          \item $-4$ because $f(-4)$ is not defined
+        \begin{enumerate}[(a)]
+          \item $f$ is discontinuous at $-4$, $-2$, $2$ and $4$. 
 
-          \item $-2$, $2$ and $4$ because the limit is not defined or is different
-            depending on the direction
+          \item $-4$ is not continuous from either direction, $-2$ is continuous from the
+            left, and $2$ and $4$ are continuous from the right.
 
-          \item $-2$ is continuous from the left and $2$ and $4$ are continuous from the
-            right.
-
-        \end{itemize}
+        \end{enumerate}
 
       \item[4] $f$ is continuous on $[-4, -2)$, $(-2, 2)$, $[2, 4)$, $(4, 6)$ 
           and $(6, 8)$.
@@ -72,24 +69,26 @@
         \begin{align*}
           \lim_{x \to 3} \left[ 2 f(x) - g(x) \right] & = 4 \\
           10 - \lim_{x \to 3} g(x)                    & = 4 \\
-          \lim_{x \to 3} g(x)                         & = 6 \\
+          \lim_{x \to 3} g(x)                         & = \boxed{ 6 } \\
         \end{align*}
 
       \item[16] 
-        \[
-          \lim_{x \to -1^-} f(x) \neq \lim_{x \to -1^+} f(x) \neq f(x)
-        \]
+        \begin{align*}
+          \lim_{x \to 1^-} f(x) & = - \infty \\
+          \lim_{x \to 1^+} f(x) & = \infty \\
+        \end{align*}
+
+        $\lim_{x \to 1} f(x)$ does not exist because the right and left hand limits are
+        different.
 
       \item[17] 
-        \[
-          \lim_{x \to 0^-} f(x) \neq \lim_{x \to 0^+} f(x) 
-        \]
+        $\lim_{x \to 0} f(x)$ does not exist because 
+        $\lim_{x \to 0^-} f(x) \neq \lim_{x \to 0^+} f(x)$
 
       \item[21] This is a rational function, so by Theorem 5 it is continuous everywhere
-        in its domain.
+        in its domain ($x \neq \{-3, -2\}$).
 
       \item[22] 
-        
         $\sqrt[3]{x}$ is a root function so it is continuous everywhere in its
         domain by Theorem 7.
 
@@ -97,6 +96,9 @@
 
         $G(x)$ is a product of two continuous functions, so it is continuous
         everywhere in its domain by Theorem 4.
+
+        The domain of both functions is $(-\infty, \infty)$, so this is also the domain of
+        the combined function.
 
       \item[25] 
         
@@ -107,7 +109,7 @@
         everywhere by Theorem 7.
 
         $L(x)$ is a product of two continuous functions, so it is continuous
-        everywhere in its domain by Theorem 4.
+        everywhere by Theorem 4.
 
       \item[35] $x^2$ and $\sqrt{x}$ are continuous everywhere in their domains
         by Theorem 7.
@@ -138,6 +140,7 @@
         \begin{align*}
           \lim_{x \to 0^-} f(x) & = 1 \\
           \lim_{x \to 0^+} f(x) & = 2 \\
+          f(0)                  & = 1 \\
           \\
           \lim_{x \to 2^-} f(x) & = 0 \\
           \lim_{x \to 2^+} f(x) & = 0 \\
@@ -145,6 +148,9 @@
         \end{align*}
 
         $f$ is discontinuous at $x = 0$ and continuous everywhere else.
+
+        Since $f(0) = \lim_{x \to 0^-} f(x)$, $f$ is continuous from the left at
+        $x = 0$
 
         See Figure \ref{fig:ex37}.
 
@@ -170,7 +176,7 @@
 
         \begin{align*}
           2^2 c + 2 \cdot 2 & = 2^3 - 2c \\
-          c                 & = \frac{2}{3} \\
+          c                 & = \boxed{ \frac{2}{3} } \\
         \end{align*}
 
         This value makes the function:
@@ -182,24 +188,7 @@
             \end{cases}
         \]
 
-        $\lim_{x \to 2} f(x) = f(2) = \frac{20}{3}$
-
-      % \item[43]
-      %   \begin{enumerate}[(a)]
-      %     \item 
-      %       \begin{align*}
-      %         \frac{x^4 - 1}{x - 1} & = (x + 1)(x^2 + 1) \\
-      %         \lim_{x \to 1} f(x)   & = 4 \\
-      %       \end{align*}
-      %   \end{enumerate}
-
-      %   \[
-      %     g(x) = 
-      %       \begin{cases}
-      %         f(x) & \text{if } x \neq 1 \\
-      %         4    & \text{if } x = 1 \\
-      %       \end{cases}
-      %   \]
+        Double check: $\lim_{x \to 2} f(x) = f(2) = \frac{20}{3}$
 
       \item[45]
         \begin{align*}
@@ -254,25 +243,30 @@
         from the bottom of the mountain. The monks will pass each other on the path some
         time during the day, regardless of how fast they walk.
 
-        In math terms, you can define two functions which give monk distance traveled as a
-        function of time. The first function ($f_1$), for day one, starts at distance 0 at
-        $t = 0$ and ends at distance $D$ (the total distance) at $t = 12$. The second
-        function ($f_2$), for day two, starts at distance $D$ at $t = 0$ and ends at
-        distance 0 at $t = 12$.
+        In math terms, you can define two functions which give distance traveled as a
+        function of time. 
+        
+        \begin{itemize*}
+          \item $d_1$, for day one, starts at distance 0 at $t = 0$ and ends at distance
+            $D$ (the total distance) at $t = 12$. 
+
+          \item $d_2$, for day two, starts at distance $D$ at $t = 0$ and ends at distance
+            0 at $t = 12$.
+        \end{itemize*}
 
         Both functions are continuous since the monk doesn't have access to a Star Trek
         transporter.
 
         Define a new function which is the difference between the two original functions:
         \[
-          d(t) = f_2(t) - f_1(t)
+          \Delta(t) = d_2(t) - d_1(t)
         \]
 
-        $d(t)$ is continuous since it is the difference of two continuous functions.
+        $\Delta(t)$ is continuous since it is the difference of two continuous functions.
         
-        Since $d(0)$ = D and $d(12) = -D$, by the Intermediate Value Theorem there must
-        be some time between 0 and 12 where $d(t) = 0$ and the monk is at the same place
-        at the same time on the second day as he was on the first day.
+        Since $\Delta(0)$ = D and $\Delta(12) = -D$, by the Intermediate Value Theorem
+        there must be some time between 0 and 12 where $\Delta(t) = 0$ and the monk is at
+        the same place at the same time on the second day as he was on the first day.
 
     \end{description}
 
