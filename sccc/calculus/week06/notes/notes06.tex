@@ -1,4 +1,4 @@
-\documentclass[letterpaper, landscape]{exam}
+\documentclass[letterpaper]{exam}
 % \usepackage{2in1, lscape} 
 \printanswers
 
@@ -93,13 +93,6 @@
 
     \item $\lim_{x \to \infty} \frac{x - 1}{\sqrt{4x^2 - 2x + 3}}$
 
-      \begin{figure}[H]
-        \centering
-        \includegraphics[scale = 0.5]{example01.pdf}
-        \caption{Example One}
-        \label{fig:example01}
-      \end{figure}
-
       since $\sqrt{x^2} = x$ if $x > 0$:
       \[
         \lim_{x \to \infty} \frac{x - 1}{\sqrt{4x^2 - 2x + 3}} 
@@ -112,6 +105,14 @@
           = \lim_{x \to \infty} \frac{1 - 1/x}{-\sqrt{4 - 2/x + 3/x^2}} 
           = -\frac{1}{2} \\
       \]
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.7]{example01.pdf}
+        \caption{$\lim_{x \to \infty} \frac{x - 1}{\sqrt{4x^2 - 2x + 3}}$}
+        \label{fig:example01}
+      \end{figure}
+
   \end{enumerate}
 
   \section{Difference of Infinite Quantities}
@@ -132,12 +133,67 @@
       & = \boxed{ -\infty } \\
   \end{align*}
 
+  \newpage
+
   \section{Infinite Limits at Infinity}
   \begin{itemize}
-    \item $f(x) = x^3$, etc.
+    \item Only the highest degree exponent affects the limits as $x$ goes to $\pm \infty$
+
+    \item Even powers behave like $f(x) = x^2$
+
+    \item Even powers behave like $f(x) = x^3$
+
+    \item As you zoom out, graph is indistinguishable from graph of just the leading term
+
     \item $f(x)$ gets larger and larger as $x$ gets larger and larger (or smaller and smaller)
-    \item show rational function with degree of numerator larger than degree of denominator
+
+    \item a rational function with degree of numerator larger than degree of denominator
+      has $\pm \infty$ limit
+
   \end{itemize}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.6]{zoom01.pdf}
+    \caption{$-4$ to $4$}
+    \label{fig:zoom01}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.6]{zoom02.pdf}
+    \caption{$-10$ to $10$}
+    \label{fig:zoom02}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.6]{zoom03.pdf}
+    \caption{$-100$ to $100$}
+    \label{fig:zoom03}
+  \end{figure}
+
+  \section{Graphing}
+
+  \begin{enumerate}
+    \item 
+      $f(x) = (x - 2)(x + 3)(x + 1)$ 
+      \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.6]{graphing01.pdf}
+        \caption{$f(x) = (x - 2)(x + 3)(x + 1)$}
+        \label{fig:graphing01}
+      \end{figure}
+
+    \item
+      $f(x) = \frac{x^2-16}{x^2+x-6}$
+      \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.6]{graphing02.pdf}
+        \caption{$f(x) = \frac{x^2-16}{x^2+x-6}$}
+        \label{fig:graphing02}
+      \end{figure}
+  \end{enumerate}
 
   \section{Precise Definitions}
 
