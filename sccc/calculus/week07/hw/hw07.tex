@@ -1,0 +1,146 @@
+% no answer key
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\usepackage{mathtools} 
+
+\newcommand{\dg}{\ensuremath{^\circ}} 
+\newcommand{\sgn}{\operatorname{sgn}}
+
+\everymath{\displaystyle}
+\title{Calculus I \\ Homework Seven \\ Section 2.7}
+\author{}
+\date{\today}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Homework}
+    \begin{itemize*}
+      \item read Section 2.7
+      \item exercises: TO DO
+    \end{itemize*}
+
+  \ifprintanswers
+
+  \section{Solutions}
+
+    \begin{description}
+
+      \item[1] 
+        \begin{enumerate}[(a)]
+
+          \item $m_{secant} = \frac{f(x) - f(3)}{x - 3}$ 
+
+          \item $m_{tangent} = \lim_{x \to 3} \frac{f(x) - f(3)}{x - 3}$ 
+
+        \end{enumerate}
+
+      % \item[3]
+      %   \begin{enumerate}[(a)]
+
+      %     \item 
+      %       \[
+      %         m = \lim_{x \to 1} \frac{ 4x - x^2 - 3}{x - 1} = \boxed{ 2 }
+      %       \]
+
+      %     \item 
+      %       \[
+      %         m = \lim_{h \to 0} \frac{ 4 (1 + h) - (1 + h) ^2 - 3}{h} = \boxed{ 2 }
+      %       \]
+      %   \end{enumerate}
+
+      \item[5]
+        \[
+          m = \lim_{x \to 3} \frac{ \left( \cfrac{x - 1}{x - 2} - 2 \right) }{x - 3} = \boxed{ -1 }
+        \]
+
+      \item[6]
+        \[
+          m = \lim_{x \to -1} \frac{ \left(  2x^3 - 5x \right) - 3 }{x - (-1)} = \boxed{ 1 }
+        \]
+
+      \item[7]
+        \[
+          m = \lim_{x \to 1} \frac{ \sqrt[x] - 1 }{x - 1} = \boxed{ \frac{1}{2} }
+        \]
+
+      \item[8]
+        \[
+          m = \lim_{x \to 0} \frac{ \left( \cfrac{2x}{(x + 1)^2} - 0 \right) }{x - 0} = \boxed{ 2 }
+        \]
+      
+      \item[13]
+        \begin{align*}
+          v & = \lim_{h \to 0} \frac{ 40(2 + h) - 16 (2 + h)^2 - \left( 40 \cdot 2 - 16 \cdot 2^2 \right)}{h} \\
+            & = \boxed{ -24 }
+        \end{align*}
+
+      \item[14]
+        \begin{enumerate}[(a)]
+          \item 
+            \begin{align*}
+              v & = \lim_{h \to 0} \frac{ 10(1 + h) - 1.86 (1 + h)^2 - \left( 10 \cdot 1 - 1.86 \cdot 1^2 \right) }{h} \\
+                & = \boxed{ \unit[6.28]{m/s} }
+            \end{align*}
+
+          \item
+            \begin{align*}
+              v & = \lim_{h \to 0} \frac{ 10(a + h) - 1.86 (a + h)^2 - \left( 10 a - 1.86 a^2 \right) }{h} \\
+                & = \boxed{ 10 - 3.72a }
+            \end{align*}
+
+          \item
+            \begin{align*}
+              10t - 1.86t^2 & = 0 \\
+              t             & \approx \boxed{ \unit[5.38]{s} } \\
+            \end{align*}
+
+          \item
+            \[
+              10 - 3.72 \cdot 5.38 \approx \boxed{ \unit[-10]{m/s} }
+            \]
+
+        \end{enumerate}
+
+      \item[15]
+        \begin{align*}
+          v = \lim_{x \to a} \frac{ 1/x^2 - 1/a^2}{x - a} & = \lim_{x \to a} \frac{ a^2 - x^2}{x^2a^2 (x - a)} \\
+          = - \lim_{x \to a} \frac{ x + a}{x^2a^2} \\
+          = \boxed{ - \frac{2}{a^3} } \\
+        \end{align*}
+
+    \end{description}
+
+
+  \else
+    \vspace{10 cm}
+    \begin{quote}
+      \begin{em}
+        TO DO
+      \end{em}
+    \end{quote}
+    \hspace{1 cm} --TO DO
+  \fi
+
+\end{document}
+
