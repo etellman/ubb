@@ -28,6 +28,7 @@ sink()
 
 plot <- ggplot(df, aes(x = reorder(victim, -dp.percent), y = dp.percent, fill = defendant)) + 
   geom_bar(stat = "identity", position = "dodge", color = "black") +
+  ggtitle("Louisiana Incarceration Rate") +
   labs(x = "Victim", y = "Death Penalty Percentage")
 print(plot)
 
