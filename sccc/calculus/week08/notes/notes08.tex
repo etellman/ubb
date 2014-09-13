@@ -1,0 +1,89 @@
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
+
+\usepackage{units} 
+\usepackage[fleqn]{amsmath}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[justification=justified]{caption}
+
+\setcounter{tocdepth}{1}
+\everymath{\displaystyle}
+
+\author{}
+\date{\today}
+\title{Calculus I \\ Week Seven}
+
+\begin{document}
+
+  \maketitle
+  \tableofcontents
+
+  \section{Average Rates of Change}
+  \begin{itemize}
+    \item Talk about average velocity and secant line.
+    \item Draw graph of position and come up with graph of velocity and acceleration
+  \end{itemize}
+
+  \section{Derivatives and Velocities}
+
+  \begin{align*}
+    f'(a) & = \lim_{x \to a} \frac{f(x) - f(a)}{x - a} \\
+    f'(a) & = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \\
+    f'(x) & = \frac{\Delta y}{\Delta x} \\
+          & = \lim_{x_2 \to x_1} \frac{f(x_2) - f(x_1)}{x_2 - x_1} \\
+  \end{align*}
+
+  \begin{itemize}
+    \item Tangent line at $(a, f(a))$ is line through $(a, f(a))$ with slope $f'(a)$.
+  \end{itemize}
+
+  \section{Examples}
+  \begin{enumerate}
+    \item Find an equation for the tangent line at the given point:
+      \begin{enumerate}[(a)]
+
+        \item $y = \frac{x + 2}{x + 1}$, $x = 1$
+          \begin{solution}
+            $f'(1) = - \frac{1}{4}$
+          \end{solution}
+
+        \item $y = x^2 + 1$, $x = 2$
+          \begin{solution}
+            $f'(1) = 2$
+          \end{solution}
+
+      \end{enumerate}
+
+    \item find slope of tangent line of $y = \sqrt{x}$ when $x = a$.
+
+    \item $y = 48 t - 16 t^2$ (height in feet on earth for ball thrown upwards at 50
+      ft/s) 
+
+      \begin{itemize}
+        \item what is the velocity when $t = 2$
+        \item what is the velocity when $t = a$
+        \item when is the ball at the peak of its flight?
+        \item how long is the flight?
+        \item what speed is the ball going when it hits the ground?
+      \end{itemize}
+
+    \item Find an equation to the tangent line at $x = 1$ if $f(1) = 3$ and $f'(1) = 2$.
+
+    \item Sketch the graph of a function where:
+      \begin{itemize*}
+        \item $f(0) = 1$
+        \item $f'(0) = 2$
+        \item $f'(5) = -1$
+        \item $f'(10) = 1$
+      \end{itemize*}
+
+  \end{enumerate}
+\end{document}
+
