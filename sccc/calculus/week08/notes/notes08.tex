@@ -25,65 +25,134 @@
   \maketitle
   \tableofcontents
 
-  \section{Average Rates of Change}
-  \begin{itemize}
-    \item Talk about average velocity and secant line.
-    \item Draw graph of position and come up with graph of velocity and acceleration
-  \end{itemize}
+  \section{Homework 2.5}
 
-  \section{Derivatives and Velocities}
+  Problem 62: 
+  \begin{solution}
+    \begin{align*}
+      \lim_{x \to 1^-} f(x) &= - \infty \\ 
+      \lim_{x \to -1^+} f(x) &= \infty \\ 
+    \end{align*}
 
-  \begin{align*}
-    f'(a) & = \lim_{x \to a} \frac{f(x) - f(a)}{x - a} \\
-    f'(a) & = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \\
-    f'(x) & = \frac{\Delta y}{\Delta x} \\
-          & = \lim_{x_2 \to x_1} \frac{f(x_2) - f(x_1)}{x_2 - x_1} \\
-  \end{align*}
+    Since there are always values of $x$ where $f(x) < 0-$ and values of
+    $x$ where $f(x) > 0$ in the interval $(-1, 1)$, and $f$ is continuous on $(1, 1)$,
+    there is some value of $x$ where $f(x) = 0$ in the same interval.
 
-  \begin{itemize}
-    \item Tangent line at $(a, f(a))$ is line through $(a, f(a))$ with slope $f'(a)$.
-  \end{itemize}
+  \end{solution}
 
-  \section{Examples}
+  \section{Derivative as a Function}
+
+  \begin{itemize*}
+    \item Show formula for derivative as a function.
+    \item Show graphs of derivatives
+    \item Show graphs of derivatives where $f(x)$ is sequence of line segments
+    \item Show graphs of polynomial derivatives (see below)
+    \item Show graph of $f(x) = e^x$
+  \end{itemize*}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{example06.pdf}
+    \caption{$f(x) = x^2$}
+    \label{fig:example06}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{example03.pdf}
+    \caption{$f(x) = x^3$}
+    \label{fig:example03}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{example04.pdf}
+    \caption{$f(x) = x^4$}
+    \label{fig:example04}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{example05.pdf}
+    \caption{$f(x) = \sin(x)$}
+    \label{fig:example05}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{example01.pdf}
+    \caption{Third Degree Polynomial}
+    \label{fig:example01}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{example02.pdf}
+    \caption{Fourth Degree Polynomial}
+    \label{fig:example02}
+  \end{figure}
+
+  \section{Derivative Examples}
+
   \begin{enumerate}
-    \item Find an equation for the tangent line at the given point:
-      \begin{enumerate}[(a)]
+    \item 
+      \[
+        f(x) = 3x^2 + x
+      \]
+    \item 
+      \[
+        f(x) = x^3 - 2x^2 + x + 1
+      \]
 
-        \item $y = \frac{x + 2}{x + 1}$, $x = 1$
-          \begin{solution}
-            $f'(1) = - \frac{1}{4}$
-          \end{solution}
+    \item 
+      \[
+        f(x) = \frac{1}{\sqrt{x}}
+      \]
 
-        \item $y = x^2 + 1$, $x = 2$
-          \begin{solution}
-            $f'(1) = 2$
-          \end{solution}
+      \begin{solution}
+        \[
+          f'(x) = \frac{-1}{2 x^{3/2}}
+        \]
+      \end{solution}
 
-      \end{enumerate}
+    \item 
+      \[
+        f(x) = \sqrt{x^2 + 1}
+      \]
 
-    \item find slope of tangent line of $y = \sqrt{x}$ when $x = a$.
+      \begin{solution}
+        \[
+          f'(x) = \frac{x}{\sqrt{x^2 + 1}}
+        \]
+      \end{solution}
 
-    \item $y = 48 t - 16 t^2$ (height in feet on earth for ball thrown upwards at 50
-      ft/s) 
+    \item 
+      \[
+        f(x) = \frac{2x + 1}{x - 1}
+      \]
 
-      \begin{itemize}
-        \item what is the velocity when $t = 2$
-        \item what is the velocity when $t = a$
-        \item when is the ball at the peak of its flight?
-        \item how long is the flight?
-        \item what speed is the ball going when it hits the ground?
-      \end{itemize}
-
-    \item Find an equation to the tangent line at $x = 1$ if $f(1) = 3$ and $f'(1) = 2$.
-
-    \item Sketch the graph of a function where:
-      \begin{itemize*}
-        \item $f(0) = 1$
-        \item $f'(0) = 2$
-        \item $f'(5) = -1$
-        \item $f'(10) = 1$
-      \end{itemize*}
+      \begin{solution}
+        \[
+          f'(x) = \frac{-3}{(x - 1)^2}
+        \]
+      \end{solution}
 
   \end{enumerate}
+
+  \section{Second Derivatives}
+
+
+  Calculate first and second derivatives of ball thrown from height 5 meters (approximate):
+  \[
+    h(t) = 5 + 30t - 5t^2
+  \]
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{example07.pdf}
+    \caption{Height, Velocity, and Acceleration}
+    \label{fig:example07}
+  \end{figure}
+
 \end{document}
 
