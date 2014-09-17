@@ -18,7 +18,7 @@
 
 \author{}
 \date{\today}
-\title{Calculus I \\ Week Seven}
+\title{Calculus I \\ Week Eight}
 
 \begin{document}
 
@@ -27,7 +27,7 @@
 
   \section{Homework 2.5}
 
-  Problem 62: 
+  Homework 2.5, problem 62: 
   \begin{solution}
     \begin{align*}
       \lim_{x \to 1^-} f(x) &= - \infty \\ 
@@ -39,6 +39,8 @@
     there is some value of $x$ where $f(x) = 0$ in the same interval.
 
   \end{solution}
+
+  Talk about Homework 2.4, problem 43
 
   \section{Derivative as a Function}
 
@@ -138,6 +140,30 @@
       \end{solution}
 
   \end{enumerate}
+
+  \section{Differentiability}
+
+  \begin{itemize}
+    \item $f$ is differentiable on $(a, b)$ if $f'$ is defined on $(a, b)$
+    \item show graph of corners where $\lim_{x \to a^-} \neq \lim_{x \to a^+}$
+    \item $f(x) = |x|$ is not differentiable at $x = 0$
+  \end{itemize}
+
+  \section{Continuity}
+  If $f$ is differentiable at $a$ then $f$ is continuous at $a$ (not necessarily
+  vice-versa).
+
+  proof: show that if $\lim{h \to 0} \frac{f(x + h) - f(x)}{h}$ is defined then
+  $\lim{h \to 0} f(x + h) = f(x)$ (variation on proof in book)
+
+  \begin{align*}
+    f(x + h) - f(x)                               & = \frac{f(x + h) - f(x)}{h} \cdot h \\
+    \lim_{h \to 0} \left[ f(x + h) - f(x) \right] & = \lim_{h \to 0} \left[  \frac{f(x + h) - f(x)}{h} \cdot h \right] \\
+    \lim_{h \to 0} f(x + h) - \lim_{h \to 0} f(x) & =  f'(x) \cdot \lim_{h \to 0} h  \\
+    \lim_{h \to 0} f(x + h) - \lim_{h \to 0} f(x) & =  0 \\
+    \lim_{h \to 0} f(x + h)                       & = \lim_{h \to 0} f(x) \\
+    \lim_{h \to 0} f(x + h)                       & = f(x) \\
+  \end{align*}
 
   \section{Second Derivatives}
 
