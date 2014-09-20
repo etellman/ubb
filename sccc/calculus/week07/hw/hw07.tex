@@ -142,11 +142,17 @@
 
       \item[15]
         \begin{align*}
-          v & = \lim_{x \to a} \frac{ 1/x^2 - 1/a^2}{x - a} \\
-            & = \lim_{x \to a} \frac{ a^2 - x^2}{x^2a^2 (x - a)} \\
-            & = - \lim_{x \to a} \frac{ x + a}{x^2a^2} \\
-            & = \boxed{ \unit[- \frac{2}{a^3}]{m/s} } \\
+          f'(a) & = \lim_{x \to a} \frac{ 1/x^2 - 1/a^2}{x - a} \\
+                & = \lim_{x \to a} \frac{ a^2 - x^2}{x^2a^2 (x - a)} \\
+                & = - \lim_{x \to a} \frac{ x + a}{x^2a^2} \\
+                & = \boxed{ \unit[- \frac{2}{a^3}]{m/s} } \\
+          \\
+          f'(1) & = -2 \\
+          f'(2) & = - \frac{1}{4} \\
+          f'(3) & = - \frac{2}{27} \\
         \end{align*}
+
+      \newpage
 
       \item[18]
         \begin{enumerate}[(a)]
@@ -167,7 +173,14 @@
 
         \end{enumerate}
 
-      \item[19] graph
+      \item[19] $f(0) = 0$, $f'(0) = 3$, $f'(1) = 0$ and $f'(2) = -1$
+        
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale = 0.5]{ex19.pdf}
+          \caption{Exercise 19}
+          \label{fig:ex19}
+        \end{figure}
 
       \item[21] 
         \begin{align*}
@@ -217,12 +230,10 @@
                 & = \boxed{ \frac{-1}{2(a + 2)^{3/2}} } \\
         \end{align*}
 
-      \newpage 
-
       \item[30]
         \begin{align*}
-          f'(a) & = \lim_{h \to 0} \frac{ \sqrt{3(a + h) + 10} - \sqrt{3a + 10} }{h} \\
-                & = \boxed{ \frac{3}{2 \sqrt{3a + 10}} } \\
+          f'(a) & = \lim_{h \to 0} \frac{ \sqrt{3(a + h) + 1} - \sqrt{3a + 1} }{h} \\
+                & = \boxed{ \frac{3}{2 \sqrt{3a + 1}} } \\
         \end{align*}
 
       \item[31]
@@ -245,14 +256,17 @@
         The speed is the absolute value of the velocity so it is also $\unit[1]{m/s}$ in this case.
 
       \item[38]
-        \[
-          v(5) = f'(5) = \boxed{ \unit[ - \frac{26}{25} ]{m/s} } 
-        \]
+        \begin{align*}
+          f'(t) & = - \frac{1}{t^2} - 1 \\
+          f'(5) & = \boxed{ \unit[ - \frac{26}{25} ]{m/s} }
+        \end{align*}
 
         The speed is the absolute value of the velocity so it is $\unit[\frac{26}{25} ]{m/s}$ in this case.
  
       \item[40]
         After an hour, the rate looks like about $\boxed{ - \unit[50]{degrees/hour} }$
+
+      \newpage
 
       \item[43]
         \begin{enumerate}[(a)]
