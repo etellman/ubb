@@ -81,8 +81,201 @@
         h'(\theta) = - \sin \theta + e^{\theta} \cot \theta - e^{\theta} \csc^2 \theta
       \]
 
-   \end{description}
- 
+    \item[8] 
+      \[
+        y' = e^x (c x + c - \sin x + \cos x)
+      \]
+
+    \item[9] 
+      \[
+        y' = \frac{ x \sec ^2 x - \tan x +  + 2}{( 2 - \tan x )^2}
+      \]
+
+    \item[10] 
+      \[
+        y' = \frac{x \cos x}{(x + \cos x)^2}
+      \]
+
+    \item[11] 
+      \[
+        f'(\theta) = \frac{\tan \theta \sec \theta}{(\sec \theta + 1)^2}
+      \]
+
+    \item[12] 
+      \[
+        y' = -\frac{1}{2} \sec ^2\left(\frac{\theta }{2}\right)
+      \]
+
+    \item[13] 
+      \[
+        y' = \frac{x \cos x - 2 \sin x}{x^3}
+      \]
+
+    \item[15] 
+      \begin{align*}
+        f(x)  & = x e^x \csc x \\
+        f'(x) & = x \cdot \frac{d}{dx} \left( e^x \csc x \right) + e^x \csc x \\
+              & = x \left( - e^x \csc x \cot x + e^x \csc x  \right)+ e^x \csc x \\
+              & = e^x \csc x + e^x x \csc x - e^x x \csc x \cot x \\
+      \end{align*}
+
+    \item[17] 
+      \begin{align*}
+          \frac{d}{dx} (\csc x) & = \frac{d}{dx} \left( \frac{1}{\sin x} \right) \\
+                                & = - \frac{\cos x}{\sin^2 x} \\
+                                & = - \frac{\cos x}{\sin x} \cdot \frac{1}{\sin x} \\
+                                & = - \cot x \csc x \\
+      \end{align*}
+
+    \item[18] 
+      \begin{align*}
+          \frac{d}{dx} (\sec x) & = \frac{d}{dx} \left( \frac{1}{\cos x} \right) \\
+                                & = \frac{\sin x}{\cos^2 x} \\
+                                & = \frac{\sin x}{\cos x} \cdot \frac{1}{\cos x} \\
+                                & = \tan x \sec x \\
+      \end{align*}
+
+    \item[19] 
+      \begin{align*}
+          \frac{d}{dx} (\cot x) & = \frac{d}{dx} \left( \frac{\cos}{\sin x} \right) \\
+                                & = \frac{- \sin^2 x - \cos^2 x}{\sin^2 x} \\
+                                & = - \frac{\sin^2 x + \cos^2 x}{\sin^2 x} \\
+                                & = - \frac{1}{\sin^2 x} \\
+                                & = - \csc^2 x \\
+      \end{align*}
+
+    \item[23] 
+      \begin{align*}
+        y'    & = 1 - \sin x \\
+        y'(0) & = 1 \\
+        \\
+        1     & = \frac{y - 1}{x - 0} \\
+        y     & = x + 1 \\
+      \end{align*}
+
+    \item[24] 
+      \begin{align*}
+        y'    & = \frac{\sin x - \cos x}{(\sin x + \cos x)^2} \\
+              & = \frac{\sin x - \cos x}{1 + 2 \sin x \cos x} \\
+        y'(0) & = -1 \\
+         \\
+        -1 & = \frac{y - 1}{x - 0} \\
+        y  & = x + 1 \\
+      \end{align*}
+
+    \item[29] 
+      \begin{align*}
+        H'(\theta)  & = \sin \theta + \theta \cos \theta \\
+        H''(\theta) & = 2 \cos \theta - \theta \sin \theta \\
+      \end{align*}
+
+    \item[31] 
+      approach one:
+      \begin{align*}
+        f(x)  & = \frac{\tan x - 1}{\sec x} \\
+        f'(x) & = \frac{\sec^3 x - (\tan x - 1) \sec x \tan x}{\sec^2 x} \\
+              & = \frac{\sec^2 x - (\tan x - 1) \tan x}{\sec x} \\
+              & = \frac{\sec^2 x - \tan^2 x + \tan x}{\sec x} \\
+              & = \frac{1 + \tan x}{\sec x} \\
+              & = \cos x (1 + \tan x) \\
+              & = \cos x + \sin x \\
+      \end{align*}
+
+      approach two:
+      \begin{align*}
+        f(x)  & = \frac{\tan x - 1}{\sec x} \\
+              & = \cos x \left( \frac{\sin x}{\cos x} - 1 \right) \\
+              & = \sin x - \cos x \\
+        \\
+        f'(x) & = \cos x + \sin x \\
+      \end{align*}
+
+    \item[33] 
+      \begin{align*}
+        f'(x)        & = 1 + 2 \cos x \\
+        \\
+        1 + 2 \cos x & = 0 \\
+        \cos x       & = - \frac{1}{2} \\
+        x            & = \left\{ \pm \frac{2 \pi}{3} \right\} \\
+      \end{align*}
+
+    \item[35] 
+      \begin{enumerate}[(a)]
+        \item 
+          \begin{align*}
+            x(t) & = 8 \sin t \\
+            v(t) & = 8 \cos t \\
+            a(t) & = - 8 \sin t \\
+          \end{align*}
+
+        \item 
+          \begin{align*}
+            x(2 \pi/3) & = \unit[4 \sqrt{3}]{cm} \\
+            v(2 \pi/3) & = \unit[-2]{cm} \\
+            a(2 \pi/3) & = \unit[- 4 \sqrt{3}]{cm} \\
+          \end{align*}
+
+          Since the velocity is negative, the block is moving to the left at 
+          $t = \unit[2 \pi/3]{s}$.
+
+      \end{enumerate}
+
+    \item[39] 
+      \begin{align*}
+        \lim_{x \to 0} \frac{\sin 3x}{x} & = 3 \lim_{x \to 0} \frac{\sin 3x}{3x} \\
+                                         & = \boxed{ 3 } \\
+      \end{align*}
+
+    \item[40] 
+      \begin{align*}
+        \lim_{x \to 0} \frac{\sin 4x}{\sin 6x} & = \frac{4}{6} \lim_{x \to 0} \frac{\sin 4x}{\sin 4x} \\
+                                               & = \boxed{ \frac{2}{3} } \\
+      \end{align*}
+
+    \item[41] 
+      \begin{align*}
+        \lim_{x \to 0} \frac{\cos \theta - 1}{\sin \theta} 
+          & = \lim_{x \to 0} \frac{\cos^2 \theta - 1}{\sin \theta (\cos \theta + 1)} \\
+          & = \lim_{x \to 0} \frac{- \sin^2 \theta}{\sin \theta (\cos \theta + 1)} \\
+          & = \lim_{x \to 0} \frac{- \sin \theta}{(\cos \theta + 1)} \\
+          & = \boxed{ 0 } \\
+      \end{align*}
+
+    \item[49]
+      \begin{enumerate}[(a)]
+        \item 
+          \begin{align*}
+            \tan x                  & = \frac{\sin x}{\cos x} \\
+            \frac{d}{dx} ( \tan x ) & = \frac{d}{dx} \left( \frac{\sin x}{\cos x} \right) \\
+            \sec^2 x                & =  \frac{\cos^2 x + \sin^2 x}{\cos^2 x} \\
+            \sec^2 x                & =  \frac{1}{\cos^2 x} \\
+          \end{align*}
+
+        \item
+          \begin{align*}
+            \sec x                  & = \frac{1}{\cos x} \\
+            \frac{d}{dx} ( \sec x ) & = \frac{d}{dx} \left( \frac{1}{\cos x} \right) \\
+            \sec x \tan x           & = \frac{\sin x}{\cos^2 x} \\
+            % \sec x \tan x           & = \frac{\sin x}{\cos x} \cdot \frac{1}{\cos x} \\
+            % \sec x \tan x           & = \tan x \cdot \sec x \\
+          \end{align*}
+
+        \item
+          \begin{align*}
+            \sin x + \cos x                  & = \frac{1 + \cot x }{\csc x} \\
+            \frac{d}{dx} ( \sin x + \cos x ) & = \frac{d}{dx} \left( \frac{1 + \cot x }{\csc x}  \right) \\
+            \cos x - \sin x                  & = \frac{ - \csc^3 x + (1 + \cot x) \cot x \csc x }{\csc^2 x} \\
+                                             & = \frac{ - \csc^2 x + (1 + \cot x) \cot x }{\csc x} \\
+                                             & = \frac{ \cot^2 x - \csc^2 x + \cot x }{\csc x} \\
+            \cos x - \sin x                  & = \frac{ \cot x - 1 }{\csc x} \\
+            % \cos x - \sin x                  & = ( \cot x - 1 ) \sin x \\
+            % \cos x - \sin x                  & = ( \frac{\cos x}{\sin x} - 1 ) \sin x \\
+            % \cos x - \sin x                  & = \cos x - \sin x \\
+          \end{align*}
+      \end{enumerate}
+
+  \end{description}
+
   \else
     \vspace{10 cm}
     \begin{quote}
