@@ -64,10 +64,10 @@
             $lim_{x \to 1^+} f(x) = \infty$
           \end{solution}
 
-        \part[2] $\lim_{x \to 1} f(x)$
-          \begin{solution}
-            $lim_{x \to 1} f(x)$ is not defined since the right hand and left hand limits are different.
-          \end{solution}
+        % \part[2] $\lim_{x \to 1} f(x)$
+        %   \begin{solution}
+        %     $lim_{x \to 1} f(x)$ is not defined since the right hand and left hand limits are different.
+        %   \end{solution}
           
         \part[2] $\lim_{x \to 2^{-}} f(x)$
           \begin{solution}
@@ -86,8 +86,7 @@
           
       \end{parts}
 
-    \uplevel{For questions \ref{q:first_limit} to \ref{q:last_limit}, evaluate each limit
-             or explain why it does not exist.}
+    \uplevel{For questions \ref{q:first_limit} to \ref{q:last_limit} find each limit.}
 
     \question[7] 
     \label{q:first_limit}
@@ -148,19 +147,19 @@
         \end{align*}
       \end{solution}
 
-    \question[7] 
-      \[
-        \lim_{x \to 9} \frac{9 - x}{\sqrt{x} - 3} 
-      \]
+    % \question[7] 
+    %   \[
+    %     \lim_{x \to 9} \frac{9 - x}{\sqrt{x} - 3} 
+    %   \]
 
-      \begin{solution}
-        \begin{align*}
-          \lim_{x \to 9} \frac{9 - x}{\sqrt{x} - 3}  & = \lim_{x \to 9} \frac{\left( 3 + \sqrt{x} \right) \left( 3 - \sqrt{x} \right)}{\sqrt{x} - 3} \\
-                                                     & = - \lim_{x \to 9} \frac{\left( 3 + \sqrt{x} \right) \left( \sqrt{x} - 3 \right)}{\sqrt{x} - 3} \\
-                                                     & = - \lim_{x \to 9} \left( 3 + \sqrt{x} \right) \\
-                                                     & = \boxed{ -6 }
-        \end{align*}
-      \end{solution}
+    %   \begin{solution}
+    %     \begin{align*}
+    %       \lim_{x \to 9} \frac{9 - x}{\sqrt{x} - 3}  & = \lim_{x \to 9} \frac{\left( 3 + \sqrt{x} \right) \left( 3 - \sqrt{x} \right)}{\sqrt{x} - 3} \\
+    %                                                  & = - \lim_{x \to 9} \frac{\left( 3 + \sqrt{x} \right) \left( \sqrt{x} - 3 \right)}{\sqrt{x} - 3} \\
+    %                                                  & = - \lim_{x \to 9} \left( 3 + \sqrt{x} \right) \\
+    %                                                  & = \boxed{ -6 }
+    %     \end{align*}
+    %   \end{solution}
 
     \question[7] 
     \label{q:last_limit}
@@ -175,6 +174,7 @@
         \end{align*}
       \end{solution}
 
+    \question[5] Does $x^2 - \sqrt{x + 1} = 0$ have a solution between $x = -1$ and $x = 1$?
 
     \question[10]
       Prove, using the precise definition of a limit ($\epsilon$/$\delta$ proof) that:
@@ -204,13 +204,13 @@
         
       \end{solution}
 
-    \question[10]
+    \question[8]
     \label{q:continuity}
       \[
           f(x) =
             \begin{cases}
               x - 1,        & \text{ if } x \leq 1 \\
-              x^2 - 1,      & \text{ if } x < 3 \\
+              x^2 - 1,      & \text{ if } 1 < x < 3 \\
               \sqrt{x - 3}, & \text{ if } x \geq 3 \\
             \end{cases}
       \]
@@ -231,7 +231,11 @@
 
       \end{solution}
 
-      \question[10] Use the definition of the derivative to find $f'(x)$
+      \uplevel{For questions \ref{derivative:first} to \ref{derivative:last}, use the
+      definition of the derivative to find $f'(x)$}
+
+      \question[8] 
+      \label{derivative:first}
       \[
         f(x) = x^2 + 2x - 5
       \]
@@ -243,12 +247,25 @@
                 & = \lim_{h \to 0} \frac{2xh + h^2 + 3h}{h} \\
                 & = \lim_{h \to 0} (2xh + 3 + h) \\
                 & = \boxed{ 2x + 3 } \\
-          % \\
-          % f'(1) & = 2(1) + 3 \\
-          %       & = \boxed{ 5 } \\
         \end{align*}
       \end{solution}
 
+      \question[8] 
+      \label{derivative:last}
+      \[
+        f(x) = 1 - \frac{2}{x}
+      \]
+
+      \begin{solution}
+        \begin{align*}
+          f'(x) & = \lim_{h \to 0} \frac{1 - \frac{2}{x + h} - \left( 1 - \frac{2}{x} \right)}{h} \\
+                &= \lim_{h \to 0} \frac{\frac{2}{x} - \frac{2}{x+h}}{h} \\
+                &= \lim_{h \to 0} \frac{2x + 2h - 2x}{hx(x + h)} \\
+                &= \lim_{h \to 0} \frac{2}{x(x + h)} \\
+                &= \boxed{ \frac{2}{x^2} } \\
+        \end{align*}
+      \end{solution}
+      
       \question[10] Find an equation of the tangent to $y = \sqrt{x}$ at the point $(1, 1)$
       \begin{solution}
         \begin{align*}
