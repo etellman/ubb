@@ -1,0 +1,306 @@
+% no answer key
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\usepackage{mathtools} 
+
+\newcommand{\dg}{\ensuremath{^\circ}} 
+\newcommand{\sgn}{\operatorname{sgn}}
+
+\everymath{\displaystyle}
+\title{Calculus I \\ Homework Twelve \\ Section 3.4}
+\author{}
+\date{\today}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Homework}
+    \begin{itemize*}
+      \item read Section 3.4
+      \item exercises: 1-10, 16-18, 21-24, 30-35, 40, 47-48, 51-52, 61-62, 75, 78, 84
+    \end{itemize*}
+
+  \ifprintanswers
+
+  \section{Solutions}
+
+  \begin{description}
+
+    \item[1] 
+      \begin{align*}
+        f(x)          & = \sin x \\
+        g(x)          & = 4x \\
+        \\
+        \frac{dy}{dx} & = \boxed{ 4 \cos 4x } \\
+      \end{align*}
+
+    \item[2] 
+      \begin{align*}
+        f(x)          & = \sqrt{x} \\
+        g(x)          & = 4 + 3x \\
+        \\
+        \frac{dy}{dx} & = \boxed{ \frac{3}{2 \sqrt{4 + 3x}} } \\
+      \end{align*}
+
+    \item[3] 
+      \begin{align*}
+        f(x)          & = x^10 \\
+        g(x)          & = 1 - x^2 \\
+        \\
+        \frac{dy}{dx} & = \boxed{ -2x \left( 1 - x^2 \right)^9 } \\
+      \end{align*}
+
+    \item[4] 
+      \begin{align*}
+        f(x)          & = \tan x \\
+        g(x)          & = \sin x \\
+        \\
+        \frac{dy}{dx} & = \boxed{ \cos x \sec^2 ( \sin x)} \\
+      \end{align*}
+
+    \item[5] 
+      \begin{align*}
+        f(x)          & = \tan x \\
+        g(x)          & = \sin x \\
+        \\
+        \frac{dy}{dx} & = \boxed{ \cos x \sec^2 ( \sin x)} \\
+      \end{align*}
+
+    \item[6] 
+      \begin{align*}
+        f(x)          & = e^x \\
+        g(x)          & = \sqrt{x} \\
+        \\
+        \frac{dy}{dx} & = \boxed{ \frac{e^{ \sqrt{x} }}{2 \sqrt{x}} } \\
+      \end{align*}
+
+    \item[6] 
+      \begin{align*}
+        f(x)          & = \sin x \\
+        g(x)          & = e^x \\
+        \\
+        \frac{dy}{dx} & = \boxed{ e^x \cos e^x } \\
+      \end{align*}
+
+    \item[7] 
+      \[
+        f'(x) = \boxed{ 5 \left(4x^3 - 6x \right) \left(x^4 - 3x^2 - 2 \right)^4 }
+      \]
+
+    \item[8] 
+      \[
+        f'(x) = \boxed{ 100 \left( 4 - 2x \right) \left( 4x - x^2 \right)^{99} } 
+      \]
+
+    \item[9] 
+      \[
+        f'(x) = \boxed{ \frac{3x^2 + 2}{4 \left(x^3 + 2x + 1 \right)^{3/4}} }
+      \]
+
+    \item[10] 
+      \[
+        f'(x) = \boxed{ \frac{8x^3}{3 \sqrt[3]{x^4 + 1}} }
+      \]
+
+    \item[16] 
+      \[
+        f'(x) = \boxed{ - 3n \left( \csc ^2 (n \theta) \right) }
+      \]
+
+    \item[17] 
+      \[
+        f'(x) = \boxed{ 20 (4x + 1)^4 \left( - x^2 + x + 3\right)^8 + 8 (4x + 1)^5 (1 - 2x) \left( - x^2 + x + 3\right)^7 } 
+      \]
+
+    \item[18] 
+      \[
+        f'(x) = \boxed{ 12 \left(x^4 - 1\right)^2x^3 \left(x^3 + 1\right)^4 + 12 \left(x^4 - 1\right)^3x^2 \left(x^3 + 1\right)^3 } 
+      \]
+
+    \item[21] 
+      \begin{align*}
+        f'(x) & = -3 \left( \frac{x^2 + 1}{x^2 - 1} \right)^2 \left( \frac{4x}{\left(x^2-1\right)^2} \right) \\
+              & = \boxed{ \frac{-12x \left( x^2 + 1 \right)^2}{\left( x^2 - 1 \right)^4} } \\
+      \end{align*}
+
+    \item[22] 
+      \[
+        f'(x) = \boxed{ -3e^{-5x} \sin 3x - 5e^{-5x} \cos 3x }
+      \]
+
+    \item[23] 
+      \[
+        y' = \boxed{ e^{x \cos x} ( 3 \sin 3x + 5 \cos 3x ) }
+      \]
+
+    \item[24] 
+      \[
+        f'(x) = \boxed{ -2x \cdot 10^{1 - x^2} \cdot \ln(10) } 
+      \]
+
+    \item[30] 
+      \begin{align*}
+        G'(x) & = 5 \left( \frac{y^2}{y + 1} \right)^4 \left(  \frac{2y (y + 1) - y^2 }{(y + 1)^2}  \right) \\
+              & = \boxed{ \frac{5 y^9 (y + 2)}{(y + 1)^6} } \\
+      \end{align*}
+
+    \item[31] 
+      \[
+        y' = \boxed{ \pi \cdot \ln 2 \cdot 2^{\sin \pi x} \cos(\pi x) }
+      \]
+
+    \item[32] 
+      \[
+        y' = \boxed{ 6 \tan(3 \theta) \sec^2 (3 \theta) }
+      \]
+
+    \item[33] 
+      \begin{align*}
+        f'(x) & = 2 \sec x \cdot \sec x \tan x + 2 \tan x \cdot \sec^2 x \\
+              & = \boxed{ 4 \sec^2 x \tan x } \\
+      \end{align*}
+
+    \item[34] 
+      \[
+        f'(x) = \boxed{ \sin \frac{1}{x} - \frac{\cos 1/x}{x} } 
+      \]
+
+    \item[35] 
+      \[
+        f'(x) = \boxed{ \frac{4 e^{2x}}{\left( 1 + e^{2x} \right)^2} 
+          \sin \left( \frac{1 - e^{2x}}{1 + e^{2x}} \right) }
+      \]
+
+    \item[40] 
+      \[
+        f'(x) = \boxed{ \cos(\sin(\sin x)) \cdot \cos(\sin x) \cdot \cos x }
+      \]
+
+    \item[47] 
+      \begin{align*}
+        f'(x)  & = x \left( x^2 + 1 \right)^{-1/2} \\
+               & = \boxed{ \frac{x}{\sqrt{x^2 + 1}} } \\
+        f''(x) & = \boxed{ \frac{1}{\left( x^2 + 1 \right)^{3/2}} } \\
+      \end{align*}
+
+    \item[48] 
+      \begin{align*}
+        f'(x)  & = cx e^{cx} + e^{cx} \\
+        f''(x) & = c^2 x e^{cx} + 2 c e^{cx} \\
+      \end{align*}
+
+    % \item[50] 
+    %   \begin{align*}
+    %     f'(x)  & = e^{e^{x}} \cdot e^x \\
+    %            & = e^{e^x + x} \\
+    %     f''(x) & = e^{e^x + x} \cdot \left( e^x + 1 \right) \\
+    %   \end{align*}
+
+    \item[51] 
+      \begin{align*}
+        f'(x) & = 20 (1 + 2x)^9 \\
+        f'(1) & = 20 \\
+        \\
+        20    & = \frac{y - 1}{x}
+        y     & = 20x + 1 \\
+      \end{align*}
+
+    \item[52] 
+      \begin{align*}
+        f'(x) & = \cos x + 2 \sin x \cos x \\
+        f'(0) & = 1 \\
+        \\
+        1     & = \frac{y}{x} \\
+        y     & = 1 \\
+      \end{align*}
+
+    \item[61] 
+      \begin{align*}
+        F'(x)  & = f'(g(x)) \cdot g'(x) \\
+        F'(-2) & = \boxed{ 24 } \\
+      \end{align*}
+
+    \item[62] 
+      \begin{align*}
+        h'(x) &= \frac{3 f'(x)}{2 \sqrt{4 + 3 f(x)}} \\
+        h'(1) &= \boxed{ \frac{6}{5} } \\
+      \end{align*}
+
+    \item[75]
+      The derivatives repeat in this pattern:
+      \begin{align*}
+        f(x)     & = \cos x \\
+        f'(x)    & = -\sin x \\
+        f''(x)   & = -\cos x \\
+        f'''(x)  & = \sin x \\
+        f''''(x) & = \cos x \\
+        \vdots
+      \end{align*}
+
+      Since the remainder of $50/4$ is 2, the 50th derivative will be $-\cos x$
+
+    \item[78] 
+      \begin{enumerate}[(a)]
+        \item 
+          \[
+            f'(t) = -A \sin(\omega t + \delta)
+          \]
+
+        \item 
+          \begin{align*}
+            -A \sin(\omega t + \delta) & = 0 \\
+            \omega t + \delta          & = n \pi \\
+            t                          & = \boxed{ \frac{n \pi \delta}{\omega} } \\
+          \end{align*}
+
+          where $n$ is any integer.
+
+      \end{enumerate}
+
+    \item[84] 
+      \begin{enumerate}[(a)]
+        \item $\frac{dV}{dr}$ is the rate of change of the volume in terms of the radius.
+          $\frac{dV}{dt}$ is the rate of change of the volume in terms of time.
+
+
+        \item
+          \begin{align*}
+            V(r) = \frac{4}{3} \pi [r(t)]^3 \\
+            \frac{dV}{dr} = 4 \pi [r(t)]^2 \frac{dr}{dt} \\
+          \end{align*}
+      \end{enumerate}
+      
+  \end{description}
+
+  \else
+    \vspace{10 cm}
+    \begin{quote}
+      \begin{em}
+        TO DO
+      \end{em}
+    \end{quote}
+    \hspace{2 cm} --TO DO
+  \fi
+
+\end{document}
+
