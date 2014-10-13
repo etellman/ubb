@@ -1,0 +1,63 @@
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
+
+\usepackage{units} 
+\usepackage[fleqn]{amsmath}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[justification=justified]{caption}
+
+\setcounter{tocdepth}{1}
+\everymath{\displaystyle}
+
+\author{}
+\date{\today}
+\title{Calculus I \\ Exponentials}
+
+\begin{document}
+
+  \maketitle
+  \tableofcontents
+
+  \subsection{History} % (fold)
+  
+  \begin{itemize*}
+    \item Napier turning multiplication into addition, etc.
+    \item Tables
+  \end{itemize*}
+  
+  \subsection{Rules} % (fold)
+  
+  \begin{align*}
+    e^x e^y                    & = e^{x + y} \\
+    \ln \left( e^x e^y \right) & = \ln e^{x + y} \\
+                               & = x + y
+    \\
+    \ln ab &= \ln a + \ln b \\
+  \end{align*}
+
+  \begin{align*}
+    \frac{e^x}{e^y}             & = e^{x - y} \\
+    \ln \left( e^x e^y \right)  & = \ln e^{x - y} \\
+                                & = x - y
+    \\
+    \ln \frac{a}{b}             & = \ln a - \ln b \\
+  \end{align*}
+
+  powers:
+  \begin{align*}
+    a       & = e^{\ln a} \\
+    a^b     & = e^{b \ln a} \\
+    \ln a^b & = \ln e^{b \ln a} \\
+            & = b \ln a \\
+  \end{align*}
+
+  
+\end{document}
+

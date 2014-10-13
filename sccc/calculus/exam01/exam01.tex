@@ -132,20 +132,20 @@
       \end{solution}
 
 
-    \question[7]
-      \[
-        \lim_{x \to 1^-} \frac{|x - 1|}{x - 1}
-      \]
+    % \question[7]
+    %   \[
+    %     \lim_{x \to 1^-} \frac{|x - 1|}{x - 1}
+    %   \]
 
-      \begin{solution}
-        Notice that when $x$ is less than 1, $x - 1$ is negative and $|x - 1| = - (x - 1)$.
+    %   \begin{solution}
+    %     Notice that when $x$ is less than 1, $x - 1$ is negative and $|x - 1| = - (x - 1)$.
 
-        \begin{align*}
-          \lim_{x \to 1^-} \frac{|x - 1|}{x - 1} & = \lim_{x \to 1^-} \frac{- (x - 1)}{x - 1} \\
-                                                 & = - \lim_{x \to 1^-} \frac{x - 1}{x - 1} \\
-                                                 & = \boxed{ -1 } \\
-        \end{align*}
-      \end{solution}
+    %     \begin{align*}
+    %       \lim_{x \to 1^-} \frac{|x - 1|}{x - 1} & = \lim_{x \to 1^-} \frac{- (x - 1)}{x - 1} \\
+    %                                              & = - \lim_{x \to 1^-} \frac{x - 1}{x - 1} \\
+    %                                              & = \boxed{ -1 } \\
+    %     \end{align*}
+    %   \end{solution}
 
     % \question[7] 
     %   \[
@@ -161,7 +161,7 @@
     %     \end{align*}
     %   \end{solution}
 
-    \question[7] 
+    \question[8] 
     \label{q:last_limit}
       \[
         \lim_{x \to \infty} \frac{2x^3 + 3x - 7}{2x^2 - 3x^3}
@@ -204,7 +204,7 @@
         
       \end{solution}
 
-    \question[8]
+    \question[10]
     \label{q:continuity}
       \[
           f(x) =
@@ -231,26 +231,24 @@
 
       \end{solution}
 
-      \uplevel{For questions \ref{derivative:first} to \ref{derivative:last}, use the
-      definition of the derivative to find $f'(x)$}
+      % \question[8] 
+      % \label{derivative:first}
+      % \[
+      %   f(x) = x^2 + 2x - 5
+      % \]
 
-      \question[8] 
-      \label{derivative:first}
-      \[
-        f(x) = x^2 + 2x - 5
-      \]
+      % \begin{solution}
+      %   \begin{align*}
+      %     f'(x) & = \lim_{h \to 0} \frac{(x + h)^2 + 3(x + h) - 5 - \left( x^2 + 3x - 5 \right)}{h} \\
+      %           & = \lim_{h \to 0} \frac{x^2 + 2xh + h^2 + 3(x + h) - 5 - \left( x^2 + 3x - 5 \right)}{h} \\
+      %           & = \lim_{h \to 0} \frac{2xh + h^2 + 3h}{h} \\
+      %           & = \lim_{h \to 0} (2xh + 3 + h) \\
+      %           & = \boxed{ 2x + 3 } \\
+      %   \end{align*}
+      % \end{solution}
 
-      \begin{solution}
-        \begin{align*}
-          f'(x) & = \lim_{h \to 0} \frac{(x + h)^2 + 3(x + h) - 5 - \left( x^2 + 3x - 5 \right)}{h} \\
-                & = \lim_{h \to 0} \frac{x^2 + 2xh + h^2 + 3(x + h) - 5 - \left( x^2 + 3x - 5 \right)}{h} \\
-                & = \lim_{h \to 0} \frac{2xh + h^2 + 3h}{h} \\
-                & = \lim_{h \to 0} (2xh + 3 + h) \\
-                & = \boxed{ 2x + 3 } \\
-        \end{align*}
-      \end{solution}
+      \question[10] Use the definition of the derivative to find $f'(x)$
 
-      \question[8] 
       \label{derivative:last}
       \[
         f(x) = 1 - \frac{2}{x}
@@ -282,6 +280,21 @@
           y           & = \boxed{ \frac{x}{2} + \frac{1}{2} } \\
         \end{align*}
       \end{solution}
+
+      \question
+      A projectile is fired directly upward from the ground with with an initial velocity
+      of 100 ft/s. Its distance above the ground after $t$ seconds is:
+      \[
+        y = 112t - 16t^2
+      \]
+
+      \begin{parts}
+        \part[6] Find the velocity at $t = 2$, $t = 3$ and $t = 4$.
+
+        \part[2] When does the projectile hit the ground?
+
+        \part[2] What is its velocity when it hits the ground?
+      \end{parts}
 
   \end{questions}
 
