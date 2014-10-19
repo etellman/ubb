@@ -1,5 +1,5 @@
-\documentclass[letterpaper, landscape]{exam}
-\usepackage{2in1, lscape} 
+\documentclass[letterpaper, portrait]{exam}
+% \usepackage{2in1, lscape} 
 \printanswers
 
 \usepackage{units} 
@@ -18,7 +18,7 @@
 
 \author{}
 \date{\today}
-\title{Calculus I \\ Week Eight}
+\title{Calculus I \\ Week Nine}
 
 \begin{document}
 
@@ -46,6 +46,8 @@
 
   \section{Derivatives of $x^n$}
 
+  \subsection{Examples} % (fold)
+  
   \begin{align*}
     \frac{d}{dx} x^2 & = \lim_{h \to 0} \frac{(x + h)^2 - x^2}{h} \\
                      & = \lim_{h \to 0} \frac{x^2 + 2xh + h^2 - x^2}{h} \\
@@ -57,9 +59,51 @@
                      & = 3x^2 \\
   \end{align*}
 
-  Talk about Pascal's Triangle.
+  \subsection{Pascal's Triangle}
 
-  general rule:
+  Binomial Coefficient is the number of ways to choose $k$ objects from among $n$ objects,
+  disregarding order.
+
+  Falling Factorial formula:
+  \[
+    \binom{n}{k}  = \frac{n(n - 1)(n - 2)\dots(n - (k - 1))}{k!} \\
+  \]
+
+  \begin{itemize*}
+     \item The numerator is the number of ways to select $k$ objects, where order matters.
+     \item The denominator is the number of ways to rearrange the same $k$ objects.
+  \end{itemize*}
+
+  Equivalently:
+  \[
+    \binom{n}{k} = \frac{n!}{k! (n - k)!}
+  \]
+
+  This formula shows that $\binom{n}{k} = \binom{n}{n - k}$, which explains the symmetry
+  in Pascal's Triangle.
+
+  \subsection{Polynomial Expansions} % (fold)
+  \label{sub:pe}
+  
+  \begin{align*}
+    (a + b)^n &= \binom{n}{0} a^0 b^n + \binom{n}{1} a^1 b^{n - 1} + \binom{n}{2} a^2 b^{n - 2} + \dots \binom{n}{n} a^0 b^{n} \\
+    (a + 1)^n &= \binom{n}{0} + \binom{n}{1} a + \binom{n}{2} a^2 + \dots + \binom{n}{n} \\
+  \end{align*}
+
+  $n$ doesn't have to be an integer. These still make sense using the falling factorial formula:
+  \begin{align*}
+    \binom{5}{0.5} & = \binom{5}{4.5} = \frac{4.5 \cdot 3.5 \cdot 2.5 \cdot 1.5 }{5!} \approx 0.246094
+  \end{align*}
+
+  \begin{align*}
+    (x + 1)^\alpha & = \binom{\alpha}{0} + \binom{\alpha}{1} x + \binom{\alpha}{2} x^2 + \dots \\
+    \sqrt{2}       & = (1 + 1)^{0.5}  \\
+                   & = \binom{0.5}{0} + \binom{0.5}{1} \cdot 2 + \binom{0.5}{2} 2^2 + \dots \\
+  \end{align*}
+
+  \subsection{General Rule} % (fold)
+  \label{sub:gr}
+  
   \begin{align*}
     \frac{d}{dx} x^n & = \lim_{h \to 0} \frac{(x + h)^n - x^n}{h} \\
                      & = \lim_{h \to 0} \frac{x^n + nx^{n - 1}h + \ldots - x^n}{h} \\
@@ -151,17 +195,20 @@
 
   \section{Calculating e} % (fold)
   
-  \begin{align*}
-    (a & + b)^n = a^n + a^{n - 1} b \cdot \frac{n}{1!} + a^{n - 2} b^2 \cdot \frac{n(n - 1)}{2!} \\
-       & + a^{n - 3} b^3 \cdot \frac{n(n - 1)(n - 2)}{3!} + \ldots + b^n
-  \end{align*}
+  % \begin{align*}
+  %   (a & + b)^n = a^n + a^{n - 1} b \cdot \frac{n}{1!} + a^{n - 2} b^2 \cdot \frac{n(n - 1)}{2!} \\
+  %      & + a^{n - 3} b^3 \cdot \frac{n(n - 1)(n - 2)}{3!} + \ldots + b^n
+  % \end{align*}
 
+  Use Binomial Expansion:
   \begin{align*}
     e &= \lim_{n \to \infty} \left( 1 + \frac{1}{n} \right)^n \\
       & = \lim_{n \to \infty} \left( 1 + \frac{1}{n} \cdot n + \frac{1}{n^2} \cdot \frac{n(n - 1)}{2!} 
         + \frac{1}{n^3} \cdot \frac{n(n - 1)(n - 2)}{3!} + \ldots \right) \\
       & = 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \ldots
-    \\
+  \end{align*}
+
+  \begin{align*}
     e^x &= \lim_{n \to \infty} \left( 1 + \frac{1}{n} \right)^{nx} \\
       & = \lim_{n \to \infty} \left( 1 + \frac{1}{n} \cdot nx + \frac{1}{n^2} \cdot \frac{nx(nx - 1)}{2!} 
         + \frac{1}{n^3} \cdot \frac{nx(nx - 1)(nx - 2)}{3!} + \ldots \right) \\
@@ -171,6 +218,15 @@
   \section{Derivative of $a^x$} % (fold)
 
   approach one:
+  \begin{align*}
+    \frac{d}{dx} e^x &= \frac{d}{dx} \left( 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots  \right) \\
+                     &= 0 + 1 + \frac{2 x}{2!} + \frac{3x^2}{3!} + \ldots \\
+                     &= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots \\
+                     &= e^x \\
+    \ldots
+  \end{align*}
+
+  approach two:
   \begin{align*}
     \frac{d}{dx} a^x & = \lim_{h \to 0} \frac{a^{x + h} - a^x}{h} \\
                      & = \lim_{h \to 0} \frac{a^x \left( a^h - 1 \right)}{h} \\
@@ -189,14 +245,7 @@
     \frac{d}{dx} e^x  & = e^x \\
   \end{align*}
 
-  approach two:
-  \begin{align*}
-    \frac{d}{dx} e^x &= \frac{d}{dx} \left( 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots  \right) \\
-                     &= 0 + 1 + \frac{2 x}{2!} + \frac{3x^2}{3!} + \ldots \\
-                     &= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots \\
-    \ldots
-  \end{align*}
-  
+  Do examples.
 
 \end{document}
 
