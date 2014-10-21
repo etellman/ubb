@@ -25,160 +25,61 @@
   \maketitle
   \tableofcontents
 
-  \section{Homework 2.5}
-
-  Homework 2.5, problem 62: 
-  \begin{solution}
-    \begin{align*}
-      \lim_{x \to 1^-} f(x) &= - \infty \\ 
-      \lim_{x \to -1^+} f(x) &= \infty \\ 
-    \end{align*}
-
-    Since there are always values of $x$ where $f(x) < 0-$ and values of
-    $x$ where $f(x) > 0$ in the interval $(-1, 1)$, and $f$ is continuous on $(1, 1)$,
-    there is some value of $x$ where $f(x) = 0$ in the same interval.
-
-  \end{solution}
-
-  Talk about Homework 2.4, problem 43
-
-  \section{Derivative as a Function}
-
-  \begin{itemize*}
-    \item Show formula for derivative as a function.
-    \item Show graphs of derivatives
-    \item Show graphs of derivatives where $f(x)$ is sequence of line segments
-    \item Show graphs of polynomial derivatives (see below)
-    \item Show graph of $f(x) = e^x$
-  \end{itemize*}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.5]{example06.pdf}
-    \caption{$f(x) = x^2$}
-    \label{fig:example06}
-  \end{figure}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.5]{example03.pdf}
-    \caption{$f(x) = x^3$}
-    \label{fig:example03}
-  \end{figure}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.5]{example04.pdf}
-    \caption{$f(x) = x^4$}
-    \label{fig:example04}
-  \end{figure}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.5]{example05.pdf}
-    \caption{$f(x) = \sin(x)$}
-    \label{fig:example05}
-  \end{figure}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.5]{example01.pdf}
-    \caption{Third Degree Polynomial}
-    \label{fig:example01}
-  \end{figure}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.5]{example02.pdf}
-    \caption{Fourth Degree Polynomial}
-    \label{fig:example02}
-  \end{figure}
-
-  \section{Derivative Examples}
-
-  \begin{enumerate}
-    \item 
-      \[
-        f(x) = 3x^2 + x
-      \]
-    \item 
-      \[
-        f(x) = x^3 - 2x^2 + x + 1
-      \]
-
-    \item 
-      \[
-        f(x) = \frac{1}{\sqrt{x}}
-      \]
-
-      \begin{solution}
-        \[
-          f'(x) = \frac{-1}{2 x^{3/2}}
-        \]
-      \end{solution}
-
-    \item 
-      \[
-        f(x) = \sqrt{x^2 + 1}
-      \]
-
-      \begin{solution}
-        \[
-          f'(x) = \frac{x}{\sqrt{x^2 + 1}}
-        \]
-      \end{solution}
-
-    \item 
-      \[
-        f(x) = \frac{2x + 1}{x - 1}
-      \]
-
-      \begin{solution}
-        \[
-          f'(x) = \frac{-3}{(x - 1)^2}
-        \]
-      \end{solution}
-
-  \end{enumerate}
-
-  \section{Differentiability}
+  \section{Preliminaries: Limits} % (fold)
+  
+  \subsection{$\lim_{\theta \to 0} \frac{\sin \theta}{\theta}$} % (fold)
+  
+  Draw a unit circle with a wedge in the first quadrant. 
 
   \begin{itemize}
-    \item $f$ is differentiable on $(a, b)$ if $f'$ is defined on $(a, b)$
-    \item show graph of corners where $\lim_{x \to a^-} \neq \lim_{x \to a^+}$
-    \item $f(x) = |x|$ is not differentiable at $x = 0$
+    \item The area of the small triangle is: $A_{inner} = \frac{1}{2} \sin \theta \cos \theta$
+
+    \item The area of the sector is:
+      \begin{align*}
+        \frac{\theta}{2 \pi \cdot 1} &= \frac{A_{sector}}{\pi \cdot 1^2} \\
+        A_{sector} &= \frac{\theta}{2} \\
+      \end{align*}
+
+    \item The area of the outer triangle is $A_{outer} = \frac{1}{2} \tan \theta$
   \end{itemize}
 
-  \section{Continuity}
-  If $f$ is differentiable at $a$ then $f$ is continuous at $a$ (not necessarily
-  vice-versa).
-
-  proof: show that if $\lim{h \to 0} \frac{f(x + h) - f(x)}{h}$ is defined then
-  $\lim{h \to 0} f(x + h) = f(x)$ (variation on proof in book)
-
   \begin{align*}
-    f(x + h) - f(x)                               & = \frac{f(x + h) - f(x)}{h} \cdot h \\
-    \lim_{h \to 0} \left[ f(x + h) - f(x) \right] & = \lim_{h \to 0} \left[  \frac{f(x + h) - f(x)}{h} \cdot h \right] \\
-    \lim_{h \to 0} f(x + h) - \lim_{h \to 0} f(x) & =  f'(x) \cdot \lim_{h \to 0} h  \\
-    \lim_{h \to 0} f(x + h) - \lim_{h \to 0} f(x) & =  0 \\
-    \lim_{h \to 0} f(x + h)                       & = \lim_{h \to 0} f(x) \\
-    \lim_{h \to 0} f(x + h)                       & = f(x) \\
+    \frac{1}{2} \sin \theta \cos \theta < \frac{\theta}{2} < \frac{1}{2} \tan \theta \\
+    \sin \theta \cos \theta < \theta < \tan \theta \\
+    \sin \theta \cos \theta < \theta < \frac{\sin \theta}{\cos theta} \\
+    \cos \theta < \frac{\theta}{\sin \theta} < \frac{1}{\cos theta} \\
   \end{align*}
 
-  \section{Second Derivatives}
-
-
-  Calculate first and second derivatives of ball thrown from height 5 meters (approximate):
+  By the Squeeze Theorem:
   \[
-    h(t) = 5 + 30t - 5t^2
+    \lim_{\theta \to 0} \frac{\sin \theta}{\theta} = 1
   \]
 
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.5]{example07.pdf}
-    \caption{Height, Velocity, and Acceleration}
-    \label{fig:example07}
-  \end{figure}
+  \subsection{$\lim_{\theta \to 0} \frac{1 - \cos \theta}{\theta} = 0$} % (fold)
 
+  \subsubsection{Proof} % (fold)
+  
+  \begin{align*}
+    \lim_{x \to 0} \frac{1 - \cos x}{x} & = \lim_{x \to 0} \frac{1 - \cos^2 x}{x(1 + \cos x)} \\
+                                        & = \lim_{x \to 0} \frac{\sin^2 x}{x(1 + \cos x)} \\
+                                        & = \lim_{x \to 0} \frac{\sin x}{1 + \cos x} \\
+                                        & = 0 \\
+  \end{align*}
+
+  \subsubsection{Alternate Proof} % (fold)
+  
+  \begin{align*}
+    \sin \frac{x}{2}                    & = \sqrt{\frac{1 - \cos x}{2}} \\
+    \sin^2 \frac{x}{2}                  & = \frac{1 - \cos x}{2} \\
+    1 - \cos x                          & = 2 \sin^2 \frac{x}{2} \\
+    \\
+    \lim_{x \to 0} \frac{1 - \cos x}{x} & = \lim_{x \to 0} \frac{2 \sin^2 x/2}{x} \\
+                                        & = \lim_{x \to 0} \left[ \sin x/2 \cdot \frac{\sin x/2}{x/2}  \right] \\
+                                        & = \lim_{x \to 0} \sin x/2 \cdot \lim_{x \to 0} \frac{\sin x/2}{x/2} \\
+                                        & = \lim_{x \to 0} \sin x/2 \cdot 1 \\
+                                        & = 0 \\
+  \end{align*}
+
+  
 \end{document}
 
