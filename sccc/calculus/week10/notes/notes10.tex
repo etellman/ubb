@@ -73,7 +73,9 @@
   \section{Quotient Rule} % (fold)
   \label{sec:qr}
   
-  \subsection{Proof} % (fold)
+  \subsection{Proofs} % (fold)
+  
+  \subsection{Proof One} % (fold)
   
   \begin{align*}
     y(x)                      & = \frac{u(x)}{v(x)} \\
@@ -89,6 +91,20 @@
                                                                                      {v_0 (v_0 + \Delta v)}\\
     \frac{dy}{dx} & = \frac{v_0 \frac{du}{dx} - u_0 \frac{dv}{dx}}{v_0^2} \\
     y'            & = \frac{vu' - uv'}{v^2} \\
+  \end{align*}
+
+  \subsection{Proof Two} % (fold)
+  
+  use the Product Rule:
+
+  \begin{align*}
+    y(x) & = \frac{u(x)}{v(x)} \\
+         & = u v^{-1} \\
+    \\
+    y'   & = u \cdot \left( -v^{-2} v' \right) + v^{-1} u' \\
+         & = \frac{u'}{v} - \frac{uv'}{v^2} \\
+         & = \frac{u'v}{v^2} - \frac{uv'}{v^2} \\
+    y'   & = \frac{vu' - uv'}{v^2} \\
   \end{align*}
 
   \subsection{Examples} % (fold)
