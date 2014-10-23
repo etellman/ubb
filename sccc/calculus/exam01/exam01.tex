@@ -169,16 +169,26 @@
 
       \begin{solution}
         \begin{align*}
-          \lim_{x \to \infty} \frac{2x^3 + 3x - 7}{2x^2 - 3x^3} & = \lim_{x \to \infty} \frac{2 + 3/x^2 - 7/x^3}{2/x - 3} \\
-                                                                & = \boxed{ - \frac{2}{3} } \\
+          \lim_{x \to \infty} \frac{2x^3 + 3x - 7}{2x^2 - 3x^3} 
+            & = \lim_{x \to \infty} \frac{2 + 3/x^2 - 7/x^3}{2/x - 3} \\
+            & = \boxed{ - \frac{2}{3} } \\
         \end{align*}
       \end{solution}
+
+    \ifprintanswers
+      \newpage
+    \fi
 
     \question[5] Use the {\em Intermediate Value Theorem} to prove that 
       \[
         x^2 - \sqrt{x + 1} = 0
       \]
       has a solution between $x = -1$ and $x = 1$.
+
+      \begin{solution}
+        The function is continuous, $f(1) < 0$, $f(-1) > 0$, so there must be some $x$ between 0 and
+        1 where $f(x) = 0$.
+      \end{solution}
 
     \question[10]
       Prove, using the precise definition of a limit ($\epsilon$/$\delta$ proof) that:
@@ -207,6 +217,10 @@
         \]
         
       \end{solution}
+
+    \ifprintanswers
+      \newpage
+    \fi
 
     \question[10]
     \label{q:continuity}
@@ -251,6 +265,10 @@
       %   \end{align*}
       % \end{solution}
 
+      \ifprintanswers
+        \newpage
+      \fi
+
       \question[10] Use the definition of the derivative to find $f'(x)$
 
       \label{derivative:last}
@@ -268,11 +286,16 @@
         \end{align*}
       \end{solution}
       
+      \ifprintanswers
+        \newpage
+      \fi
+
       \question[10] Find an equation of the tangent to $y = \sqrt{x}$ at the point $(1, 1)$
       \begin{solution}
         \begin{align*}
           f'(x) & = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h} \\
-                & = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h} \cdot \frac{\sqrt{x + h} + \sqrt{x}}{\sqrt{x + h} + \sqrt{x}} \\
+                & = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt{x}}{h} 
+                      \cdot \frac{\sqrt{x + h} + \sqrt{x}}{\sqrt{x + h} + \sqrt{x}} \\
                 & = \lim_{h \to 0} \frac{x + h - x}{h \left( \sqrt{x + h} + \sqrt{x} \right)} \\
                 % & = \lim_{h \to 0} \frac{h}{h \left( \sqrt{x + h} + \sqrt{x} \right)} \\
                 & = \lim_{h \to 0} \frac{1}{ \sqrt{x + h} + \sqrt{x} } \\
@@ -285,6 +308,10 @@
         \end{align*}
       \end{solution}
 
+      \ifprintanswers
+        \newpage
+      \fi
+
       \question
       A projectile is fired directly upward from the ground with with an initial velocity
       of 112 ft/s. Its distance above the ground after $t$ seconds is:
@@ -294,10 +321,36 @@
 
       \begin{parts}
         \part[6] Find the velocity at $t = 2$
+          \begin{solution}
+            \begin{align*}
+              y'(t) &= 112 - 32t \\
+              y'(2) &= \boxed{ \unit[48]{ft/s} } \\
+            \end{align*}
+          \end{solution}
 
         \part[2] When does the projectile hit the ground?
+          \begin{solution}
+            \begin{align*}
+              112t - 16t^2 & = 0 \\
+              16t(7 - t)   & = 0 \\
+              t            & = \{0, 7\} \\
+            \end{align*}
+
+            The projectile is on the ground at $t = \unit[0]{s}$ at the start of the flight and at
+            $t = \unit[7]{s}$ at the end of the flight.
+          \end{solution}
+
 
         \part[2] What is its velocity when it hits the ground?
+          \begin{solution}
+            \[
+              y'(7) = \boxed{ \unit[-112]{ft/s} }
+            \]
+
+            Since we are ignoring air resistance, the ball is going at the same speed it started
+            out, but in the opposite direction.
+
+          \end{solution}
       \end{parts}
 
   \end{questions}
