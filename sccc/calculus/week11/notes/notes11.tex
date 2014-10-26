@@ -18,30 +18,37 @@
 
 \author{}
 \date{\today}
-\title{Calculus I \\ Week Eight}
+\title{Calculus I \\ Week Eleven}
 
 \begin{document}
 
   \maketitle
   \tableofcontents
 
-  \section{Preliminaries: Limits} % (fold)
+  \section{Trigonometry Review} % (fold)
+  
+  \begin{itemize*}
+    \item definitions of all functions using the unit circle
+    \item radians vs. degrees
+    \item triangle definitions
+  \end{itemize*}
+
+  \section{Useful Limits} % (fold)
   
   \subsection{$\lim_{\theta \to 0} \frac{\sin \theta}{\theta}$} % (fold)
   
   Draw a unit circle with a wedge in the first quadrant. 
 
-  \begin{itemize}
-    \item The area of the small triangle is: $A_{inner} = \frac{1}{2} \sin \theta \cos \theta$
+  The area of the small triangle is: $A_{inner} = \frac{1}{2} \sin
+    \theta \cos \theta$
 
-    \item The area of the sector is:
-      \begin{align*}
-        \frac{\theta}{2 \pi \cdot 1} &= \frac{A_{sector}}{\pi \cdot 1^2} \\
-        A_{sector} &= \frac{\theta}{2} \\
-      \end{align*}
+  The area of the sector is:
+    \begin{align*}
+      \frac{\theta}{2 \pi \cdot 1} &= \frac{A_{sector}}{\pi \cdot 1^2} \\
+      A_{sector} &= \frac{\theta}{2} \\
+    \end{align*}
 
-    \item The area of the outer triangle is $A_{outer} = \frac{1}{2} \tan \theta$
-  \end{itemize}
+  The area of the outer triangle is $A_{outer} = \frac{1}{2} \tan \theta$
 
   \begin{align*}
     \frac{1}{2} \sin \theta \cos \theta < \frac{\theta}{2} < \frac{1}{2} \tan \theta \\
@@ -60,26 +67,94 @@
   \subsubsection{Proof} % (fold)
   
   \begin{align*}
-    \lim_{x \to 0} \frac{1 - \cos x}{x} & = \lim_{x \to 0} \frac{1 - \cos^2 x}{x(1 + \cos x)} \\
-                                        & = \lim_{x \to 0} \frac{\sin^2 x}{x(1 + \cos x)} \\
-                                        & = \lim_{x \to 0} \frac{\sin x}{1 + \cos x} \\
-                                        & = 0 \\
+    \lim_{x \to 0} \frac{1 - \cos x}{x} 
+      & = \lim_{x \to 0} \frac{1 - \cos^2 x}{x(1 + \cos x)} \\
+      & = \lim_{x \to 0} \frac{\sin^2 x}{x(1 + \cos x)} \\
+      & = \lim_{x \to 0} \frac{\sin x}{1 + \cos x} \\
+      & = 0 \\
   \end{align*}
 
-  \subsubsection{Alternate Proof} % (fold)
+  % \subsubsection{Alternate Proof} % (fold)
+  
+  % \begin{align*}
+  %   \sin \frac{x}{2}   & = \sqrt{\frac{1 - \cos x}{2}} \\
+  %   \sin^2 \frac{x}{2} & = \frac{1 - \cos x}{2} \\
+  %   1 - \cos x         & = 2 \sin^2 \frac{x}{2} \\
+  %   \\
+  %   \lim_{x \to 0} \frac{1 - \cos x}{x} 
+  %     & = \lim_{x \to 0} \frac{2 \sin^2 x/2}{x} \\
+  %     & = \lim_{x \to 0} \left[ \sin x/2 \cdot \frac{\sin x/2}{x/2}  \right] \\
+  %     & = \lim_{x \to 0} \sin x/2 \cdot \lim_{x \to 0} \frac{\sin x/2}{x/2} \\
+  %     & = \lim_{x \to 0} \sin x/2 \cdot 1 \\
+  %     & = 0 \\
+  % \end{align*}
+
+  \section{Identities} % (fold)
   
   \begin{align*}
-    \sin \frac{x}{2}                    & = \sqrt{\frac{1 - \cos x}{2}} \\
-    \sin^2 \frac{x}{2}                  & = \frac{1 - \cos x}{2} \\
-    1 - \cos x                          & = 2 \sin^2 \frac{x}{2} \\
-    \\
-    \lim_{x \to 0} \frac{1 - \cos x}{x} & = \lim_{x \to 0} \frac{2 \sin^2 x/2}{x} \\
-                                        & = \lim_{x \to 0} \left[ \sin x/2 \cdot \frac{\sin x/2}{x/2}  \right] \\
-                                        & = \lim_{x \to 0} \sin x/2 \cdot \lim_{x \to 0} \frac{\sin x/2}{x/2} \\
-                                        & = \lim_{x \to 0} \sin x/2 \cdot 1 \\
-                                        & = 0 \\
+    \sin(x + y) &= \sin x \cos y + \cos x \sin y \\
+    \cos(x + y) &= \cos x \cos y - \sin x \sin y \\
+    \cos x &= \sin \left( x + \frac{\pi}{2} \right) \\
   \end{align*}
 
+  \section{Derivatives} % (fold)
+  
+  \subsection{Sine} % (fold)
+ 
+  \begin{align*}
+    \frac{d}{dx} \sin x & = \lim_{h \to 0} \frac{\sin(x + h) - \sin x}{h} \\
+                        & = \lim_{h \to 0} \frac{\sin x \cos h + \cos x \sin h - \sin x}{h} \\
+                        & = \lim_{h \to 0} \left[ \frac{\sin x \cos h - \sin x}{h} 
+                            + \frac{\cos x \sin h}{h} \right] \\
+                        & = \lim_{h \to 0} \left[ \sin x \frac{\cos h - 1}{h} 
+                            + \cos x \frac{\sin h}{h} \right] \\
+                        & = \cos x \\
+  \end{align*}
+  
+  \subsection{Cosine} % (fold)
+  \begin{align*}
+    \frac{d}{dx} \cos x & = \lim_{h \to 0} \frac{\cos (x + h) - \cos x}{h} \\
+                        & = \lim_{h \to 0} \frac{\cos x \cos h - \sin x \sin h - \cos x}{h} \\
+                        & = \lim_{h \to 0} \left[ \frac{\cos x \cos h - \cos x}{h} - \frac{\sin x \sin h}{h} \right] \\
+                        & = \lim_{h \to 0} \left[ \frac{\cos x (\cos h - 1)}{h} - \frac{\sin x \sin h}{h} \right] \\
+                        & = - \sin x \\
+  \end{align*}
+
+  \subsection{Tangent} % (fold)
+  
+  \begin{align*}
+    \frac{d}{dx} \tan x & = \frac{d}{dx} \left( \frac{\sin x}{\cos x}  \right) \\
+                        & = \frac{\cos x \cos x - \sin x (- \sin x)}{\cos^2 x} \\
+                        & = \frac{1}{\cos^2 x} \\
+                        & = \sec^2 x \\
+  \end{align*}
+  
+  \subsection{Secant} % (fold)
+
+  \begin{align*}
+    \frac{d}{dx} \sec x & = \frac{d}{dx} \left( \frac{1}{\cos x} \right) \\
+                        & = \frac{\cos x \cdot 0 - (- \sin x)}{\cos^2 x} \\
+                        & = \frac{\sin x}{\cos^2 x} \\
+                        & = \tan x \sec x \\
+  \end{align*}
+
+  \subsection{Cosecant} % (fold)
+
+  \begin{align*}
+    \frac{d}{dx} \csc x & = \frac{d}{dx} \left( \frac{1}{\sin x}  \right) \\
+                        & = \frac{\sin x \cdot 0 - \cos x}{\sin^2 x} \\
+                        & = - \frac{\cos x}{\sin^2 x} \\
+                        & = - \cot x \csc x \\
+  \end{align*}
+
+  \subsection{Cotangent} % (fold)
+  \begin{align*}
+    \frac{d}{dx} \cot x & = \frac{d}{dx} \left( \frac{\cos x}{\sin x}  \right) \\
+                        & = \frac{\sin x (- \sin x) - \cos^2 x }{\sin^2 x} \\
+                        & = \frac{- \left( \sin^2 x + \cos^2 x \right)}{\sin^2 x} \\
+                        & = - \frac{1}{\sin^2 x} \\
+                        & = -\csc^2 x \\
+  \end{align*}
   
 \end{document}
 
