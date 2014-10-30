@@ -25,11 +25,48 @@
   \maketitle
   \tableofcontents
 
+  \newpage 
+
   \section{Example/Motivation} % (fold)
+
+  Draw function boxes with widget machine and item machine which produces items out of widgets. With
+  faster widget production we can get more items or with more items per widget we can get more
+  items.
   
   \begin{align*}
-    y &= \sqrt{x^2 + 1} \\
-    y &= \left( x^2 + 1 \right)^{10} \\
+    i(t)          & = i(w(t)) \\
+    \frac{di}{dt} & = \frac{di}{dw} \cdot \frac{dw}{dt} \\
+  \end{align*}
+
+  Doubling the rate at which widgets come out doubles the rate of item production. Or making twice as
+  many items out of the same number of widgets doubles the rate of item production. The overall rate
+  is the product of the ``items per widget'' rate and the ``widgets per time.''
+  
+  In general with a composition of functions, the overall rate is the product of the two individual
+  rates.
+
+  Another example:
+  \begin{align*}
+    f(x)  & = \left( x^2 \right)^3 \\
+    f'(x) & = 6x^5 \\
+  \end{align*}
+
+  Alternate:
+  \begin{align*}
+    u(x)          & = x^2 \\
+    f(u)          & = u^3 \\
+    \\
+    \frac{du}{dx} & = 2x \\
+    \frac{df}{du} & = 3u^2 \\
+    \\
+    \frac{df}{dx} & = 3 \cdot \left( x^2 \right)^2 \cdot 2x \\
+                  & = 6x^5 \\
+  \end{align*}
+
+
+  \begin{align*}
+    f(x) & = \sqrt{2x^2 - 7} \\
+    g(x) & = \left( 2x^2 - 7 \right)^{10} \\
   \end{align*}
 
   \section{Rule} % (fold)
@@ -41,32 +78,33 @@
 
   For our example:
   \begin{align*}
-    u(x) & = x^2 + 1 \\
-    y(u) & = \sqrt{u}
+    v(x) & = 2x^2 - 7 \\
+    u(v) & = \sqrt{v}
   \end{align*}
 
   If all the $\Delta$s are non-zero, then:
   \begin{align*}
-    f(x) &= y(u(x)) \\
+    f(x) &= u(v(x)) \\
     \\
-    \frac{\Delta y}{\Delta x} & = \frac{\Delta y}{\Delta x} \cdot \frac{\Delta u}{\Delta u} \\
-                              & = \frac{\Delta y}{\Delta u} \cdot \frac{\Delta u}{\Delta x} \\
+    \frac{\Delta u}{\Delta x} & = \frac{\Delta u}{\Delta x} \cdot \frac{\Delta v}{\Delta v} \\
+                              & = \frac{\Delta u}{\Delta v} \cdot \frac{\Delta v}{\Delta x} \\
   \end{align*}
 
-  If $\frac{dy}{du}$ and $\frac{du}{dx}$ are both defined, then:
+  If $\frac{du}{dv}$ and $\frac{dv}{dx}$ are both defined, then:
   \begin{align*}
-    \lim_{\Delta x \to 0} \Delta u &= 0 \\
-    \lim_{\Delta u \to 0} \Delta y &= 0 \\
+    \lim_{\Delta x \to 0} \Delta v &= 0 \\
+    \lim_{\Delta v \to 0} \Delta u &= 0 \\
   \end{align*}
 
   Take the limit:
   \begin{align*}
-    \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} 
-                  & = \lim_{\Delta x \to 0} \left[ \frac{\Delta y}{\Delta u} \cdot \frac{\Delta u}{\Delta x} \right] \\
-                  & = \lim_{\Delta u \to 0} \frac{\Delta y}{\Delta u} \cdot \lim_{\Delta x \to 0} \frac{\Delta u}{\Delta x} \\
-    \frac{dy}{dx} & = \frac{dy}{du} \cdot \frac{du}{dx} \\
+    \lim_{\Delta x \to 0} \frac{\Delta u}{\Delta x} 
+                  & = \lim_{\Delta x \to 0} \left[ \frac{\Delta u}{\Delta v} \cdot \frac{\Delta v}{\Delta x} \right] \\
+                  & = \lim_{\Delta v \to 0} \frac{\Delta u}{\Delta v} \cdot \lim_{\Delta x \to 0} \frac{\Delta v}{\Delta x} \\
+    \frac{du}{dx} & = \frac{du}{dv} \cdot \frac{dv}{dx} \\
   \end{align*}
 
+  \section{Examples}
 
   \section{Alternate Proof of Quotient Rule} % (fold)
   
