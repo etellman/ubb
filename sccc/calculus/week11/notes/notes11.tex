@@ -53,8 +53,8 @@
   \begin{align*}
     \frac{1}{2} \sin \theta \cos \theta < \frac{\theta}{2} < \frac{1}{2} \tan \theta \\
     \sin \theta \cos \theta < \theta < \tan \theta \\
-    \sin \theta \cos \theta < \theta < \frac{\sin \theta}{\cos theta} \\
-    \cos \theta < \frac{\theta}{\sin \theta} < \frac{1}{\cos theta} \\
+    \sin \theta \cos \theta < \theta < \frac{\sin \theta}{\cos \theta} \\
+    \cos \theta < \frac{\theta}{\sin \theta} < \frac{1}{\cos \theta} \\
   \end{align*}
 
   By the Squeeze Theorem:
@@ -70,6 +70,7 @@
     \lim_{x \to 0} \frac{1 - \cos x}{x} 
       & = \lim_{x \to 0} \frac{1 - \cos^2 x}{x(1 + \cos x)} \\
       & = \lim_{x \to 0} \frac{\sin^2 x}{x(1 + \cos x)} \\
+      & = \lim_{x \to 0} \left[ \frac{\sin x}{x} \cdot \frac{\sin x}{1 + \cos x} \right] \\
       & = \lim_{x \to 0} \frac{\sin x}{1 + \cos x} \\
       & = 0 \\
   \end{align*}
