@@ -27,47 +27,67 @@
 
   \newpage 
 
-  \section{Example/Motivation} % (fold)
-
-  \subsection{Car Manufacturing} % (fold)
+  \section{Substitution} % (fold)
   
-  Draw function boxes with steel supply (dollars in, steel out) and car manufacturer (steel in, cars
-  out).
+  \begin{align*}
+    f(x)                & = \frac{\sin 4x}{6x} \\
+    \\
+    u                   & = 4x \\
+    x                   & = \frac{u}{4} \\
+    6x                  & = \frac{3u}{2} \\
+    \\
+    f(u)                & = \frac{\sin u}{3u/2} \\
+                        & = \frac{2}{3} \cdot \frac{\sin u}{u} \\
+    \\
+    \lim_{u \to 0} f(u) & = \lim_{u \to 0} \frac{2}{3} \cdot \frac{\sin u}{u} \\
+                        & = \frac{2}{3} \\
+  \end{align*}
+
+  \section{Chain Rule} % (fold)
+  
+  \subsection{Example/Motivation} % (fold)
+
+  \subsubsection{Car Manufacturing} % (fold)
+  
+  Draw function boxes with steel supply (dollars in, steel out) and car
+  manufacturer (steel in, cars out).
 
   \begin{itemize}
     \item first function is amount of steel a given amount of money will provide
     \item second function is number of cars a given amount of steel will provide
-    \item draw graph of piecewise linear cost function for steel--breaks are when cost goes down
+    \item draw graph of piecewise linear cost function for steel--breaks are
+      when cost goes down
       because the manufacturer is buying a large quantity
     \item draw graph of linear function for steel vs. cars. More steel produces more cars
-    \item talk about slope is incremental amount you have to spend to get a little more steel, or
-      incremental amount of steel you need to use to make a little more car
-    \item You can save money on cars by either finding a cheaper supply of steel or finding a way to
-      make cars with less steel per car.
+    \item talk about slope is incremental amount you have to spend to get a
+      little more steel, or incremental amount of steel you need to use to make
+      a little more car
+    \item You can save money on cars by either finding a cheaper supply of
+      steel or finding a way to make cars with less steel per car.
   \end{itemize}
 
-  \subsection{Online Retailer} % (fold)
+  \subsubsection{Online Retailer} % (fold)
   
-  Draw function boxes with time in, searches out and searches in orders out.
+  Draw function boxes with time in, visitors out and visitors in orders out.
 
   \begin{itemize}
-    \item first function is total number of searches since 2000 (or whatever)
-    \item second function is number of orders a search will produce
+    \item first function is total number of visits in some amount of time
+    \item second function is number of orders a that many visits produces
     \item draw graphs 
-    \item slope of searches graph is searches/minute
-    \item slope of orders graph is orders/search
-    \item You can sell more stuff by getting more searches (more searches per minute) or by making
-      each search more productive (cheaper stuff, better selection, better search algorithm, etc.)
+    \item slope of searches graph is visits/minute
+    \item slope of orders graph is orders/visits
+    \item You can sell more stuff by getting more visits (more visits per
+      minute) or by making each visit more productive (cheaper stuff, better
+      selection, better search algorithm, etc.)
   \end{itemize}
 
-
-
+  Other examples:
   \begin{align*}
     f(x) & = \sqrt{2x^2 - 7} \\
     g(x) & = \left( 2x^2 - 7 \right)^{10} \\
   \end{align*}
 
-  \section{Rule} % (fold)
+  \subsection{Rule} % (fold)
   
   \begin{align*}
     f(x) & = u(v(x)) \\
@@ -102,7 +122,7 @@
     \frac{du}{dx} & = \frac{du}{dv} \cdot \frac{dv}{dx} \\
   \end{align*}
 
-  \section{Examples}
+  \subsection{Examples}
 
   Another example:
   \begin{align*}
@@ -122,7 +142,7 @@
                   & = 6x^5 \\
   \end{align*}
 
-  \section{Alternate Proof of Quotient Rule} % (fold)
+  \subsection{Alternate Proof of Quotient Rule} % (fold)
   
   \begin{align*}
     f(x)  & = \frac{u(x)}{v(x)} \\
@@ -133,6 +153,87 @@
           & = - \frac{uv'}{v^2} + \frac{u'}{v} \\
           & = \frac{u'v}{v^2} - \frac{uv'}{v^2} \\
           & = \frac{u'v - uv'}{v^2} \\
+  \end{align*}
+
+  \subsection{More Examples} % (fold)
+  
+  \begin{enumerate}
+
+    \item 
+      \[
+        f(x) = \sqrt{x^2 + 1}{2x - 3}
+      \]
+
+    \item 
+      \[
+        f(x) = \left( x^2 + 2x \right)^4
+      \]
+
+    \item 
+      \[
+        f(x) = \cos \left( x^2 + 1 \right)
+      \]
+
+    \item 
+      \[
+        f(x) = \sin \left( x^2 + 2x + 3 \right)
+      \]
+
+    \item 
+      \[
+        f(x) = \cos \left( x^2 - 1 \right)^2
+      \]
+
+    \item 
+      \[
+        f(x) = \cos^2 \left( x^2 - 1 \right)
+      \]
+
+  \end{enumerate}
+
+  \section{$e^{xi}$} % (fold)
+  
+  Powers of $i$:
+  \begin{align*}
+    i^0 & = 1 \\
+    i^1 & = i \\
+    i^2 & = -1 \\
+    i^3 & = -i \\
+    i^4 & = 1 \\
+    \vdots
+  \end{align*}
+
+  \[
+    e^i = 1 + i + \frac{i^2}{2!} + \frac{i^3}{3!} + \frac{i^4}{4!} + \dots
+  \]
+
+  Powers of $e^ix$ between 0 and $\pi$, incrementing by $0.2$:
+  \begin{align*}
+    1. + 0. i \\
+    0.980067 + 0.198669 i \\
+    0.921061 + 0.389418 i \\
+    0.825336 + 0.564642 i \\
+    0.696707 + 0.717356 i \\
+    0.540302 + 0.841471 i \\
+    0.362358 + 0.932039 i \\
+    0.169967 + 0.98545 i \\
+    -0.0291995 + 0.999574 i \\
+    -0.227202 + 0.973848 i \\
+    -0.416147 + 0.909297 i \\
+    -0.588501 + 0.808496 i \\
+    -0.737394 + 0.675463 i \\
+    -0.856889 + 0.515501 i \\
+    -0.942222 + 0.334988 i \\
+    -0.989992 + 0.14112 i \\
+  \end{align*}
+
+  \begin{align*}
+    e^{ix}        & = \cos x + i \sin x \\
+    e^{\pi i}     & = -1 \\
+    e^{\pi i} + 1 & = 0 \\
+    \\
+    \cos x & = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} \dots \\
+    \sin x & = 1 - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} \dots \\
   \end{align*}
 
 \end{document}
