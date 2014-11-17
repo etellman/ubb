@@ -104,9 +104,15 @@
       \]
 
     \item[12] 
-      \[
-        f'(x) = \boxed{ - \csc^2(x) - \sec (x) + \csc^2(x) \sec (x) }
-      \]
+      \begin{align*}
+        y  & = \frac{1 - \sec x}{\tan x} \\
+           & = \frac{\cos x}{\sin x} \left( 1 - \frac{1}{\cos x} \right) \\
+           & = \cot x - \csc x \\
+        \\
+        y' & = \csc^2 x + \csc x \cot x \\
+           & = \frac{-1}{\sin^2 x} + \frac{1}{\sin x} \cdot \frac{\cos x}{\sin x} \\
+           & = \boxed{ \frac{\cos x - 1}{\sin^2 x} } \\
+      \end{align*}
 
     \item[13] 
       \[
@@ -203,6 +209,7 @@
         \item
           \begin{align*}
             \frac{1 + \tan x}{\sec x} & = \cos x (1 + \tan x) \\
+                                      & = \cos x \left( 1 + \frac{\sin x}{\cos x} \right) \\
                                       & = \cos x + \sin x \\
           \end{align*}
       \end{enumerate}
@@ -250,6 +257,7 @@
       \end{align*}
 
     \item[42] 
+      approach one:
       \begin{align*}
         \lim_{x \to 0} \frac{\cos \theta - 1}{\sin \theta} 
           & = \lim_{x \to 0} \frac{\cos^2 \theta - 1}{\sin \theta (\cos \theta + 1)} \\
@@ -258,6 +266,13 @@
           & = \boxed{ 0 } \\
       \end{align*}
 
+      approach two:
+      \begin{align*}
+        \lim_{x \to 0} \frac{\cos \theta - 1}{\sin \theta} 
+          & = \lim_{x \to 0} \frac{\cos \theta - 1}{\sin \theta} \cdot \frac{\theta}{\theta} \\
+          & = \lim_{x \to 0} \frac{\theta}{\sin \theta} \cdot \lim_{x \to 0} \frac{\cos \theta - 1}{\theta} \\
+          & = \boxed{ 0 } \\
+      \end{align*}
     \newpage
 
     \item[49]
