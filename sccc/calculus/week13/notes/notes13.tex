@@ -27,5 +27,178 @@
 
   \newpage 
 
+  \section{Logarithm Review} % (fold)
+  
+  \begin{itemize*}
+    \item Turn multiplication into addition, division into subtraction, powers into multiplication,
+      and roots into division.
+    \item farmer, etc.
+    \item logarithm tables
+    \item guy who followed Napier and made more tables
+    \item tables in use until 1920's
+    \item enabled Kepler, Newton, etc.
+    \item Apollo program still doing calculations with slide rules
+    \item logarithmic scale used for Decibels, Richter scale, and other things where there is a wide
+      range between the smallest and largest values
+    \item do a few logarithm problem
+  \end{itemize*}
+  
+  \section{Differentiating $a^x$} % (fold)
+  
+  \begin{align*}
+    y             & = 10^x \\
+                  & = \left( e^{\ln 10} \right)^x \\
+                  & = e^{x \cdot \ln 10} \\
+    \\
+    \frac{dy}{dx} & = e^{x \cdot \ln 10} \cdot \ln 10 \\
+                  & = \ln 10 \cdot 10^x \\
+    \\
+    \frac{d}{dx} a^x &= \ln a \cdot a^x \\
+  \end{align*}
+
+  Larger bases grow at faster 
+  
+  rates. The natural logarithm of numbers less than e are less than 1
+  and the natural logarithms of numbers greater than e are greater than 1. 
+  
+  Logarithms of numbers less than 1 are negative, as and these grow at a negative rate--larger
+  $x$ results in a smaller $f(x)$.
+
+  \begin{align*}
+    \ln 2   & \approx 0.693147 \\
+    \ln 10  & \approx 2.30259 \\
+    \ln 0.5 & \approx -0.693147 \\
+  \end{align*}
+
+  \section{Differentiating Logarithms} % (fold)
+  
+  \begin{align*}
+    y                  & = \ln x \\
+    x                  & = e^y \\
+    \\
+    1                  & = e^y \frac{dy}{dx} \\
+    \frac{dy}{dx}      & = \frac{1}{e^y} \\
+                       & = \frac{1}{x} \\
+    \\
+    \frac{d}{dx} \ln x & = \frac{1}{x} \\
+  \end{align*}
+
+  When you have a function you can't solve for $y$ or if you solve for $y$ and you get something you
+  can't differentiate, you still may be able to find the derivative by:
+
+  \begin{itemize*}
+    \item differentiate both sides with respect to x
+    \item solve for $\frac{dy}{dx}$.
+    \item if you have an explicit formula for $y$, plug it in to the result
+  \end{itemize*}
+
+  \begin{align*}
+    y                        & = \log_{10} x \\
+    x                        & = 10^y \\
+                             & = \left( e^{\ln 10} \right)^y \\
+                             & = e^{\ln 10 \cdot y} \\
+    \\
+    1                        & = \ln 10 \cdot e^y \frac{dy}{dx} \\
+    \frac{dy}{dx}            & = \frac{1}{\ln 10 \cdot e^y} \\
+                             & = \frac{1}{\ln 10 \cdot x} \\
+    \\
+    \frac{d}{dx} \log_{10} x & = \frac{1}{\ln 10 \cdot x} \\
+    \\
+    \frac{d}{dx} \log_a x    & = \frac{1}{\ln a \cdot x} \\
+  \end{align*}
+
+  \section{Differentiating Circles} % (fold)
+  
+  Ellipses are not functions since they don't pass the vertical line test.
+
+  \begin{align*}
+    x^2 + y^2             & = 4 \\
+    2x + 2y \frac{dy}{dx} & = 0 \\
+    \frac{dy}{dx}         & = - \frac{x}{y} \\
+  \end{align*}
+
+  Draw a circle with various tangent lines and slopes.
+
+  The top half of a circle is a function:
+  \begin{align*}
+    y             & = \left( 4 - x^2 \right)^{1/2} \\
+    \frac{dy}{dx} & = \frac{1}{2} \left( 4 - x^2 \right)^{-1/2} \cdot 2x \\
+                  & = - \frac{x}{\sqrt{4 - x^2}} \\
+  \end{align*}
+
+  This is the same thing you get when you plug the expression for $y$ into the first result:
+  \begin{align*}
+    y             & = \sqrt{ 4 - x^2 } \\
+    \frac{dy}{dx} & = - \frac{x}{y} \\
+                  & = - \frac{x}{ \sqrt{ 4 - x^2 } } \\
+  \end{align*}
+  
+  \newpage
+
+  \section{Examples} % (fold)
+  
+  \begin{enumerate}
+    \item 
+      \begin{align*}
+        4x^3 + 2xy - y^3 & = 3 \\
+        \frac{dy}{dx}    & = \frac{2 \left(6x^2 + y\right)}{3 y^2 - 2x } \\
+      \end{align*}
+
+      You can also find $\frac{dx}{dy}$, which is the reciprocal of $\frac{dy}{dx}$:
+      \begin{align*}
+        4x^3 + 2xy - y^3 & = 3 \\
+        \frac{dx}{dy}    & = \frac{3 y^2 - 2x}{2 \left( 6x^2 + y \right)} \\
+      \end{align*}
+
+    \item 
+      \begin{align*}
+        xy - x \cos y & = 0 \\
+        y'            & = \frac{\cos y - y}{x (\sin y + 1)} \\
+      \end{align*}
+      
+    \item 
+      \begin{align*}
+        e^{xy} & = x + y \\
+        y'     & = \frac{1 - y e^{x y}}{x e^{x y} - 1} \\
+      \end{align*}
+
+    \item 
+      \begin{align*}
+        \sin(x + y) & = \sin x + \sin y \\
+        y'          & = \frac{\cos (x) - \cos (x + y)}{\cos (x + y) - \cos (y)} \\
+      \end{align*}
+
+    \item 
+      \begin{align*}
+        4x^2 + 3 y^2 + 4 & = 8x + 12 y \\
+        y'               & = - \frac{4 (x - 1)}{3 (y - 2)} \\
+      \end{align*}
+
+    \item 
+      \begin{align*}
+        x^3 - y^3         & = 4 \\
+        \frac{dy}{dx}     & = \frac{x^2}{y^2} \\
+        \frac{d^2y}{dx^2} & = \frac{2 x (y-x)}{y^3} \\
+      \end{align*}
+      
+    \item Do a few equation of tangent lines from the book.
+  \end{enumerate}
+
+  \section{Inverse Trigonometric Functions} % (fold)
+  
+  Review inverse trigonometric functions and their domains.
+
+  \begin{align*}
+    y             & = \arcsin x \\
+    x             & = \sin y \\
+    \\
+    1             & = \cos y \frac{dy}{dx} \\
+    \frac{dy}{dx} & = \frac{1}{\cos y} \\
+                  & = \frac{1}{\sqrt{1 - \sin^2 y}} \\
+                  & = \frac{1}{\sqrt{1 - x^2}} \\
+  \end{align*}
+
+  Works because $\cos x \geq 0$ when $-\frac{\pi}{2} \leq x \leq \frac{\pi}{2}$.
+
 \end{document}
 
