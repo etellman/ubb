@@ -11,8 +11,8 @@ percentage <- function(score, points) {
   c(actual = actual, percentage = round(100 * (actual) / points))
 }
 
-possible <- points(c(1:13, 15, 17:19, 23:24, 29, 31, 33, 35, 39:40, 42, 49))
-percentage(2, possible)
+possible <- points(c(1:10, 16:18, 21:24, 30:35, 40, 47:48, 51:52, 61:62, 75, 78, 84))
+percentage(11, possible)
 
 grades.file <- paste(grades.dir, 'grades.csv', sep = '/')
 grades <- read.delim(grades.file, header = TRUE, strip.white = T, sep = ',')
