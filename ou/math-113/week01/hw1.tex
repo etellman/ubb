@@ -15,197 +15,205 @@
 
 \begin{document}
 
-\printanswers
+  \maketitle
 
-\maketitle
+  \section{Reading}
 
-\section{Reading}
+  % Read Chapter 1.  Most of it should be review, but take a glance at it anyway to make sure you are familiar with
+  % everything.  
 
-Read Chapter 1.  Most of it should be review, but take a glance at it anyway to make sure you are familiar with
-everything.  
+  \section{Problems}
 
-\section{Problems}
+  % The answers to the odd numbered problems are in the back of the book.
 
-The answers to the odd numbered problems are in the back of the book.
+  % If you have trouble with anything, ask a TA or another student for some assistance.  We'll go over
+  % some of the problems and answer any questions in class next week. 
 
-If you have trouble with anything, ask a TA or another student for some assistance.  We'll go over some of the problems
-and answer any questions in class next week. 
+  \begin{questions}
 
-\begin{questions}
+    \question
 
-\question
+    From the text:
+    \begin{itemize}
 
-From the text:
-\begin{itemize}
+      \item pp 9-10, problems 1-6, 36-38
 
-  \item pp 9-10, problems 1-6, 36-38
+      \item pp 40-42, problems 1, 15-20, 25-30, 33-38, 53, 56
 
-  \item pp 40-42, problems 1, 15-20, 25-30, 33-38, 53, 56
+    \end{itemize}
 
-\end{itemize}
+    \question
 
-\question
+    In 1772, the German astronomer Johann Elert Bode found a pattern in the distances of the planets
+    from the sun.  At the time, only six planets were known.  The actual relative distances of the
+    planets from the sun and his pattern are:
 
-In 1772, the German astronomer Johann Elert Bode found a pattern in the distances of the planets from the sun.  At the
-time, only six planets were known.  The actual relative distances of the planets from the sun and his pattern are:
+    \vspace{0.5 cm}
+      \begin{tabular}{|c|c|c|}
+        \hline
+        Planet  & Actual Distance & Bode's Pattern \\ 
+        \hline
+        Mercury & 4               & \( 0 + 4 = 4 \) \\
+        Venus   & 7               & \( 3 + 4 = 7 \) \\
+        Earth   & 10              & \( 6 + 4 = 10 \) \\
+        Mars    & 15              & \( 12 + 4 = 16 \) \\
+                &                 &  \\
+        Jupiter & 52              & \( 48 + 4 = 52 \) \\
+        Saturn  & 96              & \( 96 + 4 = 100 \) \\
+                &                 &  \\
+        \hline
+      \end{tabular}
+    \vspace{0.5 cm}
 
-\vspace{0.5 cm}
-  \begin{tabular}{|c|c|c|}
-    \hline
-    Planet  & Actual Distance & Bode's Pattern \\ 
-    \hline
-    Mercury & 4               & \( 0 + 4 = 4 \) \\
-    Venus   & 7               & \( 3 + 4 = 7 \) \\
-    Earth   & 10              & \( 6 + 4 = 10 \) \\
-    Mars    & 15              & \( 12 + 4 = 16 \) \\
-            &                 &  \\
-    Jupiter & 52              & \( 48 + 4 = 52 \) \\
-    Saturn  & 96              & \( 96 + 4 = 100 \) \\
-            &                 &  \\
-    \hline
-  \end{tabular}
-\vspace{0.5 cm}
+    \begin{parts}
+      \part What equation belongs between Bode's equations for Mars and Jupiter?
 
-\begin{parts}
-  \part What equation belongs between Bode's equations for Mars and Jupiter?
+      \begin{solution}
+        The equations all look like: \( n + 4 = \ldots \).  The only thing that changes from
+        equation to equation is the value of $n$.  After the first equation, each value of $n$ is
+        twice its value from the preceding equation.  
 
-  \begin{solution}
-    The equations all look like: \( n + 4 = \ldots \).  The only thing that changes from equation to equation is the
-    value of $n$.  After the first equation, each value of $n$ is twice its value from the preceding equation.  
+        A slightly more formal way of saying the same thing is that after the first equation, the
+        equations are  look like: \( 2^n \cdot 3 + 4 \), where n = \{ 0, 1, 2, \ldots \}.  
 
-    A slightly more formal way of saying the same thing is that after the first equation, the equations are  
-    look like: \( 2^n \cdot 3 + 4 \), where n = \{ 0, 1, 2, \ldots \}.  
+        Either way, the missing equation is: \( 24 + 4 = 28 \)
 
-    Either way, the missing equation is: \( 24 + 4 = 28 \)
+      \end{solution}
+      \part What equation belongs after Bode's equation for Saturn?
 
-  \end{solution}
-  \part What equation belongs after Bode's equation for Saturn?
+      \begin{solution}
+        Using the same reasoning, the missing equation is: \( 192 + 4 = 196 \)
 
-  \begin{solution}
-    Using the same reasoning, the missing equation is: \( 192 + 4 = 196 \)
+      \end{solution}
 
-  \end{solution}
+    \end{parts}
 
-\end{parts}
+    In 1781 William Herschel discovered Uranus, the next planet beyond Saturn.  Because its distance
+    of 192 units comes remarkably close to the number predicted by the equation, astronomers came to
+    the conclusion that the equation between Bode's equations for Mars and Jupiter must also mean
+    something.  In fact, in 1801, the asteroid Ceres was discovered at a distance of 28 units from
+    the sun.
 
-In 1781 William Herschel discovered Uranus, the next planet beyond Saturn.  Because its distance of 192 units comes
-remarkably close to the number predicted by the equation, astronomers came to the conclusion that the equation between
-Bode's equations for Mars and Jupiter must also mean something.  In fact, in 1801, the asteroid Ceres was discovered at
-a distance of 28 units from the sun.
+    \question
 
-\question
+    In the late sixteenth century, the Italian scientist Galileo discovered a relationship between
+    the length of a pendulum and the time of the swing:
 
-In the late sixteenth century, the Italian scientist Galileo discovered an interesting relationship between the
-length of a pendulum and the time of the swing:
+    \vspace{0.5 cm}
+      \begin{tabular}{|c|c|}
+        \hline
+        Length of Pendulum  & Time of Swing \\ 
+        \hline
+        1 unit  & 1 second \\
+        4 units & 2 seconds \\
+        9 units & 3 seconds \\
+        16 units & 4 seconds \\
+        \hline
+      \end{tabular}
+    \vspace{0.5 cm}
 
-\vspace{0.5 cm}
-  \begin{tabular}{|c|c|}
-    \hline
-    Length of Pendulum  & Time of Swing \\ 
-    \hline
-    1 unit  & 1 second \\
-    4 units & 2 seconds \\
-    9 units & 3 seconds \\
-    16 units & 4 seconds \\
-    \hline
-  \end{tabular}
-\vspace{0.5 cm}
+    \begin{parts}
+    \part
+    Write an equation for the length of the pendulum in terms of the time of the swing.
 
-\begin{parts}
-\part
-Write an equation for the length of the pendulum in terms of the time of the swing.
+    \begin{solution}
+    The length is always the time of the swing squared.  So the equation is: \( L = T^2 \)
+    \end{solution}
 
-\begin{solution}
-The length is always the time of the swing squared.  So the equation is: \( L = T^2 \)
-\end{solution}
+    \part
+    What would be length of a pendulum with a swing of 8 seconds?
 
-\part
-What would be length of a pendulum with a swing of 8 seconds?
+    \begin{solution}
+    Substituting 8 into the equation gives: 
+    \begin{eqnarray*}
+      L & = & T^2 \\
+        & = & 8^2 \\
+        & = & 64 \\
+    \end{eqnarray*}
+    \end{solution}
 
-\begin{solution}
-Substituting 8 into the equation gives: 
-\begin{eqnarray*}
-  L & = & T^2 \\
-    & = & 8^2 \\
-    & = & 64 \\
-\end{eqnarray*}
-\end{solution}
+    \end{parts}
 
-\end{parts}
+    \section{Extra Credit}
 
-\section{Extra Credit}
+    \question
 
-\question
+    You have 9 metal balls and a balance which allows you to compare the weight of two balls or two
+    groups of balls.  You know that one of the balls is slightly heaver than the others but don't
+    know which one is the heavier ball.  What is the smallest number of weighings required to
+    identify the heavier ball?
 
-You have 9 metal balls and a balance which allows you to compare the weight of two balls or two groups of balls.  You know
-that one of the balls is slightly heaver than the others but don't know which one is the heavier ball.  What is the
-smallest number of weighings required to identify the heavier ball?
+    \begin{solution}
+      To minimize the number of weighings, you want to eliminate as many balls as possible with each
+      weighing.  This approach allows you to eliminate \(2/3\) of the balls each time, resulting in
+      two weighings:
 
-\begin{solution}
-  To minimize the number of weighings, you want to eliminate as many balls as possible with each weighing.  This
-  approach allows you to eliminate \(2/3\) of the balls each time, resulting in two weighings:
+      \begin{itemize}
+        \item 
+          Divide the balls into three groups of three.  Select two of the groups and put them on the
+          balance.  If one of the groups is heavier, the heavy ball is in that group.  Otherwise,
+          the heavy ball is in the group you didn't weigh.
 
-  \begin{itemize}
-    \item 
-      Divide the balls into three groups of three.  Select two of the groups and put them on the balance.  If one of
-      the groups is heavier, the heavy ball is in that group.  Otherwise, the heavy ball is in the group you didn't
-      weigh.
+        \item 
+          Select two balls from the group containing the heavy ball and put them on the balance.  If
+          one of them is heavier, it, obviously, is the heavy ball.  Otherwise, the third ball is
+          the heavy ball. 
 
-    \item 
-      Select two balls from the group containing the heavy ball and put them on the balance.  If one of them is heavier,
-      it, obviously, is the heavy ball.  Otherwise, the third ball is the heavy ball. 
-  \end{itemize}
+      \end{itemize}
 
-  This procedure works for any number of balls that is a power of three.  The number of weighings required is equal to
-  the exponent:
+      This procedure works for any number of balls that is a power of three.  The number of
+      weighings required is equal to the exponent:
 
-\begin{center}
-  \begin{tabular}{|c|c|c|}
-    \hline
-    Exponent & Number of Balls & Number of Weighings \\
-    \hline
-    0 & $3^0 = 1$ & 0 \\
-    1 & $3^1 = 3$ & 1 \\
-    2 & $3^2 = 9$ & 2 \\
-    3 & $3^3 = 27$ & 3 \\
-    4 & $3^4 = 81$ & 4 \\
-    \vdots & \vdots & \vdots \\
-    \hline
+    \begin{center}
+      \begin{tabular}{|c|c|c|}
+        \hline
+        Exponent & Number of Balls & Number of Weighings \\
+        \hline
+        0 & $3^0 = 1$ & 0 \\
+        1 & $3^1 = 3$ & 1 \\
+        2 & $3^2 = 9$ & 2 \\
+        3 & $3^3 = 27$ & 3 \\
+        4 & $3^4 = 81$ & 4 \\
+        \vdots & \vdots & \vdots \\
+        \hline
 
-  \end{tabular}
-\end{center}
+      \end{tabular}
+    \end{center}
 
-\end{solution}
+    \end{solution}
 
-\question
+    \question
 
-You throw away your balance and buy a scale instead.  But you are now faced with a different problem.  
+    You throw away your balance and buy a scale instead.  But you are now faced with a different problem.  
 
-You have 10 stacks of coins, each of which contains 10 coins.  You know that one stack is full of counterfeit coins
-while all the other stacks contain real coins.  You also know that a real coin weighs 10 ounces while a counterfeit coin
-weighs 11 ounces.  What is the smallest number of weighings required to identify the stack of counterfeit coins?
+    You have 10 stacks of coins, each of which contains 10 coins.  You know that one stack is full
+    of counterfeit coins while all the other stacks contain real coins.  You also know that a real
+    coin weighs 10 ounces while a counterfeit coin weighs 11 ounces.  What is the smallest number of
+    weighings required to identify the stack of counterfeit coins?
 
-\begin{solution}
+    \begin{solution}
 
-The best approach only requires one weighing.  The key is to notice that you can select
-different numbers of coins from each stack.  So what you do is select 1 coin from the first stack, 2 coins from the
-second stack, 3 coins from the third stack, etc. and weigh them all at once.
+    The best approach only requires one weighing.  The key is to notice that you can select
+    different numbers of coins from each stack.  So what you do is select 1 coin from the first
+    stack, 2 coins from the second stack, 3 coins from the third stack, etc. and weigh them all at
+    once.
 
-If all of the coins were real coins, you would expect the total to be: 
-\[ 10 \cdot (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)  = 10 \cdot 55 = 550 \]
+    If all of the coins were real coins, you would expect the total to be: 
+    \[ 10 \cdot (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)  = 10 \cdot 55 = 550 \]
 
-The actual total will be more than the expected total by the stack number.  
+    The actual total will be more than the expected total by the stack number.  
 
-For example, suppose stack 7 contains the counterfeit coins.  The seven coins you included from stack 7 all weigh one
-ounce more than they should, so the total in this case will be: \( 550 + 7 = 662 \).
+    For example, suppose stack 7 contains the counterfeit coins.  The seven coins you included from
+    stack 7 all weigh one ounce more than they should, so the total in this case will be: 
+    $550 + 7 = 662$.
 
-To get the number of the stack containing the counterfeit coins, you just need to subtract 550 from whatever it says
-on the scale.
+    To get the number of the stack containing the counterfeit coins, you just need to subtract 550
+    from whatever it says on the scale.
 
-\end{solution}
+    \end{solution}
 
 
-\end{questions}
+  \end{questions}
 
 \end{document}
 
