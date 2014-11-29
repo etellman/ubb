@@ -26,7 +26,7 @@
 \newcommand{\sgn}{\operatorname{sgn}}
 
 \everymath{\displaystyle}
-\title{Calculus I \\ Homework Fourteen \\ Section 3.6}
+\title{Calculus I \\ Homework Fourteen \\ Sections 3.7 and 3.9}
 \author{}
 \date{\today}
 
@@ -36,198 +36,397 @@
 
   \section{Homework}
     \begin{itemize*}
-      \item read Section 3.6
-      \item exercises: 2-10, 14-19, 23-26, 31-32, 36-37, 41-42, 45, 49
+      \item section 3.7: 7, 9-11, 15, 18, 23, 24 
+      \item section 3.9: 1-6, 14, 18, 21, 24
     \end{itemize*}
 
   \ifprintanswers
 
   \section{Solutions}
 
+  \subsection{Section 3.7}
+
   \begin{description}
+    % \item[5] 
+    %   \begin{enumerate}[(a)]
+    %     \item The particle is speeding up between 0 and 1 seconds and slowing down after 
+    %       $t = \unit[1]{s}$.
 
-    \item[2] 
-      \[
-        f'(x) = \boxed{ \frac{2x}{x^2 + 10} }
-      \]
+    %     \item The particle is slowing down between 0 and 1 seconds and after 2 seconds and speeding
+    %       up between 1 and 2 seconds.
 
-    \item[3] 
-      \[
-        f'(x) = \boxed{ \frac{\cos (\ln x)}{x} }
-      \]
+    %   \end{enumerate}
 
-    \item[4] 
+    % \newpage
+
+    % \item[6] 
+    %   \begin{enumerate}[(a)]
+    %     \item The particle is slowing down between 0 and 2 seconds and speeding up after 
+    %       $t = \unit[2]{s}$.
+
+    %     \item The particle is traveling at a roughly constant velocity between 0 and 2 seconds and
+    %       speeding up after that.
+
+    %   \end{enumerate}
+
+    \item[7]
+      \begin{enumerate}[(a)]
+        \item 
+          \begin{align*}
+            v(t)          & = 3t^2 - 9t - 7 \\
+            \\
+            3t^2 - 9t - 7 & = 0 \\
+            t             & = \boxed{ \unit[4]{s} } \\
+          \end{align*}
+
+        \item
+          \begin{align*}
+            a(t)   & = 6t - 9 \\
+            \\
+            6t - 9 & = 0 \\
+            t      & = \boxed{ \unit[1.5]{s} } \\
+          \end{align*}
+
+          The acceleration is zero when the object has reached the peak of its flight and is
+          stopping and turning around.
+
+      \end{enumerate}
+
+
+    \item[9]
+      \begin{enumerate}[(a)]
+        \item 
+          \begin{align*}
+            v(t) & = 10 - 1.66t \\
+            v(3) & = \boxed{ \unit[5.03]{m} } \\
+          \end{align*}
+
+        \item
+          \begin{align*}
+            10 t - 0.83 t^2     & = 25 \\
+            t                   & \approx \{ \unit[3.5403]{s}, \unit[8.5079]{s} \}
+            \\
+            v(\unit[3.5403]{s}) & \approx \boxed{ \unit[4.123]{m/s} }
+          \end{align*}
+
+      \end{enumerate}
+      
+    \item[10]
+      \begin{enumerate}[(a)]
+        \item 
+          The maximum height occurs when the velocity is zero:
+          \begin{align*}
+            v(t)             & = 80 - 32t \\
+            80 - 32t         & = 0 \\
+            t                & = \unit[2.5]{s} \\
+            \\
+            h(\unit[2.5]{s}) & = \boxed{ \unit[100]{ft} } \\
+          \end{align*}
+
+      \end{enumerate}
+
+    \item[11]
+      \begin{enumerate}[(a)]
+        \item 
+          \begin{align*}
+            A(x)              & = x^2 \\
+            A'(x)             & = 2x \\
+            A'(\unit[15]{mm}) & = \boxed{ \unit[30]{mm^2/mm} } \\
+          \end{align*}
+
+          When the side length is 15 mm, adding a little more to each side will increase the area at
+          a rate of $\unit[30]{mm^2/mm}$. For instance, increasing the side length from 15 mm to
+          15.1 mm will increase the area from 225 mm to 228.01 mm and 
+          \[
+            228.01 \approx 225 + 30 \cdot 0.1 
+          \]
+          
+        \item
+          \begin{align*}
+            A(x)  & = x^2 \\
+            A'(x) & = 2x \\
+            P(x)  & = 4x \\
+          \end{align*}
+
+          Adding $\Delta x$ to each side of the square adds a small strip of area $x \Delta x$.
+          Adding two of these results in an area change of approximately $2 x \Delta x$. 
+
+      \end{enumerate}
+
+    \item[15]
       \begin{align*}
-        f(x) & = \frac{1}{\sin^2 x} \cdot 2 \sin x \cdot \cos x \\
-             & = \boxed{ 2 \cot x } \\
-      \end{align*}
-
-    \item[5] 
-      \[
-        f'(x) = \boxed{ \frac{3}{\ln 2 \cdot (3x - 1)} }
-      \]
-
-    \item[6] 
-      \begin{align*}
-        f'(x) & = \frac{1}{\ln 5 \cdot x e^x} \cdot \left( x e^x + e^x \right) \\
-              & = \boxed{ \frac{x + 1}{x \log 5} } \\
-      \end{align*}
-
-    \item[7] 
-      \[
-        f'(x) = \boxed{ \frac{1}{5x \ln^{4/5} x} } \\
-      \]
-
-    \item[8] 
-      \begin{align*}
-        f(x)  & = \ln x^{1/5} \\
-              & = \frac{1}{5} \ln x \\
+        S(r) &= 4 \pi r^2 \\
+        S'(r) &= 8 \pi r \\
         \\
-        f'(x) & = \boxed{ \frac{1}{5x} } \\
+        S'(1) &= \unit[25.13]{ft^2/ft} \\
+        S'(2) &= \unit[50.27]{ft^2/ft} \\
+        S'(3) &= \unit[75.40]{ft^2/ft} \\
       \end{align*}
 
-    \item[9] 
+      The bigger the balloon gets, the more the surface area increases with each
+      small change in the radius.
+
+    \item[18]
+      \begin{align*}
+        V'(t)  & = 6.25t - 250 \\
+        \\
+        V'(5)  & = \unit[-218.75]{gal/min} \\
+        V'(10) & = \unit[-187.5]{gal/min} \\
+        V'(20) & = \unit[-125]{gal/min} \\
+        V'(40) & = \unit[0]{gal/min} \\
+      \end{align*}
+
+      The water drains out more and more slowly as the tank empties. This is because
+      the water pressure decreases as the tank empties.
+
+    \item[23]
+      After $t$ hours, the population is 
       \[
-        f'(x) = \boxed{ (\ln 5x + 1) \cos(x \ln 5x ) }
+        n = 400 \cdot 3^t 
       \]
 
-    \item[10] 
-      \begin{align*}
-        f'(x) & = \frac{(1 - \ln x) \cdot 1/x - (1 + \ln x) \cdot (-1/x)}{(1 - \ln x)^2} \\
-              & = \boxed{ \frac{2}{x (\ln x - 1)^2} } \\
-      \end{align*}
-
-    \item[14] 
+      The rate of change is:
       \[
-        F'(y) = \boxed{ \frac{e^y}{e^y + 1} + \ln \left( e^y + 1 \right) }
+        n'(t) = 400 \ln 3 \cdot 3^t
       \]
 
-    \item[15] 
+      After 2.5 hours:
       \[
-        f'(u) = \boxed{ \frac{1 + \ln 2}{u (\ln 2u + 1)^2} }
+        n'(2.5) \approx \boxed{ \unit[6851]{bacteria/hour} }
       \]
 
-    \item[16] 
+    \item[24]
       \begin{align*}
-        y  & = (\ln x)^{-1} \\
-        y' & = - (\ln x)^{-2} \cdot \frac{1}{x} \\
-           & = \boxed{ - \frac{1}{x \ln^2 x} } \\
+        f'(t) &= \frac{0.7abe^{ - 0.7 t}}{\left( 1 + be^{ - 0.7 t} \right)^2}
+        \\
+        20 &= \frac{a}{1 + b} \\
+        12 &= \frac{0.7 ab}{\left( 1 + b \right)^2} \\
+        \\
+        a &= 140 \\
+        b &= 6 \\
+        \\
+        f(t) &= \frac{140}{1 + 6 e^{-0.7t}} \\
       \end{align*}
 
-    \item[17] 
-      \begin{align*}
-        y' & = \frac{1}{2 - x - 5x^2} \cdot (-10x - 1) \\
-           & = \boxed{ \frac{10x + 1}{5x^2 + x + 2} } \\
-      \end{align*}
-
-    \item[18] 
-      \begin{align*}
-        H(z)  & = \frac{1}{2} \left[ \ln(a^2 - z^2) - \ln(a^2 + z^2)  \right] \\
-        H'(z) & = \frac{1}{2} \left[ \frac{-2z}{a^2 - z^2} - \frac{2z}{a^2 + z^2} \right] \\
-              & = \boxed{ \frac{2 a^2z^2}{z^4 - a^4} } \\
-      \end{align*}
-
-    \item[19] 
-      \begin{align*}
-        y' & = \frac{1}{e^{-x} + x e^{-x}} \cdot \left[ - e^{-x} - x e^{-x} + e^{-x} \right] \\
-           & = \frac{- x e^{-x}}{e^{-x} + x e^{-x}} \\
-           & = \boxed{ \frac{ - x}{1 + x} } \\
-      \end{align*}
-
-    \item[23] 
-      \begin{align*}
-        f'(x)  & = \boxed{ x + 2x \ln(2x) } \\
-        f''(x) & = \boxed{ 3 + 2 \ln(2x) } \\
-      \end{align*}
-
-    \item[24] 
-      \begin{align*}
-        f'(x)  & = \boxed{ \frac{1 - 2 \ln (x)}{x^3} } \\
-        f''(x) & = \boxed{ \frac{6 \ln (x) - 5}{x^4} } \\
-      \end{align*}
-
-    \item[25] 
-      \begin{align*}
-        f'(x)  & = \boxed{ \frac{1}{\sqrt{x^2 + 1}} } \\
-        f''(x) & = \boxed{ \frac{x}{ \left( x^2 + 1 \right)^{3/2} } } \\
-      \end{align*}
-
-    \item[26] 
-      \begin{align*}
-        f'(x)  & = \frac{1}{\sec x + \tan x} \cdot (\sec x \tan x + \sec^2 x) \\
-               & = \sec x \cdot \frac{\sec x + \tan x}{\sec x + \tan x} \\
-               & = \boxed{ \sec x } \\
-        f''(x) & = \boxed{ \sec x \tan x } \\
-      \end{align*}
+      As time goes by, the denominator approachs 1 and the yeast population approaches 140 cells. 
       
-    \item[31] 
+      See Figure~\ref{fig:ex24}.
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.5]{ex24}
+        \caption{Exercise 24}
+        \label{fig:ex24}
+      \end{figure}
+
+
+    % \item[29]
+    %   \begin{enumerate}[(a)]
+    %     \item 
+    %       \[
+    %         C'(x) = 0.0015x^2 - 0.2x + 12
+    %       \]
+
+    %     \item $C'(200) = \$32$. This is approximately the cost to produce one
+    %       more item when you are already producing 200 items.
+
+    %     \item The cost of the 201st item is:
+    %       \[
+    %         C(201) - C(200) \approx \$32.20
+    %       \]
+    %   \end{enumerate}
+
+    % \item[31]
+    %   \begin{enumerate}[(a)]
+    %     \item 
+    %       \[
+    %         A'(x) = \frac{p'(x) - p(x)}{x^2} 
+    %       \]
+
+    %       If $A'(x) > 0$, adding more workers increases the average productivity
+    %       so the company can make more money.
+
+    %     \item 
+    %       \[
+    %         A'(x) = \frac{p'(x) - p(x)}{x^2} = \frac{p'(x)}{x^2} - \frac{A(x)}{x} \\
+    %       \]
+
+    %       If $p'(x) > A(x) = \frac{p(x)}{x}$, then
+    %       \begin{align*}
+    %         A'(x) & = \frac{p'(x)}{x^2} - \frac{A(x)}{x} > \frac{A(x)}{x} - \frac{A(x)}{x} = 0 \\
+    %         A'(x) & > 0 \\
+    %       \end{align*}
+
+    %   \end{enumerate}
+
+
+
+    % \item[21]
+    %   \begin{enumerate}[(a)]
+    %     \item 
+    %       \begin{align*}
+    %         V             & = \frac{C}{P} \\
+    %         \frac{dV}{dP} & = - \frac{C}{P^2} \\
+    %       \end{align*}
+
+    %     \item
+    %       After 10 minutes, the pressure has increased. The rate of change of
+    %       the volume is smaller when the pressure is larger so after 10 minutes
+    %       the pressure is increasing at a slower rate.
+
+    %     \item
+    %       \begin{align*}
+    %         \Beta & = - \frac{1}{V} \cdot \frac{dV}{dP} \\
+    %               & = \frac{1}{V} \cdot \cdot \frac{PV}{P} \\
+    %               & = \frac{C}{PV} \\
+    %       \end{align*}
+
+    %   \end{enumerate}
+
+  \end{description}
+
+  \newpage
+
+  \subsection{Section 3.9}
+  \begin{description}
+    \item[1]
       \begin{align*}
-        f'(x) & = \frac{1 - 2 \log x}{x^3} \\
-        f'(1) & = \boxed{ 1 } \\
+        V(x)          & = x^3 \\
+        \frac{dV}{dt} & = \boxed{ 3x^2 \frac{dx}{dt} } \\
       \end{align*}
 
-    \item[32] 
+    \item[2]
+      \begin{enumerate}[(a)]
+        \item 
+          \begin{align*}
+            A(r)          & = \pi r^2 \\
+            \frac{dA}{dt} & = \boxed{ 2 \pi r \frac{dr}{dt} } \\
+          \end{align*}
+
+        \item 
+          \[
+            A'(\unit[30]{m}) = 60 \pi \approx \unit[188.5]{m^2/s}
+          \]
+      \end{enumerate}
+
+    \item[3]
       \begin{align*}
-        f'(x) & = \frac{2 e^{2x}}{e^{2x} + 1} \\
-        f'(0) & = \boxed{ 1 } \\
+        A(x)          & = x^2 \\
+        \frac{dA}{dt} & = 2x \frac{dx}{dt} \\
       \end{align*}
 
-    \item[36] 
+      When the area is $\unit[16]{cm^2}$, the sides are $\unit[4]{cm}$.
+      \[
+        A'(4) = 2 \cdot 4 \cdot 6 = \boxed{ \unit[48]{cm^2/s} }
+      \]
+
+    \newpage
+
+    \item[4]
       \begin{align*}
-        y            & = (2x + 1)^5 \left( x^4 - 3 \right)^6 \\
-        \ln y        & = 5 \ln (2x + 1) + 6 \ln \left( x^4 - 3 \right) \\
-        \frac{y'}{y} & = \frac{10}{2x + 1} + \frac{24x^3}{x^4 - 3} \\
-        y'           & = (2x + 1)^5 \left(x^4 - 3\right)^6 \left( \frac{10}{2x + 1} + \frac{24x^3}{x^4 - 3} \right) \\
-                     & = \boxed{ 10 (2x + 1)^4 \left( x^4 - 3 \right)^6 + 24x^3 (2x + 1)^5 \left( x^4 - 3 \right)^5 } \\
-      \end{align*}
-      
-    \item[37] 
-      \begin{align*}
-        y            & = x^{1/2} e^{x^2} \left( x^2 + 1 \right)^{10} \\
-        \ln y        & = \frac{1}{2} \ln x + x^2 + 10 \ln \left( x^2 + 1 \right) \\
-        \frac{y'}{y} & = \frac{1}{2x} + 2x + \frac{20x}{x^2 + 1} \\
-        y'           & = \boxed{ x^{1/2} e^{x^2} \left( x^2 + 1 \right)^{10} \left( \frac{1}{2x} + 2x + \frac{20x}{x^2 + 1} \right) } \\
-                     % & = \boxed{ \frac{e^{x^2} \left(x^2 + 1\right)^{10}}{2 \sqrt{x}} + 2 e^{x^2} 
-                     %             \left(x^2 + 1\right)^{10} x^{3/2} + 20 e^{x^2} \left(x^2 + 1\right)^9x^{3/2} }      
+        A(t)          & = x(t) \cdot y(t) \\
+        \frac{dA}{dt} & = \frac{dx}{dt} y(t) + x(t) \cdot \frac{dy}{dt} \\
       \end{align*}
 
-    \item[41] 
+      At the time described:
+      \[
+        A(t) = \boxed{ \unit[140]{cm^2/s} }
+      \]
+
+    \item[5]
       \begin{align*}
-        y            & = x^x \\
-        \ln y        & = x \ln x \\
-        \frac{y'}{y} & = 1 + \ln x \\
-        y'           & = \boxed{ x^x (1 + \ln x) } \\
+        V(t)          & = 25 \pi h(t) \\
+        \frac{dV}{dt} & = 25 \pi \frac{dh}{dt} \\
+        \\
+        3             & = 25 \pi \frac{dh}{dt} \\
+        \frac{dh}{dt} & = \boxed{ \unit[\frac{3}{25 \pi}]{m/min} } \\
       \end{align*}
 
-    \item[42] 
+    \item[6]
       \begin{align*}
-        y            & = x^{\cos x} \\
-        \ln y        & = \cos x \ln x \\
-        \frac{y'}{y} & = \frac{\cos x}{x} - \sin x \ln x \\
-        y'           & = \boxed{ x^{\cos x} \left( \frac{\cos x}{x} - \sin x \ln x \right) } \\
+        V(t)          & = \frac{4}{3} \pi r^3 \\
+        \frac{dV}{dt} & = 4 \pi r^2 \frac{dr}{dt} \\
       \end{align*}
 
-    \item[45] 
+      When $\frac{dr}{dt} = \unit[4]{mm/s}$ and $r = \unit[40]{mm}$:
+      \[
+        \frac{dV}{dt} = \unit[25,600 \pi]{mm^3/s} \approx \boxed{ \unit[80.42]{cm^3/s} }
+      \]
+
+    \item[14]
       \begin{align*}
-        y            & = (\cos x)^x \\
-        \ln y        & = x \ln (\cos x) \\
-        \frac{y'}{y} & = - \frac{x \sin x}{\cos x} + \ln (\cos x) \\
-        y'           & = \boxed{ (\cos x)^x (\ln (\cos x) - x \tan x) } \\
+        x(t)          & = 150 - 35 t \\
+        \frac{dx}{dt} & = -35 \\
+        \\
+        y(t)          & = 25 t \\
+        \frac{dy}{dt} & = 25 \\
+        \\
+        r(t)          & = \sqrt{x^2 + y^2} \\
+        \frac{dr}{dt} & = \frac{x \frac{dx}{dt} + y \frac{dy}{dt}}{\sqrt{x^2 + y^2}} \\
       \end{align*}
 
-    \item[49] 
-      \begin{align*}
-        y  & = \ln \left( x^2 + y^2 \right) \\
-        y' & = \frac{2x + 2yy'}{x^2 + y^2} \\
-           & = \boxed{ \frac{2x}{x^2 + y^2 - 2 y} } \\
-      \end{align*}
+      At 4:00, $\frac{dr}{dt} \approx \boxed{ \unit[21.39]{km/hr} }$
 
-    % \item[50] 
+    % \item[15]
+    %   Approach one:
     %   \begin{align*}
-    %     x^y &= y^x \\
-    %     y \ln x &= x \ln y \\
-    %     \frac{y}{x} + y' \ln x &= \frac{x}{y y'} + \ln y \\
+    %     x(t)          & = 25 t \\
+    %     y(t)          & = 60 t \\
+    %     r(t)          & = \sqrt{(25t)^2 + (60t)^2} = 65 t \\
+    %     \frac{dr}{dt} & = \unit[65]{mi/hr} \\
     %   \end{align*}
+
+    %   The distance is increasing at a constant rate, so it doesn't matter what value you put in for $t$.
+
+    \item[18]
+      \begin{enumerate}[(a)]
+
+        \item 
+          \begin{align*}
+            r(t)          & = \left( 90^2 + x^2 \right) \\
+            \frac{dr}{dt} & = \frac{x}{\sqrt{90^2 + x^2}} \frac{dx}{dt} \\
+          \end{align*}
+
+          When $x = 45$ and $\frac{dx}{dt} = -24$:
+          \[
+            \frac{dr}{dt} \approx \boxed{ \unit[-10.73]{ft/s} }
+          \]
+
+        \item Since the figure is symmetric, the only thing different for third base at this moment
+          is that the distance is increasing instead of decreasing.
+
+      \end{enumerate}
+
+    \item[21]
+      \begin{align*}
+        x(t) & = 100 \\
+        y(t) & = 60t \\
+        s(t) & = \frac{xx' + yy'}{\sqrt{x^2 + y^2}} \\
+             & = \frac{180t}{\sqrt{9t^2 + 25}}
+        \\
+        s(4) & = \frac{720}{13} \\
+             & \approx \boxed{ \unit[55.38]{km/h} } \\
+      \end{align*}
+
+    \item[24]
+      The volume is the area of the cross section multiplied by the length. The base of the cross
+      section is three times the height of the current water level.
+
+      \begin{align*}
+        b(t) & = 3 h(t) \\
+        V    & = \frac{1}{2} bh \cdot 10 \\
+             & = 5bh \\
+             & = 15 h^2 \\
+        \\
+        \frac{dV}{dt} &= 30 h \frac{dh}{dt} \\
+        \frac{dh}{dt} &= \frac{1}{30 h} \cdot \frac{dV}{dt} \\
+      \end{align*}
+
+      When $h = \unit[0.5]{ft}$ and $\frac{dV}{dt} = \unit[12]{ft^3/min}$:
+      \[
+        \frac{dh}{dt} = \boxed{ \unit[0.8]{ft/min} }
+      \]
+
   \end{description}
 
   \else
