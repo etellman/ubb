@@ -37,7 +37,7 @@
   \section{Homework}
     \begin{itemize*}
       \item section 3.7: 7, 9-11, 15, 18, 23, 24 
-      \item section 3.9: 1-6, 14, 18, 21, 24
+      \item section 3.9: 3-6, 14, 16, 18, 21, 24
     \end{itemize*}
 
   \ifprintanswers
@@ -289,25 +289,6 @@
 
   \subsection{Section 3.9}
   \begin{description}
-    \item[1]
-      \begin{align*}
-        V(x)          & = x^3 \\
-        \frac{dV}{dt} & = \boxed{ 3x^2 \frac{dx}{dt} } \\
-      \end{align*}
-
-    \item[2]
-      \begin{enumerate}[(a)]
-        \item 
-          \begin{align*}
-            A(r)          & = \pi r^2 \\
-            \frac{dA}{dt} & = \boxed{ 2 \pi r \frac{dr}{dt} } \\
-          \end{align*}
-
-        \item 
-          \[
-            A'(\unit[30]{m}) = 60 \pi \approx \unit[188.5]{m^2/s}
-          \]
-      \end{enumerate}
 
     \item[3]
       \begin{align*}
@@ -366,6 +347,19 @@
       \end{align*}
 
       At 4:00, $\frac{dr}{dt} \approx \boxed{ \unit[21.39]{km/hr} }$
+
+    \item[16]
+      If $x$ is the distance from the man to the light and $y$ is the height of the shadow:
+      \begin{align*}
+        \frac{y}{12}  & = \frac{2}{x} \\
+        y             & = 24 x^{-1} \\
+        \frac{dy}{dt} & = -24 x^{-2} \frac{dx}{dt} \\
+      \end{align*}
+
+      When the man is 4 feet from the wall he is 8 feet from the light:
+      \[
+        \frac{dy}{dt} = \frac{-24 \cdot 1.6}{64} = \boxed{ \unit[0.6]{ft/s} }
+      \]
 
     % \item[15]
     %   Approach one:
