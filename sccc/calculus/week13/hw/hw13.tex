@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -51,40 +51,39 @@
         y' = - \frac{x^2}{y^2} 
       \]
 
-
     \item[6] 
       \[
-        y' = -2 \frac{\sqrt{y}}{\sqrt{x}} 
+        y' = -2 \sqrt{\frac{y}{x}}
       \]
 
     \item[7] 
       \[
-        y' = \frac{2x - y}{2y - x}
+        y' = \frac{2x + y}{2y - x}
       \]
 
     \item[8] 
       \[
-        y' = \frac{ - 6x^2 - 2xy + y^3}{x \left(x - 3y^2 \right)} 
+        y' = \frac{ y^3 - 2xy - 6x^2 }{ x^2 - 3xy^2 } 
       \]
 
     \item[9] 
       \[
-        y' = \frac{-5 x^4-4 x^3 y+3 y^2}{x^4-6 x y+3 y^2}
+        y' = \frac{ 3y^2 - 4x^3y- 5x^4 }{x^4 - 6xy + 3y^2}
       \]
 
     \item[10] 
       \[
-        y' = \frac{y \left(2x y^2 - e^x\right)}{ - 3x^2 y^2 + e^x - 5 y^4}
+        y' = \frac{ 2xy^3 - 2xye^{x^2} }{ e^{x^2} - 3x^2y^2 - 5y^4}
       \]
 
     \item[11] 
       \[
-        y' = \frac{ - 2x y^2 - \sin (y)}{x (2x y + \cos (y))}
+        y' = \frac{ - 2x y^2 - \sin y}{2x^2y + x \cos y}
       \]
 
     \item[12] 
       \[
-        y' = \frac{\sec \left( x y^2 \right) - y^2 }{2x y}
+        y' = \frac{ 1 - y^2 \cos \left( xy^2 \right) }{2xy \cos \left( xy^2 \right)}
       \]
 
     \item[13] 
@@ -99,7 +98,7 @@
 
     \item[15] 
       \[
-        y' = \frac{y \left( e^{x/y} - y \right)}{x e^{x/y} - y^2}
+        y' = \frac{ ye^{x/y} - y^2 }{ x e^{x/y} - y^2 }
       \]
 
     \item[21] 
@@ -111,13 +110,13 @@
     \item[22] 
       find $g'(x)$ by implicit differentiation:
       \[
-        g'(x) = \frac{2x - \sin (g(x)) }{x \cos (g(x)) + 1}
+        g'(x) = \frac{2x - \sin g(x) }{x \cos g(x) + 1}
       \]
 
       find $g(0)$:
       \begin{align*}
-        g(0) + 0 \sin(g(0)) & = 0 \\
-        g(0)                & = 0 \\
+        g(0) + 0 \cdot \sin g(0) & = 0 \\
+        g(0)                     & = 0 \\
       \end{align*}
 
       find $g'(0)$:
@@ -128,7 +127,12 @@
 
     \item[23] 
       \[
-        \frac{dx}{dy} = \frac{-2 x^4 y+x^3-6 x y^2}{y \left(4 x^3 y-3 x^2+2 y^2\right)}
+        \frac{dx}{dy} = \frac{ x^3 - 2x^4y - 6xy^2 }{ 4x^3y^2 - 3x^2y + 2y^3 }
+      \]
+
+    \item[24] 
+      \[
+        \frac{dy}{dx} = \frac{x \sec^2 y - \sec x}{y \tan x \sec x - \tan y}
       \]
 
     \item[25] 
@@ -143,42 +147,50 @@
     \item[33]
       \begin{align*}
         y'  & = - \frac{9x}{y} \\
+        \\
         y'' & = \frac{9xy' - 9y}{y^2} \\
+            & = \boxed{ - \frac{81}{y^3} } \\
       \end{align*}
 
     \item[34] 
       \begin{align*}
+        y   & = x^{1/2} + y^{1/2} \\
         y'  & = - \frac{\sqrt{y}}{\sqrt{x}} \\
-        y'' & = \frac{x^{3/2} y'^2 + y^{3/2}}{2x^{3/2} y}
+        y'' & = - \frac{1}{2} \left( \frac{y}{x} \right)^{-1/2} \cdot \frac{y'x - y}{x^2} \\
+            & =  \frac{yx^{1/2} - y'x^{3/2}}{2x^2y^{1/2}} \\
+            & = \frac{ x^{1/2} + \frac{ y^{1/2} }{ x^{1/2} } \cdot x^{3/2} }{ 2x^2y^{1/2} } \\
+            % & = \frac{x^{1/2}y + xy^{1/2}}{2x^2y^{1/2}} \\
+            % & = \frac{x^{1/2}y^{1/2} + x}{2x^2} \\
+            & = \frac{x^{1/2} \left( y^{1/2} + x^{1/2} \right)}{2x^2} \\
+            % & = \frac{x^{1/2}}{2x^2} \\
+            & = \boxed{ \frac{1}{2} x^{-3/2} } \\
       \end{align*}
 
     \item[35] 
       \begin{align*}
-        \frac{x^2}{a^2} + \frac{y^2}{b^2} & = 1 \\
-        \frac{2x}{a^2} + \frac{2yy'}{b^2} & = 0 \\
-        % \frac{2yy'}{b^2}                  & = -\frac{2x}{a^2} \\
-        y'                                & = - \frac{xb^2}{ya^2} \\
-      \end{align*}
-
-
-      find the equation of the line:
-      \begin{align*}
-        - \frac{x_0 b^2}{y_0 a^2} &= \frac{y - y_0}{x - x_0} \\
+        x^3 + y^3 & = 1 \\
+        y'        & = - \frac{x^2}{y^2} \\
+                  & = -x^2y^{-2} \\
+        \\
+        y''       & = - \left( 2xy^{-2} + x^2 \left( -2y^{-3} \right) y' \right) \\
+                  & = \frac{2x^2}{y^3} y' - \frac{2x}{y^2} \\
+                  & = \frac{-2x \left( x^3 + y^3 \right)}{y^3} \\
+                  & = \boxed{ - \frac{2x}{y^5} } \\
       \end{align*}
 
     \item[45] 
       \[
-        f'(x) = \frac{1}{2 \sqrt{x} (x + 1)}
+        f'(x) = \frac{1}{2 x^{3/2} + 2 x^{1/2}}
       \]
 
     \item[46] 
       \[
-        f'(x) = \frac{1}{2 \left(x^2 + 1\right) \sqrt{\frac{x}{\tan }}}
+        f'(x) = \frac{1}{\left( 2x^2 + 2 \right) \sqrt{\arctan x}}
       \]
 
     \item[47] 
       \[
-        f'(x) = \frac{2}{\sqrt{1-(2 x+1)^2}}
+        f'(x) = \frac{1}{\sqrt{- x^2 - x}}
       \]
 
     \item[53] 
