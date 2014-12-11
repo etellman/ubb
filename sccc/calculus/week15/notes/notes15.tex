@@ -129,5 +129,142 @@
 
   \end{description}
 
+  \section{Section 4.3} % (fold)
+  
+  \subsection{First Derivative} % (fold)
+  
+  \begin{itemize*}
+    \item $f$ is increasing when $f'(x) > 0$
+    \item $f$ is decreasing when $f'(x) < 0$
+    \item min/max may occur when $f'(x) = 0$
+  \end{itemize*}
+
+  First derivative test for min/max:
+
+  \begin{quote}
+    If $f'$ changes sign at a critical number, $c$ then $c$ is a local min/max. If $f'$ doesn't change
+    sign at $c$ then $c$ isn't a local min/max.
+  \end{quote}
+
+  \subsection{Second Derivative} % (fold)
+  
+  \subsubsection{Concavity} % (fold)
+  
+  \begin{itemize*}
+    \item If $f''(x) > 0$ for all $x$ in an interval, then $f$ is {\em concave upward} in the
+      interval
+    \item If $f''(x) < 0$ for all $x$ in an interval, then $f$ is {\em concave downward} in the
+      interval
+  \end{itemize*}
+
+  \subsubsection{Min/Max} % (fold)
+  \begin{itemize*}
+    \item If $f(c) = 0$ and $f''(c) > 0$ (concave upward), then $f(c)$ is a local minimum
+    \item If $f(c) = 0$ and $f''(c) < 0$ (concave downward), then $f(c)$ is a local maximum
+  \end{itemize*}
+
+  If $f''(c) = 0$ it doesn't help tell whether or not $f(c)$ is a local min/max.
+  
+  \newpage
+
+  \subsection{Examples} % (fold)
+  
+  \begin{description}
+    \item[36]
+      \begin{align*}
+        f(x)   & = x^4 + 8x^3 + 200 \\
+        f'(x)  & = 4x^2 (x + 6) \\
+        f''(x) & = 12x (x + 4) \\
+      \end{align*}
+
+      \begin{itemize*}
+        \item Critical numbers are $x = 0$ and $x = 6$
+        \item $f''(x) > 0$ when $x < -4$ or $x > 0$
+        \item $f'(x) < 0$ when $x < -6$ and $f'(x) > 0$ when $x > -6$, so $f(-6) = -232$ is a local
+          minimum
+        \item $f''(-6) > 0$ $f(-6)$ is a local minimum
+      \end{itemize*}
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.6]{ex43_36.pdf}
+        \caption{Exercise 36}
+        \label{fig:ex_4.3_36}
+      \end{figure}
+      
+    \newpage
+
+    \item[10]
+      \begin{align*}
+        f(x)   & = 4x^3 + 3x^2 -6x + 1 \\
+        f'(x)  & = 12x^2 + 6x - 6 \\
+        f''(x) & = 24x + 6 \\
+      \end{align*}
+
+      \begin{itemize*}
+        \item Critical numbers are $x = -1$ and $x = \frac{1}{2}$ 
+        \item $f'(x) > 0$ when $x < -1$ or $x > \frac{1}{2}$
+        \item $f''(x) > 0$ when $x > - \frac{1}{4}$ 
+        \item local max at $(-1, 6)$
+        \item local min at $\left( \frac{1}{2}, - \frac{3}{4} \right)$
+      \end{itemize*}
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.6]{ex43_10.pdf}
+        \caption{Exercise 10}
+        \label{fig:ex_4.3_10}
+      \end{figure}
+
+    \newpage
+
+    \item[19]
+      \begin{align*}
+        f(x)   & = x^5 - 5x + 3 \\
+        f'(x)  & = 5x^4 -5 \\
+        f''(x) & = 20x^3 \\
+      \end{align*}
+
+      \begin{itemize*}
+        \item Critical numbers are $x = \pm 1$ 
+        \item $f'(x) > 0$ when $x < -1$ or $x > 1$
+        \item $f''(x) > 0$ when $x > 0$
+        \item local min at $(1, -1)$
+        \item local max at $(-1, 7)$
+      \end{itemize*}
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.6]{ex43_19.pdf}
+        \caption{Exercise 19}
+        \label{fig:ex_4.3_19}
+      \end{figure}
+
+    \newpage
+
+    \item[12]
+      \begin{align*}
+        f(x)   & = \frac{x^2}{x^2 + 3} \\
+        f'(x)  & = \frac{6x}{\left(x^2 + 3\right)^2} \\
+        f''(x) & = \frac{ 18 - x^2 }{ \left(x^2 + 3 \right)^3 } \\
+      \end{align*}
+
+      \begin{itemize*}
+        \item Critical number is $x = 0$ 
+        \item $f'(x) > 0$ when $x > 0$ 
+        \item $f''(x) > 0$ when $-1 < x < 1$ 
+        \item local min at $(0, 0)$
+        \item no local max
+      \end{itemize*}
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.6]{ex43_12.pdf}
+        \caption{Exercise 12}
+        \label{fig:ex_4.3_12}
+      \end{figure}
+
+  \end{description}
+
 \end{document}
 
