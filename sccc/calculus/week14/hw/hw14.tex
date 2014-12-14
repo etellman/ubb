@@ -87,8 +87,9 @@
             t      & = \boxed{ \unit[1.5]{s} } \\
           \end{align*}
 
-          The acceleration is zero when the object has reached the peak of its flight and is
-          stopping and turning around.
+          The acceleration is negative when $t < \unit[1.5]{s}$ and positive when $t >
+          \unit[1.5]{s}$. This means the particle is slowing down until $t = \unit[1.5]{s}$ and this
+          is the point when the velocity is its minimum value of $\unit[-13.75]{m/s}$.
 
       \end{enumerate}
 
@@ -115,6 +116,8 @@
 
       \end{enumerate}
       
+    \newpage
+
     \item[10]
       \begin{enumerate}[(a)]
         \item 
@@ -125,6 +128,19 @@
             t                & = \unit[2.5]{s} \\
             \\
             h(\unit[2.5]{s}) & = \boxed{ \unit[100]{ft} } \\
+          \end{align*}
+
+        \item
+          Find out when the ball is 96 feet above the ground:
+          \begin{align*}
+            80t - 16t^2 & = 96 \\
+            t           & = \{ 2, 3 \} \\
+          \end{align*}
+
+          Find out how fast it is going at these two times:
+          \begin{align*}
+            s(\unit[2]{s}) = \boxed{ \unit[16]{ft/s} } \\
+            s(\unit[3]{s}) = \boxed{ \unit[-16]{ft/s} } \\
           \end{align*}
 
       \end{enumerate}
@@ -157,8 +173,6 @@
 
       \end{enumerate}
 
-    \newpage
-
     \item[15]
       \begin{align*}
         S(r)  & = 4 \pi r^2 \\
@@ -172,6 +186,8 @@
       The bigger the balloon gets, the more the surface area increases with each
       small change in the radius.
 
+    \newpage
+
     \item[18]
       \begin{align*}
         V'(t)  & = 6.25t - 250 \\
@@ -184,8 +200,6 @@
 
       The water drains out more and more slowly as the tank empties. This is because
       the water pressure decreases as the tank empties.
-
-    \newpage
 
     \item[23]
       After $t$ hours, the population is 
@@ -213,10 +227,11 @@
         a &= 140 \\
         b &= 6 \\
         \\
-        f(t) &= \frac{140}{1 + 6 e^{-0.7t}} \\
+        f(t) &= \boxed{ \frac{140}{1 + 6 e^{-0.7t}} } \\
       \end{align*}
 
-      As time goes by, the denominator approachs 1 and the yeast population approaches 140 cells. 
+      As time goes by, the denominator approaches 1 and the yeast population
+      approaches 140 cells. 
       
       See Figure~\ref{fig:ex24}.
 
@@ -309,13 +324,13 @@
 
     \item[4]
       \begin{align*}
-        A(t)          & = x(t) \cdot y(t) \\
-        \frac{dA}{dt} & = \frac{dx}{dt} y(t) + x(t) \cdot \frac{dy}{dt} \\
+        A(t)          & = L(t) \cdot W(t) \\
+        \frac{dA}{dt} & = \frac{dL}{dt} W(t) + L(t) \cdot \frac{dW}{dt} \\
       \end{align*}
 
-      At the time described:
+      When $L = 20$ and $W = 10$
       \[
-        A(t) = \boxed{ \unit[140]{cm^2/s} }
+        \frac{dA}{dt} = 8 \cdot 10 + 3 \cdot 20 = \boxed{ \unit[140]{cm^2/s} }
       \]
 
     \item[5]
@@ -325,6 +340,7 @@
         \\
         3             & = 25 \pi \frac{dh}{dt} \\
         \frac{dh}{dt} & = \boxed{ \unit[\frac{3}{25 \pi}]{m/min} } \\
+                      & \approx \boxed{ \unit[0.0382]{m/min} } \\
       \end{align*}
 
     \item[6]
@@ -350,7 +366,15 @@
         \frac{dr}{dt} & = \frac{x \frac{dx}{dt} + y \frac{dy}{dt}}{\sqrt{x^2 + y^2}} \\
       \end{align*}
 
-      At 4:00, $\frac{dr}{dt} \approx \boxed{ \unit[21.39]{km/hr} }$
+      At 4:00:
+      \begin{align*}
+        x(4)          & = 10 \\
+        y(4)          & = 100 \\
+        \\
+        \frac{dr}{dt} & \approx \boxed{ \unit[21.39]{km/hr} }
+      \end{align*}
+
+    \newpage
 
     \item[16]
       If $x$ is the distance from the man to the light and $y$ is the height of the shadow:
@@ -360,9 +384,9 @@
         \frac{dy}{dt} & = -24 x^{-2} \frac{dx}{dt} \\
       \end{align*}
 
-      When the man is 4 feet from the wall he is 8 feet from the light:
+      When the man is 4 meters from the wall he is 8 meters from the light:
       \[
-        \frac{dy}{dt} = \frac{-24 \cdot 1.6}{64} = \boxed{ \unit[0.6]{ft/s} }
+        \frac{dy}{dt} = - \frac{24}{64} \cdot 1.6 = \boxed{ \unit[-0.6]{m/s} }
       \]
 
     % \item[15]
@@ -397,13 +421,17 @@
 
     \item[21]
       \begin{align*}
-        x(t) & = 100 \\
-        y(t) & = 60t \\
-        s(t) & = \frac{xx' + yy'}{\sqrt{x^2 + y^2}} \\
-             & = \frac{180t}{\sqrt{9t^2 + 25}}
+        x(t)          & = 100 \\
+        \frac{dx}{dt} & = 0 \\
         \\
-        s(4) & = \frac{720}{13} \\
-             & \approx \boxed{ \unit[55.38]{km/h} } \\
+        y(t)          & = 60t \\
+        \frac{dy}{dt} & = 60 \\
+        \\
+        \frac{ds}{dt} & = \frac{x \frac{dx}{dt} + y \frac{dy}{dt}}{\sqrt{x^2 + y^2}} \\
+                      & = \frac{60^2 t}{\sqrt{(60t)^2 + 100^2}} \\
+                      & = \frac{180 t}{\sqrt{25 + 9t2}} \\
+        \\
+        s'(4)         & \approx \boxed{ \unit[55.38]{km/h} } \\
       \end{align*}
 
     \newpage
