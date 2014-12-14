@@ -1,14 +1,15 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
 
 \usepackage{units} 
 \usepackage{xfrac} 
 \usepackage[fleqn]{amsmath}
+\usepackage{commath}
 \usepackage{float}
 \usepackage{mdwlist}
 \usepackage{booktabs}
@@ -43,6 +44,8 @@
 
   \ifprintanswers
 
+  \newpage
+
   \section{Section 4.1}
 
   \begin{description}
@@ -57,8 +60,8 @@
 
       \begin{itemize*}
         \item Critical Points: $(0, 5)$, $(2, -7)$ and $(3, -4)$ 
-        \item Minimum: $f(2) = -7$ 
-        \item Maximum: $f(0) = 5$ 
+        \item \fbox{ Minimum: $f(2) = -7$ } 
+        \item \fbox{ Maximum: $f(0) = 5$ } 
       \end{itemize*}
 
     \item[48] 
@@ -71,9 +74,11 @@
 
       \begin{itemize*}
         \item Critical Points: $(0, 1)$, $(1, -1)$ and $(3, 19)$ 
-        \item Minimum: $f(1) = -1$ 
-        \item Maximum: $f(3) = 19$ 
+        \item \fbox{ Minimum: $f(1) = -1$ } 
+        \item \fbox{ Maximum: $f(3) = 19$ } 
       \end{itemize*}
+
+    \newpage
 
     \item[51] 
       \begin{align*}
@@ -85,25 +90,22 @@
 
       \begin{itemize*}
         \item Critical Points: $(-2, 11)$, $(-1, 2)$, $(0, 3)$, $(1, 2)$ and $(3, 66)$ 
-        \item Minimum: $f(-1) = 2$ and $f(1) = 2$
-        \item Maximum: $f(3) = 66$ 
+        \item \fbox{ Minimum: $f(-1) = 2$ and $f(1) = 2$ }
+        \item \fbox{ Maximum: $f(3) = 66$ } 
       \end{itemize*}
-
-    \newpage
 
     \item[53] 
       \begin{align*}
-        f'(x)   & = \frac{1 - x^2}{\left(x^2 + 1\right)^2} \\
+        f'(x)   & = \frac{1 - x^2}{\del{ x^2 + 1 }^2} \\
         \\
         1 - x^2 & = 0 \\
         x       & = \{ -1, 1 \} \\
       \end{align*}
 
       \begin{itemize*}
-        \item Critical Points: $(0, 0)$, $\left( 1, \frac{1}{2} \right)$ and 
-          $\left( 2, \frac{2}{5} \right)$
-        \item Minimum: $f(0) = 0$
-        \item Maximum: $f(1) = \frac{1}{2}$ 
+        \item Critical Points: $(0, 0)$, $\del{ 1, \sfrac{1}{2} }$ and $\del{ 2, \sfrac{2}{5} }$
+        \item \fbox{ Minimum: $f(0) = 0$ }
+        \item \fbox{ Maximum: $f(1) = \sfrac{1}{2}$ } 
       \end{itemize*}
 
     \item[56] 
@@ -116,8 +118,8 @@
 
       \begin{itemize*}
         \item Critical Points: $(0, 0)$, $( 2, 6 \sqrt[3]{2} )$ and $(8, 0)$
-        \item Minimum: $f(0) = 0$ and $f(8) = 0$
-        \item Maximum: $f(2) = 6 \sqrt[3]{2}$ 
+        \item \fbox{ Minimum: $f(0) = 0$ and $f(8) = 0$ }
+        \item \fbox{ Maximum: $f(2) = 6 \sqrt[3]{2}$ } 
       \end{itemize*}
 
     \item[70]
@@ -126,21 +128,19 @@
         F = \frac{\mu W}{\mu \sin 0 + \cos 0} = \mu W 
         \]
 
-      When the angle is $\frac{\pi}{2}$, the force is:
-      \begin{align*}
+      When the angle is $\sfrac{\pi}{2}$, the force exactly matches the weight, which makes sense
+      because you are pulling straight upwards:
+      \[
         F = \frac{\mu W}{\mu \sin \pi/2 + \cos \pi/2} = W 
-      \end{align*}
-
-      When the angle is $\frac{\pi}{2}$, you're pulling straight up, so the force required exactly
-      matches the weight.
+      \]
 
       To find the force in between, we need to find the derivative
       \[
-        F'(\theta) = \frac{\mu  W (\sin \theta - \mu \cos \theta)}
-                          {(\mu \sin \theta + \cos \theta)^2} \\
+        \dod{F}{\theta} = \frac{\mu  W (\sin \theta - \mu \cos \theta)}
+                               {\del{ \mu \sin \theta + \cos \theta }^2} \\
       \]
 
-      Find when it is 0:
+      Find when $\dod{F}{\theta}$ is 0:
       \begin{align*}
         \mu  W (\sin \theta - \mu \cos \theta) & = 0 \\
         \sin \theta - \mu \cos \theta          & = 0 \\
@@ -160,9 +160,7 @@
         \tan \theta                     & = \mu \\
         \frac{\sin \theta}{\cos \theta} & = \mu \\
         \sin \theta                     & = \mu \cos \theta \\
-      \end{align*}
-      
-      \begin{align*}
+        \\
         F & = W \sin \theta \\
           & = W \mu \cos \theta \\
       \end{align*}
@@ -174,7 +172,7 @@
       $\mu = 1$, the minimum force comes from:
 
       \[
-        \theta = \arctan 1 = \frac{\pi}{4}
+        \theta = \arctan(1) = \frac{\pi}{4}
       \]
       
       With this angle, the value of the minimum force is:
@@ -182,11 +180,13 @@
         F = W \cdot 1 \cdot \cos \frac{\pi}{4} = \frac{\sqrt{2}}{2} W
       \]
 
-      The best angle is always between $0$ and $\frac{\pi}{4}$ with smaller angles working better
+      The best angle is always between $0$ and $\sfrac{\pi}{4}$ with smaller angles working better
       for small coefficients of friction and larger angles better for larger coefficients of
       friction.
 
   \end{description}
+
+  \newpage
 
   \section{Section 4.3} % (fold)
   
@@ -212,7 +212,7 @@
       \end{enumerate}
 
     \item[7] The inflection points occur when the second derivative changes sign at 
-      $x = -1$ and $x = 7$.
+      \fbox{ $x = 1$ and $x = 7$ }.
 
     \newpage
 
@@ -229,9 +229,9 @@
         \item there is a local maximum at $(-3, 81)$ and a local minimum at
           $(2, -44)$.
 
-        \item $f$ is concave down from $\left( -\infty, - \frac{1}{2} \right)$ and 
-          concave up from $\left( - \frac{1}{2}, \infty \right)$ with an
-          inflection point at $\left( -\frac{1}{2}, \frac{37}{2} \right)$
+        \item $f$ is concave down from $\del{ -\infty, - \frac{1}{2} }$ and 
+          concave up from $\del{ - \frac{1}{2}, \infty }$ with an
+          inflection point at $\del{ -\frac{1}{2}, \frac{37}{2} }$
       \end{enumerate}
 
       \begin{figure}[H]
@@ -255,9 +255,9 @@
         \item there is a local maximum at $(0, 3)$ and local minimums at
           $(-1, 2)$ and $(1, 2)$.
 
-        \item $f$ is concave down on $\left( -\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3} \right)$ with
-          inflection points at $\left( -\frac{\sqrt{3}}{3}, \frac{22}{9} \right)$ and
-          $\left( \frac{\sqrt{3}}{3}, \frac{22}{9} \right)$.
+        \item $f$ is concave down on $\del{ -\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3} }$ with
+          inflection points at $\del{ -\frac{\sqrt{3}}{3}, \frac{22}{9} }$ and
+          $\del{ \frac{\sqrt{3}}{3}, \frac{22}{9} }$.
 
       \end{enumerate}
 
@@ -269,31 +269,6 @@
       \end{figure}
 
     \newpage
-
-    % \item[12]
-    %   \begin{align*}
-    %     f'(x)  & = \frac{6x}{\left(x^2 + 3\right)^2} \\
-    %     f''(x) & = - \frac{18 \left(x^2 - 1\right)}{\left(x^2 + 3\right)^3} \\
-    %   \end{align*}
-
-    %   \begin{enumerate}[(a)]
-    %     \item $f$ is increasing on $(0, \infty)$
-
-    %     \item there is a local minimums at $(0, 0)$ 
-
-    %     \item $f$ is concave down on $\left( -\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3} \right)$ 
-          
-    %       There are inflection points at $\left( -1, \frac{1}{4} \right)$ and 
-    %       $\left( 1, \frac{1}{4} \right)$
-
-    %   \end{enumerate}
-
-    %   \begin{figure}[H]
-    %     \centering
-    %     \includegraphics[scale = 0.6]{ex12.pdf}
-    %     \caption{Exercise 12}
-    %     \label{fig:ex12}
-    %   \end{figure}
 
     \newpage
 
@@ -308,9 +283,9 @@
 
         \item there is a local minimum at $(2, -20)$ 
 
-        \item $f$ is concave up on $\left( \frac{1}{2}, \infty \right)$ 
+        \item $f$ is concave up on $\del{ \frac{1}{2}, \infty }$ 
           
-          There is an inflection point at $\left( \frac{1}{2}, - \frac{13}{2} \right)$ 
+          There is an inflection point at $\del{ \frac{1}{2}, - \frac{13}{2} }$ 
 
       \end{enumerate}
 
@@ -334,7 +309,7 @@
 
         \item There is a local minimum at $(-1, 0)$ 
 
-        \item $f$ is concave up on $\left( -\infty, 0 \right)$ 
+        \item $f$ is concave up on $\del{ -\infty, 0 }$ 
           
           There is an inflection point at $(0, 2)$ 
 
@@ -360,10 +335,10 @@
 
         \item there is a local minimums at $(0, 2)$ 
 
-        \item $f$ is concave up on $\left( -\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3} \right)$ 
+        \item $f$ is concave up on $\del{ -\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3} }$ 
           
-          There are inflection points at $\left( -\frac{\sqrt{3}}{3}, \frac{23}{9} \right)$ and 
-          $\left( \frac{\sqrt{3}}{3}, \frac{23}{9} \right)$
+          There are inflection points at $\del{ -\frac{\sqrt{3}}{3}, \frac{23}{9} }$ and 
+          $\del{ \frac{\sqrt{3}}{3}, \frac{23}{9} }$
 
       \end{enumerate}
 
@@ -431,11 +406,13 @@
   \begin{description}
     \item[7]
       \begin{align*}
-        \frac{dY}{dN} &= \frac{ k \left( 1 - N^2 \right) }{ \left( N^2 + 1\right )^2 }
+        \dod{Y}{N} & = \frac{ k \del{ 1 - N^2 } }{ \del{ N^2 + 1 }^2 }
         \\
-        1 - N^2 & = 0 \\
-        N       & = \boxed{ 1 } \\
+        1 - N^2    & = 0 \\
+        N          & = \boxed{ 1 } \\
       \end{align*}
+
+    \newpage
 
     \item[11]
       If $x$ is the length of side with the middle division and $y$ is the length of the other side,
@@ -452,15 +429,16 @@
 
       Minimize the perimeter length:
       \begin{align*}
-        P'          & = 3 - 3x^{-2} \\
+        \dod{P}{x}  & = 2 - 3x^{-2} \\
+        \\
         3 - 3x^{-2} & = 0 \\
         x           & = 1 \\
         \\
-        x  & = \boxed{ \unit[1 \times 10^6]{ft} } \\
-        y  & = \boxed{ \unit[1.5 \times 10^6]{ft} } \\
+        x  & = \boxed{ \unit[1,000]{ft} } \\
+        y  & = \boxed{ \unit[1,500]{ft} } \\
       \end{align*}
 
-      The best shape is a rectangle with the long side 1.5 million feet and the short side 1 million
+      The best shape is a rectangle with the long side 1,500 feet and the short side 1,000
       feet, with the extra fence parallel to the short side.
 
     \item[21]
@@ -477,8 +455,8 @@
 
       Find the maximum:
       \begin{align*}
-        A(x)          & = x (4r^2 - x^2)^{1/2} \\
-        \frac{dA}{dx} & = \frac{4r^2 - 2x^2}{\sqrt{4r^2 - x^2}} \\
+        A(x)        & = x (4r^2 - x^2)^{1/2} \\
+        \dod{A}{x}  & = \frac{4r^2 - 2x^2}{\sqrt{4r^2 - x^2}} \\
         \\
         4r^2 - 2x^2 & = 0 \\
         x           & = r \sqrt{2} \\
@@ -500,14 +478,14 @@
 
       The amount of paper used is the surface area:
       \begin{align*}
-        A                     & = \pi r \left( r^2 + h^2 \right)^{1/2} \\
-        A(r)                  & = \pi r \left( r^2 + \frac{81^2}{\pi^2} r^{-4} \right)^{1/2} \\
-                              & \approx \pi r \left( r^2 + 664.768 r^{-4} \right)^{1/2} \\
+        A              & = \pi r \del{ r^2 + h^2 }^{1/2} \\
+        A(r)           & = \pi r \del{ r^2 + \frac{81^2}{\pi^2} r^{-4} }^{1/2} \\
+                       & \approx \pi r \del{ r^2 + 664.768 r^{-4} }^{1/2} \\
         \\
-        A'(r)                 & \approx \frac{6.28319 r^6 - 2088.43}{r^4 \sqrt{r^2 + 664.768 r^{ - 4}}} \\
-        6.28319 r^6 - 2088.43 & = 0 \\
-        r                     & \approx \boxed{ \unit[2.63192]{cm} } \\
-        h                     & \approx \boxed{ \unit[3.72211]{cm} } \\
+        \dod{A}{r}     & \approx \frac{6.28 r^6 - 2088}{r^4 \sqrt{r^2 + 665 r^{-4}}} \\
+        6.28r^6 - 2088 & = 0 \\
+        r              & \approx \boxed{ \unit[2.63]{cm} } \\
+        h              & \approx \boxed{ \unit[3.72]{cm} } \\
       \end{align*}
 
   \end{description}
@@ -516,12 +494,10 @@
     \vspace{11 cm}
     \begin{quote}
       \begin{em}
-        I heartily accept the motto, ``That government is best which governs
-        least''; and I should like to see it acted up to more rapidly and
-        systematically. Carried out, it finally amounts to this, which also I
-        believe---``That government is best which governs not at all''; and
-        when men are prepared for it, that will be the kind of government which
-        they will have.
+        I heartily accept the motto, ``That government is best which governs least''; and I should
+        like to see it acted up to more rapidly and systematically. Carried out, it finally amounts
+        to this, which also I believe---``That government is best which governs not at all''; and
+        when men are prepared for it, that will be the kind of government which they will have.
       \end{em}
     \end{quote}
     \hspace{2 cm} --Henry David Thoreau
