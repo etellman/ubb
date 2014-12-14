@@ -40,7 +40,7 @@
   \section{Homework}
     \begin{itemize*}
       \item read Section 3.10
-      \item exercises: TO DO
+      \item exercises: 1-4, 11-12, 15-16, 23-26
     \end{itemize*}
 
   \ifprintanswers
@@ -146,18 +146,73 @@
         \\
         \frac{1}{1002} & \approx \frac{1}{1000} - \frac{1}{500,000} \\
                        & = \boxed{ \frac{499}{500,000} }
+     \end{align*}
+
+    \newpage
+
+    \item[33]
+      \begin{enumerate}[(a)]
+        \item 
+          Find the maximum error for the area:
+          \begin{align*}
+            A(x)   & = 6x^2 \\
+            \dif A & = \eval{ 12x \dx }_{x = 30, \dx = 0.1} \\
+                   & = \unit[36]{cm^2} \\
+          \end{align*}
+
+          The relative error is:
+          \[
+            \frac{\dif A}{A} = \frac{36}{5400} \approx 0.0067 \\
+          \]
+
+          The percentage error is 0.67\%
+
+        \item 
+          Find the maximum error for the volume:
+          \begin{align*}
+            V(x)   & = x^3 \\
+            \dif V & = \eval{ 3x^2 \dx }_{x = 30, \dx = 0.1} \\
+                   & = \unit[270]{cm^3} \\
+          \end{align*}
+
+          The relative error is:
+          \[
+            \frac{\dif V}{V} = \frac{270}{27,000} = 0.01 \\
+          \]
+
+          The percentage error is 1\%
+
+      \end{enumerate}
+
+    \newpage
+
+    \item[36]
+      The amount of paint needed is the difference in volume when the radius grows from 
+      $\unit[50]{m}$ to $\unit[50.05]{m}$.
+
+      \begin{align*}
+        V(r)   & = \frac{2}{3} \pi r^3 \\
+        \dif V & = \eval{ 2 \pi r^2 \dif r }_{r = 5,000, \dif r = 0.05 } \\
+               & \approx \unit[7.85 \times 10^6]{cm^3} \\
+               & = \boxed{ \unit[7.85]{m^3} } \\
       \end{align*}
 
   \end{description}
 
   \else
-    \vspace{10 cm}
+    \vspace{9 cm}
     \begin{quote}
       \begin{em}
-        TO DO
+        Scholars, who pride themselves on speaking their minds, often engage in a form of
+        self-censorship which is called ``realism.'' To be ``realistic'' in dealing with a problem
+        is to work only among the alternatives which the most powerful in society put forth. It is
+        as if we are all confined to a, b, c, or d in the multiple choice test, when we know there
+        is another possible answer. American society, although it has more freedom of expression
+        than most societies in the world, thus sets limits beyond which respectable people are not
+        supposed to think or speak.
       \end{em}
     \end{quote}
-    \hspace{2 cm} --TO DO
+    \hspace{2 cm} --Howard Zinn
   \fi
 
 \end{document}
