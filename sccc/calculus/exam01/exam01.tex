@@ -9,6 +9,7 @@
 \usepackage{units} 
 \usepackage{xfrac} 
 \usepackage[fleqn]{amsmath}
+\usepackage{commath}
 \usepackage{float}
 \usepackage{mdwlist}
 \usepackage{booktabs}
@@ -198,22 +199,21 @@
 
       \begin{solution}
         Show that for all $\epsilon$ there is a $\delta$ such that if 
-        $0 < |x - 1| < \delta$ 
-        
-        then $|(2x + 1) - 3| < \epsilon$
+
+        $0 < \envert{ x - 1 } < \delta$ then $|(2x + 1) - 3| < \epsilon$
 
         \paragraph{preliminary investigation}
         \begin{align*}
-          |(2x + 1) - 3| & = 2|x - 1| \\
+          \envert{ (2x + 1) - 3 } & = 2 \envert{ x - 1 } \\
           \delta         & = \frac{\epsilon}{2} \\
         \end{align*}
 
         \paragraph{proof}
-        Show that if $\delta = \frac{\epsilon}{2}$ and $0 < |x - 1| < \delta$
+        Show that if $\delta = \frac{\epsilon}{2}$ and $0 < \envert{ x - 1 } < \delta$
 
-        then $|(2x + 1) - 3| < \epsilon$
+        then $ \envert{ (2x + 1) - 3 } < \epsilon$
         \[
-          |(2x + 1) - 3| = 2|x - 1| < 2 \delta = 2 \cdot \frac{\epsilon}{2} = \epsilon
+          \envert{ (2x + 1) - 3 } = 2 \envert{ x - 1 } < 2 \delta = 2 \cdot \frac{\epsilon}{2} = \epsilon
         \]
         
       \end{solution}
