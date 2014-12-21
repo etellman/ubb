@@ -1,0 +1,115 @@
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{commath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+
+\title{Math Prep II \\ Week One Notes}
+\author{}
+\date{\today}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Sets}
+
+  \begin{itemize}
+    \item A {\em set} is an unordered collection of elements.  
+
+    \item Two sets are equal if they contain the same elements.
+
+    \item There are several ways to define a set.  These all define the set of positive odd integers less than 20:
+      \begin{align*}
+        A & = \cbr{ 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 } \\
+        A & = \cbr{ 19, 3, 11, 9, 15, 1, 13, 7, 17, 5 } \\
+        A & = \cbr{ 1, 3, 5, \ldots, 17, 19 } \\
+        A & = \cbr{ x | \text{ x is odd and between 1 and 20} } \\
+      \end{align*}
+
+    \item One set is a {\em subset} of another set if all of the elements in the first set are
+      contained in the second set.
+
+      \begin{align*}
+        \cbr{ 3, 5 } & \subseteq \cbr{ 1, 3, 5, 7 } \\
+        \cbr{ 3, 5 } & \subseteq \cbr{ 3, 5 } \\
+        \emptyset    & \subseteq \cbr{ 3, 5 } \\
+      \end{align*}
+  \end{itemize}
+
+  \section{Types of Real Numbers}
+
+  For most of this course we will be using {\em real numbers}.  There are several types of real numbers:
+
+  \begin{itemize}
+    \item {\em Integers} are the numbers \( \{ \ldots, -3, -2, -1, 0, 1, 2, 3, \ldots \} \)
+    \item {\em Rational Numbers} are the numbers which can be expressed as a ratio of two integers:
+      1/2, 3/4, 2, 3.5, etc.
+    \item {\em Irrational Numbers} are numbers which can't be expressed as a ratio of two integers:
+      \( \sqrt{2} \), \( \pi \), \( e \), \( \sqrt{17}\), etc.
+  \end{itemize}
+
+  \section{Absolute Value}
+
+  The absolute value of a number is the number without its sign.
+
+  \begin{align*}
+    \envert{17}  & = 17 \\
+    \envert{-17} & = 17 \\
+    \envert{0}   & = 0 \\
+  \end{align*}
+
+  \section{Number Properties}
+
+  The text book describes several properties of numbers, most of which are fairly obvious (for
+  example: if \( a = b \) then \( b = a \)).  You should read over the chapter to make sure the rest
+  of them are also familiar to you.  
+
+  Here are a few of the properties which are slightly less obvious and quite useful:
+
+  \begin{align*}
+    a (b + c)   & = ab + ac \\
+    a + (b + c) & = (a + b) + c \\
+    (ab)c       & = a(bc) \\
+  \end{align*}
+
+  \section{Algebraic Expressions}
+
+  An algebraic expression usually contains several {\em term}.  A {\em term} is a number and some
+  variables multiplied together.  Here are some terms: \( x^2 \), $ 3xy $,  $ 47 $, $ 12x^3y^2z^4 $.
+
+
+  Because of the distributive property, terms with exactly the same variables (including exponents)
+  are called {\em like} or {\em similar} terms and may be added together:
+
+  \begin{align*}
+    3x^2 + 7x^2 & = x^2(3 + 7) \\
+                & = 10x^2  \\
+  \end{align*}
+
+  To evaluate an algebraic expression for a particular value for variable, you substitute the value
+  in for the variable everywhere the variable appears in the equation.  Usually it's easiest to
+  simplify the equation as much as you can before you do this.
+
+\end{document}
+
+
