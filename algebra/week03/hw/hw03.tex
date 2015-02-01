@@ -1,0 +1,397 @@
+% no answer key
+\documentclass[letterpaper]{exam}
+
+% answer key
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers{}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{commath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+\usepackage{parskip} 
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+\title{Algebra \\ Homework Three \\ Sections 2.3 and 2.4}
+\author{}
+\date{\today}
+
+\begin{document}
+  \maketitle
+
+  \section{Sections 2.3 and 2.4}
+  \begin{itemize*}
+    \item Section 2.3: 15--17, 30, 31, 43
+    \item Section 2.4: 1, 5, 24, 28, 32, 35, 36, 52, 54, 57
+  \end{itemize*}
+
+  \ifprintanswers{}
+    \section{Section 2.3}
+
+    \begin{description}
+      \item[15]
+        \begin{align*}
+          0.12t - 2.1 & = 0.07t - 0.2 \\
+          12t - 210   & = 7t - 20 \\
+          t           & = \boxed{ 38 } \\
+        \end{align*}
+
+      \item[16]
+        \begin{align*}
+          0.13t - 3.4      & = 0.08t - 0.4 \\
+          13t - 340        & = 8t - 40 \\
+          t                & = \boxed{ 60 } \\
+        \end{align*}
+      check: \( 0.13(60) - 3.4  = 0.08(60) - 0.4 \)
+
+      \item[17]
+        \begin{align*}
+          0.92 + 0.9(x - 0.3)      & = 2x - 5.95 \\
+          92 + 90(x - 0.3)         & = 200x - 595 \\
+          x                        & = \boxed{ 6 }
+        \end{align*}
+
+      \item[30]
+        \begin{align*}
+          24 & = x - 0.25x \\
+          24 & = .75x \\
+          x  & = \boxed{ 32 } \\
+        \end{align*}
+
+      \item[31] $x = 64 - .15(64) = 54.4$
+
+      \item[43] Let $x$ be the amount invested at 10\%.
+        \begin{align*}
+          0.1x + .11(x + 1500) & = 795 \\
+          10x + 11(x + 1500)   & = 79500 \\
+          x                    & = \boxed{ 3000 } \\
+        \end{align*}
+
+      \end{description}
+      
+    \section{Section 2.4} % (fold)
+    \begin{description}
+      
+      \item[1] Using $i = Prt$, $300(.08)(5) = \boxed{ 120 }$
+
+      \item[5] Using \(r = \frac{i}{Pt}\), \(\frac{90}{600 \cdot 2.5} = \boxed{ 0.06 } \).
+
+      \item[24]
+        \begin{align*}
+          A  & = \frac{h}{2} (b_1 + b_2) \\
+          2A & = h(b_1 + b_2) \\
+          h  & = \frac{2A}{b_1 + b_2} \\
+        \end{align*}
+
+      \item[28]
+      \begin{align*}
+        \frac{x}{a} + \frac{y}{b}           & = 1 \\
+        a \del{ \frac{x}{a} + \frac{y}{b} } & = a  \\
+        x + \frac{ya}{b}                    & = a  \\
+        x                                   & = \boxed{ a - \frac{ya}{b} } \\
+      \end{align*}
+
+      An alternate form of the solution is: 
+      \[
+        \boxed{ x = \frac{ab - ay}{b} } 
+      \]
+
+      \item[32]
+        \begin{align*}
+          x(a-b)   & = m(x-c) \\
+          xa-xb    & = mx-mc \\
+          xa-xb-mx & = -mc \\
+          x(a-b-m) & = -mc \\
+          x        & = \frac{-mc}{a-b-m} \\
+        \end{align*}
+
+      An alternate form of the solution is: 
+      \[
+        \boxed{ x = \frac{mc}{m - a + b} } 
+      \]
+
+      \item[35]
+      \begin{align*}
+        \frac{1}{3}x + a & = \frac{1}{2}b \\
+        \frac{1}{3}x     & = \frac{1}{2}b - a \\
+        3(\frac{1}{3}x)  & = 2(\frac{1}{2}b - a) \\
+        x                & = \boxed{ \frac{3}{2}b - 3a } \\
+      \end{align*}
+
+      An alternate form of the solution is: 
+      \[
+        \boxed{ x = \frac{3b - 6a}{2} } 
+      \]
+
+      \item[36]
+      \begin{align*}
+        \frac{2}{3}x - \frac{1}{4}a    & = b \\
+        \frac{2}{3}x                   & = b + \frac{1}{4}a \\
+        2x                             & = 3b + \frac{3}{4}a \\
+        x                              & = \boxed{ \frac{3}{2} b + \frac{3}{8} a } \\
+      \end{align*}
+
+      An alternate form of the solution is: 
+      \[
+        \boxed{ x = \frac{12b + 3a}{8} }
+      \]
+
+      \item[52] We can use $i = Prt$ with $r = 0.1$ and $i = 2P$.  We need three times as much money, and we already have
+        the principal so we need the interest to supply twice the principal.  I think you could also interpret this
+        problem as meaning you want the interest to be three times the principal.
+
+        \begin{align*}
+          t & = \frac{2P}{P \cdot 0.1} \\
+          t & = \frac{2}{0.1} \\
+          t & = \boxed{ 20 } \\
+        \end{align*}
+
+      \item[54] The two cyclists are approaching each other at the sum of their two speeds, or \(18 + 14 = 32\) miles per
+        hour.  The distance is 112 miles.  Using $t = \frac{d}{r}$, 
+        
+        \[
+          t = \frac{112}{32} = \boxed{ \unit[3.5]{h} }
+        \]
+
+        check:
+        
+        In 3.5 hours the faster cyclist travels 63 miles and the slower cyclist travels 49 miles.  
+        $63 + 49 = 112$
+
+      \item[57] Let $x$ be the time at 20 mph and $4.5 - x$ (the rest of the time) be the time he spent at 12 mph.  Since he
+        traveled 70 miles altogether:
+
+        \begin{align*}
+          20x + 12(4.5 - x) & = 70 \\
+          x                 & = \boxed{ 2 } \\
+        \end{align*}
+
+      He spent 2 hours at 20 mph and 2.5 hours at 12 mph.  
+
+      The question asks how far he traveled at each speed, not how long he spent at each speed.  We need to plug these
+      numbers into $d = rt$, which gives 
+      
+      \fbox{ 40 miles at 20 mph and 30 miles at 12 mph }.  
+
+  \end{description}
+  \fi
+
+  \section{Additional Problems}
+
+  \begin{questions}
+    \question{}
+      It would be a shame to let Super Bowl week go by without a prediction.  Here's my prediction.
+
+      At half time the Colts will have scored as many field goals as the Saints have scored touchdowns.  In the second
+      half, the Colts will score three touchdowns while holding the Saints to 9 points.  The Colts will win the game by
+      one point by making a two point conversion after the final touchdown as time expires.  Of course, since this is the
+      Super Bowl, nobody misses extra points or gets safeties, and the only two point conversion will be the one I
+      mentioned.
+
+      If my prediction comes true, what will the final score be?
+
+      \begin{solution}
+        Let $x$ be the number of Colt field goals in the first half.
+
+        The total Colt score for the game will be: $3x + 22$.
+
+        The total Saint score for the game will be: $7x + 9$.
+
+        The Colts win the game by a point:
+        \begin{align*}
+          7x + 9 + 1 & = 3x + 22 \\
+          x          & = 3 \\
+        \end{align*}
+
+        The scoreboard might look something like:
+
+        \begin{tabular}[H]{cccccc}
+          \toprule
+                   & 1  & 2 & 3  & 4 & Total \\
+          \midrule
+            Saints & 14 & 7 & 6  & 3 & 30 \\
+            Colts  & 0  & 9 & 14 & 8 & 31 \\
+          \bottomrule
+        \end{tabular}
+
+      \end{solution}
+
+    \question{}
+      A judge in Pennsylvania was having trouble paying his bills with his meager judicial salary.  So when a prison
+      moved into town, he saw a golden business opportunity.  He worked out a deal with the prison where, for a small
+      fee, he would sentence juveniles to lengthy prison terms.  If a particular offense was usually punished with a
+      fine, he would instead issue the maximum punishment so the defendant would enjoy some time in the new prison.
+
+      It was a terrific arrangement for everyone.  Even with the rising prices of yachts, the judge was able to make
+      ends meet.  The prison had plenty of residents.  And since they charged the state for each prisoner, the prison
+      owners were thrilled. The modest investment in bribes paid off handsomely.
+
+      \begin{parts}
+        \part{}
+          The judge wanted to make \$1,300,000 from the scheme.  He decided a reasonable plan would be to charge an
+          initial down payment for his participation, and then a fee for each sentence handed out.  If the initial down
+          payment was \$200,000, and he charged a bribe of \$2,000 per case, how many cases would he need to process to
+          reach his goal?
+
+          \begin{solution}
+            Letting $x$ be the number of cases:
+            \begin{align*}
+              200,000 + 2,000x & = 1,300,000 \\
+              x                & = \boxed{ 550 } \\
+            \end{align*}
+
+            check; 
+            
+            If he got bribes for 550 cases, and a \$200,000 down payment, he would make 
+            \[
+              \$200,000 + 550 \cdot \$2,000 = \$1,300,000
+            \]
+          \end{solution}
+
+        \part{}
+          Judging is hard work, even when you've already decided the outcome in advance.  So the judge decided to retire
+          a bit early.  He still wanted to make \$1,300,000 from the scheme, but he wanted to retire after only taking
+          in \$1,000,000, investing his money to make up the difference.  
+
+          He found a bank that paid 5\% simple interest ($i = Prt$) per year. Assuming he can manage to survive without
+          spending any of the principal or interest, how long will he have to wait for his \$1,000,000 to turn into
+          \$1,300,000?
+
+          \begin{solution}
+            Solving the equation for $t$ gives: $t = \frac{i}{P r}$.  
+            
+            He needs to make \$300,000 in interest to get to
+            \$1.3M.  We can plug in the numbers for $i$, $P$, and $r$, to get:
+
+              \begin{align*}
+                t & = \frac{300,000}{1,000,000 \cdot .05}   \\
+                t & = \frac{300,000}{50,000}   \\
+                t & = \boxed{ \unit[6]{yr} } \\
+              \end{align*}
+
+              After six years of retirement, he will have the full \$1,300,000.
+
+          \end{solution}
+
+      \end{parts}
+
+    \question{}
+      The equation for a Celsius temperature in terms of a Fahrenheit temperature is:
+      \[
+        C = \frac{5}{9} ( F - 32 ) 
+      \]
+
+      \begin{parts}
+        \part{} What is the equation for a Fahrenheit temperature in terms of a Celsius temperature?
+          \begin{solution}
+            \begin{align*}
+              C             & = \frac{5}{9} (F - 32) \\
+              \frac{9}{5} C & = F - 32 \\
+              F             & = \frac{9}{5} C + 32 \\
+            \end{align*}
+          \end{solution}
+
+        \part{}
+          There is one temperature where the temperature in Celsius is the same as the temperature in Fahrenheit.  In
+          other words: $x$ degrees Fahrenheit = $x$ degrees Celsius.
+
+          What is this temperature?
+
+      \begin{solution}
+        You can use either form of the equation.
+
+        \begin{align*}
+          x             & = \frac{5}{9} (x - 32) \\
+          \frac{9}{5} x & = x - 32 \\
+          \frac{4}{5} x & = -32 \\
+          x             & = -40 \\
+        \end{align*}
+      \end{solution}
+
+      \end{parts}
+
+    \question{}
+      Two police cars depart from the same point, traveling in opposite directions towards different donut shops. One
+      car travels 6 mph faster than the other car.  Find the speed of each car if they are 176 miles apart at the end of
+      55 minutes.
+
+      \begin{solution}
+        Let $x$ be the speed of the slower car.
+
+        \begin{align*}
+          \frac{55}{60} x + \frac{55}{60}(x + 6) & = 176 \\
+          \frac{11}{12} (x + x + 6)              & = 176 \\
+          2x + 6                                 & = \frac{12}{11} \cdot 176 \\
+          x                                      & = 93 \\
+        \end{align*}
+
+        The slower car is traveling at \fbox{ 93 mph } and the faster car is traveling at \fbox{ 99 mph }.
+
+      \end{solution}
+    \question{}
+      Last week I was chatting with one of the UBB English professors.  She asked me if I'd heard the poem by Robert
+      Browning which begins: {\em ``A rose-red city, half as old as time\ldots ''\/}
+
+      ``Wait!'' I interrupted,  ``That would make a good algebra problem.''  I thought about it for a minute or two and
+      came up with this poem:
+
+      \begin{verbatim}
+        A rose-red city, half as old as Time.
+        One billion years ago, the city's age
+        Was just two-fifths of what Time's age will be
+        A billion years from now.  Can you compute
+        How old the crimson city is today?
+      \end{verbatim}
+
+      She gave me a funny look and quickly changed the subject.  How old is the rose-red city?
+
+      \begin{solution}
+        If $T$ is the age of time:
+
+        \begin{align*}
+          \frac{T}{2} - 1 & = \frac{2}{5} (T + 1) \\
+          T               & = 14 \\
+        \end{align*}
+
+        Time is 14 billion years old.  The city is half as old as time, so it is 7 billion years old.
+
+        Astronomers estimate the universe actually is about 13.7 billion years old.  But the earth seems to only be
+        about 4.5 billion years old, so the age of the city may be slightly exaggerated.
+
+      \end{solution}
+  \end{questions}
+
+  \section{Extra Credit}
+
+  A commuter is in the habit of arriving at his suburban station each evening exactly at 5:00.  His wife always meets
+  the train and drives him home.  One day he takes an earlier train, arriving at the station at 4:00.  The weather is
+  pleasant, so instead of telephoning home he starts walking along the route always taken by his wife.  They meet
+  somewhere along the way.  He gets into the car and they drive home, arriving at their house ten minutes earlier than
+  usual.  
+
+  Assuming that the wife always drives at a constant speed, and that on this occasion she left just in time to meet
+  the 5:00 train, how long did the husband walk before he was picked up?
+
+  \begin{solution}
+    The wife took 10 minutes off her usual trip.  She must have picked her husband up 5 minutes early, saving 5
+    minutes on the way to the station and 5 minutes on the way back.  She planned to pick him up at 5:00, so she must
+    have instead picked him up at 4:55.  He started walking at 4:00, so he walked for 55 minutes.
+  \end{solution}
+
+
+\end{document}
