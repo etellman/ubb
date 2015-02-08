@@ -1,0 +1,472 @@
+% no answer key
+\documentclass[letterpaper]{exam}
+
+% answer key
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers{}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{commath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+\title{Algebra \\ Homework Two \\ Sections 2.2}
+\author{}
+\date{\today}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Homework}
+  Section 2.2: 3--5, 11--16, 20--25, 30--36, 39--40, 45, 49, 53
+
+  \section{Problems}
+
+  \begin{questions}
+
+    \question{}
+    Alice, Carol, Ted, and Bob all work for the university.  Ted is a
+    custodian, Alice is a math teacher, Carol is the university president, and
+    Bob is the football coach.   
+
+    Of course they all have different pay scales.  Alice makes two times what
+    Ted makes.  Carol makes four times what Alice makes.  And Bob makes 5
+    times what Carol makes.
+
+    The sum of the four employees' hourly pay is \$765.
+
+    \begin{solution}
+      Since we know the total of the hourly pay is \$765, if we let Ted's pay
+      be $x$, the solution is:  
+      \begin{align*}
+        x + 2x + 4 \cdot 2x + 5 \cdot 4 \cdot 2x & = 765 \\
+        3x + 8x + 40x                            & = 765 \\
+        51x                                      & = 765 \\
+        x                                        & = 15 \\
+      \end{align*}
+
+    Ted makes \$15/hour, Alice makes \$30/hour, Carol makes \$120/hour, and
+    Bob makes \$600/hour.
+
+    Check:
+      \begin{align*}
+        15 + 30 + 120 + 600 & = 765 \\
+        15 \cdot 2          & = 30  \\
+        30 \cdot 4          & = 120 \\
+        120 \cdot 5         & = 600 \\
+      \end{align*}
+
+    \end{solution}
+
+    \begin{parts}
+      \part{}
+        If the custodian works a four hour football game, how much does he get
+        paid for the game?
+        \begin{solution}
+          For four hours work, Ted makes:
+          \[
+            4 \cdot 15 = \$60
+          \]
+        \end{solution}
+
+      \part{} If the coach works the same game, how much does he get paid for
+      the game?
+        \begin{solution}
+            For four hours work, Bob makes:
+            \[
+              4 \cdot 600 = \$2,400
+            \]
+        \end{solution}
+
+      \part{} How much does the teacher get paid for four hours teaching?
+        \begin{solution}
+            For four hours work, Alice makes: 
+            \[
+              4 \cdot 30 = \$120
+            \]
+        \end{solution}
+
+      \part{} How much does the president get paid for four hours spent doing
+        whatever it is university presidents do?
+
+        \begin{solution}
+            For four hours work, Carol makes:
+            \[
+              4 \cdot 120 = \$480
+            \]
+        \end{solution}
+
+    \end{parts}
+
+    \question{}
+      Some students at Northwestern University have been examining death
+      penalty cases.  Using DNA evidence they have discovered that in about 1
+      out of 20 of the cases they have examined, the person being imprisoned
+      is not guilty of the crime.  
+
+      \begin{parts}
+
+        \part{} They have exonerated 15 people so far.  How many cases have
+        they looked at?
+          \begin{solution}
+            Letting $x$ be the number of cases examined:
+
+            \begin{align*}
+              \frac{1}{20} \cdot x & = 15 \\
+              x                    & = 300 \\
+            \end{align*}
+
+            I actually rounded the numbers a little.  The real numbers are 14
+            people exonerated and released out of 288 cases examined.
+
+          \end{solution}
+
+        \part{}
+          Michael Evans was imprisoned for quite a long time for a crime which
+          he didn't commit.  In fact, at the time he was released he he had
+          been in prison for five years more than half his life. He went to
+          prison when he was 17.  How long was he in prison? 
+
+          \begin{solution}
+            Letting $x$ be Evans' age when released:
+
+            \begin{align*}
+              x           & = 17 + \frac{x}{2} + 5 \\
+              x           & = \frac{x}{2} + 22 \\
+              \frac{x}{2} & = 22 \\
+              x           & = 44 \\
+            \end{align*}
+
+            He was 44 years old when he was released.  We now need to figure
+            out how long he was in prison. 
+
+            Letting $p$ be the length of time he was in prison:
+            \begin{align*}
+              44 & = 17 + p \\
+              p  & = 27 \\
+            \end{align*}
+
+            Paul Terry was incorrectly imprisoned for the same crime and also
+            spent 27 years in prison.  
+
+            After Evans and Terry were released, they filed a civil rights
+            suit against the Chicago Police Department.  Evans lost his suit
+            because his imprisonment was judged to be a result of police
+            negligence and not misconduct.  Terry won his suit and was awarded
+            \$2.7 million.  Perhaps he gave some of it to Evans.
+
+          \end{solution}
+
+      \end{parts}
+
+    \ifprintanswers{}
+    \else
+      \pagebreak
+    \fi
+
+    \section{Extra Credit}
+
+    \question{}
+
+    Ted is a resident at WSR\@.  One day, he notices that a door is open and
+    decides to take an unauthorized stroll into the lovely neighboring
+    community of Monroe.  Unimpressed, he keeps walking.
+
+    The prison staff notices Ted is missing.  Naturally they are concerned,
+    because they know the prison choir concert is this Saturday, and they know
+    how much Ted has been looking forward to the performance.  They send a
+    guard, Larry, and the prison dog, Fido, out to look for Ted.
+
+    Because Larry is hurrying, he walks 1 mph faster than Ted.  Fido is an
+    exuberant dog, and runs at 10 mph.  Fido is fond of both Ted and Larry, so
+    he runs ahead to catch up to Ted, says hello, then runs back to Larry, then
+    runs ahead to Ted, etc.  Fido doesn't spend any time with either man.  He
+    turns around and runs back immediately after he arrives.
+
+    Since Larry is walking faster, he eventually catches up to Ted.  Ted
+    thanks him for reminding him about the concert, but says that he is really
+    enjoying his walk and would prefer to keep going.  Larry and Fido return
+    to the prison just in time to catch the performance themselves.
+
+    If Ted is 3 miles ahead when Larry and Fido set out, how far does Fido run
+    before Larry catches up to Ted?
+
+    \begin{solution}
+      Since Larry walks 1 mph faster than Ted, and Larry has a 3 mile head
+      start, it takes Larry 3 hours to catch up to Ted.  Fido is running 10 mph
+      for the entire 3 hours, so Fido runs for 30 miles.
+    \end{solution}
+
+  \end{questions}
+  \ifprintanswers{}
+
+  \section{Section 2.2} % (fold)
+  
+    \begin{description}
+      \item[3] 
+        \begin{align*}
+          \frac{-2x}{3} & = \frac{2}{5} \\
+          -10x          & = 6 \\
+          x             & = \boxed{ - \frac{3}{5} } \\
+        \end{align*}
+
+      \item[4] 
+        \begin{align*}
+          \frac{-5x}{4} & = \frac{7}{2} \\
+          -5x           & = 14 \\
+          x             & = \boxed{ - \frac{14}{5} } \\
+        \end{align*}
+
+      \item[5] 
+        \begin{align*}
+          \frac{n}{2} - \frac{2}{3} & = \frac{5}{6} \\
+          3n - 4                    & = 5 \\
+          n                         & = \boxed{ 3 } \\
+        \end{align*}
+
+      \item[11] 
+        \begin{align*}
+          \frac{h}{4} + \frac{h}{5} & = 1 \\
+          5h + 4h                   & = 20 \\
+          h                         & = \boxed{ \frac{20}{9} } \\
+        \end{align*}
+
+      \item[12] 
+        \begin{align*}
+          \frac{h}{6} + \frac{3h}{8} & = 1 \\
+          3h + 18h                   & = 24 \\
+          h                          & = \boxed{ \frac{24}{23} } \\
+        \end{align*}
+
+      \item[13] 
+        \begin{align*}
+          \frac{h}{2} - \frac{h}{3} + \frac{h}{6} & = 1 \\
+          3h - 2h + h                             & = 6 \\
+          h                                       & = \boxed{ 3 } \\
+        \end{align*}
+
+      \item[14] 
+        \begin{align*}
+          \frac{3h}{4} + \frac{2h}{5} & = 1 \\
+          15h + 8h                    & = 20 \\
+          h                           & = \boxed{ \frac{20}{23} } \\
+        \end{align*}
+
+      \item[15] 
+        \begin{align*}
+          \frac{x - 2}{3} + \frac{x + 3}{4} & = \frac{11}{6} \\
+          4(x - 2) + 3(x + 3)               & = 22 \\
+          x                                 & = \boxed{ 3 } \\
+        \end{align*}
+
+      \item[16] 
+        \begin{align*}
+          \frac{x + 4}{5} + \frac{x - 1}{4} & = \frac{37}{10} \\
+          4 (x + 4) + 5 (x - 1)             & = 74 \\
+          x                                 & = \boxed{ 7 } \\
+        \end{align*}
+
+      \item[20] 
+        \begin{align*}
+          \frac{n - 1}{9} - \frac{n + 2}{6} & = \frac{3}{4} \\
+          2(n - 1) - 3(n + 2)               & = \frac{27}{2} \\
+          n                                 & = \boxed{ - \frac{43}{2} } \\
+        \end{align*}
+
+      \item[21] 
+        \begin{align*}
+          \frac{y}{3} + \frac{y - 5}{10} & = \frac{4y + 3}{5} \\
+          10y + 3(y - 5)                 & = 6 (4y + 3) \\
+          y                              & = \boxed{ -3 } \\
+        \end{align*}
+
+      \item[22] 
+        \begin{align*}
+          \frac{y}{3} + \frac{y - 2}{8} & = \frac{6y - 1}{12} \\
+          8y + 3(y - 2)                 & = 2(6y - 1) \\
+          y                             & = \boxed{ -4 } \\
+        \end{align*}
+
+      \item[23] 
+        \begin{align*}
+          \frac{4x - 1}{10} - \frac{5x + 2}{4} & = -3 \\
+          2(4x - 1) - 5(5x + 2)                & = -60 \\
+          x                                    & = \boxed{ \frac{48}{17} } \\
+        \end{align*}
+
+      \item[24] 
+        \begin{align*}
+          \frac{2x - 1}{2} - \frac{3x + 1}{4} & = \frac{3}{10} \\
+          2 (2x - 1) - (3x + 1)               & = \frac{6}{5} \\
+          x                                   & = \boxed{ \frac{21}{5} } \\
+        \end{align*}
+
+      \item[25] 
+        \begin{align*}
+          \frac{2x - 1}{8} - 1 & = \frac{x + 5}{7} \\
+          2x - 1 - 8           & = \frac{8(x + 5)}{7} \\
+          x                    & = \boxed{ \frac{103}{6} } \\
+        \end{align*}
+
+      \item[30]
+        \begin{align*}
+          \frac{2x + 7}{8} + x - 2 & = \frac{x-1}{2} \\
+          2x + 7 + 8(x - 2)        & = 4(x - 1) \\
+          x                        & = \boxed{ \frac{5}{6} } \\
+        \end{align*}
+
+      \item[31]
+        \begin{align*}
+          \frac{x + 3}{2} + \frac{x + 4}{5} & = \frac{3}{10} \\
+          5(x + 3) + 2(x + 4)               & = 3 \\
+          x                                 & = \boxed{ -\frac{20}{7} } \\
+        \end{align*}
+
+
+      \item[32]
+        \begin{align*}
+          \frac{x - 2}{5} - \frac{x - 3}{4} & = -\frac{1}{20} \\
+          4(x - 2) - 5(5 - 3)               & = -1 \\
+          x                                 & = \boxed{ 8 } \\
+        \end{align*}
+
+      \item[33]
+        \begin{align*}
+          n + \frac{2n - 3}{9} - 2 & = \frac{2n + 1}{3} \\
+          9n + (2n - 3) - 18       & = 2 (2n + 1) \\
+          n                        & = \boxed{ \frac{24}{5} } \\
+        \end{align*}
+
+      \item[34]
+        \begin{align*}
+          n - \frac{3n + 1}{6} - 1 & = \frac{2n + 4}{12} \\
+          12n - 2(3n + 1) - 12     & = 2n + 4 \\
+          n                        & = \boxed{ \frac{9}{2} } \\
+        \end{align*}
+
+      \item[35]
+        \begin{align*}
+          \frac{3}{4}(t - 2) - \frac{2}{5}(2t + 3) & = \frac{1}{5} \\
+          15(t - 2) - 8(2t + 3)                    & = 4 \\
+          t                                        & = \boxed{ -10 } \\
+        \end{align*}
+
+      \item[36] 
+        \begin{align*}
+          \frac{2}{3} (2t + 1) - \frac{1}{2} (3t - 2) & = 2 \\
+          2(2t + 1) - 3(3t - 1)                       & = 12 \\
+          t                                           & = \boxed{ -2 } \\
+        \end{align*}
+
+      % \item[37]
+      %   \begin{align*}
+      %     \frac{1}{2}(2x - 1) - \frac{1}{3}(5x + 2) & = 3 \\
+      %     3(2x - 1) - 2(5x + 2)                     & = 18 \\
+      %      x                                        & = \boxed{ - \frac{25}{4} } \\
+      %   \end{align*}
+
+      \item[39]
+        \begin{align*}
+          3x - 1 + \frac{2}{7}(7x - 2) & = - \frac{11}{7} \\
+          7(3x - 1) + 2(7x - 2)        & = -11 \\
+          x                            & = \boxed{ 0 } \\
+        \end{align*}
+
+      \item[40]
+        \begin{align*}
+          2x + 5 + \frac{1}{2}(6x - 1) & = -\frac{1}{2} \\
+          2x + 5 + 3x - \frac{1}{2}    & = -\frac{1}{2} \\
+          5x + 5                       & = 0 \\
+          x                            & = \boxed{ -1 } \\
+        \end{align*}
+
+      % \item[42]
+      %   \begin{align*}
+      %     \frac{x}{2} + \frac{3x}{4}            & = \frac{4x}{3} + 2 \\
+      %     % 12 \del{ \frac{x}{2} + \frac{3x}{4} } & = 12 \del{ \frac{4x}{3} + 2 } \\
+      %     6x + 9x                               & = 16x + 24 \\
+      %     x                                     & = \boxed{ -24 } \\
+      %   \end{align*}
+
+      \item[45]
+        \begin{align*}
+          x + \frac{1}{3} (x + 1) + \frac{3}{8} (x + 2)            & = 25 \\
+          % 24 \del{ x + \frac{1}{3} (x + 1) + \frac{3}{8} (x + 2) } & = 24 \cdot 25 \\
+          24x + 8(x + 1) + 12(x + 2)                               & = 600 \\
+          x                                                        & = \boxed{ 14 } \\
+        \end{align*}
+
+      \item[49] \ 
+
+        \begin{tabular}{ll}
+          \toprule
+          $x$                        & Angie's age \\
+          $x + 8$                    & Angie's age in eight years \\
+          $\frac{3}{5} (64 - x + 8)$ & Angie's age in eight years \\
+          $64 - x$                   & Mother's age in eight years \\
+          \bottomrule
+        \end{tabular}
+
+      \begin{align*}
+        \frac{3}{5}(64 - x + 8)       & = x + 8 \\
+        \frac{3}{5} (72 - x)          & = x + 8 \\
+        3(72 - x)                     & = 5(x + 8) \\
+        x                             & = 22 \\
+      \end{align*}
+
+      Angie is 22 and her mother is 42.  In 8 years, Angie will be 30 and her
+      mother will be 50.  
+      
+      $\frac{3}{5} \cdot 50 = 30$, so the answer is correct.
+
+      \item[53] 
+        the scores for the three exams are:
+        \begin{itemize*}
+          \item $x$
+          \item $x + 10$
+          \item $x + 14$
+        \end{itemize*}
+
+        Use the average to find $x$:
+        \begin{align*}
+          \frac{1}{3} ( x + x + 10 + x + 14 ) & = 88 \\
+          x                                   & = 80 \\
+        \end{align*}
+
+        The three scores are: \fbox{ 80, 90 and 94 }
+    \end{description}
+
+  \fi
+
+  \ifprintanswers{}
+  \else
+    \vspace{10 cm}
+    \begin{quote}
+      \begin{em}
+        Politics is the art of making the people believe that they are in
+        power, when in fact, they have none.        
+      \end{em}
+    \end{quote}
+    \hspace{1 cm} --Mumia Abu-Jamal
+  \fi
+
+\end{document}
+
+
