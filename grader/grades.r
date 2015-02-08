@@ -1,4 +1,4 @@
-grades.dir <- '~/Documents/U/ubb/sccc/calculus/grades'
+grades.dir <- '~/Documents/U/ubb/algebra/grades'
 
 # returns the number of points for a list of problems
 points <- function(problems) {
@@ -11,8 +11,8 @@ percentage <- function(score, points) {
   c(actual = actual, percentage = round(100 * (actual) / points))
 }
 
-possible <- points(c(7, 9:11, 15, 18, 23, 24, 3:6, 14, 16, 18, 21, 24))
-percentage(7, possible - 20)
+possible <- points(c(1:5, 11:15, 21:25, 31:35, 41:45, 49:50, 59:60, 63, 66))
+percentage(2, possible)
 
 grades.file <- paste(grades.dir, 'grades.csv', sep = '/')
 grades <- read.delim(grades.file, header = TRUE, strip.white = T, sep = ',')
