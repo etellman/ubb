@@ -116,9 +116,12 @@
 
   \section{Section 2.4} % (fold)
 
+
   \subsection{Distance} % (fold)
   
-  $d = rt$
+  \begin{align*}
+    d &= rt \\
+  \end{align*}
 
   Solve:
   \begin{enumerate}
@@ -170,49 +173,23 @@
         \frac{200}{8.6} \approx \unit[46.3]{mph}
       \]
 
-    % \item An airplane flew on a 1500 km trip. On the way back, after traveling the same amount of
-    %   time as the outbound trip, the pilot anounced that they still had 300 km to go. If the
-    %   airspeed of the plane is \unit[600]{km/h}, how fast was the wind blowing?
-
-    %   \[
-    %     \frac{1500}{600 + r} = \frac{1200}{600 - r}
-    %   \]
-
     \item Light travels at $\unit[3.0 \times 10^8]{m/s}$. How long does it take for light to travel
       the $\unit[1.5 \times 10^{11}]{m}$ from the sun to the earth?
       \[
         t = \frac{d}{r} = \frac{1.5 \times 10^{11}}{3.0 \times 10^8} = \unit[500]{s} \approx \unit[8.3]{m}
       \]
-  \end{enumerate}
-  
-  solve:
 
-  \subsection{Formulas} % (fold)
-
-  \begin{align*}
-    d &= rt \\
-    A &= LW \\
-    P &= 2L + 2W \\
-    i &= Prt \\
-    A &= P + Prt
-  \end{align*}
-  
-  \subsection{Area} % (fold)
-  
-  \subsubsection{Rectangle} % (fold)
-
-
-  \begin{enumerate}
-    \item If $P = 50$ and $x = 10$, find $y$:
+    \item An airplane flew on a 1500 km trip. On the way back, after traveling the same amount of
+      time as the outbound trip, the pilot anounced that they still had 300 km to go. If the
+      airspeed of the plane is \unit[600]{km/h}, how fast was the wind blowing?
 
       \begin{align*}
-        P & = 2x + 2y \\
-        y & = \frac{P - 2x}{2} \\
-          & = \frac{50 - 2 \cdot 10}{2} \\
-          & = \boxed{ 15 } \\
+        \frac{1500}{600 + r} & = \frac{1200}{600 - r} \\
+        r                    & \approx \unit[66.7]{km/h} \\
       \end{align*}
-  \end{enumerate}
 
+  \end{enumerate}
+  
   \subsection{Simple Interest} % (fold)
 
   \begin{align*}
@@ -223,11 +200,28 @@
 
   \begin{enumerate}
     \item Find the interest for $P = \$1,000$, $r = 0.03$, $t = 5$
+
+    \item You plan to invest \$12,000 in two funds paying 4.5\% and 5\% (more risk) simple interest.
+      What is the smallest amount you can invest in the 5\% fund in order to make an annual interest
+      income of \$580?
+
+      \begin{align*}
+        580 & = 0.05 x + 0.045 (12,000 - x) \\
+        x   & = \$8,000 \\
+      \end{align*}
+
+    \item You have \$12,000 to invest and want to make \$700 in simple interest in two years. What
+      rate to you need?
+
+      \begin{align*}
+        i & = Prt \\
+        r & = \frac{i}{Pt} \\
+          & = \frac{700}{12,000 \cdot 2} \\
+          & \approx \boxed{ 0.029 } \\
+      \end{align*}
+
+
   \end{enumerate}
-  
-  \subsection{Distance and Time} % (fold)
-  
-  
   
 \end{document}
 
