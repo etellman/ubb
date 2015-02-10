@@ -1,10 +1,10 @@
 % no answer key
-% \documentclass[letterpaper]{exam}
+\documentclass[letterpaper]{exam}
 
 % answer key
-\documentclass[letterpaper, landscape]{exam}
-\usepackage{2in1, lscape} 
-\printanswers{}
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers{}
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -215,9 +215,10 @@
 
       She gave me a funny look and quickly changed the subject.  How old is the rose-red city?
 
+      (problem actually by Martin Gardner)
+
       \begin{solution}
         If $T$ is the age of time:
-
         \begin{align*}
           \frac{T}{2} - 1 & = \frac{2}{5} (T + 1) \\
           T               & = 14 \\
@@ -241,6 +242,8 @@
 
   Assuming that the wife always drives at a constant speed, and that on this occasion she left just in time to meet
   the 5:00 train, how long did the husband walk before he was picked up?
+
+  (Martin Gardner)
 
   \begin{solution}
     The wife took 10 minutes off her usual trip.  She must have picked her husband up 5 minutes early, saving 5
@@ -476,5 +479,16 @@
   \end{description}
   \fi
 
+  \ifprintanswers{}
+  \else
+    \vspace{8 cm}
+    \begin{quote}
+      \begin{em}
+        Society in every state is a blessing, but government, even in its best state, is but a
+        necessary evil; in its worst state an intolerable one. 
+      \end{em}
+    \end{quote}
+    \hspace{1 cm} --Thomas Paine
+  \fi
 
 \end{document}
