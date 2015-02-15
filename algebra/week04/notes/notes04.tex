@@ -1,64 +1,166 @@
-\documentclass[fleqn]{article}
-\usepackage{amsmath}
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
 
-\title{Math 113--Week Four Notes}
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{commath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+\title{Week Four Notes}
 \author{}
-\date{February 10, 2010}
-
-\oddsidemargin 0in
-\topmargin -0.5in
-\textwidth 6.5in
-\textheight 9in
-
-\setlength{\mathindent}{1in}
+\date{\today}
 
 \begin{document}
 
-\maketitle
+  \maketitle
 
-\section{Chapter Two Test}
+  \section{Terminology}
 
-Next week we will have the {\em Chapter Two} test.  You can prepare by reviewing the homework and doing some of the review
-problems and problems from the sample test at the end of the chapter.  The format will be
-similar to the {\em Placement Exam} with about 20 questions. 
+  Solutions to inequalities are ranges rather than single numbers
+  \begin{itemize*}
+    \item parentheses for open intervals (endpoint not included)
+    \item square brackets for closed intervals (endpoint included)
+    \item draw various intervals and number lines
+  \end{itemize*}
 
-\section{New Terminology}
+  \section{Rules} % (fold)
+  
+  \subsection{Addition} % (fold)
 
-\begin{description}
-  \item[$(a, b)$] \(a < x < b\).  Parentheses mean that the endpoints are not included.
-  \item{$[a, b]$} \(a \leq x \leq b\).  Square brackets mean that the endpoints are included.
-  \item[\(C = A \cap B\)] intersection.  $A$, $B$, and $C$ are sets where $C$ contains the elements which are in {\em both} $A$ {\em and} $B$.
-  \item[\(C = A \cup B\)] Aunion.  $A$, $B$, and $C$ are sets where $C$ contains the elements which are in {\em either} $A$
-    {\em or} $B$.
-\end{description}
+  You can add the same thing to both sides of an inequality. It doesn't matter if $c$ is positive or
+  negative.
 
-\section{Solving Inequalities}
+  \begin{align*}
+    a < b & \iff a + c < b + c \\
+    a > b & \iff a + c > b + c \\
+  \end{align*}
+    
+  examples:
+  \begin{enumerate}
+    \item 
+      \begin{align*}
+        2 & < 3 \\
+        \\
+        2 + 10 & < 3 + 10 \\
+        12     & < 13 \\
+        \\
+        2 - 5 & < 3 - 5 \\
+        -3    & < -2 \\
+      \end{align*}
 
-When solving equations with inequalities, almost all the same rules apply as when working with equalities.  You need to
-make sure to keep the equation balanced by always doing the same thing to both sides.  
+    \item 
+      \begin{align*}
+        x + 3 & < 7 \\
+        x     & < 4 \\
+        x     & \in \boxed{ \intoo{ -\infty, 4 } } \\
+      \end{align*}
 
-The only difference is that when you are working with inequalities, you need to reverse the direction of the inequality
-when you multiply both sides by a negative number. For example: \( -x < 8 \) becomes \( x > -8 \).
+    \item 
+      \begin{align*}
+        x - 5 & > -2 \\
+        x     & > 3 \\
+        x     & \in \boxed{ \intoo{ 3, \infty } } \\
+      \end{align*}
 
-To solve two equations combined with an {\em and}:
-\begin{itemize}
-  \item first solve each equation separately
-  \item the solution is the intersection of the two equations' solutions.  In other words, the solution is all the numbers which are
-    solutions to both equations.
-\end{itemize}
+    \item 
+      \begin{align*}
+        2x - 5 & \geq x + 1 \\
+        2x     & \geq x + 6 \\
+        x      & \geq 6 \\
+        x      & \in \boxed{ \intco{ 6, \infty } } \\
+      \end{align*}
 
-To solve two equations combined with an {\em or}:
-\begin{itemize}
-  \item first solve each equation separately
-  \item the solution is the union of the two equations' solutions.  In other words, the solution is all the numbers which are
-    solutions to either equation.
-\end{itemize}
+      Show how gap increases as $x = \cbr{ 5, 6, 7, 8, \ldots}$.
 
-\section{Inequalities With Absolute Value}
+  \end{enumerate}
 
-\begin{itemize}
-  \item \( |x| < k \) is equivalent to $x > -k$ {\em and} $x < k$, or, more concisely, $-k < x < k$, where $k$ is a positive number.
-  \item \( |x| > k \) is equivalent to $x > k$ {\em or} $x < -k$, where $k$ is a positive number.
-\end{itemize}
+  \subsection{Multiplication} % (fold)
+
+  You can multiply both sides of an inequality by a positive number 
+
+  $c > 0$:
+  \begin{align*}
+    a < b & \iff ac < bc \\
+    a > b & \iff ac > bc \\
+  \end{align*}
+
+  examples:
+  \begin{align*}
+    4                   & < 8 \\
+    2 \cdot 4           & < 2 \cdot 8 \\
+    \frac{1}{2} \cdot 4 & < \frac{1}{2} 8 \\
+    \\
+    x  & < 10 \\
+    2x & < 20 \\
+  \end{align*}
+
+  When you multiply by a negative number, you need to switch the direction of
+  the inequality:
+  
+  $c < 0$:
+  \begin{align*}
+    a < b & \iff ac > bc \\
+    a > b & \iff ac < bc \\
+  \end{align*}
+
+  examples:
+  \begin{align*}
+    1  & < 2 \\
+    -1 & > -2 \\
+    \\
+    x  & < 0 \\
+    -x & > 0 \\
+    \\
+    x  & > 10 \\
+    -x & < 10 \\
+  \end{align*}
+    
+  \section{Examples} % (fold)
+
+  \begin{enumerate}
+    \item $4x < 12$
+
+    \item $x - 5 \geq 7$
+
+    \item $2x + 7 < 3 + 4x$
+
+    \item $6x - 4 \leq 2 + 8x$
+
+    \item $\frac{1}{2} (8x + 1) \geq 3x + \frac{5}{2}$
+
+    \item $4(x + 1) < 2x + 3$
+
+    \item $2x - 7 < 6x + 13$
+
+    \item $2x - 3 < 7x + 22$
+
+    \item $4(x - 3) \leq -2(x + 1)$
+
+    \item $3(x - 1) \geq -(x + 4)$
+
+    \item $4(2x - 1) - 3(3x + 4) \geq 0$
+
+    \item $-5(3x + 4) < -2(7x - 1)$
+
+    \item $-3(2x + 1) > 2(x + 4)$
+
+  \end{enumerate}
+  
 
 \end{document}
