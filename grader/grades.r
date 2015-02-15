@@ -11,26 +11,22 @@ percentage <- function(score, points) {
   c(actual = actual, percentage = round(100 * (actual) / points))
 }
 
-possible <- points(c(1:5, 11:15, 21:25, 31:35, 41:45, 49:50, 59:60, 63, 66))
-percentage(2, possible)
+possible <- points(c(3:5, 11:16, 20:25, 30:36, 39:40, 45, 49, 53))
+percentage(6, possible)
 
 grades.file <- paste(grades.dir, 'grades.csv', sep = '/')
 grades <- read.delim(grades.file, header = TRUE, strip.white = T, sep = ',')
 
-grades.m <- melt(grades, id = "id")
+grades.m <- melt(grades, id = "student")
 median(grades.m$value, na.rm = T)
 round(mean(grades.m$value, na.rm = T))
 
 hw <- grades.m[grep("hw", grades.m$variable),]
 exam01 <- grades.m[grep("exam", grades.m$variable),]
 
-exam01.mean <- mean(exam01$value, na.rm = T)
-hw.mean <- mean(hw$value, na.rm = T)
-
-0.8 * exam01.mean + 0.2 * hw.mean
-
 plot <- ggplot(grades.m, aes(x = value)) + 
-  geom_histogram(binwidth = 5, color = "black", fill = "lightblue") +
+  geom_histogram(binwidth = 5, origin = 50.1, color = "black", fill = "lightblue") +
   labs(x = "Grade", y = "Students")
 print(plot)
+
 
