@@ -1,10 +1,10 @@
 % no answer key
-% \documentclass[letterpaper]{exam}
+\documentclass[letterpaper]{exam}
 
 % answer key
-\documentclass[letterpaper, landscape]{exam}
-\usepackage{2in1, lscape} 
-\printanswers{}
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers{}
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -39,74 +39,72 @@
   \section{Section 2.5}
   1--15, 21--25, 31--40, 46--50, 61--65, 69--70, 74
 
-  \section{Problems}
+  \section{Other Problems}
 
-  \begin{questions}
+  Diophantes was a Greek mathematician who lived in the third century C.E.  The only details
+  historians know about his life are provided by a puzzle one of his friends wrote about him after
+  he died.  Here it is:
 
-    \question{}
-    Diophantes was a Greek mathematician who lived in the third century C.E.  The only details
-    historians know about his life are provided by a puzzle one of his friends wrote about him after
-    he died.  Here it is:
+  \begin{itemize*}
+    \item His boyhood lasted \sfrac{1}{6} of his life
+    \item He grew a beard after another \sfrac{1}{12}
+    \item After \sfrac{1}{7} more he married
+    \item And had a son 5 years later
+    \item The son lived to half his father's final age
+    \item The father died 4 years later.
+  \end{itemize*}
 
+  How old was Diophantes when he died, and how old was he when each of the events mentioned occurred?
+
+  \begin{solution}
+    If we let $x$ be Diophantes' age when he died, the equation is:
+    \begin{align*}
+      \frac{x}{6} + \frac{x}{12} + \frac{x}{7} + 5 + \frac{x}{2} + 4 & = x \\
+      x                                                              & = \boxed{84} \\
+    \end{align*}
+
+    Here is when everything happened:
     \begin{itemize*}
-      \item His boyhood lasted \sfrac{1}{6} of his life
-      \item He grew a beard after another \sfrac{1}{12}
-      \item After \sfrac{1}{7} more he married
-      \item And had a son 5 years later
-      \item The son lived to half his father's final age
-      \item The father died 4 years later.
+      \item His boyhood lasted until he was 14
+      \item He grew a beard when he was 21 
+      \item He married when he was 33
+      \item He had a son when he was 38
+      \item The son lived to age 42, when the father was 80
+      \item The father died 4 years later at age 84
     \end{itemize*}
 
-    How old was Diophantes when he died, and how old was he when each of the events mentioned occurred?
+  \end{solution}
 
-    \begin{solution}
-      If we let $x$ be Diophantes' age when he died, the equation is:
-      \begin{align*}
-        \frac{x}{6} + \frac{x}{12} + \frac{x}{7} + 5 + \frac{x}{2} + 4 & = x \\
-        x                                                              & = \boxed{84} \\
-      \end{align*}
+  \ifprintanswers{}
+  \else
+    \newpage
+  \fi
 
-      Here is when everything happened:
-      \begin{itemize*}
-        \item His boyhood lasted until he was 14
-        \item He grew a beard when he was 21 
-        \item He married when he was 33
-        \item He had a son when he was 38
-        \item The son lived to age 42, when the father was 80
-        \item The father died 4 years later at age 84
-      \end{itemize*}
+  \section{Extra Credit} % (fold)
 
-    \end{solution}
+  One morning, exactly at sunrise, a Buddhist monk began to climb a tall mountain.  The narrow path, no more than a
+  foot or two wide, spiraled around the mountain to a glittering temple at the summit.
 
-    \uplevel{\section{Extra Credit}}
+  The monk ascended the path at varying rates of speed, stopping many times along the way to rest and to eat the dried
+  fruit he carried with him.  He reached the temple shortly before sunset.  After several days of fasting and
+  meditation, he began his journey back along the same path, starting at sunrise and again walking at variable speeds
+  with many pauses along the way.  His average speed descending was, of course, greater than his average climbing
+  speed.
 
-    \question{}
+  Prove that there is a spot along the path that the monk will occupy on both trips at precisely the same time of day.
 
-      One morning, exactly at sunrise, a Buddhist monk began to climb a tall mountain.  The narrow path, no more than a
-      foot or two wide, spiraled around the mountain to a glittering temple at the summit.
+  (Martin Gardner)
 
-      The monk ascended the path at varying rates of speed, stopping many times along the way to rest and to eat the dried
-      fruit he carried with him.  He reached the temple shortly before sunset.  After several days of fasting and
-      meditation, he began his journey back along the same path, starting at sunrise and again walking at variable speeds
-      with many pauses along the way.  His average speed descending was, of course, greater than his average climbing
-      speed.
+  \begin{solution}
+    Picture two monks making the trip on the same day, with one monk starting at the top of the mountain and one monk
+    starting at the bottom of the mountain.  Clearly, they will meet on the path some time during the day, since the
+    path is narrow and they must pass each other on the way to their respective destinations.  When this happens, both
+    monks will be at the same place at the same time of day.  
 
-      Prove that there is a spot along the path that the monk will occupy on both trips at precisely the same time of day.
+    For any two possible trips up and down the mountain, there is always a point where the trips overlap.  If a
+    single monk makes the two trips separated by a night, his trips still must overlap at some point.
 
-      (Martin Gardner)
-
-      \begin{solution}
-        Picture two monks making the trip on the same day, with one monk starting at the top of the mountain and one monk
-        starting at the bottom of the mountain.  Clearly, they will meet on the path some time during the day, since the
-        path is narrow and they must pass each other on the way to their respective destinations.  When this happens, both
-        monks will be at the same place at the same time of day.  
-
-        For any two possible trips up and down the mountain, there is always a point where the trips overlap.  If a
-        single monk makes the two trips separated by a night, his trips still must overlap at some point.
-
-      \end{solution}
-
-  \end{questions}
+  \end{solution}
 
   \ifprintanswers{}
 
@@ -439,7 +437,7 @@
 
   \ifprintanswers{}
   \else
-    \vspace{5 in}
+    \vspace{12 cm}
 
     \begin{verse}
       seeker of truth
@@ -449,7 +447,9 @@
 
       truth is here 
     \end{verse}
-    \hspace{1 in} e.e.\ cummings
+    \hspace{2 cm} {\em e.e.\ cummings\/}
+
+    \newpage
 
   \fi
 
