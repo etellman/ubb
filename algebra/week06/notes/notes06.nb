@@ -1,0 +1,97 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2261,         87]
+NotebookOptionsPosition[      1833,         66]
+NotebookOutlinePosition[      2186,         82]
+CellTagsIndexPosition[      2143,         79]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Reduce", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Abs", "[", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"2", "x"}], "9"], "-", 
+      FractionBox["x", "6"]}], "]"}], "\[GreaterEqual]", " ", 
+    FractionBox["1", "2"]}], ",", "x", ",", "Reals"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6349368499529247`*^9, 3.634936932989705*^9}, {
+  3.6349372130556517`*^9, 3.634937264432189*^9}, {3.634937328512273*^9, 
+  3.63493733562947*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"x", "\[LessEqual]", 
+   RowBox[{"-", "9"}]}], "||", 
+  RowBox[{"x", "\[GreaterEqual]", "9"}]}]], "Output",
+ CellChangeTimes->{{3.634936916984015*^9, 3.63493693362119*^9}, 
+   3.6349372224882097`*^9, 3.634937264900488*^9, {3.6349373291147346`*^9, 
+   3.6349373361980677`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Reduce", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "+", 
+     FractionBox["2", "7"]}], ">", 
+    RowBox[{
+     FractionBox["x", "2"], "-", "5"}]}], ",", "x", ",", "Reals"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6349377261253977`*^9, 3.634937746590316*^9}}],
+
+Cell[BoxData[
+ RowBox[{"x", ">", 
+  RowBox[{"-", 
+   FractionBox["74", "7"]}]}]], "Output",
+ CellChangeTimes->{3.6349377468461857`*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 652},
+WindowMargins->{{Automatic, 13}, {Automatic, 6}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 460, 12, 49, "Input"],
+Cell[1043, 36, 310, 7, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1390, 48, 289, 9, 48, "Input"],
+Cell[1682, 59, 135, 4, 81, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
