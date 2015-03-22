@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers{}
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -36,12 +36,15 @@
 
   \maketitle
 
-  \section{Calendar}
+  \ifprintanswers{}
+  \else
+    \section{Calendar}
 
-  \begin{itemize*}
-    \item March 18: Chapter 2 Review
-    \item March 25: Chapter 2 Exam
-  \end{itemize*}
+    \begin{itemize*}
+      \item March 18: Chapter 2 Review
+      \item March 25: Chapter 2 Exam
+    \end{itemize*}
+  \fi
 
   \section{Section 2.7}
   1--20, 25--29, 35--39, 45--55, 61--63
@@ -54,89 +57,103 @@
 
    \begin{description}
 
-      \item[1] $ ( -5, 5 ) $
+      \item[1] $( -5, 5 )$
 
-      \item[2] $ ( -1, 1 ) $
+      \item[2] $( -1, 1 )$
 
-      \item[3] $ [ -2, 2 ] $
+      \item[3] $[ -2, 2 ] $
 
-      \item[4] $ [ -4, 4 ] $
+      \item[4] $[ -4, 4 ] $
 
-      \item[5] $ ( -\infty, -2 ) \cup ( 2, \infty ) $
+      \item[5] $( -\infty, -2 ) \cup ( 2, \infty )$
 
-      \item[6] $ ( -\infty, -3 ) \cup ( 3, \infty ) $
+      \item[6] $( -\infty, -3 ) \cup ( 3, \infty )$
 
-      \item[7] $ ( -1, 3 ) $
+      \item[7] $( -1, 3 )$
 
-      \item[8] $ ( -2, 6 ) $
+      \item[8] $( -2, 6 )$
 
-      \item[9] $ [ -6, 2 ] $
+      \item[9] $[ -6, 2 ] $
 
-      \item[10] $ [ -2, 0 ] $
+      \item[10] $[ -2, 0 ] $
 
-      \item[11] $ ( -\infty, -3 ) \cup ( -1, \infty ) $
+      \item[11] $( -\infty, -3 ) \cup ( -1, \infty )$
 
-      \item[12] $ ( -\infty, -4 ) \cup ( 2, \infty ) $
+      \item[12] $( -\infty, -4 ) \cup ( 2, \infty )$
 
-      \item[13] $ \intoc{ -\infty, 1 } \cup \intoc{ 5, \infty } $
+      \item[13] $\intoc{ -\infty, 1 } \cup \intoc{ 5, \infty }$
 
-      \item[14] $ \intoc{ -\infty, 1 } \cup \intoc{ 3, \infty } $
+      \item[14] $\intoc{ -\infty, 1 } \cup \intco{ 3, \infty }$
 
-      \item[15] $ \cbr{ -7, 9 } $
+      \item[15] $\cbr{ -7, 9 }$
 
-      \item[16] $ \cbr{ -11, 7 } $
+      \item[16] $\cbr{ -11, 7 }$
 
-      \item[17] $ \intoc{ -\infty, -4 } \cup \intoc{ 8, \infty } $
+      \item[17] $\intoo{ -\infty, -4 } \cup \intoo{ 8, \infty }$
 
-      \item[18] $ \intoc{ -\infty, -6 } \cup \intoc{ 12, \infty } $
+      \item[18] $\intoo{ -\infty, -6 } \cup \intoo{ 12, \infty }$
 
-      \item[19] $ \intoo{ -8, 2 } $
+      \item[19] $\intoo{ -8, 2 }$
 
-      \item[20] $ \intoo{ -9, 7 } $
+      \item[20] $\intoo{ -9, 7 }$
 
-      \item[25] $ \intoc{ -\infty, - \frac{7}{2} } \cup \intoc{ \frac{5}{2}, \infty } $
+      \item[25] $\intoc{ -\infty, - \frac{7}{2} } \cup \intco{ \frac{5}{2}, \infty }$
 
-      \item[26] $ \intoc{ -\infty, - \frac{8}{5} } \cup \intoc{ \frac{12}{5}, \infty } $
+      \item[26] $\intoc{ -\infty, - \frac{8}{5} } \cup \intco{ \frac{12}{5}, \infty }$
 
-      \item[27] $ \cbr{ -5, \frac{7}{3} } $
+      \item[27] $\cbr{ -5, \frac{7}{3} }$
 
-      \item[28] $ \cbr{ - \frac{7}{5}, \frac{21}{5} } $
+      \item[28] $\cbr{ - \frac{7}{5}, \frac{21}{5} }$
 
-      \item[29] $ \cbr{ -1, 5 } $
+      \item[29] $\cbr{ -1, 5 }$
 
-      \item[35] $ \intcc{ -5, \frac{7}{5} } $
+      \item[35] $\intcc{ -5, \frac{7}{5} }$
 
-      \item[36] $ \intoc{ -\infty, - \frac{16}{7} } \cup \intoc{ 4, \infty } $
+      \item[36] $\intoc{ -\infty, - \frac{16}{7} } \cup \intco{ 4, \infty }$
 
-      \item[37] $ \cbr{ \frac{1}{12}, \frac{17}{12} } $
+      \item[37] $\cbr{ \frac{1}{12}, \frac{17}{12} }$
 
-      \item[38] $ \cbr{ - \frac{11}{10}, \frac{1}{10} } $
+      \item[38] $\cbr{ - \frac{11}{10}, \frac{1}{10} }$
 
-      \item[39] $ \intcc{ -3, 10 } $
+      \item[39] $\intcc{ -3, 10 }$
 
-      \item[45] $ \cbr{ 0, 3 } $
+      \item[45] $\cbr{ 0, 3 }$
 
-      \item[46] $ \cbr{ -3, \frac{11}{3} } $
+      \item[46] $\cbr{ -3, \frac{11}{3} }$
 
-      \item[47] $ \intoc{ -\infty, -14 } \cup \intoc{ 0, \infty } $
+      \item[47] $\intoc{ -\infty, -14 } \cup \intco{ 0, \infty }$
 
-      \item[48] $ \intoc{ -\infty, -4 } \cup \intoc{ 8, \infty } $
+      \item[48] $\intoc{ -\infty, -4 } \cup \intco{ 8, \infty }$
 
-      \item[49] $ \intcc{ -2, 3 } $
+      \item[49] $\intcc{ -2, 3 }$
 
-      \item[50] $ \intcc{ - \frac{5}{2}, 1 } $
+      \item[50] $\intcc{ - \frac{5}{2}, 1 }$
 
-      \item[61] The smallest value for the absolute value of anything is 0, so
-        this problem is equivalent to:
+      \item[51] no solution
 
+      \item[52] no solution
+
+      \item[53] $(-\infty, \infty)$
+
+      \item[54] no solution
+
+      \item[55] 
         \begin{align*}
-          2x + 5 & = 0 \\
-          x      & = - \frac{5}{2} \\
+          5x - 2 & = 0 \\
+          x      & = \frac{2}{5}
         \end{align*}
 
-      \item[62] This is the same as problem 61. You just have to solve $x - 2 = 0$.
+      \item[61] The smallest value for the absolute value of anything is 0, so any value works for
+        $x$ and the solution is $(-\infty, \infty)$
 
-      \item[63] You can remove the absolute value symbol and get an equivalent equation:
+      \item[62] The only way the absolute value of something can be less than or equal to zero is if
+        it is equal to zero. So this problem is the same as:
+        \begin{align*}
+          x - 2 & = 0 \\
+          x     & = 2 \\
+        \end{align*}
+
+      \item[63] You can remove the absolute value symbol and get an equivalent equation.
         \begin{align*}
           2x - 3 & = 0 \\
           x      & = \frac{3}{2} \\
@@ -160,5 +177,4 @@
   \fi
 
 \end{document}
-
 

@@ -1,0 +1,298 @@
+% no answer key
+\documentclass[letterpaper]{exam}
+
+% answer key
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers{}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{commath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+\usepackage{parskip} 
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+\addpoints{}
+
+\title{Algebra \\ Chapter Two Exam}
+\author{}
+\date{\today}
+
+\begin{document}
+
+  \maketitle
+
+  % \begin{center}
+  %   \gradetable[h][pages]
+  %   \bonusgradetable[h][pages]
+  % \end{center}
+
+  \section{Instructions} % (fold)
+
+  \begin{itemize*}
+    \item Show your work.
+    \item Check your answers.
+    \item Write the solutions to inequalities in interval form. For instance, if the answer is 
+      $x \geq 2$, the solution should be written as $\intco{ 2, \infty }$.
+  \end{itemize*}
+
+  \section{Questions} % (fold)
+
+  \begin{questions}
+    
+    % \question[5]
+    %   \[ 
+    %     2 (6 + x) = 9 - x
+    %   \]
+
+    \question[5]
+      \[ 
+        17 - 3(5 - 2x) = 8 + 4x
+      \]
+
+    \question[5]
+      \[
+        3(x - 2) - 6 = 4x - (3x - 1)
+      \]
+
+    \question[10]
+      \[ 
+        \frac{7}{3} (x + 2) = \frac{3}{4} (x + 3)
+      \]
+
+    \question[10]\label{e:first}
+      \[ 
+        \frac{4x - 8}{3} = \frac{4}{5} (x - 10)
+      \]
+
+    % \question[7]
+    %   \[ 
+    %     \frac{3}{4} (x + 6) = \frac{5}{12} \del{ x - \frac{2}{5} }
+    %   \]
+
+    % \question[7]
+    %   \[ 
+    %     \frac{2}{3} (x + 9) = \frac{1}{10} (x - 14)
+    %   \]
+
+    % \question[10]
+    %   \[
+    %     \frac{4}{3} (x - 2) - \frac{1}{2} = 2 \del{ \frac{3}{4} x - 1 }
+    %   \]
+
+    \question[10]
+      \[
+        \frac{3}{5} - \frac{4}{5} (x + 1) = 2 - \frac{3}{10} (3x - 4)
+      \]
+
+    \question[10] 
+    \[
+      0.02 (x - 0.5) - 0.04 (x + 0.25) = 0.6
+    \]
+
+    \question[5]
+      \[
+        2x + 1 < 3x
+      \]
+
+      \begin{solution}
+        \begin{align*}
+          2x + 1 & < 3x \\
+          1      & < x \\
+          x      & > 1 \\
+        \end{align*}
+        In interval form: $\intoo{ 1, \infty }$
+    \end{solution}
+
+    \question[10]
+      \[ 
+        \frac{x - 2}{3} - \frac{x + 1}{4} \leq \frac{3}{2} 
+      \]
+
+      \begin{solution}
+        \begin{align*}
+          \frac{x - 2}{3} - \frac{x + 1}{4}            & \leq \frac{3}{2} \\
+          12 \del{ \frac{x - 2}{3} - \frac{x + 1}{4} } & \leq 12 \del{ \frac{3}{2} } \\
+          4(x - 2) - 3(x + 1)                          & \leq 18 \\
+          4x - 8 - 3x - 3                              & \leq 18 \\
+          x - 11                                       & \leq 18 \\
+          x                                            & \leq 29 \\
+        \end{align*}
+        In interval form: $\intoc{ -\infty, 29 }$
+      \end{solution}
+
+    \question[10]
+      \[ 
+         \frac{3}{2} - \frac{1}{2} x < \frac{3}{2} \del{ x + \frac{1}{3} }  < \frac{18 - 2x}{4}
+      \]
+
+    \question[10]
+      \[ 
+        2x + 1 < \frac{1}{3} \text { \hspace{0.1cm} or \hspace{0.1cm} } 3x - \frac{3}{2} > 1 
+      \]
+
+      \begin{solution}
+        \begin{align*}
+          2x + 1 < \frac{1}{3} & \text{ or } 3x - \frac{3}{2} > 1 \\
+          2x < -\frac{2}{3}    & \text{ or } 3x > \frac{5}{2} \\
+          x < -\frac{1}{3}     & \text{ or } x > \frac{5}{6} \\
+        \end{align*}
+        In interval form: $ \intoo{ -\infty, -\frac{1}{3} } \cup \intoo{ \frac{5}{6}, \infty }$
+      \end{solution}
+
+    \question[10]
+      \[ 
+        \frac{-2x + 4}{3} \leq 2 \text{ \hspace{0.1cm} and \hspace{0.1cm} } \frac{2x + 7}{9} < 3 
+      \]
+
+      \begin{solution}
+        \begin{align*}
+          \frac{-2x + 4}{3} \leq 2                   & \text{ and } \frac{2x + 7}{9} \leq 3 \\
+          3 \del{ \frac{-2x + 4}{3} } \leq 3 \cdot 2 & \text{ and } 9 \del{ \frac{2x + 7}{9} } \leq 9 \cdot 3 \\
+          -2x + 4 \leq 6                             & \text{ and } 2x + 7 \leq 27 \\
+          -2x \leq 2                                 & \text{ and } 2x \leq 20 \\
+          x \geq 1                                   & \text{ and } x \leq 10 \\
+        \end{align*}
+        In interval form: $\intcc{ 1, 10 }$
+      \end{solution}
+
+    \question[10]
+      \[ 
+        \abs{ 2x - 3 } < 4 
+      \]
+
+      \begin{solution}
+        \begin{align*}
+          -(2x - 3) < 4    & \text{ and } 2x - 3 < 4 \\
+          -2x + 3 < 4      & \text{ and } 2x < 7 \\
+          -2x < 1          & \text{ and } x < \frac{7}{2} \\
+          x > -\frac{1}{2} & \text{ and } x < \frac{7}{2} \\
+        \end{align*}
+        In interval form: $\intoo{ -\frac{1}{2}, \frac{7}{2} }$
+      \end{solution}
+
+      \question[10]
+        \[ 
+          \abs{ \frac{x - 1}{3} } - 1 \geq 2 
+        \]
+        \begin{solution}
+          \begin{align*}
+            -\del{ \frac{x - 1}{5} } \geq 2 & \text{ or } \frac{x - 1}{5} \geq 2 \\
+            \frac{1 - x}{5} \geq 2          & \text{ or } x - 1 \geq 10 \\
+            1 - x \geq 10                   & \text{ or } x \geq 11 \\
+            -x \geq 9                       & \text{ or } x \geq 11 \\
+            x \leq -9                       & \text{ or } x \geq 11 \\
+          \end{align*}
+          In interval form: $\intoc{ -\infty, -9 } \cup \intco{ 11, \infty }$
+        \end{solution}
+
+    % \question[10] Solve for $m$:
+    %   \[ 
+    %     y = mx + b
+    %   \]
+
+    %   \begin{solution}
+    %     \begin{align*}
+    %       y  & = mx + b \\
+    %       mx & = y - b \\
+    %       m  & = \frac{y - b}{x}
+    %     \end{align*}
+    %   \end{solution}
+
+    \question[10]
+    Eloise Midgen and Daphne Greengrass both accept new jobs immediately after graduating from
+    {\em Hogwarts School of Witchcraft and Wizardry}. 
+    
+    Here are their contracts:
+
+    \begin{itemize*}
+      \item Eloise: 500 galleon signing bonus with a monthly salary of 200 galleons. 
+      \item Daphne: 200 galleon signing bonus with a monthly salary of 300 galleons. 
+    \end{itemize*}
+
+    % For those of you who aren't familiar with the wizarding world, a galleon is the wizard currency.
+
+    \begin{parts}
+      \part[8 ]When will they both have made the same number of galleons from their jobs?
+      
+      \part[2] Who has the better deal in the long run?
+    \end{parts}
+
+    \question[15]
+    After working for a few months, Daphne has saved up some money. She has 140 galleons to
+    invest. She plans to put some of it in an account paying 6\% simple interest and the remainder
+    in an account paying 9\% simple interest. 
+    
+    How much should she put in each account in order to make 10.05 galleons in interest per year?
+
+    \begin{solution}
+      If you let $x$ be the amount to put in the 6\% account:
+      \begin{align*}
+        0.06x + 0.09( 140 - x ) & = 10.05 \\
+        x                       & = 85 \\
+      \end{align*}
+    \end{solution}
+
+    % \question[7]
+    %   An accountant has determined that the cost to produce and sell $x$ broomsticks is:
+    %   \[
+    %     C = 20x + 1000
+    %   \]
+
+    %   The revenue from $x$ broomsticks is:
+    %   \[
+    %     R = 70x
+    %   \]
+
+    %   How many broomsticks must the company sell in order to break even?
+
+    \uplevel{ \section{Extra Credit} }
+
+    \bonusquestion[15] 
+      Daphne and Eloise use some of their earnings to buy flying brooms. 
+      
+      Daphne's broom's top speed is 20 mph slower than Eloise's broom so she is only able to travel
+      8 miles in the time it takes Eloise to travel 18 miles. 
+      
+      What is the top speed of each broom?
+
+      \begin{solution}
+        If Daphne's broom speed is $x$, Eloise's broom speed is $x + 20$. Using 
+        \begin{align*}
+          d & = rt \\
+          t & = \frac{d}{r} \\
+        \end{align*}
+
+        \begin{align*}
+          \frac{x}{8}          & = \frac{x + 20}{18} \\
+          72 \cdot \frac{x}{8} & = 72 \cdot \frac{x + 20}{18} \\
+          9x                   & = 4 (x + 20) \\
+          % 9x                   & = 4x + 80 \\
+          x                    & = 16 \\
+        \end{align*}
+
+        Daphne's broom has a top speed of \fbox{ 16 mph } and Eloise's broom has a top speed of
+        \fbox{ 36 mph }.
+
+      \end{solution}
+
+  \end{questions}
+
+\end{document}
+
+
