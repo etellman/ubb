@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers{}
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -37,10 +37,10 @@
 
   \maketitle
 
-  % \begin{center}
-  %   \gradetable[h][pages]
-  %   \bonusgradetable[h][pages]
-  % \end{center}
+  \begin{center}
+    \gradetable[h][pages]
+    \bonusgradetable[h][pages]
+  \end{center}
 
   \section{Instructions} % (fold)
 
@@ -65,45 +65,102 @@
         17 - 3(5 - 2x) = 8 + 4x
       \]
 
+      \begin{solution}
+        \begin{align*}
+          17 - 3(5 - 2x) & = 8 + 4x \\
+          17 - 15 + 6x   & = 8 + 4x \\
+          2 + 6x         & = 8 + 4x \\
+          2x             & = 6 \\
+          x              & = \boxed{ 3 } \\
+        \end{align*}
+      \end{solution}
+
     \question[5]
       \[
         3(x - 2) - 6 = 4x - (3x - 1)
       \]
+
+      \begin{solution}
+        \begin{align*}
+        3(x - 2) - 6 & = 4x - (3x - 1) \\
+        3x - 6 - 6   & = 4x - 3x + 1 \\
+        3x - 12      & = x + 1 \\
+        x            & = \boxed{ \frac{13}{2} } \\
+        \end{align*}
+      \end{solution}
+
+    \ifprintanswers{}
+      \newpage
+    \fi
 
     \question[10]
       \[ 
         \frac{7}{3} (x + 2) = \frac{3}{4} (x + 3)
       \]
 
-    \question[10]\label{e:first}
+      \begin{solution}
+        \begin{align*}
+          \frac{7}{3} (x + 2) & = \frac{3}{4} (x + 3) \\
+          28 (x + 2)          & = 9 (x + 3) \\
+          28x + 56            & = 9x + 27 \\
+          19x                 & = -29 \\
+          x                   & = \boxed{ - \frac{29}{19} } \\
+        \end{align*}
+      \end{solution}
+
+    \question[10]
       \[ 
         \frac{4x - 8}{3} = \frac{4}{5} (x - 10)
       \]
 
-    % \question[7]
-    %   \[ 
-    %     \frac{3}{4} (x + 6) = \frac{5}{12} \del{ x - \frac{2}{5} }
-    %   \]
+      \begin{solution}
+        \begin{align*}
+          \frac{4x - 8}{3} & = \frac{4}{5} (x - 10) \\
+          5 (4x - 8)       & = 12 (x - 10) \\
+          20x - 40         & = 12x - 120 \\
+          8x               & = -80 \\
+          x                & = \boxed{ -10 } \\
+        \end{align*}
+      \end{solution}
 
-    % \question[7]
-    %   \[ 
-    %     \frac{2}{3} (x + 9) = \frac{1}{10} (x - 14)
-    %   \]
-
-    % \question[10]
-    %   \[
-    %     \frac{4}{3} (x - 2) - \frac{1}{2} = 2 \del{ \frac{3}{4} x - 1 }
-    %   \]
+    \ifprintanswers{}
+      \newpage
+    \fi
 
     \question[10]
       \[
         \frac{3}{5} - \frac{4}{5} (x + 1) = 2 - \frac{3}{10} (3x - 4)
       \]
 
+      \begin{solution}
+        \begin{align*}
+          \frac{3}{5} - \frac{4}{5} (x + 1) & = 2 - \frac{3}{10} (3x - 4) \\
+          6 - 8(x + 1)                      & = 20 - 3 (3x - 4) \\
+          6 - 8x - 8                        & = 20 - 9x + 12 \\
+          - 8x - 2                          & = 32 - 9x \\
+          x                                 & = \boxed{ 34 } \\
+        \end{align*}
+      \end{solution}
+
     \question[10] 
-    \[
-      0.02 (x - 0.5) - 0.04 (x + 0.25) = 0.6
-    \]
+      \[
+        0.02 (x - 0.5) - 0.04 (x + 0.25) = 0.6
+      \]
+
+      \begin{solution}
+        \begin{align*}
+          0.02 (x - 0.5) - 0.04 (x + 0.25) & = 0.6 \\
+          2 (x - 0.5) - 4 (x + 0.25)       & = 60 \\
+          2x - 1 - 4x - 1                  & = 60 \\
+          -2x - 2                          & = 60 \\
+          -2x                              & = 62 \\
+          x                                & = \boxed{ -31 } \\
+        \end{align*}
+      \end{solution}
+
+    \ifprintanswers{}
+      \newpage
+    \fi
 
     \question[5]
       \[
@@ -113,10 +170,11 @@
       \begin{solution}
         \begin{align*}
           2x + 1 & < 3x \\
-          1      & < x \\
           x      & > 1 \\
         \end{align*}
-        In interval form: $\intoo{ 1, \infty }$
+        \[
+          \boxed{ \intoo{ 1, \infty } }
+        \]
     \end{solution}
 
     \question[10]
@@ -133,13 +191,37 @@
           x - 11                                       & \leq 18 \\
           x                                            & \leq 29 \\
         \end{align*}
-        In interval form: $\intoc{ -\infty, 29 }$
+        
+        \[
+          \boxed{ \intoc{ -\infty, 29 } }
+        \]
+
       \end{solution}
 
     \question[10]
       \[ 
          \frac{3}{2} - \frac{1}{2} x < \frac{3}{2} \del{ x + \frac{1}{3} }  < \frac{18 - 2x}{4}
       \]
+
+      \begin{solution}
+        \begin{align*}
+           \frac{3}{2} - \frac{1}{2} x & < \frac{3}{2} \del{ x + \frac{1}{3} } \\
+           3 - x                       & < 3x + 1 \\
+           2                           & < 4x \\
+           x                           & > \frac{1}{2} \\
+           \\
+           \frac{3}{2} \del{ x + \frac{1}{3} } & < \frac{18 - 2x}{4} \\
+           6 \del{ x + \frac{1}{3} }           & < 18 - 2x \\
+           6x + 2                              & < 18 - 2x \\
+           8x                                  & < 16 \\
+           x                                   & < 2 \\
+        \end{align*}
+
+        \[
+          \boxed{ \intoo{ \frac{1}{2}, 2 } }
+        \]
+
+      \end{solution}
 
     \question[10]
       \[ 
@@ -152,7 +234,9 @@
           2x < -\frac{2}{3}    & \text{ or } 3x > \frac{5}{2} \\
           x < -\frac{1}{3}     & \text{ or } x > \frac{5}{6} \\
         \end{align*}
-        In interval form: $ \intoo{ -\infty, -\frac{1}{3} } \cup \intoo{ \frac{5}{6}, \infty }$
+        \[
+          \boxed{ \intoo{ -\infty, -\frac{1}{3} } \cup \intoo{ \frac{5}{6}, \infty } }
+        \]
       \end{solution}
 
     \question[10]
@@ -163,13 +247,21 @@
       \begin{solution}
         \begin{align*}
           \frac{-2x + 4}{3} \leq 2                   & \text{ and } \frac{2x + 7}{9} \leq 3 \\
-          3 \del{ \frac{-2x + 4}{3} } \leq 3 \cdot 2 & \text{ and } 9 \del{ \frac{2x + 7}{9} } \leq 9 \cdot 3 \\
+          % 3 \del{ \frac{-2x + 4}{3} } \leq 3 \cdot 2 & \text{ and } 9 \del{ \frac{2x + 7}{9} } \leq 9 \cdot 3 \\
           -2x + 4 \leq 6                             & \text{ and } 2x + 7 \leq 27 \\
           -2x \leq 2                                 & \text{ and } 2x \leq 20 \\
-          x \geq 1                                   & \text{ and } x \leq 10 \\
+          x \geq -1                                   & \text{ and } x \leq 10 \\
         \end{align*}
-        In interval form: $\intcc{ 1, 10 }$
+
+        \[
+          \boxed{ \intcc{ -1, 10 } }
+        \]
+
       \end{solution}
+
+    \ifprintanswers{}
+      \newpage
+    \fi
 
     \question[10]
       \[ 
@@ -183,8 +275,16 @@
           -2x < 1          & \text{ and } x < \frac{7}{2} \\
           x > -\frac{1}{2} & \text{ and } x < \frac{7}{2} \\
         \end{align*}
-        In interval form: $\intoo{ -\frac{1}{2}, \frac{7}{2} }$
+
+        \[
+          \boxed{ \intoo{ -\frac{1}{2}, \frac{7}{2} } }
+        \]
+
       \end{solution}
+
+    \ifprintanswers{}
+      \newpage
+    \fi
 
       \question[10]
         \[ 
@@ -192,13 +292,22 @@
         \]
         \begin{solution}
           \begin{align*}
-            -\del{ \frac{x - 1}{5} } \geq 2 & \text{ or } \frac{x - 1}{5} \geq 2 \\
-            \frac{1 - x}{5} \geq 2          & \text{ or } x - 1 \geq 10 \\
-            1 - x \geq 10                   & \text{ or } x \geq 11 \\
-            -x \geq 9                       & \text{ or } x \geq 11 \\
-            x \leq -9                       & \text{ or } x \geq 11 \\
+            \abs{ \frac{x - 1}{3} } - 1 & \geq 2 \\
+            \abs{ \frac{x - 1}{3} }     & \geq 3 \\
+            \\
+            \frac{x - 1}{3} & \geq 3 \\
+            x - 1           & \geq 9 \\
+            x               & \geq 10 \\
+            \\
+            - \frac{x - 1}{3} & \geq 3 \\
+            1 - x             & \geq 9 \\
+            - x               & \geq 8 \\
+            x                 & \leq -8 \\
           \end{align*}
-          In interval form: $\intoc{ -\infty, -9 } \cup \intco{ 11, \infty }$
+          \[
+            \boxed{ \intoc{ -\infty, -8 } \cup \intco{ 10, \infty } }
+          \]
+
         \end{solution}
 
     % \question[10] Solve for $m$:
@@ -214,24 +323,44 @@
     %     \end{align*}
     %   \end{solution}
 
-    \question[10]
+    \ifprintanswers{}
+      \newpage
+    \fi
+
+    \question{}
     Eloise Midgen and Daphne Greengrass both accept new jobs immediately after graduating from
     {\em Hogwarts School of Witchcraft and Wizardry}. 
     
     Here are their contracts:
 
-    \begin{itemize*}
+    \begin{itemize}
       \item Eloise: 500 galleon signing bonus with a monthly salary of 200 galleons. 
       \item Daphne: 200 galleon signing bonus with a monthly salary of 300 galleons. 
-    \end{itemize*}
+    \end{itemize}
 
     % For those of you who aren't familiar with the wizarding world, a galleon is the wizard currency.
 
     \begin{parts}
       \part[8 ]When will they both have made the same number of galleons from their jobs?
+        \begin{solution}
+          If $t$ is the number of months worked:
+          \begin{align*}
+            500 + 200t & = 200 + 300t \\
+            100t       & = 300 \\
+            t          & = \boxed{ \unit[3]{months} } \\
+          \end{align*}
+        \end{solution}
       
       \part[2] Who has the better deal in the long run?
+        \begin{solution}
+          After 3 months Daphne will make \newline 100 galleons more per month.
+        \end{solution}
+
     \end{parts}
+
+    \ifprintanswers{}
+      \newpage
+    \fi
 
     \question[15]
     After working for a few months, Daphne has saved up some money. She has 140 galleons to
@@ -244,7 +373,7 @@
       If you let $x$ be the amount to put in the 6\% account:
       \begin{align*}
         0.06x + 0.09( 140 - x ) & = 10.05 \\
-        x                       & = 85 \\
+        x                       & = \boxed{ 85 } \\
       \end{align*}
     \end{solution}
 
@@ -271,24 +400,24 @@
       
       What is the top speed of each broom?
 
+      \ifprintanswers{}
+        \newpage
+      \fi
+
       \begin{solution}
         If Daphne's broom speed is $x$, Eloise's broom speed is $x + 20$. Using 
         \begin{align*}
           d & = rt \\
           t & = \frac{d}{r} \\
-        \end{align*}
-
-        \begin{align*}
+          \\
           \frac{x}{8}          & = \frac{x + 20}{18} \\
           72 \cdot \frac{x}{8} & = 72 \cdot \frac{x + 20}{18} \\
           9x                   & = 4 (x + 20) \\
-          % 9x                   & = 4x + 80 \\
           x                    & = 16 \\
         \end{align*}
 
         Daphne's broom has a top speed of \fbox{ 16 mph } and Eloise's broom has a top speed of
         \fbox{ 36 mph }.
-
       \end{solution}
 
   \end{questions}

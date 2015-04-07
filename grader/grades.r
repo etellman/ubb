@@ -12,7 +12,8 @@ percentage <- function(score, points) {
 }
 
 possible <- points(c(1:20, 25:29, 35:39, 45:55, 61:63))
-percentage(-5, possible)
+possible <- 140
+percentage(-45, possible)
 
 possible
 
@@ -31,4 +32,5 @@ plot <- ggplot(grades.m, aes(x = value)) +
   labs(x = "Grade", y = "Students")
 print(plot)
 
-
+77/80
+16*5
