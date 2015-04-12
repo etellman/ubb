@@ -1,4 +1,4 @@
 # Makefile
 
-TARGETS = hw10.pdf 
+TARGETS = hw08.pdf 
 include ../../../Makefile
