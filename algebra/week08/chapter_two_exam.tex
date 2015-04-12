@@ -37,19 +37,22 @@
 
   \maketitle
 
-  \begin{center}
-    \gradetable[h][pages]
-    \bonusgradetable[h][pages]
-  \end{center}
+  % \begin{center}
+  %   \gradetable[h][pages]
+  %   \bonusgradetable[h][pages]
+  % \end{center}
 
-  \section{Instructions} % (fold)
+  \ifprintanswers{}
+  \else
+    \section{Instructions} % (fold)
 
-  \begin{itemize*}
-    \item Show your work.
-    \item Check your answers.
-    \item Write the solutions to inequalities in interval form. For instance, if the answer is 
-      $x \geq 2$, the solution should be written as $\intco{ 2, \infty }$.
-  \end{itemize*}
+    \begin{itemize*}
+      \item Show your work.
+      \item Check your answers.
+      \item Write the solutions to inequalities in interval form. For instance, if the answer is 
+        $x \geq 2$, the solution should be written as $\intco{ 2, \infty }$.
+    \end{itemize*}
+  \fi
 
   \section{Questions} % (fold)
 
@@ -89,10 +92,6 @@
         \end{align*}
       \end{solution}
 
-    \ifprintanswers{}
-      \newpage
-    \fi
-
     \question[10]
       \[ 
         \frac{7}{3} (x + 2) = \frac{3}{4} (x + 3)
@@ -108,6 +107,10 @@
         \end{align*}
       \end{solution}
 
+    \ifprintanswers{}
+      \newpage
+    \fi
+
     \question[10]
       \[ 
         \frac{4x - 8}{3} = \frac{4}{5} (x - 10)
@@ -122,10 +125,6 @@
           x                & = \boxed{ -10 } \\
         \end{align*}
       \end{solution}
-
-    \ifprintanswers{}
-      \newpage
-    \fi
 
     \question[10]
       \[
@@ -158,10 +157,6 @@
         \end{align*}
       \end{solution}
 
-    \ifprintanswers{}
-      \newpage
-    \fi
-
     \question[5]
       \[
         2x + 1 < 3x
@@ -176,6 +171,10 @@
           \boxed{ \intoo{ 1, \infty } }
         \]
     \end{solution}
+
+    \ifprintanswers{}
+      \newpage
+    \fi
 
     \question[10]
       \[ 
@@ -197,6 +196,10 @@
         \]
 
       \end{solution}
+
+    \ifprintanswers{}
+      \newpage
+    \fi
 
     \question[10]
       \[ 
@@ -222,6 +225,10 @@
         \]
 
       \end{solution}
+
+    \ifprintanswers{}
+      \newpage
+    \fi
 
     \question[10]
       \[ 
@@ -291,6 +298,9 @@
           \abs{ \frac{x - 1}{3} } - 1 \geq 2 
         \]
         \begin{solution}
+          The first thing you need to do is get the absolute value by itself on the left side of
+          the equation. After you do this you can turn the original problem into two problems and
+          solve them both.
           \begin{align*}
             \abs{ \frac{x - 1}{3} } - 1 & \geq 2 \\
             \abs{ \frac{x - 1}{3} }     & \geq 3 \\
@@ -405,12 +415,6 @@
       \fi
 
       \begin{solution}
-        If Daphne's broom speed is $x$, Eloise's broom speed is $x + 20$. Using 
-        \begin{align*}
-          d           & = rt \\
-          t           & = \frac{d}{r} \\
-          \frac{1}{t} & = \frac{r}{d}
-        \end{align*}
         \begin{align*}
           \frac{r_{d}}{8}          & = \frac{r_{d} + 20}{18} \\
           72 \cdot \frac{r_{d}}{8} & = 72 \cdot \frac{r_{d} + 20}{18} \\
