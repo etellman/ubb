@@ -27,7 +27,7 @@
 \newcommand{\degree}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
-\title{Algebra \\ Homework 8 \\ Section 3.3 }
+\title{Algebra \\ Homework 9 \\ Section 3.4 }
 \author{}
 \date{\today}
 
@@ -37,131 +37,311 @@
 
   \section{Homework}
 
-  Section 3.3: 6--10, 16--21, 26--30, 36--40, 46--56, 62--63, 66--67, 70, 75--79, 86--87, 89
+  Section 3.4: TO DO
 
+  \section{Additional Problems}
+
+  \begin{questions}
+
+    \question{} 
+      Because of the Pythagorean Theorem, the length of the diagonal of a rectangle
+      with length $L$ and width $W$ is $\sqrt{L^2 + W^2}$.  What is the length
+      of the diagonal (from one corner to the opposite corner) of a
+      three-dimensional box with length $L$, width $W$, and height $H$?
+
+      \begin{solution}
+      If we let $D$ be the length of the diagonal across the floor, we can compute
+      its length using this equation: $D^2 = L^2 + W^2$.  
+
+      You can draw a right triangle with this diagonal as the base and the height
+      of the box as the height of the triangle.  The hypotenuse of this triangle is
+      also the diagonal of the box.  If we let $x$ be the length of the diagonal
+      across the two corners:
+
+      \begin{align*}
+        x^2 & = D^2 + H^2 \\
+            & = L^2 + W^2 + H^2 \\
+        x   & = \sqrt{ L^2 + W^2 + H^2 } \\
+      \end{align*}
+
+      \end{solution}
+
+  % \question We talked in class about a few ways to prove the Pythagorean
+  % Theorem.  
+
+  % The following figure was used by the Indian mathematician, Bhaskara (born
+  % 1114 CE) for another proof.  His proof was a little short on detail, as the
+  % entire proof was the figure and the phrase ``See!''.  Fill in the additional
+  % details by writing an equation which proves the Pythagorean Theorem using
+  % this figure. 
+
+  % The area of a triangle is: \( A = \frac{1}{2}bh \) where $b$ is the length of
+  % the base and $h$ is the height.
+
+  % \ifprintanswers \else \begin{figure*}[h] \centering
+  %   \includegraphics*{proof.eps}  \caption{Pythagorean Theorem Proof}
+  %   \label{fig:proof} \end{figure*} \fi
+
+  % \begin{solution} The area of the big square is equal to the sum of the areas
+  %   of the four triangles and the area of the small square.
+
+  % If we let $c$ be the hypotenuse, $a$ be the shorter side and $b$ be the
+  % longer side:
+
+  % \begin{itemize*} \item The area of each triangle is $ \dfrac{1}{2} ab $.
+  %     \item The area of the small square is $ (b - a)^2 $.  \end{itemize*}
+
+  % Putting it all together: \begin{align*} c^2 &= 4 \left( \frac{1}{2} ab
+  %   \right) + (b - a)^2 \\ &= 2ab + b^2 - 2ab + a^2 \\ &= a^2 + b^2 \\
+  % \end{align*}
+
+  % \end{solution}
+
+  \uplevel{\section{Extra Credit}}
+
+  \question{}
+  A fisherman wearing a large straw hat was fishing from a rowboat in a river
+  that flowed at a speed of three miles an hour.  His boat drifted down the
+  river at the same rate.
+
+  ``I think I'll row upstream a few miles'', he said to himself.  ``The fish
+  don't seem to be biting here.''
+
+  Just as he started to row, the wind blew off his hat and it fell into the
+  water beside the boat.  But the fisherman did not notice his hat was gone
+  until he had rowed upstream and was five miles away from his hat.  Then he
+  realized what must have happened, so he immediately started rowing back
+  downstream again until he came to his floating hat.
+
+  In still water, the fisherman's rowing speed is always five miles an hour.
+  When he rowed upstream and back, he rowed at this same constant speed.  But
+  of course this would not be his speed relative to the {\em shore\/} of the
+  river.  For instance, when he rowed upstream at five miles an hour, the river
+  would be carrying him downstream at three miles an hour, so he would be
+  passing objects on the shore at only two miles an hour.  And when he rowed
+  downstream, his rowing speed and the speed of the river would combine to make
+  his speed eight miles an hour with respect to the shore.
+
+  If the fisherman lost his hat at 2:00 in the afternoon, what time was it when
+  he recovered it?
+
+  \begin{solution}
+    The speed of the river doesn't really matter in this problem.  When the
+    fisherman is rowing, he is always moving at 5 mph relative to his hat.
+
+    \begin{itemize} 
+      \item when going upstream, the fisherman travels at 2 mph upstream while
+        the hat travels at 3 mph downstream, for a total difference of 5 mph.  
+
+      \item when going downstream, the fisherman travels at 8 mph downstream
+        while the hat travels at 3 mph downstream, for a total difference of 5
+        mph.  
+    \end{itemize}
+
+    It takes the fisherman one hour to get five miles away from his hat and
+    one hour to row back to his hat and he recovers his hat at 4:00, two hours
+    after he lost it.
+
+    A slightly different way to look at it is to just ignore the speed of the
+    river and do all the calculations relative to the river instead of relative
+    to the shore.  With this approach, the hat is always stationary (relative to
+    the river) and the fisherman is always moving at 5 mph (relative to the
+    river).  So the fisherman rows at 5 mph for an hour to get away from the hat
+    and then at 5 mph for an hour to get back.
+    \end{solution}
+
+  \end{questions}
 
   \ifprintanswers{}
-    \section{Section 3.3} % (fold)
+    \section{Section 3.4} % (fold)
     
     \begin{description}
-      \item[6] $63 a^4 b^2 + 18 a^4 b - 27 a^3 b^2$ 
 
-      \item[7] $x^5 y^2 - 3 x^4 y^4 - 6 x^3 y^3$ 
+      \item[35] $4x^2 \del{ 2x^2 + 3x - 6 }$
 
-      \item[8] $6 a^3 b^5 - 5 a^2 b^2 - 3 a b^3$ 
+      \item[36] $6x \del{ x^4 - 3x^2 + 4 }$
 
-      \item[9] $ax + 2bx + ay + 2by$
+      \item[37] $x(9x^3 + 7x + 5)$
 
-      \item[10] $tx + ty -sx - sy$
+      \item[38] $x^2 \del{ 21x^3 + - 17x^2 + 9 }$
 
+      \item[39] $5xy^2 \del{ 7x^2y^2 + 3xy + 4 }$
 
-      \item[16] $y^2 + 6y - 27$
+      \item[40] $ 2x^2y^3 \del{ 4x^3 - 3x^2y^2 + 6 }$
 
-      \item[17] $n^2 - 5n - 14$
+      \item[41] $(x + 3)(y + 2)$
 
-      \item[18] $n^2 - 9n - 36$
+      \item[42] $(x + 5)(y - 1)$
 
-      \item[19] $x^2 - 36$
+      \item[43] $(3x - 2y)(2a + b)$
 
-      \item[20] $t^2 - 64$
+      \item[44] $(5x + y)(a - b)$
 
-      \item[21] $x^2 - 12x + 36$
+      \item[55] 
+        \begin{align*}
+          ax^2 - x^2 + 2a - 2 & = x^2(a - 1) + 2(a - 1) \\
+                              & = \boxed{ (x^2 + 2)(a - 1) } \\
+        \end{align*}
 
-      \item[26] $x^3 - 3 x^2 - 22 x + 24$
+      \item[56]
+        \begin{align*}
+          ax^2 - 2x^2 + 3a - 6 & = x^2 (a - 2) + 3(a - 2) \\
+                               & = \boxed{ \del{x^2 + 3}(a - 2) } \\
+        \end{align*}
 
-      \item[27] $x^3 + x^2 - 9x - 9$
+      \item[57]
+      \begin{align*}
+         2ac + 3bd + 2bc + 3ad & = 2c(a + b) + 3d(a + b) \\
+                               & = \boxed{ (2c + 3d)(a + b) } \\
+      \end{align*}
 
-      \item[28] $x^3 - 8 x^2 - 25 x + 200$
+      \item[58]
+      \begin{align*}
+        2bx + cy + cx + 2by & = 2bx + cx + cy + 2by \\
+                            & = x(2b + c) + y(2b + c) \\
+                            & = \boxed{ (x + y)(2b + c) } \\
+      \end{align*}
 
-      \item[29] $t^2 + 18t + 81$
+      \item[59]
+        \begin{align*}
+          ax - by + bx - ay & = ax + bx -ay - by \\
+                            & = x(a + b) - y(a + b) \\
+                            & = \boxed{ (x - y)(a + b) } \\
+        \end{align*}
 
-      \item[30] $t^2 + 26t + 169$
+      \item[73]
+        \begin{align*}
+          3x^2 + 7x & = 0 \\
+          x(3x + 7) & = 0 \\
+          \\
+          x         & = \boxed{ \cbr{ 0, - \frac{7}{3} } } \\
+        \end{align*}
 
-      \item[36] $25y^2 - 4$
+      \item[74]
+        \begin{align*}
+          -4x^2 + 9x & = 0 \\
+          x(-4x + 9) & = 0 \\
+          \\
+          x          & = \boxed{ \cbr{ 0, \frac{9}{4} } } \\
+        \end{align*}
 
-      \item[37] $14x^2 + 3x - 2$
+      \item[75]
+      \begin{align*}
+        4x^2 &= 5x \\
+        4x^2 - 5x &= 0 \\
+        x(4x - 5) &= 0 \\
+      \end{align*}
 
-      \item[38] $18x^2 + 9x + 2$
+      \begin{align*}
+        x = 0 &or& 4x - 5 = 0 \\
+        x = 0 &or& 4x = 5 \\
+        x = 0 &or& x = 5/4 \\
+      \end{align*}
 
-      \item[39] $-2t^2 +3t + 5$
+      \item[76]
+      \begin{align*}
+      3x &= 11x^2 \\
+      11x^2 - 3x &= 0 \\
+      x(11x - 3) &= 0 \\
+      \end{align*}
 
-      \item[40] $-4t^2 + 10t + 6$
+      \begin{align*}
+      x = 0 &or& 11x - 3 = 0 \\
+      x = 0 &or& 11x = 3 \\
+      x = 0 &or& x = 3/11 \\
+      \end{align*}
 
-      \item[46] $25x^2 - 70x + 49$
+      \item[77]
+      \begin{align*}
+        x - 4x^2 &= 0 \\
+        x(1 - 4x) &= 0 \\
+      \end{align*}
 
-      \item[47] $18 x^2 - 39 x - 70$
+      \begin{align*}
+        x = 0 &or& 1 - 4x = 0 \\
+        x = 0 &or& -4x = -1 \\
+        x = 0 &or& x = 1/4 \\
+      \end{align*}
 
-      \item[48] $28 x^2 - 33 x - 28$
+      \item[78]
+      \begin{align*}
+        x - 6x^2 &= 0 \\
+        x(1 - 6x) &= 0 \\
+      \end{align*}
 
-      \item[49] $2 x^2 + x y - 15 y^2$
+      \begin{align*}
+        x = 0 &or& 1 - 6x = 0 \\
+        x = 0 &or&  -6x = -1 \\
+        x = 0 &or&  x = 1/6 \\
+      \end{align*}
 
-      \item[50] $3 x^2 - 5 x y - 28 y^2$
+      \item[85]
+      \begin{align*}
+        y^2 - ay + 2by - 2ab &= 0 \\
+        y(y - a) + 2b(y - a) &= 0 \\
+        (y + 2b)(y - a) &= 0 \\
+      \end{align*}
 
-      \item[51] $25x^2 - 4a^2$
-
-      \item[52] $81x^2 - 4y^2$
-
-      \item[53] $t^3 - 14t - 15$
-
-      \item[54] $t^3 + 5t^2 - 12t - 4$
-
-      \item[55] $x^3 + x^2 - 24x + 16$
-
-      \item[56] $2x^3 + 11x^2 - 13x - 42$
-
-      \item[62] $x^4 - 6x^3 + 3x^2 - 22x - 48$
-
-      \item[63] $2x^4 - x^3 - 12x^2 + 5x + 4$
-
-      \item[66] $x^3 + 3 x^2 + 3 x + 1$
-
-      \item[67] $x^3 - 12 x^2 + 48 x - 64$
-
-      \item[70] $27 x^3 + 27 x^2 + 9 x + 1$
-
-      \item[75] $x^{2n} - 16$
-
-      \item[76] $x^{6a} - 1$
-
-      \item[77] $x^{2a} + 4x^a - 12$
-
-      \item[78] $x^{2a} - 5x^a - 36$
-
-      \item[79] $6x^{2n} + x^n - 35$
+      \begin{align*}
+        y + 2b = 0 &or& y - a = 0 \\
+        y = -2b &or& y = a \\
+      \end{align*}
 
       \item[86]
-        The area of the first rectangle is $3(x + 4)$ and the area of the second rectangle is 
-        $4(x + 6)$.  
-        
-        \begin{itemize*}
-          \item first rectangle area: $3(x + 4)$
-          \item second rectangle area: $4(x + 6)$
-        \end{itemize*}
+      \begin{align*}
+        x^2 + ax + bx + ab &= 0 \\
+        x(x + a) + b(x + a) &= 0 \\
+        (x + b)(x + a) &= 0 \\
+      \end{align*}
 
-        The area of the sum is: 
-        \[ 
-          3(x + 4) + 4(x + 6) = \boxed{ 7x + 36 } 
-        \]
+      \begin{align*}
+        x + b = 0 &or& x + a = 0 \\
+        x = -b &or& x = -a \\
+      \end{align*}
 
       \item[87]
-        The areas of the two rectangles are:
-        \begin{itemize*}
-          \item outside: $x(2x + 3)$
-          \item inside: $3(x - 2)$
-        \end{itemize*}
-        
-        The difference is: 
-        \[ 
-          x(2x + 3) - 3(x - 2 )= \boxed{ 2x^2 + 6 } 
-        \]
+      \begin{align*}
+        x^2 &= 7x \\
+        x^2 - 7x &= 0 \\
+        x(x - 7) &= 0 \\
+      \end{align*}
 
-      \item[89]
-        See Example 10.
+      \begin{align*}
+        x = 0 &or& x - 7 = 0 \\
+        x = 0 &or& x = 7 \\
+      \end{align*}
 
-        \begin{itemize*}
-          \item volume: $\del{16 - 2x}^3 = \boxed{ -8x^3 + 192x^2 - 1536x + 4096 }$
-          \item outside surface area: $16^2 - x^2 = \boxed{ 256 - x^2 }$
-        \end{itemize*}
+      \item[90]
+      \begin{align*}
+        2 \pi r &= \pi r^2 \\
+        2r &= r^2 \\
+        0 &= r^2 - 2r \\
+        r^2 - 2r &= 0 \\
+        r(r - 2) &= 0 \\
+      \end{align*}
+
+      In this case, $r = 0$ doesn't make sense, since you can't have a circle with radius zero.  So the answer is 
+      $r = 2$.
+
+      \item[95]
+      \begin{align*}
+        \frac{4}{3} \pi r^3 &= 2 \cdot 4 \pi r^2 \\
+        \frac{4}{3} r^3 &= 8r^2 \\
+        4r^3 &= 24r^2 \\
+        4r^3 - 24r^2 &= 0 \\
+        r^2(4r - 24) &= 0 \\
+      \end{align*}
+
+      In this case, $r = 0$ doesn't make sense, since you can't have a circle with radius zero.  So the answer is:
+      \begin{align*}
+        4r - 24 &= 0 \\
+        4(r - 6) &= 0 \\
+        r - 6 &= 0 \\
+        r &= 6 \\
+      \end{align*}
+
+      Checking, the volume is 288 and the area is 144, so the answer is correct.
+
     \end{description}
   \fi
   \ifprintanswers{}
