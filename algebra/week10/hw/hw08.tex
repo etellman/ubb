@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers{}
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -44,16 +44,15 @@
     \section{Section 3.3} % (fold)
     
     \begin{description}
-      \item[6] $63 a^4 b^2 + 18 a^4 b - 27 a^3 b^2$ 
+      \item[6] $18 a^4 b - 27 a^3 b^2 + 63 a^4 b^2$ 
 
-      \item[7] $x^5 y^2 - 3 x^4 y^4 - 6 x^3 y^3$ 
+      \item[7] $-6x^3y^3 - 3x^4y^4 + x^5y^2$ 
 
-      \item[8] $6 a^3 b^5 - 5 a^2 b^2 - 3 a b^3$ 
+      \item[8] $-5a^2b^2 - 3ab^3 + 6a^3b^5 $ 
 
-      \item[9] $ax + 2bx + ay + 2by$
+      \item[9] $ax + ay + 2bx + 2by$
 
       \item[10] $tx + ty -sx - sy$
-
 
       \item[16] $y^2 + 6y - 27$
 
@@ -69,7 +68,7 @@
 
       \item[26] $x^3 - 3 x^2 - 22 x + 24$
 
-      \item[27] $x^3 + x^2 - 9x - 9$
+      \item[27] $x^3 - x^2 - 9x + 9$
 
       \item[28] $x^3 - 8 x^2 - 25 x + 200$
 
@@ -89,13 +88,13 @@
 
       \item[46] $25x^2 - 70x + 49$
 
-      \item[47] $18 x^2 - 39 x - 70$
+      \item[47] $18x^2 - 39x - 70$
 
-      \item[48] $28 x^2 - 33 x - 28$
+      \item[48] $28x^2 - 33x - 28$
 
-      \item[49] $2 x^2 + x y - 15 y^2$
+      \item[49] $2x^2 + x y - 15y^2$
 
-      \item[50] $3 x^2 - 5 x y - 28 y^2$
+      \item[50] $3x^2 - 5xy - 28y^2$
 
       \item[51] $25x^2 - 4a^2$
 
@@ -158,10 +157,11 @@
       \item[89]
         See Example 10.
 
-        \begin{itemize*}
-          \item volume: $\del{16 - 2x}^3 = \boxed{ -8x^3 + 192x^2 - 1536x + 4096 }$
-          \item outside surface area: $16^2 - x^2 = \boxed{ 256 - x^2 }$
-        \end{itemize*}
+        \begin{itemize}
+          \item volume: $x \del{16 - 2x}^2 = \boxed{ 4x^3 - 64x^2 + 256x }$
+          \item surface area: $16^2 - x^2 = \boxed{ 256 - x^2 }$
+        \end{itemize}
+
     \end{description}
   \fi
   \ifprintanswers{}

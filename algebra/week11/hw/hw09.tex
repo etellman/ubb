@@ -27,7 +27,7 @@
 \newcommand{\degree}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
-\title{Algebra \\ Homework 9 \\ Section 3.4 }
+\title{Algebra Homework 9 \\ Section 3.4 }
 \author{}
 \date{\today}
 
@@ -37,125 +37,109 @@
 
   \section{Homework}
 
-  Section 3.4: TO DO
+  Section 3.4: 21--25, 35--46, 55--59, 73--78, 85--87, 90 
 
-  \section{Additional Problems}
+  % \section{Additional Problems}
 
-  \begin{questions}
+  % \begin{questions}
 
-    \question{} 
-      Because of the Pythagorean Theorem, the length of the diagonal of a rectangle
-      with length $L$ and width $W$ is $\sqrt{L^2 + W^2}$.  What is the length
-      of the diagonal (from one corner to the opposite corner) of a
-      three-dimensional box with length $L$, width $W$, and height $H$?
-
-      \begin{solution}
-      If we let $D$ be the length of the diagonal across the floor, we can compute
-      its length using this equation: $D^2 = L^2 + W^2$.  
-
-      You can draw a right triangle with this diagonal as the base and the height
-      of the box as the height of the triangle.  The hypotenuse of this triangle is
-      also the diagonal of the box.  If we let $x$ be the length of the diagonal
-      across the two corners:
-
-      \begin{align*}
-        x^2 & = D^2 + H^2 \\
-            & = L^2 + W^2 + H^2 \\
-        x   & = \sqrt{ L^2 + W^2 + H^2 } \\
-      \end{align*}
-
-      \end{solution}
 
   % \question We talked in class about a few ways to prove the Pythagorean
   % Theorem.  
 
-  % The following figure was used by the Indian mathematician, Bhaskara (born
-  % 1114 CE) for another proof.  His proof was a little short on detail, as the
-  % entire proof was the figure and the phrase ``See!''.  Fill in the additional
-  % details by writing an equation which proves the Pythagorean Theorem using
-  % this figure. 
 
-  % The area of a triangle is: \( A = \frac{1}{2}bh \) where $b$ is the length of
-  % the base and $h$ is the height.
-
-  % \ifprintanswers \else \begin{figure*}[h] \centering
-  %   \includegraphics*{proof.eps}  \caption{Pythagorean Theorem Proof}
-  %   \label{fig:proof} \end{figure*} \fi
-
-  % \begin{solution} The area of the big square is equal to the sum of the areas
-  %   of the four triangles and the area of the small square.
-
-  % If we let $c$ be the hypotenuse, $a$ be the shorter side and $b$ be the
-  % longer side:
-
-  % \begin{itemize*} \item The area of each triangle is $ \dfrac{1}{2} ab $.
-  %     \item The area of the small square is $ (b - a)^2 $.  \end{itemize*}
-
-  % Putting it all together: \begin{align*} c^2 &= 4 \left( \frac{1}{2} ab
-  %   \right) + (b - a)^2 \\ &= 2ab + b^2 - 2ab + a^2 \\ &= a^2 + b^2 \\
-  % \end{align*}
-
-  % \end{solution}
-
-  \uplevel{\section{Extra Credit}}
-
-  \question{}
-  A fisherman wearing a large straw hat was fishing from a rowboat in a river
-  that flowed at a speed of three miles an hour.  His boat drifted down the
-  river at the same rate.
-
-  ``I think I'll row upstream a few miles'', he said to himself.  ``The fish
-  don't seem to be biting here.''
-
-  Just as he started to row, the wind blew off his hat and it fell into the
-  water beside the boat.  But the fisherman did not notice his hat was gone
-  until he had rowed upstream and was five miles away from his hat.  Then he
-  realized what must have happened, so he immediately started rowing back
-  downstream again until he came to his floating hat.
-
-  In still water, the fisherman's rowing speed is always five miles an hour.
-  When he rowed upstream and back, he rowed at this same constant speed.  But
-  of course this would not be his speed relative to the {\em shore\/} of the
-  river.  For instance, when he rowed upstream at five miles an hour, the river
-  would be carrying him downstream at three miles an hour, so he would be
-  passing objects on the shore at only two miles an hour.  And when he rowed
-  downstream, his rowing speed and the speed of the river would combine to make
-  his speed eight miles an hour with respect to the shore.
-
-  If the fisherman lost his hat at 2:00 in the afternoon, what time was it when
-  he recovered it?
+  \section{Extra Credit}
+  According to the Pythagorean Theorem, the length of the diagonal of a rectangle
+  with length $L$ and width $W$ is 
+  \[
+    D = \sqrt{L^2 + W^2}
+  \]  
+  
+  What is the length of the diagonal (from one corner to the opposite corner) of a three-dimensional
+  box with length $L$, width $W$, and height $H$?
 
   \begin{solution}
-    The speed of the river doesn't really matter in this problem.  When the
-    fisherman is rowing, he is always moving at 5 mph relative to his hat.
+    If we let $D$ be the length of the diagonal across the floor, we can compute its length using
+    this equation: $D^2 = L^2 + W^2$.  
 
-    \begin{itemize} 
-      \item when going upstream, the fisherman travels at 2 mph upstream while
-        the hat travels at 3 mph downstream, for a total difference of 5 mph.  
+    You can draw a right triangle with this diagonal as the base and the height of the box as the
+    height of the triangle.  The hypotenuse of this triangle is also the diagonal of the box.  If we
+    let $x$ be the length of the diagonal across the two corners:
 
-      \item when going downstream, the fisherman travels at 8 mph downstream
-        while the hat travels at 3 mph downstream, for a total difference of 5
-        mph.  
-    \end{itemize}
+    \begin{align*}
+      x^2 & = D^2 + H^2 \\
+          & = L^2 + W^2 + H^2 \\
+      x   & = \sqrt{ L^2 + W^2 + H^2 } \\
+    \end{align*}
 
-    It takes the fisherman one hour to get five miles away from his hat and
-    one hour to row back to his hat and he recovers his hat at 4:00, two hours
-    after he lost it.
+  \end{solution}
 
-    A slightly different way to look at it is to just ignore the speed of the
-    river and do all the calculations relative to the river instead of relative
-    to the shore.  With this approach, the hat is always stationary (relative to
-    the river) and the fisherman is always moving at 5 mph (relative to the
-    river).  So the fisherman rows at 5 mph for an hour to get away from the hat
-    and then at 5 mph for an hour to get back.
-    \end{solution}
+  % \question{}
+  % A fisherman wearing a large straw hat was fishing from a rowboat in a river
+  % that flowed at a speed of three miles an hour.  His boat drifted down the
+  % river at the same rate.
 
-  \end{questions}
+  % ``I think I'll row upstream a few miles'', he said to himself.  ``The fish
+  % don't seem to be biting here.''
+
+  % Just as he started to row, the wind blew off his hat and it fell into the
+  % water beside the boat.  But the fisherman did not notice his hat was gone
+  % until he had rowed upstream and was five miles away from his hat.  Then he
+  % realized what must have happened, so he immediately started rowing back
+  % downstream again until he came to his floating hat.
+
+  % In still water, the fisherman's rowing speed is always five miles an hour.
+  % When he rowed upstream and back, he rowed at this same constant speed.  But
+  % of course this would not be his speed relative to the {\em shore\/} of the
+  % river.  For instance, when he rowed upstream at five miles an hour, the river
+  % would be carrying him downstream at three miles an hour, so he would be
+  % passing objects on the shore at only two miles an hour.  And when he rowed
+  % downstream, his rowing speed and the speed of the river would combine to make
+  % his speed eight miles an hour with respect to the shore.
+
+  % If the fisherman lost his hat at 2:00 in the afternoon, what time was it when
+  % he recovered it?
+
+  % \begin{solution}
+  %   The speed of the river doesn't really matter in this problem.  When the
+  %   fisherman is rowing, he is always moving at 5 mph relative to his hat.
+
+  %   \begin{itemize} 
+  %     \item when going upstream, the fisherman travels at 2 mph upstream while
+  %       the hat travels at 3 mph downstream, for a total difference of 5 mph.  
+
+  %     \item when going downstream, the fisherman travels at 8 mph downstream
+  %       while the hat travels at 3 mph downstream, for a total difference of 5
+  %       mph.  
+  %   \end{itemize}
+
+  %   It takes the fisherman one hour to get five miles away from his hat and
+  %   one hour to row back to his hat and he recovers his hat at 4:00, two hours
+  %   after he lost it.
+
+  %   A slightly different way to look at it is to just ignore the speed of the
+  %   river and do all the calculations relative to the river instead of relative
+  %   to the shore.  With this approach, the hat is always stationary (relative to
+  %   the river) and the fisherman is always moving at 5 mph (relative to the
+  %   river).  So the fisherman rows at 5 mph for an hour to get away from the hat
+  %   and then at 5 mph for an hour to get back.
+  %   \end{solution}
+
+  % \end{questions}
 
   \ifprintanswers{}
     \section{Section 3.4} % (fold)
     
     \begin{description}
+      \item[21] $3(2x + y)$
+
+      \item[22] $4(3x + 2y)$
+
+      \item[23] $2x(3x + 7)$
+
+      \item[24] $3x(5x + 2)$
+
+      \item[25] $4y (7y - 1)$
 
       \item[35] $4x^2 \del{ 2x^2 + 3x - 6 }$
 
@@ -176,6 +160,10 @@
       \item[43] $(3x - 2y)(2a + b)$
 
       \item[44] $(5x + y)(a - b)$
+
+      \item[45] $(x + 5)(x + 2)$
+
+      \item[46] $(x - 3)(x - 1)$
 
       \item[55] 
         \begin{align*}
@@ -226,133 +214,105 @@
         \end{align*}
 
       \item[75]
-      \begin{align*}
-        4x^2 &= 5x \\
-        4x^2 - 5x &= 0 \\
-        x(4x - 5) &= 0 \\
-      \end{align*}
-
-      \begin{align*}
-        x = 0 &or& 4x - 5 = 0 \\
-        x = 0 &or& 4x = 5 \\
-        x = 0 &or& x = 5/4 \\
-      \end{align*}
+        \begin{align*}
+          4x^2      & = 5x \\
+          4x^2 - 5x & = 0 \\
+          x(4x - 5) & = 0 \\
+          \\
+          x         & = \boxed{ \cbr{ 0, \frac{5}{4} } } \\
+        \end{align*}
 
       \item[76]
-      \begin{align*}
-      3x &= 11x^2 \\
-      11x^2 - 3x &= 0 \\
-      x(11x - 3) &= 0 \\
-      \end{align*}
-
-      \begin{align*}
-      x = 0 &or& 11x - 3 = 0 \\
-      x = 0 &or& 11x = 3 \\
-      x = 0 &or& x = 3/11 \\
-      \end{align*}
+        \begin{align*}
+        3x         & = 11x^2 \\
+        11x^2 - 3x & = 0 \\
+        x(11x - 3) & = 0 \\
+        \\
+        x          & = \boxed{ \cbr{ 0, \frac{3}{11} } } \\
+        \end{align*}
 
       \item[77]
-      \begin{align*}
-        x - 4x^2 &= 0 \\
-        x(1 - 4x) &= 0 \\
-      \end{align*}
-
-      \begin{align*}
-        x = 0 &or& 1 - 4x = 0 \\
-        x = 0 &or& -4x = -1 \\
-        x = 0 &or& x = 1/4 \\
-      \end{align*}
+        \begin{align*}
+          x - 4x^2  & = 0 \\
+          x(1 - 4x) & = 0 \\
+          \\
+          x         & = \boxed{ \cbr{ 0, \frac{1}{4} } } \\
+        \end{align*}
 
       \item[78]
       \begin{align*}
-        x - 6x^2 &= 0 \\
-        x(1 - 6x) &= 0 \\
-      \end{align*}
-
-      \begin{align*}
-        x = 0 &or& 1 - 6x = 0 \\
-        x = 0 &or&  -6x = -1 \\
-        x = 0 &or&  x = 1/6 \\
+        x - 6x^2  & = 0 \\
+        x(1 - 6x) & = 0 \\
+        \\
+        x         & = \boxed{ \cbr{ 0, \frac{1}{6} } } \\
       \end{align*}
 
       \item[85]
       \begin{align*}
-        y^2 - ay + 2by - 2ab &= 0 \\
-        y(y - a) + 2b(y - a) &= 0 \\
-        (y + 2b)(y - a) &= 0 \\
-      \end{align*}
-
-      \begin{align*}
-        y + 2b = 0 &or& y - a = 0 \\
-        y = -2b &or& y = a \\
+        y^2 - ay + 2by - 2ab & = 0 \\
+        y(y - a) + 2b(y - a) & = 0 \\
+        (y + 2b)(y - a)      & = 0 \\
+        y                    & = \boxed{ \cbr{ -2b, a } } \\
       \end{align*}
 
       \item[86]
-      \begin{align*}
-        x^2 + ax + bx + ab &= 0 \\
-        x(x + a) + b(x + a) &= 0 \\
-        (x + b)(x + a) &= 0 \\
-      \end{align*}
-
-      \begin{align*}
-        x + b = 0 &or& x + a = 0 \\
-        x = -b &or& x = -a \\
-      \end{align*}
+        \begin{align*}
+          x^2 + ax + bx + ab  & = 0 \\
+          x(x + a) + b(x + a) & = 0 \\
+          (x + b)(x + a)      & = 0 \\
+          \\
+          x                   & = \boxed{ \cbr{ -b, -a } }
+        \end{align*}
 
       \item[87]
-      \begin{align*}
-        x^2 &= 7x \\
-        x^2 - 7x &= 0 \\
-        x(x - 7) &= 0 \\
-      \end{align*}
-
-      \begin{align*}
-        x = 0 &or& x - 7 = 0 \\
-        x = 0 &or& x = 7 \\
-      \end{align*}
+        \begin{align*}
+          x^2      & = 7x \\
+          x^2 - 7x & = 0 \\
+          x(x - 7) & = 0 \\
+          \\
+          x        & = \boxed{ \cbr{ 0, 7 } } \\
+        \end{align*}
 
       \item[90]
-      \begin{align*}
-        2 \pi r &= \pi r^2 \\
-        2r &= r^2 \\
-        0 &= r^2 - 2r \\
-        r^2 - 2r &= 0 \\
-        r(r - 2) &= 0 \\
-      \end{align*}
+        \begin{align*}
+          2 \pi r  & = \pi r^2 \\
+          2r       & = r^2 \\
+          0        & = r^2 - 2r \\
+          r^2 - 2r & = 0 \\
+          r(r - 2) & = 0 \\
+        \end{align*}
 
-      In this case, $r = 0$ doesn't make sense, since you can't have a circle with radius zero.  So the answer is 
-      $r = 2$.
+      In this case, $r = 0$ doesn't make sense, since you can't have a circle with radius zero.  The
+      only answer is $\boxed{ r = 2 }$.
 
-      \item[95]
-      \begin{align*}
-        \frac{4}{3} \pi r^3 &= 2 \cdot 4 \pi r^2 \\
-        \frac{4}{3} r^3 &= 8r^2 \\
-        4r^3 &= 24r^2 \\
-        4r^3 - 24r^2 &= 0 \\
-        r^2(4r - 24) &= 0 \\
-      \end{align*}
+      % \item[95]
+      %   \begin{align*}
+      %     \frac{4}{3} \pi r^3 & = 2 \cdot 4 \pi r^2 \\
+      %     \frac{4}{3} r^3     & = 8r^2 \\
+      %     4r^3                & = 24r^2 \\
+      %     4r^3 - 24r^2        & = 0 \\
+      %     r^2(4r - 24)        & = 0 \\
+      %   \end{align*}
 
-      In this case, $r = 0$ doesn't make sense, since you can't have a circle with radius zero.  So the answer is:
-      \begin{align*}
-        4r - 24 &= 0 \\
-        4(r - 6) &= 0 \\
-        r - 6 &= 0 \\
-        r &= 6 \\
-      \end{align*}
-
-      Checking, the volume is 288 and the area is 144, so the answer is correct.
+      % In this case, $r = 0$ doesn't make sense, since you can't have a circle with radius zero.  So the answer is:
+      % \begin{align*}
+      %   4r - 24  & = 0 \\
+      %   4(r - 6) & = 0 \\
+      %   r - 6    & = 0 \\
+      %   r        & = \boxed{ 6 } \\
+      % \end{align*}
 
     \end{description}
   \fi
   \ifprintanswers{}
   \else
-    \vspace{11 cm}
+    \vspace{7 cm}
     \begin{quote}
       \begin{em}
-        Any man more right than his neighbor is a majority of one already.
+        Television drums certain fixed boundaries of thought into your head, which certainly dulls the mind. 
       \end{em}
     \end{quote}
-    \hspace{2 cm}--Henry David Thoreau
+    \hspace{2 cm}--Noam Chomsky
   \fi
 
 \end{document}

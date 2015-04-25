@@ -35,65 +35,73 @@
 
   \maketitle
 
-  \section{Monomial/Polynomial}
+  \section{Pythagorean Theorem} % (fold)
 
-  \begin{align*}
-    2(3 + 4) & = 2 \cdot 7 \\
-             & = 14 \\
-    2(3 + 4) & = 2 \cdot 3 + 2 \cdot 4 \\
-             & = 6 + 8 \\
-             & = 14 \\
-             \\
-    a(b + c) & = ab + ac \\
-  \end{align*}
+  \begin{figure}[H]
+    \centering
+    \includegraphics{proof.eps}
+    \caption{Pythagorean Theorem}
+  \end{figure}
+  
+  The following figure was used by the Indian mathematician, Bhaskara (born 1114 CE) for another
+  proof.  His proof was a little short on detail, as the entire proof was the figure and the phrase
+  ``See!''.  
 
-  examples:
-  \begin{align*}
-    3x(x + 2)               & = 3x^2 + 6x \\
-    2x^2y(3xy + 2y^2 + x^3) & = 6x^3y^2 + 4x^2y^3 + 2x^5y \\
-    \ldots \\
-  \end{align*}
+  The area of the big square is equal to the sum of the areas of the four triangles and the area
+  of the small square.
 
-  \section{Two Binomials}
-
-  \begin{align*}
-    (2 + 3)(4 + 5) & = 5 \cdot 9 \\
-                   & = 45 \\
-    (2 + 3)(4 + 5) & = (2 + 3) \cdot 4 + (2 + 3) 5 \\
-                   & = 4(2 + 3) + 5(2 + 3) \\
-                   & = 8 + 12 + 10 + 15 \\
-                   & = 45 \\
-                   \\
-    (a + b)(c + d) & = ac + ad + bc + bd \\
-  \end{align*}
-
-  examples:
-  \begin{itemize*}
-    \item $(x + 1)(x + 2)$
-    \item $(x - 1)(x - 2)$
-    \item $(2x + 3)(x - 2)$
-    \item $\del{x + 5}^2$
-    \item $(x + 5)(x - 5)$
-    \item $(x + 5)(x - 5)$
-    \item $(x^a + 1)(3x^a + 2)$
-    \item $(x^{2n} + 3)(x^{2n} - 1)$
-    \item etc.
+  \begin{itemize*} 
+    \item The area of each triangle is $\frac{1}{2} ab $.
+    \item The area of the small square is $\del{ b - a }^2$.  
   \end{itemize*}
 
-  \newpage
+  \begin{align*} 
+    c^2 & = 4 \del{ \frac{1}{2} ab } + \del{ b - a }^2 \\
+        & = 2ab + b^2 - 2ab + a^2 \\
+        & = a^2 + b^2 \\
+  \end{align*}
 
-  \section{Polynomials}
-  Same idea generalizes to multiplying any two polynomials.
+  \section{Factoring to Product of Monomial/Binomial}
 
-  examples:
   \begin{itemize*}
-    \item $(x + 1)(2x^2 + 4x - 2)$
-    \item $(2x - 3)(x^2 - x + 4)$
-    \item $(x + 1)(x - 2)(x + 7)$
-    \item $(2x^2 - 3x - 4)(x^2 + x + 1)$
-    \item $\del{x + 2}^3$
-    \item Word problems 85--87
-    \item etc.
+    \item reverse of multiplying
+    \item keep going until you can't go any farther
   \end{itemize*}
 
+  examples:
+  \begin{align*}
+    12x + 8     & = 4(3x + 2) \\
+    35x + 20    & = 5(7x + 4) \\
+    12x^2 + 10x & = 2 \del{ 6x^2 + 5x }
+  \end{align*}
+
+  procedure:
+  \begin{itemize*}
+    \item factor out Greatest Common Divisor of coefficients
+    \item factor out largest factor of $x$
+  \end{itemize*}
+
+  \section{Factoring by Grouping} % (fold)
+  
+  examples:
+  \begin{align*}
+    x(x - 3) + 2(x - 3) & = (x - 3)(x + 2) \\
+    a(x - 1) + b(x - 1) & = (a + b)(x - 1) \\
+  \end{align*}
+
+  \section{Solving Equations} % (fold)
+  \[
+    ab = 0 \leftrightarrow a = 0 \text{ or } b = 0
+  \]
+  
+  examples:
+  \begin{align*}
+    x^2 + 2x            & = 0 \\
+    x^2                 & = -6x \\
+    2x^2 + 4x           & = 0 \\
+    5x^2 - 7x           & = 0 \\
+    ax^2 + bx           & = 0 \\
+    x(x + 1) - 2(x + 1) & = 0 \\
+  \end{align*}
+  
 \end{document}
