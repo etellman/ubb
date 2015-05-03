@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers{}
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -60,7 +60,10 @@
 
   \begin{solution}
     If we let $D$ be the length of the diagonal across the floor, we can compute its length using
-    this equation: $D^2 = L^2 + W^2$.  
+    this equation: 
+    \[
+      D^2 = L^2 + W^2
+    \]
 
     You can draw a right triangle with this diagonal as the base and the height of the box as the
     height of the triangle.  The hypotenuse of this triangle is also the diagonal of the box.  If we
@@ -74,58 +77,6 @@
 
   \end{solution}
 
-  % \question{}
-  % A fisherman wearing a large straw hat was fishing from a rowboat in a river
-  % that flowed at a speed of three miles an hour.  His boat drifted down the
-  % river at the same rate.
-
-  % ``I think I'll row upstream a few miles'', he said to himself.  ``The fish
-  % don't seem to be biting here.''
-
-  % Just as he started to row, the wind blew off his hat and it fell into the
-  % water beside the boat.  But the fisherman did not notice his hat was gone
-  % until he had rowed upstream and was five miles away from his hat.  Then he
-  % realized what must have happened, so he immediately started rowing back
-  % downstream again until he came to his floating hat.
-
-  % In still water, the fisherman's rowing speed is always five miles an hour.
-  % When he rowed upstream and back, he rowed at this same constant speed.  But
-  % of course this would not be his speed relative to the {\em shore\/} of the
-  % river.  For instance, when he rowed upstream at five miles an hour, the river
-  % would be carrying him downstream at three miles an hour, so he would be
-  % passing objects on the shore at only two miles an hour.  And when he rowed
-  % downstream, his rowing speed and the speed of the river would combine to make
-  % his speed eight miles an hour with respect to the shore.
-
-  % If the fisherman lost his hat at 2:00 in the afternoon, what time was it when
-  % he recovered it?
-
-  % \begin{solution}
-  %   The speed of the river doesn't really matter in this problem.  When the
-  %   fisherman is rowing, he is always moving at 5 mph relative to his hat.
-
-  %   \begin{itemize} 
-  %     \item when going upstream, the fisherman travels at 2 mph upstream while
-  %       the hat travels at 3 mph downstream, for a total difference of 5 mph.  
-
-  %     \item when going downstream, the fisherman travels at 8 mph downstream
-  %       while the hat travels at 3 mph downstream, for a total difference of 5
-  %       mph.  
-  %   \end{itemize}
-
-  %   It takes the fisherman one hour to get five miles away from his hat and
-  %   one hour to row back to his hat and he recovers his hat at 4:00, two hours
-  %   after he lost it.
-
-  %   A slightly different way to look at it is to just ignore the speed of the
-  %   river and do all the calculations relative to the river instead of relative
-  %   to the shore.  With this approach, the hat is always stationary (relative to
-  %   the river) and the fisherman is always moving at 5 mph (relative to the
-  %   river).  So the fisherman rows at 5 mph for an hour to get away from the hat
-  %   and then at 5 mph for an hour to get back.
-  %   \end{solution}
-
-  % \end{questions}
 
   \ifprintanswers{}
     \section{Section 3.4} % (fold)
@@ -147,7 +98,7 @@
 
       \item[37] $x(9x^3 + 7x + 5)$
 
-      \item[38] $x^2 \del{ 21x^3 + - 17x^2 + 9 }$
+      \item[38] $x^2 \del{ 21x^3 - 17x^2 + 9 }$
 
       \item[39] $5xy^2 \del{ 7x^2y^2 + 3xy + 4 }$
 
@@ -252,7 +203,7 @@
         y^2 - ay + 2by - 2ab & = 0 \\
         y(y - a) + 2b(y - a) & = 0 \\
         (y + 2b)(y - a)      & = 0 \\
-        y                    & = \boxed{ \cbr{ -2b, a } } \\
+        y                    & = \boxed{ \cbr{ a, -2b } } \\
       \end{align*}
 
       \item[86]
@@ -261,7 +212,7 @@
           x(x + a) + b(x + a) & = 0 \\
           (x + b)(x + a)      & = 0 \\
           \\
-          x                   & = \boxed{ \cbr{ -b, -a } }
+          x                   & = \boxed{ \cbr{ -a, -b } }
         \end{align*}
 
       \item[87]
