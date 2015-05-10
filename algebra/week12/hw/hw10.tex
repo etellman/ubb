@@ -1,0 +1,289 @@
+% no answer key
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{commath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+\usepackage{parskip} 
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+\title{Algebra Homework 10 \\ Section 3.5 and 3.6}
+\author{}
+\date{\today}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Homework}
+
+  \begin{itemize*}
+    \item Section 3.5: 1--5, 11--15, 31--40, 45--49, 61--65
+    \item Section 3.6: 1--5, 11--15, 21--25, 31--35, 41--45, 51--55, 70--79
+  \end{itemize*}
+
+  \section{Extra Credit}
+
+  A fisherman wearing a large straw hat was fishing from a rowboat in a river
+  that flowed at a speed of three miles an hour.  His boat drifted down the
+  river at the same rate.
+
+  ``I think I'll row upstream a few miles'', he said to himself.  ``The fish
+  don't seem to be biting here.''
+
+  Just as he started to row, the wind blew off his hat and it fell into the
+  water beside the boat.  But the fisherman did not notice his hat was gone
+  until he had rowed upstream and was five miles away from his hat.  Then he
+  realized what must have happened, so he immediately started rowing back
+  downstream again until he came to his floating hat.
+
+  In still water, the fisherman's rowing speed is always five miles an hour.
+  When he rowed upstream and back, he rowed at this same constant speed.  But
+  of course this would not be his speed relative to the {\em shore\/} of the
+  river.  For instance, when he rowed upstream at five miles an hour, the river
+  would be carrying him downstream at three miles an hour, so he would be
+  passing objects on the shore at only two miles an hour.  And when he rowed
+  downstream, his rowing speed and the speed of the river would combine to make
+  his speed eight miles an hour with respect to the shore.
+
+  If the fisherman lost his hat at 2:00 in the afternoon, what time was it when
+  he recovered it?
+
+  (Martin Gardner)
+
+  \begin{solution}
+    The speed of the river doesn't matter in this problem.  When the
+    fisherman is rowing, he is always moving at 5 mph relative to his hat.
+
+    \begin{itemize} 
+      \item when going upstream, the fisherman travels at 2 mph upstream while
+        the hat travels at 3 mph downstream, for a total difference of 5 mph.  
+
+      \item when going downstream, the fisherman travels at 8 mph downstream
+        while the hat travels at 3 mph downstream, for a total difference of 5
+        mph.  
+    \end{itemize}
+
+    It takes the fisherman one hour to get five miles away from his hat and
+    one hour to row back to his hat and he recovers his hat at 4:00, two hours
+    after he lost it.
+
+    A slightly different way to look at it is to just ignore the speed of the
+    river and do all the calculations relative to the river instead of relative
+    to the shore.  With this approach, the hat is always stationary (relative to
+    the river) and the fisherman is always moving at 5 mph (relative to the
+    river).  So the fisherman rows at 5 mph for an hour to get away from the hat
+    and then at 5 mph for an hour to get back.
+
+  \end{solution}
+
+  \ifprintanswers{}
+    \section{Section 3.5} % (fold)
+    
+    \begin{description}
+      \item[1] $(x + 1)(x - 1)$
+
+      \item[2] $(x + 3)(x - 3)$
+
+      \item[3] $(4x + 5)(4x - 5)$
+
+      \item[4] $(2x + 7)(2x - 7)$
+
+      \item[5] $\del{3x + 5y} \del{3x - 5y}$
+
+      \item[11] $\del{1 + 12n} \del{1 - 12n}$
+
+      \item[12] $\del{5 + 7n} \del{5 - 7n}$
+
+      \item[13] $\del{x + 2 + y} \del{x + 2 - y}$
+
+      \item[14] $\del{3x + 5 + y} \del{3x + 5 - y}$
+
+      \item[15] 
+        \begin{align*}
+          4x^2 - \del{y + 1}^2 & = (2x + (y + 1))(2x - (y + 1)) \\
+                               & = \boxed{ (2x + y + 1) \del{2x - y - 1} } \\
+        \end{align*}
+
+      \item[31] $\del{n^2 + 9} (n + 3)(n - 3)$
+
+      \item[32] can't be factored.
+
+      \item[33] $3x(x^2 + 9)$
+
+      \item[34] $5x(4x^2 + 9)$
+
+      \item[35] 
+        \begin{align*}
+          4x^3y - 64xy^3 & = 4xy \del{ x^2 - 16y^2 } \\
+                         & = \boxed{ 4xy \del{x + 4y} \del{x - 4y} } \\
+        \end{align*}
+
+      \item[36] 
+        \begin{align*}
+          12x^3 - 27xy^2 & = 3x \del{ 4x^2 - 9y^2 } \\
+                         & = \boxed{ 3x \del{2x + 3y} \del{2x - 3y} } \\
+        \end{align*}
+
+      \item[37] 
+        \begin{align*}
+          6x - 6x^3 & = 6x(1 - x^2) \\
+                    & = \boxed{ 6x \del{1 + x} \del{1 - x} } \\
+        \end{align*}
+
+      \item[38] $\del{1 + 4x^2} (1 - 2x)(1 + 2x)$
+
+      \item[39] $\del{1 + x^2y^2} (1 - xy)(1 + xy)$
+
+      \item[40] 
+        \begin{align*}
+          20x - 5x^3 & = 5x \del{ 4 - x^2 } \\
+                     & = \boxed{ 5x \del{2 + x} \del{2 - x} } \\
+        \end{align*}
+
+      \item[45] $\del{a - 4} \del{a^2 + 4a + 16}$
+
+      \item[46] $\del{a - 3} \del{a^2 + 3a + 9}$
+
+      \item[47] $\del{x + 1} \del{x^2 - x + 1}$
+
+      \item[48] $\del{x + 2} \del{x^2 - 2x + 4}$
+
+      \item[49] $\del{3x + 4y} \del{9x^2 - 12xy + 16y^2}$
+
+      \item[61] $x = \cbr{ -2, 2 }$
+        
+      \item[62] $x = \cbr{ -6, 6 }$
+
+      \item[63] $x = \cbr{ 0, -1, 1 }$
+
+      \item[64] $x = \cbr{ 0, -4, 4 }$
+
+      \item[65] $x = \cbr{ 0, -2, 2 }$
+
+    \end{description}
+
+    \section{Section 3.6} % (fold)
+    
+    \begin{description}
+      \item[1] $(x + 4)(x + 5)$
+
+      \item[2] $(x + 8)(x + 3)$
+
+      \item[3] $(x - 4)(x - 7)$
+
+      \item[4] $(x - 6)(x - 2)$
+
+      \item[5] $(a + 9)(a - 4)$
+
+      \item[11] not factorable
+
+      \item[12] $(5 - x)(x + 7)$
+
+      \item[13] $(6 - x)(1 + x)$
+
+      \item[14] not factorable
+
+      \item[15] $(x + 3y)(x + 12y)$
+
+      \item[21] $(4x - 3)(3x + 2)$
+
+      \item[22] $(4x - 3)(5x + 1)$
+
+      \item[23] $(4a - 9)(a + 3)$
+
+      \item[24] $(2a - 1)(6a + 5)$
+
+      \item[25] $(3n + 5)(n - 4)$
+
+      \item[31] $(4x - 5)(2x + 9)$
+
+      \item[32] $(3x + 11)(2x - 3)$
+
+      \item[33] $(1 - 6x)(x + 6)$
+
+      \item[34] $(2 -5x)(3x + 2)$
+
+      \item[35] $(4y - 1)(5y + 9)$
+
+      \item[41] $(x + 10)(x + 15)$
+
+      \item[42] $(x + 9)(x + 12)$
+
+      \item[43] $(n - 16)(n - 20)$
+
+      \item[44] $(n - 14)(n - 12)$
+
+      \item[45] $(t - 12)(t + 15)$
+
+      \item[51] $(x^2 - 8)(x + 1)(x - 1)$
+
+      \item[52] $(x^2 + 3)(x + 2)(x - 2)$
+
+      \item[53] $(3n + 1)(3n - 1)(2n^2 + 3)$
+
+      \item[54] $(2n + 3)(2n - 3)(n^2 + 3)$
+
+      \item[55] $(x + 1)(x - 1)(x + 4)(x - 4)$
+
+      \item[70] $(5x - 3)(x + 9)$
+
+      \item[71] $(x + y - 7)(x - y + 7)$
+
+      \item[72] $2n(n^2 + 3n + 5)$
+
+      \item[73] $(1 - 2x)(1 + 2x)(4x^2 + 1)$
+
+      \item[74] $\del{ 3a - 5 }^2$
+
+      \item[75] $(4n + 9)(n + 4)$
+
+      \item[76] $x(x + 3)(x - 3)$
+
+      \item[77] $n(n + 7)(n - 7)$
+
+      \item[78] $4 \del{x^2 + 4}$
+
+      \item[79] $(x - 8)(x + 1)$
+
+    \end{description}
+
+  \fi
+  \ifprintanswers{}
+  \else
+    \vspace{2 cm}
+    \begin{quote}
+      \begin{em}
+        When it shall be said in any country in the world, my poor are happy;
+        neither ignorance nor distress is to be found among them; my jails are
+        empty of prisoners, my streets of beggars; the aged are not in want,
+        the taxes are not oppressive; the rational world is my friend, because
+        I am a friend of its happiness: When these things can be said, then may
+        the country boast of its constitution and its government. 
+      \end{em}
+    \end{quote}
+    \hspace{2 cm}--Thomas Paine
+  \fi
+
+\end{document}
+
