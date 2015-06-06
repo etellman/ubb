@@ -1,0 +1,141 @@
+% no answer key
+\documentclass[letterpaper]{exam}
+
+% answer key
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers{}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{commath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+\usepackage{parskip} 
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+\title{Algebra Homework 13 \\ Sections 4.3 and 4.6}
+\author{}
+\date{\today}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Homework}
+
+  \begin{itemize*}
+    \item Section 4.3: 20--24, 40--44, 60--64
+    \item Section 4.6: 10--14, 20--24, 30--34, 40--44, 46, 51
+  \end{itemize*}
+
+  \section{Extra Credit}
+
+  A lady gave the postage stamp clerk a one dollar bill and said, ``Please give
+  me some two-cent stamps, ten times as many one-cent stamps, and the balance
+  in fives.''  How can the clerk fulfill this puzzling request?
+
+  \begin{solution}
+
+    If:
+    \begin{itemize*}
+      \item $x$ is the number of two-cent stamps purchased
+      \item $2x$ is the amount spent on two-cent stamps
+      \item $10x$ the number of one-cent stamps purchased, and, since each
+        stamp costs one-cent, the amount spent on one-cent stamps.
+      \item $100 - 10x - 2x$ is the amount spent on five-cent stamps
+    \end{itemize*}
+
+    She spent 100 cents on stamps, so this equation must be true (all amounts
+    are in cents):
+
+    \[
+      (10x) + (2x) + (100 - 10x - 2x) = 100 
+    \]
+
+    This equation simplifies to: $100 = 100$ which is true for any value of $x$.  
+
+    The problem is that the equation doesn't include the additional constraint
+    for this problem which is: ``you can only buy a positive integer number of
+    stamps.''  You can't buy half a stamp, and you can't buy $-2$ stamps, for
+    example.
+
+    We have to think about the problem a little more.  She spends whatever
+    money is left over after the one and two cent stamps on five-cent stamps.
+    This means that she must have a multiple of 5 left over after she pays for
+    the one and two cent stamps.  And this means that the amount she spends on
+    one and two cent stamps must be a multiple of 5.  
+
+    If we stick with $x$ as the number of two-cent stamps purchased, $x + 10x$
+    must be a multiple of five less than 100.  Letting $x$ be 5 works, and the
+    next possibility is $x=10$ which is too big.  So she must have purchased 5
+    two-cent stamps.  She purchased ten times as many one-cent stamps, so she
+    bought 50 one-cent stamps.  She has 40 cents left over, which she spends on
+    8 5-cent stamps.  
+    
+    The final totals are:
+    \begin{itemize*}
+      \item 5 two cent stamps
+      \item 50 one-cent stamps
+      \item 8 five-cent stamps
+    \end{itemize*}
+
+  \end{solution}
+
+  \ifprintanswers{}
+    \section{Section 4.3} % (fold)
+    
+    \begin{description}
+      \item[20] $\frac{9x + 14}{20}$
+
+      \item[21] $\frac{12a + 1}{12}$
+
+      \item[22] $\frac{16a - 19}{24}$
+
+      \item[23] $\frac{n + 14}{18}$
+
+      \item[24] $\frac{5n-5}{36}$
+
+      \item[41] $\frac{11x - 10}{6x^2}$
+
+      \item[42] $\frac{28 - 57x}{12x^2}$
+
+      \item[50] $\frac{3x^2 - 2x + 8}{x(x-4)}$
+
+      \item[51] $\frac{a^2 - a - 8}{a(a+4)}$
+
+      \item[52] $\frac{a^2 + 1}{a(a+1)}$
+
+      \item[53] $\frac{-41n - 55}{(4n + 5)(3n + 5)}$
+
+      \item[54] $\frac{-10n + 30}{(n-6)(2n+3)}$
+
+    \end{description}
+
+  \fi
+  \ifprintanswers{}
+  \else
+    \vspace{9 cm}
+    \begin{quote}
+      \begin{em}
+        Imagination is more important than knowledge.
+      \end{em}
+    \end{quote}
+    \hspace{2 cm}--Albert Einstein
+  \fi
+
+\end{document}
+
