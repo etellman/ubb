@@ -1,0 +1,314 @@
+% no answer key
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{commath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+\usepackage{parskip} 
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+\title{Algebra Homework 14 \\ Section 4.7}
+\author{}
+\date{\today}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Homework}
+  Section 4.7: 1--5, 11--15, 21--25, 35--39, 45, 47--48, 50--51, 53--57
+
+  \section{Extra Credit}
+
+  A farm is scheduled to deliver a load of grain to the warehouse.  The
+  management of the farm decided the trucks should arrive at the warehouse at
+  exactly 11:00 a.m.  If the trucks traveled at 30 mph, they would reach the
+  warehouse at 10:00 a.m., an hour early; at 20 mph they would arrive at noon,
+  an hour late.
+
+  How far is the farm from the warehouse, and how fast should the trucks travel
+  to arrive exactly at 11:00 a.m.?
+
+  \begin{solution}
+
+    Here's what we know from the problem statement:
+    \begin{itemize*}
+      \item $r_1 = 30$
+      \item $r_2 = 20$
+      \item $t_2 - t_1 = 2$, since the trucks arrived two hours earlier at the faster rate
+    \end{itemize*}
+
+    \begin{itemize*}
+      \item $t_1 = \frac{d}{r_1} = \frac{d}{30}$
+      \item $t_2 = \frac{d}{r_2} = \frac{d}{20}$
+    \end{itemize*}
+
+    Use these values in the time equation to find the distance:
+    \begin{align*}
+      t_2 - t_1                   & = 2 \\
+      \frac{d}{20} - \frac{d}{30} & = 2 \\
+      30d - 20d                   & = 1200 \\
+      d                           & = 120 \\
+    \end{align*}
+
+    Plug the distance back in to the original time equations to find that $t_1
+    = 4$ and $t_2 = 6$.  The desired time is therefore 5 hours, and to go 120
+    miles in 5 hours you need to go at $\frac{120}{5} = \boxed{ \unit[24]{mph}
+  }$
+
+  \end{solution}
+
+  \ifprintanswers{}
+    \newpage
+    \section{Section 4.7} % (fold)
+    
+    \begin{description}
+
+      \item[1] $x = -21$
+
+      \item[2] $x = -8$
+
+      \item[3] $t = \cbr{ -1, 2 }$
+
+      \item[4] $t = -2$
+
+      \item[5] $n = 2$
+
+      \item[11] $n = -1$
+
+      \item[12] $n = -2$
+
+      \item[13] $x = \cbr{ 0, \frac{13}{2} }$
+
+      \item[14] $x = \cbr{ - \frac{5}{3}, 1 }$
+
+      \item[15] $x = \cbr{ -2, \frac{19}{2} }$
+
+      \item[21] no solution
+
+      \item[22] $y = -1$
+
+      \item[23] $n = \frac{7}{2}$
+
+      \item[24] $x = - \frac{1}{4}$
+
+      \item[25] $x = \pm \sqrt{3}$
+
+      \item[35] $M = \frac{IC}{100}$
+
+      \item[36] $T = \frac{N(C - V)}{C}$
+
+      \item[37] $R = \frac{ST}{S + T}$
+
+      \item[38] $R = \frac{ST}{S + T}$
+
+      \item[39] $y = \frac{a + bx - 3b - x}{a - 3}$
+
+      \item[45]
+
+        % \begin{tabular}[H]{lrrr}
+        %   \toprule 
+        %   Person & d & r & t \\
+        %   \midrule
+        %   Kent & $\unit[270]{m}$ & $r_d + 4$ & t \\
+        %   Dave & $\unit[250]{m}$ & $r_d$     & t \\
+        %   \bottomrule
+        % \end{tabular}
+
+        \begin{align*}
+          \frac{270}{r_d + 4} &= \frac{250}{r_d} \\
+          \\
+          r_d &= \boxed{ \unit[50]{mph} } \\
+          r_k &= \boxed{ \unit[54]{mph} } \\
+        \end{align*}
+
+      \item[47]
+        \begin{align*}
+          r & = \frac{1}{10} - \frac{1}{12} \\
+            & = \unit[\frac{1}{60}]{tank/minute} \\
+          \\
+          t & = \frac{1}{1/60} \\
+            & = \boxed{ \unit[60]{minutes} } \\
+        \end{align*}
+
+      \item[48]
+        \begin{align*}
+          r & = \frac{1}{3} + \frac{1}{5} \\
+          & = \unit[ \frac{8}{15} ]{jobs/hour} \\
+          \\
+          t & = \frac{1}{8/15} \\
+            & = \boxed{ \unit[\frac{15}{8}]{hours} } \\
+        \end{align*}
+
+      \item[50]
+        When they work together, their combined rate is:
+        \[
+          r = \frac{1}{50} + \frac{1}{60} = \unit[\frac{11}{300}]{jobs/minute}
+        \]
+
+        Before Walt gets there, Malik has completed $\frac{3}{5}$ of the lawn.
+
+        \begin{align*}
+          t & = \frac{3/5}{11/300} \\
+            & \approx \boxed{ \unit[16.4]{minutes} } \\
+        \end{align*}
+
+      \item[51]
+        \begin{align*}
+          d_a & = 1400 \\
+          d_b & = 2000 \\
+          t_a & = t_b - 1 \\
+          r_b & = r_a + 50 \\
+        \end{align*}
+
+        \begin{align*}
+          r_b & = \frac{d_b}{t_b} = \frac{2000}{t_b} \\
+          r_a & = \frac{d_a}{t_a} = \frac{1400}{t_b - 1} \\
+        \end{align*}
+
+        \begin{align*}
+          r_b                & = r_a + 50 \\
+          \frac{2000}{t_b}   & = \frac{1400}{t_b - 1} + 50 \\
+          2000(t_b-1)        & = 1400t_b + 50t_b(t_b-1) \\
+          t_b^2 - 13t_b + 40 & = 0 \\
+          (t_b-5)(t_b-8)     & = 0
+        \end{align*}
+
+        5 hours and 8 hours both work for $t_b$.  The two possibilities are:
+        \begin{itemize*}
+          \item $t_b = 5$, $t_a = 4$, $r_b = 400$, $r_a = 350$
+          \item $t_b = 8$, $t_a = 7$, $r_b = 250$, $r_a = 200$
+        \end{itemize*}
+
+      \item[53]
+        \begin{align*}
+          r_n &= 2 r_a \\
+          \\
+          r_a + r_n &= \frac{1}{40} \\
+          r_a + 2r_a &= \frac{1}{40} \\
+          \\
+          r_a &= \unit[\frac{1}{120}]{deliveries/minute} \\
+          r_n &= \unit[\frac{1}{60}]{deliveries/minute} \\
+        \end{align*}
+
+        Nancy can deliver all the papers in one hour while it takes Amy two hours to get the delivery done.
+
+      \item[54]
+        \begin{align*}
+          \frac{1}{r + 1/120} & = 72 \\
+          r                   & = \unit[\frac{1}{180}]{pools/minute} \\
+                              & = \unit[\frac{1}{3}]{pools/hour}
+          t                   & = \boxed{ \unit[3]{hours} } \\
+        \end{align*}
+
+      \item[55]
+        For this problem, the distance is the amount of money made.
+
+        \begin{align*}
+          d_a & = d_p = 12 \\
+          r_a & = r_p - 1 \\
+          t_a & = t_p + 1 \\
+        \end{align*}
+
+        Find both times in terms of $r_p$:
+        \begin{align*}
+          t_p & = \frac{12}{r_p} \\
+          t_a & = \frac{12}{r_p - 1} \\
+        \end{align*}
+
+        Plug the rates into the time equation and solve:
+        \begin{align*}
+          \frac{12}{r_p - 1} & = \frac{12}{r_p} + 1 \\
+          r_p                & = \unit[\$4]{/hr} \\
+        \end{align*}
+
+        \begin{itemize*}
+          \item the planned rate was \$4 per hour
+          \item the actual rate was \$3 per hour
+          \item the planned time was 3 hours
+          \item the actual time was 4 hours
+        \end{itemize*}
+
+      \item[56]
+        \begin{align*}
+          \frac{20}{n} & = \frac{22.5}{n + 5} + 0.5 \\
+          n            & = \unit[10]{balls} \\
+        \end{align*}
+
+        He bought 10 balls for \$2 per ball on the first day and 15 balls for
+        \$2.50 per ball on the second day.
+
+      \item[57]
+        \begin{align*}
+          d_{out} & = 24 \\
+          d_{in}  & = 12 \\
+          t_{in}  & = t_{out} - \frac{1}{2} \\
+          r_{out} & = r_{in} + 4 \\
+        \end{align*}
+
+        Find both rates in terms of $t_{out}$:
+        \begin{align*}
+          r_{out} & = \frac{d_{out}}{t_{out}} = \frac{24}{t_{out}}   \\
+          r_{in}  & = \frac{d_{in}}{t_{in}} = \frac{12}{t_{out} - 1/2}  \\
+        \end{align*}
+
+        Plug into the rate equation and solve:
+        \begin{align*}
+          r_{out}                     & = r_{in} + 4 \\
+          \frac{24}{t_{out}}          & = \frac{12}{t_{out} - 1/2} + 4 \\
+          t_{out} &= \cbr{ 1.5, 2 } \\
+        \end{align*}
+
+        Solution one:
+        \begin{align*}
+          r_{out} & = \unit[16]{mph} \\
+          r_{in}  & = \unit[12]{mph} \\
+          t_{out} & = \unit[1.5]{hr} \\
+          t_{in}  & = \unit[2]{hr} \\
+        \end{align*}
+
+        Solution two:
+        \begin{align*}
+          r_{out} & = \unit[12]{mph} \\
+          r_{in}  & = \unit[8]{mph} \\
+          t_{out} & = \unit[2]{hr} \\
+          t_{in}  & = \unit[1.5]{hr} \\
+        \end{align*}
+
+    \end{description}
+
+  \fi
+  \ifprintanswers{}
+  \else
+    \vspace{8 cm}
+    \begin{quote}
+      \begin{em}
+        I can hear a court case as well as anyone.  But we need to make a world
+        where there's no reason for a court case.
+      \end{em}
+    \end{quote}
+    \hspace{2 cm}--Confucius
+  \fi
+
+\end{document}
+
