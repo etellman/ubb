@@ -1,0 +1,140 @@
+\documentclass{exam}
+
+\usepackage{units} 
+\usepackage[fleqn]{amsmath}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+% \usepackage{2in1, lscape} 
+
+\author{}
+\date{January 22, 2014}
+\title{Prison Data Set}
+
+\begin{document}
+
+    \centering
+    \begin{tabular}{lrrrl}
+      \toprule
+      State          & Year & State Population & Prison Population & Region \\
+      \midrule
+      Alabama        & 1980 & 3,893,888        & 4,551             & South \\
+      Alaska         & 1980 & 401,851          & 632               & West \\
+      Arizona        & 1980 & 2,718,215        & 3,612             & West \\
+      Arkansas       & 1980 & 2,286,435        & 2,805             & South \\
+      California     & 1980 & 23,667,902       & 24,569            & West \\
+      Colorado       & 1980 & 2,889,964        & 2,616             & West \\
+      Connecticut    & 1980 & 3,107,576        & 4,259             & Northeast \\
+      Delaware       & 1980 & 594,338          & 1,339             & South \\
+      Florida        & 1980 & 9,746,324        & 20,457            & South \\
+      Georgia        & 1980 & 5,463,105        & 12,178            & South \\
+      Hawaii         & 1980 & 964,691          & 845               & West \\
+      Idaho          & 1980 & 943,935          & 680               & West \\
+      Illinois       & 1980 & 11,426,518       & 11,497            & Midwest \\
+      Indiana        & 1980 & 5,490,224        & 6,709             & Midwest \\
+      Iowa           & 1980 & 2,913,808        & 2,479             & Midwest \\
+      Kansas         & 1980 & 2,363,679        & 2,454             & Midwest \\
+      Kentucky       & 1980 & 3,660,777        & 3,588             & South \\
+      Louisiana      & 1980 & 4,205,900        & 7,622             & South \\
+      Maine          & 1980 & 1,124,660        & 653               & Northeast \\
+      Maryland       & 1980 & 4,216,975        & 7,454             & South \\
+      Massachusetts  & 1980 & 5,737,037        & 3,080             & Northeast \\
+      Michigan       & 1980 & 9,262,078        & 15,124            & Midwest \\
+      Minnesota      & 1980 & 4,075,970        & 1,884             & Midwest \\
+      Mississippi    & 1980 & 2,520,638        & 2,745             & South \\
+      Missouri       & 1980 & 4,916,686        & 5,726             & Midwest \\
+      Montana        & 1980 & 786,690          & 698               & West \\
+      Nebraska       & 1980 & 1,569,825        & 1,430             & Midwest \\
+      Nevada         & 1980 & 800,493          & 1,833             & West \\
+      New Hampshire  & 1980 & 920,610          & 313               & Northeast \\
+      New Jersey     & 1980 & 7,364,823        & 5,881             & Northeast \\
+      New Mexico     & 1980 & 1,302,894        & 976               & West \\
+      New York       & 1980 & 17,558,072       & 21,942            & Northeast \\
+      North Carolina & 1980 & 5,881,766        & 15,615            & South \\
+      North Dakota   & 1980 & 652,717          & 332               & Midwest \\
+      Ohio           & 1980 & 10,797,630       & 13,138            & Midwest \\
+      Oklahoma       & 1980 & 3,025,290        & 4,544             & South \\
+      Oregon         & 1980 & 2,633,105        & 3,218             & West \\
+      Pennsylvania   & 1980 & 11,863,895       & 8,243             & Northeast \\
+      Rhode Island   & 1980 & 947,154          & 803               & Northeast \\
+      South Carolina & 1980 & 3,121,820        & 7,089             & South \\
+      South Dakota   & 1980 & 690,768          & 651               & Midwest \\
+      Tennessee      & 1980 & 4,591,120        & 6,851             & South \\
+      Texas          & 1980 & 14,229,191       & 29,892            & South \\
+      Utah           & 1980 & 1,461,037        & 965               & West \\
+      Vermont        & 1980 & 511,456          & 468               & Northeast \\
+      Virginia       & 1980 & 5,346,818        & 8,357             & South \\
+      Washington     & 1980 & 4,132,156        & 4,342             & West \\
+      West Virginia  & 1980 & 1,949,644        & 1,257             & South \\
+      Wisconsin      & 1980 & 4,705,767        & 3,788             & Midwest \\
+      Wyoming        & 1980 & 469,557          & 490               & West \\
+      \bottomrule
+    \end{tabular}
+
+    \centering
+    \begin{tabular}{lrrrl}
+      \toprule
+      State          & Year & State Population & Prison Population & Region \\
+      \midrule
+      Alabama        & 2010 & 4,779,736        & 26,321            & South \\
+      Alaska         & 2010 & 710,231          & 3,771             & West \\
+      Arizona        & 2010 & 6,392,017        & 34,774            & West \\
+      Arkansas       & 2010 & 2,915,918        & 14,192            & South \\
+      California     & 2010 & 37,253,956       & 160,651           & West \\
+      Colorado       & 2010 & 5,029,196        & 18,254            & West \\
+      Connecticut    & 2010 & 3,574,097        & 17,746            & Northeast \\
+      Delaware       & 2010 & 897,934          & 6,378             & South \\
+      Florida        & 2010 & 18,801,310       & 90,274            & South \\
+      Georgia        & 2010 & 9,687,653        & 47,561            & South \\
+      Hawaii         & 2010 & 1,360,301        & 3,363             & West \\
+      Idaho          & 2010 & 1,567,582        & 4,999             & West \\
+      Illinois       & 2010 & 12,830,632       & 48,418            & Midwest \\
+      Indiana        & 2010 & 6,483,802        & 24,456            & Midwest \\
+      Iowa           & 2010 & 3,046,355        & 9,457             & Midwest \\
+      Kansas         & 2010 & 2,853,118        & 9,055             & Midwest \\
+      Kentucky       & 2010 & 4,339,367        & 12,374            & South \\
+      Louisiana      & 2010 & 4,533,372        & 16,087            & South \\
+      Maine          & 2010 & 1,328,361        & 1,954             & Northeast \\
+      Maryland       & 2010 & 5,773,552        & 22,786            & South \\
+      Massachusetts  & 2010 & 6,547,629        & 11,162            & Northeast \\
+      Michigan       & 2010 & 9,883,640        & 44,113            & Midwest \\
+      Minnesota      & 2010 & 5,303,925        & 9,397             & Midwest \\
+      Mississippi    & 2010 & 2,967,297        & 11,213            & South \\
+      Missouri       & 2010 & 5,988,927        & 30,577            & Midwest \\
+      Montana        & 2010 & 989,415          & 1,635             & West \\
+      Nebraska       & 2010 & 1,826,341        & 4,608             & Midwest \\
+      Nevada         & 2010 & 2,700,551        & 12,192            & West \\
+      New Hampshire  & 2010 & 1,316,470        & 2,617             & Northeast \\
+      New Jersey     & 2010 & 8,791,894        & 21,647            & Northeast \\
+      New Mexico     & 2010 & 2,059,179        & 3,754             & West \\
+      New York       & 2010 & 19,378,102       & 56,420            & Northeast \\
+      North Carolina & 2010 & 9,535,483        & 40,167            & South \\
+      North Dakota   & 2010 & 672,591          & 1,416             & Midwest \\
+      Ohio           & 2010 & 11,536,504       & 48,671            & Midwest \\
+      Oklahoma       & 2010 & 3,751,351        & 18,128            & South \\
+      Oregon         & 2010 & 3,831,074        & 13,859            & West \\
+      Pennsylvania   & 2010 & 12,702,379       & 47,072            & Northeast \\
+      Rhode Island   & 2010 & 1,052,567        & 3,159             & Northeast \\
+      South Carolina & 2010 & 4,625,364        & 22,992            & South \\
+      South Dakota   & 2010 & 814,180          & 3,388             & Midwest \\
+      Tennessee      & 2010 & 6,346,105        & 14,917            & South \\
+      Texas          & 2010 & 25,145,561       & 141,087           & South \\
+      Utah           & 2010 & 2,763,885        & 5,442             & West \\
+      Vermont        & 2010 & 625,741          & 1,517             & Northeast \\
+      Virginia       & 2010 & 8,001,024        & 30,351            & South \\
+      Washington     & 2010 & 6,724,540        & 17,028            & West \\
+      West Virginia  & 2010 & 1,852,994        & 5,072             & South \\
+      Wisconsin      & 2010 & 5,686,986        & 21,983            & Midwest \\
+      Wyoming        & 2010 & 563,626          & 1,875             & West \\
+      \bottomrule
+    \end{tabular}
+
+\end{document}
+
+
+

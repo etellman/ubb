@@ -12,8 +12,7 @@ top.five.plot <- function(df, target.year) {
                                 y = prison.population / 1000)) + 
     geom_bar(stat = "identity", fill = "lightblue", color = "black") +
     labs(y = "Prison Population/1000") +
-    theme(axis.title.x = element_blank()) +
-    ggtitle(paste(target.year, "Top Five"))
+    theme(axis.title.x = element_blank()) 
 
   print(plot)
   plot
@@ -41,16 +40,15 @@ print(plot)
 save.plot(plot, figure.dir, 'regions_over_time.pdf')
 
 # 2010 by region
-by.region.1980 <- subset(dcast(pbs.m, year + region ~ variable, sum), year == 1980)
-plot <- ggplot(by.region.1980, aes(x = reorder(region, -prison.population), 
+by.region.2010 <- subset(dcast(pbs.m, year + region ~ variable, sum), year == 2010)
+plot <- ggplot(by.region.2010, aes(x = reorder(region, -prison.population), 
                                    y = prison.population / 1000)) + 
   geom_bar(stat = "identity", fill = "lightblue", color = "black") +
   ylab('Population/1000') +
-  theme(axis.title.x = element_blank()) +
-  ggtitle("1980 by Region")
-print(plot)
+  theme(axis.title.x = element_blank()) 
 
-save.plot(plot, figure.dir, 'regions_1980.pdf')
+print(plot)
+save.plot(plot, figure.dir, 'regions_2010.pdf')
 
 
 # plots the populations for states in a region
@@ -67,14 +65,15 @@ region.by.state <- function(df, target.region, target.year) {
     geom_bar(stat = "identity", fill = "lightblue", color = "black") +
     ylab("Population/1000") +
     theme(axis.title.y = element_blank()) +
-    coord_flip() +
-    ggtitle(paste(target.region, "by State"))
+    coord_flip()
 
   print(plot)
 
   plot
 }
 
+plot <- region.by.state(pbs, "South", 2010)
+save.plot(plot, figure.dir, 'south_by_state_2010.pdf', height = 4)
+
 plot <- region.by.state(pbs, "West", 2010)
 save.plot(plot, figure.dir, 'west_by_state_2010.pdf', height = 4)
-

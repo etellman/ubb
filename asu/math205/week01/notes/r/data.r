@@ -8,6 +8,9 @@ week.dir <- paste(math205.dir, 'week01', sep = '/')
 figure.dir <- paste(week.dir, 'notes', 'figures', sep = '/')
 
 us <- read.csv('us_population.csv', header = T, comment.char = '#', strip.white = T)
+us <- subset(us, year >= 1978)
+us <- us[order(us$year),]
+
 pbs <- read.csv('prisoners_by_state.csv', header = T, comment.char = '#', strip.white = T)
 pbs.m <- melt(pbs, id = c('state', 'region', 'year'))
 

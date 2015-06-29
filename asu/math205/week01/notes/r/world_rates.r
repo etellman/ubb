@@ -46,17 +46,20 @@ print(plot)
 
 save.plot(plot, figure.dir, 'world_histogram.pdf')
 
-sample.rates <- subset(world.rates, country %in% c('United States', 'Cuba', 'South Africa',
-                                                   'England and Wales', 'France', 'Japan',
-                                                   'India', 'South Africa'))
+world.rates
+
+sample.rates <- subset(world.rates, 
+                       country %in% c('United States', 'Seychelles', 'Cuba',
+                                      'Russia', 'Iran', 'England and Wales',
+                                      'France', 'Japan', 'India', 'South Africa', 
+                                      'San Marino', 'Iceland'))
 
 plot <- ggplot(sample.rates, aes(x = reorder(country, rate), y = rate)) + 
   geom_bar(stat = 'identity', fill = 'lightblue', color = 'black') +
   ylab('Prisoners per 100,000') +
   theme(axis.title.y = element_blank()) +
-  coord_flip() +
-  ggtitle('World Incarceration Rates')
+  coord_flip()
 
 print(plot)
-save.plot(plot, figure.dir, 'sample_world_rates.pdf')
+save.plot(plot, figure.dir, 'sample_world_rates.pdf', height = 4)
 

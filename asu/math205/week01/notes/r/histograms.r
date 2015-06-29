@@ -3,26 +3,29 @@ population.histogram <- function(df, target.year, bw) {
   plot <- ggplot(data = subset(df, year == target.year), 
                  aes(x = prison.population / 1000)) + 
     geom_histogram(fill = 'lightblue', color = 'black', binwidth = bw) +
-    labs(x = 'Population/1000', y = 'Number of States') +
-    ggtitle(paste(target.year, 'Prison Population'))
+    labs(x = 'Population/1000', y = 'Number of States')
+    # ggtitle(paste(target.year, 'Prison Population'))
   print(plot)
 
   plot
 }
 
-population.histogram(pbs, 1980, 2)
+plot <- population.histogram(pbs, 1980, 2)
 save.plot(plot, figure.dir, 'population_histogram_1980.pdf')
 
-population.histogram(pbs, 2010, 10)
+plot <- population.histogram(pbs, 2010, 10)
 save.plot(plot, figure.dir, 'population_histogram_2010.pdf')
+
+plot <- population.histogram(pbs, 2010, 1)
+save.plot(plot, figure.dir, 'population_histogram_2010_small_bins.pdf')
 
 # all years doesn't make much sense
 plot <- ggplot(pbs, aes(x = prison.population / 1000)) + 
   geom_histogram(fill = 'lightblue', color = 'black', binwidth = 10) +
-  labs(x = 'Population/1000', y = 'Number of States') +
-  ggtitle('1978 - 2012 Prison Population')
+  labs(x = 'Population/1000', y = 'Number of States') 
+
 print(plot)
-save.plot(plot, figure.dir, 'population_histogram_1978-2010.pdf')
+save.plot(plot, figure.dir, 'population_histogram_1978_2010.pdf')
 
 # *** incarceration rates ***
 # returns a new data frame with an incarceration rate column added and rows
@@ -42,9 +45,9 @@ rate.histogram <- function(df, target.year, bw) {
   plot
 }
 
-rate.histogram(pbs, 1980, 20)
+plot <- rate.histogram(pbs, 1980, 20)
 save.plot(plot, figure.dir, 'rate_histogram_1980.pdf')
 
-rate.histogram(pbs, 2010, 100)
+plot <- rate.histogram(pbs, 2010, 100)
 save.plot(plot, figure.dir, 'rate_histogram_2010.pdf')
 
