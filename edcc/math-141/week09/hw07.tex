@@ -32,13 +32,13 @@
 % \bottomrule
 % \end{tabular}
 
-\printanswers
+% \printanswers{}
 
-\ifprintanswers 
+\ifprintanswers{}
   \usepackage{2in1, lscape} 
 \fi
 
-\date{March 27, 2013}
+\date{\today}
 \author{}
 \title{Math 141 \\ Homework 7}
 
@@ -50,24 +50,24 @@
 
 \begin{itemize*}
   \item Read Section 3.1
-  \item Section 3.1: 5-17, 21, 23-30, 33, 35-36
+  \item Section 3.1: 5--17, 21, 23--30, 33, 35--36
 \end{itemize*}
 
-\ifprintanswers
+\ifprintanswers{}
   \pagebreak
 \fi
 
 \section{Extra Credit}
 Section 3.1: 73
 
-\ifprintanswers
+\ifprintanswers{}
 
   If $f(x)$ is a monomial with $x$ raised to an even power, then $f(x)$ is an even function.  If $n$ is a positive
   integer:
   \begin{align*}
     f(x)  &= x^{2n} \\
     \\
-    f(-x) &= (-x)^{2n} \\
+    f(-x) &= \del{ -x }^{2n} \\
           &= x^{2n} \\
           &= f(x) \\
   \end{align*}
@@ -76,8 +76,8 @@ Section 3.1: 73
   \begin{align*}
     f(x)  &= x^{2n + 1} \\
     \\
-    f(-x) &= (-x)^{2n + 1} \\
-          &= (-x)^{2n} (-x) \\
+    f(-x) &= \del{ -x }^{2n + 1} \\
+          &= \del{ -x }^{2n} (-x) \\
           &= x^{2n} (-x) \\
           &= -x^{2n + 1} \\
           &= -f(x) \\
@@ -132,7 +132,7 @@ Section 3.1: 73
 %    \caption{Extra Credit}
 %  \end{figure}
 
-  \ifprintanswers
+  \ifprintanswers{}
     \pagebreak
   \fi
 
@@ -165,7 +165,7 @@ Section 3.1: 73
             \begin{align*}
               f(x) &= x^2 + 3x \\
               &= x^2 + 3x + \frac{9}{4} - \frac{9}{4} \\
-              &= \left( x + \frac{3}{2} \right)^2 - \frac{9}{4} \\
+              &= \del{ x + \frac{3}{2} }^2 - \frac{9}{4} \\
             \end{align*}
           \end{solution}
 
@@ -184,8 +184,8 @@ Section 3.1: 73
               f(x)           &= 2x^2 + 4x \\
               \frac{f(x)}{2} &= x^2 + 2x \\
                              &= x^2 + 2x + 1 - 1 \\
-                             &= (x + 1)^2 - 1 \\
-              f(x)           &= 2(x + 1)^2 - 2 \\
+                             &= \del{x + 1}^2 - 1 \\
+              f(x)           &= 2\del{x + 1}^2 - 2 \\
             \end{align*}
           \end{solution}
         \item Find the vertex.
@@ -203,17 +203,17 @@ Section 3.1: 73
 
   \begin{description}
 
-    \item[5] III - odd power with positive leading coefficient
+    \item[5] III---odd power with positive leading coefficient
 
-    \item[6] I - even power with negative leading coefficient
+    \item[6] I---even power with negative leading coefficient
 
-    \item[7] V - odd power with negative leading coefficient
+    \item[7] V---odd power with negative leading coefficient
       
-    \item[8] II - even power with positive leading coefficient, not shrunk vertically
+    \item[8] II---even power with positive leading coefficient, not shrunk vertically
       
-    \item[9] VI - even power with positive leading coefficient, shrunk vertically
+    \item[9] VI---even power with positive leading coefficient, shrunk vertically
 
-    \item[10] IV - odd power with negative leading coefficient
+    \item[10] IV---odd power with negative leading coefficient
 
     \item[11]
       \begin{figure}[H]
@@ -254,21 +254,21 @@ Section 3.1: 73
       \begin{figure}[H]
         \centering
         \includegraphics[scale=0.9]{problem16.eps}
-        \caption*{Problem 16: $P(x) = \frac{1}{5} x (x - 5)^2$}
+        \caption*{Problem 16: $P(x) = \frac{1}{5} x \del{x - 5}^2$}
       \end{figure}
 
     \item[17]
       \begin{figure}[H]
         \centering
         \includegraphics[scale=0.9]{problem17.eps}
-        \caption*{Problem 17: $P(x) = (x - 1)^2(x - 3)$}
+        \caption*{Problem 17: $P(x) = \del{x - 1}^2(x - 3)$}
       \end{figure}
 
     \item[21]
       \begin{figure}[H]
         \centering
         \includegraphics[scale=0.9]{problem21.eps}
-        \caption*{Problem 21: $P(x) = x^3(x + 2)(x - 3)^2$}
+        \caption*{Problem 21: $P(x) = x^3(x + 2)\del{x - 3}^2$}
       \end{figure}
 
     \item[23] 
@@ -365,7 +365,7 @@ Section 3.1: 73
              &= x^2(x + 1) - (x + 1) \\
              &= (x^2 - 1)(x + 1) \\
              &= (x - 1)(x + 1)(x + 1) \\
-             &= (x - 1)(x + 1)^2 \\
+             &= (x - 1)\del{x + 1}^2 \\
         x    &= \{ -1, 1 \} \\
       \end{align*}
       
@@ -400,7 +400,7 @@ Section 3.1: 73
              &= x^3(x - 2) - 8(x - 2) \\
              &= (x^3 - 8)(x - 2) \\
              &= (x - 2)(x - 2)(x^2 + 2x + 4) \text{ difference of two cubes} \\
-             &= (x - 2)^2(x^2 + 2x + 4) \\
+             &= \del{x - 2}^2(x^2 + 2x + 4) \\
         x    &= 2 \\
       \end{align*}
       
@@ -427,9 +427,9 @@ Section 3.1: 73
     \item[36] 
       \begin{align*}
         P(x) &= x^6 - 2x^3 + 1 \\
-             &= (x^3 - 1)^2 \\
-             &= ((x - 1)(x^2 + x + 1))^2 \\
-             &= (x - 1)^2 (x^2 + x + 1)^2 \\
+             &= \del{x^3 - 1}^2 \\
+             &= \del{(x - 1)(x^2 + x + 1)}^2 \\
+             &= \del{x - 1}^2 \del{x^2 + x + 1}^2 \\
         x    &= 1 \\
       \end{align*}
       
@@ -441,12 +441,12 @@ Section 3.1: 73
 
   \end{description}
 \else
-  \vspace{3 cm}
+  \vspace{9 cm}
   \begin{quote}
-    {\em 
+    \begin{em}
       A good person will resist an evil system with his whole soul. Disobedience of the laws of an evil state is
       therefore a duty.
-    }    
+    \end{em}
   \end{quote}
   \hspace{1 cm} --Mahatma Gandhi
 

@@ -32,13 +32,13 @@
 % \bottomrule
 % \end{tabular}
 
-\printanswers
+% \printanswers
 
-\ifprintanswers 
+\ifprintanswers{}
   \usepackage{2in1, lscape} 
 \fi
 
-\date{April 10, 2013}
+\date{\today}
 \author{}
 \title{Math 141 \\ Homework 8}
 
@@ -50,13 +50,13 @@
 
   \begin{itemize*}
     \item Read Section 3.2
-    \item Section 3.2: 1-12, 17-22, 31-36, 40-44, 51-52, 57-58, 63-64
+    \item Section 3.2: 1--12, 17--22, 31--36, 40--44, 51--52, 57--58, 63--64
   \end{itemize*}
 
   \section{Extra Credit}
   Section 3.2, problem 67
 
-  \ifprintanswers
+  \ifprintanswers{}
     \begin{solution}
       It's usually easier to do the division than it is to evaluate large powers.  In this case, however, since the $x$
       value is $\pm 1$, it's easier to evaluate the polynomial than it is to do the division.  Evaluating the polynomial
@@ -83,7 +83,7 @@
 
   \begin{enumerate}
 
-    \uplevel{For problems 1-2, find $f \circ g$, $g \circ f$, $f \circ f$, $g \circ g$}
+    \uplevel{For problems 1--2, find $f \circ g$, $g \circ f$, $f \circ f$, $g \circ g$}
 
     \item $f(x) = \sqrt{x - 1}$; $g(x) = x^2 - 4$
       \begin{solution}
@@ -105,7 +105,7 @@
         \end{align*}
       \end{solution}
 
-    \ifprintanswers
+    \ifprintanswers{}
       \pagebreak
     \fi
 
@@ -122,7 +122,7 @@
           \begin{solution}
               The surface area of a cube is $S(x) = 6x^2$, so the function is 
               \[
-                (S \circ x)(t) = 6 (x + 2t)^2 = \boxed{\unitfrac[24t^2 + 24tx + 6x^2]{m^2}{s}}
+                (S \circ x)(t) = 6 \del{x + 2t}^2 = \boxed{\unitfrac[24t^2 + 24tx + 6x^2]{m^2}{s}}
               \]
           \end{solution}
 
@@ -130,7 +130,7 @@
           \begin{solution}
               The volume of a cube is $V(x) = x^3$, so the function is 
               \[
-                (V \circ x)(t) = (x + 2t)^3 = \boxed{\unitfrac[8t^3 + 12t^2x + 6tx^2 + x^3]{m^3}{s}}
+                (V \circ x)(t) = \del{x + 2t}^3 = \boxed{\unitfrac[8t^3 + 12t^2x + 6tx^2 + x^3]{m^3}{s}}
               \]
           \end{solution}
 
@@ -138,7 +138,7 @@
 
   \end{enumerate}
 
-  \ifprintanswers
+  \ifprintanswers{}
 
   \pagebreak
 
@@ -411,7 +411,7 @@
         $x$ axis and changes direction at that point.
 
         \begin{align*}
-          P(x) &= a(x + 1)(x - 2)^2 \\
+          P(x) &= a(x + 1)\del{x - 2}^2 \\
                &= a(x^3 - 3x^2 + 4) \\
         \end{align*}
 

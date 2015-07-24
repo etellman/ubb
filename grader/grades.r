@@ -1,9 +1,5 @@
-grades.dir <- '~/Documents/U/ubb/algebra/grades'
-
-# returns the number of points for a list of problems
-points <- function(problems) {
-  5 * length(problems)
-}
+grades.dir <- '~/Documents/U/ubb/asu/math205/grades'
+setwd(grades.dir)
 
 # returns the percentage given a number of points wrong and total number of points
 percentage <- function(score, points) {
@@ -11,8 +7,7 @@ percentage <- function(score, points) {
   c(actual = actual, percentage = round(100 * (actual) / points))
 }
 
-possible <- points(c(20:24, 40:44, 60:64, 10:14, 20:24, 30:34, 40:44, 46, 51))
-
+possible <- 5 * length(c(23:26, 29:35, 39:41, 44:45))
 percentage(-3, possible)
 
 grades.file <- paste(grades.dir, 'grades.csv', sep = '/')
