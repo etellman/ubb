@@ -29,25 +29,17 @@ spin (Wheel bettingStrategy rolls) =
 fixedNumGames :: Wheel -> Int -> Int -> [Money]
 fixedNumGames wheel gamesPerPlayer players 
   | players == 0 = []
-  | otherwise = nextPlayerResult : 
+  | otherwise = cash nextPlayer : 
                 (fixedNumGames nextWheel gamesPerPlayer (players - 1)) 
-      where (nextPlayerResult, nextWheel) = games wheel 50
+      where (nextWheel, nextPlayer) = games wheel (Player 0 0)
 
 -- play the specified number of games and return the amount of money remaining
-games' :: Wheel -> Player -> (Wheel, Player)
-games' wheel player 
-  | gamesPlayed player == 50 = (wheel player)
-  | otherwise = games' nextWheel nextPlayer
+games :: Wheel -> Player -> (Wheel, Player)
+games wheel player 
+  | gamesPlayed player == 50 = (wheel, player)
+  | otherwise = games nextWheel nextPlayer
       where (result, nextWheel) = spin wheel
             nextPlayer = (Player (cash player + result) (gamesPlayed player + 1))
-
--- play the specified number of games and return the amount of money remaining
-games :: Wheel -> Int -> (Money, Wheel)
-games wheel numGames 
-  | numGames == 0 = (0, wheel)
-  | otherwise = (bet + otherBets, lastWheel)
-      where (bet, nextWheel) = spin wheel
-            (otherBets, lastWheel) = games nextWheel (numGames - 1)
 
 -- play with some number of players, each with a fixed amount of money, returning the 
 -- number of games it took them to loose all their money for each player
