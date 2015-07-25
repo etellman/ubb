@@ -11,7 +11,7 @@ main = do
   -- print amount
 
   -- let results = fixedAmount oneNumber 10 20 rolls
-  putStrLn "delta.money"
+  putStrLn "cash,games.player"
   printResults results
 
   
@@ -28,10 +28,10 @@ spin (Wheel bettingStrategy rolls) =
   (bettingStrategy (head rolls), 
     Wheel { bettingStrategy = bettingStrategy, rolls = (tail rolls) })
 
-simulation :: DonePlaying -> Wheel -> Int -> [Money]
+simulation :: DonePlaying -> Wheel -> Int -> [Players]
 simulation donePlaying wheel players 
   | players == 0 = []
-  | otherwise = cash nextPlayer : 
+  | otherwise = nextPlayer : 
                 (simulation donePlaying nextWheel (players - 1)) 
       where (nextWheel, nextPlayer) = games' donePlaying wheel (Player 0 0)
 
@@ -75,9 +75,9 @@ fourNumbers = roulette 4 8
 oneNumber :: Roulette
 oneNumber = roulette 1 35
 
-printResults :: [Int] -> IO()
+printResults :: [Player] -> IO()
 printResults [] = return ()
-printResults (x:xs) = do
-  print x
-  printResults xs
+printResults (player:players) = do
+  print (cash player) ++ "," ++ (gamesPlayed player)
+  printResults players
 
