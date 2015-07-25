@@ -34,6 +34,14 @@ fixedNumGames wheel gamesPerPlayer players
       where (nextPlayerResult, nextWheel) = games wheel 50
 
 -- play the specified number of games and return the amount of money remaining
+games' :: Wheel -> Player -> (Wheel, Player)
+games' wheel player 
+  | gamesPlayed player == 50 = (wheel player)
+  | otherwise = games' nextWheel nextPlayer
+      where (result, nextWheel) = spin wheel
+            nextPlayer = (Player (cash player + result) (gamesPlayed player + 1))
+
+-- play the specified number of games and return the amount of money remaining
 games :: Wheel -> Int -> (Money, Wheel)
 games wheel numGames 
   | numGames == 0 = (0, wheel)
