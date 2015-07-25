@@ -14,6 +14,9 @@ type Money = Int
 type Roulette = Roll -> Money
 data Wheel = Wheel { bettingStrategy :: Roulette, rolls :: [Int] }
 
+spin :: Wheel -> (Money, Wheel)
+spin wheel(bettingStrategy, rolls) = (0, Wheel(bettingStrategy, tail rolls))
+
 fixedNumGames :: Roulette -> Int -> Int -> Rolls -> [Int]
 fixedNumGames roulette gamesPerPlayer players rolls 
   | players == 0 = []
