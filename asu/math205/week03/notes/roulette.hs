@@ -3,7 +3,8 @@ import System.Random
 main = do
   gen <- getStdGen 
   let infiniteRolls = randomRs (0, 37) gen :: [Int]
-  let results = fixedNumGames (Wheel oddEven infiniteRolls) 50 20 
+  -- let results = fixedNumGames (Wheel oddEven infiniteRolls) 50 20 
+  let results = simulation (playedNGames 50) (Wheel oddEven infiniteRolls) 20 
 
   -- let wheel = Wheel { bettingStrategy = oddEven, rolls = infiniteRolls }
   -- let (amount, newWheel) = spin wheel
@@ -17,6 +18,7 @@ main = do
 type Roll = Int
 type Rolls = [Roll]
 type Money = Int
+type DonePlaying = Player -> Bool
 type Roulette = Roll -> Money 
 data Wheel = Wheel { bettingStrategy :: Roulette, rolls :: [Int] } 
 data Player = Player { cash :: Money, gamesPlayed :: Int } 
@@ -26,18 +28,21 @@ spin (Wheel bettingStrategy rolls) =
   (bettingStrategy (head rolls), 
     Wheel { bettingStrategy = bettingStrategy, rolls = (tail rolls) })
 
-fixedNumGames :: Wheel -> Int -> Int -> [Money]
-fixedNumGames wheel gamesPerPlayer players 
+simulation :: DonePlaying -> Wheel -> Int -> [Money]
+simulation donePlaying wheel players 
   | players == 0 = []
   | otherwise = cash nextPlayer : 
-                (fixedNumGames nextWheel gamesPerPlayer (players - 1)) 
-      where (nextWheel, nextPlayer) = games wheel (Player 0 0)
+                (simulation donePlaying nextWheel (players - 1)) 
+      where (nextWheel, nextPlayer) = games' donePlaying wheel (Player 0 0)
+
+playedNGames :: Int -> Player -> Bool
+playedNGames numGames player = gamesPlayed player >= numGames 
 
 -- play the specified number of games and return the amount of money remaining
-games :: Wheel -> Player -> (Wheel, Player)
-games wheel player 
-  | gamesPlayed player == 50 = (wheel, player)
-  | otherwise = games nextWheel nextPlayer
+games' :: DonePlaying -> Wheel -> Player -> (Wheel, Player)
+games' donePlaying wheel player 
+  | donePlaying player = (wheel, player)
+  | otherwise = games' donePlaying nextWheel nextPlayer
       where (result, nextWheel) = spin wheel
             nextPlayer = (Player (cash player + result) (gamesPlayed player + 1))
 
