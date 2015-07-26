@@ -79,15 +79,15 @@ sink()
 with(before.1991, cor(crime.rate, incarceration.rate))
 with(after.1991, cor(crime.rate, incarceration.rate))
 
-plot <- ggplot(crime, aes(x = year, y = incarceration.rate)) + 
+crime.m <- melt(crime, id = 'year')
+
+str(crime.m)
+
+plot <- ggplot(crime.m, aes(x = year, y = value)) + 
+  facet_grid(. ~ variable) +
   geom_line() +
-  labs(x = "Year", y = "Incarceration Rate") +
-  ggtitle("Incarceration Rate")
+  theme_ubb + 
+  labs(x = "Year", y = "Rate")
 print(plot)
 
-plot <- ggplot(crime, aes(x = year, y = crime.rate)) + 
-  geom_line() +
-  labs(x = "Year", y = "Crime Rate") +
-  ggtitle("Crime Rate")
-print(plot)
-
+save.plot(plot, figure.dir, "rates_over_time.pdf")
