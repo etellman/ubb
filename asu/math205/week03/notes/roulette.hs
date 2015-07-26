@@ -3,15 +3,20 @@ import System.Random
 main = do
   gen <- getStdGen 
   let infiniteRolls = randomRs (0, 37) gen :: [Int]
-  -- let results = fixedNumGames (Wheel oddEven infiniteRolls) 50 20 
-  let results = simulation (playedNGames 50) (Wheel oddEven infiniteRolls) 20 
+  let wheel = (Wheel oneNumber infiniteRolls)
+  let numPlayers = 1000
+
+  -- let startingCash = 0
+  -- let results = simulation (nGames 50) startingCash wheel numPlayers 
+
+  let startingCash = 50
+  let results = simulation spendAll startingCash wheel numPlayers 
 
   -- let wheel = Wheel { bettingStrategy = oddEven, rolls = infiniteRolls }
   -- let (amount, newWheel) = spin wheel
   -- print amount
-
   -- let results = fixedAmount oneNumber 10 20 rolls
-  putStrLn "cash,games.player"
+  putStrLn "cash,games.played"
   printResults results
 
   
@@ -23,42 +28,33 @@ type Roulette = Roll -> Money
 data Wheel = Wheel { bettingStrategy :: Roulette, rolls :: [Int] } 
 data Player = Player { cash :: Money, gamesPlayed :: Int } 
 
+-- a single spin of the wheel, returning the result and the next wheel to spin
 spin :: Wheel -> (Money, Wheel)
 spin (Wheel bettingStrategy rolls) = 
   (bettingStrategy (head rolls), 
     Wheel { bettingStrategy = bettingStrategy, rolls = (tail rolls) })
 
-simulation :: DonePlaying -> Wheel -> Int -> [Players]
-simulation donePlaying wheel players 
+-- simulates some number of players playing roulette
+simulation :: DonePlaying -> Money -> Wheel -> Int -> [Player]
+simulation donePlaying startingCash wheel players 
   | players == 0 = []
   | otherwise = nextPlayer : 
-                (simulation donePlaying nextWheel (players - 1)) 
-      where (nextWheel, nextPlayer) = games' donePlaying wheel (Player 0 0)
+                (simulation donePlaying startingCash nextWheel (players - 1)) 
+      where (nextWheel, nextPlayer) = games donePlaying wheel (Player startingCash 0)
 
-playedNGames :: Int -> Player -> Bool
-playedNGames numGames player = gamesPlayed player >= numGames 
+nGames :: Int -> Player -> Bool
+nGames numGames player = gamesPlayed player >= numGames 
+
+spendAll :: Player -> Bool
+spendAll player = cash player <= 0
 
 -- play the specified number of games and return the amount of money remaining
-games' :: DonePlaying -> Wheel -> Player -> (Wheel, Player)
-games' donePlaying wheel player 
+games :: DonePlaying -> Wheel -> Player -> (Wheel, Player)
+games donePlaying wheel player 
   | donePlaying player = (wheel, player)
-  | otherwise = games' donePlaying nextWheel nextPlayer
+  | otherwise = games donePlaying nextWheel nextPlayer
       where (result, nextWheel) = spin wheel
             nextPlayer = (Player (cash player + result) (gamesPlayed player + 1))
-
--- play with some number of players, each with a fixed amount of money, returning the 
--- number of games it took them to loose all their money for each player
-fixedAmount :: Roulette -> Int -> Money -> Rolls -> [Int]
-fixedAmount roulette players cash rolls 
-  | players == 0 = []
-  | otherwise = result : (fixedAmount roulette (players - 1) cash (drop result rolls)) 
-      where result = spendAll roulette cash rolls 
-
--- return the number of games it takes to spend all your money 
-spendAll :: Roulette -> Money -> Rolls -> Int
-spendAll roulette cash rolls 
-  | cash == 0 = 0
-  | otherwise = 1 + spendAll roulette (cash + roulette(rolls !! 0)) (tail rolls)  
 
 -- play one game of roulette
 roulette :: Int -> Money -> Roll -> Money
@@ -78,6 +74,7 @@ oneNumber = roulette 1 35
 printResults :: [Player] -> IO()
 printResults [] = return ()
 printResults (player:players) = do
-  print (cash player) ++ "," ++ (gamesPlayed player)
+  let string = (show $ cash player) ++ "," ++ (show $ gamesPlayed player)
+  putStrLn string
   printResults players
 

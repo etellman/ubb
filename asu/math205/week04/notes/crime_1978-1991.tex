@@ -1,0 +1,77 @@
+\documentclass{article}
+
+\usepackage{units} 
+\usepackage{parskip} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{commath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+
+\everymath{\displaystyle}
+
+\author{}
+\title{Crime and Incarceration Rates}
+\date{\today}
+
+\begin{document}
+
+  \maketitle
+
+  As the new head of the DOC, you need to justify your new budget to the
+  governor.  Fortunately, you have data which relate the incarceration rate to
+  the crime rate.  Prepare some graphs and/or statistics which will help you
+  explain to the governor why your budget needs to increase in the coming year.
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rrrrr}
+      \toprule
+      & \multicolumn{2}{c}{Raw Rate} & \multicolumn{2}{c}{z-score } \\
+      \cmidrule(r){2-3} \cmidrule(r){4-5} 
+      Year & Crime  & Incarceration & Crime & Incarceration \\
+      \midrule
+      1978 & 497.80 & 258           & -1.45 & -1.25 \\
+      1979 & 548.90 & 263           & -0.76 & -1.21 \\
+      1980 & 596.60 & 274           & -0.11 & -1.11 \\
+      1981 & 594.30 & 303           & -0.14 & -0.85 \\
+      1982 & 570.80 & 335           & -0.46 & -0.57 \\
+      1983 & 537.70 & 352           & -0.91 & -0.43 \\
+      1984 & 539.90 & 368           & -0.88 & -0.29 \\
+      1985 & 556.60 & 395           & -0.65 & -0.05 \\
+      1986 & 620.10 & 424           & 0.20  & 0.21 \\
+      1987 & 612.50 & 450           & 0.10  & 0.43 \\
+      1988 & 640.60 & 479           & 0.48  & 0.69 \\
+      1989 & 666.90 & 532           & 0.83  & 1.15 \\
+      1990 & 729.60 & 572           & 1.68  & 1.50 \\
+      1991 & 758.20 & 603           & 2.07  & 1.77 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Data}
+  \end{table}
+
+  \begin{table}[ht]
+    \centering
+    \begin{tabular}{lrr}
+      \toprule
+                         & $\mu$  & $\sigma$ \\
+      \midrule
+      Crime Rate         & 605.04 & 74.15 \\
+      Incarceration Rate & 400.57 & 114.13 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Summary}
+  \end{table}
+
+\end{document}
+
