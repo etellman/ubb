@@ -1,0 +1,166 @@
+% no answer key
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\everymath{\displaystyle}
+
+\title{Statistics \\ Homework Seven}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Homework}
+    \begin{itemize*}
+      \item read Chapter 8 
+      \item exercises: 25, 27--28, 32--36, 38, 41--43, 47
+    \end{itemize*}
+
+  \ifprintanswers{}
+    \begin{description}
+
+      \item[25] The population is adults 18 and over and the sample is the 1027
+        people actually interviewed.
+
+      \item[27] If you number the students from 01 to to 40 and use Table B
+        starting at line 117, you get students: 
+
+        \fbox{ 38, 16, 32, 18, 37, 06, 23, 19, 03 and 25. }
+
+      \item[28] The first five codes would be: codes 
+        \fbox{288, 229, 131, 303, and 007}.
+
+      \item[32] 
+        \begin{description}
+          \item[false] There will typically be around four 0's in each row but
+            some rows will have more and some less.  The mean number of zeros
+            per row will be 4.
+
+          \item[true] Since there are 100 different pairs of digits, any
+            particular pair has a 1/100 chance of appearing, including the pair
+            00.
+
+          \item[false] This pattern will come up once in a while but not very
+            frequently.
+        \end{description}
+
+      \item[33]
+        \begin{enumerate}[(a)]
+          \item The population is all the residential households.
+
+          \item 1169 out of 2000 or \fbox{ 58\% } didn't respond.
+
+          \item People are likely to telescope the events, thinking that they've
+            seen more movies in the last 12 months than they actually have.
+        \end{enumerate}
+
+      \item[34] The online poll only included people who were watching Lou
+        Dobb's show.  Lou's audience is primarily composed of people who think
+        issuing driver's licenses to illegal immigrants is a bad idea, so they
+        don't represent the population as a whole.
+
+      \item[35] 40,927 out of 45,956 or \fbox{ 89\% } didn't respond.
+
+      \item[36] 
+        \begin{enumerate}[(a)]
+          \item If you assign each driver a number between 0001 and 5024 and use
+            line 104 of Table B, the first 5 drivers are: 
+          
+          \fbox{ 1388, 0746, 0227, 4001 and 1858 }
+
+          \item People generally don't want to admit they ran a red light, so
+            the actual number is probably higher.
+        \end{enumerate}
+
+      \item[38] Everybody has a 1 in 10 chance of being interviewed.  This is a
+        stratified sample since the students are divided into two groups
+        according to age.
+
+      \item[41] 
+        \begin{enumerate}[(a)]
+          \item The only thing you need Table B for in this example is the
+          starting number.  After that, you take every 40th number, since
+          $200/5 = 40$. 
+          
+          The numbers you get are: $\boxed{ \{35, 75, 115, 155, 195 \} }$
+
+          \item There could be some repeating pattern in the data which shows up
+          when you use a systematic sample.  For example, suppose you are
+          sampling houses and there are 5 houses per block.  If you start with
+          house 1 and select every 10th house, you will always be selecting a
+          corner house and corner houses might not be representative of all the
+          houses.
+        \end{enumerate}
+
+      \item[42]
+        \begin{enumerate}[(a)]
+          \item Houses that don't have land-line telephones or have unlisted
+          numbers are omitted.
+
+          \item By selecting random numbers, you can include the people with
+          unlisted numbers and people with cell phones.  You'll still miss the
+          people without phones, of course.
+
+        \end{enumerate}
+
+      \item[43]
+        \begin{enumerate}[(a)]
+          \item As described in question 42, random digit dialing means that the
+            computer dials digits at random instead of going through a phone
+            directory.
+
+          \item Selecting the adult with the most recent birthday takes a SRS of
+            the adults in the household.  If you don't do this, your sample
+            might be biased because you mostly get the people who are most
+            likely to answer the phone and this group might not be
+            representative.
+        \end{enumerate}
+
+      \item[47]
+        \begin{enumerate}[(a)]
+          \item The sampling error for Hispanics is higher because there are
+          fewer of them in the sample.  The smaller your sample, the less likely
+          it is that the sample is representative of the population.
+
+          \item There are even fewer Cubans than Hispanics, so the sample is so
+          small that you can't draw any reliable conclusions about the
+          population from the sample.
+        \end{enumerate}
+
+  \end{description}
+
+  \else
+    \vspace{11 cm}
+    \begin{quote}
+      \begin{em}
+        For one man cannot do right in one department of life whilst he is
+        occupied in doing wrong in any other department. Life is one indivisible
+        whole.
+      \end{em}
+    \end{quote}
+    \hspace{1 cm} --Mahatma Gandhi
+  \fi
+
+\end{document}
+
