@@ -1,0 +1,437 @@
+% % no answer key
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+\title{Statistics \\ Week Five}
+\date{\today}
+\author{}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+  \section{Equations of Lines}
+  \begin{itemize*}
+    \item Explain slope, y-intercept, etc.
+    \item show how to get slope from two points
+    \item show how to get equation from slope and one point
+  \end{itemize*}
+
+  \section{Halftime vs. Final}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/nfl/ht_vs_final.pdf}
+    \caption{Halftime vs. Final Score}
+  \end{figure}
+
+  % \begin{figure}[H]
+  %   \centering
+  %   \includegraphics{figures/nfl/ht_10_final.pdf}
+  %   \caption{Final score with a halftime score of 10}
+  % \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/nfl/ht_vs_mean_final.pdf}
+    \caption{Halftime vs. Mean Final Score}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/nfl/ht_vs_mean_final_scaled.pdf}
+    \caption{Halftime vs. Mean Final (scaled)}
+  \end{figure}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rrrrr}
+      \toprule
+      Halftime & Mean Final & Halftime s & Final s & slope\\
+      \midrule
+      0        & 9.53       & -1.48      & -1.15   & NA \\
+      3        & 13.06      & -1.07      & -0.81   & 0.83 \\
+      7        & 17.76      & -0.53      & -0.36   & 0.83 \\
+      10       & 20.96      & -0.12      & -0.05   & 0.75 \\
+      14       & 24.61      & 0.43       & 0.30    & 0.64 \\
+      17       & 27.81      & 0.84       & 0.61    & 0.75 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Common halftime scores (at least 500 games)}
+  \end{table}
+
+  \begin{tabular}[H]{rrl}
+    \toprule
+    Min Games & Mean Slope & Notes \\
+    \midrule
+    500       & 0.76       & not enough samples\\
+    all       & 0.84       & outliers \\
+    100       & 0.73       & just right \\
+    \bottomrule
+  \end{tabular}
+
+  $r = 0.7376$
+
+  Line goes through $(0, 0)$, so the equation is:
+  \[
+    \hat{z}_y = r z_x
+  \]
+
+  for halftime/final scores:
+  \[
+    \hat{z}_y = 0.7376 z_x
+  \]
+
+  \begin{itemize*}
+    \item $r$ is number of y standard deviations change for each x standard
+      deviation change 
+
+    \item $r = \pm 1$ for exact match
+
+    \item $r = 0$ for no correlation.  If you change x, you don't expect any
+      corresponding change in y
+
+    \item minimizes square of differences from prediction
+  \end{itemize*}
+
+  Average slope of the two means is approximately $r$.
+  examples:
+
+  \begin{tabular}[H]{rrrr}
+    \toprule
+    x  & $z_x$   & $\hat{z}_y$ & y \\
+    \midrule
+    7  & $-0.53$ & $-0.39$     & 17.4 \\
+    17 & $0.84$  & $0.62$      & 27.9 \\
+    \bottomrule
+  \end{tabular}
+
+  If we want things in points instead of standard deviations, we have to convert
+  everything:
+
+  slope:
+  \[
+    a = r \cdot \frac{s_y}{s_x}
+  \]
+
+  Line goes through $(\bar{x}, \bar{y})$.  Find y-intercept:
+
+  \begin{align*}
+    \bar{y} & = a \bar{x} + b \\
+    b         & = \bar{y} - a \bar{x} \\
+  \end{align*}
+
+  \begin{tabular}[H]{lrr}
+    \toprule
+             & mean & standard deviation \\
+    \midrule
+    halftime & 10.9 & 7.4 \\
+    final    & 21.5 & 10.4 \\
+    \bottomrule
+  \end{tabular}
+
+  \begin{align*}
+    a & = 0.7376 \cdot \frac{10.4}{7.4} \\
+      & = 1.04 \\
+    \\
+    b & = 21.5 - 1.04 \cdot 10.9 \\
+      & = 10.16 \\
+    \\
+    \hat{y} &= 1.04 x + 10.16 \\
+  \end{align*}
+
+  \begin{tabular}[H]{rr}
+    \toprule
+    halftime & predicted final \\
+    \midrule
+    14       & 24.8 \\
+    3        & 13.2 \\
+    \bottomrule
+  \end{tabular}
+
+  \section{Final vs. Halftime}
+
+  You get a different model going the other direction.
+  \begin{align*}
+    a & = 0.7376 \cdot \frac{7.4}{10.4} \\
+      & = 0.52 \\
+    \\
+    b & = 10.9 - 0.52 \cdot 21.5 \\
+      & = -0.27 \\
+    \\
+    \hat{y} &= 0.52 x - 0.27 \\
+  \end{align*}
+
+  without rounding error:
+  \[
+    \hat{y} = 0.5195 - 0.3036 x \\
+  \]
+
+  \begin{tabular}[H]{rr}
+    \toprule
+    final & predicted halftime \\
+    \midrule
+    30    & 15.28 \\
+    10    & 4.89 \\
+    \bottomrule
+  \end{tabular}
+
+  \section{Examples}
+  \begin{itemize}
+    \item In a class, midterm and final scores have a mean of 60 and an SD of 15.
+      The correlation between midterm and final scores is 0.5.  Estimate the average
+      final scores for a midterm score of:
+
+      \begin{enumerate}[(a)]
+        \item midterm: 75
+          \begin{solution}
+            1 SD above the mean, final should be $60 + 0.5 \cdot 15 = \boxed{
+            67.5 }$
+          \end{solution}
+
+        \item midterm: 30
+          \begin{solution}
+            2 SD below the mean, final should be $60 - 0.5 \cdot 30 = \boxed{ 45
+            }$
+          \end{solution}
+          
+        \item midterm: 60
+          \begin{solution}
+            At the mean---final also 60
+          \end{solution}
+      \end{enumerate}
+
+    \item For men age 45--54 in HANES sample:
+      \begin{tabular}[H]{lrr}
+               & mean   & SD \\
+        height & 69 in  & 3 in \\
+        weight & 171 lb & 30 lb \\
+      \end{tabular}
+
+      $r = 0.4$
+
+      \begin{enumerate}[(a)]
+      
+        \item what is the expected weight for a 69 inch man?
+        \begin{solution}
+          1 SDs above mean.  $171 + 0.4 \cdot 30 = \unit[183]{lb}$
+        \end{solution}
+
+        \item what is the expected weight for a 63 inch man?
+        \begin{solution}
+          2 SDs below mean.  $171 - 2 \cdot 0.4 \cdot 30 = \unit[147]{lb}$
+        \end{solution}
+
+        \item What is the general equation for the regression line?
+          \begin{solution}
+            \[
+              \hat{y} = 0.9913 x + 102.6
+            \]
+          \end{solution}
+
+        \item what is the expected weight for a 0 inch tall man?
+        \begin{solution}
+          102.6 lbs but you should be a little suspicious about a 0 inch tall
+          man.
+        \end{solution}
+
+      \end{enumerate}
+
+    \item For some school:
+      \begin{tabular}[H]{lrr}
+            & mean   & SD \\
+        SAT & 550  & 80 \\
+        GPA & 2.6 & 0.6 \\
+      \end{tabular}
+
+      $r = 0.4$
+
+      \begin{enumerate}[(a)]
+        \item
+          What is the expected GPA for a student with an SAT score of 650?
+
+          \begin{solution}
+            \[
+              z_x = \frac{650 - 550}{80} = 1.25
+            \]
+
+            1.25 SD above mean.
+
+            \[
+              \hat{z}_y = 0.4 \cdot 1.25 = 0.5
+            \]
+
+            Convert back to GPA\@:
+            \[
+              2.6 + 0.5 \cdot 0.6 = 2.9
+            \]
+          \end{solution}
+
+        \item
+          What is the expected GPA percentile for a student in the 90th
+          percentile for SAT scores?
+
+          \begin{solution}
+            convert to z-score: $z_{SAT} \approx 1.28$
+
+            calculate expected GPA z-score: 
+            \[
+              \hat{z}_{GPA} \approx 0.4 \cdot 1.28 = 0.512
+            \]
+
+            convert back to percentile:
+            \[
+              GPA \approx 0.6957
+            \]
+
+            He should expect to be around the 70th percentile.
+
+          \end{solution}
+      \end{enumerate}
+
+    \item The mean age 45--54 in the HANES sample had an average height of 69
+      inches.  This is the same as the overall average height.
+
+      T/F\@: their average weight should be around 171 lbs (overall average
+      weight)?
+
+      \begin{solution}
+        False.  
+        
+        The average weight for people 69 inches tall is the average of a
+        vertical slice over 69.  This probably will about match the overall
+        average.
+
+        However, men 45--54 don't all appear in the vertical slice over 69.
+        They're scattered about the graph.  Older men tend to be heavier for
+        their height, so the average weight of this group is probably higher
+        than 171 lbs.
+      \end{solution}
+
+    \item In regression of height to weight, men who are 73 inches tall average
+      176 lbs in weight. T/F\@: men who are 176 lbs average 73 inches tall?
+  \end{itemize}
+
+  \section{Residuals}
+
+  \begin{itemize*}
+    \item r.m.s. ``average'' error
+    \item sum of residuals always zero
+    \item draw graph of residuals from mean and show is same as standard deviation
+    \item residuals vs.\ linear regression less than residuals vs.\ mean by
+      factor of
+      $\sqrt{1- r^2}$.  Show r = 1, 0, -1
+
+    \item $r^2$ is measure how much regression explains variation in y based on
+      variation in x.
+
+  \end{itemize*}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rrrrrrrr}
+      \toprule
+      x & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\ 
+      y & 1 & 2 & 3 & 5 & 4 & 6 & 7 \\ 
+     \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \begin{align*}
+    s_y                & = 2.1602 \\
+    r                  & = 0.9643 \\
+    rms                & = 0.5722 \\
+    s_y \sqrt{1 - r^2} & = 0.5722 \\
+  \end{align*}
+
+
+  \section{Outliers}
+
+  \subsection{Middle}
+
+  Outliers in middle of x range don't have much effect because the line can't
+  move to accommodate them.  $r$ doesn't change much because high $z_y$ is
+  multiplied by $z_x$ close to zero.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/middle_outlier.pdf}
+    \caption{Outlier in Middle}
+  \end{figure}
+
+  $r = 0.4962168$
+
+  \subsection{End}
+
+  Outliers at end of x range have large effect because the line can move to
+  accommodate them.  
+  
+  $r$ decreases dramatically because high $z_y$ is multiplied by
+  large negative $z_x$.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/end_outlier.pdf}
+    \caption{Outlier at End}
+  \end{figure}
+
+  $r = -0.05157106$
+
+  \subsection{Middle Outlier}
+  \begin{itemize*}
+    \item outliers in middle of x range don't have much effect because the line can't
+      move to accommodate them
+
+    \item outliers at either end of the x range have a big effect because the line
+      moves to fit them in
+  \end{itemize*}
+
+  \section{Regression to the Mean}
+  For any repeated test, people tend to be closer to the mean on the second
+  attempt.
+
+  \subsubsection{Heights of Fathers vs.\ Heights of Sons} % (fold)
+
+  \begin{itemize}
+    \item draw graph with oval, father height on the x-axis
+    \item draw graph with standard deviations instead of heights
+    \item draw vertical slice at tall fathers. Sons of tall fathers tend to be
+      shorter than their father (regression to the mean)
+    \item draw vertical slice at short fathers. Sons of short fathers tend to be
+      taller than their father (regression to the mean)
+  \end{itemize}
+  
+  \subsection{Other Examples} % (fold)
+  
+  \begin{itemize*}
+    \item study of businesses which said American business climate encouraged
+      mediocrity
+    \item pilots with bad/good landings and instructor criticism/praise.
+    \item retake of standardized tests
+  \end{itemize*}
+
+\end{document}
+
