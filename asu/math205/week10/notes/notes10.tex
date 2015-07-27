@@ -1,0 +1,523 @@
+% % no answer key
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
+
+\usepackage{units} 
+\usepackage{parskip} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+\usepackage{commath}
+
+\everymath{\displaystyle}
+
+\title{Statistics \\ Week Ten}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+  \tableofcontents
+
+  \section{Combinations and Permutations}
+
+  For 8 choose 3, for example, numerator is $8 \times 7 \times 6 = 336$.
+  There are 336 different combinations of the letters A-H, without
+  repeating letters.
+
+  If you don't care about the order, for each triplet, there are 3 choices for
+  the first letter, 2 choices for the second letter, and only one choice for the
+  third letter. The number of times each triplet of letters occurs is: 
+  $3 \times 2 \times 1 = 6$.
+
+  The total number of different combinations, not paying attention to order is:
+  \[
+    \frac{336}{6} = 56
+  \]
+
+  \section{Collins Case}
+
+  \subsection{Cast}
+  \begin{description*}
+    \item[Juanita Brooks] elderly victim
+    \item[John Bass] witness
+    \item[Malcolm and Janet Collins] suspects
+  \end{description*}
+
+  \subsection{Investigation}
+  Brooks' son visited nearby gas stations until he found one that mentioned
+  interracial couple.
+
+  \subsection{Evidence}
+  Eyewitness descriptions of suspects:
+  \begin{itemize*}
+    \item woman with hair ``between light and dark blond'' and ponytail
+    \item yellow car
+    \item bearded and mustached black man
+    \item nobody could positively identify suspects in lineups
+    \item In trial, Bass claimed that Collins was person he saw in car, despite
+      failure to identify him earlier.
+  \end{itemize*}
+
+  Actual appearance of suspects:
+  \begin{itemize*}
+    \item woman light blond hair sometimes in ponytail
+    \item yellow car
+    \item clean shaven black man
+  \end{itemize*}
+
+  The police arrested, interrogated, harassed suspects in unsuccessful attempt
+  to extract confession.
+
+  \subsection{Alibi}
+
+  Janet was picked up by Malcolm from work about time crime had been committed
+  but no one was too sure about either time.
+
+  Both claimed to have gone to visit a friend, but exact time couldn't be
+  established.
+
+  Hair color, ponytail, and beard evidence all based on things easily changed.
+
+  \subsection{Trial}
+  Entire case based on probabilities:
+  \begin{itemize*}
+    \item Black man with a beard: 1 in 10
+    \item Man with a mustache: 1 in 4
+    \item White woman with blond hair: 1 in 3
+    \item Woman with ponytail: 1 in 10
+    \item Interracial couple in car: 1 in 1000
+    \item Yellow car: 1 in 10
+  \end{itemize*}
+
+  Chance of all of the above: 1 in 12,000,000.
+
+  Guilty verdict after 8 hours and 5 ballots.
+
+  \subsection{Appeals}
+
+  \subsubsection{Notes}
+  Malcolm lost first appeal.
+
+  In second appeal, 25 year old law clerk Lawrence Tribe pointed out flaws in
+  arguments:
+
+  \begin{itemize*}
+    \item all statistics made up
+    \item hair color, ponytail, beard, and mustache all easily altered
+    \item no reason to assume actual perpetrators were married 
+    \item product rule doesn't apply when probabilities aren't independent
+
+    \item 40\% probability of at least one other couple in LA area with similar
+      characteristics, even if you accept the original made-up prosecution
+      figures. 
+
+  \end{itemize*}
+
+  \subsubsection{Fabricated Statistics}
+  \begin{itemize*}
+    \item all statistics made up
+    \item hair color, ponytail, beard, and mustache all easily altered
+    \item no reason to assume actual perpetrators were married 
+  \end{itemize*}
+
+  From judgement:
+  \begin{quote}
+    \begin{em}
+      The prosecution produced no evidence whatsoever showing, or from which it
+      could be in any way inferred, that only one out of every ten cars which
+      might have been at the scene of the robbery was partly yellow, that only
+      one out of every four men who might have been there wore a mustache, that
+      only one out of every ten girls who might have been there wore a
+      ponytail, or that any of the other individual probability factors listed
+      were even roughly accurate.
+    \end{em}
+  \end{quote}
+
+  \subsubsection{Independence}
+  Product rule doesn't apply when probabilities aren't independent
+
+  From Tribe:
+  \begin{quote}
+    \begin{em}
+      There was another glaring defect in the prosecution’s technique, namely an
+      inadequate proof of the statistical independence of the six factors. No
+      proof was presented that the characteristics selected were mutually
+      independent, even though the witness himself acknowledged that such
+      condition was essential to the proper application of the ``product rule''
+      or ``multiplication rule.'' \dots To the extent that the traits or
+      characteristics were not mutually independent (e.g., Negroes with beards
+      and men with mustaches obviously represent overlapping categories) the
+      ``product rule'' would inevitably yield a wholly erroneous and exaggerated
+      result even if all of the individual components had been determined with
+      precision.
+    \end{em}
+  \end{quote}
+
+  \subsubsection{Wrong Probability to Investigate}
+    40\% probability of at least one other couple in LA area with similar
+    characteristics, even if you accept the original made-up prosecution
+    figures. 
+
+    1/12,000,000 represents supposed probability randomly selected couple will
+    have this particular set of characteristics. Correct probability to look at
+    is probability that the suspects are the correct pair of people with this
+    set of statistics, given there are probably multiple people like this in the
+    LA area.
+
+
+  \subsection{Aftermath}
+  Tribe went on to:
+  \begin{itemize*}
+    \item Defend Gore in Gore vs. Bush
+    \item Become one of Obama's instructors
+    \item Serve in the Obama administration
+    \item Write numerous papers on use of law in trials
+  \end{itemize*}
+
+  \section{Monty Hall Game}
+  Select one of 3 doors, etc., etc.
+
+  \section{Probability}
+
+  \subsection{Definitions}
+
+  \begin{description*}
+    \item[random] coin toss, etc.\ individual outcome uncertain, but long term
+      average predictable
+
+    \item[probability] proportion of times something happens over many
+      repetitions
+
+  \end{description*}
+
+  \subsection{Probability Models}
+
+  \begin{description*}
+    \item[sample space] all possible outcomes
+
+    \item[event] a particular outcome
+
+    \item[probability model] sample space and way of assigning probabilities to
+      events
+
+  \end{description*}
+
+  \subsection{Probability Rules}
+
+  \begin{itemize}
+    \item probability between 0 and 1
+    \item all possible outcomes add up to probability one
+    \item if events are disjoint (no outcomes in common, can never occur
+      together) probability of either one is sum of individual probabilities
+    \item ``mutually exclusive'' is another term for disjoint. If one event
+      occurs, the other event is excluded from occurring.
+    \item if events are independent, probability of both is product of
+      individual probabilities
+  \end{itemize}
+
+  \section{Discrete Probability Models}
+  Thins like coin tosses, cards, etc., where you can enumerate all possible
+  outcomes.
+
+  \subsection{Pairs}
+  Draw table with 1--6 labeling rows and 1--6 labeling columns and cells sum of
+  row/column labels. 36 ways for dice to land. Show getting a particular number
+  is diagonal going up and to the right.
+
+  \begin{itemize*}
+    \item what's the most common roll?
+    \item how many ways are there to get 5?
+    \item how many ways are there to get 12?
+  \end{itemize*}
+
+  \subsection{Three Dice/Sum 9 or 10}
+
+  \begin{itemize*}
+    \item combinations for 9: 126, 135, 144, 234, 225, 333
+    \item combinations for 10: 145, 136, 226, 235, 244, 334
+    \item $6^3 = 216$ ways for dice to fall
+  \end{itemize*}
+
+  Galileo analysis:
+  \begin{itemize*}
+    \item combinations with all different numbers can come up 
+      $3 \times 2 \times 1 = 6$ ways
+    \item combinations with two different numbers can come up 
+      $3 \times 1 = 3$ ways
+    \item 333 can only come up one way
+    \item actually 25 ways to get 9 and 27 ways to get 10 
+      (because of 333 is only 1 and 334 is 3 and all others match up)
+  \end{itemize*}
+
+  \subsection{Dice vs. Cards}
+  A die is rolled twice; a deck of cards is shuffled.
+
+  \begin{enumerate}[(a)]
+    \item What's the probability that either the first roll is a one or the
+      second roll is a one?
+
+      \begin{solution}
+      The first roll is a one or the second roll is a 1, subtracting the time
+      when they are both one to avoid counting it twice:
+        \[
+          \frac{1}{6} + \frac{1}{6} - \frac{1}{36} = \frac{11}{36}
+        \]
+
+        The first roll is a one and the second one isn't, or the first roll
+        isn't a one and the second one is, or both are ones:
+        \[
+          \frac{1}{6} \cdot \frac{5}{6} + \frac{5}{6} \cdot \frac{1}{6} +
+            \frac{1}{6} \cdot \frac{1}{6} = \frac{11}{36} 
+        \]
+
+        One minus the probability that neither is a one:
+        \[
+          1 - \frac{5}{6} \cdot \frac{5}{6} = \frac{11}{36} 
+        \]
+
+      \end{solution}
+
+    \item What's the probability that the first card is the ace of spades or the
+      last card is the ace of spades?
+      \begin{solution}
+        Mutually exclusive events: $\frac{1}{52} + \frac{1}{52} = \frac{1}{26}$
+      \end{solution}
+
+    \item What's the probability that the first roll is a 1 and the second roll
+      is a 1?
+      \begin{solution}
+        Independent events: $\frac{1}{36}$
+      \end{solution}
+
+    \item What's the probability that the first card is the ace of spades and
+    the last card is the ace of spades?
+      \begin{solution}
+        Mutually exclusive events: $0$
+      \end{solution}
+  \end{enumerate}
+
+  \subsection{Card Drawing}
+  Contestants are given a shuffled deck of cards. They win a prize if the first
+  card is the ace of hearts or the second card is the king of hearts.
+
+  
+  \begin{enumerate}[(a)]
+    \item What's the probability of winning with the king of hearts?: $1/52$
+    \item What's the probability of winning with the ace of hearts?: $1/52$
+
+    \item What's the overall probability of winning? 
+    
+    \begin{solution}
+      \begin{align*}
+        \frac{1}{52} + \frac{1}{52} - \frac{1}{52^2} & = \frac{103}{51^2} \\
+                                                     & \approx 0.0381
+      \end{align*}
+      
+      If you don't account for the possibility of getting both winning cards,
+      your odds would be about 0.0384.
+      
+      You need to subtract the possibility of getting both cards. The events are
+      not mutually exclusive.
+
+      Win only on the first card or only on the second card or on both cards:
+      \begin{align*}
+        \frac{1}{52} \cdot \frac{51}{52} + \frac{1}{52} \cdot \frac{51}{52} 
+            + \frac{1}{52^2} & = \frac{103}{51^2} \\
+                             & \approx 0.0381
+      \end{align*}
+
+      1 minus chance of losing on both attempts:
+      \begin{align*}
+            1 - \frac{51^2}{52^2} & = \frac{103}{51^2} \\
+                                  & \approx 0.0381
+      \end{align*}
+
+    \end{solution}
+  \end{enumerate}
+
+  \subsection{Paradox of Chevalier de Moivre}
+
+  Which is more likely:
+  \begin{itemize}
+    \item Getting at least one one with four rolls of a single die.
+    \item Getting at least one pair of ones with 24 rolls of a pair of dice.
+  \end{itemize}
+
+  The naive approach is that the probability of getting at least one one is
+  \[
+    4 \cdot \frac{1}{6} = \frac{2}{3}
+  \]
+
+  Probability of getting at least one pair of ones is
+  \[
+    24 \cdot \frac{1}{36} = \frac{2}{3}
+  \]
+
+  This is incorrect because the events are not mutually exclusive.
+
+  \begin{solution}
+    The probability of getting at least one one is:
+    \[
+      1 - \del{ \frac{5}{6} }^4 \approx 0.5177
+    \]
+
+    The probability of not getting at least one pair of ones is:
+    \[
+      1 - \del{ \frac{35}{36} }^{24} \approx 0.4914
+    \]
+  \end{solution}
+
+  \subsection{Roulette}
+  In a roulette style game from the 1700's, with a wheel with 32 slots, the
+  players win 27 pounds plus the original pound on a 1 pound bet if their number
+  comes up and they lose otherwise. The players complained that the payoff
+  should have been closer to 31. The casino ``proved'' them wrong by betting
+  even money that any number the player picked would come up within 21 rolls.
+  What is the probability of the casino winning this second bet:
+
+  \begin{solution}
+    \[
+      1 - \del{ \frac{1}{32} }^{22} \approx 0.5027
+    \]
+  \end{solution}
+
+  \subsection{WW II Pilots}
+  If a pilot has a 2\% chance of getting shot down, what's the chance of him
+  surviving 50 missions?
+
+  \begin{solution}
+    \[
+      0.98^{50} \approx 0.36
+    \]
+  \end{solution}
+
+  \section{Random Variables}
+  \begin{itemize*}
+    \item Like regular variable but value is determined by probability distribution
+    \item Usually upper case letters near end of alphabet
+  \end{itemize*}
+
+  \section{Continuous Probability Models}
+  \subsection{Notes}
+  \begin{itemize*}
+    \item Pick a random number between 0 and 1, etc.
+
+    \item Probability density curve from previous chapter. 
+  
+    \item Area under curve is chance of getting outcome from in range.
+
+    \item {\em Uniform Distribution\/} is flat
+
+    \item {\em Normal Distribution\/}
+
+    \item $P(X < 2)$, etc.\ notation
+
+  \end{itemize*}
+
+  \subsection{Packaging Laws}
+  \begin{itemize*}
+    \item too heavy expensive for manufacturer
+    \item too light expensive for consumer
+    \item impossible to be 100\% accurate
+    \item normal distribution around target weight
+  \end{itemize*}
+
+
+  \begin{enumerate}
+    \item If target weight is 1 kg and machine with standard deviation of 40 g,
+      what is the probability the actual weight is less than 950 g?
+
+    \begin{solution}
+      Convert to z-score:
+      \[
+        z = \frac{950 - 1000}{40} = -1.25
+      \]
+
+      Use table A:\@
+      \[
+        P(X < 980) \approx 0.1056
+      \]
+    \end{solution}
+
+    \item If the same machine is set at a target weight of 1020 g instead, what
+      is the probability the actual weight is less than 1000 g?
+
+    \begin{solution}
+      Convert to z-score:
+      \[
+        z = \frac{1000 - 1020}{40} = -0.5
+      \]
+
+      Use table A:\@
+      \[
+        P(X < 1000) \approx 0.3085
+      \]
+    \end{solution}
+
+    In Australia, law is that if a package is found to be underweight,
+    everything is cool as long as the average of 12 similar items is not
+    underweight.
+
+    \begin{itemize*}
+      \item Average also normal curve
+      \item Same area (1, of course) but steeper and narrower graph
+      \item same mean, $sd = \frac{ sd_{original} }{\sqrt{n}}$
+    \end{itemize*}
+
+    Strategy is to set machine slightly high, but chance of violating law is
+    much lower with this strategy.
+
+    What is the probability of violating the law when setting the target weight
+    to 1020 with the same machine?
+
+    \begin{solution}
+      Calculate new sd:
+      \[
+        sd = \frac{40}{\sqrt{12}} \approx 11.55
+      \]
+      Convert to z-score:
+      \[
+        z = \frac{1000 - 1020}{11.55} = -1.73
+      \]
+
+      Use table A:\@
+      \[
+        P(X < 1000) \approx 0.0417
+      \]
+    \end{solution}
+
+  \end{enumerate}
+
+  \subsection{Exercise 10.16}
+  \begin{enumerate}[(a)]
+      \item $P(X \geq 10)$
+
+      \item 
+        Convert 10 to a z-score:
+        \[
+          z = \frac{10 - 6.8}{1.6} = 2
+        \]
+
+        $P(Z < 2) = 0.9772$
+
+  \end{enumerate}
+
+\end{document}
+
