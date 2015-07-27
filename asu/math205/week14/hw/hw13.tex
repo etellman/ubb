@@ -1,19 +1,13 @@
-% no answer key
+% % no answer key
 % \documentclass[letterpaper]{exam}
 
 % answer key
 \documentclass[letterpaper, landscape]{exam}
 \usepackage{2in1, lscape} 
-\printanswers
-
-% for the cent symbol
-\usepackage{textcomp}
-
-% the textcent command eats the space following the symbol
-\usepackage{xspace}
-\newcommand{\cent}{\textcent\xspace}
+\printanswers{}
 
 \usepackage{units} 
+\usepackage{parskip} 
 \usepackage{xfrac} 
 \usepackage[fleqn]{amsmath}
 \usepackage{cancel}
@@ -27,10 +21,10 @@
 \usepackage{comment}
 \usepackage{enumerate}
 \usepackage{graphicx}
-\usepackage{parskip}
+\usepackage{mathtools} 
+\usepackage{commath}
 
 \everymath{\displaystyle}
-
 
 \title{Statistics \\ Homework Thirteen}
 \date{\today}
@@ -41,9 +35,9 @@
   \maketitle
 
   \section{Homework}
-  Chapter 14: 34, 36-38, 40, 42-46, 48-53, 55, 57
+  Chapter 14: 34, 36--38, 40, 42--46, 48--53, 55, 57
 
-  \ifprintanswers
+  \ifprintanswers{}
   \else
     \section{Calculations}
     Here are some of the calculations, if you don't have a calculator that can do
@@ -70,7 +64,7 @@
     \end{description}
   \fi
 
-  \ifprintanswers
+  \ifprintanswers{}
     \section{Solutions}
     \begin{description}
 
@@ -195,12 +189,11 @@
         \begin{figure}[H]
           \centering
           \includegraphics{ex50.pdf}
-          \caption{Exercise 50}
-          \label{fig:ex50}
+          \caption{Exercise 50}\label{fig:ex50}
         \end{figure}
 
         \begin{enumerate}[(a)]
-          \item See Figure \ref{fig:ex50}. The data actually looks left-skewed
+          \item See Figure~\ref{fig:ex50}. The data actually looks left-skewed
             and not particularly normal.
 
           \item
@@ -221,12 +214,11 @@
         \begin{figure}[H]
           \centering
           \includegraphics{ex51.pdf}
-          \caption{Exercise 51}
-          \label{fig:ex51}
+          \caption{Exercise 51}\label{fig:ex51}
         \end{figure}
 
         \begin{enumerate}[(a)]
-          \item See Figure \ref{fig:ex51}. 
+          \item See Figure~\ref{fig:ex51}. 
 
           \item
             \begin{align*}
