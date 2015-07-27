@@ -1,0 +1,159 @@
+% no answer key
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
+
+% for the cent symbol
+\usepackage{textcomp}
+
+% the textcent command eats the space following the symbol
+\usepackage{xspace}
+\newcommand{\cent}{\textcent\xspace}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{parskip}
+
+\everymath{\displaystyle}
+
+
+\title{Statistics \\ Homework Fourteen}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Homework}
+  Chapter 15: 34--38, 41--43, 45--46
+
+  \ifprintanswers{}
+    \section{Solutions}
+    \begin{description}
+
+      \item[34] 
+        The states are all different sizes, so averaging the average for each
+        state won't give an accurate global average. If you average the
+        averages, you are counting Montana the same as California, for example,
+        but there are many more people in California.
+
+      \item[35] If the sample is small, a single outlier will have a big effect.
+        With a large sample, the outlier won't matter much. 
+
+      \item[36] 
+        
+        \begin{enumerate}[(a)]
+          \item 1999 was an outlier which will throw the average off.
+          \item The values are generally decreasing over time.
+        \end{enumerate}
+
+      \item[37] B, A, C.
+
+        The strongest evidence is the well designed studies.
+
+        The second strongest evidence is the poorly designed studies.
+
+        The least strong evidence is expert opinion.
+
+      \item[38]
+        \begin{enumerate}[(a)]
+          \item A poorly-designed study could still have a statistically
+            significant result.
+
+          \item Significance will help here. This is what significance is
+            intended to signify.
+
+          \item A very small and unimportant effect could still be statistically
+            significant.
+
+        \end{enumerate}
+
+      \item[41] 
+        \begin{enumerate}[(a)]
+          \item 
+            \begin{align*}
+              \bar{x}          & = 9.524 \\
+              \sigma_{\bar{x}} & \approx 0.8944 \\
+              z                & \approx \frac{9.524 - 8}{0.8944} \\
+                               & \approx 1.7039 \\
+              \\
+              p-value          & = 0.9743 \\
+            \end{align*}
+
+          \item The sample size was too small.
+        \end{enumerate}
+
+      \item[42] 
+        \begin{enumerate}[(a)]
+          \item It is unlikely that the difference can be explained by chance.
+
+          \item If we did the same study 100 times, 95 of them would probably
+            provide similar results.
+
+          \item No. The mothers self-selected into each group, so the difference
+            in the results may be because the mothers who signed up for the
+            program are different from the mothers who didn't sign up.
+        \end{enumerate}
+        
+      \item[43]
+        \begin{enumerate}[(a)]
+          \item Any variation might easily have been the result of chance in the
+            selection of the sample rather than actual differences.
+
+          \item Not really. If the results may have been the result of chance
+            then it doesn't really matter how big they were.
+        \end{enumerate}
+
+      \item[45]
+        \begin{enumerate}[(a)]
+          \item There is a 20\% chance that the test will correctly reject the
+            null hypothesis when the null hypothesis is wrong.
+
+          \item With low power, there is only a small chance of detecting that
+            the null hypothesis is wrong.
+
+          \item There weren't enough mice in each group and each mouse had very
+            different sleep patterns from the others so the standard deviation
+            was pretty big.
+
+        \end{enumerate}
+
+      \item[46]
+        \begin{enumerate}[(a)]
+          \item 96\%
+
+          \item The test has a 90\% chance of detecting the difference if it is
+            present.
+        \end{enumerate}
+
+  \end{description}
+
+  \else
+    \vspace{12 cm}
+    \begin{quote}
+      \begin{em}
+        Everything goes, everything returns; eternally rolls the wheel of
+        being.
+      \end{em}
+    \end{quote}
+    \hspace{1 cm}--Frederich Nietzsche
+  \fi
+
+\end{document}
+
