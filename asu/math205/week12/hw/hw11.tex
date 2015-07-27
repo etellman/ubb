@@ -4,14 +4,7 @@
 % answer key
 \documentclass[letterpaper, landscape]{exam}
 \usepackage{2in1, lscape} 
-\printanswers
-
-% for the cent symbol
-\usepackage{textcomp}
-
-% the textcent command eats the space following the symbol
-\usepackage{xspace}
-\newcommand{\cent}{\textcent\xspace}
+\printanswers{}
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -31,6 +24,9 @@
 
 \everymath{\displaystyle}
 
+% the textcent command eats the space following the symbol
+\usepackage{xspace}
+\newcommand{\cent}{\textcent\xspace}
 
 \title{Statistics \\ Homework Eleven}
 \date{\today}
@@ -41,16 +37,16 @@
   \maketitle
 
   \section{Homework}
-  \ifprintanswers
+  \ifprintanswers{}
   \else
     \begin{itemize*}
       \item read Chapter 12 
       \item take a look at the ``Check Your Skills'' exercises
-      \item exercises: 27-32, 34-40, 44-51, 54-56
+      \item exercises: 27--32, 34--40, 44--51, 54--56
     \end{itemize*}
   \fi
 
-  \ifprintanswers
+  \ifprintanswers{}
     \begin{description}
 
       \item[27] 
@@ -413,7 +409,7 @@
       Given that the vote was won, what was the probability that the voter was black?
 
       \begin{align*}
-        P(\text{black } | \text{ won}) & = \frac{P(\text{black and won)}}{P(\text{won})} \\
+        P(\text{black } | \text{ won}) & = \frac{P(\text{black and won})}{P(\text{won})} \\
                        & \approx \frac{0.36}{0.58} \\
                        & \approx \boxed{ 0.6207 } \\
       \end{align*}
@@ -423,7 +419,7 @@
         \item A, B and AB
 
         \item
-          The four combinations you might get are AA, AB, BA, and BB. Since there are 
+          The four combinations you might get are AA, AB, BA, and BB\@. Since there are 
           two ways to get different alleles, this is twice as likely and the probabilities
           are:
           \begin{align*}
@@ -437,7 +433,7 @@
         \item B and O
 
         \item
-          The four combinations you might get are BB, BO, OB, and OO. There is
+          The four combinations you might get are BB, BO, OB, and OO\@. There is
           only one way two way to end up with type O and three ways to end up
           with B. The probabilities are
           \begin{align*}
@@ -451,7 +447,7 @@
         \item 
           With these parents, the possible blood types for the children are: 
           
-          A (0.5) , AB (0.25), B (0.25)
+          A (0.5), AB (0.25), B (0.25)
 
           The probability of 2 As is 
           \[
