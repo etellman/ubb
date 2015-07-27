@@ -4,14 +4,7 @@
 % answer key
 \documentclass[letterpaper, landscape]{exam}
 \usepackage{2in1, lscape} 
-\printanswers
-
-% for the cent symbol
-\usepackage{textcomp}
-
-% the textcent command eats the space following the symbol
-\usepackage{xspace}
-\newcommand{\cent}{\textcent\xspace}
+\printanswers{}
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -31,6 +24,9 @@
 
 \everymath{\displaystyle}
 
+% the textcent command eats the space following the symbol
+\usepackage{xspace}
+\newcommand{\cent}{\textcent\xspace}
 
 \title{Statistics \\ Homework Ten}
 \date{\today}
@@ -41,16 +37,16 @@
   \maketitle
 
   \section{Homework}
-  \ifprintanswers
+  \ifprintanswers{}
   \else
     \begin{itemize*}
       \item read Chapter 11 
       \item take a look at the ``Check Your Skills'' exercises
-      \item exercises: 22-27, 29, 31-33, 35-40
+      \item exercises: 22--27, 29, 31--33, 35--40
     \end{itemize*}
   \fi
 
-  \ifprintanswers
+  \ifprintanswers{}
     \begin{description}
 
       \item[22] Since this is the mean of the sample and not the total
@@ -61,7 +57,7 @@
       \item[24] Making repeated identical bets is increasing the sample size.
         As the sample size increases, the mean of the sample will approach the
         mean of the population. In the long run, the gambler should expect to
-        lose about \fbox{ 5.3\cent } per bet.
+        lose about \fbox{ 5.3\cent{} } per bet.
 
       \item[25] The mean of the sampling distribution is the same as the mean of
         the population, or $\boxed{ \unit[6]{strikes/year} }$.
@@ -100,8 +96,6 @@
               s = \frac{2.8}{\sqrt{25}} = \boxed{ \unit[0.56]{in} }
             \]
 
-          \newpage
-
           \item Find the two z-scores:
             \begin{align*}
               z_{69} &= \frac{69 - 70}{0.56} \approx -1.7858 \\
@@ -125,7 +119,7 @@
 
         \begin{enumerate}[(a)]
           \item 
-            Converting to z-score and using table A:
+            Converting to z-score and using table A:\@
             \[
               P(X > 140) \approx \boxed{ 0.0668 }
             \]
@@ -136,7 +130,7 @@
               s = \frac{10}{\sqrt{4}} = \unit[5]{mg/dl}
             \]
 
-            Converting to z-score and using table A:
+            Converting to z-score and using table A:\@
             \[
               P(\bar{x} > 140) \approx \boxed{ 0.0013 }
             \]
@@ -173,7 +167,7 @@
               s = \frac{1.4}{\sqrt{52}} \approx 0.1941
             \]
 
-            The distribution is: \fbox{ N(2.2, 0.1941) }
+            The distribution is: \fbox{ $N(2.2, 0.1941)$ }
 
           \item $P(\bar{x} < 2) \approx \boxed{ 0.1515 }$
 
@@ -187,8 +181,6 @@
               P(\bar{x} < 1.923) \approx \boxed{ 0.0769 }
             \]
         \end{enumerate}
-
-      \newpage
 
       \item[32]
         The parameters are:
@@ -231,7 +223,7 @@
           z_{5\%}  & = \frac{5 - 8.7}{3.1939} \approx -1.1585 \\
         \end{align*}
 
-        Use table A:
+        Use table A:\@
         \begin{align*}
           P(r \leq 10\%) & \approx \boxed{ 0.6580 } \\
           P(r > 10\%)    & = 1 - P(r \leq 10\%) \\
@@ -275,7 +267,7 @@
             \fbox{ 283 students }.
         \end{enumerate}
 
-      \item[37] Each bet costs him about \fbox{ 40\cent }.
+      \item[37] Each bet costs him about \fbox{ 40\cent{} }.
 
       \item[38]
         \begin{enumerate}[(a)]
@@ -292,7 +284,7 @@
               z_{.70} &= \frac{0.7 - 0.6}{0.1602} = 0.6242 \\
             \end{align*}
 
-            use table A:
+            use table A:\@
             \begin{align*}
               P(X \leq 0.5) &\approx 0.2662 \\
               P(X \leq 0.7) &\approx 0.7337 \\
@@ -302,7 +294,7 @@
             \end{align*}
 
             There is only about a 47\% chance that Joe will average between
-            50\cent and 70\cent after 40 years.
+            50\cent{} and 70\cent{} after 40 years.
 
         \end{enumerate}
 
@@ -321,7 +313,7 @@
               z_{.50} &= \frac{0.5 - 0.4}{0.049} \approx 2.0408 \\
             \end{align*}
 
-            use table A:
+            use table A:\@
             \begin{align*}
               P(X \leq 0.3) &\approx 0.0206 \\
               P(X \leq 0.5) &\approx 0.9794 \\
@@ -333,8 +325,6 @@
             \]
 
         \end{enumerate}
-
-      \newpage
 
       \item[40]
         \begin{enumerate}[(a)]
@@ -356,7 +346,7 @@
               z_{.70} &= \frac{0.7 - 0.6}{0.3205} = 0.3120 \\
             \end{align*}
 
-            use table A:
+            use table A:\@
             \begin{align*}
               P(X \leq 0.5) & \approx 0.3775 \\
               P(X \leq 0.7) & \approx 0.6225 \\
