@@ -1,0 +1,565 @@
+% % no answer key
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
+
+\usepackage{units} 
+\usepackage{parskip} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+\usepackage{commath}
+
+\everymath{\displaystyle}
+
+\title{Statistics \\ Week Twelve}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+  \tableofcontents
+
+  \section{Sally Clark}
+
+  \subsection{Trial}
+  \begin{itemize*}
+    \item two children died unexplained deaths (SIDS)
+    \item probability of SIDS 1 in 1300
+    \item for Sally Clark's family (affluent non-smokers) probability is 1 in
+      8543.
+    \item overall probability is:
+      \[
+        \frac{1}{8543^2} \approx \frac{1}{73,000,000}
+      \]
+
+    \item with 700,000 births per year, the chance of a double SIDS happening at
+      least once in 100 years is:
+      \[
+        1 - \del{ 1 - 1/8543^2 }^(700000 * 100) \approx 0.62
+      \]
+
+      This sort of event will only happen about once in every hundred years.
+  \end{itemize*}
+
+  \subsection{Problems}
+
+  The prosecution ignored factors that make Sally's family more likely for
+  SIDS\@. Both of Sally's kids were boys and boys are more likely to die from
+  SIDS\@.
+
+  SIDS depends on genetic and environmental factors. If a family has one SIDS
+  death, the chance of a second one is approximately 1 in 130, not 1 in 1300.
+
+  The ``once in a hundred years'' calculation used the high number (8543)
+  which was for a small subset of a population, but then used the whole
+  population.
+
+  With these corrections, the probability of double SIDS would be about:
+  \[
+    \frac{1}{1300} \cdot \frac{1}{130} \approx \frac{1}{169000} 
+  \]
+
+  With 700,000 births a year, the chance of a double-SIDS event in one year is
+  about:
+  \[
+    1 - \del{ 1 - 1/169000 }^(700000) \approx 0.98
+  \]
+
+  \section{Product Rule}
+
+  For independent events:
+  \[
+    P(\text{A and B}) = P(A) P(B)
+  \]
+
+  For dice, the probability of getting a pair of 6s is:
+  \begin{itemize}
+    \item 36 possible outcomes
+    \item only 1 of these outcomes is a pair of 6s
+    \item $\frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36}$
+  \end{itemize}
+
+
+  independence:
+  \begin{itemize*}
+    \item outcome of A doesn't influence B
+    \item dice and roulette are independent
+    \item drawing cards without replacement isn't---cards already drawn are gone
+      from the deck
+  \end{itemize*}
+
+  \subsection{Pick a Number}
+  Everyone in the class pick a number between 1 and 100. What is the probability
+  of at least one match?
+
+  \begin{solution}
+    With 15 people, the probability that all the numbers are different is:
+    \[
+      \frac{100 \cdot 99 \cdot 98 \cdot \ldots}{100^{15}} \approx 0.33
+    \]
+
+    The probability of at least one pair is
+    \[
+      1 - \frac{100 \cdot 99 \cdot 98 \cdot \ldots}{100^{15}} \approx \boxed{ 0.67 }
+    \]
+  \end{solution}
+
+  \subsection{Examples}
+  \begin{enumerate}
+    \item What is the probability of rolling three 6s in a row?
+      \begin{solution}
+        \begin{align*}
+          \frac{1}{6^3} & = \frac{1}{216} \\
+                        & \approx \boxed{ 0.0046 } \\
+        \end{align*}
+      \end{solution}
+
+    \item What is the probability of rolling at least one 6?
+      \begin{solution}
+        This one minus the probability of not rolling a 6 three times in a row:
+
+        \begin{align*}
+          1 - \del{ \frac{5}{6} }^3 & = 1 - \frac{125}{216} \\
+                                    & = \frac{91}{125} \\
+                                    & \approx \boxed{ 0.728 } \\
+        \end{align*}
+
+      \end{solution}
+
+  \end{enumerate}
+
+  \subsection{Data Dredging}
+  Suppose 
+  \begin{itemize}
+    \item database of 20,000 men.
+    \item 1 out of 10,000 men will match DNA by chance
+    \item search DB and find match
+  \end{itemize}
+
+  What is the probability that the match is guilty?
+
+  \begin{solution}
+    The probability that any one person matches is independent of the
+    probability of anybody else matching.
+
+    The probability that nobody matches is
+    \[
+      0.9999^{20,000} \approx 0.14
+    \]
+
+    The probability that somebody matches:
+    \[
+      1 - 0.1353 \approx 0.86
+    \]
+  \end{solution}
+
+  \section{Addition Rule}
+
+  \[
+    P(\text{A or B}) = P(A) + P(B) - P(\text{A and B})
+  \]
+
+  \begin{itemize*}
+    \item if $P(A and B) = 0$, events are {\em disjoint\/} or 
+      {\em mutually exclusive\/}
+    \item for disjoint events, if A occurs B can't occur
+    \item draw Venn diagram to explain why subtracting $P(\text{A and B})$ is
+      necessary
+  \end{itemize*}
+
+  \begin{enumerate}
+    \item red cars, compact cars, red compact cars
+
+    \item people with beards, people with mustaches, people with both
+
+    \item If one of your first two cards in a poker hand is an ace, what is the
+      probability of getting at least one additional ace?
+
+      \begin{solution}
+        If you have one of the aces, there are 3 left in the deck. The
+        probability of getting at least one of them is one minus the probability
+        of not getting any of them:
+
+        \begin{align*}
+          1 - \frac{47}{50} \cdot \frac{46}{49} \cdot \frac{45}{48} \approx 0.173 \\
+        \end{align*}
+      \end{solution}
+
+    \item If one of your first two cards in a poker hand is an ace, what is the
+      probability of getting exactly one additional ace?
+
+      \begin{solution}
+        Exactly one of your three remaining cards needs to be an ace:
+        \begin{align*}
+          P(1st) & = \frac{3}{50} \cdot \frac{47}{49} \cdot \frac{46}{48} \\
+          P(2nd) & = \frac{47}{50} \cdot \frac{3}{49} \cdot \frac{46}{48} \\
+          P(3rd) & = \frac{47}{50} \cdot \frac{46}{49} \cdot \frac{3}{48} \\
+                 & \approx 0.055
+        \end{align*}
+
+        The probabilities are all the same: $0.055$. Since there are three of
+        them, the probability of getting exactly one ace is: 
+        \[
+          3 \cdot 0.055 = 0.165 \\
+        \]
+      \end{solution}
+
+    \item If one of your first two cards in a poker hand is an ace, what is the
+      probability of getting exactly two additional aces?
+
+      \begin{solution}
+        Exactly one of your three remaining cards needs to not be an ace:
+        \begin{align*}
+          P(1st) & = \frac{47}{50} \cdot \frac{3}{49} \cdot \frac{2}{48} \\
+          P(2nd) & = \frac{3}{50} \cdot \frac{47}{49} \cdot \frac{2}{48} \\
+          P(3rd) & = \frac{3}{50} \cdot \frac{2}{49} \cdot \frac{47}{48} \\
+                 & \approx 0.0024 \\
+        \end{align*}
+
+        The probabilities are all the same: $0.055$. Since there are three of
+        them, the probability of getting exactly one ace is: 
+        \[
+          3 \cdot 0.0024 = 0.0072 \\
+        \]
+      \end{solution}
+
+    \item If one of your first two cards in a poker hand is an ace, what is the
+      probability of getting 4 aces?
+
+      \begin{solution}
+        All of your three remaining cards need to be an aces:
+        \begin{align*}
+          P(\text{4 aces}) & = \frac{3}{50} \cdot \frac{2}{49} \cdot \frac{1}{48} \\
+                           & \approx \boxed{ 0.000051 } \\
+        \end{align*}
+      \end{solution}
+  \end{enumerate}
+
+  \section{Independence vs. Disjoint}
+  \begin{itemize*}
+    \item two independent events may both happen. Event one has no effect on
+      event two.
+
+    \item to disjoint events can never both happen. If event one happens, event
+      two can't happen
+
+  \end{itemize*}
+
+  \section{Conditional Probability}
+
+  \subsection{Definitions}
+  If you turn over two cards in a deck, what is the probability of the second
+  card being the queen of hearts?
+
+  \begin{solution}
+    \[
+      P(\text{2nd card QH}) = \frac{1}{52}
+    \]
+  \end{solution}
+
+  If you turn over two cards in a deck and the first card is the seven of clubs,
+  what is the probability of the second card being the queen of hearts?
+
+  \begin{solution}
+    \[
+      P(\text{QH } | \text{ 7C}) = \frac{1}{51}
+    \]
+  \end{solution}
+
+  \begin{solution}
+    $\frac{1}{52}$
+  \end{solution}
+
+  \subsection{Equations}
+  \[
+    P(\text{A and B}) = P(A) P(B | A) = P(B) P(A | B) \\
+  \]
+
+  The probability that both A and B happens is either:
+  \begin{itemize*}
+    \item the probability that A happens and that B happens given that A already
+      happened.
+    \item the probability that B happens and that A happens given that B already 
+      happened.
+  \end{itemize*}
+
+  \begin{align*}
+    P(\text{A and B}) & = P(A) P(B | A) \\
+    P(B) P(A | B)     & = P(A) P(B | A) \\
+    P(A | B)          & = \frac{P(A) P(B | A)}{P(B)} \\
+                      % & = P(B | A) \cdot \frac{P(A)}{P(B)} \\
+                      & = \frac{P(\text{A and B})}{P(B)} \\
+  \end{align*}
+
+  The probability that A happens given that B happens is the proportion of the
+  time that B happened when both A and B happened.
+
+  Back to cards example:
+  \begin{solution}
+    \begin{align*}
+    P(\text{QH } | \text{ 7C})  & = \frac{P(\text{7C and QC})}{P(7C)} \\
+                                & = \frac{\cfrac{1}{52 \cdot 51}}{\cfrac{1}{52}} \\
+                                & = \frac{1}{52} \\
+    \end{align*}
+  \end{solution}
+
+  What is probability of getting tails given the previous three flips were heads?
+  \begin{solution}
+    \[
+      P(T | 3H) = 0.5
+    \]
+  \end{solution}
+
+  \subsection{Dogs and Cats}
+  \begin{table}[H]
+    \begin{tabular}[H]{lrrr}
+      \toprule
+      species & white & black & total\\
+      \midrule
+      dog     & 30    & 70    & 100\\
+      cat     & 25    & 25    & 50\\
+      \midrule
+      total   & 45    & 105   & 150\\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \begin{table}[H]
+    \begin{tabular}{rlrrr}
+      \toprule
+        & species & white  & black  & (all) \\
+      \midrule
+      1 & dog     & 0.2000 & 0.4667 & 0.6667 \\
+      2 & cat     & 0.1667 & 0.1667 & 0.3333 \\
+      \midrule
+      3 & (all)   & 0.3667 & 0.6333 & 1.0000 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \begin{table}[ht]
+    \begin{tabular}{rllr}
+      \toprule
+         & species & color & proportion \\
+      \midrule
+      1  & dog     & white & 0.3000 \\
+      2  & dog     & black & 0.7000 \\
+      \midrule
+      3  & cat     & white & 0.5000 \\
+      4  & cat     & black & 0.5000 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \begin{table}[ht]
+    \begin{tabular}{rllr}
+      \toprule
+         & color & species & proportion \\
+      \midrule
+      1  & white & dog     & 0.5455 \\
+      2  & white & cat     & 0.4545 \\
+      \midrule
+      3  & black & dog     & 0.7368 \\
+      4  & black & cat     & 0.2632 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  What's the probability of a randomly selected animal being a black dog:
+  \[
+    \frac{70}{150} \approx 0.4667 \\
+  \]
+
+  \begin{align*}
+    P(\text{black dog}) & = P(\text{dog}) \cdot P(\text{black } | \text{ dog}) \\
+                        & = 0.6667 \cdot 0.7 \\
+                        & \approx 0.4666 \\
+                        \\
+    P(\text{black dog}) & = P(\text{black}) \cdot P(\text{dog } | \text{ black}) \\
+                        & = 0.6333 \cdot 0.7368 \\
+                        & \approx 0.4666 \\
+  \end{align*}
+
+  \begin{align*}
+    P(\text{black } | \text{ dog}) & = \frac{P(\text{black dog})}{P(\text{dog})} \\
+                                   & \approx \frac{0.4667}{0.6667} \\
+                                   & = 0.7 \\
+  \end{align*}
+
+  \begin{align*}
+    P(\text{dog } | \text{ black}) & = \frac{P(\text{black dog})}{P(\text{black})} \\
+                                   & \approx \frac{0.4667}{0.7} \\
+                                   & = 0.6667 \\
+  \end{align*}
+
+  \subsection{Sally Clark Appeal}
+  The probability of a double SIDS event is irrelevant. The alternative
+  explanation for the evidence is double infant murder, which is even less
+  likely that double SIDS\@. 
+  
+  The interesting probability is the conditional probability of Clark being
+  innocent given the evidence.
+
+  Since double infant murder is so rare, it's hard to get a good estimate of its
+  frequency. The best estimate is that double murder is about 9 times less
+  likely than double SIDS\@.
+
+  \begin{align*}
+    P(\text{double SIDS}) & = \frac{1}{8543 \cdot 132} \\
+                            & \approx \frac{1}{125,000} \\
+    P(\text{double murder}) & = \frac{1}{9 \cdot 8543 \cdot 132} \\
+                            & \approx \frac{1}{1,128,000} \\
+  \end{align*}
+
+  \begin{align*}
+    P(I | E) & = \frac{P(\text{I and E})}{P(E)} \\
+             & = \frac{P(\text{double murder})}{P(\text{double murder or double SIDS})} \\
+             & = \frac{\cfrac{1}{125,000}}{\cfrac{1}{125,000} + \cfrac{1}{1,128,000}} \\
+             & \approx 0.9 \\
+  \end{align*}
+
+  Even this didn't get Sally out of prison. Her third appeal succeeded because
+  they reviewed the medical records more carefully and found the actual cause of
+  death for the second baby was an infection that had gone undetected.
+
+  \subsection{OJ Case}
+  Prosecutors said that there is a natural progression from abuse to murder.
+
+  Defense countered with 
+  \begin{itemize*}
+    \item 14,000,000 women battered annually by spouse or boyfriend
+    \item 1,432 of these, or 1 in 2,500 murdered by spouse
+    \item chance of OJ having murdered Nicole only 1 in 2,500
+    \item what is this ``natural progression'' crap?
+  \end{itemize*}
+
+  Prosecution should have countered with conditional probability. Murder by
+  spouse is very rare, but murder by someone other than spouse is even more
+  rare. Only about 160 battered spouses were murdered by someone other than
+  the batterer.
+
+  Probability of non-spouse murder of abused spouse:
+  \[
+    \frac{160}{14,000,000} \approx \frac{1}{87,500}
+  \]
+
+  Probability of abused spouse getting murdered:
+  \[
+    \frac{160 + 1432}{14,000,000} \approx \frac{1}{87,500} 
+      \approx \frac{1}{8800}
+  \]
+
+  \begin{align*}
+    P(I | E) & = \frac{P(\text{I and E})}{P(E)} \\
+             & = \frac{P(\text{someone else guilty})}{P(\text{murdered})} \\
+             & = \frac{\cfrac{1}{87,500}}{\cfrac{1}{8800}} \\
+             & \approx 0.1 \\
+  \end{align*}
+
+  \section{Tree Diagram}
+
+  \subsection{Test for Disease}
+
+  \begin{itemize*}
+    \item test 99.9999\% accurate
+    \item no false negatives (everyone with disease tests positive)
+    \item 1 out of 100,000 people have disease
+    \item 175,000,000 people in US
+  \end{itemize*}
+
+  If test is administered to all people in US, what percentage of the people
+  with positive results on test actually have disease?
+
+
+  \begin{solution}
+    level one:
+    \begin{itemize*}
+      \item 0.0001 have disease
+      \item 0.99999 don't have disease
+    \end{itemize*}
+
+    level two: test positive/negative. 
+    \begin{itemize*}
+      \item Have the disease and test positive: 1,750
+      \item Have the disease and test negative: 0
+      \item Don't have the disease and test positive: 17,500
+      \item Don't the disease and test negative: 174,980,750
+    \end{itemize*}
+
+    percentage of people who tested positive who have the disease:
+    \[
+      \frac{1,750}{19,250} \approx 9\%
+    \]
+
+  \end{solution}
+
+  \subsection{Investment Decision}
+  Expected value can also help us untangle complex decisions that involve many
+  contingencies at different points in time. 
+
+  Suppose a friend of yours has asked you to invest \$1 million in a research
+  venture examining a new cure for male pattern baldness. You would probably ask
+  what the likelihood of success will be; you’ll get a complicated answer. This
+  is a research project, so there is only a 30 percent chance that the team will
+  discover a cure that works. If the team does not find a cure, you will get
+  \$250,000 of your investment back, as those funds will have been reserved for
+  taking the drug to market (testing, marketing, etc.) Even if the researchers
+  are successful, there is only a 60 percent chance that the U.S. Food and Drug
+  Administration will approve the new miracle baldness cure as safe for use on
+  humans. Even then, if the drug is safe and effective, there is a 10 percent
+  chance that a competitor will come to market with a better drug at about the
+  same time, wiping out any potential profits. If everything goes well---the drug
+  is safe, effective, and unchallenged by competitors---then the best estimate
+  on the return on your investment is \$ 25 million. 
+
+  Should you make the investment? 
+
+  % This seems like a muddle of information. The potential payday is huge— 25 times
+  % your initial investment— but there are so many potential pitfalls.  A decision
+  % tree can help organize this kind of information and— if the probabilities
+  % associated with each outcome are correct— give you a probabilistic assessment of
+  % what you ought to do. The decision tree maps out each source of uncertainty and
+  % the probabilities associated with all possible outcomes. The end of the tree
+  % gives us all the possible payoffs and the probability of each. If we weight each
+  % payoff by its likelihood, and sum all the possibilities, we will get the
+  % expected value of this investment opportunity. As usual, the best way to
+  % understand this is to take a look.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.25]{investment.jpeg}
+    \caption{Investment Decision}
+  \end{figure}
+
+  \begin{solution}
+    \begin{itemize*}
+      \item There is a 0.7 chance of \$175,000 
+      \item There is a 0.162 chance of \$4,050,000 
+      \item There is a 0.138 chance of \$0
+    \end{itemize*}
+    
+    \$4,050,000 + \$175,000 = \fbox{ \$4,225,000 }
+
+    It's a good investment, as long as you can afford to invest in enough
+    companies for the law of large numbers to take effect.
+
+   \end{solution}
+
+\end{document}
+
