@@ -1,0 +1,219 @@
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
+
+\usepackage{units} 
+\usepackage{parskip} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+\usepackage{commath}
+
+\everymath{\displaystyle}
+
+\title{Statistics \\ Chapter 17}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+  \tableofcontents
+
+  \section{Inference Cautions}
+  You can't use inference when your sample is not an SRS or the outcome of a
+  randomized controlled experiment.
+
+  If your population doesn't have a Normal distribution, it's usually fine as
+  long as you take a large enough sample. Because of the Central Limit Theorem,
+  the values of $\bar{x}$ do have a Normal distribution if your sample is
+  reasonably large.
+
+  \section{T-test}
+  Gosset was an employee of the Guinness Brewery published under name
+  ``Student'' so competitors might underestimate the value of the work.
+
+  If you don't have the standard deviation of the population, you can use the
+  standard deviation of the sample. You get a t-test instead of a z-test.
+
+  The probability density graph for a t-test is slightly different from a Normal
+  graph, with the differences diminishing as the sample size increases.
+
+  \section{Confidence Intervals}
+  A {\em Confidence Interval\/} is in the form $x \pm y$.
+
+  Associated with a confidence interval is:
+  \begin{description}
+    \item[Confidence Level] is how confident you are that the interval
+      captures the actual value you are looking for. Common values are 68\%,
+      95\% and 99.7\%.
+
+    \item[Margin of Error] the width of the interval
+  \end{description}
+
+  With a larger margin of error, you can be more confident that the interval
+  includes the actual value of the parameter.
+
+  \section{Significance}
+  ``Statistically significant'' means that you had a low P-value. You can be
+  confident that the result didn't happen by chance.
+
+  Statistically significant is not the same as practically significant. You may be
+  very confident in a difference of 1\% (statistically significant) but not care
+  because 1\% is such a small percentage (practical significant).
+
+  If the actual effect is small, you need a large sample size to get a
+  statistically significant result. This is because a large sample size results
+  in a small standard deviation, which allows you to pin down the effect you are
+  looking for.
+
+  \section{Calculating Required Sample Size}
+
+  Calculate how many samples you need for a desired margin of error, $m$:
+
+  \begin{align*}
+    m        & = \frac{z^* \sigma}{\sqrt{n}} \\
+    \sqrt{n} & = \frac{z^* \sigma}{m} \\
+    n        & = \del{ \frac{z^* \sigma}{m} }^2 \\
+  \end{align*}
+
+  For example, suppose 
+  \begin{align*}
+    m      & = 4 \\
+    \sigma & = 20 \\
+  \end{align*}
+  
+  And you want to have 95\% confidence.  95\% is two standard deviations, so
+  $z^* = 2$. 
+
+  \begin{align*}
+    n & = \del{ \frac{z^* \sigma}{m} }^2 \\
+      & = \del{ \frac{2 \cdot 20}{4} }^2 \\
+      & = 100 \\
+  \end{align*}
+
+  \section{Power}
+  The power of a test is the chance that it will correctly reject the null
+  hypothesis when the null hypothesis is false.
+
+  exercise 48:
+
+  \begin{enumerate}[(a)]
+    \item 
+      \begin{align*}
+        z       & = 1.6449 \\
+        \bar{x} & = \frac{1.6449}{3.162} \\
+                & = 0.5202 \\
+      \end{align*}
+
+      Any $\bar{x}$ greater than 0.52 will reject the hypothesis.
+
+    \item The probability of observing these values when the mean is 0.8 is:
+      \begin{align*}
+        z        & = \frac{0.5202 - 0.8}{1/\sqrt{10}} \\
+                 & \approx -0.8848 \\
+        pnorm(z) & \approx 0.8819 \\
+      \end{align*}
+
+      The probability of a value at least this large when the mean is 0.8 is
+      approximately 0.8819.
+
+      This is the same answer my computer gave, but slightly different from the
+      book answer. 
+
+  \end{enumerate}
+
+  % The general formula for power is something like:
+  % \begin{align*}
+  %   z_{effect} & = \frac{effect}{\sigma/\sqrt{n}} \\
+  %   z_{\alpha} & = qnorm(0.05) \\
+  %   \\
+  %   P(\text{reject } H_0 | H_0 \text{ false}) 
+  %       & = pnorm(z_{\alpha} + z_{effect}) \\
+  % \end{align*}
+
+  You can get high power (high confidence in the outcome) by:
+  \begin{itemize*}
+    \item larger sample size
+    \item null hypothesis very wrong so there is a large difference between the
+      sample and the actual parameter (higher $z_{effect}$)
+    \item lower desired significance level (higher $z_{\alpha}$)
+  \end{itemize*}
+
+  \section{Type I and II Errors}
+  \begin{description*}
+    \item[Type I] reject $H_0$ when it is actually true.
+    \item[Type II] accept $H_0$ when it is actually false.
+  \end{description*}
+
+  \begin{tabular}[H]{lll}
+     hypothesis & reject          & accept \\
+     true       & Type I Error    & correct outcome \\
+     false      & correct outcome & Type II error \\
+  \end{tabular}
+
+  \section{Check Your Skills}
+  \begin{description}
+    \item[15.1] c---not a random sample
+
+    \item[15.2] c---not a random sample
+      \begin{enumerate}[(a)]
+        \item 
+          For a 95\% confidence interval, we need to within two standard
+          deviations of the mean.
+
+          \begin{align*}
+            \sigma_{\bar{x}} & = \frac{1.83}{\sqrt{880}} \\
+                             & \approx 0.06169 \\
+            \\
+            z^* &\approx 2 \\
+            \\
+            \mu & = 1.92 \pm 2 \cdot 0.06169 \\
+                & \approx 1.92 \pm 0.1209 \\
+                & \approx (1.80, 2.04) \\
+          \end{align*}
+
+        \item The distribution of the sample means is still normal since we have
+          a large sample (Central Limit Theorem).
+
+        \item 
+          \begin{itemize*}
+            \item it only includes people with phones
+            \item it only includes people who answer their phone
+          \end{itemize*}
+      \end{enumerate}
+
+    \item[15.3] Different times of day get different types of people.
+
+    \item[15.4] 
+      \begin{enumerate}[(a)]
+        \item
+
+          \begin{table}[ht]
+          \centering
+          \begin{tabular}{rrrrrrr}
+            \toprule
+              & p    & z    & s.z  & margin.of.error & min   & max \\
+            \midrule
+            1 & 0.90 & 1.64 & 0.29 & 0.48            & 26.32 & 27.28 \\
+            2 & 0.95 & 1.96 & 0.29 & 0.57            & 26.23 & 27.37 \\
+            3 & 0.99 & 2.58 & 0.29 & 0.76            & 26.04 & 27.56 \\
+            \bottomrule
+          \end{tabular}
+          \end{table}
+      \end{enumerate}
+
+  \end{description}
+\end{document}
+
