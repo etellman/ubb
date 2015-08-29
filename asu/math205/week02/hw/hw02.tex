@@ -58,11 +58,11 @@
         This makes the distribution left-skewed and the mean is smaller than the median.
 
       \item[27] 
-        \begin{itemize*}
-          \item the median is college 393
-          \item the first quartile is college 197
-          \item the third quartile is college 590
-        \end{itemize*}
+        \begin{align*}
+          Q_1           & = 196.5 \\
+          \text{median} & = 393 \\
+          Q_3           & = 589.5 \\
+        \end{align*}
 
       \item[29]
         \begin{figure}[H]
@@ -89,31 +89,19 @@
       \newpage
 
       \item[30]
-        If you add up all the bars, you find that there are 78 girls.  The
-        median would be between girl number 39 and 40, which would be in the 2
-        servings bar.  The first quartile would be girl 19 which is in the 1
-        serving bar and the third quartile would be girl 59 which is in the 4
-        servings bar.  So the answer is:
-
-        \begin{itemize*}
-          \item first quartile: 1
-          \item median: 2
-          \item third quartile: 4
-        \end{itemize*}
+        If you add up all the bars, you find that there are 77 girls.  
         
-      \item[32]
-        \begin{enumerate}[a]
-          \item symmetric distributions without outliers
+        \begin{itemize*}
+          \item The median would be girl number 39, which would be in the 2 servings bar.  
+          \item The first quartile would be girl 19 which is in the 1 serving bar.
+          \item The third quartile would be girl 58 which is in the 4 servings bar.  
+        \end{itemize*}
 
-          \item 
-            \begin{itemize*}
-              \item for the men, $\bar{x}$ went from 117.17 to 110.86 and $s$
-                went from 74.24 to 66.88
-              \item for the women, $\bar{x}$ went from 165.17 to 158.45 and $s$
-                went from 56.51 to 43.65
-            \end{itemize*}
-
-        \end{enumerate}
+        \begin{align*}
+          Q_1           & = 1 \\
+          \text{median} & = 2 \\
+          Q_3           & = 4 \\
+        \end{align*}
 
       \item[37]
         The average of the individual state averages is only 8.4\%.
@@ -199,75 +187,48 @@
           \caption{Exercise 43 Histogram}
         \end{figure}
 
-
-      \item[44]
-        Here's the five number summary:
+      \item[45]
+        Either odor makes people spend more money but lavender is
+        more effective than lemon.
 
         \begin{table}[H]
           \centering
-          \begin{tabular}{rr}
+          \begin{tabular}{rlrr}
             \toprule
-            Min.    & -27.87 \\
-            1st Qu. & 1.33 \\
-            Median  & 15.98 \\
-            Mean    & 12.79 \\
-            3rd Qu. & 24.99 \\
-            Max.    & 37.38 \\
+              & Odor     & Median & Mean \\
+            \midrule
+            1 & Lavender & 22     & 21 \\
+            2 & Lemon    & 18     & 18 \\
+            3 & No Odor  & 17     & 18 \\
             \bottomrule
           \end{tabular}
+          \caption{Exercise 45}
         \end{table}
-
-        Some interesting points are:
-        \begin{itemize}
-          \item The mean return of around 13\% sounds pretty good.
-          \item The mean is smaller than the median so the data is left skewed.
-          \item About 25\% of the time the return is close to zero or worse
-          \item The worst year (1974) was immediately followed by the best year
-            (1975).  The stocks plummeted in 1974 and then bounced back the following
-            year.  The main reason 1975 looks so good is because 1974 is so bad.   
-        \end{itemize}
 
         \begin{figure}[H]
           \centering
-          \includegraphics{figures/ex44.pdf}
-          \caption{Exercise 44}
+          \includegraphics{figures/ex45.pdf}
+          \caption{Exercise 45 Box Plot}
         \end{figure}
 
-      % \item[45]
-      %   \begin{table}[H]
-      %     \centering
-      %     \begin{tabular}{rlrr}
-      %       \toprule
-      %         & Odor     & Median & Mean \\
-      %       \midrule
-      %       1 & Lavender & 22     & 21 \\
-      %       2 & Lemon    & 18     & 18 \\
-      %       3 & No Odor  & 17     & 18 \\
-      %       \bottomrule
-      %     \end{tabular}
-      %     \caption{Exercise 45}
-      %   \end{table}
+        \begin{figure}[H]
+          \centering
+          \includegraphics{figures/ex45_histogram.pdf}
+          \caption{Exercise 45 Histogram}
+        \end{figure}
 
-      %   \begin{figure}[H]
-      %     \centering
-      %     \includegraphics{figures/ex45.pdf}
-      %     \caption{Exercise 45}
-      %   \end{figure}
-
-      %   It looks like either odor makes people spend more money but lavender is
-      %   more effective than lemon.
 
       \item[50]
-        \begin{table}[H]
+        \begin{table}[ht]
           \centering
-          \begin{tabular}{rl}
+          \begin{tabular}{lr}
             \toprule
-            Min.    & 0.1 \\
-            1st Qu. & 0.975 \\
-            Median  & 3.3 \\
-            Mean    & 4.727 \\
-            3rd Qu. & 7.2 \\
-            Max.    & 19.6 \\
+            Min.    & 0.10 \\
+            1st Qu. & 0.97 \\
+            Median  & 3.30 \\
+            Mean    & 4.73 \\
+            3rd Qu. & 7.20 \\
+            Max.    & 19.60 \\
             \bottomrule
           \end{tabular}
           \caption{Exercise 50}
@@ -276,7 +237,7 @@
         Since the mean is larger than the median, the distribution is right-skewed.
         According to the rule:
         \[
-          outlier = 7.2 + 1.5 \cdot (7.2 - 0.975) \approx 16.54 \\
+          outlier = 7.2 + 1.5 \times (7.2 - 0.97) \approx 16.5 \\
         \]
 
         US, Canada, and Australia are outliers according to the rule.  This

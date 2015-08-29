@@ -18,10 +18,10 @@
 \usepackage{caption}
 \usepackage{fullpage}
 \usepackage{comment}
+\usepackage{commath}
 \usepackage{enumerate}
 \usepackage{graphicx}
 
-\newcommand{\degree}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
 
 \title{Statistics \\ Week Five}
@@ -40,278 +40,68 @@
     \item show how to get equation from slope and one point
   \end{itemize*}
 
-  \section{Halftime vs. Final}
+  \section{HANES Data} % (fold)
 
-  \begin{figure}[H]
-    \centering
-    \includegraphics{figures/nfl/ht_vs_final.pdf}
-    \caption{Halftime vs. Final Score}
-  \end{figure}
+  \begin{enumerate*}
+    \item find equation for SD line ($w = 14.89597 h - 832.924$)
+    \item draw SD line 
+    \item talk about predicting weight from height by adding corresponding SD
+    \item calculate mean weights for short/tall samples. Notice that short
+      people are 0.43 heaver than expected and tall people are 0.43 lighter than expected.
+    \item talk about predicting weight using average weight for that height. Draw line through
+      midpoint of vertical slices.
+    \item draw best fit line for means
+    \item calculate slope of best fit line for means
+    \item notice that slope is 0.43 of SD slope. One change of SD in height results in 0.43
+      change in SD for weight
+    \item find equation for regression line ($w = 6.445742h - 254.929$)
+  \end{enumerate*}
+  
+  General rule for regression line:
+  \begin{itemize*}
+    \item line goes through $\del{ \bar{x}, \bar{y} }$ 
+    \item slope is:
+      \[
+        m = r \cdot \frac{s_y}{s_x}
+      \]
+  \end{itemize*}
 
-  % \begin{figure}[H]
-  %   \centering
-  %   \includegraphics{figures/nfl/ht_10_final.pdf}
-  %   \caption{Final score with a halftime score of 10}
-  % \end{figure}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics{figures/nfl/ht_vs_mean_final.pdf}
-    \caption{Halftime vs. Mean Final Score}
-  \end{figure}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics{figures/nfl/ht_vs_mean_final_scaled.pdf}
-    \caption{Halftime vs. Mean Final (scaled)}
-  \end{figure}
-
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{rrrrr}
-      \toprule
-      Halftime & Mean Final & Halftime s & Final s & slope\\
-      \midrule
-      0        & 9.53       & -1.48      & -1.15   & NA \\
-      3        & 13.06      & -1.07      & -0.81   & 0.83 \\
-      7        & 17.76      & -0.53      & -0.36   & 0.83 \\
-      10       & 20.96      & -0.12      & -0.05   & 0.75 \\
-      14       & 24.61      & 0.43       & 0.30    & 0.64 \\
-      17       & 27.81      & 0.84       & 0.61    & 0.75 \\
-      \bottomrule
-    \end{tabular}
-    \caption{Common halftime scores (at least 500 games)}
-  \end{table}
-
-  \begin{tabular}[H]{rrl}
-    \toprule
-    Min Games & Mean Slope & Notes \\
-    \midrule
-    500       & 0.76       & not enough samples\\
-    all       & 0.84       & outliers \\
-    100       & 0.73       & just right \\
-    \bottomrule
-  \end{tabular}
-
-  $r = 0.7376$
-
-  Line goes through $(0, 0)$, so the equation is:
-  \[
-    \hat{z}_y = r z_x
-  \]
-
-  for halftime/final scores:
-  \[
-    \hat{z}_y = 0.7376 z_x
-  \]
+  \begin{align*}
+    \bar{y} & = m \bar{x} + b \\
+    b       & = \bar{y} - m \bar{x} \\
+  \end{align*}
 
   \begin{itemize*}
     \item $r$ is number of y standard deviations change for each x standard
       deviation change 
+
+    \item $r^2$ is fraction of variation in $y$ accounted for by changes in $x$.
 
     \item $r = \pm 1$ for exact match
 
     \item $r = 0$ for no correlation.  If you change x, you don't expect any
       corresponding change in y
 
-    \item minimizes square of differences from prediction
+    \item for height/weight, $r^2 \approx 0.1872442$
+
+    \item regression line minimizes square of differences from prediction
   \end{itemize*}
 
-  Average slope of the two means is approximately $r$.
-  examples:
-
-  \begin{tabular}[H]{rrrr}
-    \toprule
-    x  & $z_x$   & $\hat{z}_y$ & y \\
-    \midrule
-    7  & $-0.53$ & $-0.39$     & 17.4 \\
-    17 & $0.84$  & $0.62$      & 27.9 \\
-    \bottomrule
-  \end{tabular}
-
-  If we want things in points instead of standard deviations, we have to convert
-  everything:
-
-  slope:
-  \[
-    a = r \cdot \frac{s_y}{s_x}
-  \]
-
-  Line goes through $(\bar{x}, \bar{y})$.  Find y-intercept:
-
+  Calculating height from weight gives a different line:
   \begin{align*}
-    \bar{y} & = a \bar{x} + b \\
-    b         & = \bar{y} - a \bar{x} \\
+    m & = 0.4327172 \cdot \frac{2.98}{44.39} \\
+      & = 0.02904927 \\
+    b & = 68.46 - 0.02904927 \cdot 185.96 \\
+      & = 63.058 \\
+    \\
+    h & = 0.02904927 w + 63.058 \\
   \end{align*}
 
-  \begin{tabular}[H]{lrr}
-    \toprule
-             & mean & standard deviation \\
-    \midrule
-    halftime & 10.9 & 7.4 \\
-    final    & 21.5 & 10.4 \\
-    \bottomrule
-  \end{tabular}
+  Doing it this way is like drawing a line through the midpoint of the horizontal slices
+  through the football.
 
-  \begin{align*}
-    a & = 0.7376 \cdot \frac{10.4}{7.4} \\
-      & = 1.04 \\
-    \\
-    b & = 21.5 - 1.04 \cdot 10.9 \\
-      & = 10.16 \\
-    \\
-    \hat{y} &= 1.04 x + 10.16 \\
-  \end{align*}
-
-  \begin{tabular}[H]{rr}
-    \toprule
-    halftime & predicted final \\
-    \midrule
-    14       & 24.8 \\
-    3        & 13.2 \\
-    \bottomrule
-  \end{tabular}
-
-  \section{Final vs. Halftime}
-
-  You get a different model going the other direction.
-  \begin{align*}
-    a & = 0.7376 \cdot \frac{7.4}{10.4} \\
-      & = 0.52 \\
-    \\
-    b & = 10.9 - 0.52 \cdot 21.5 \\
-      & = -0.27 \\
-    \\
-    \hat{y} &= 0.52 x - 0.27 \\
-  \end{align*}
-
-  without rounding error:
-  \[
-    \hat{y} = 0.5195 - 0.3036 x \\
-  \]
-
-  \begin{tabular}[H]{rr}
-    \toprule
-    final & predicted halftime \\
-    \midrule
-    30    & 15.28 \\
-    10    & 4.89 \\
-    \bottomrule
-  \end{tabular}
-
-  \section{Examples}
-  \begin{itemize}
-    \item In a class, midterm and final scores have a mean of 60 and an SD of 15.
-      The correlation between midterm and final scores is 0.5.  Estimate the average
-      final scores for a midterm score of:
-
-      \begin{enumerate}[(a)]
-        \item midterm: 75
-          \begin{solution}
-            1 SD above the mean, final should be $60 + 0.5 \cdot 15 = \boxed{
-            67.5 }$
-          \end{solution}
-
-        \item midterm: 30
-          \begin{solution}
-            2 SD below the mean, final should be $60 - 0.5 \cdot 30 = \boxed{ 45
-            }$
-          \end{solution}
-          
-        \item midterm: 60
-          \begin{solution}
-            At the mean---final also 60
-          \end{solution}
-      \end{enumerate}
-
-    \item For men age 45--54 in HANES sample:
-      \begin{tabular}[H]{lrr}
-               & mean   & SD \\
-        height & 69 in  & 3 in \\
-        weight & 171 lb & 30 lb \\
-      \end{tabular}
-
-      $r = 0.4$
-
-      \begin{enumerate}[(a)]
-      
-        \item what is the expected weight for a 69 inch man?
-        \begin{solution}
-          1 SDs above mean.  $171 + 0.4 \cdot 30 = \unit[183]{lb}$
-        \end{solution}
-
-        \item what is the expected weight for a 63 inch man?
-        \begin{solution}
-          2 SDs below mean.  $171 - 2 \cdot 0.4 \cdot 30 = \unit[147]{lb}$
-        \end{solution}
-
-        \item What is the general equation for the regression line?
-          \begin{solution}
-            \[
-              \hat{y} = 0.9913 x + 102.6
-            \]
-          \end{solution}
-
-        \item what is the expected weight for a 0 inch tall man?
-        \begin{solution}
-          102.6 lbs but you should be a little suspicious about a 0 inch tall
-          man.
-        \end{solution}
-
-      \end{enumerate}
-
-    \item For some school:
-      \begin{tabular}[H]{lrr}
-            & mean   & SD \\
-        SAT & 550  & 80 \\
-        GPA & 2.6 & 0.6 \\
-      \end{tabular}
-
-      $r = 0.4$
-
-      \begin{enumerate}[(a)]
-        \item
-          What is the expected GPA for a student with an SAT score of 650?
-
-          \begin{solution}
-            \[
-              z_x = \frac{650 - 550}{80} = 1.25
-            \]
-
-            1.25 SD above mean.
-
-            \[
-              \hat{z}_y = 0.4 \cdot 1.25 = 0.5
-            \]
-
-            Convert back to GPA\@:
-            \[
-              2.6 + 0.5 \cdot 0.6 = 2.9
-            \]
-          \end{solution}
-
-        \item
-          What is the expected GPA percentile for a student in the 90th
-          percentile for SAT scores?
-
-          \begin{solution}
-            convert to z-score: $z_{SAT} \approx 1.28$
-
-            calculate expected GPA z-score: 
-            \[
-              \hat{z}_{GPA} \approx 0.4 \cdot 1.28 = 0.512
-            \]
-
-            convert back to percentile:
-            \[
-              GPA \approx 0.6957
-            \]
-
-            He should expect to be around the 70th percentile.
-
-          \end{solution}
-      \end{enumerate}
-
+  Questions:
+  \begin{enumerate}
     \item The mean age 45--54 in the HANES sample had an average height of 69
       inches.  This is the same as the overall average height.
 
@@ -329,26 +119,183 @@
         They're scattered about the graph.  Older men tend to be heavier for
         their height, so the average weight of this group is probably higher
         than 171 lbs.
+
+        With our data set, the correlation between age and weight for men
+        between 18 and 60 is 0.2.
+
       \end{solution}
 
     \item In regression of height to weight, men who are 73 inches tall average
       176 lbs in weight. T/F\@: men who are 176 lbs average 73 inches tall?
-  \end{itemize}
+
+      \begin{solution}
+        False---there is a different regression equation when going the other direction.
+      \end{solution}
+
+  \end{enumerate}
+
+  \section{Examples}
+  
+  \subsection{Exams} % (fold)
+  
+  In a class, midterm and final scores have a mean of 60 and an SD of 15.  The correlation
+  between midterm and final scores is 0.5.  Estimate the average final scores for a midterm
+  score of:
+
+  \begin{enumerate}[(a)]
+    \item What is the regression line for final vs.\ midterm?
+      \begin{solution}
+        \begin{align*}
+          m  & = 0.5 \cdot 1 \\
+             & = 0.5 \\
+          60 & = 0.5 \cdot 60 + b \\
+          b  & = 30 \\
+          f  & = 0.5m + 30 \\
+        \end{align*}
+      \end{solution}
+
+    \item midterm: 75
+      \begin{solution}
+        \begin{align*}
+          f & = 0.5 \cdot 75 + 30 \\
+            & = 67.5 \\
+        \end{align*}
+      \end{solution}
+
+    \item midterm: 30
+      \begin{solution}
+        \begin{align*}
+          f & = 0.5 \cdot 30 + 30 \\
+            & = 45 \\
+        \end{align*}
+      \end{solution}
+      
+    \item midterm: 60
+      \begin{solution}
+        \begin{align*}
+          f & = 0.5 \cdot 60 + 30 \\
+            & = 60 \\
+        \end{align*}
+      \end{solution}
+  \end{enumerate}
+
+  Notice that people who did well on the midterm do less well on the final and people who did
+  poorly on the midterm to better on the final. This is regression to the mean.
+
+  \subsection{SAT} % (fold)
+  
+  For some school:
+  \begin{tabular}[H]{lrr}
+         & mean & SD \\
+    SAT  & 550  & 80 \\
+    GPA  & 2.6  & 0.6 \\
+  \end{tabular}
+
+  $r = 0.4$
+
+  \begin{enumerate}[(a)]
+    \item Find the equation for the regression line which predicts GPA based on SAT.\@
+
+      \begin{solution}
+        \begin{align*}
+          m   & = 0.4 \cdot \frac{0.6}{80} \\
+              & = 0.003 \\
+          2.6 & = 0.003 \cdot 550 + b \\
+          b   & = 0.95 \\
+          gpa & = 0.003 sat + 0.95 \\
+        \end{align*}
+      \end{solution}
+
+    \item
+      What is the expected GPA for a student with an SAT score of 650?
+
+      \begin{solution}
+        \begin{align*}
+          gpa & = 0.003 \cdot 650 + 0.95 \\
+              & = 2.9 \\
+        \end{align*}
+      \end{solution}
+
+    \item
+      What is the expected GPA percentile for a student in the 95th
+      percentile for SAT scores?
+
+      \begin{solution}
+        convert to z-score: $z_{SAT} \approx 1.644854$
+
+        Convert to SAT score:
+        \begin{align*}
+          z   & = \frac{x - \bar{x}}{s} \\
+          x   & = z \cdot s + \bar x \\
+          \\
+          sat & = 1.644854 \cdot 80 + 550 \\
+              & \approx 682 \\
+        \end{align*}
+
+        calculate expected GPA:\@ 
+        \begin{align*}
+          gpa & = 0.003 \cdot 682 + 0.95 \\
+              & \approx 3.0 \\
+        \end{align*}
+
+        convert back to percentile:
+        \begin{align*}
+          z & = \frac{3.0 - 2.6}{0.6} \\
+            & \approx 0.6667 \\
+        \end{align*}
+
+        This is around the 75th percentile.
+
+      \end{solution}
+  \end{enumerate}
 
   \section{Residuals}
 
-  \begin{itemize*}
-    \item r.m.s. ``average'' error
+  \begin{itemize}
+    \item A residual is the difference between the predicted and actual value.
+
+    \item Scatter plot of residuals (x value vs.\ residual) looks like random
+      cloud of points. Any change in $y$ caused by a change in $x$ is gone.
+
     \item sum of residuals always zero
-    \item draw graph of residuals from mean and show is same as standard deviation
-    \item residuals vs.\ linear regression less than residuals vs.\ mean by
-      factor of
-      $\sqrt{1- r^2}$.  Show r = 1, 0, -1
+
+    \item Regression line minimizes R.M.S. error of residuals:
+      \[
+        \text{error} = \sqrt{\frac{\sum r_i}{n}}
+      \]
+
+    \item Approximate RMS for residuals is $\sqrt{1 - r^2}$.
+
+    \item RMS for residuals is similar to $s$ for sample (draw picture with
+      error shading around regression line). 
+      \begin{itemize*}
+        \item About 65\% of residuals are less than one error
+        \item About 95\% of residuals are less than two errors
+      \end{itemize*}
+
+    \item If you use the line $y = \bar{y}$ as the regression line (ignore any
+      effect $x$ has on $y$ and guess that a $y$ value is likely to be the
+      average value of $y$), then the RMS of the residuals is equal to the
+      standard deviation.
+
+    \item Error:
+      Improvement over using $y = \bar{y}$ as the regression line is measured by
+      multiplying $s$ by $\sqrt{1 - r^2}$.
+
+      \[
+        e \approx s_y \sqrt{1 - r^2}
+      \]
+
+      \begin{itemize*}
+        \item $r = \pm 1$: error goes to zero.
+        \item $r = 0$: no improvement---error is same as $s_y$
+        \item $r$ somewhere in between gives an improvement
+      \end{itemize*}
 
     \item $r^2$ is measure how much regression explains variation in y based on
       variation in x.
 
-  \end{itemize*}
+  \end{itemize}
 
   \begin{table}[H]
     \centering
@@ -427,8 +374,6 @@
   \subsection{Other Examples} % (fold)
   
   \begin{itemize*}
-    \item study of businesses which said American business climate encouraged
-      mediocrity
     \item pilots with bad/good landings and instructor criticism/praise.
     \item retake of standardized tests
   \end{itemize*}

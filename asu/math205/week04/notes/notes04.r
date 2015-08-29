@@ -4,8 +4,12 @@ week.dir <- paste(math205.dir, 'week04', sep = '/')
 figure.dir <- paste(week.dir, 'notes', 'figures', 'nfl', sep = '/')
 
 data.dir <- paste(math205.dir, 'data', sep = '/')
-nfl.dir <- paste(data.dir, 'nfl', sep = '/')
-setwd(nfl.dir)
+
+x = -3:3
+y = x^3
+
+cor.test(x, y, method = "spearman")
+cor(x, y)
 
 x = c(91, 81, 86, 83, 85, 85, 85, 84, 91, 91, 91, 85, 85, 87, 90)
 y = c(85, 83, 85, 84, 85, 84, 89, 83, 82, 82, 82, 85, 85, 85, 85)

@@ -28,17 +28,32 @@ plot <- ggplot(data.frame(x = c(-3, 3)), aes(x = x)) +
   #               geom = "area", fill = "grey") +
 
   # part c
-  # stat_function(fun = limit.domain(function(x) dnorm(x, 0, 1), 1.75, 3), 
-  #               geom = "area", fill = "grey") +
-
-  # part d
-  stat_function(fun = limit.domain(function(x) dnorm(x, 0, 1), -2.25, 2.25), 
+  stat_function(fun = limit.domain(function(x) dnorm(x, 0, 1), 1.75, 3), 
                 geom = "area", fill = "grey") +
 
+  # part d
+  # stat_function(fun = limit.domain(function(x) dnorm(x, 0, 1), -2.25, 2.25), 
+  #               geom = "area", fill = "grey") +
+
   theme_ubb + theme(axis.title = element_blank()) 
+
 print(plot)
 
-save.plot(plot, figure.dir, 'ex28d.pdf')
+save.plot(plot, figure.dir, 'ex28c.pdf')
+
+df <- data.frame(
+  a = pnorm(-2.25),
+  b = 1 - pnorm(-2.25),
+  c = 1 - pnorm(1.77),
+  d = pnorm(1.77) - pnorm(-2.25)
+)
+
+round(df, 4)
+# exercise 30
+pnorm(5, mean = 7.11, sd = 0.74)
+pnorm((5 - 7.11)/0.74)
+
+?pnorm
 
 # exercise 46
 ex46 <- read.delim("ex03-46.dat", header = TRUE, sep = '\t')
@@ -53,16 +68,15 @@ print(plot)
 
 save.plot(plot, figure.dir, 'ex46.pdf')
 
-iq <- ex46$IQ
+attach(ex46)
+round(mean(IQ), digits = 2)
+round(sd(IQ), digits = 2)
 
-round(mean(iq), digits = 2)
-round(sd(iq), digits = 2)
+ex46.expected.1sd <- round(.68 * 31, 2)
+ex46.actual.1sd <- length(IQ[mean(IQ) - 1 * sd(IQ) < IQ & IQ < mean(IQ) + 1 * sd(IQ)])
 
-ex46.expected.1sd <- round( .68 * 31 )
-ex46.actual.1sd <- length(iq[mean(iq) - 1 * sd(iq) < iq & iq < mean(iq) + 1 * sd(iq)])
-
-ex46.expected.2sd <- round( .95 * 31 )
-ex46.actual.2sd <- length(iq[mean(iq) - 2 * sd(iq) < iq & iq < mean(iq) + 2 * sd(iq)])
+ex46.expected.2sd <- round(.95 * 31, 2)
+ex46.actual.2sd <- length(IQ[mean(IQ) - 2 * sd(IQ) < IQ & IQ < mean(IQ) + 2 * sd(IQ)])
 
 ex46.expected.1sd
 ex46.actual.1sd
@@ -70,7 +84,11 @@ ex46.actual.1sd
 ex46.expected.2sd
 ex46.actual.2sd
 
-round(mean(iq) - 2 * sd(iq), digits = 2)
+29/31
+
+round(mean(IQ) - 2 * sd(IQ), digits = 2)
+
+detach(ex46)
 
 # exercise 48
 ex48 <- c(4.33, 5.05, 5.44, 5.79, 6.81)

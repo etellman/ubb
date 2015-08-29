@@ -96,6 +96,29 @@ str(ex34)
 cor(ex34$Women + 3, ex34$Women)
 cor(ex34$Men, ex34$Women)
 
+# exercise 36
+ex36 <- data.frame(x = x, y = y)
+
+x <- c(1, 1.1, 1.21, 1.331, 1.4641, 1.61051) 
+y <- c(1, 1.2, 1.44, 1.728, 2.0736, 2.48832)
+f(1, 5, 0.2)
+
+f <- function(b, n, r) {
+  if (n == 0) {
+    b
+  } else {
+    (1 + r) * f(b, n - 1, r)
+  }
+}
+
+plot <- ggplot(ex36, aes(x = x, y = y)) + 
+  geom_point() +
+  theme_ubb
+print(plot)
+
+with(ex36, cor(x, y))
+save.plot(plot, figure.dir, 'ex36.pdf')
+
 # exercise 43
 ex43 <- read.delim("ex04-43.dat", header = TRUE, sep = '\t')
 str(ex43)

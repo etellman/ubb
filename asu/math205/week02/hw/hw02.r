@@ -31,6 +31,19 @@ plot <- ggplot(subset(ex29, Variety == "yellow"), aes(x = Length)) +
   labs(x = "Length") +
 print(plot)
 
+# exercise 30
+ex30 <- c(rep(0, 15), rep(1, 11), rep(2, 15), rep(3, 11), rep(4, 8), rep(5, 5), 
+          rep(6, 4), rep(7, 4), rep(8, 4))
+
+39 + 19
+ex30 <- data.frame(fruit = ex30)
+summary(ex30)
+nrow(ex30)
+plot <- ggplot(ex30, aes(x = fruit)) + 
+  geom_histogram(binwidth = 1, fill = 'grey', color = 'black') +
+  theme_ubb + theme(axis.title.y = element_blank()) 
+print(plot)
+
 # exercise 32
 ex32 <- read.delim("../ch01/ex01-38.dat", header = T, sep = '\t')
 ddply(ex32, "Sex", summarize, mean = mean(Study), sd = sd(Study))
@@ -105,18 +118,24 @@ plot <- ggplot(ex45, aes(x = reorder(Odor, Euros), y = Euros)) +
   labs(y = 'Sales (Euros)')
 print(plot)
 
-save.plot(plot, figure.dir, 'ex45.pdf')
+str(ex45)
+plot <- ggplot(ex45, aes(x = Euros)) + 
+  facet_grid(Odor ~ .) +
+  geom_histogram(binwidth = 3, fill = "grey", color = "black") +
+  theme_ubb + theme(axis.title.y = element_blank()) +
+  labs(x = "Euros")
+
+print(plot)
+
+save.plot(plot, figure.dir, 'ex45_histogram.pdf')
 
 # exercise 50
 ex50 <- read.delim("../ch01/ta01-06.dat", header = T, sep = '\t')
 ex50 <- cbind(ex50, rank = rank(-ex50$CO2))
 
-ex50.summary <- ddply(ex50, c(), function(df) summary(df$CO2))
-ex50.summary
+tex.table(data.frame(t(ex50.summary)))
 
-sink("~/Documents/U/ubb/sccc/math146/week02/hw/r.tex")
-xtable( t(ex50.summary) , digits = 0)
-sink()
+7.2 + 1.5 * (7.2 - 0.97) 
 
 plot <- ggplot(ex50, aes(x = 1, y = CO2)) + 
   geom_boxplot(color = "black", fill = "grey", outlier.shape = 21, outlier.size = 1.5) +

@@ -1,5 +1,5 @@
 % no answer key
-% \documentclass[letterpaper]{exam}
+% \documentclass[letterpaper, portrait]{exam}
 
 % answer key
 \documentclass[letterpaper, landscape]{exam}
@@ -7,6 +7,7 @@
 \printanswers{}
 
 \usepackage{units} 
+\usepackage{parskip} 
 \usepackage{xfrac} 
 \usepackage[fleqn]{amsmath}
 \usepackage{cancel}
@@ -23,12 +24,6 @@
 
 \newcommand{\degree}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
-
-\printanswers{}
-
-\ifprintanswers{}
-  \usepackage{2in1, lscape} 
-\fi
 
 
 \title{Statistics \\ Homework Four}
@@ -87,7 +82,7 @@
           \item See figure.
 
           \item
-            The correlation is 0.9552.  There is a strong correlation between the
+            The correlation is $0.9552$.  There is a strong relationship between the
             coffee price and deforestation.
 
           \item
@@ -104,7 +99,7 @@
         \end{figure}\label{fig:ex28}
 
         \begin{enumerate}[(a)]
-          \item The correlation is -0.7485.  There is a fairly strong negative
+          \item The correlation is $-0.7485$.  There is a fairly strong negative
             correlation between the number of birds that come back and the
             number of new birds.
 
@@ -171,8 +166,8 @@
           \item The pattern is vaguely linear with a weak positive correlation
             of 0.1349.
 
-          \item When you add the means, you can see that the best choice is 20
-            plants per acre.
+          \item When you add the means, you can see that the best choice is
+            20,000 plants per acre.
 
         \end{enumerate}
 
@@ -206,6 +201,15 @@
         risk might invest in the small company stocks.  He would have a chance
         to make more money, but that would come with a chance to lose more as
         well.
+
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics{figures/ex36.pdf}
+          \caption{Exercise 36}
+        \end{figure}
+
+      \newpage
 
       \item[37]
         \begin{enumerate}[(a)]
@@ -253,7 +257,7 @@
           \caption{Exercise 44}
         \end{figure}
 
-        There is a fairly strong (-0.7943) negative correlation between breeding
+        There is a fairly strong ($-0.7943$) negative correlation between breeding
         pairs and returning pairs.  The more breeding pairs there are, the fewer
         pairs return each year.
 

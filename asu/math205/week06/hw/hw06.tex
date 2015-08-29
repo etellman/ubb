@@ -4,7 +4,7 @@
 % answer key
 \documentclass[letterpaper, landscape]{exam}
 \usepackage{2in1, lscape} 
-\printanswers
+\printanswers{}
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -36,21 +36,19 @@
   \section{Homework}
     \begin{itemize*}
       \item read Chapter 6 
-      \item take a look at the ``Check Your Skills'' exercises
-      \item exercises: 19-24, 27, 29-31
+      \item exercises: 19--24, 27, 29--31
     \end{itemize*}
 
-  \ifprintanswers
+  \ifprintanswers{}
     \begin{description}
 
-      \item[19] Table \ref{tab:ex19} shows the success rate for each treatment. 
-        Figure \ref{fig:ex19} shows the same thing in a bar graph.
+      \item[19] Table~\ref{tab:ex19} shows the success rate for each treatment. 
+        Figure~\ref{fig:ex19} shows the same thing in a bar graph.
 
         \begin{figure}[H]
           \centering
           \includegraphics[scale = 0.7]{figures/ex19.pdf}
-          \caption{Exercise 19}
-          \label{fig:ex19}
+          \caption{Exercise 19}\label{fig:ex19}
         \end{figure}
 
         \begin{table}[H]
@@ -59,18 +57,17 @@
             \toprule
             Treatment   & Success Rate \\
             \midrule
-            lithium     & 25\% \\
-            placebo     & 17\% \\
-            desipramine & 58\% \\
+            Lithium     & 25\% \\
+            Placebo     & 17\% \\
+            Desipramine & 58\% \\
             \bottomrule
           \end{tabular}
-          \caption{Exercise 19}
-          \label{tab:ex19}
+          \caption{Exercise 19}\label{tab:ex19}
         \end{table}
 
       \item[20] 
-        Table \ref{tab:ex20a} shows the percentage of men in each job grade.
-        Table \ref{tab:ex20b} shows the percentage of men in each marital status.
+        Table~\ref{tab:ex20a} shows the percentage of men in each job grade.
+        Table~\ref{tab:ex20b} shows the percentage of men in each marital status.
         
         \begin{table}[H]
           \centering
@@ -84,8 +81,7 @@
             grade 4   & 7\% \\
             \bottomrule
           \end{tabular}
-          \caption{Percent of men in each job grade.}
-          \label{tab:ex20a}
+          \caption{Percent of men in each job grade.}\label{tab:ex20a}
         \end{table}
 
         \begin{table}[H]
@@ -100,8 +96,7 @@
             widowed        & 1\% \\
             \bottomrule
           \end{tabular}
-          \caption{Percent of men in each marital status.}
-          \label{tab:ex20b}
+          \caption{Percent of men in each marital status.}\label{tab:ex20b}
         \end{table}
       The percentages might not add up to exactly 100\% because of rounding, but
       they should be close.
@@ -122,7 +117,7 @@
       of the single men hold grade 1 jobs.
 
     \item[22]
-      Table \ref{tab:ex22} contains the percentage of single men in each job
+      Table~\ref{tab:ex22} contains the percentage of single men in each job
       grade.
 
       The percentages should add up to approximately 100\%, although there may
@@ -140,17 +135,16 @@
           grade 3   & 2\%   \\
           \bottomrule
         \end{tabular}
-        \caption{Percentage of single men in each job grade}.
-        \label{tab:ex22}
+        \caption{Percentage of single men in each job grade}.\label{tab:ex22}
       \end{table}
 
 
     \item[23]
-      \begin{parts}
-        \part There are 7730 married men and only 337 single men, so you would expect
+      \begin{enumerate}[(a)]
+        \item There are 7730 married men and only 337 single men, so you would expect
         more married men than single men in all the job categories.
 
-        \part 
+        \item 
 
           \begin{table}[H]
             \centering
@@ -175,13 +169,13 @@
           widowed men, so there probably isn't a large enough sample size to get a
           good picture of the widowed men.
 
-      \end{parts}
+        \end{enumerate}
 
     \item[24] As you get older, you tend to make more money.  As you get older, you
       are also more likely to get married.  Age is probably the lurking variable.
 
     \item[27]
-      Table \ref{tab:ex27} shows the percentage of people in each job for each
+      Table~\ref{tab:ex27} shows the percentage of people in each job for each
       education level.  The more education you have, the more freedom you have
       in organizing your work.
 
@@ -196,14 +190,13 @@
           BA    & 45.0    & 47.2    & 7.8  \\
           \bottomrule
         \end{tabular}
-        \caption{Percentage of people in each job for each education level.}
-        \label{tab:ex27}
+        \caption{Percentage of people in each job for each education level.}\label{tab:ex27}
       \end{table}
 
     \newpage
 
     \item[29]
-      According to table \ref{tab:ex29}, women earn A higher percentage of each
+      According to Table~\ref{tab:ex29}, women earn A higher percentage of each
       type of degree.  
       
       The gap narrows with the more advanced degrees. Women are a large majority
@@ -214,8 +207,8 @@
         \centering
         \begin{tabular}{lrr}
           \toprule
-          \midrule
                        & F    & M \\
+          \midrule
           Associate's  & 63\% & 37\% \\
           Bachelor's   & 59\% & 41\% \\
           Master's     & 61\% & 39\% \\
@@ -223,8 +216,7 @@
           Doctor's     & 51\% & 49\% \\
           \bottomrule
         \end{tabular}
-        \caption{Percentage of each degree earned by men and women}
-        \label{tab:ex29}
+        \caption{Percentage of each degree earned by men and women}\label{tab:ex29}
       \end{table}
 
     \item[30]
@@ -251,7 +243,7 @@
       %   \label{tab:ex30a}
       % \end{table}
 
-      Table \ref{tab:ex30b} shows the oil consumption for each type of patient.
+      Table~\ref{tab:ex30b} shows the oil consumption for each type of patient.
       The oil consumption seems to be very equally divided between the three
       groups.  About a third of the people are in the low/medium/high
       categories, regardless of whether they have cancer or not.
@@ -271,13 +263,12 @@
           control & 33.9\%   & 32.9\%  & 33.1\% \\
           \bottomrule
         \end{tabular}
-        \caption{Oil consumption for each category of patient}.
-        \label{tab:ex30b}
+        \caption{Oil consumption for each category of patient}.\label{tab:ex30b}
       \end{table}
 
 
     \item[31]
-      Table \ref{tab:ex31} shows the heart disease rate for each anger category.
+      Table~\ref{tab:ex31} shows the heart disease rate for each anger category.
       The more angry you are, the more likely it is that you'll get hear
       disease.
 
@@ -292,8 +283,7 @@
           high anger     & 95.7\%   & 4.3\% \\
           \bottomrule
         \end{tabular}
-        \caption{Heart disease rates for each anger rate.}
-        \label{tab:ex31}
+        \caption{Heart disease rates for each anger rate.}\label{tab:ex31}
       \end{table}
 
   \end{description}

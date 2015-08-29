@@ -42,13 +42,14 @@
   Break down by sex:
   \begin{table}[H]
     \centering
-    \begin{tabular}{rlrrr}
+    \begin{tabular}{lrrr}
       \toprule
-                & sex   & admitted & rejected & (all) \\
+      sex   & admitted & rejected & (all) \\
       \midrule
-      1         & M     & 1192     & 1398     & 2590 \\
-      2         & F     & 557      & 1278     & 1835 \\
-      3         & (all) & 1749     & 2676     & 4425 \\
+      M     & 1192     & 1398     & 2590 \\
+      F     & 557      & 1278     & 1835 \\
+      \midrule
+      (all) & 1749     & 2676     & 4425 \\
        \bottomrule
     \end{tabular}
     \caption{By sex}
@@ -77,7 +78,7 @@
   \end{table}
 
   Each row is a ``conditional distribution.'' All the values for a row have the
-  same value for the categorical variable.
+  same value for the categorical variable. Each row adds up to 1.
 
   Things looked suspicious, so they decided to do a breakdown by department:
 
@@ -178,10 +179,10 @@
   \end{table}
 
   \begin{itemize*}
-    \item 62 \% of the men apply to the two easiest departments.
-    \item 17 \% of the men apply to the two hardest departments.
-    \item 7 \% of the women apply to the two easiest departments.
-    \item 40 \% of the women apply to the two hardest departments.
+    \item 53\% of the men apply to the two easiest departments.
+    \item 17\% of the men apply to the two hardest departments.
+    \item 7\% of the women apply to the two easiest departments.
+    \item 40\% of the women apply to the two hardest departments.
   \end{itemize*}
 
   \section{Apply Your Knowledge}

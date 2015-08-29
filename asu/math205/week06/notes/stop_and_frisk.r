@@ -1,12 +1,47 @@
+root.dir <- '~/Documents/U/ubb/asu/math205'
+data.dir <- paste(root.dir, 'data', 'stop_and_frisk', sep = '/')
+setwd(data.dir)
 
-root.dir <- '~/Documents/U/ubb/sccc/math146'
-notes.dir <- paste(root.dir, 'week06/notes', sep = '/')
-figures.dir <- paste(notes.dir, 'figures', sep = '/')
+week.dir <- paste(root.dir, 'week06', sep = '/')
+figure.dir <- paste(week.dir, 'hw', 'figures', sep = '/')
 data.dir <- paste(root.dir, 'data', 'stop_and_frisk', sep = '/')
 
 setwd(data.dir)
 
 sqf <- read.delim('sqf_2012.csv', header = TRUE, sep = ',')
+
+classify.age <- function(age) {
+  if (age < 15) {
+    '0to14'
+  } else if (age < 25) {
+    '15to24'
+  } else if (age < 35) {
+    '25to34'
+  } else if (age < 45) {
+    '35to44'
+  } else if (age < 55) {
+    '45to54'
+  } else {
+    'over55'
+  }
+}
+
+classify.reason <- function(df) {
+  if (df$cs_objcs) {
+    'suspicious'
+  } else if (age < 25) {
+    '15to24'
+  } else if (age < 35) {
+    '25to34'
+  } else if (age < 45) {
+    '35to44'
+  } else if (age < 55) {
+    '45to54'
+  } else {
+    'over55'
+  }
+}
+sqf$age.category <- sapply(sqf$age, classify.age)
 sqf <- subset(sqf, !is.na(sex) & !is.na(race))
 
 nyc <- read.delim('DEC_10_DP_DPDP1_with_ann.csv', header = TRUE, sep = ',')
@@ -14,7 +49,11 @@ nyc <- read.delim('DEC_10_DP_DPDP1_with_ann.csv', header = TRUE, sep = ',')
 
 by.sex <- ddply(sqf, .(sex), summarize, pct = length(sex) / nrow(sqf))
 
+str(sqf)
+
 by.race.and.age <- ddply(sqf, .(race, age.category), summarize, count = length(race))
+by.race.and.age
+
 by.race.and.age.c <- cast(by.race.and.age, race ~ age.category, 
                           value = .(count), fun = sum, margins = T)
 
@@ -67,38 +106,6 @@ sink()
 
 nrow(sqf) / 365
 
-classify.age <- function(age) {
-  if (age < 15) {
-    '0to14'
-  } else if (age < 25) {
-    '15to24'
-  } else if (age < 35) {
-    '25to34'
-  } else if (age < 45) {
-    '35to44'
-  } else if (age < 55) {
-    '45to54'
-  } else {
-    'over55'
-  }
-}
-
-classify.reason <- function(df) {
-  if (df$cs_objcs) {
-    'suspicious'
-  } else if (age < 25) {
-    '15to24'
-  } else if (age < 35) {
-    '25to34'
-  } else if (age < 45) {
-    '35to44'
-  } else if (age < 55) {
-    '45to54'
-  } else {
-    'over55'
-  }
-}
-sqf$age.category <- sapply(sqf$age, classify.age)
 
 sum(subset(by.age, age < 40, pct))
 

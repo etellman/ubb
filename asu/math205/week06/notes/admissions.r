@@ -1,4 +1,4 @@
-root.dir <- '~/Documents/U/ubb/sccc/math146'
+root.dir <- '~/Documents/U/ubb/asu/math205'
 notes.dir <- paste(root.dir, 'week06/notes', sep = '/')
 
 ucb <- rbind(
@@ -28,8 +28,8 @@ ucb <- rbind(
   #            admitted = round(0.4 * 1507))
 )
 
-ucb$rejected
 ucb$rejected = with(ucb, applicants - admitted)
+ucb$rejected
 
 ucb.m <- melt(ucb, id = c('department', 'sex'))
 
@@ -39,38 +39,36 @@ overall <- with(ucb, data.frame(admitted = sum(admitted),
                                 total = sum(admitted, rejected)))
 with(ucb, round(sum(admitted) / sum(applicants), 2))
 
-with(ucb, round(sum(admitted) / sum(applicants), 2))
-
 # by sex
-by.sex <- cast(ucb.m, sex ~ variable, subset = variable != "applicants", 
-               fun = sum, margins = T)
+by.sex <- dcast(subset(ucb.m, variable != "applicants"), 
+                sex ~ variable, fun = sum, margins = T)
+
+
+by.sex
 
 by.sex.p <- ddply(ucb, .(sex), summarize, 
                 admitted = round(sum(admitted) / sum(applicants), 2),
                 rejected = round(sum(rejected) / sum(applicants), 2)
                 )
 
-by.department.and.sex <- cast(ucb.m, department + sex ~ variable, 
-                              subset = variable != "applicants", fun = sum, margins = T)
+by.sex.p
 
+by.department.and.sex <- dcast(ucb.m, department + sex ~ variable, 
+  subset = .(variable != "applicants"), fun = sum, margins = T)
 
-sink(paste(notes.dir, 'r.tex', sep = '/'))
-  xtable(by.department.and.sex, digits = 0)
-sink()
+by.department.and.sex
+tex.table(by.department.and.sex, digits = 0)
 
 
 # by department and sex
 by.department.sex.p <- ddply(ucb, .(department, sex), summarize, 
                        proportion = round(sum(admitted) / sum(applicants), 2))
-by.department.sex.c <- cast(by.department.sex.p, department ~ sex, 
-                            value = .(proportion), fun = sum)
+by.department.sex.c
 
 by.department.p <- ddply(ucb, .(department), summarize, 
                        proportion = round(sum(admitted) / sum(applicants), 2))
-by.department.c <- cast(by.department.sex.p, department ~ sex, 
-                            value = .(proportion), fun = sum)
 
-ucb.m
+by.department.p
 
 women <- subset(ucb, sex == 'F')
 men <- subset(ucb, sex == 'M')
@@ -86,9 +84,6 @@ by.department.sex.c <- cast(by.department.sex.p, department ~ sex,
 women.by.department.p
 men.by.department.p
 
-
-by.department.and.sex <- cast(ucb.m, department + sex ~ variable, 
-                              subset = variable != "applicants", fun = sum, margins = T)
 
 sink(paste(notes.dir, 'r.tex', sep = '/'))
   xtable(women.by.department.p, digits = 2)

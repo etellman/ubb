@@ -1,18 +1,15 @@
-root.dir <- "~/Documents/U/ubb/sccc/math146"
+root.dir <- '~/Documents/U/ubb/asu/math205'
+data.dir <- paste(root.dir, 'data', 'bps', 'PC-Text', 'ch06', sep = '/')
+setwd(data.dir)
 
-data.dir <- paste(root.dir, "data/bps/PC-Text", sep = "/")
-hw6.data.dir <- paste(data.dir, "ch06", sep = "/")
-
-hw.dir <- paste(root.dir, "week06/hw", sep = "/")
-figures.dir <- paste(hw.dir, "figures", sep = "/")
-
-setwd(hw6.data.dir)
+week.dir <- paste(root.dir, 'week06', sep = '/')
+figure.dir <- paste(week.dir, 'hw', 'figures', sep = '/')
 
 # exercise 19
 ex19 <- rbind(
-  data.frame(treatment = "lithium", subjects = 24, success = 6),
-  data.frame(treatment = "placebo", subjects = 24, success = 4),
-  data.frame(treatment = "desipramine", subjects = 24, success = 14)
+  data.frame(treatment = "Lithium", subjects = 24, success = 6),
+  data.frame(treatment = "Placebo", subjects = 24, success = 4),
+  data.frame(treatment = "Desipramine", subjects = 24, success = 14)
 )
 
 ex19.rates <- ddply(ex19, "treatment", summarize, 
@@ -21,10 +18,11 @@ ex19.rates <- ddply(ex19, "treatment", summarize,
 plot <- ggplot(ex19.rates, 
                aes(x = reorder(treatment, -success.rate), y = success.rate)) + 
   geom_bar(stat = "identity", fill="lightblue", color = "black") +
-  labs(x = "Treatment", y = "Success Rate")
+  theme_ubb + theme(axis.title = element_blank()) 
+  labs("Success Rate")
 print(plot)
 
-ggsave(paste(figures.dir, "ex19.pdf", sep = '/'))
+save.plot(plot, figure.dir, "ex19.pdf")
 
 sink(paste(hw.dir, 'r.tex', sep = '/'))
   xtable(ex19.rates, digits = 2)

@@ -1,12 +1,9 @@
-root.dir <- "~/Documents/U/ubb/sccc/math146"
+math205.dir <- '~/Documents/U/ubb/asu/math205'
+data.dir <- paste(math205.dir, 'data', 'bps', 'PC-Text', 'ch05', sep = '/')
+setwd(data.dir)
 
-data.dir <- paste(root.dir, "data/bps/PC-Text", sep = "/")
-hw5.data.dir <- paste(data.dir, "ch05", sep = "/")
-
-hw.dir <- paste(root.dir, "week05/hw", sep = "/")
-figures.dir <- paste(hw.dir, "figures", sep = "/")
-
-setwd(hw5.data.dir)
+week.dir <- paste(math205.dir, 'week05', sep = '/')
+figure.dir <- paste(week.dir, 'hw', 'figures', sep = '/')
 
 # exercise 27
 dd <- function(d) 2.69 + 0.0138 * d

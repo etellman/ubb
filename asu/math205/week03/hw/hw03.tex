@@ -1,5 +1,5 @@
 % % no answer key
-% \documentclass[letterpaper]{exam}
+% \documentclass[letterpaper, portrait]{exam}
 
 % answer key
 \documentclass[letterpaper, landscape]{exam}
@@ -23,12 +23,6 @@
 
 \newcommand{\degree}{\ensuremath{^\circ}} 
 \everymath{\displaystyle}
-
-\printanswers{}
-
-\ifprintanswers{}
-  \usepackage{2in1, lscape} 
-\fi
 
 \title{Statistics \\ Homework Three}
 \date{\today}
@@ -99,6 +93,13 @@
           \caption{Exercise 28 (d)}
         \end{figure}
 
+        \begin{enumerate}[(a)]
+          \item $P(z \leq -2.25) = \boxed{ 0.0122 }$
+          \item $P(z \geq -2.25) = \boxed{ 0.9878 }$
+          \item $P(z \geq 1.77) = \boxed{ 0.0384 }$
+          \item $P(-2.25 \leq z \leq 1.77) = \boxed{ 0.9494 }$
+        \end{enumerate}
+
       \item[29]
         \begin{parts}
           \part{} $z = 0.84$
@@ -113,7 +114,7 @@
 
         Use table A:\@
         \[
-          proportion = \boxed{ 0.0022 } 
+          p \approx \boxed{ 0.0022 } 
         \]
 
       \item[31]
@@ -124,7 +125,7 @@
 
         Use table A:\@
         \[
-          proportion = \boxed{ 0.2296 } 
+          p \approx \boxed{ 0.2296 } 
         \]
 
       % \item[32]
@@ -161,13 +162,13 @@
 
         Use table A to find the proportions below the min/max
         \begin{align*}
-          p_{\min} & = 0.006210 \\
+          p_{\min} & = 0.0062 \\
           p_{\max} & = 0.9938 \\
         \end{align*}
 
         Subtract to find the proportion that meet the specifications:
         \[
-          p_{good} = 0.9938 - 0.00621 = \boxed{ 0.9876 }
+          p_{good} = 0.9938 - 0.0062 = \boxed{ 0.9876 }
         \]
 
       \item[34]
@@ -225,12 +226,12 @@
       \item[36]
         Use table A to find how many standard deviations above the mean 90\% is: 
         \[
-          z = \unit[1.2816]{sd}
+          z = 1.2816
         \]
 
         Convert to MPG
         \[
-          x = 18.7 + 1.2816 \cdot 4.3 = \unit[24.21]{MPG}
+          x = 18.7 + 1.2816 \cdot 4.3 = \boxed{ \unit[24.21]{MPG} }
         \]
 
       \item[37]
@@ -273,7 +274,7 @@
         \end{parts}
 
       \item[44]
-        Use table A:i\@
+        Use table A:\@
         \begin{align*}
           z_{0.1} &= -1.28 \\
           z_{0.9} &= 1.28 \\
@@ -349,11 +350,10 @@
             p_2 & = 74.25 \% \\
           \end{align*}
 
-          These distributions are almost exactly what you would expect for a
+          These distributions are what you would expect for a
           normal distribution.  There are probably only one or two big samples
-          at the high end of the range.  This would explain the high maximum
-          value with everything else being what you would expect from a normal
-          distribution.
+          at the high end of the range which would explain the high maximum
+          value. 
 
         \end{parts}
 
