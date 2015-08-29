@@ -1,0 +1,110 @@
+% % no answer key
+\documentclass[letterpaper]{article}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+\title{Regression}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+  % \tableofcontents
+
+  \section{Heights and Weights}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1.0]{figures/hanes/weight_vs_height.pdf}
+    \caption{Height and Weight ($r = 0.4327172$)}
+  \end{figure}
+  
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rrrr}
+      \toprule
+      \multicolumn{2}{c}{Height (in)} & \multicolumn{2}{c}{Weight (lbs)} \\
+      Mean  & SD   & Mean   & SD \\
+      \cmidrule(r){1-2}\cmidrule(l){3-4} 
+      68.46 & 2.98 & 185.96 & 44.39 \\
+       \bottomrule
+    \end{tabular}
+  \end{table}
+
+
+  \newpage
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{rrrr}
+      \toprule
+      \multicolumn{2}{c}{65--66 in} & \multicolumn{2}{c}{71--72 in} \\
+      Height & Weight & Height & Weight \\
+      \cmidrule(r){1-2}\cmidrule(l){3-4} 
+      65.79  & 209    & 71.34  & 204 \\
+      65.55  & 124    & 71.54  & 236 \\
+      65.55  & 195    & 71.54  & 222 \\
+      65.43  & 159    & 71.34  & 207 \\
+      65.75  & 133    & 71.73  & 202 \\
+      65.16  & 146    & 71.97  & 200 \\
+      65.28  & 171    & 71.65  & 232 \\
+      65.43  & 205    & 71.02  & 217 \\
+      65.79  & 143    & 71.38  & 205 \\
+      65.12  & 118    & 71.14  & 124 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Sample heights and weights}
+  \end{table}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1.0]{figures/hanes/weight_vs_height_means.pdf}
+    \caption{Height and Weight Means with SD line}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1.0]{figures/hanes/height_vs_weight.pdf}
+    \caption{Height and Weight ($r = 0.4327172$)}
+  \end{figure}
+
+
+  \newpage
+
+  \section{Hits and Runs} % (fold)
+  
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1.0]{figures/mlb/rg_vs_hits.pdf}
+    \caption{Runs/Game vs. Hits ($r = 0.894202$)}
+  \end{figure}
+
+  \begin{table}[ht]
+    \centering
+    \begin{tabular}{rrrr}
+      \toprule
+      \multicolumn{2}{c}{Hits} & \multicolumn{2}{c}{Runs/Game} \\
+      Mean & SD & Mean & SD \\
+      \cmidrule(r){1-2}\cmidrule(l){3-4} 
+      1387 & 83 & 4.07 & 0.43 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\end{document}
+
