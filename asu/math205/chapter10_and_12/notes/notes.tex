@@ -1,0 +1,847 @@
+% % no answer key
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
+
+\usepackage{units} 
+\usepackage{parskip} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+\usepackage{commath}
+\usepackage[group-separator={,}]{siunitx}
+
+\everymath{\displaystyle}
+
+
+\title{Statistics \\ Chapters 10 and 12}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+  \tableofcontents
+
+  \section{Collins Case}
+
+  \subsection{Case}
+  \begin{description*}
+    \item[Juanita Brooks] elderly victim
+    \item[John Bass] witness
+    \item[Malcolm and Janet Collins] suspects
+  \end{description*}
+
+  Brooks' son visited nearby gas stations until he found one that mentioned
+  interracial couple.
+
+  Eyewitness descriptions of suspects:
+  \begin{itemize*}
+    \item woman with hair ``between light and dark blond'' and ponytail
+    \item yellow car
+    \item bearded and mustached black man
+    \item nobody could positively identify suspects in lineups
+    \item In trial, Bass claimed that Collins was person he saw in car, despite
+      failure to identify him earlier.
+  \end{itemize*}
+
+  Actual appearance of suspects:
+  \begin{itemize*}
+    \item woman light blond hair sometimes in ponytail
+    \item yellow car
+    \item clean-shaven black man
+  \end{itemize*}
+
+  The police arrested, interrogated, harassed suspects in unsuccessful attempt
+  to extract confession.
+
+  alibi:
+
+  \begin{itemize*}
+    \item Janet was picked up by Malcolm from work about time crime had been committed but no one
+      was too sure about either time.
+
+    \item Both claimed to have gone to visit a friend, but exact time couldn't be established.
+
+    \item Hair color, ponytail, and beard evidence all based on things easily changed.
+  \end{itemize*}
+
+  \subsection{Trial}
+  Case based on probabilities:
+  \begin{itemize*}
+    \item Black man with a beard: 1 in 10
+    \item Man with a mustache: 1 in 4
+    \item White woman with blond hair: 1 in 3
+    \item Woman with ponytail: 1 in 10
+    \item Interracial couple in car: 1 in 1000
+    \item Yellow car: 1 in 10
+  \end{itemize*}
+
+  Draw probability tree.
+
+  \begin{description*}
+    \item[sample space] all possible outcomes (all possible couples in this case)
+    \item[event] a particular outcome (a particular couple in this case)
+    \item[probability] proportion of times something happens over many repetitions
+    \item[probability model] sample space and way of assigning probabilities to events. 
+  \end{description*}
+
+
+  Probability of event (black man with a beard, white woman with blond hair,
+  woman with a ponytail, interracial couple in a car, yellow car): 1 in 12,000,000.
+
+  Guilty verdict after 8 hours and 5 ballots.
+
+  \subsection{Appeals}
+
+  \subsubsection{Notes}
+  Malcolm lost first appeal.
+
+  In second appeal, 25 year old law clerk Lawrence Tribe pointed out flaws in
+  arguments.
+
+  \subsubsection{Fabricated Statistics}
+  \begin{itemize*}
+    \item all statistics made up
+    \item hair color, ponytail, beard, and mustache all easily altered
+    \item no reason to assume actual perpetrators were married 
+  \end{itemize*}
+
+  From judgement:
+  \begin{quote}
+    \begin{em}
+      The prosecution produced no evidence whatsoever showing, or from which it
+      could be in any way inferred, that only one out of every ten cars which
+      might have been at the scene of the robbery was partly yellow, that only
+      one out of every four men who might have been there wore a mustache, that
+      only one out of every ten girls who might have been there wore a
+      ponytail, or that any of the other individual probability factors listed
+      were even roughly accurate.
+    \end{em}
+  \end{quote}
+
+  \subsubsection{Independence}
+  Product rule doesn't apply when probabilities aren't independent
+
+  From Tribe:
+  \begin{quote}
+    \begin{em}
+      There was another glaring defect in the prosecution’s technique, namely an
+      inadequate proof of the statistical independence of the six factors. No
+      proof was presented that the characteristics selected were mutually
+      independent, even though the witness himself acknowledged that such
+      condition was essential to the proper application of the ``product rule''
+      or ``multiplication rule.'' \dots To the extent that the traits or
+      characteristics were not mutually independent (e.g., Negroes with beards
+      and men with mustaches obviously represent overlapping categories) the
+      ``product rule'' would inevitably yield a wholly erroneous and exaggerated
+      result even if all of the individual components had been determined with
+      precision.
+    \end{em}
+  \end{quote}
+
+  independence:
+  \begin{itemize*}
+    \item outcome of A doesn't influence B
+    \item dice and roulette are independent
+    \item drawing cards without replacement isn't---cards already drawn are gone
+      from the deck
+    \item yellow car and mustache are probably independent
+    \item mustache and beard probably aren't independent
+  \end{itemize*}
+
+  For independent events:
+  \[
+    P(\text{A and B}) = P(A) P(B)
+  \]
+
+  For dice, the probability of getting a pair of 6s is:
+  \begin{itemize*}
+    \item 36 possible outcomes
+    \item only 1 of these outcomes is a pair of 6s, so $\sfrac{1}{36}$
+  \end{itemize*}
+
+  Or, probability of each die being 6 is $\sfrac{1}{6}$ and product is
+  $\sfrac{1}{36}$ since the events are independent.
+
+  \subsubsection{Conditional Probability}
+
+  The probability that both A and B happens is either:
+  \begin{itemize*}
+    \item the probability that A happens and that B happens given that A already
+      happened.
+    \item the probability that B happens and that A happens given that B already 
+      happened.
+  \end{itemize*}
+
+  \begin{align*}
+    P(\text{A and B}) & = P(A) P(B | A) \\
+                      & = P(B) P(A | B) \\
+    \\
+    P(B) P(A | B) & = P(\text{A and B}) \\
+    P(A | B)      & = \frac{ P(\text{A and B}) }{P(B)} \\
+    \\
+    P(\text{ mustache and beard }) &= P(\text{mustache}) P(\text{beard } | \text{ mustache}) \\
+  \end{align*}
+
+  When A and B are independent, $P(A | B) = P(A)$
+
+  Draw new probability tree with a few corrected probabilities.
+
+  \subsubsection{Wrong Probability to Investigate}
+    40\% probability of at least one other couple in LA area with similar
+    characteristics, even if you accept the original made-up prosecution
+    figures. 
+
+    $\sfrac{1}{\num{ 12 000 000 }}$ represents supposed probability randomly
+    selected couple will have this particular set of characteristics. Correct
+    probability to look at is probability that the suspects are the correct pair
+    of people with this set of statistics, given there are probably multiple
+    people like this in the LA area.
+
+    Probability given at trial was trying to be probability that if you grabbed
+    a random couple off the street, they would look like this, which isn't
+    relevant.
+
+  \subsection{Aftermath}
+
+  Tribe went on to:
+  \begin{itemize*}
+    \item Defend Gore in Gore vs. Bush
+    \item Become one of Obama's instructors
+    \item Serve in the Obama administration
+    \item Write numerous papers on use of law in trials
+  \end{itemize*}
+
+  % \section{Monty Hall Game}
+  % Select one of 3 doors, etc., etc.
+
+  \section{Probability Rules}
+
+  \begin{itemize}
+    \item probability between 0 and 1
+    \item all possible outcomes add up to probability one
+    \item if events are disjoint (no outcomes in common, can never occur
+      together) probability of either one is sum of individual probabilities
+    \item ``mutually exclusive'' is another term for disjoint. If one event
+      occurs, the other event is excluded from occurring.
+    \item if events are independent, probability of both is product of
+      individual probabilities
+  \end{itemize}
+
+  % Independence vs. Disjoint:
+  % \begin{itemize*}
+  %   \item two independent events may both happen. Event one has no effect on
+  %     event two.
+
+  %   \item to disjoint events can never both happen. If event one happens, event
+  %     two can't happen. 
+  % \end{itemize*}
+
+  \section{Sally Clark}
+
+  \subsection{Trial}
+
+  Prosecution case:
+  \begin{itemize*}
+    \item two children died unexplained deaths (SIDS)
+    \item probability of SIDS 1 in 1300
+    \item for Sally Clark's family (affluent non-smokers) probability is 1 in
+      8543.
+    \item overall probability is:
+      \[
+        \frac{1}{8543^2} \approx \frac{1}{\num{73 000 000}}
+      \]
+
+    \item with 700,000 births per year, the chance of a double SIDS happening at
+      least once in 100 years is:
+      \[
+        1 - \del{ 1 - \frac{1}{\num{73 000 000}} }^{\num{700 000} \cdot 100} \approx 0.62
+      \]
+
+      This sort of event will only happen about once in every hundred years.
+
+  \end{itemize*}
+
+  \subsection{Problems}
+
+  The prosecution ignored factors that make Sally's family more likely for
+  SIDS\@. Both of Sally's kids were boys and boys are more likely to die from
+  SIDS\@.
+
+  SIDS depends on genetic and environmental factors. If a family has one SIDS
+  death, the chance of a second one is approximately 1 in 130, not 1 in 1300.
+
+  The ``once in a hundred years'' calculation used the high number (8543)
+  which was for a small subset of a population, but then used the whole
+  population (73,000,000).
+
+  With these corrections, the probability of double SIDS would be about:
+  \[
+    \frac{1}{1300} \cdot \frac{1}{130} \approx \frac{1}{\num{169 000}} 
+  \]
+
+  With 700,000 births per year, the chance of a double-SIDS event in one year is
+  about:
+  \[
+    1 - \del{ 1 - \frac{1}{\num{169 000}} }^{\num{ 700 000 }} \approx 0.98
+  \]
+
+  \subsection{Appeal}
+  The probability of a double SIDS event is irrelevant. The alternative
+  explanation for the evidence is double infant murder, which is even less
+  likely that double SIDS\@. 
+  
+  The interesting probability is the conditional probability of Clark being
+  innocent given the evidence.
+
+  Since double infant murder is so rare, it's hard to get a good estimate of its
+  frequency. The best estimate is that double murder is about 9 times less
+  likely than double SIDS\@.
+
+  \begin{align*}
+    P(\text{double SIDS}) & = \frac{1}{8543 \cdot 132} \\
+                            & \approx \frac{1}{\num{ 125 000 }} \\
+    P(\text{double murder}) & = \frac{1}{9 \cdot 8543 \cdot 132} \\
+                            & \approx \frac{1}{\num{ 1 128 000 }} \\
+  \end{align*}
+
+  \begin{align*}
+    P(\text{Innocent } | \text{ Evidence}) & = \frac{P(\text{I and E})}{P(E)} \\
+       & = \frac{P(\text{double murder})}{P(\text{double murder or double SIDS})} \\
+       & = \frac{\frac{1}{\num{ 125 000 }}}{\frac{1}{\num{ 125 000 }} + \frac{1}{\num{ 1 128 000 }}} \\
+       & \approx 0.9 \\
+  \end{align*}
+
+  Even this didn't get Sally out of prison. Her third appeal succeeded because
+  they reviewed the medical records more carefully and found the actual cause of
+  death for the second baby was an infection that had gone undetected.
+
+  \section{Data Dredging}
+  Suppose 
+  \begin{itemize*}
+    \item database of 20,000 men.
+    \item 1 out of 10,000 men will match DNA by chance
+    \item search DB and find match
+  \end{itemize*}
+
+  What is the probability that somebody will match?
+
+  \begin{solution}
+    The probability that any one person matches is independent of the
+    probability of anybody else matching.
+
+    The probability that nobody matches is
+    \[
+      0.9999^{20,000} \approx 0.14
+    \]
+
+    The probability that somebody matches:
+    \[
+      1 - 0.1353 \approx 0.86
+    \]
+  \end{solution}
+
+  \section{OJ Simpson}
+  Prosecutors said that there is a natural progression from abuse to murder.
+
+  Defense countered with 
+  \begin{itemize*}
+    \item 14,000,000 women battered annually by spouse or boyfriend
+    \item 1,432 of these, or 1 in 2,500 murdered by spouse
+    \item chance of OJ having murdered Nicole only 1 in 2,500
+    \item what is this ``natural progression'' crap?
+  \end{itemize*}
+
+  Prosecution should have countered with conditional probability. Murder by
+  spouse is very rare, but murder by someone other than spouse is even more
+  rare. Only about 160 battered spouses were murdered by someone other than
+  the batterer.
+
+  Probability of non-spouse murder of abused spouse:
+  \[
+    \frac{160}{\num{ 14 000 000 }} \approx \frac{1}{\num{ 87 500 }}
+  \]
+
+  Probability of abused spouse getting murdered:
+  \[
+    \frac{160 + 1432}{\num{ 14 000 000 }} \approx \frac{1}{8800}
+  \]
+
+  \begin{align*}
+    P(\text{Innocent} | \text{Evidence}) & = \frac{P(\text{I and E})}{P(E)} \\
+                                         & = \frac{P(\text{someone else guilty})}{P(\text{murdered})} \\
+                                         & = \frac{\frac{1}{\num{ 87 500 }}}{\frac{1}{8800}} \\
+                                         & \approx 0.1 \\
+  \end{align*}
+
+
+  \section{Continuous Probability Models}
+
+  \subsection{Notes}
+  \begin{itemize*}
+    \item Pick a random number between 0 and 1, etc.
+
+    \item Probability density curve from previous chapter. 
+  
+    \item Area under curve is chance of getting outcome from in range.
+
+    \item {\em Uniform Distribution\/} is flat
+
+    \item {\em Normal Distribution\/}
+
+    \item $P(X < 2)$, etc.\ notation
+
+  \end{itemize*}
+
+  \subsection{Packaging Laws}
+  \begin{itemize*}
+    \item too heavy expensive for manufacturer
+    \item too light expensive for consumer
+    \item impossible to be 100\% accurate
+    \item normal distribution around target weight
+  \end{itemize*}
+
+
+  \begin{enumerate}
+    \item If target weight is 1 kg and machine with standard deviation of 40 g,
+      what is the probability the actual weight is less than 950 g?
+
+    \begin{solution}
+      Convert to z-score:
+      \[
+        z = \frac{950 - 1000}{40} = -1.25
+      \]
+
+      Use table A:\@
+      \[
+        P(X < 980) \approx 0.1056
+      \]
+    \end{solution}
+
+    \item If the same machine is set at a target weight of 1020 g instead, what
+      is the probability the actual weight is less than 1000 g?
+
+    \begin{solution}
+      Convert to z-score:
+      \[
+        z = \frac{1000 - 1020}{40} = -0.5
+      \]
+
+      Use table A:\@
+      \[
+        P(X < 1000) \approx 0.3085
+      \]
+    \end{solution}
+
+    In Australia, law is that if a package is found to be underweight,
+    everything is cool as long as the average of 12 similar items is not
+    underweight.
+
+    \begin{itemize*}
+      \item Average also normal curve
+      \item Same area (1, of course) but steeper and narrower graph
+      \item same mean, $sd = \frac{ sd_{original} }{\sqrt{n}}$
+    \end{itemize*}
+
+    Strategy is to set machine slightly high, but chance of violating law is
+    much lower with this strategy.
+
+    What is the probability of violating the law when setting the target weight
+    to 1020 with the same machine?
+
+    \begin{solution}
+      Calculate new sd:
+      \[
+        sd = \frac{40}{\sqrt{12}} \approx 11.55
+      \]
+      Convert to z-score:
+      \[
+        z = \frac{1000 - 1020}{11.55} = -1.73
+      \]
+
+      Use table A:\@
+      \[
+        P(X < 1000) \approx 0.0417
+      \]
+    \end{solution}
+
+  \end{enumerate}
+
+  \section{Test for Disease}
+
+  \begin{itemize*}
+    \item test 99.9999\% accurate
+    \item no false negatives (everyone with disease tests positive)
+    \item 1 out of 100,000 people have disease
+    \item 175,000,000 people in US
+  \end{itemize*}
+
+  If test is administered to all people in US, what percentage of the people
+  with positive results on test actually have disease?
+
+
+  \begin{solution}
+    Draw a tree diagram.
+
+    level one:
+    \begin{itemize*}
+      \item 0.0001 have disease
+      \item 0.99999 don't have disease
+    \end{itemize*}
+
+    level two: test positive/negative. 
+    \begin{itemize*}
+      \item Have the disease and test positive: 1,750
+      \item Have the disease and test negative: 0
+      \item Don't have the disease and test positive: 17,500
+      \item Don't the disease and test negative: 174,980,750
+    \end{itemize*}
+
+    percentage of people who tested positive who have the disease:
+    \[
+      \frac{1,750}{19,250} \approx 9\%
+    \]
+
+  \end{solution}
+  \section{More Examples}
+
+  \subsection{Paradox of Chevalier de Moivre}
+
+  Which is more likely:
+  \begin{itemize}
+    \item Getting at least one one with four rolls of a single die.
+    \item Getting at least one pair of ones with 24 rolls of a pair of dice.
+  \end{itemize}
+
+  The naive approach 
+
+  \begin{itemize*}
+    \item at least one one: $4 \cdot \frac{1}{6} = \frac{2}{3}$
+    \item at least one pair of ones: $24 \cdot \frac{1}{36} = \frac{2}{3}$
+  \end{itemize*}
+
+  This is incorrect because the events are not mutually exclusive. 1 on the
+  first two rolls, for example, is counted twice.
+
+  actual solution is 1 minus the probability of not getting the desired result:
+
+  \begin{itemize*}
+    \item at least one one: $1 - \del{ \frac{5}{6} }^4 \approx 0.5177$
+    \item at least one pair of ones: $1 - \del{ \frac{35}{36} }^{24} \approx 0.4914$
+  \end{itemize*}
+  \subsection{Conditional Probability}
+
+  If you turn over two cards in a deck, what is the probability of the second
+  card being the queen of hearts?
+
+  \begin{solution}
+    \[
+      P(\text{2nd card QH}) = \frac{1}{52}
+    \]
+  \end{solution}
+
+  If you turn over two cards in a deck and the first card is the seven of clubs,
+  what is the probability of the second card being the queen of hearts?
+
+  \begin{solution}
+    \[
+      P(\text{QH } | \text{ 7C}) = \frac{1}{51}
+    \]
+  \end{solution}
+
+  \begin{solution}
+    $\frac{1}{52}$
+  \end{solution}
+
+  another way:
+  \begin{solution}
+    \begin{align*}
+    P(\text{QH | 7C}) & = \frac{P(\text{7C and QH})}{P(7C)} \\
+                      & = \frac{\cfrac{1}{52 \cdot 51}}{\cfrac{1}{52}} \\
+                      & = \frac{1}{52} \\
+    \end{align*}
+  \end{solution}
+
+  What is probability of getting tails given the previous three flips were heads?
+  \begin{solution}
+    \[
+      P(T | 3H) = 0.5
+    \]
+  \end{solution}
+  \[
+    P(\text{A or B}) = P(A) + P(B) - P(\text{A and B})
+  \]
+
+  \begin{itemize*}
+    \item if $P(\text{A and B})$, events are {\em disjoint\/} or {\em mutually exclusive\/}
+    \item for disjoint events, if A occurs, B can't occur
+    \item draw Venn diagram to explain why subtracting $P(\text{A and B})$ is
+      necessary for non-disjoint events
+  \end{itemize*}
+
+  \begin{enumerate}
+    \item red cars, compact cars, red compact cars
+
+    \item people with beards, people with mustaches, people with both
+
+    \item If one of your first two cards in a poker hand is an ace, what is the
+      probability of getting at least one additional ace?
+
+      \begin{solution}
+        If you have one of the aces, there are 3 left in the deck. The
+        probability of getting at least one of them is one minus the probability
+        of not getting any of them:
+
+        \begin{align*}
+          1 - \frac{47}{50} \cdot \frac{46}{49} \cdot \frac{45}{48} \approx 0.173 \\
+        \end{align*}
+      \end{solution}
+
+    \item If one of your first two cards in a poker hand is an ace, what is the
+      probability of getting exactly one additional ace?
+
+      \begin{solution}
+        Exactly one of your three remaining cards needs to be an ace:
+        \begin{align*}
+          P(1st) & = \frac{3}{50} \cdot \frac{47}{49} \cdot \frac{46}{48} \\
+          P(2nd) & = \frac{47}{50} \cdot \frac{3}{49} \cdot \frac{46}{48} \\
+          P(3rd) & = \frac{47}{50} \cdot \frac{46}{49} \cdot \frac{3}{48} \\
+                 & \approx 0.055
+        \end{align*}
+
+        The probabilities are all the same: $0.055$. Since there are three of
+        them, the probability of getting exactly one ace is: 
+        \[
+          3 \cdot 0.055 = 0.165 \\
+        \]
+      \end{solution}
+
+    \item If one of your first two cards in a poker hand is an ace, what is the
+      probability of getting exactly two additional aces?
+
+      \begin{solution}
+        Exactly one of your three remaining cards needs to not be an ace:
+        \begin{align*}
+          P(1st) & = \frac{47}{50} \cdot \frac{3}{49} \cdot \frac{2}{48} \\
+          P(2nd) & = \frac{3}{50} \cdot \frac{47}{49} \cdot \frac{2}{48} \\
+          P(3rd) & = \frac{3}{50} \cdot \frac{2}{49} \cdot \frac{47}{48} \\
+                 & \approx 0.0024 \\
+        \end{align*}
+
+        The probabilities are all the same: $0.055$. Since there are three of
+        them, the probability of getting exactly one ace is: 
+        \[
+          3 \cdot 0.0024 = 0.0072 \\
+        \]
+      \end{solution}
+
+    \item If one of your first two cards in a poker hand is an ace, what is the
+      probability of getting 4 aces?
+
+      \begin{solution}
+        All of your three remaining cards need to be an aces:
+        \begin{align*}
+          P(\text{4 aces}) & = \frac{3}{50} \cdot \frac{2}{49} \cdot \frac{1}{48} \\
+                           & \approx \boxed{ 0.000051 } \\
+        \end{align*}
+      \end{solution}
+  \end{enumerate}
+
+
+  % \subsection{Roulette}
+  % In a roulette style game from the 1700's, with a wheel with 32 slots, the
+  % players win 27 pounds plus the original pound on a 1 pound bet if their number
+  % comes up and they lose otherwise. The players complained that the payoff
+  % should have been closer to 31. The casino ``proved'' them wrong by betting
+  % even money that any number the player picked would come up within 21 rolls.
+  % What is the probability of the casino winning this second bet:
+
+  % \begin{solution}
+  %   \[
+  %     1 - \del{ \frac{1}{32} }^{22} \approx 0.5027
+  %   \]
+  % \end{solution}
+
+  \subsection{WW II Pilots}
+  If a pilot has a 2\% chance of getting shot down, what's the chance of him
+  surviving 50 missions?
+
+  \begin{solution}
+    \[
+      0.98^{50} \approx 0.36
+    \]
+  \end{solution}
+
+  % \subsection{Dice}
+
+  % \begin{enumerate}
+  %   \item What is the probability of rolling three 6s in a row?
+  %     \begin{solution}
+  %       \begin{align*}
+  %         \frac{1}{6^3} & = \frac{1}{216} \\
+  %                       & \approx \boxed{ 0.0046 } \\
+  %       \end{align*}
+  %     \end{solution}
+
+  %   \item What is the probability of rolling at least one 6?
+  %     \begin{solution}
+  %       This one minus the probability of not rolling a 6 three times in a row:
+
+  %       \begin{align*}
+  %         1 - \del{ \frac{5}{6} }^3 & = 1 - \frac{125}{216} \\
+  %                                   & = \frac{91}{125} \\
+  %                                   & \approx \boxed{ 0.728 } \\
+  %       \end{align*}
+
+  %     \end{solution}
+
+  % \end{enumerate}
+
+  % \subsection{Pairs}
+  % Draw table with 1--6 labeling rows and 1--6 labeling columns and cells sum of
+  % row/column labels. 36 ways for dice to land. Show getting a particular number
+  % is diagonal going up and to the right.
+
+  % \begin{itemize*}
+  %   \item what's the most common roll?
+  %   \item how many ways are there to get 5?
+  %   \item how many ways are there to get 12?
+  % \end{itemize*}
+
+  \subsection{Three Dice/Sum 9 or 10}
+
+  It looks like 9 and 10 are equally likely:
+  \begin{itemize*}
+    \item combinations for 9: 126, 135, 144, 234, 225, 333
+    \item combinations for 10: 145, 136, 226, 235, 244, 334
+    \item $6^3 = 216$ ways for dice to fall
+  \end{itemize*}
+
+  Galileo analysis:
+  \begin{itemize*}
+    \item combinations with all different numbers can come up 
+      $3 \times 2 \times 1 = 6$ ways
+    \item combinations with two different numbers can come up in 3 different
+      ways (odd number first, second or third)
+    \item 333 can only come up one way
+    \item actually 25 ways to get 9 and 27 ways to get 10 
+  \end{itemize*}
+
+  \subsection{Dice vs. Cards}
+  A die is rolled twice; a deck of cards is shuffled.
+
+  \begin{enumerate}[(a)]
+    \item What's the probability that either the first roll is a one or the
+      second roll is a one?
+
+      \begin{solution}
+      The first roll is a one or the second roll is a 1, subtracting the time
+      when they are both one to avoid counting it twice:
+        \[
+          \frac{1}{6} + \frac{1}{6} - \frac{1}{36} = \frac{11}{36}
+        \]
+
+        The first roll is a one and the second one isn't, or the first roll
+        isn't a one and the second one is, or both are ones:
+        \[
+          \frac{1}{6} \cdot \frac{5}{6} + \frac{5}{6} \cdot \frac{1}{6} +
+            \frac{1}{6} \cdot \frac{1}{6} = \frac{11}{36} 
+        \]
+
+        One minus the probability that neither is a one:
+        \[
+          1 - \frac{5}{6} \cdot \frac{5}{6} = \frac{11}{36} 
+        \]
+
+      \end{solution}
+
+    \item What's the probability that the first card is the ace of spades or the
+      last card is the ace of spades?
+      \begin{solution}
+        Mutually exclusive events: $\frac{1}{52} + \frac{1}{52} = \frac{1}{26}$
+      \end{solution}
+
+    \item What's the probability that the first roll is a 1 and the second roll
+      is a 1?
+      \begin{solution}
+        Independent events: $\frac{1}{36}$
+      \end{solution}
+
+    \item What's the probability that the first card is the ace of spades and
+    the last card is the ace of spades?
+      \begin{solution}
+        Mutually exclusive events: $0$
+      \end{solution}
+  \end{enumerate}
+
+  \subsection{Card Drawing}
+  Contestants are given a shuffled deck of cards. They win a prize if the first
+  card is the ace of hearts or the second card is the king of hearts.
+
+  
+  \begin{enumerate}[(a)]
+    \item What's the probability of winning with the king of hearts?: $1/52$
+    \item What's the probability of winning with the ace of hearts?: $1/52$
+
+    \item What's the overall probability of winning? 
+    
+    \begin{solution}
+      \begin{align*}
+        \frac{1}{52} + \frac{1}{52} - \frac{1}{52^2} & = \frac{103}{51^2} \\
+                                                     & \approx 0.0381
+      \end{align*}
+      
+      If you don't account for the possibility of getting both winning cards,
+      your odds would be about 0.0384.
+      
+      You need to subtract the possibility of getting both cards. The events are
+      not mutually exclusive.
+
+      Win only on the first card or only on the second card or on both cards:
+      \begin{align*}
+        \frac{1}{52} \cdot \frac{51}{52} + \frac{1}{52} \cdot \frac{51}{52} 
+            + \frac{1}{52^2} & = \frac{103}{51^2} \\
+                             & \approx 0.0381
+      \end{align*}
+
+      1 minus chance of losing on both attempts:
+      \begin{align*}
+            1 - \frac{51^2}{52^2} & = \frac{103}{51^2} \\
+                                  & \approx 0.0381
+      \end{align*}
+
+    \end{solution}
+  \end{enumerate}
+
+
+  % \subsection{Exercise 10.16}
+  % \begin{enumerate}[(a)]
+  %     \item $P(X \geq 10)$
+
+  %     \item 
+  %       Convert 10 to a z-score:
+  %       \[
+  %         z = \frac{10 - 6.8}{1.6} = 2
+  %       \]
+
+  %       $P(Z < 2) = 0.9772$
+
+  % \end{enumerate}
+
+\end{document}
+
