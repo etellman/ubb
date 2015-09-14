@@ -7,19 +7,20 @@ percentage <- function(score, points) {
   c(actual = actual, percentage = round(100 * (actual) / points))
 }
 
-possible <- 5 * length(c(25:29, 31:32, 34, 36:39, 43:44))
-percentage(-5, possible)
+possible <- 5 * length(c(25, 27:28, 32:36, 38, 41:43, 47))
+percentage(-2, possible)
 
 grades.file <- paste(grades.dir, 'grades.csv', sep = '/')
 grades <- read.delim(grades.file, header = TRUE, strip.white = T, sep = ',', comment = '#')
 
-ddply(grades, .(id), summarize, 
+df <- ddply(grades, .(id), summarize, 
       id = id, 
       hw = mean(c(hw01, hw02, hw03, hw04, hw05), na.rm = T),
       exam01 = exam01,
       overall = round(sum(0.2 * hw, 0.8 * exam01))
 )
 
+mean(df$overall)
 mean(mean(c(100, 100, 97, 100)), 100)
 
 grades.m <- melt(grades, id = "id")

@@ -39,12 +39,16 @@
   %   \gradetable[h][pages]
   % \end{center}
 
+  \ifprintanswers{}
+  \else
   \section{Instructions}
   Show all your work and explain your answers---a correct guess won't receive credit without
   work/explanation. 
   
   An incorrect answer will receive partial credit if you understand the
   concept but made an arithmetic mistake.
+
+  \fi
 
   \section{Questions}
 
@@ -124,12 +128,16 @@
             \begin{figure}[H]
               \centering
               \includegraphics{figures/cholesterol_histogram.pdf}
-              \caption{Cholesterol}\label{fig:chol}
+              \caption{Cholesterol histogram}\label{fig:chol}
             \end{figure}
           \fi
 
         \part[3] Without calculating the mean or median, is the mean value
         higher or lower than the median? Explain how you know.
+
+        \begin{solution}
+          The mean value is higher because the histogram is right skewed.
+        \end{solution}
 
         \part[7] Calculate the 5-number summary for the men.
 
@@ -171,7 +179,7 @@
             \begin{figure}[H]
               \centering
               \includegraphics{figures/cholesterol_box.pdf}
-              \caption{Cholesterol}\label{fig:chol}
+              \caption{Cholesterol box plot}\label{fig:chol_box}
             \end{figure}
           \fi
 
@@ -194,11 +202,6 @@
           \end{solution}
 
       \end{parts}
-
-    \ifprintanswers{}
-    \else
-      \newpage
-    \fi
 
     \question{}
       Heights have an approximately Normal distribution of $N(69.9, 2.8)$
@@ -342,8 +345,8 @@
           \ifprintanswers{}
             \begin{figure}[H]
               \centering
-              \includegraphics{figures/cancer.pdf}
-              \caption{Cholesterol}\label{fig:chol}
+              \includegraphics[scale = 0.9]{figures/cancer.pdf}
+              \caption{Cancer}\label{fig:cancer}
             \end{figure}
           \fi
 

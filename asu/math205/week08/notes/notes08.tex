@@ -27,6 +27,14 @@
 
   \part{Overview}
 
+
+  \section{Sample vs. Population}
+
+  \begin{description}
+    \item[population] entire group
+    \item[sample] group you actually get data from
+  \end{description}
+
   \section{Statistical Inference vs. Exploratory Data Analysis}
   
   Exploratory:
@@ -38,45 +46,104 @@
   Statistical Inference:
   \begin{itemize*}
     \item try to gather data to answer a question
-    \item conclusions apply to more than just data actually gathered
+
+    \item conclusions apply to more than just data actually gathered. You gather
+      data on a subset of the population and make a conclusion about the entire
+      population.
+
     \item answers come with a statement of how confident we are that they are
-      accurate
+      accurate and a range
   \end{itemize*}
 
-  \section{Sample/Population}
+  Compare to:
+  \begin{itemize*}
+    \item Tasting soup---one spoonful, or better, one bowl, will tell you what
+      the whole pot tastes like, as long as the pot is well mixed.
+
+    \item bucket with 600 red balls and 400 blue balls evenly mixed. Any random
+      selection of 100 balls will be around 60/40.
+
+  \end{itemize*}
+
+  Types of inference:
+  \begin{itemize*}
+
+    % \item If you know a lot about the population, you know something about any
+    %   randomly-selected reasonably-large sample of the population. If I know
+    %   that the average SAT score for my school is 750, then any random sample of
+    %   students will have an average SAT score of around 750.
+
+    \item Any randomly-selected reasonably-large sample of a population will the
+      similar to the entire population.
+      
+      If I want to know how effective a school is, I can give a standardized
+      test to 100 students. Their mean score will be about the same as the mean
+      score for the entire school would have been, had I given the test to the
+      entire school.
+
+      Average height of students in UBB probably representative of average
+      height of prisoners in WSR\@.
+
+    \item If you have data on a sample and data on a population, you can infer
+      whether sample probably came from population. 
+
+      If you know the mean standardized test score for a school is 75 but the
+      students in one class all got 100, perhaps there is something fishy going
+      on.
+
+      The sample didn't come from the population: ``students at that school who
+      didn't cheat.''
+
+    \item If you have data for two samples, you can infer whether they were
+      likely to have come from the same population. 
+
+      For example, if you have data on:
+      \begin{itemize*}
+        \item cancer rate for smokers
+        \item cancer rate for non-smokers
+      \end{itemize*}
+
+      You can infer whether they both came from the population of ``people with
+      cancer who engaged in cancer-causing behavior''.
+
+  \end{itemize*}
+
+  \section{Sample Design}
 
   \subsection{Notes}
-  \begin{description}
-    \item[population] entire group
-    \item[sample] group you actually get data from
-    \item[sample design] plan for getting a sample that represents population
-  \end{description}
 
-  Planning sample survey:
+  sample design---plan for getting a sample that represents population
+
+  Planning sample design:
   \begin{itemize*}
     \item What is the population we want to find out about? 
-    \item What do we want to find out from each observation? (What are the variables?)
+    \item What do we want to find out from each observation? (What are the
+      variables?)
   \end{itemize*}
 
   \subsection{Examples}
 
   \subsubsection{US Census}
   \begin{itemize*}
-   \item variables: age, income, race, marital, status, number of children, etc.
    \item population: US
+   \item variables: age, income, race, marital, status, number of children, etc.
+   \item sample design: make everyone fill out a questionnaire every 10 years 
   \end{itemize*}
 
   \subsubsection{Election Polls}
   \begin{itemize*}
    \item variables: who are you going to vote for?
    \item population: probable voters (not just registered voters)
+   \item sample design: difficult---random calls, etc.
   \end{itemize*}
 
-  \section{Control/Treatment}
-  If you're trying to find out if something has an effect (new drug, drinking,
-  smoking) the subjects are in two groups.  The ``control'' group doesn't
-  drink, smoke, take the new medicine, etc., while the ``treatment'' group does
-  drink, smoke, medicate, etc.
+  % \section{Control/Treatment}
+  % If you're trying to find out if something has an effect (new drug, drinking,
+  % smoking) the subjects are in two groups.  The ``control'' group doesn't
+  % drink, smoke, take the new medicine, etc., while the ``treatment'' group does
+  % drink, smoke, medicate, etc.
+
+  % Subject of Chapter 9.
 
   \section{Longitudinal Studies} 
   Observe changes in the same sample over a long period of time.
@@ -92,7 +159,8 @@
 
   With a longitudinal study you don't have to reconstruct the past history of
   the subjects. You don't need to find someone today and ask him what his blood
-  pressure was when he was 19, for example.
+  pressure was when he was 19, for example. This is good, because he probably
+  doesn't remember.
 
   \part{Frequent Problems}
 
@@ -100,61 +168,80 @@
   Most of this stuff is from {\em Naked Statistics}.
 
   \section{Selection Bias}
+
   \subsection{Notes}
   Sample is not representative of population.  Every member of the population
   doesn't have an equal chance of appearing in the sample.
 
   \subsection{Examples}
-  \subsubsection{Republican Iowa straw poll}
 
+  Republican Iowa straw poll:
   \begin{itemize*}
     \item August of year before presidential election
-    \item Iowa only
-    \item \$30 to vote
+    \item Iowa only---not representative of US republican voters
+    \item \$30 to vote---not representative of US republican voters
+  \end{itemize*}
+
+  Other examples:
+  \begin{itemize*}
+    \item New York Times reporters only make attempt to interview disgruntled
+      ex-Amazonians when doing an article on Amazon. 
+
+      Sample is not representative of opinions of all Amazon employees.
+
+    \item ``Did you find what you were looking for'' survey only seen by people
+      who didn't find what they were looking for.
+
+      Sample is not representative of all Amazon shoppers.
+
+    \item UBB students as sample of US prison population (WA may not be typical.
+      UBB students may not be typical)
+
   \end{itemize*}
 
   \subsubsection{Convenience Sample}
+
   Sample that is easiest to gather:
 
   \begin{itemize*}
-    \item ask your friends about their views on something to estimate US population's opinion.
+
+    \item ask your friends about their views on something to estimate US
+      population's opinion.
+
     \item observe cars in your neighborhood to find most common car in US (my
       neighborhood has disproportionate number of SUVs)
-    \item UBB students as sample of US prison population (WA may not be typical.
-      UBB students may not be typical)
+
+
   \end{itemize*}
 
   \section{Self-Selection Bias}
 
   \subsection{Notes}
-  If people assign themselves to either the control or treatment group, there
-  may be something different about the subjects other than control/treatment.
+  If people assign themselves to the sample group, the sample may not be
+  representative of the population.
   
   \subsection{Examples}
 
-  \subsubsection{Self-Selecting Sample}
   \begin{itemize*}
     \item web poll
-    \item call in radio poll
-    \item Amazon ``Did you find what you were looking for?''
+    \item mail poll
+    \item AA members---probably not representative of drinkers, so it's hard to
+      determine effectiveness of AA
+    \item UBB students
   \end{itemize*}
 
-  % problems:
-
-  % For any poll, if the population is the US population:
-  % \begin{itemize*}
-  %   \item People who know about the poll may not be typical (listeners to the
-  %     show, visitors to the web site)
-  %   \item People who actually respond may be even less typical (too much time on
-  %     their hands, feel very strongly)
-  % \end{itemize*}
-
-  % \subsubsection{AA}
-  % People who sign up for AA may not be representative of drug users.  Did they
-  % stop drinking because of AA or did they sign up for AA because they were
-  % ready to stop drinking?
+  For any poll, if the population is the US population:
+  \begin{itemize*}
+    \item People who know about the poll may not be typical (listeners to the
+      show, visitors to the web site)
+    \item People who actually respond may be even less typical (too much time on
+      their hands, feel very strongly)
+  \end{itemize*}
 
   \subsubsection{Clofibrate}
+
+  From {\em Statistics}, by Freedman, Pasani and Purves, pp 13--14
+
   \begin{table}
     \centering
     \begin{tabular}{lrrrr}
@@ -170,29 +257,30 @@
     \caption{Clofibrate study}\label{tab:clofibrate}
   \end{table}
 
-  \subsubsection{Vitamin C}
-  \begin{table}
-    \centering
-    \begin{tabular}{cll}
-      \toprule
-      group & prevention & therapy \\
-      \midrule
-      1     & placebo    & placebo \\
-      2     & vitamin C  & placebo \\
-      3     & placebo    & vitamin C \\
-      4     & vitamin C  & vitamin C \\
-    \end{tabular}
-    \caption{Vitamin C study}\label{tab:vitamin.c}
-  \end{table}
-
   \begin{itemize*}
-    \item dropout rate was higher for groups 1--3 than 4
-    \item easy to distinguish vitamin from placebo by taste
-    \item among subjects who remained blind vitamin C had no effect
-    \item among subjects who broke blind groups 2 and 4 had fewest colds and
-      groups 3 and 4 had shortest colds
-  \end{itemize*}
+    \item Study to determine if Clofibrate prevents heart disease.
 
+    \item Overall number showed about the same death rate with or without the
+      Clofibrate.
+
+    \item Perhaps explanation is people who didn't take their medicine.
+      Clofibrate adherers had only 15\% death rate vs.\ non-adherers.
+
+    \item However, control adherers had only 15\% death rate vs.\ non-adherers.
+
+    \item Conclusions:
+      \begin{itemize*}
+        \item Clofibrate is ineffective.
+
+        \item Adherers are different from non-adherers and take better care of
+          themselves generally.
+
+        \item Even though this was a randomly-selected double-blind sample,
+          people self-selected into adherer/non-adherer groups.
+
+      \end{itemize*}
+
+  \end{itemize*}
 
   \subsubsection{Smoking Study}
   A smoking study found:
@@ -211,6 +299,7 @@
   \end{solution}
 
   \section{Publication Bias}
+
   \subsection{Notes}
   Every study has some possibility of error.  With publication bias, the
   researcher throws away the studies that yield the ``wrong'' result and
@@ -219,16 +308,25 @@
   \subsection{Example}
 
   Suppose study is 95\% likely to be correct.  1 out of 20 times the study
-  returns the wrong result. To demonstrate a new drug is effective, a drug
+  returns an unlikely and wrong result. 
+  
+  To demonstrate a new drug is effective, a drug
   company just needs to do 20 studies, discard the 19 that say the drug does
   nothing, and publish study number 20.
 
-  The press release says: ``With 95\% certainty, New Miracle Drug cures Cancer.''
+  For example, you might do a study to find out if Jelly Beans cure cancer and
+  find that they didn't. Then you could do 20 studies to find out if a
+  particular color of Jelly Bean cures cancer. One of these studies might happen
+  to get a group of people who happen to get better, irrespective of the Jelly
+  Bean effect.
+
+  The press release says: ``With 95\% certainty, Green Jelly Beans cure Cancer.''
 
   With Prozac, 94\% of the positive studies were published and 14\% of the
   non-positive studies were published.
 
   \section{Recall Bias}
+
   \subsection{Notes}
 
   Current events may affect how people remember the past.  
@@ -249,21 +347,19 @@
   Longitudinal study wouldn't be susceptible to this problem.
 
   \section{Survivorship Bias}
-  \subsection{Notes}
+
   In a longitudinal study, the sample may change over time.
 
-  \subsection{Examples}
-  \subsubsection{High School Test Scores}
-  GPA of high school students who haven't dropped out goes up.  Sophomores do
-  better than freshman, juniors to better than sophomores, etc., because the bad
-  students are the ones that drop out.
-
-  \subsubsection{Mutual Fund}
-  A mutual fund company can start 16 mutual funds.  By chance, 8 are above
+  A mutual fund company can start 16 mutual funds. Each mutual fund has a
+  50\% chance of beating the index. By chance, 8 are above
   the index after year 1, 4 after year 2, and 2 after year 3.  Below average
   funds quietly shut down and above average funds heavily advertised.
 
+  The success rate isn't a representative sample of the success
+  rate for those particular mutual funds over many years.
+
   \section{Polling}
+
   \subsection{Non-Response}
   It's hard to get people to respond to a poll, particularly with caller ID\@.
   People who answer the phone and are willing to talk are probably different
@@ -278,12 +374,8 @@
       who answered phone
   \end{itemize*}
 
-  \subsection{Non-Representative Sample}
-  See ``Convenience Sample'' and ``Selection Bias''.
-
-  Phone polls only have a chance to reach people with phones, etc.
-
   \subsection{Biased Questions}
+
   Different ways of phrasing the same question can get wildly different
   responses.
 
@@ -301,29 +393,44 @@
   \begin{itemize*}
     \item make list of subjects and randomly select subset
     \item use table of random numbers in back of book
-    \item subjects who respond may not be representative of population
+    \item if you can really get a random sample, confounding factors you didn't
+      think of are likely to be present the sample at about the same proportion
+      as they are in the population, so they'll average out to having no effect.
   \end{itemize*}
 
+  Every subset needs to be equally likely to be selected, not just every
+  sample. An example would be a 4x4 grid of plots in a field where you randomly select
+  one of the first 4 plots and then select every 4th plot. You end up with a
+  single column. Every plot is equally likely to be selected, but you always end
+  up with a single column and the columns may be different because they may have
+  different light, water, soil, etc.
+
   \section{Stratified Sample}
+
   \subsection{Notes}
   \begin{itemize*}
-    \item Divide population into groups (age, race, income, etc.).
+    \item Divide population into groups (age, race, income, etc.) according to
+      things you think may affect the outcome.
     \item Do SRS from each group.
     \item Helps to get appropriate representation from each group.
   \end{itemize*}
 
   \part{Miscellaneous Examples}
+
   \section{Breast Cancer Study}
+
+  From {\em Statistics}, by Freedman, Pasani and Purves, p. 22
+
   Health Insurance Plan of NY (HIP) study in 1963.
 
-  Conclusions:
+  \paragraph{Conclusions}
   \begin{itemize*}
     \item screening didn't affect diseases other than breast cancer
     \item poor less likely to accept screening
-    \item most diseases other than breast cancer affect poor more than rich
+    \item breast cancer affects rich people more than poor people
   \end{itemize*}
 
-  \begin{table}
+  \begin{table}[H]
     \centering
     \begin{tabular}{lrrrrr}
       & & \multicolumn{2}{c}{Breast Cancer} & \multicolumn{2}{c}{All Other} \\
@@ -339,9 +446,14 @@
     \caption{Breast cancer study: cause of death}\label{tab:breast.cancer}
   \end{table}
 
+  \paragraph{Questions} % (fold)
+  
   \begin{itemize*}
-    \item does screening save lives?
-    \item why is rate for ``all other'' same for treatment and control groups?
+
+    \item Does screening save lives? (yes)
+
+    \item Why is rate for ``all other'' same for treatment and control groups?
+
     \item why is rate for all other causes higher for ``refused'' than
       ``examined'' groups?
 
@@ -349,16 +461,27 @@
       this?
 
       \begin{solution}
-        Rich people tend to accept.  Income of groups, in order, is examined,
-        control, refused, since control has mix of rich and poor and
-        examined/refused are segregated by income.  Death rate among control
-        group is higher than death rate among refused, and only thing different
-        is income.
+        Rich people tend to accept.  Income of groups, in order, is 
+        
+        \begin{itemize*}
+          \item examined (mostly rich)
+          \item control (mixture of rich and poor)
+          \item refused (mostly poor)
+        \end{itemize*}
+
+        Death rate among control group is higher than death rate among refused,
+        and only thing different is income.
+
       \end{solution}
 
-    \item death rate (all causes) among accepted is about half death rate among
+    \item death rate (all causes) among examined is about half death rate among
       refused.  Did screening cut the death rate in half?  What explains the
       difference in death rate?
+
+      \begin{solution}
+        The people in the examined group probably take better care of themselves
+        generally.
+      \end{solution}
 
     \item Is comparing accepted vs.\ refused a fair comparison?  Is it biased for
       or against screening?
@@ -400,7 +523,8 @@
             groups
         \end{itemize*}
 
-        Control has more than refused because control is slightly richer.
+        Control has more than refused because control is slightly richer and
+        rich people tend to get breast cancer more often.
       \end{solution}
 
   \end{itemize*}
@@ -409,40 +533,82 @@
   Study found heavier kids tend to have more controlling mothers, leading to the
   headline ``Parents of Fat Kids Should Lighten Up.''
 
+  (Freedman, p. 26)
+
   \begin{itemize*}
     \item is there an association between the mother's behavior and the kids'
-      weight?
+      weight? (yes)
     \item Is the controlling behavior necessarily causing the overweight kids,
       or might there be a confounding variable?
+
+      \begin{solution}
+        Rich parents might both be more controlling and more likely to have kids
+        who sit around and play video games all day instead of getting out and
+        exercising.
+      \end{solution}
+
     \item Will following the headline's advice necessarily help the kids lose
       weight?
+
+      \begin{solution}
+        Not if there is some confounding factor like income which is positively
+        correlated with both weight and controlling moms.
+      \end{solution}
+
   \end{itemize*}
 
-  \section{Voting}
-  A hypothetical city is divided into 10 wards.  In each ward, the percentage of
-  registered democrats who vote is greater than the percentage of registered
-  republicans who vote.  True or false: the overall percentage of registered
-  democrats who vote is greater than the percentage of republicans who vote?
+  \section{Vitamin C}
 
-  \begin{solution}
-    False.  
+  From {\em Statistics}, by Freedman, Pasani and Purves, p. 21
+
+  \begin{table}
+    \centering
+    \begin{tabular}{cll}
+      \toprule
+      group & prevention & therapy \\
+      \midrule
+      1     & placebo    & placebo \\
+      2     & vitamin C  & placebo \\
+      3     & placebo    & vitamin C \\
+      4     & vitamin C  & vitamin C \\
+    \end{tabular}
+    \caption{Vitamin C study}\label{tab:vitamin.c}
+  \end{table}
+
+  \begin{itemize*} \item dropout rate was higher for groups 1--3 than 4
+    \item easy to distinguish vitamin from placebo by taste
+    \item among subjects who remained blind vitamin C had no effect
+    \item among subjects who broke blind groups 2 and 4 had fewest colds and
+      groups 3 and 4 had shortest colds---everybody who knew which pill was
+      Vitamin C thought it was doing them some good.
+  \end{itemize*}
+
+  % \section{Voting}
+  % A hypothetical city is divided into 2 wards.  In each ward, the percentage of
+  % registered democrats who vote is greater than the percentage of registered
+  % republicans who vote.  True or false: the overall percentage of registered
+  % democrats who vote is greater than the percentage of republicans who vote?
+
+  % \begin{solution}
+  %   False.  
     
-    District 1 is democratic with low turnout and district 2 is republican with
-    high turnout.  
+  %   District 1 is democratic with low turnout and district 2 is republican with
+  %   high turnout.  
     
-    Specifically, district one has 200 out of 1000 democrats voting and 10 out
-    of 100 republicans voting.  District two has 90 out of 100 democrats voting
-    and 800 out of 1000 republicans voting.
+  %   Specifically, district one has 200 out of 1000 democrats voting and 10 out
+  %   of 100 republicans voting.  District two has 90 out of 100 democrats voting
+  %   and 800 out of 1000 republicans voting.
 
-    Overall, $290/1100 \approx 26\%$ of democrats vote and 
-    $810/1100 \approx 74\%$ of republicans vote.
+  %   Overall, $290/1100 \approx 26\%$ of democrats vote and 
+  %   $810/1100 \approx 74\%$ of republicans vote.
 
-  \end{solution}
+  % \end{solution}
+
   \section{Jury Selection}
 
   \subsection{Azania vs. State of Indiana}
 
-  pg. 273
+  pg. 272 of {\em Statistics in the Law}, by Joseph Kadane
 
   \begin{itemize*}
     \item Program randomly selected 14,364 voters to be assigned a random
@@ -450,13 +616,13 @@
     \item 364 extra because of rounding error.
     \item Jurors were selected alphabetically by township.  Program stopped
       after juror 10,000 instead of going all the way to 14,364.    
-    \item All 4,364excluded jurors were in Wayne Township residents.  87\% of
+    \item All 4,364 excluded jurors were in Wayne Township residents.  87\% of
       Wayne Township was excluded
     \item Black people are 8.5\% of Allen County, and 75\% of the 8.5\% live in
       Wayne Township
   \end{itemize*}
 
-    \begin{itemize*}
+  \begin{itemize*}
     \item Pool of x\% of population of each town in pool until target reached
     \item Select juries from pool
     \item Worked OK until population grew and pool was filled before W's were
