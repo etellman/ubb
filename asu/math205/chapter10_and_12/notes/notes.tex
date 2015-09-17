@@ -485,7 +485,8 @@
   \section{Test for Disease}
 
   \begin{itemize*}
-    \item test 99.9999\% accurate
+    \item 1 out of every 10,000 people who takes the test gets a positive
+      response when he doesn't have the disease
     \item no false negatives (everyone with disease tests positive)
     \item 1 out of 100,000 people have disease
     \item 175,000,000 people in US
@@ -494,28 +495,34 @@
   If test is administered to all people in US, what percentage of the people
   with positive results on test actually have disease?
 
-
   \begin{solution}
-    Draw a tree diagram.
+    \begin{itemize}
+      \item $\frac{\num{175 000 000}}{\num{100 000}} = 1750$ real positives
+      \item $\frac{\num{175 000 000}}{\num{10 000}} = \num{17,500}$ false positives
+      \item $\num{175 000 000} - 1750 - \num{17 500} = \num{174 980 750}$ test negative
+    \end{itemize}
+    \begin{tabular}[H]{lrrr}
+      \toprule
+               & Sick  & Healthy     & Total \\
+      \midrule
+      Positive & 1,750 & 17,500      & 19,250 \\
+      Negative & 0     & 174,980,750 & 174,980,750 \\
+      \midrule
+      Total    & 1,750 & 174,998,250 & 175,000,000 \\
+      \bottomrule
+    \end{tabular}
 
-    level one:
-    \begin{itemize*}
-      \item 0.0001 have disease
-      \item 0.99999 don't have disease
-    \end{itemize*}
-
-    level two: test positive/negative. 
-    \begin{itemize*}
-      \item Have the disease and test positive: 1,750
-      \item Have the disease and test negative: 0
-      \item Don't have the disease and test positive: 17,500
-      \item Don't the disease and test negative: 174,980,750
-    \end{itemize*}
-
-    percentage of people who tested positive who have the disease:
-    \[
-      \frac{1,750}{19,250} \approx 9\%
-    \]
+    \begin{align*}
+      P(\text{test positive } | \text{ sick}) &= 1.0 \\
+      \\
+      P(\text{sick } | \text{ test positive}) 
+        & = \frac{1750}{\num{19 250}} \\
+        & \approx 0.0909
+      \\
+      P(\text{test positive } | \text{ healthy}) 
+        & = \frac{\num{17 500}}{\num{174 998 250}} \\
+        & \approx 0.0001 \\
+    \end{align*}
 
   \end{solution}
   \section{More Examples}
