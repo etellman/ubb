@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers{}
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -91,12 +91,14 @@
       \item[34]
         \begin{enumerate}[(a)]
           \item $\frac{\num{ 4 176 000 }}{\num{ 9 094 000 }} \approx \boxed{ 0.46 }$
-          \item $1 - \frac{\num{ 4 176 000 }}{\num{ 9 094 000 }} \approx \boxed{ 0.54 }$
+          \item $1 - 0.46 \approx \boxed{ 0.54 }$
         \end{enumerate}
+
+      \newpage 
 
       \item[35]
         \begin{enumerate}[(a)]
-          \item The probabilities are mutually exclusive and add up to 1.
+          \item The probabilities are disjunct and add up to 1.
           \item $1 - 0.59 = \boxed{ 0.41 }$
           \item $0.26 + 0.09 + 0.03 = \boxed{ 0.38 }$
         \end{enumerate}
@@ -114,20 +116,20 @@
 
       \item[37]
         \begin{enumerate}[(a)]
-          \item $3/7 \approx \boxed{ 0.43 } $
-          \item $2/7 \approx \boxed{ 0.29 } $
-          \item $5/7 \approx \boxed{ 0.71 } $
+          \item $\sfrac{3}{7} \approx \boxed{ 0.43 } $
+          \item $\sfrac{2}{7} \approx \boxed{ 0.29 } $
+          \item $\sfrac{5}{7} \approx \boxed{ 0.71 } $
         \end{enumerate}
 
       \item[38]
         For an unloaded die, the probability for any face coming up is:
         \[
-          1/6 \approx 0.17
+          \frac{1}{6} \approx 0.17
         \]
 
         The probability of something other than a 1 or a 6 is:
         \[
-          4/6 \approx 0.6667
+          \frac{4}{6} \approx 0.6667
         \]
 
         Since this probability is unaffected, the probability of getting a 1 for
@@ -149,6 +151,8 @@
       %   \[
       %     42 / 90 \approx \boxed{ 0.4667 }
       %   \]
+
+      \newpage
 
       \item[40]
         \begin{enumerate}[(a)]
@@ -173,10 +177,10 @@
 
       \item[42]
         \begin{enumerate}[(a)]
-          \item The 19 year old column and the ``Own Place'' row.
+          \item Everything in either the ``19 years old'' column or the ``Own Place'' row or both.
 
           \item The value for 19 year olds who live in their own place would be
-            counted twice.
+            counted twice since you can be both 19 years old and living in your own place.
 
         \end{enumerate}  
 
@@ -202,10 +206,14 @@
 
           \item $P(X \geq 1) = 0.2 + 0.3 + 0.3 + 0.1 = \boxed{ 0.9 }$
 
-          \item This is the probability that there were 2 or fewer errors.
-          \[
-            P(X \leq 2) = 0.1 + 0.2 + 0.3 = \boxed{ 0.6 }
-          \]
+          \item $P(X \leq 2)$ is the probability that there were 2 or fewer errors.
+            \begin{align*}
+              P(X < 2) & = 0.1 + 0.2 \\
+                       & = \boxed{ 0.3 } \\
+              \\
+              P(X \leq 2) & = 0.1 + 0.2 + 0.3 \\
+                          & = \boxed{ 0.6 } \\
+            \end{align*}
         \end{enumerate}  
 
       % \item[45]
@@ -217,7 +225,7 @@
       \item[47]
         \begin{enumerate}[(a)]
           \item GGG, GGB, GBG, GBB, BGG, BGB, BBG, BBB
-          \item $P(X = 2) = 3/8 = \boxed{ 0.375 }$
+          \item $P(X = 2) = \sfrac{3}{8} = \boxed{ 0.375 }$
 
           \item
             \begin{tabular}[H]{lrrrr}
@@ -360,7 +368,7 @@
             \]
 
           \item
-            Since the probabilities are mutually exclusive, you can add them:
+            Since the events are disjunct, you can add them:
             \[
               p \approx 2 \cdot 0.0214 + 0.0014 \approx \boxed{ 0.0441 } 
             \]
@@ -409,14 +417,14 @@
             p = 0.5 - 0.5 \cdot 0.4 = \boxed{ 0.3 }
           \]
           
-        \item Given the Ramon's estimates, the events are independent since:
-          \[
-            P(\text{ Stanford and Princeton}) = P(\text{Stanford}) P(\text{Princeton})
-          \]
+        \item 
+          \begin{align*}
+            P( \text{Stanford } | \text{ Princeton } ) & = \frac{ P(\text{ Stanford and Princeton }) }{ P(\text{ Princeton }) } \\
+                                                       & = \frac{0.2}{0.4} \\
+                                                       & = 0.5 \\
+          \end{align*}
 
-          Actually, if you get in to one, you are more likely to be able to
-          get into the other one, so the estimate of 0.2 for the chance of
-          getting into both may be a little low.
+          Since $P(\text{Stanford } | \text{ Princeton}) = P(\text{Stanford})$, the events are \fbox{ independent }.
 
       \end{enumerate}
 
@@ -424,13 +432,13 @@
       \begin{enumerate*}
         \item 1\% of the cases are infections with failed surgeries
         \item 2\% of the cases are infections with successful surgeries
-        \item 14\% of the cases are no infections with failed surgeries
+        \item 14\% of the cases are failed surgeries with or without infection
       \end{enumerate*}
 
-      The probability of a bad outcome is covered by cases 2 and 3. Case 1 is
-      included as a subset of case 3. If your surgery failed, the operation
-      was a failure, regardless of whether you also got an infection.
-
+      The probability of a bad outcome is covered by cases 2 and 3, since case 1
+      is included in case 3. If the surgery failed, the result was bad, and
+      getting an infection only makes a bad result worse.
+      
       Since the probability of a bad outcome is 16\%, the probability of a
       successful surgery without infection is \fbox{ 84\% }.
 
@@ -465,13 +473,23 @@
 
     \item[36]
       \begin{enumerate}[(a)]
-        \item The events are not independent. If you pull a thick crust pizza
-          randomly out of the oven, it has a 2/3 probability of having
-          mushrooms. If you pull a thin crust pizza out, it only has a 1/2
-          probability of having mushrooms.
+        \item 
+          \begin{align*}
+            P(\text{mushroom } | \text{ thick}) & = \frac{2}{3} \\
+            P(\text{mushroom})                  & = \frac{1}{2} \\
+          \end{align*}
 
-        \item The events are independent. Regardless of what kind of crust you
-          find, you have a 1/2 probability of having mushrooms.
+          Since $P(\text{mushroom } | \text{ thick}) \ne P(\text{mushroom})$,
+          the events are \fbox{ not independent }.
+          
+        \item 
+          \begin{align*}
+            P(\text{mushroom } | \text{ thick}) & = \frac{1}{2} \\
+            P(\text{mushroom})                  & = \frac{1}{2} \\
+          \end{align*}
+          
+          Since $P(\text{mushroom } | \text{ thick}) = P(\text{mushroom})$,
+          the events are \fbox{ independent }.
       \end{enumerate}
 
     % \item[37]
@@ -652,11 +670,11 @@
     %   \]
 
     \item[49]
-      \begin{figure}[H]
-        \centering
-        \includegraphics[scale = 0.4]{ex49.jpg}
-        \caption{Exercise 49}
-      \end{figure}
+      % \begin{figure}[H]
+      %   \centering
+      %   \includegraphics[scale = 0.4]{ex49.jpg}
+      %   \caption{Exercise 49}
+      % \end{figure}
 
       \begin{align*}
         p_{white} = 0.4 \cdot 0.3 = 0.12 \\
