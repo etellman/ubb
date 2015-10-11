@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers{}
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -28,7 +28,7 @@
 \usepackage{xspace}
 \newcommand{\cent}{\textcent\xspace}
 
-\title{Statistics \\ Homework Ten}
+\title{Statistics \\ Chapter 11 Homework}
 \date{\today}
 \author{}
 
@@ -37,13 +37,7 @@
   \maketitle
 
   \section{Homework}
-  \ifprintanswers{}
-  \else
-    \begin{itemize*}
-      \item read Chapter 11 
-      \item exercises: 22--27, 29, 31--33, 35--40
-    \end{itemize*}
-  \fi
+  Chapter 11: 22--27, 29, 31--33, 35--40
 
   \ifprintanswers{}
     \begin{description}
@@ -59,11 +53,11 @@
         lose about \fbox{ 5.3\cent{} } per bet.
 
       \item[25] The mean of the sampling distribution is the same as the mean of
-        the population, or $\boxed{ \unit[6]{strikes/year} }$.
+        the population, or $\boxed{ \unit[6]{strikes/km^2/year} }$.
 
         The standard deviation for a sample size of 10 is:
         \[
-          s = \frac{2.4}{\sqrt{10}} \approx \boxed{ \unit[0.7589]{strikes/year} }
+          s = \frac{2.4}{\sqrt{10}} \approx \boxed{ \unit[0.7589]{strikes/km^2/year} }
         \]
 
       \item[26]
@@ -224,7 +218,7 @@
 
         Use table A:\@
         \begin{align*}
-          P(r \leq 10\%) & \approx \boxed{ 0.6580 } \\
+          P(r \leq 10\%) & \approx 0.6580 \\
           P(r > 10\%)    & = 1 - P(r \leq 10\%) \\
                          & \approx 1 - 0.6580 \\
                          & = \boxed{ 0.3420 } \\
@@ -267,6 +261,8 @@
         \end{enumerate}
 
       \item[37] Each bet costs him about \fbox{ 40\cent{} }.
+
+      \newpage
 
       \item[38]
         \begin{enumerate}[(a)]
@@ -324,6 +320,8 @@
             \]
 
         \end{enumerate}
+
+      \newpage
 
       \item[40]
         \begin{enumerate}[(a)]

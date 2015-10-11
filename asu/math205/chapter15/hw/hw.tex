@@ -1,10 +1,10 @@
 % no answer key
-% \documentclass[letterpaper]{exam}
+\documentclass[letterpaper]{exam}
 
 % answer key
-\documentclass[letterpaper, landscape]{exam}
-\usepackage{2in1, lscape} 
-\printanswers{}
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers{}
 
 % for the cent symbol
 \usepackage{textcomp}
@@ -32,7 +32,7 @@
 \everymath{\displaystyle}
 
 
-\title{Statistics \\ Homework Fourteen}
+\title{Statistics \\ Chapter 15 Homework}
 \date{\today}
 \author{}
 
@@ -41,23 +41,26 @@
   \maketitle
 
   \section{Homework}
-  Chapter 15: 34--38, 41--43, 45--46
+  \begin{itemize*}
+    \item Chapter 15: 34--38, 41--43, 45--46
+    \item Chapter 16: review exercises to prepare for test (don't hand in)
+  \end{itemize*}
 
   \ifprintanswers{}
     \section{Solutions}
     \begin{description}
 
       \item[34] 
-        The states are all different sizes, so averaging the average for each
-        state won't give an accurate global average. If you average the
+
+        The states are all different populations, so averaging the average for
+        each state won't give an accurate global average. If you average the
         averages, you are counting Montana the same as California, for example,
-        but there are many more people in California.
+        but there are more people in California than Montana.
 
       \item[35] If the sample is small, a single outlier will have a big effect.
         With a large sample, the outlier won't matter much. 
 
       \item[36] 
-        
         \begin{enumerate}[(a)]
           \item 1999 was an outlier which will throw the average off.
           \item The values are generally decreasing over time.
@@ -65,11 +68,11 @@
 
       \item[37] B, A, C.
 
-        The strongest evidence is the well designed studies.
-
-        The second strongest evidence is the poorly designed studies.
-
-        The least strong evidence is expert opinion.
+        \begin{itemize*}
+          \item The strongest evidence is the well designed studies.
+          \item The second strongest evidence is the poorly designed studies.
+          \item The least strong evidence is expert opinion.
+        \end{itemize*}
 
       \item[38]
         \begin{enumerate}[(a)]
@@ -122,15 +125,15 @@
 
       \item[45]
         \begin{enumerate}[(a)]
-          \item There is a 20\% chance that the test will correctly reject the
-            null hypothesis when the null hypothesis is wrong.
+          \item There is only a 20\% chance that the test will correctly reject the
+            null hypothesis when the null hypothesis is in fact false.
 
           \item With low power, there is only a small chance of detecting that
-            the null hypothesis is wrong.
+            the null hypothesis is false when it is in fact false.
 
           \item There weren't enough mice in each group and each mouse had very
             different sleep patterns from the others so the standard deviation
-            was pretty big.
+            was large.
 
         \end{enumerate}
 

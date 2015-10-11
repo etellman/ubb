@@ -1,0 +1,253 @@
+% no answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+
+% answer key
+% \printanswers{}
+
+\usepackage{units} 
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{parskip}
+\usepackage{xfrac}
+\usepackage{commath}
+
+\newcommand{\degree}{\ensuremath{^\circ}} 
+\everymath{\displaystyle}
+
+% \printanswers
+\excludecomment{comment}
+\addpoints{}
+
+\title{Statistics \\ Part Two Exam}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{center}
+    \gradetable[h][pages]
+  \end{center}
+
+  \ifprintanswers{}
+  \else
+  \section{Instructions}
+  Show all your work and explain your answers---a correct guess won't receive
+  credit without work/explanation. 
+  
+  An incorrect answer will receive partial credit if you understand the
+  concept but made an arithmetic mistake.
+
+  \fi
+
+  \section{Questions}
+
+  \begin{questions}
+
+    \question[5] A fair dice is rolled three times.
+      \begin{parts}
+        \part[5] What is the probability of all three rolls coming up 6?
+        \begin{solution}
+          \begin{align*}
+            \del{ \frac{1}{6} }^3 \approx 0.004630
+          \end{align*}
+        \end{solution}
+
+        \part[5] What is the probability of at least one 6 in the three rolls?
+        \begin{solution}
+          \begin{align*}
+            1 - \del{ \frac{5}{6} }^3 \approx 0.4213
+          \end{align*}
+        \end{solution}
+
+        \part[5] What is the probability of exactly two out of the three rolls
+        coming up 6?
+
+        \begin{solution}
+          There are three choices for the non-six die:
+          \begin{align*}
+            3 \cdot \frac{1}{6} \cdot \frac{1}{6} \cdot \frac{5}{6} 
+              \approx 0.06944
+          \end{align*}
+        \end{solution}
+      \end{parts}
+
+    % \question[5] A lottery has these rules: You buy a ticket and select three
+    % different numbers between 1 and 100 which you write on your ticket and hand
+    % in. Three balls are drawn at random without replacement. If the numbers on
+    % the balls match the numbers on your ticket, you win (order doesn't matter).
+    % What is your chance of winning?
+
+    % \begin{solution}
+    %   \begin{align*}
+    %     \frac{3}{100} \cdot \frac{2}{100} \cdot \frac{1}{100} = 0.06
+    %   \end{align*}
+    % \end{solution}
+
+    \question[5] If boys and girls are equally likely, what is the probability
+    of a four child family having more girls than boys?
+
+    \begin{solution}
+      The easy way of doing this one is to notice that none of the families have
+      the same number of girls and boys since there is an odd number of
+      children. Since boys and girls are equally likely, half the families have
+      more girls than boys and the other half has more boys than girls. So the
+      probability of more girls than boys is 0.5.
+
+      Another way to do it is to enumerate the eight possibilities: GGG, GGB,
+      GBG, GBB, BGG, BGB, BBG, BBB
+
+      Four of the eight have more girls than boys.
+
+      Another way is\dots
+
+      Since any of the three children might be the boy in a one-boy family, the
+      probability of exactly one boy is:
+      \[
+        3 \cdot 0.5^3 = 0.375
+      \]
+
+      The probability of all three boys is:
+      \[
+        0.5^3 = 0.125
+      \]
+
+      The probability of either of these things happening is:
+      \[
+        0.375 + 0.125 = 0.5
+      \]
+
+    \end{solution}
+
+    \question{}
+    Twins come in two flavors: identical and fraternal. Table~\ref{tab:twins}
+    shows the probability of each boy/girl fraternal/identical combination.
+
+    \begin{table}[H]
+      \centering
+      \begin{tabular}{lrrrr}
+        \toprule
+                  & boy/boy      & boy/girl     & girl/boy     & girl/girl \\
+        \midrule
+        Identical & \sfrac{1}{6} & 0            & 0            & \sfrac{1}{6} \\
+        Fraternal & \sfrac{1}{6} & \sfrac{1}{6} & \sfrac{1}{6} & \sfrac{1}{6} \\
+        \bottomrule
+      \end{tabular}\caption{Twins}\label{tab:twins}
+    \end{table}
+
+    \begin{parts}
+      \part[5] If after having a sonogram you learn you are having twins, what
+      is the probability of having identical twins?
+
+      \begin{solution}
+        \sfrac{1}{3} of the twins are identical, so the probability is 0.3333
+      \end{solution}
+
+      \part[5] What is: $P(\text{Two Girls } | \text{ Fraternal})$ 
+
+      \begin{solution}
+        One out of the four fraternal choices is girl/girl, so this probability
+        is 0.25.
+      \end{solution}
+
+      \part[5] What is: $P(\text{Fraternal } | \text{ Two Girls})$ 
+
+      \begin{solution}
+        The two girl/girl choices are equally likely, so this is 0.5
+      \end{solution}
+    \end{parts}
+
+    \question[5] A widget manufacturer has two plants. 
+    
+    \begin{itemize*}
+      \item Plant A makes 400 widgets per day, with 3 defective widgets on
+        average, each day.
+      \item Plant B makes 800 widgets per day, with 2 defective widgets on
+        average, each day.
+    \end{itemize*}
+
+    If one of the 1200 widgets manufactured in a particular day is selected and
+    found to be defective, what is the probability it was manufactured in Plant
+    A\@?
+
+    \begin{solution}
+      3 out of 5 of the defective widgets made every day come from Plant A, so
+      the probability is 0.6. The volume doesn't matter because you already know
+      you have a defective widget.
+    \end{solution}
+
+    \newpage
+
+    \question{}
+      Bats detect insects through echolocation. Scientists have determined that
+      detection distances are approximately Normal with standard deviation
+      of $\sigma = \unit[18]{cm}$.
+
+      \begin{table}[H]
+        \centering
+        \begin{tabular}{lrrrrrrrrrrr}
+          \toprule
+          Sample    & 1  & 2  & 3  & 4  & 5  & 6  & 7  & 8  & 9  & 10 & 11 \\
+          \midrule
+          Dist (cm) & 62 & 52 & 68 & 23 & 34 & 45 & 27 & 42 & 83 & 56 & 40 \\
+          \bottomrule
+        \end{tabular}
+        \caption{Bat/insect detection distances}\label{tab:bats}
+      \end{table}
+
+      \begin{parts}
+        \part[10]
+          Table~\ref{tab:bats} shows a simple random sample of bats and bugs detection distances. 
+
+          Use this sample to construct a 95\% confidence interval for the mean
+          bat/insect detection distance.
+
+        \part[10]
+          A team of scientists has theorized that the mean insect detection distance
+          is more than 40 cm. 
+          
+          Does the sample in Table~\ref{tab:bats} provide statistically significant
+          support for this theory at a significance level of 0.05?
+
+        \part[10] How large a sample would you need in order to provide a 95\%
+          confidence interval of $\mu \pm \unit[2]{cm}$?
+
+      \end{parts}
+
+    \question{}
+
+    \question{} The divination (predicting the future, making prophecies,
+    reading crystal balls, etc.) professor at Hogwarts School of Witchcraft
+    and Wizardry has a difficult job constructing an exam, since predicting
+    the future is an uncertain science, even for skilled practitioners.
+
+    The exam she came up with allows students to demonstrate proficiency by
+    making a sequence of predictions of the future. They pass the test by
+    showing a statistically significant result at significance level 0.05 
+    in an experiment with power 0.98.
+
+    \begin{parts}
+      \part[5] What is the probability of a student who can't predict
+      the future passing the exam through a sequence of lucky guesses?
+
+      \part[5] What is the probability of a student who can predict the future
+      failing the exam through an unfortunate sequence of slightly inaccurate
+      predictions? 
+
+    \end{parts}
+
+  \end{questions}
+
+\end{document}
+

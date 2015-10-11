@@ -27,7 +27,7 @@
 
 \everymath{\displaystyle}
 
-\title{Statistics \\ Homework Ten}
+\title{Statistics \\ Chapter 14 Homework}
 \date{\today}
 \author{}
 
@@ -60,24 +60,40 @@
           \]
           The 99\% confidence interval is from \fbox{237.8 to 258.2}.
 
-      \item[37] This is incorrect. The correct statement is that we can be 95\%
-        confident that the actual mean BMI is somewhere between 26.2 and 27.4.
+      \item[37] This is incorrect. The statement should be about the population
+        mean ($\mu$), not any particular individual.
 
-        If we did 20 similar surveys, 19 of them would have a mean BMI in this
-        range.
+        It's possible that nobody in the population has a BMI in the range
+        described. For example, a population with BMIs of 
+        
+        \{ 25, 25, 25, 29, 29, 29 \} 
+        
+        has $\mu = 27$ but nobody with a BMI between 26.2 and 27.4.
 
-      \item[38] This is correct. 
+        For both problems 37 and 38, the correct statement is: ``We can be 95\%
+        confident that the population mean is between 26.2 and 27.4.''
+
+      \item[38] This is incorrect. The statement should be about the population
+        mean ($\mu$), not future sample means ($\bar{x}$). 
+
+        If the population mean happens to be towards one or the other end of
+        this range, many similar samples will be outside of the range. For
+        example, if $\mu$ is actually 27.3, about have of $\bar{x}$ from other
+        samples will be outside of the 26.2 to 27.4 range.
 
       \item[40]
         \begin{enumerate}[(a)]
-          \item The null hypothesis is that students study 120 minutes or less
-            per night. The alternative hypothesis is that students study more
-            than 120 minutes per night.
+          \item 
+            \noindent
+            \begin{itemize*}
+              \item $H_0$: $\mu = 120$
+              \item $H_a$: $\mu > 120$
+            \end{itemize*}
 
           \item
             \begin{align*}
-              \sigma_{\bar{x}} & = \frac{64}{\sqrt{269}} = 3.902 \\
-              z                & = \frac{137 - 120}{3.902} \approx 4.36
+              \sigma_{\bar{x}} &= \frac{64}{\sqrt{269}} = 3.902 \\
+              z                &= \frac{137 - 120}{3.902} \approx \boxed{ 4.36 }
             \end{align*}
 
           \item The p-value is 
@@ -90,28 +106,27 @@
 
         \end{enumerate}
 
+      \newpage
+
       \item[42]
         \begin{enumerate}[(a)]
-          \item The null hypothesis is that hotel managers have a mean
-            femininity score of 5.29. The alternative hypothesis is that hotel
-            managers have a mean femininity score different from 5.29.
+          \item 
+            \noindent
+            \begin{itemize*}
+              \item $H_0$: $\mu = 5.19$
+              \item $H_a$: $\mu \ne 5.19$
+            \end{itemize*}
 
           \item
             \begin{align*}
-              \sigma_{\bar{x}} & = \frac{0.78}{\sqrt{128}} \\
-                               & \approx 0.06411 \\
-              \\
-              z & = \frac{5.29 - 5.19}{0.06411} \\
-                & \approx \boxed{ 1.560 } \\
+              \sigma_{\bar{x}} & = \frac{0.78}{\sqrt{128}}     \approx 0.06411 \\
+              z                & = \frac{5.29 - 5.19}{0.06411} \approx \boxed{ 1.560 } \\
             \end{align*}
 
           \item The p-value is 
             \begin{align*}
-              P(z \geq 1.560) & = P(z \leq -1.560) \\
-                              & \approx 0.0594 \\
-              \\
-              p & \approx 2 \cdot 0.0594 \\
-                & \approx \boxed{ 0.1188 }
+              P(z \geq 1.560) & = P(z \leq -1.560) \approx 0.0594 \\
+              \text{p-value}  & \approx 2 \cdot 0.0594 = \boxed{ 0.1188 }
             \end{align*}
 
             There is 12\% chance of observing a result this far from the mean by
@@ -146,11 +161,9 @@
 
       \item[48] 
         \begin{enumerate}[(a)]
-          \item If she already knows the sample mean is greater than the
-            population mean, then the chance of the sample mean being unusually
-            greater than the population mean is greater than the chance of the
-            sample mean being unusually different (not just greater) from the
-            population mean.
+          \item She needs to decide whether she's going to use a one-sided test
+            or a two-sided test before she starts the experiment. She shouldn't
+            adjust the experiment to match the data after she looks at it.
 
           \item The correct P-value is $2 \cdot 0.0179 = 0.0357$. There is a
             3.5\% chance of observing a value this far from the mean.
@@ -172,20 +185,19 @@
 
           \item
             \begin{align*}
-              \bar{x}     & = 30,841 \\
-              s_{\bar{x}} & = \frac{3000}{\sqrt{20}}
-                          & \approx 670.82 \\
-              \\
-              z_{0.95} & = 1.6445 \\
-              z_{0.05} & = -1.6445 \\
+              \bar{x}     & = \num{30 841} \\
+              s_{\bar{x}} & = \frac{3000}{\sqrt{20}} \approx 670.82 \\
+              z_{0.95}    & = 1.6445 \\
               \\
               \mu & = 30,841 \pm 1.6445 \cdot 670.82 \\
-                  & = \boxed{ \unit[30,841 \pm 1103]{lb} } \\
+                  & = \boxed{ \unit[\num{ 30 841 } \pm 1103]{lb} } \\
             \end{align*}
+
+            The 90\% confidence interval is from \fbox{ 29,734 to 31,944 lbs }.
         \end{enumerate}
 
       \item[51]
-        \begin{figure}[H]
+        \begin{figure}[ht]
           \centering
           \includegraphics{ex51.pdf}
           \caption{Exercise 51}\label{fig:ex51}
@@ -212,19 +224,24 @@
         \end{enumerate}
 
       \item[52]
+        From exercise 50:
+        \begin{align*}
+          \bar{x}          & = 30,841 \\
+          \sigma_{\bar{x}} & \approx 670.82 \\
+        \end{align*}
+
         \begin{enumerate}[(a)]
-          From exercise 50:
-          \begin{align*}
-            \bar{x}          & = 30,841 \\
-            \sigma_{\bar{x}} & \approx 670.82 \\
-          \end{align*}
 
           \item 
-            The null hypothesis is that the mean value is 32,000 lbs.
-            \begin{align*}
-              z & = \frac{30,841 - 32,000}{670.82} \\
-                & \approx -1.7277 \\
-            \end{align*}
+            \noindent
+            \begin{itemize*}
+              \item $H_0$: $\mu = \unit[\num{ 32 000 }]{lb}$
+              \item $H_a$: $\mu \ne \unit[\num{ 32 000 }]{lb}$
+            \end{itemize*}
+
+            \[
+              z = \frac{30,841 - 32,000}{670.82} \approx -1.7277 \\
+            \]
 
             From Table A, if the actual mean is 32,000 lbs, there is a 0.042
             probability of observing a value as small as 30,841 lbs or as large
@@ -235,14 +252,14 @@
             getting a value at least 1159 lbs from 32,000 lbs.
 
           \item 
-            The null hypothesis is that the mean value is 31,500 lbs.
-            \begin{align*}
-              \bar{x} - \mu_0 & = 30,841 - 31,500 \\
-                              & = -659 \\
-              \\
-              z  & = \frac{-659}{670.82} \\
-                 & \approx -0.9824 \\
-            \end{align*}
+            \noindent
+            \begin{itemize*}
+              \item $H_0$: $\mu = \unit[\num{ 31 500 }]{lb}$
+              \item $H_a$: $\mu \ne \unit[\num{ 31 500 }]{lb}$
+            \end{itemize*}
+            \[
+              z = \frac{\num{ 30 841 } - \num{ 31 500 }}{670.82} \approx -0.9824 \\
+            \]
 
             From Table A, if the actual mean is 31,500 lbs, there is a 0.1630
             probability of observing a value of 30,841 or less.
@@ -261,15 +278,14 @@
             \sigma_{\bar{x}} & \approx 0.3647 \\
         \end{align*}
 
-        The null hypothesis is that there is no change in bone density and
-        $\mu_0 = 0$.
+        \begin{itemize*}
+          \item $H_0$: $\mu = 0$
+          \item $H_a$: $\mu \ne 0$
+        \end{itemize*}
 
-        \begin{align*}
-          \bar{x} - \mu_0 & = -3.587 - 0 \\
-                          & = -3.587 \\
-          z & = \frac{-3.587}{0.3647} \\
-            & \approx -9.8364 \\
-        \end{align*}
+        \[
+          z = \frac{-3.587 - 0}{0.3647} \approx -9.8364 \\
+        \]
 
         There is essentially zero chance of getting this result by chance,
         so we can confidently reject the null hypothesis and conclude that
@@ -279,9 +295,12 @@
 
       \item[55]
         \begin{enumerate}[(a)]
-          \item The null hypothesis is that the eye grease does nothing and the
-            average difference is zero. The alternative hypothesis is that the
-            eye grease increases sensitivity and the difference is positive.
+          \item 
+            \noindent
+            \begin{itemize*}
+              \item $H_0$: $\mu = 0$
+              \item $H_a$: $\mu > 0$
+            \end{itemize*}
 
           \item
             \begin{align*}
@@ -289,18 +308,17 @@
               \sigma  & = 0.22 \\
               \mu_0   & = 0 \\
               \\
-              \bar{x} - \mu_0  & = 0.10125 \\
-              \sigma_{\bar{x}} & = \frac{0.10125}{\sqrt{16}} \\
-                               & = 0.055 \\
+              s       & = \frac{0.10125}{\sqrt{16}} \approx 0.055 \\
               \\
-              z & = \frac{0.10125}{0.055} \\
-                & \approx 1.8409 \\
+              z & = \frac{0.10125 - 0}{0.055} \approx 1.8409 \\
             \end{align*}
 
             From Table A, there is a 0.0328 probability of a value at least this
             high so we can reject the null hypothesis with a P-value of 0.0328.
 
         \end{enumerate}
+
+      \newpage
 
       \item[57]
         \begin{enumerate}[(a)]
@@ -343,7 +361,7 @@
   \end{description}
 
   \else
-    \vspace{2 cm}
+    \vspace{10 cm}
     \begin{quote}
       \begin{em}
         And I think that's really something that we all have to remember, is

@@ -40,45 +40,45 @@
   the values of $\bar{x}$ do have a Normal distribution if your sample is
   reasonably large.
 
-  \section{T-test}
-  Gosset was an employee of the Guinness Brewery published under name
-  ``Student'' so competitors might underestimate the value of the work.
+  % \section{T-test}
+  % Gosset was an employee of the Guinness Brewery published under name
+  % ``Student'' so competitors might underestimate the value of the work.
 
-  If you don't have the standard deviation of the population, you can use the
-  standard deviation of the sample. You get a t-test instead of a z-test.
+  % If you don't have the standard deviation of the population, you can use the
+  % standard deviation of the sample. You get a t-test instead of a z-test.
 
-  The probability density graph for a t-test is slightly different from a Normal
-  graph, with the differences diminishing as the sample size increases.
+  % The probability density graph for a t-test is slightly different from a Normal
+  % graph, with the differences diminishing as the sample size increases.
 
-  \section{Confidence Intervals}
-  A {\em Confidence Interval\/} is in the form $x \pm y$.
+  % \section{Confidence Intervals}
+  % A {\em Confidence Interval\/} is in the form $x \pm y$.
 
-  Associated with a confidence interval is:
-  \begin{description}
-    \item[Confidence Level] is how confident you are that the interval
-      captures the actual value you are looking for. Common values are 68\%,
-      95\% and 99.7\%.
+  % Associated with a confidence interval is:
+  % \begin{description}
+  %   \item[Confidence Level] is how confident you are that the interval
+  %     captures the actual value you are looking for. Common values are 68\%,
+  %     95\% and 99.7\%.
 
-    \item[Margin of Error] the width of the interval
-  \end{description}
+  %   \item[Margin of Error] the width of the interval
+  % \end{description}
 
-  With a larger margin of error, you can be more confident that the interval
-  includes the actual value of the parameter.
+  % With a larger margin of error, you can be more confident that the interval
+  % includes the actual value of the parameter.
 
-  \section{Significance}
-  ``Statistically significant'' means that you had a low P-value. You can be
-  confident that the result didn't happen by chance.
+  % \section{Significance}
+  % ``Statistically significant'' means that you had a low P-value. You can be
+  % confident that the result didn't happen by chance.
 
-  Statistically significant is not the same as practically significant. You may be
-  very confident in a difference of 1\% (statistically significant) but not care
-  because 1\% is such a small percentage (practical significant).
+  % Statistically significant is not the same as practically significant. You may be
+  % very confident in a difference of 1\% (statistically significant) but not care
+  % because 1\% is such a small percentage (practical significant).
 
-  If the actual effect is small, you need a large sample size to get a
-  statistically significant result. This is because a large sample size results
-  in a small standard deviation, which allows you to pin down the effect you are
-  looking for.
+  % If the actual effect is small, you need a large sample size to get a
+  % statistically significant result. This is because a large sample size results
+  % in a small standard deviation, which allows you to pin down the effect you are
+  % looking for.
 
-  \section{Calculating Required Sample Size}
+  \section{Sample Size and Confidence Intervals}
 
   Calculate how many samples you need for a desired margin of error, $m$:
 
@@ -94,7 +94,7 @@
     \sigma & = 20 \\
   \end{align*}
   
-  And you want to have 95\% confidence.  95\% is two standard deviations, so
+  And you want to have 95\% confidence. 95\% is two standard deviations, so
   $z^* = 2$. 
 
   \begin{align*}
@@ -104,33 +104,102 @@
   \end{align*}
 
   \section{Power}
-  The power of a test is the chance that it will correctly reject the null
-  hypothesis when the null hypothesis is false.
 
+  \subsection{Description} % (fold)
+  
+  The power of a test is the chance that it will correctly reject the null
+  hypothesis when the null hypothesis is false by at least a specified amount.
+
+  input to power calculation are:
+  \begin{itemize*}
+    \item population standard deviation ($\sigma$)
+    \item sample size
+    \item minimum effect size we want to detect
+    \item significance level
+  \end{itemize*}
+
+  The power is roughly the chance that you will be in the ``significant'' part
+  of the blue graph if the mean is actually the mean of the red graph.
+
+  See Figures~\ref{fig:power1} through~\ref{fig:power3}. For all figures:
+  \begin{align*}
+    \mu_0 &= 0 \\
+    \mu_a &= 3 \\
+  \end{align*}
+
+  The power is the chance of correctly detecting that the actual mean is at
+  least 3 when the $H_0$ mean is 0.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1.0]{power_sd_150}
+    \caption{$sd = 1.5$, $z^* = 3$, $power = 0.5$}\label{fig:power1}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1.0]{power_sd_100}
+    \caption{$sd = 1.0$, $z^* = 2$, $power = 0.84$}
+  \end{figure}
+  
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1.0]{power_sd_075}
+    \caption{$sd = 0.75$, $z^* = 1.5$, $power = 0.977$}\label{fig:power3}
+  \end{figure}
+
+  You can increase the power by either:
+  \begin{itemize}
+      
+    \item looking for larger effect differences (move red graph to the right so
+      there is less overlap)
+
+    \item raising the significance level so that more of the blue graph is
+      considered significant
+
+    \item decreasing the sample distribution standard deviation by increasing
+      the sample size (shrink the width of both graphs so there is less overlap)
+
+  \end{itemize}
+
+  When planning an experiment, use a computer to tell you what sample size you
+  need for a desired power, significance level and minimum effect size.
+
+  \pagebreak
+
+  \subsection{Calculation} % (fold)
+  
   exercise 48:
 
   \begin{enumerate}[(a)]
     \item 
+      For this part, we use $\mu = 0$.
+
+      Look up $z^*$ for a significance level of 0.05 in Table C. $z^* = 1.645$
+
+    \item
+      Still using $\mu = 0$.
+
       \begin{align*}
-        z       & = 1.6449 \\
-        \bar{x} & = \frac{1.6449}{3.162} \\
-                & = 0.5202 \\
+        \bar{x} & = \frac{1.645}{3.162} \\
+                & = \boxed{ 0.5202 } \\
       \end{align*}
 
-      Any $\bar{x}$ greater than 0.52 will reject the hypothesis.
+      Any $\bar{x}$ greater than \fbox{ 0.52 } will reject the hypothesis.
 
-    \item The probability of observing these values when the mean is 0.8 is:
+    \item 
+      For this part, we use $\mu = 0.8$.
+
+      $P(\bar{x} > 0.5202)$ when $\mu = 0.8$ is:
       \begin{align*}
-        z        & = \frac{0.5202 - 0.8}{1/\sqrt{10}} \\
-                 & \approx -0.8848 \\
-        pnorm(z) & \approx 0.8819 \\
+        z & = \frac{0.5202 - 0.8}{1/\sqrt{10}} \\
+          & \approx -0.8848 \\
       \end{align*}
 
-      The probability of a value at least this large when the mean is 0.8 is
-      approximately 0.8819.
+      From Table A:\@ $P(z > -0.8848) \approx \boxed{ 0.8106 }$
 
-      This is the same answer my computer gave, but slightly different from the
-      book answer. 
+      The power of the test is 0.8106. There is an 81\% chance of correctly
+      rejecting the null hypothesis if the actual mean is at least 0.8.
 
   \end{enumerate}
 
@@ -151,69 +220,88 @@
     \item lower desired significance level (higher $z_{\alpha}$)
   \end{itemize*}
 
+  \pagebreak
+
   \section{Type I and II Errors}
+
   \begin{description*}
     \item[Type I] reject $H_0$ when it is actually true.
     \item[Type II] accept $H_0$ when it is actually false.
   \end{description*}
 
   \begin{tabular}[H]{lll}
-     hypothesis & reject          & accept \\
-     true       & Type I Error    & correct outcome \\
-     false      & correct outcome & Type II error \\
+    \toprule
+    $H_0$ & reject          & accept \\
+    \midrule
+    true  & Type I Error    & correct outcome \\
+    false & correct outcome & Type II error \\
+    \bottomrule
   \end{tabular}
 
-  \section{Check Your Skills}
-  \begin{description}
-    \item[15.1] c---not a random sample
+  Significance is probability of a Type I error. It's the chance that when
+  $H_0$ is true you will incorrectly reject think it is false because you
+  happened to have an unusual sample.
+  
+  With a significance of 0.05, there is a 5\% chance that when $H_0$ is true,
+  the test will incorrectly think it is false.
 
-    \item[15.2] c---not a random sample
-      \begin{enumerate}[(a)]
-        \item 
-          For a 95\% confidence interval, we need to within two standard
-          deviations of the mean.
+  Power is $1 - P(\text{ Type II error })$. It's the chance that when $H_0$ is
+  false, the test will incorrectly think it is true. 
 
-          \begin{align*}
-            \sigma_{\bar{x}} & = \frac{1.83}{\sqrt{880}} \\
-                             & \approx 0.06169 \\
-            \\
-            z^* &\approx 2 \\
-            \\
-            \mu & = 1.92 \pm 2 \cdot 0.06169 \\
-                & \approx 1.92 \pm 0.1209 \\
-                & \approx (1.80, 2.04) \\
-          \end{align*}
+  With a power of 0.95, there is a 5\% chance that when $H_0$ is false, the test
+  will incorrectly think it is true.
 
-        \item The distribution of the sample means is still normal since we have
-          a large sample (Central Limit Theorem).
+  % \section{Check Your Skills}
+  % \begin{description}
+  %   \item[15.1] c---not a random sample
 
-        \item 
-          \begin{itemize*}
-            \item it only includes people with phones
-            \item it only includes people who answer their phone
-          \end{itemize*}
-      \end{enumerate}
+  %   \item[15.2] c---not a random sample
+  %     \begin{enumerate}[(a)]
+  %       \item 
+  %         For a 95\% confidence interval, we need to within two standard
+  %         deviations of the mean.
 
-    \item[15.3] Different times of day get different types of people.
+  %         \begin{align*}
+  %           \sigma_{\bar{x}} & = \frac{1.83}{\sqrt{880}} \\
+  %                            & \approx 0.06169 \\
+  %           \\
+  %           z^* &\approx 2 \\
+  %           \\
+  %           \mu & = 1.92 \pm 2 \cdot 0.06169 \\
+  %               & \approx 1.92 \pm 0.1209 \\
+  %               & \approx (1.80, 2.04) \\
+  %         \end{align*}
 
-    \item[15.4] 
-      \begin{enumerate}[(a)]
-        \item
+  %       \item The distribution of the sample means is still normal since we have
+  %         a large sample (Central Limit Theorem).
 
-          \begin{table}[ht]
-          \centering
-          \begin{tabular}{rrrrrrr}
-            \toprule
-              & p    & z    & s.z  & margin.of.error & min   & max \\
-            \midrule
-            1 & 0.90 & 1.64 & 0.29 & 0.48            & 26.32 & 27.28 \\
-            2 & 0.95 & 1.96 & 0.29 & 0.57            & 26.23 & 27.37 \\
-            3 & 0.99 & 2.58 & 0.29 & 0.76            & 26.04 & 27.56 \\
-            \bottomrule
-          \end{tabular}
-          \end{table}
-      \end{enumerate}
+  %       \item 
+  %         \begin{itemize*}
+  %           \item it only includes people with phones
+  %           \item it only includes people who answer their phone
+  %         \end{itemize*}
+  %     \end{enumerate}
 
-  \end{description}
+  %   \item[15.3] Different times of day get different types of people.
+
+  %   \item[15.4] 
+  %     \begin{enumerate}[(a)]
+  %       \item
+
+  %         \begin{table}[ht]
+  %         \centering
+  %         \begin{tabular}{rrrrrrr}
+  %           \toprule
+  %             & p    & z    & s.z  & margin.of.error & min   & max \\
+  %           \midrule
+  %           1 & 0.90 & 1.64 & 0.29 & 0.48            & 26.32 & 27.28 \\
+  %           2 & 0.95 & 1.96 & 0.29 & 0.57            & 26.23 & 27.37 \\
+  %           3 & 0.99 & 2.58 & 0.29 & 0.76            & 26.04 & 27.56 \\
+  %           \bottomrule
+  %         \end{tabular}
+  %         \end{table}
+  %     \end{enumerate}
+
+  % \end{description}
 \end{document}
 

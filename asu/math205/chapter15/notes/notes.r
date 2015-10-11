@@ -1,48 +1,27 @@
-library(asbio) 
+root.dir <- '~/Documents/U/ubb/asu/math205'
+notes.dir <- paste(root.dir, 'chapter15/notes', sep = '/')
 
-notes.dir <- paste(root.dir, "week16/notes", sep = "/")
-setwd(notes.dir)
+range <- seq(-3, 6, 0.05)
+sd <- 1.5
 
-s <- 1.83 / sqrt(880)
-z <- qnorm(1 - 0.025)
+p <- ggdistribution(dnorm, range, mean = 0, sd = sd, colour = 'blue')
+p <- ggdistribution(dnorm, range, mean = 3, sd = sd, p = p, colour = 'red')
 
-1.92 - s * 2
+print(p)
 
--qnorm((1 - .99)/2)
+save.plot(p, dir = notes.dir, name = 'power_sd_075.pdf')
 
-7.5/sqrt(654)
+1 - 0.1894
 
-confidence <- function(p, sample.mean, s, n) {
-  z <- -qnorm((1 - p)/2)
-  s.z <- s / sqrt(n)
-  margin.of.error <- s.z * z
+1 - pnorm(mean = 0.8, sd = 1/sqrt(10), q = 0.52)
 
-  result <- data.frame(p = p, z = z, s.z = s.z, 
-                       margin.of.error = margin.of.error,
-                       min = sample.mean - margin.of.error, 
-                       max = sample.mean + margin.of.error)
+??install
 
-  round(result, 4)
-}
+install.packages('pwr')
+?pwr.p.test
 
-sink('r.tex')
-  xtable(t(sapply(c(0.9, 0.95, 0.99), function(p) confidence(p, 26.8, 7.5, 654))))
-sink()
+power.t.test(delta = 0.8, sd = 1, n = 10, sig.level = 0.05, type = "one.sample", 
+             alternative = "one.sided")
 
-.05/pnorm(.2/sqrt(10))
+pwr.p.test(h = 0.8, n = 10, sig.level = 0.05, alternative = "greater")
 
-?power.z.test
-power.z.test(n = 10, sigma = 1, alpha = 0.05, effect = 0.8, test = "one.tail")
-
-s = 1/sqrt(10)
-
-qnorm(0.95)
-
-zalpha <- qnorm(.05)
-zalpha
-.8/s
-
-pnorm(zalpha + 0.8/s)
-
-x <- qnorm(0.95) / 3.162
-1 - pnorm((x - 0.8) * sqrt(10))
