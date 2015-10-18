@@ -1,13 +1,16 @@
 % no answer key
-\documentclass[letterpaper, landscape]{exam}
+\documentclass[landscape]{exam}
 \usepackage{2in1, lscape} 
 
+% \documentclass[letterpaper, landscape]{exam}
+
 % answer key
-% \printanswers{}
+\printanswers{}
 
 \usepackage{units} 
 \usepackage{graphicx}
 \usepackage[fleqn]{amsmath}
+\usepackage{mathtools}
 \usepackage{cancel}
 \usepackage{float}
 \usepackage{mdwlist}
@@ -20,12 +23,10 @@
 \usepackage{parskip}
 \usepackage{xfrac}
 \usepackage{commath}
+\usepackage{todonotes}
 
-\newcommand{\degree}{\ensuremath{^\circ}} 
-\everymath{\displaystyle}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
-% \printanswers
-\excludecomment{comment}
 \addpoints{}
 
 \title{Statistics \\ Part Two Exam}
@@ -36,22 +37,22 @@
 
   \maketitle
 
-  \begin{center}
-    \gradetable[h][pages]
-  \end{center}
+  % \begin{center}
+  %   \gradetable[h][pages]
+  % \end{center}
 
   \ifprintanswers{}
   \else
-  \section{Instructions}
-  Show all your work and explain your answers---a correct guess won't receive
-  credit without work/explanation. 
-  
-  An incorrect answer will receive partial credit if you understand the
-  concept but made an arithmetic mistake.
-
+    \section{Instructions}
+    Show all your work and explain your answers---a correct guess won't receive
+    credit without work/explanation. 
+    
+    An incorrect answer will receive partial credit if you understand the
+    concept but made a mistake or two while solving the problem.
   \fi
 
   \section{Questions}
+
 
   \begin{questions}
 
@@ -60,26 +61,46 @@
         \part[5] What is the probability of all three rolls coming up 6?
         \begin{solution}
           \begin{align*}
-            \del{ \frac{1}{6} }^3 \approx 0.004630
+            \del{ \frac{1}{6} }^3 \approx \boxed{ 0.004630 }
           \end{align*}
         \end{solution}
 
         \part[5] What is the probability of at least one 6 in the three rolls?
+
         \begin{solution}
-          \begin{align*}
-            1 - \del{ \frac{5}{6} }^3 \approx 0.4213
-          \end{align*}
+
+          The probability of no sixes coming up is:
+          \[
+            P(\text{no sixes}) = \del{ \frac{5}{6} }^3 
+          \]
+
+          The probability of at least one six coming up is the complement of no
+          sixes:
+          \[
+            1 - \del{ \frac{5}{6} }^3 \approx \boxed{ 0.4213 }
+          \]
+
         \end{solution}
 
         \part[5] What is the probability of exactly two out of the three rolls
         coming up 6?
 
         \begin{solution}
-          There are three choices for the non-six die:
-          \begin{align*}
+          The probability of the first two rolls coming up six and the remaining
+          two coming up not six is:
+
+          \[
+            P(\text{first two six}) = \cdot \frac{1}{6} \cdot \frac{1}{6} \cdot \frac{5}{6} 
+          \]
+
+          The probability of the second or third roll being the single non-six
+          die is the same. Since these are disjoint events, you can add them to
+          get the overall probability:
+
+          \[
             3 \cdot \frac{1}{6} \cdot \frac{1}{6} \cdot \frac{5}{6} 
-              \approx 0.06944
-          \end{align*}
+                \approx \boxed{ 0.06944 }
+          \]
         \end{solution}
       \end{parts}
 
@@ -95,37 +116,26 @@
     %   \end{align*}
     % \end{solution}
 
-    \question[5] If boys and girls are equally likely, what is the probability
+    \question[8] If boys and girls are equally likely, and the gender of each
+    child is independent of the gender of the other children, what is the probability
     of a four child family having more girls than boys?
 
     \begin{solution}
-      The easy way of doing this one is to notice that none of the families have
-      the same number of girls and boys since there is an odd number of
-      children. Since boys and girls are equally likely, half the families have
-      more girls than boys and the other half has more boys than girls. So the
-      probability of more girls than boys is 0.5.
+      There are 16 equally likely possibilities. 1 of these is ``four girls''
+      and four of them are ``three girls'' (the single boy could be any one of
+      the kids).  So the probability of having more girls than boys is
+      \sfrac{5}{16}.
 
-      Another way to do it is to enumerate the eight possibilities: GGG, GGB,
-      GBG, GBB, BGG, BGB, BBG, BBB
-
-      Four of the eight have more girls than boys.
-
-      Another way is\dots
-
-      Since any of the three children might be the boy in a one-boy family, the
-      probability of exactly one boy is:
+      Another way to look at it is that the probability of any particular
+      combination of girls and boys is:
       \[
-        3 \cdot 0.5^3 = 0.375
+        \frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{16}
       \]
 
-      The probability of all three boys is:
+      Since there are 5 combinations that work, the probability of having more
+      girls than boys is:
       \[
-        0.5^3 = 0.125
-      \]
-
-      The probability of either of these things happening is:
-      \[
-        0.375 + 0.125 = 0.5
+        P(g > b) = 5 \cdot \frac{1}{16} = \boxed{ \frac{5}{16} }
       \]
 
     \end{solution}
@@ -147,24 +157,37 @@
     \end{table}
 
     \begin{parts}
-      \part[5] If after having a sonogram you learn you are having twins, what
-      is the probability of having identical twins?
+      % \part[5] If after having a sonogram you learn you are having twins, what
+      % is the probability of having identical twins?
 
-      \begin{solution}
-        \sfrac{1}{3} of the twins are identical, so the probability is 0.3333
-      \end{solution}
+      % \begin{solution}
+      %   \sfrac{1}{3} of the twins are identical, so the probability is 0.3333
+      % \end{solution}
 
       \part[5] What is: $P(\text{Two Girls } | \text{ Fraternal})$ 
 
       \begin{solution}
-        One out of the four fraternal choices is girl/girl, so this probability
-        is 0.25.
+        % One out of the four fraternal choices is girl/girl, so the probability
+        % is 0.25.
+
+        \begin{align*}
+          P(\text{2G } | \text{ F}) & = \frac{P(\text{2G and F})}{P(\text{F})} \\
+                                    & = \frac{ \sfrac{1}{6} }{ \sfrac{2}{3} } \\
+                                    & = \boxed{ 0.25 } \\
+        \end{align*}
       \end{solution}
 
       \part[5] What is: $P(\text{Fraternal } | \text{ Two Girls})$ 
 
       \begin{solution}
-        The two girl/girl choices are equally likely, so this is 0.5
+        % One out of the two girl/girl choices is fraternal, so the probability
+        % is 0.5.
+
+        \begin{align*}
+          P(\text{F } | \text{ 2G}) & = \frac{P(\text{2G and F})}{P(\text{2G})} \\
+                                    & = \frac{ \sfrac{1}{6} }{ \sfrac{1}{3} } \\
+                                    & = \boxed{ 0.5 } \\
+        \end{align*}
       \end{solution}
     \end{parts}
 
@@ -182,14 +205,98 @@
     A\@?
 
     \begin{solution}
-      3 out of 5 of the defective widgets made every day come from Plant A, so
-      the probability is 0.6. The volume doesn't matter because you already know
-      you have a defective widget.
+      \begin{align*}
+        P(\text{plant A} | \text{ defective}) & = \frac{P(\text{plant A and defective})}{P(\text{defective})} \\
+                                              & = \frac{ \sfrac{3}{1200} }{ \sfrac{5}{1200} } \\
+                                              & = \boxed{ 0.6 } \\
+      \end{align*}
+
+      Or you could ignore the volume and notice that 3 out of 5 of the defective
+      widgets made every day come from Plant A which also gives you a
+      probability of 0.6 for a defective widget coming from plant A.
     \end{solution}
 
-    \newpage
+    \ifprintanswers{}
+    \else
+      \newpage
+    \fi
 
-    \question{}
+    \question[5]
+      When planning for Halloween, you want to keep all of your
+      trick-or-treating customers satisfied. You theorize that candy preferences
+      differ depending on the age and gender of the consumer.  You decide to
+      conduct a poll of likely trick-or-treaters to help you decide what candy
+      to buy. 
+      
+      Describe an experiment design which is likely to lead to your purchasing
+      the correct types of candy, assuming you know from past years about how
+      many people from each age/gender group are likely to show up. 
+
+      \begin{solution}
+        A block design makes sense for this problem. The procedure would be:
+
+        \begin{itemize}
+          \item Find a large group of likely trick-or-treaters.
+
+          \item Divide them up into groups based on gender and age.
+
+          \item Randomly select a sample from each group, where the size of the
+            sample matches the expected proportion of kids of that type
+
+          \item Poll each sample for candy preferences.
+
+          \item Go to the store and buy candy. Make sure you also get something
+            you like. Don't hand the ones you like out to the customers
+            except as a last resort when you run out of everything else that
+            they probably like better after all the effort you put into keeping
+            them happy. 
+
+        \end{itemize}
+
+      \end{solution}
+
+    \question[12]
+      You want to determine if a coin is biased towards heads or tails, so you
+      flip it 100 times and discover that it comes up heads 57 times. Is this
+      evidence at the 0.1 significance level that the coin is biased?
+
+     Count heads as 1 and tails as 0, so for a fair coin
+     \begin{align*}
+       \mu    & = 0.5 \\
+       \sigma & = 0.5 \\
+     \end{align*}
+
+      \begin{solution}
+        Since you don't know in advance which direction the coin might be
+        biased towards, you need to use a two sided test.
+
+        The hypotheses are:
+        \begin{itemize*}
+          \item $H_0$: $\mu = 0.5$
+          \item $H_a$: $\mu \ne 0.5$
+        \end{itemize*}
+
+        \begin{align*}
+          s & = \frac{0.5}{\sqrt{100}} = 0.05 \\
+          z & = \frac{0.57 - 0.5}{0.05} = 1.4 \\
+          \\
+          P(z > 1.4) & \approx 0.08 \\
+        \end{align*}
+
+        Since this is a two-sided test, the P-level is 0.16. This doesn't
+        rule out the null hypothesis at the 0.1 significance level. A result
+        like this has a 16\% chance of happening by chance, even if the coin is
+        fair.
+
+      \end{solution}
+
+
+    \uplevel{
+      \hrulefill{}
+
+      Questions~\ref{q:bats_first} through~\ref{q:bats_last} refer to
+      Table~\ref{tab:bats}.
+
       Bats detect insects through echolocation. Scientists have determined that
       detection distances are approximately Normal with standard deviation
       of $\sigma = \unit[18]{cm}$.
@@ -205,45 +312,112 @@
         \end{tabular}
         \caption{Bat/insect detection distances}\label{tab:bats}
       \end{table}
+    }
+
+    \question[10]\label{q:bats_first}
+      Table~\ref{tab:bats} shows a simple random sample of bats and bug
+      detection distances.  Use this sample to construct a 95\% confidence
+      interval for the mean bat/insect detection distance.
+
+      \begin{solution}
+        \begin{align*}
+          z^*     & = 1.960 \\
+          s       & = \frac{18}{\sqrt{11}} \approx 5.4277 \\
+          \bar{x} & \approx 48.36 \\
+        \end{align*}
+
+        The 95\% confidence interval is: 
+        
+        \fbox{ $\mu = \unit[48.36]{cm} \pm \unit[10.64]{cm}$ } or 
+        \fbox{ 37.72 cm to 59 cm }
+
+      \end{solution}
+    \question{}
+      A team of scientists has theorized that the mean insect detection distance
+      is more than 40 cm. 
 
       \begin{parts}
-        \part[10]
-          Table~\ref{tab:bats} shows a simple random sample of bats and bugs detection distances. 
+        \part[5] What are the null and alternative hypotheses?
 
-          Use this sample to construct a 95\% confidence interval for the mean
-          bat/insect detection distance.
+        \begin{solution}
+          \begin{itemize*}
+            \item $H_0$: $\mu = \unit[40]{cm}$
+            \item $H_a$: $\mu > \unit[40]{cm}$
+          \end{itemize*}
+
+        \end{solution}
 
         \part[10]
-          A team of scientists has theorized that the mean insect detection distance
-          is more than 40 cm. 
-          
           Does the sample in Table~\ref{tab:bats} provide statistically significant
           support for this theory at a significance level of 0.05?
 
-        \part[10] How large a sample would you need in order to provide a 95\%
-          confidence interval of $\mu \pm \unit[2]{cm}$?
+          \begin{solution}
+            \begin{align*}
+              \bar{x} & \approx 48.36 \\
+              s &= \frac{18}{\sqrt{11}} \approx 5.427 \\
+              z       & = \frac{48.36 - 40}{5.417} \\
+                      & \approx 1.54 \\
+            \end{align*}
+
+            This is a P-value of 0.0617, so the data don't support the
+            hypothesis at the 0.05 significance level.
+            
+          \end{solution}
 
       \end{parts}
+          
+    \question[5]\label{q:bats_last} How large a sample of bats/insects would you
+    need in order to provide a 95\% confidence interval of 
+    $\mu \pm \unit[2]{cm}$?
 
-    \question{}
+    \begin{solution}
+      For a 95\% confidence interval, $z^* = 1.6449$
+
+      \[
+        n = \del{ \frac{1.960 \cdot 18}{ 2 } }^2 \approx 311.16  
+      \]
+
+      Since you can't have a fractional number of samples, you'll need 
+      \fbox{ 312 samples } to get the desired precision.
+
+    \end{solution}
 
     \question{} The divination (predicting the future, making prophecies,
     reading crystal balls, etc.) professor at Hogwarts School of Witchcraft
-    and Wizardry has a difficult job constructing an exam, since predicting
+    and Wizardry has a difficult job constructing an exam. Predicting
     the future is an uncertain science, even for skilled practitioners.
 
     The exam she came up with allows students to demonstrate proficiency by
     making a sequence of predictions of the future. They pass the test by
     showing a statistically significant result at significance level 0.05 
-    in an experiment with power 0.98.
+    in an experiment with a power 0.98 to detect a passing level of magic.
+
+    \begin{solution}
+      The hypotheses are:
+      \begin{itemize*}
+        \item $H_0$ the student can't predict the future
+        \item $H_a$ the student can predict the future
+      \end{itemize*}
+    \end{solution}
 
     \begin{parts}
       \part[5] What is the probability of a student who can't predict
       the future passing the exam through a sequence of lucky guesses?
 
+      \begin{solution}
+        in this case $H_0$ is true but we incorrectly conclude it is false. The
+        probability of this happening is the significance level: \fbox{ 0.05 }.
+      \end{solution}
+
       \part[5] What is the probability of a student who can predict the future
       failing the exam through an unfortunate sequence of slightly inaccurate
       predictions? 
+
+      \begin{solution}
+        in this case $H_a$ is true but we are unable to detect this. The
+        probability of this happening is the complement of the power: 
+        \fbox{ 0.02 }.
+      \end{solution}
 
     \end{parts}
 

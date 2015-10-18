@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers{}
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
 
 % for the cent symbol
 \usepackage{textcomp}
@@ -52,7 +52,7 @@
 
       \item[34] 
 
-        The states are all different populations, so averaging the average for
+        The states have varying populations, so averaging the average for
         each state won't give an accurate global average. If you average the
         averages, you are counting Montana the same as California, for example,
         but there are more people in California than Montana.
@@ -66,7 +66,9 @@
           \item The values are generally decreasing over time.
         \end{enumerate}
 
-      \item[37] B, A, C.
+      \newpage
+
+      \item[37] B, A, C
 
         \begin{itemize*}
           \item The strongest evidence is the well designed studies.
@@ -91,13 +93,12 @@
         \begin{enumerate}[(a)]
           \item 
             \begin{align*}
-              \bar{x}          & = 9.524 \\
-              \sigma_{\bar{x}} & \approx 0.8944 \\
-              z                & \approx \frac{9.524 - 8}{0.8944} \\
-                               & \approx 1.7039 \\
-              \\
-              p-value          & = 0.9743 \\
+              \bar{x} & = 9.524 \\
+              \sigma  & \approx 0.8944 \\
+              z       & = \frac{9.524 - 8}{0.8944} \approx 1.7039 \\
             \end{align*}
+
+            The P-value is approximately 0.0892.
 
           \item The sample size was too small.
         \end{enumerate}
@@ -106,21 +107,25 @@
         \begin{enumerate}[(a)]
           \item It is unlikely that the difference can be explained by chance.
 
-          \item If we did the same study 100 times, 95 of them would probably
-            provide similar results.
+          \item With the procedure described, 95\% of the time the actual value
+            is in the indicated range.
 
           \item No. The mothers self-selected into each group, so the difference
             in the results may be because the mothers who signed up for the
-            program are different from the mothers who didn't sign up.
+            program are different from the mothers who didn't sign up. We don't
+            have an SRS\@.
         \end{enumerate}
         
+      \newpage
+
       \item[43]
         \begin{enumerate}[(a)]
           \item Any variation might easily have been the result of chance in the
             selection of the sample rather than actual differences.
 
-          \item Not really. If the results may have been the result of chance
-            then it doesn't really matter how big they were.
+          \item There isn't much evidence that there was an effect. But even if
+            there was, the sample size was large enough to determine that if it
+            is there, it is probably small.
         \end{enumerate}
 
       \item[45]
@@ -139,7 +144,7 @@
 
       \item[46]
         \begin{enumerate}[(a)]
-          \item 96\%
+          \item 0.04
 
           \item The test has a 90\% chance of detecting the difference if it is
             present.

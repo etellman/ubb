@@ -8,37 +8,45 @@ percentage <- function(score, points) {
 }
 
 possible <- 5 * length(c(34, 36:38, 40, 42:46, 48:53, 55, 57))
-percentage(-9, possible)
+percentage(-12, possible)
+
+# overall course grades
+
+# assigns a letter grade for a percentage
+#
+# percentage - course percentage
+letter.grade <- function(percentage) {
+  if (percentage >= 90) {
+    'A'
+  } else if (percentage >= 80) {
+    'B'
+  } else if (percentage >= 70) {
+    'C'
+  } else if (percentage >= 60) {
+    'D'
+  } else {
+    'F'
+  }
+}
 
 grades.file <- paste(grades.dir, 'grades.csv', sep = '/')
 grades <- read.delim(grades.file, header = TRUE, strip.white = T, sep = ',', comment = '#')
 
-df <- ddply(grades, .(id), summarize, 
-      id = id, 
-      hw = mean(c(hw01, hw02, hw03, hw04, hw05), na.rm = T),
-      exam01 = exam01,
-      overall = round(sum(0.2 * hw, 0.8 * exam01))
+grades.m <- melt(grades, id = "id")
+grades.summary <- ddply(grades.m, .(id), summarize, 
+      id = first(id),
+      exam01 = value[variable == 'exam01'],
+      exam02 = value[variable == 'exam02'],
+      homework = round(mean(value[grep('hw', variable)])),
+      overall = round(sum(0.2 * homework + 0.4 * exam01 + 0.4 * exam02)),
+      grade = letter.grade(overall)
 )
 
-mean(df$overall)
-mean(mean(c(100, 100, 97, 100)), 100)
+# grades ordered by overall score, descending
+grades.summary[order(-grades.summary$overall),]
 
-grades.m <- melt(grades, id = "id")
-median(grades.m$value, na.rm = T)
-round(mean(grades.m$value, na.rm = T))
-
-hw <- grades.m[grep("hw", grades.m$variable),]
-exam01 <- grades.m[grep("exam", grades.m$variable),]
-
-hw <- dcast(hw, id ~ variable)
-
-ddply(hw.m, .(id), fun = function(df) max(value))
-
-
-plot <- ggplot(grades.m, aes(x = value)) + 
+plot <- ggplot(grades.summary, aes(x = overall)) + 
   geom_histogram(binwidth = 10, origin = 40.1, color = "black", fill = "lightblue") +
   labs(x = "Grade", y = "Students")
 print(plot)
 
-77/80
-16*5

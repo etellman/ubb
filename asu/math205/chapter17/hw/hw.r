@@ -44,6 +44,7 @@ n <- 654
 s <- 7.42
 
 x <- rnorm(n, m, s)
+x
 confidence(m, 1.984, s, n)
 t.test(x)
 
@@ -74,10 +75,7 @@ confidence(m, t.star, s, n)
 ex30 <- read.delim("ex17-30.dat", header = TRUE, sep = '\t')
 t.test(ex30, mu = 1, alternative = "greater", conf = 0.99)
 
-?print
-
 xtable(t.summary(ex30$Cond), booktabs = T)
-?xtable
 
 print(xtable(t.summary(ex30$Cond), digits = 4), 
       booktabs = TRUE, include.rownames = FALSE)
@@ -91,7 +89,7 @@ t.value(m, mu, s, nrow(ex30))
 confidence(m, t.star, s, n)
 
 plot <- ggplot(ex30, aes(x = Cond)) + 
-  geom_histogram(binwidth = 0.04, color = "black", fill = "grey") +
+  geom_histogram(binwidth = 0.03, color = "black", fill = "lightblue") +
   theme_ubb + theme(axis.title.y = element_blank()) +
   labs(x = "Conductivity") 
 print(plot)
@@ -103,7 +101,7 @@ ex31 <- read.delim("ex17-31.dat", header = TRUE, sep = '\t')
 str(ex31)
 
 plot <- ggplot(ex31, aes(x = Count)) + 
-  geom_histogram(binwidth = 3, color = "black", fill = "grey") +
+  geom_histogram(binwidth = 3, color = "black", fill = "lightblue") +
   theme_ubb + theme(axis.title.y = element_blank()) +
   labs(x = "Blissymbols") 
 print(plot)
@@ -123,8 +121,6 @@ t.test(ex31, conf = 0.90)
 
 # ex 33
 ex33 <- read.delim("ex17-33.dat", header = TRUE, sep = '\t')
-str(ex33)
-
 ex33$diff <- ex33$Ctrl - ex33$Exp
 
 no.outliers <- subset(ex33, diff < 20, select = c(diff))
@@ -132,7 +128,7 @@ print(xtable(t.summary(no.outliers$diff), digits = 4),
       booktabs = TRUE, include.rownames = FALSE)
 
 plot <- ggplot(ex33, aes(x = diff)) + 
-  geom_histogram(binwidth = 5, color = "black", fill = "grey") +
+  geom_histogram(binwidth = 5, color = "black", fill = "lightblue") +
   theme_ubb + theme(axis.title.y = element_blank()) +
   labs(x = "control - experiment") 
 print(plot)
@@ -155,7 +151,7 @@ print(xtable(t.summary(ex35$Days), digits = 4),
       booktabs = TRUE, include.rownames = FALSE)
 
 plot <- ggplot(ex35, aes(x = Days)) + 
-  geom_histogram(binwidth = 0.2, color = "black", fill = "grey") +
+  geom_histogram(binwidth = 0.5, color = "black", fill = "lightblue") +
   theme_ubb + theme(axis.title.y = element_blank()) +
   labs(x = "Days") 
 print(plot)
@@ -178,7 +174,7 @@ print(xtable(t.summary(ex38$diff), digits = 4),
       booktabs = TRUE, include.rownames = FALSE)
 
 plot <- ggplot(ex38, aes(x = diff)) + 
-  geom_histogram(binwidth = 500, color = "black", fill = "grey") +
+  geom_histogram(binwidth = 500, color = "black", fill = "lightblue") +
   theme_ubb + theme(axis.title.y = element_blank()) +
   labs(x = "kill - processing") 
 print(plot)
@@ -200,7 +196,7 @@ print(xtable(t.summary(ex44$diff), digits = 4),
       booktabs = TRUE, include.rownames = FALSE)
 
 plot <- ggplot(ex44, aes(x = diff)) + 
-  geom_histogram(binwidth = 5, color = "black", fill = "grey") +
+  geom_histogram(binwidth = 5, color = "black", fill = "lightblue") +
   theme_ubb + theme(axis.title.y = element_blank()) +
   labs(x = "fund - benchmark") 
 print(plot)
@@ -218,7 +214,7 @@ print(xtable(t.summary(ex45$diff), digits = 4),
 mean(ex45$Right)/mean(ex45$Left)
 
 plot <- ggplot(ex45, aes(x = diff)) + 
-  geom_histogram(binwidth = 20, color = "black", fill = "grey") +
+  geom_histogram(binwidth = 20, color = "black", fill = "lightblue") +
   theme_ubb + theme(axis.title.y = element_blank()) +
   labs(x = "left - right") 
 print(plot)
@@ -227,7 +223,3 @@ save.plot(plot, figure.dir, 'ex45.pdf')
 
 t.test(ex45$diff, conf = 0.90, alternative = "two.sided")
 
-600 * 50
-
-5 * 30000 / 60 / 60
-21 * 30000 /60 /60 

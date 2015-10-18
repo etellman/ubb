@@ -1,10 +1,10 @@
 % no answer key
-\documentclass[letterpaper]{exam}
+% \documentclass[letterpaper]{exam}
 
 % answer key
-% \documentclass[letterpaper, landscape]{exam}
-% \usepackage{2in1, lscape} 
-% \printanswers{}
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
 
 % for the cent symbol
 \usepackage{textcomp}
@@ -42,82 +42,6 @@
   \section{Homework}
   Chapter 17: 25--28, 30--31, 33, 35, 38, 44--45, 47
 
-  \ifprintanswers{}
-  \else
-  \section{Calculations}
-
-  Here are the mean and standard deviation values for people who don't have
-  statistical calculators.
-
-  \begin{description}
-    \item[30].
-
-      \begin{tabular}{rrr}
-        \toprule
-        s      & $\bar{x}$ & n \\
-        0.0438 & 1.1182    & 11 \\
-        \bottomrule
-      \end{tabular}
-
-    \item[31].
-
-      \begin{tabular}{rrr}
-        \toprule
-        s      & $\bar{x}$ & n \\
-        4.6482 & 12.8333   & 12 \\
-        \bottomrule
-      \end{tabular}
-      
-    \item[33].
-
-      \begin{tabular}{lrrr}
-        \toprule
-                         & s       & $\bar{x}$ & n \\
-        \midrule
-        with outlier     & 10.7065 & 6.4167    & 12 \\
-        without outlier  & 7.7565  & 4.1818    & 11 \\
-        \bottomrule
-      \end{tabular}
-
-    \item[35].
-
-      \begin{tabular}{rrr}
-        \toprule
-        s      & $\bar{x}$ & n \\
-        0.4606 & 1.1727    & 11 \\
-        \bottomrule
-      \end{tabular}
-      
-    \item[38] difference:
-
-      \begin{tabular}{rrr}
-        \toprule
-        s   & $\bar{x}$ & n \\
-        834 & 1824.5    & 4 \\
-        \bottomrule
-      \end{tabular}
-      
-    \item[44] difference:
-
-      \begin{tabular}{rrr}
-        \toprule
-        s      & $\bar{x}$ & n \\
-        7.9979 & -0.0754   & 24 \\
-        \bottomrule
-      \end{tabular}
-
-    \item[45] difference:
-
-      \begin{tabular}{rrr}
-        \toprule
-        s      & $\bar{x}$ & n \\
-        22.9360 & 13.3200 & 25 \\ 
-        \bottomrule
-      \end{tabular}
-
-
-  \end{description}
-  \fi
   \ifprintanswers{}
     \section{Solutions}
     \begin{description}
@@ -245,9 +169,12 @@
             outlier, there (barely) isn't a significant difference.
 
             \begin{tabular}[H]{lrr}
+              \toprule
                               & t-value & P-value \\
+              \midrule
               with outlier    & 2.0761  & 0.031 \\
               without outlier & 1.7881  & 0.052 \\
+              \bottomrule
             \end{tabular}
 
         \end{enumerate}

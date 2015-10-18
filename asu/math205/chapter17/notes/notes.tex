@@ -29,191 +29,297 @@
 \begin{document}
 
   \maketitle
+  \setcounter{tocdepth}{2}
   \tableofcontents
 
-  \section{Inference Cautions}
-  You can't use inference when your sample is not an SRS or the outcome of a
-  randomized controlled experiment.
-
-  If your population doesn't have a Normal distribution, it's usually fine as
-  long as you take a large enough sample. Because of the Central Limit Theorem,
-  the values of $\bar{x}$ do have a Normal distribution if your sample is
-  reasonably large.
-
-  \section{T-test}
-  Gosset was an employee of the Guinness Brewery published under name
-  ``Student'' so competitors might underestimate the value of the work.
-
-  If you don't have the standard deviation of the population, you can use the
-  standard deviation of the sample. You get a t-test instead of a z-test.
-
-  The probability density graph for a t-test is slightly different from a Normal
-  graph, with the differences diminishing as the sample size increases.
-
-  \section{Confidence Intervals}
-  A {\em Confidence Interval\/} is in the form $x \pm y$.
-
-  Associated with a confidence interval is:
-  \begin{description}
-    \item[Confidence Level] is how confident you are that the interval
-      captures the actual value you are looking for. Common values are 68\%,
-      95\% and 99.7\%.
-
-    \item[Margin of Error] the width of the interval
-  \end{description}
-
-  With a larger margin of error, you can be more confident that the interval
-  includes the actual value of the parameter.
-
-  \section{Significance}
-  ``Statistically significant'' means that you had a low P-value. You can be
-  confident that the result didn't happen by chance.
-
-  Statistically significant is not the same as practically significant. You may be
-  very confident in a difference of 1\% (statistically significant) but not care
-  because 1\% is such a small percentage (practical significant).
-
-  If the actual effect is small, you need a large sample size to get a
-  statistically significant result. This is because a large sample size results
-  in a small standard deviation, which allows you to pin down the effect you are
-  looking for.
-
-  \section{Calculating Required Sample Size}
-
-  Calculate how many samples you need for a desired margin of error, $m$:
-
-  \begin{align*}
-    m        & = \frac{z^* \sigma}{\sqrt{n}} \\
-    \sqrt{n} & = \frac{z^* \sigma}{m} \\
-    n        & = \del{ \frac{z^* \sigma}{m} }^2 \\
-  \end{align*}
-
-  For example, suppose 
-  \begin{align*}
-    m      & = 4 \\
-    \sigma & = 20 \\
-  \end{align*}
+  \section{Exam} % (fold)
   
-  And you want to have 95\% confidence.  95\% is two standard deviations, so
-  $z^* = 2$. 
+  \begin{itemize}
+    \item Next time I'll spend more time on probability. 
 
-  \begin{align*}
-    n & = \del{ \frac{z^* \sigma}{m} }^2 \\
-      & = \del{ \frac{2 \cdot 20}{4} }^2 \\
-      & = 100 \\
-  \end{align*}
+    \item Everyone's doing fine and getting C or better, with A still the most
+      common grade. I can't give everyone an A or Adams State will reject the
+      course as not being a real course with acceptable standards.
 
-  \section{Power}
-  The power of a test is the chance that it will correctly reject the null
-  hypothesis when the null hypothesis is false.
+    \item Skip ahead if you don't know how to do something.
 
-  exercise 48:
+    \item Take a guess if you don't know the answer.
 
-  \begin{enumerate}[(a)]
-    \item 
-      \begin{align*}
-        z       & = 1.6449 \\
-        \bar{x} & = \frac{1.6449}{3.162} \\
-                & = 0.5202 \\
-      \end{align*}
+    \item Use common sense
+      \begin{itemize*}
 
-      Any $\bar{x}$ greater than 0.52 will reject the hypothesis.
+        \item more girls than boys is just asking how many 1 or 0 boy families
+          there are. Don't panic.
 
-    \item The probability of observing these values when the mean is 0.8 is:
-      \begin{align*}
-        z        & = \frac{0.5202 - 0.8}{1/\sqrt{10}} \\
-                 & \approx -0.8848 \\
-        pnorm(z) & \approx 0.8819 \\
-      \end{align*}
+        \item With 5 defective parts per day and 3 from factory A and 2 from
+          factory B, $P(\text{Plant A } | \text{ defective}) = 0.6$. 
+          
+          Work backwards to figure out how to get 0.6 from other numbers using
+          conditional probability formula.
 
-      The probability of a value at least this large when the mean is 0.8 is
-      approximately 0.8819.
+        \item 57 heads isn't that unlikely in 100 coin flips. Double check your
+          work if you get a z-value of 140 for something that seems possible.
 
-      This is the same answer my computer gave, but slightly different from the
-      book answer. 
+      \end{itemize*}
 
-  \end{enumerate}
+    \item Dice/card problems are common and there aren't that many of them. Practice
+      so you know how to solve any kind of dice/card problem you see.
 
-  % The general formula for power is something like:
-  % \begin{align*}
-  %   z_{effect} & = \frac{effect}{\sigma/\sqrt{n}} \\
-  %   z_{\alpha} & = qnorm(0.05) \\
-  %   \\
-  %   P(\text{reject } H_0 | H_0 \text{ false}) 
-  %       & = pnorm(z_{\alpha} + z_{effect}) \\
-  % \end{align*}
+    \item Probability can be reduced to counting. Have a systematic way of
+      enumerating all possibilities (count in binary, or draw a tree).
 
-  You can get high power (high confidence in the outcome) by:
+    \item clarify Type-I and Type-II errors. Power isn't just the probability of
+      getting something right.
+
+    \item Don't round for significance. If the P-value is 0.6, it's not
+      significant, even though 0.6 is pretty close to 0.5. 
+      
+      You can get the effect of rounding by setting the significance level to
+      0.075.
+
+    \item Goal of class is not that you can exactly duplicate problems you've
+      seen before on homework. Goal is that you understand the ideas and can
+      apply them to other related things you haven't seen before on the
+      homework.
+
+  \end{itemize}
+
+  \section{Lucia De Berk}
+
+  \subsection{Summary} % (fold)
+  
+  After nurse was present at death of baby, someone noticed that she was often
+  present at deaths. The director of the hospital looked through the files for
+  other similar unexplained deaths. 
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{lrrr}
+      \toprule
+      shifts        & without incident & with incident & total \\
+      \midrule
+      without Lucia & 887              & 0             & 887 \\
+      with Lucia    & 134              & 8             & 142 \\
+      Total         & 1,021            & 8             & 1,029 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Lucia de Berk}\label{tab:ldb1}
+  \end{table}
+
+  Amateur statistician testified at trial that the P-value for this hospital was
+  0.00000029854. He did this for the other two hospitals where Lucia worked and
+  got P-values of 0.0715 and 0.0136, both within the unusual but still plausible
+  range.
+
+  Multiplying all three P-values together gives: 1 in 342 million and Lucia was
+  convicted.
+
+  She spent 13 years in prison, and finally was released based on:
   \begin{itemize*}
-    \item larger sample size
-    \item null hypothesis very wrong so there is a large difference between the
-      sample and the actual parameter (higher $z_{effect}$)
-    \item lower desired significance level (higher $z_{\alpha}$)
+    \item ``chain link'' argument---first two were considered proved by medical
+      evidence, so barrier of proof for remaining 5 was lowered.
+
+    \item there were other similar cases ``with incident'' which the prosecution
+      didn't mention. Part of the definition of ``with incident'' was ``Lucia
+      present.''
+
+    \item some of the cases used in the trial had actually occurred when Lucia
+      had been out sick.
+
+    \item the prosecution didn't compute new P-values taking this stuff into
+      consideration
+
+    \item no evidence of any poison, etc.\ was ever found. The theory of Lucia
+      administering an OD was disproved with medical evidence. 
   \end{itemize*}
+  
+  \subsection{Nature Article} % (fold)
+  
+  The court needs to weigh up two different explanations: murder or
+  coincidence. The argument that the deaths were unlikely to have occurred by
+  chance (whether 1 in 48 or 1 in 342 million) is not that meaningful on its
+  own---for instance, the probability that ten murders would occur in the same
+  hospital might be even more unlikely. What matters is the relative
+  likelihood of the two explanations. However, the court was given an estimate
+  for only the first scenario.
 
-  \section{Type I and II Errors}
-  \begin{description*}
-    \item[Type I] reject $H_0$ when it is actually true.
-    \item[Type II] accept $H_0$ when it is actually false.
-  \end{description*}
+  (Prosecutor's fallacy)
 
-  \begin{tabular}[H]{lll}
-     hypothesis & reject          & accept \\
-     true       & Type I Error    & correct outcome \\
-     false      & correct outcome & Type II error \\
-  \end{tabular}
+  \subsection{Guardian Article} % (fold)
 
-  \section{Check Your Skills}
+  The case against Lucia was built on a suspicious pattern: there were nine
+  incidents on a ward where she worked and Lucia was present during all of them.
+  This could be suspicious but it could be a random cluster, best illustrated by
+  the ``Texas sharpshooter'' phenomenon: imagine I am firing a thousand machine gun
+  bullets into the side of a barn. I remove my blindfold, find three bullets
+  very close together and paint a target around them. Then I announce that I am
+  an Olympic standard rifleman.
+
+  This is plainly foolish. All across the world, nurses are working on wards
+  where patients die, and it is inevitable that on one ward, in one hospital, in
+  one town, in one country, somewhere in the world, you will find one nurse who
+  seems to be on a lot when patients die. It's very unlikely that one particular
+  prespecified person will win the lottery but inevitable someone will win: we
+  don't suspect the winner of rigging the balls.
+
+  \dots
+
+  If you multiply p-values together, then chance incidents will rapidly appear
+  to be vanishingly unlikely. Let's say you worked in 20 hospitals, each with a
+  pattern of incidents that is purely random noise: let's say $p = 0.5$. If you
+  multiply those harmless p-values, of entirely chance findings, you end up with
+  a final p-value of $p < 0.000001$, falsely implying that the outcome is
+  extremely highly statistically significant. By this reasoning, if you change
+  hospitals a lot, you automatically become a suspect.
+
+  \dots
+
+  And did the idea that there was a killer on the loose make any sense,
+  statistically, for the hospital as a whole? There were six deaths over three
+  years on one ward where Lucia supposedly did her murdering. In the three
+  preceding years, before she arrived, there were seven deaths. So the death
+  rate on this ward went down at the precise moment that a serial killer moved
+  in.
+
+
+  \subsection{Gill Paper} % (fold)
+  
+  \subsubsection{Notes} % (fold)
+  
+  Prosecutor restricted model to ward where something unusual happened and tried
+  to compensate by multiplying the p-value by the number of nurses in the ward
+  (27, in this case). He was trying to figure out what was the probability that
+  something this unusual would happen in this ward. He could just as well have
+  multiplied by the number of nurses in the country to figure out the
+  probability that something this unusual would happen in the country.
+
+  \subsubsection{From Paper} % (fold)
+
+  An analogy might clarify this point. Consider a lottery with tickets
+  numbered 1 to 1,000,000. The jackpot falls on the ticket with number
+  223,478, and the ticket has been bought by John Smith. John Smith lives in
+  the Da Costastraat in the city of Leiden. Given these facts, we may compute
+  the chance that John Smith wins the jackpot; a simple and uncontroversial
+  model shows that this probability will be extremely small. Do we conclude
+  from this that the lottery was not fair since an event with very small
+  probability has happened? Of course not. We can also compute the probability
+  that someone in the Da Costastraat wins the jackpot, but it should be clear
+  that the choice of the Da Costastraat as reference point is completely
+  arbitrary. We might similarly compute the probability that someone in Leiden
+  wins the jackpot or someone living in Zuid-Holland (the state in which
+  Leiden is situated). With these data-dependent hypotheses, there simply is
+  no uniquely defined scale of the model at which the problem must be studied.
+
+  The analogy with the case of Lucia will be clear: the winner of the jackpot
+  represents the suspect being present at eight out of eight incidents, the
+  street represents the ward. Elffers restricts his model to the ward in which
+  something unusual has happened. With perhaps equal justification, another
+  statistician might have considered the entire JKZ (Leiden, in the analogy)
+  instead of the ward as a basis for her computations--—with vastly higher
+  probability for the relevant event to happen somewhere. Still another
+  statistician might have taken the Netherlands as the basis for the
+  computation, which yields again a higher probability. The important point to
+  note is that subjective choices are unavoidable here, and it is rather
+  doubtful whether a court’s judgement should be based on such choices. If one
+  wants to avoid this kind of subjective choice, one should adopt an approach
+  where the data are not used twice. In Section 3.3, we discuss such an
+  approach.
+  
+  \section{P-value Reasoning} % (fold)
+
+  \subsection{Statistics} % (fold)
+  
+  It's hard to demonstrate something is true using statistics. Anything is
+  possible, so any $\bar{x}$ is consistent with any hypothesized $\mu$.
+  
+  Although anything is possible, some things are incredibly unlikely, and you
+  can quantify this. Instead of trying to prove that $H_a$ is true you
+  demonstrate that $H_0$ is extremely unlikely, though consistent with the
+  observed result.
+
+  \subsection{Science} % (fold)
+  
+  The scientific method is about trying to prove something is false, and if
+  unsuccessful, assuming it's probably true.
+
+  Newton: $p = mv$
+
+  Einstein: $p = \frac{mv}{\sqrt{1 - \sfrac{v^2}{c^2}}}$
+  
+  In science, you try to prove the thing you think is true is actually false. If
+  you don't succeed, it's probably true. 
+
+  In statistics, you try to show the opposite of the thing you think is true is
+  probably false. If you succeed, you've demonstrated the thing you think is true
+  is probably actually true.
+
+  \section{T-test} % (fold)
+
+  \begin{itemize}
+    \item Same as z-test but use sample standard deviation and T-distribution
+      instead of $\sigma$ and Normal distribution.
+
+    \item Degrees of freedom is number of samples minus 1. More degrees of
+      freedom approaches Normal distribution.
+
+    \item Otherwise, exactly the same as z-procedures for confidence intervals
+      and significance testing.
+
+  \end{itemize}
+
+  \section{Matched Pairs T Procedures} % (fold)
+
+  \begin{table}[ht]
+  \centering
+    \begin{tabular}{rrr}
+      \toprule
+      Judge 1 & Judge 2 & Difference \\
+      \midrule
+      9.8     & 7.5     & 2.3 \\
+      9.5     & 7.4     & 2.1 \\
+      9.1     & 7.4     & 1.7 \\
+      8.9     & 7.0     & 1.9 \\
+      8.9     & 7.0     & 1.9 \\
+      8.5     & 7.0     & 1.5 \\
+      8.3     & 6.9     & 1.4 \\
+      8.2     & 6.8     & 1.4 \\
+      8.0     & 6.7     & 1.3 \\
+      8.0     & 6.5     & 1.5 \\
+      8.0     & 6.4     & 1.6 \\
+      8.0     & 6.3     & 1.7 \\
+      7.9     & 6.0     & 1.9 \\
+      7.7     & 5.8     & 1.9 \\
+      7.6     & 5.6     & 2.0 \\
+      7.5     & 5.6     & 1.9 \\
+      6.9     & 5.5     & 1.4 \\
+      6.8     & 5.4     & 1.4 \\
+      6.8     & 5.3     & 1.5 \\
+      6.7     & 4.7     & 2.0 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  
+  t.test (95\% confidence interval):
   \begin{description}
-    \item[15.1] c---not a random sample
-
-    \item[15.2] c---not a random sample
-      \begin{enumerate}[(a)]
-        \item 
-          For a 95\% confidence interval, we need to within two standard
-          deviations of the mean.
-
-          \begin{align*}
-            \sigma_{\bar{x}} & = \frac{1.83}{\sqrt{880}} \\
-                             & \approx 0.06169 \\
-            \\
-            z^* &\approx 2 \\
-            \\
-            \mu & = 1.92 \pm 2 \cdot 0.06169 \\
-                & \approx 1.92 \pm 0.1209 \\
-                & \approx (1.80, 2.04) \\
-          \end{align*}
-
-        \item The distribution of the sample means is still normal since we have
-          a large sample (Central Limit Theorem).
-
-        \item 
-          \begin{itemize*}
-            \item it only includes people with phones
-            \item it only includes people who answer their phone
-          \end{itemize*}
-      \end{enumerate}
-
-    \item[15.3] Different times of day get different types of people.
-
-    \item[15.4] 
-      \begin{enumerate}[(a)]
-        \item
-
-          \begin{table}[ht]
-          \centering
-          \begin{tabular}{rrrrrrr}
-            \toprule
-              & p    & z    & s.z  & margin.of.error & min   & max \\
-            \midrule
-            1 & 0.90 & 1.64 & 0.29 & 0.48            & 26.32 & 27.28 \\
-            2 & 0.95 & 1.96 & 0.29 & 0.57            & 26.23 & 27.37 \\
-            3 & 0.99 & 2.58 & 0.29 & 0.76            & 26.04 & 27.56 \\
-            \bottomrule
-          \end{tabular}
-          \end{table}
-      \end{enumerate}
-
+    \item[judge 1] 7.64 to 8.47, $\bar{x} = 8.06$
+    \item[judge 2] 5.96 to 6.72, $\bar{x} = 6.34$
   \end{description}
+
+  \subsection{Difference of Original T-tests (hypothetical)} % (fold)
+  
+  Difference of means:
+  \[
+    \bar{x}_{diff} = 8.06 - 6.34 = 1.72
+  \]
+  Aggregated 95\% confidence interval for difference by subtracting min1/max2
+  and max1/min2 (not actually correct procedure): 0.92 to 2.51
+  
+  \subsection{T-test of Differences} % (fold)
+
+  95\% confidence interval: 1.20 to 2.23.
+
+  We can adjust one judge's scores by adding 1.72 and be 95\% confident that the
+  new score is within $\pm 0.5$ of the correct score for the other judge.
+
 \end{document}
 

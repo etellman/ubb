@@ -1,48 +1,36 @@
-library(asbio) 
+root.dir <- '~/Documents/U/ubb/asu/math205'
+notes.dir <- paste(root.dir, 'chapter17/notes', sep = '/')
 
-notes.dir <- paste(root.dir, "week16/notes", sep = "/")
-setwd(notes.dir)
+set.seed(15)
+easy <- round(rnorm(20, mean = 8, sd = 1), 1)
+hard <- round(rnorm(20, mean = 6, sd = 1), 1)
 
-s <- 1.83 / sqrt(880)
-z <- qnorm(1 - 0.025)
+t.test(easy, mu = 8)
+t.test(hard, mu = 6)
 
-1.92 - s * 2
+mean(easy) - mean(hard)
 
--qnorm((1 - .99)/2)
+easy.t
 
-7.5/sqrt(654)
+easy.t['conf.int']
+hard.t['conf.int']
 
-confidence <- function(p, sample.mean, s, n) {
-  z <- -qnorm((1 - p)/2)
-  s.z <- s / sqrt(n)
-  margin.of.error <- s.z * z
+t.test(easy - hard, mu = 2)
 
-  result <- data.frame(p = p, z = z, s.z = s.z, 
-                       margin.of.error = margin.of.error,
-                       min = sample.mean - margin.of.error, 
-                       max = sample.mean + margin.of.error)
+easy - hard
 
-  round(result, 4)
-}
+easy <- easy[order(-easy)]
+hard <- hard[order(-hard)]
 
-sink('r.tex')
-  xtable(t(sapply(c(0.9, 0.95, 0.99), function(p) confidence(p, 26.8, 7.5, 654))))
-sink()
+t.test(easy, hard, paired = T, mu = 2)
 
-.05/pnorm(.2/sqrt(10))
+df <- data.frame(judge1 = easy, judge2 = hard, delta = easy - hard)
 
-?power.z.test
-power.z.test(n = 10, sigma = 1, alpha = 0.05, effect = 0.8, test = "one.tail")
+tex.table(df, digits = 1)
 
-s = 1/sqrt(10)
+df
+df.m <- melt(df, measure.vars = c("judge1", "judge2"))
 
-qnorm(0.95)
+tex.table(ddply(df.m, .(variable), summarize, x.bar = mean(value)))
 
-zalpha <- qnorm(.05)
-zalpha
-.8/s
-
-pnorm(zalpha + 0.8/s)
-
-x <- qnorm(0.95) / 3.162
-1 - pnorm((x - 0.8) * sqrt(10))
+(1.2 - 2.23)/2
