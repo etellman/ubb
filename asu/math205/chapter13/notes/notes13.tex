@@ -1,0 +1,445 @@
+% % no answer key
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
+
+\usepackage{units} 
+\usepackage{parskip} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+\usepackage{commath}
+
+\everymath{\displaystyle}
+
+\title{Statistics \\ Week Thirteen}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+  \tableofcontents
+
+  \section{Binomial Coefficient}
+
+  \section{Notes}
+
+  \[
+    \binom{n}{k} = \frac{n!}{k! (n - k)!}
+  \]
+
+  \begin{itemize}
+
+    \item Number of ways to choose $k$ things out of $n$ objects, when order
+      doesn't matter:
+
+    \item Number of ways to arrange $k$ objects of two types (red and green
+      marbles) in a row.
+
+  \end{itemize}
+
+  \begin{itemize}
+    \item $n (n - 1)(n - 2) \dots (n - k + 1)$ ways to select $k$ out of
+      $n$ items, paying attention to order
+
+    \item $k\!$ ways to rearrange $k$ items if the order doesn't matter
+
+    \item draw a tree for ways to rearrange A, B, C, D
+
+    \item explain factorial
+  \end{itemize}
+
+  \section{Examples}
+  \begin{enumerate}
+    \item With an 8 person club, are there more possible 2 person committees or
+      5 person committees?
+
+      \begin{solution}
+        \begin{align*}
+          \binom{8}{2} & = \frac{8!}{6!}{2!} \\
+                      & = \frac{8 \cdot 7}{2} \\
+                      & = 28 \\
+                      \\
+          \binom{8}{5} & = \frac{8!}{5!}{3!} \\
+                      & = \frac{8 \cdot 7 \cdot 6}{3 \cdot 2} \\
+                      & = 56 \\
+        \end{align*}
+      \end{solution}
+
+    \item With an 8 person club, are there more possible 2 person committees or
+      6 person committees?
+
+      \begin{solution}
+        \begin{align*}
+          \binom{8}{2} & = \frac{8!}{6!}{2!} \\
+                      & = \frac{8 \cdot 7}{2} \\
+                      & = 28 \\
+                      \\
+          \binom{8}{6} & = \frac{8!}{6!}{2!} \\
+                      & = \frac{8 \cdot 7}{2} \\
+                      & = 28 \\
+        \end{align*}
+      \end{solution}
+
+  \end{enumerate}
+
+  \section{Binomial Distribution}
+
+  A box contains one red marble and nine green marbles. What is the chance of
+  getting exactly 2 red marbles, drawing with replacement?
+
+  \begin{itemize}
+    \item RRGGG\@: $0.1^2 0.9^3$
+    \item RGRGG\@: $0.1 \cdot 0.9 \cdot 0.1 \cdot 0.9^2 = 0.1^2 0.9^3$
+    \item etc.
+  \end{itemize}
+
+  How many ways are there to chose the positions of the 2 red marbles out of 5:
+  \[
+    \binom{5}{2} = 10
+  \]
+
+  There are 10 patters with the required number of colors. Since each pattern is
+  independently likely, the probability of getting exactly two red marbles is:
+  \[
+    P(\text{2 red}) = 10 \cdot 0.1^2 \cdot 0.9^3 \approx \boxed{ 0.0729 }
+  \]
+
+  In general, if the probability of an event is $p$, the chance of it occurring
+  exactly $k$ times out of $n$ is:
+  \[
+    \binom{n}{k} p^k \del{ 1 - p }^{n - k}
+  \]
+
+  \subsection{Examples}
+  
+  \subsubsection{Apply Your Knowledge}
+  \begin{description}
+    \item[13.1] yes
+    \item[13.2] no---no fixed $n$
+    \item[13.3] no---not independent
+    \item[13.4] yes
+
+    \item[13.5]
+      \begin{enumerate}[(a)]
+        \item 
+          \begin{itemize*}
+            \item caught: binomial $n = 10$, $p = 0.7$; 
+            \item missed: binomial $n = 10$, $p = 0.3$
+          \end{itemize*}
+
+        \item 
+          \begin{align*}
+            P(X = 3) & = \binom{10}{3} .7^7 .3^3 \\
+                     & \approx \boxed{ 0.2668 } \\
+          \end{align*}
+
+      \end{enumerate}
+      
+    \item[13.6] 
+      \begin{enumerate}[(a)]
+        \item 
+          \begin{align*}
+            P(X = 3) & = \binom{15}{3} .2^3 \cdot .8^{12} \\
+                     & \approx \boxed{ 0.2501 } \\
+          \end{align*}
+          
+        \item 
+          \begin{align*}
+            P(X = 2) & = \binom{15}{2} .2^2 \cdot .8^{13} \\
+                     & \approx 0.2309 \\
+            P(X = 1) & = \binom{15}{1} .2 \cdot .8^{14} \\
+                     & \approx 0.1319 \\
+            P(X = 0) & = .8^{15} \\
+                     & \approx 0.0352 \\
+                     \\
+            P(X \leq 3) &= \boxed{ 0.6482 } \\
+          \end{align*}
+
+        \item
+          \begin{align*}
+            P(X \geq 3) & = 1 - P(X < 3) \\
+                        & = \boxed{ 0.6020 } \\
+          \end{align*}
+
+        \item
+          \begin{align*}
+            P(X < 3) & = P(X = 0) + P(X = 1) + P(X = 2) \\
+                     & \approx \boxed{ 0.3980 } \\
+          \end{align*}
+
+        \item
+          \begin{align*}
+            P(X > 3) & = 1 - P(X \leq 3) \\
+                     & \approx \boxed{ 0.3518 } \\
+          \end{align*}
+      \end{enumerate}
+      
+    \item[13.7]
+      \begin{enumerate}[(a)]
+        \item $\mu = 0.2 \cdot 15 = \boxed{ 7.5 }$
+        \item 
+          \begin{align*}
+            \sigma_1 & = \sqrt{\mu \cdot 0.8} \approx \boxed{ 2.449 }
+            \sigma_2 & = \sqrt{15 \cdot 0.08 \cdot 0.92} \approx \boxed{ 1.0507 }
+            \sigma_3 & = \sqrt{15 \cdot 0.01 \cdot 0.99} \approx \boxed{ 0.3854 }
+          \end{align*}
+      \end{enumerate}
+
+    \item[13.8]
+      \begin{itemize*}
+        \item same as exercise 5
+        \item 7 caught, 3 missed
+        \item
+          \begin{align*}
+            \sigma & = \sqrt{15 \cdot 0.7 \cdot 0.3} \\
+                   & \approx \boxed{ 1.775 } \\
+          \end{align*}
+      \end{itemize*}
+  \end{description}
+
+  \subsubsection{Other}
+  \begin{enumerate}
+    \item What is the chance of getting exactly 2 1's with 10 rolls of the dice?
+
+      \begin{solution}
+        \begin{align*}
+        P(\text{2 ones}) & = \binom{10}{2} \del{ \frac{1}{6} }^2 
+            \left( \frac{5}{6}^8 \right) \\
+                         & \approx \boxed{ 0.29 } \\
+        \end{align*}
+
+      \end{solution}
+
+    \item What is the chance of not rolling a 6 in 10 rolls of a die?
+
+      \begin{solution}
+        \begin{align*}
+          P( \text{no 6} ) & = \del{ \frac{5}{6} }^{10} \\
+                           & \approx 0.16 \\
+          \\
+          P( \text{no 6} ) & = \binom{10}{0} \del{ \frac{1}{6} }^0 \del{ \frac{5}{6} }^{10} \\
+                           & = \frac{10!}{10! 0!} \del{ \frac{5}{6} }^{10} \\
+                           & \approx 0.16 \\
+        \end{align*}
+      \end{solution}
+
+    \item What is the probability of getting exactly 3 heads in 5 coin flips?
+      \begin{solution}
+        \begin{align*}
+          P( 3H ) & = \binom{5}{3} \del{ \frac{1}{2} }^3 \del{ \frac{1}{2} }^3 \\
+                           & = \frac{5!}{2! 3!} \del{ \frac{1}{2} }^6 \\
+                           & = \frac{5 \cdot 4}{2} \del{ \frac{1}{2} }^6 \\
+                           & = 10 \del{ \frac{1}{2} }^6 \\
+                           & \approx \boxed{ 0.31 } \\
+        \end{align*}
+      \end{solution}
+
+    \item What is the probability of getting more than 3 heads in 5 coin flips?
+      \begin{solution}
+        \begin{align*}
+          P( 4H )                & = \binom{5}{4} \del{ \frac{1}{2} }^5
+                                 & \approx \boxed{ 0.16 } \\
+          P( 5H )                & = \del{ \frac{1}{2} }^5
+                                 & \approx \boxed{ 0.03 } \\
+          P( \text{ 4H or 5H } ) & \approx 0.16 + 0.03 \\
+                                 & = 0.19 \\
+        \end{align*}
+      \end{solution}
+
+    \item What is the probability of getting 3 or more heads in 5 coin flips?
+      \begin{solution}
+        \begin{align*}
+          P( \text{3 or more H} ) & \approx 0.31 + 0.19 \\
+                                   & = 0.5 \\
+        \end{align*}
+      \end{solution}
+
+    \item What is the probability of getting less than 3 heads in 5 coin flips?
+      \begin{solution}
+        \begin{align*}
+          P( \text{less than 3H} ) & \approx 1 - 0.31 - 0.19 \\
+                                   & = 0.5 \\
+        \end{align*}
+      \end{solution}
+
+    \item There was a study of twins, one of which smoked and one of which
+      didn't, in order to determine if smoking caused early death. The theory
+      was that there was a lurking variable that caused people to want to smoke
+      and caused early death, so that death was correlated with smoking but not
+      caused by smoking.
+
+      \begin{tabular}[H]{lrr}
+        \toprule
+                      & smokers & non-smokers \\
+        \midrule
+        all causes    & 17      & 5 \\
+        heart disease & 9       & 0 \\
+        lung cancer   & 2       & 0 \\
+        \bottomrule
+      \end{tabular}
+
+      Assume that each twin is equally likely to die, since they have the same
+      genetic makeup.
+
+      \begin{enumerate}[(a)]
+        \item What is the chance that 17 out of the 22 deaths would be smokers?
+          \begin{solution}
+            \begin{align*}
+              P(\text{17 smokers}) & = \binom{22}{17} 0.5^{22} \\
+                                   & \approx \boxed{ 0.0063 } \\
+            \end{align*}
+          \end{solution}
+
+        \item What is the chance that 9 out of the 9 heart disease deaths would
+          be smokers?
+          \begin{solution}
+            \begin{align*}
+              P(\text{9 HD}) & = 0.5^{9} \\
+                                   & \approx \boxed{ 0.0020 } \\
+            \end{align*}
+          \end{solution}
+
+        \item What is the chance that 2 out of the 2 lung cancer deaths would
+          be smokers?
+          \begin{solution}
+            \begin{align*}
+              P(\text{2 LC}) & = 0.5^{2} \\
+                                   & = \boxed{ 0.25 } \\
+            \end{align*}
+          \end{solution}
+
+      \end{enumerate}
+  \end{enumerate}
+
+  \section{Normal Approximation}
+
+  What is the chance of between 97 and 103 red marbles in 1000 draws from a box
+  with 90\% green and 10\% red?
+
+  \begin{align*}
+    P(X = 100)  & = \binom{100}{10} \cdot 0.1^{100} \cdot 0.9^{900} \\
+              & \approx 0.0420 \\
+    P(X = 101) & = \binom{100}{10} \cdot 0.1^{101} \cdot 0.9^{899} \\
+              & \approx 0.0416 \\
+  \end{align*}
+
+  \begin{tabular}[H]{rr}
+    \toprule
+    $n$ & $P(X = n)$ \\
+    \midrule
+    97    & 0.0405 \\
+    98    & 0.0415 \\
+    99    & 0.0420 \\
+    100   & 0.0420 \\
+    101   & 0.0416 \\
+    102   & 0.0407 \\
+    103   & 0.0395 \\
+    \midrule
+    total & 0.2877 \\
+    \bottomrule
+  \end{tabular}
+
+  With $n$ draws, the distribution is approximately Normal with:
+  \begin{align*}
+    \mu    & = np \\
+    \sigma & = \sqrt{np(1 -p)}
+  \end{align*}
+
+  For this case, $n = 1000$, $p = 0.1$
+  \begin{align*}
+    \mu    & = 100 \\
+    \sigma & = \sqrt{100 \cdot 0.9} \\
+           & \approx 9.487 \\
+  \end{align*}
+
+  convert to z-scores:
+  \begin{align*}
+    z_{97}  & = \frac{96 - 100}{9.487} = -0.3162 \\
+    z_{103} & = \frac{103 - 100}{9.487} = 0.3162 \\
+    \\
+    P(X < 97)             & \approx 0.3561 \\
+    P(X < 103)            & \approx 0.6241 \\
+    P(97 \leq X \leq 103) & \approx 0.2482 \\
+  \end{align*}
+
+  You get a closer approximation by using 96.5 and 103.5 because the Normal
+  distribution is continuous and the actual choices are discrete:
+  \[
+    P(96.5 \leq X \leq 103.5) \approx 0.2878 \\
+  \]
+
+  The Normal approximation only works when $np \geq 10$ and $n(1 - p) \geq 10$
+
+  \section{Apply Your Knowledge}
+  \begin{description}
+    \item[13.10]
+      Something fishy seems to be going on.
+
+      \begin{align*}
+        \mu          & = 90 \cdot 0.477 = 42.93 \\
+        \sigma       & = \sqrt{42.93 \cdot (1 - 0.4770)} \approx 4.738 \\
+        \\
+        z_{29}       & \approx \frac{29 - 42.93}{4.738} \approx -2.94 \\
+        \\
+        P(X \leq 29) & \approx 0.0023 \\
+    \end{align*}
+
+    \item[13.11]
+      \begin{enumerate}[(a)]
+        \item 
+          \begin{align*}
+            \mu    & = 0.27 \cdot 1535 \approx 414.45 \\
+            \sigma & \approx 17.39 \\
+          \end{align*}
+
+        \item
+          \begin{align*}
+            z             & = \frac{416 - 414.45}{17.39} \approx 0.0891 \\
+            P(X \geq 416) & = 1 - P(X < 416) \\
+                          & \approx 0.4645 \\
+          \end{align*}
+
+        \item The actual number is about 0.4742
+
+      \end{enumerate}
+
+    \item[13.12]
+      \begin{enumerate}[(a)]
+        \item 
+          \begin{align*}
+            \mu    & = 0.12 \cdot 1500 = 180 \\
+            \sigma & \approx 12.59 \\
+          \end{align*}
+
+        \item
+          180 is bigger than 10 so using the approximation is fine.
+
+          \begin{align*}
+            z_{165} = \frac{165 - 180}{12.59} & \approx -1.1918 \\
+            z_{195} = \frac{195 - 180}{12.59} & \approx 1.1918 \\
+            \\
+            P(165 \leq X \leq 195)            & \approx 0.7667 \\
+          \end{align*}
+
+      \end{enumerate}
+
+
+  \end{description}
+\end{document}
+
