@@ -1,0 +1,148 @@
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
+
+\usepackage{units} 
+\usepackage{parskip} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+\usepackage{commath}
+
+\everymath{\displaystyle}
+
+\title{Statistics \\ Chapter 19}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+  \setcounter{tocdepth}{2}
+  \tableofcontents
+
+  \section{Table Review} % (fold)
+
+  Data in table is t-value which comes from calculation. Once you know the value, look
+  up the probability of that value at the bottom of the table.
+
+  
+  \section{$\sigma$ for population proportion} % (fold)
+
+  What is the standard deviation of a collection of 1s and 0s?
+
+  definitions:
+  \begin{itemize}[nosep, label={}]
+    \item s: number of 1s
+    \item n: number of items in the collection
+    \item p: probability of getting a one. Note that $p =
+      \frac{s}{n} = \bar{x}$
+  \end{itemize}
+
+  \begin{align*}
+    \sigma & = \sqrt{ \frac{s \del{1 - p}^2 + (n - s)p^2}{n} } \\
+           & = \sqrt{ \frac{s \del{ 1 - 2p + p^2} + np^2 - sp^2}{n} } \\
+           & = \sqrt{ \frac{s - 2 s p + s p^2 + np^2 - sp^2}{n} } \\
+           & = \sqrt{ \frac{s - 2 s p + np^2 }{n} } \\
+           & = \sqrt{ \frac{s}{n} - 2 p \cdot \frac{s}{n}  + p^2 } \\
+           & = \sqrt{ p - 2 p^2 + p^2 } \\
+           & = \sqrt{ p - p^2 } \\
+           & = \sqrt{ p (1 - p) } \\
+  \end{align*}
+
+  You can generalize this so that $p$ is the probability of ``success''. This is
+  the standard deviation for a single random draw from a box.
+  
+  Notice that $\sigma$ increases the closer $p$ is to 0.5. The maximum variation you
+  can have is half ones and half zeros.
+
+  Instead of thinking of drawing from a box of zeros and ones, you can think of a box
+  of marbles where some are green and others are blue, population of people where
+  some are Democrats and some are Republicans, etc. In all these cases:
+
+  $\sigma = \sqrt{p(1 - p)}$.
+
+  \section{Guessing Contents of Box} % (fold)
+
+  Suppose you have a box full of green and blue marbles and you want to figure out the
+  percentage of each in the box.
+
+  Since $\sigma = \sqrt{ p(1 - p) }$, the standard deviation of the sample
+  distribution is:
+  \begin{align*}
+    sd & = \frac{\sigma}{\sqrt{n}} \\
+       & = \frac{\sqrt{ p(1 - p) }}{\sqrt{n}} \\
+       & = \sqrt{ \frac{p (1 - p)}{n} } \\
+  \end{align*}
+
+  If you have enough samples, the sample distribution will be approximately:
+  \[
+    N \del{ p, \sqrt{ \frac{p (1 - p)}{n} } }
+  \]
+  
+  Since $p$ is what we are trying to figure out, we approximate it with $\hat{p}$.
+
+  \[
+    SE = \sqrt{ \frac{ \hat{p}(1 - \hat{p}) }{n} }
+  \]
+
+  and
+
+  \[
+    p = \hat{p} \pm z^* \sqrt{ \frac{ \hat{p}(1 - \hat{p}) }{n} }
+  \]
+
+  This only works when the number of successes and the number of failures are both at
+  least 15. Otherwise the sample size is too small.
+
+  If you don't have many samples, you can improve the accuracy of the estimate by
+  pretending like you have 4 more samples than you do and adding 2 to the number of
+  successes:
+
+  \[
+    \tilde{p} = \frac{s + 2}{n + 4}
+  \]
+
+  Procedure for figuring out the proportion of marbles is:
+  \begin{enumerate}[nosep]
+    \item take a sample
+    \item count number of successes and add 2
+    \item look up $z^*$ in Table C.
+    \item compute confidence interval
+  \end{enumerate}
+
+  \section{Sample Size} % (fold)
+
+  \begin{enumerate}[nosep, label={}]
+    \item $p^*$: estimate of $p$
+    \item $m$: desired margin of error
+    \item $z*$: $z^*$ for desired confidence level
+  \end{enumerate}
+
+  \begin{align*}
+    m &= z^* \sqrt{ \frac{p^* (1 - p^*)}{n} } \\
+    n &= \del{ \frac{z^*}{m} } p^* \del{ 1 - p^* } \\
+  \end{align*}
+  
+  \section{Significance Test} % (fold)
+
+  \begin{align*}
+    s & = \sqrt{ \frac{p_0 ( 1 - p_0 )}{n} } \\
+    z & = \frac{ \hat{p} - p_0 }{ s }  \\
+  \end{align*}
+  
+  Since we want to find out how unlikely $\hat{p}$ is if $p_0$ is true, we use
+  $p_0$ to calculate the standard error.
+
+\end{document}
+

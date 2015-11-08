@@ -1,0 +1,278 @@
+% no answer kef
+\documentclass[letterpaper]{exam}
+
+% answer key
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers{}
+
+% for the cent symbol
+\usepackage{textcomp}
+
+% the textcent command eats the space following the symbol
+\usepackage{xspace}
+\newcommand{\cent}{\textcent\xspace}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{todonotes}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{parskip}
+
+\everymath{\displaystyle}
+
+\title{Statistics \\ Chapter 19 Homework}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Homework}
+  Chapter 19: 25--28, 30--31, 33--34, 36--44
+
+  \ifprintanswers{}
+    \section{Solutions}
+    \begin{description}
+
+      \item[25] 
+        \begin{enumerate}[(a)]
+          \item We don't have an SRS due to non-response.
+
+          \item $0.8396 \pm 0.0226$ or 0.8170 to 0.8622
+        \end{enumerate}
+
+      \item[26] 
+        Using the ``plus four'' approach: 
+
+        $0.1193 \pm 0.0479$ or 0.0714 to 0.1672
+
+      \item[27]
+        \begin{enumerate}[(a)]
+          \item 
+            \begin{align*}
+              p & = \frac{848}{1010} \approx 0.8396 \\
+              s & = \sqrt{ \frac{0.8396 (1 - 0.8396)}{1010} } \approx 0.01155 \\
+              m & = 1.96 \cdot s \approx 0.0226 = \boxed{ 2.26\% } \\
+            \end{align*}
+
+          \item 
+            \begin{align*}
+              s & = \sqrt{ \frac{0.5 (1 - 0.5)}{1010} } \approx 0.01573 \\
+              m & = 1.96 \cdot s \approx 0.0308 = \boxed{ 3.08\% } \\
+            \end{align*}
+
+          \item 3\% is the worst case margin of error, regardless of how the poll
+            turns out.
+
+        \end{enumerate}
+
+      \item[28]
+        \begin{enumerate}[(a)]
+          \item Psychology and communications students probably aren't that similar
+            to science and engineering students (for example) in terms of their
+            religious behavior.
+
+          \item $0.8425 \pm 0.0833$ or 0.7593 to 0.9258
+
+          \item $0.8321 \pm 0.0841$ or 0.7479 to 0.9162
+
+            \begin{itemize*}
+              \item The first interval is 75.9\% to 92.6\%.
+              \item The second interval is 74.8\% to 91.6\%
+              \item The second interval is about 0.001 percentage points wider and
+                the min and max are both about 0.01 percentage points smaller.
+            \end{itemize*}
+        \end{enumerate}
+
+      \item[30]
+        \begin{enumerate}[(a)]
+          \item If we count ``liked the font'' as a success, the number of failures
+            in each case is only 8 and 5. The number of successes and failures both
+            need to be at least 15 to use the large-sample confidence interval.
+
+            For the plus four approach, we only need a sample size of at least 10 and
+            a confidence interval of at least 90\%.
+
+          \item 
+            \begin{enumerate}[(a)]
+              \item prefer Times New Roman: $0.6552 \pm 0.1730$ or
+                0.4822 to 0.8282
+
+              \item find Gigi more attractive: $0.7586 \pm 0.1557$ or
+                0.6029 to 0.9144
+
+            \end{enumerate}
+        \end{enumerate}
+
+      \item[31]
+        \begin{enumerate}[(a)]
+          \item Only 5 facilities didn't detect the beans, and the number of failures
+            needs to be at least 15 for the large-sample confidence interval.
+
+            We have at least 10 samples and a confidence interval greater than 90\%, so
+            the experiment is fine for the plus four approach.
+
+          \item $0.7407 \pm 0.1387$ or 0.6020 to 0.8795
+        \end{enumerate}
+
+      \item[33]
+        \begin{enumerate}[(a)]
+          \item No. The sample size is the same for all states and the population is
+            much larger than the sample, even for the small states.
+
+          \item Yes. The sample size will be larger for larger states.This will
+            reduce the margin of error for the large states.
+        \end{enumerate}
+
+      \item[34]
+        \begin{enumerate}[(a)]
+          \item 
+            \begin{align*}
+              z^* & = 2.576 \\
+              m   & = 0.015 \\
+              p^* & = 0.2 \\
+              \\
+              n &= \boxed{ 1832 } \\
+            \end{align*}
+
+          \item 10\% of the sample is 184 people (rounding up). With 184 successes
+            (if you count customer complaints as a success)
+            and a sample size of 1832, the confidence interval is:
+
+            $0.1004 \pm 0.0070$ or 0.0953 to 0.1074
+
+            The actual margin of error was only 0.007 instead of the target 0.015.
+
+            Because the number of successes was smaller than expected, the margin of
+            error was smaller than expected.
+        \end{enumerate}
+
+      \item[36] This experiment meets the criteria for the large sample approach.
+        
+        The confidence interval is: $0.67 \pm 0.01$ or 0.66 to 0.68
+
+      \item[37]
+        For this sample we need to use the plus four approach because of the small
+        sample size.
+
+        The confidence interval is: 
+
+        $0.4375 \pm 0.2040$ or 0.2335 to 0.6415
+
+      \item[38]
+        The hypotheses are:
+        \begin{itemize*}
+          \item $H_0$: $p = 0.3333$
+          \item $H_a$: $p > 0.3333$
+        \end{itemize*}
+
+        \begin{align*}
+          \hat{p} & = \frac{304}{803} \approx 0.3786 \\
+          p_0     & = 0.3333 \\
+          \\
+          z       & \approx 2.6454 \\
+        \end{align*}
+
+        With a one-sided test, $P < 0.004$, so this is strong evidence against the
+        null hypothesis and we can conclude that more than 33\% of this population
+        doesn't use condoms.
+
+      \item[39]
+       ``False'' and ``Not sure'' are equivalent given how the question is phrased.
+
+       There is a large enough sample to use the large sample approach. The 95\%
+       confidence interval is:
+
+       $0.40 \pm 0.025$ or 0.3753 to 0.4252.
+
+       We can say with 95\% confidence that somewhere between 37.5\% and 42.5\% of
+       American adults think that humans developed from earlier species of animals.
+
+     \item[40]
+       With this sample size, we should use the plus four approach.
+       The 95\% confidence interval is:
+
+       $0.5785 \pm 0.0880$ or 0.4905 to 0.6665
+
+       49\% to 67\% of the drivers wear seat belts.
+
+     \item[41]
+       The hypotheses are:
+       \begin{itemize*}
+         \item $H_0$: $p = 0.5$
+         \item $H_a$: $p < 0.5$
+       \end{itemize*}
+
+       \begin{align*}
+          \hat{p} & = \frac{594}{1484} \approx 0.4003 \\
+          p_0     & = 0.5 \\
+          \\
+          z       & \approx -7.8413 \\
+        \end{align*}
+
+        The p-value is approximately 0, so we can safely conclude that less than half
+        the public believes in evolution.
+
+
+     \item[42]
+       The hypotheses are:
+       \begin{itemize*}
+         \item $H_0$: $p = 0.5$
+         \item $H_a$: $p > 0.5$
+       \end{itemize*}
+
+       \begin{align*}
+          \hat{p} & = \frac{68}{117} \approx 0.5812 \\
+          p_0     & = 0.5 \\
+          \\
+          z       & \approx 1.7802 \\
+        \end{align*}
+
+        With a one sided test, there is statistically significant evidence, 
+        $P < 0.04$ that more than half of the drivers wear seat belts.
+
+      \item[43]
+        With this sample size, we should to use the plus four approach. 
+
+        The confidence interval is: 
+
+        $0.0891 \pm 0.0556$ or 0.0335 to 0.1447
+
+      \item[44]
+        Assuming we still want a 95\% confidence interval:
+        \begin{align*}
+          \hat{p} & \approx 0.4003 \\
+          m       & = 0.05 \\
+          \\
+          n &= \boxed{ 192 } \\
+        \end{align*}
+
+
+  \end{description}
+
+  \else
+    \vspace{12 cm}
+    \begin{quote}
+      \begin{em}
+        The scientist has a lot of experience with ignorance and doubt and
+        uncertainty, and this experience is of very great importance, I think.
+      \end{em}
+    \end{quote}
+    \hspace{1 cm}--Richard Feynman
+  \fi
+
+\end{document}
+
