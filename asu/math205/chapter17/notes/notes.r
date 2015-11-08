@@ -22,11 +22,19 @@ easy - hard
 easy <- easy[order(-easy)]
 hard <- hard[order(-hard)]
 
-t.test(easy, hard, paired = T, mu = 2)
+t <- t.test(easy, hard, paired = T, mu = 2)
+
+attr(t$conf.int, "conf.level")
+
+conf.level(t$conf.int)
 
 df <- data.frame(judge1 = easy, judge2 = hard, delta = easy - hard)
 
+?atomic
+
 tex.table(df, digits = 1)
+
+?t.test
 
 df
 df.m <- melt(df, measure.vars = c("judge1", "judge2"))

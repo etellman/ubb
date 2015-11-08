@@ -1,36 +1,93 @@
-root.dir <- '~/Documents/U/ubb/asu/math205'
-notes.dir <- paste(root.dir, 'chapter17/notes', sep = '/')
+math205.dir <- '~/Documents/U/ubb/asu/math205'
+data.dir <- paste(math205.dir, 'data', 'bps', 'PC-Text', 'ch18', sep = '/')
+setwd(data.dir)
 
 set.seed(15)
-easy <- round(rnorm(20, mean = 8, sd = 1), 1)
-hard <- round(rnorm(20, mean = 6, sd = 1), 1)
+x = c(1,1,1,1,0,0,0,0)
+y = c(-1,-1,-1,-1,0,0,0,0)
 
-t.test(easy, mu = 8)
-t.test(hard, mu = 6)
+sd(1:10 - 10:1)
 
-mean(easy) - mean(hard)
+sd(1:10) * 2
 
-easy.t
+set.seed(15)
+sd(x[shuffle(10)] - x[shuffle(10)])
 
-easy.t['conf.int']
-hard.t['conf.int']
+sqrt(2 * sd(x)^2)
 
-t.test(easy - hard, mu = 2)
+library(permute)
+install.packages("permute")
+shuffle(x)
+sd(x - 10:1)
 
-easy - hard
+sd(x)
+t.test(x, y)
 
-easy <- easy[order(-easy)]
-hard <- hard[order(-hard)]
+sd(x) + sd(y)
 
-t.test(easy, hard, paired = T, mu = 2)
+y <- y[order(-y)]
 
-df <- data.frame(judge1 = easy, judge2 = hard, delta = easy - hard)
+mean(x - y)
 
-tex.table(df, digits = 1)
+mean(x)
+mean(y)
 
-df
-df.m <- melt(df, measure.vars = c("judge1", "judge2"))
+sd(x - y[order(y)])
 
-tex.table(ddply(df.m, .(variable), summarize, x.bar = mean(value)))
+# ex 18.5
+ex05 <- read.delim('ex18-05.dat', strip.white = T, header = T)
 
-(1.2 - 2.23)/2
+ex05.t <- ddply(ex05, .(Group), summarize, 
+                n = length(Trees), mean = mean(Trees), s = sd(Trees))
+
+tex.table(ex05.t)
+
+t.2s(subset(ex05.t, Group == 'U'), subset(ex05.t, Group == 'L'))
+s <- s.2s(subset(ex05.t, Group == 'U'), subset(ex05.t, Group == 'L'))
+
+# ex 18.6
+ex06 <- read.delim('ta18-01.dat', strip.white = T, header = T)
+
+ex06.t <- ddply(ex06, .(Group), summarize, 
+                n = length(Lie), mean = mean(Lie), s = sd(Lie))
+
+ex06.t
+tex.table(ex06.t)
+
+t.2s(subset(ex06.t, Group == 'lean'), subset(ex06.t, Group == 'obese'))
+s <- s.2s(subset(ex06.t, Group == 'lean'), subset(ex06.t, Group == 'obese'))
+s
+
+# ex 18.9
+ex09 <- read.delim('ta18-02.dat', strip.white = T, header = T)
+
+ex09
+ex09.m <- melt(ex09)
+
+ex09.m <- cbind(ex09.m, lavender = grepl("Lav", ex09.m$variable))
+ex09.m <- cbind(ex09.m, time = grepl("Min", ex09.m$variable))
+ex09.m
+
+ex09.time <- ddply(subset(ex09.m, time), 
+                   .(lavender), summarize, 
+                   n = length(value), mean = mean(value), s = sd(value))
+
+ex09.money <- ddply(subset(ex09.m, !time), 
+                   .(lavender), summarize, 
+                   n = length(value), mean = mean(value), s = sd(value))
+
+ex09.both <- ddply(ex09.m, time ~ lavender, summarize, 
+                   n = length(value), mean = mean(value), s = sd(value))
+ex09.time
+ex09.money
+ex09.both
+
+tex.table(ex09.both)
+
+t.2s(subset(ex09.time, lavender), subset(ex09.time, !lavender))
+s.2s(subset(ex09.time, lavender), subset(ex09.time, !lavender))
+
+t.2s(subset(ex09.money, lavender), subset(ex09.money, !lavender))
+s.2s(subset(ex09.money, lavender), subset(ex09.money, !lavender))
+
+

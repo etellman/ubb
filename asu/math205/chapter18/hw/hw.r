@@ -1,225 +1,119 @@
 
 math205.dir <- '~/Documents/U/ubb/asu/math205'
-data.dir <- paste(math205.dir, 'data', 'bps', 'PC-Text', 'ch17', sep = '/')
+data.dir <- paste(math205.dir, 'data', 'bps', 'PC-Text', 'ch18', sep = '/')
 setwd(data.dir)
 
-week.dir <- paste(math205.dir, 'chapter17', sep = '/')
+week.dir <- paste(math205.dir, 'chapter18', sep = '/')
 figure.dir <- paste(week.dir, 'hw', 'figures', sep = '/')
-￼
-# returns data frame containing values needed to do t-test analysis
-t.summary <- function(x) {
-  round(data.frame(s = sd(x), m = mean(x), n = length(x)), 4)
-}
-
-t.value <- function(mean, mu, s, n) {
-  se <- s/sqrt(n)
-  t.value.se(mean, mu, se)
-}
-
-t.value.se <- function(mean, mu, se) {
-  round((mean - mu)/se, 4)
-}
-
-confidence <- function(mean, t.star, s, n) {
-  se <- s/sqrt(n)
-  confidence.se(mean, t.star, se)
-}
-
-confidence.se <- function(mean, t.star, se) {
-  delta <- t.star * se
-  round(c(mean - delta, mean + delta), 4)
-}
 
 # ex 25
-m1 <- 0.08
-m2 <- 0.35
-n <- 12
-s <- 0.37
 
-t.value(c(m1, m2), 0, s, 12)
+women1 <- data.frame(n = 56, mean = 16177, s = 7520)
+men1 <- data.frame(n = 56, mean = 16569, s = 9108)
+
+women2 <- data.frame(n = 27, mean = 16496, s = 7914)
+men2 <- data.frame(n = 20,   mean = 12867, s = 8343)
+
+ex25.t1 <- t.value.2s(women1, men1)
+ex25.t2 <- t.value.2s(women2, men2)
+
+1 - pt(ex25.t1, 55)
+1 - pt(ex25.t2, 19)
 
 # ex 26
-m <- 26.8
-n <- 654
-s <- 7.42
+10 * sqrt(11)
 
-x <- rnorm(n, m, s)
-x
-confidence(m, 1.984, s, n)
-t.test(x)
+unrestrained <- data.frame(n = 9, mean = 59, s = 21)
+restrained <- data.frame(n = 11, mean = 32, s = 33.16625)
+
+delta <- 1.860 * s.2s(unrestrained, restrained)
+
+27 - delta
+27 + delta
 
 # ex 27
-m <- 240
-n <- 1470
-se <- 1.1
-t.star <- 2.581
-s <- se * sqrt(n)
-mu <- 243
+round(1.56 * sqrt(6), 4)
+round(2.68 * sqrt(7), 4)
 
-x <- rnorm(n, m, s)
+or <- data.frame(n = 6, mean = 26.9, s = 3.8212)
+ca <- data.frame(n = 7, mean = 11.9, s = 7.0906)
 
-confidence.se(m, t.star, se)
-t.value.se(m, mu, se)
-
-t.test(x, mu = 243, conf.level = 0.95, alternative = "less")
+t.value.2s(or, ca)
 
 # ex 28
-m <- 114.9
-s <- 9.3
-n <- 27
-t.star <- 2.056
+montessori <- data.frame(n = 30, mean = 19, s = 3.11)
+control <- data.frame(n = 25, mean = 17, s = 4.19)
 
-confidence(m, t.star, s, n)
+t.value.2s(montessori, control)
 
-# ex 30
-ex30 <- read.delim("ex17-30.dat", header = TRUE, sep = '\t')
-t.test(ex30, mu = 1, alternative = "greater", conf = 0.99)
+# ex 29
+ginkgo <- data.frame(n = 21, mean = 0.06383, s = 0.01462)
+control <- data.frame(n = 18, mean = 0.05342, s = 0.01549)
 
-xtable(t.summary(ex30$Cond), booktabs = T)
-
-print(xtable(t.summary(ex30$Cond), digits = 4), 
-      booktabs = TRUE, include.rownames = FALSE)
-s <- sd(ex30$Cond)
-m <- mean(ex30$Cond)
-n <- nrow(ex30)
-mu <- 1
-t.star <- 2.228
-t.value(m, mu, s, nrow(ex30))
-
-confidence(m, t.star, s, n)
-
-plot <- ggplot(ex30, aes(x = Cond)) + 
-  geom_histogram(binwidth = 0.03, color = "black", fill = "lightblue") +
-  theme_ubb + theme(axis.title.y = element_blank()) +
-  labs(x = "Conductivity") 
-print(plot)
-
-save.plot(plot, figure.dir, 'ex30.pdf')
+t.value.2s(ginkgo, control)
 
 # ex 31
-ex31 <- read.delim("ex17-31.dat", header = TRUE, sep = '\t')
-str(ex31)
+asian <- data.frame(n = 12, mean = 1.92, s = 0.6)
+european <- data.frame(n = 9, mean = 1.74, s = 0.57)
 
-plot <- ggplot(ex31, aes(x = Count)) + 
-  geom_histogram(binwidth = 3, color = "black", fill = "lightblue") +
-  theme_ubb + theme(axis.title.y = element_blank()) +
-  labs(x = "Blissymbols") 
-print(plot)
+t.value.2s(asian, european)
 
-save.plot(plot, figure.dir, 'ex31.pdf')
+# ex 32
+t.value(mean = 29, mu = 0, s = 59, n = 427)
 
-print(xtable(t.summary(ex31$Count), digits = 4), 
-      booktabs = TRUE, include.rownames = FALSE)
+try1 <- data.frame(n = 427, mean = 500, s = 92)
+try2 <- data.frame(n = 427, mean = 529, s = 97)
 
-df <- t.summary(ex31$Count)
-df
+t.2s(try2, try1)
 
-t.star <- 1.796
-confidence(df$m, t.star, df$s, df$n)
-
-t.test(ex31, conf = 0.90)
+delta <- 2.626*59/sqrt(427)
+delta
+29 - delta
+delta
 
 # ex 33
-ex33 <- read.delim("ex17-33.dat", header = TRUE, sep = '\t')
-ex33$diff <- ex33$Ctrl - ex33$Exp
+coached <- data.frame(n = 427, mean = 29, s = 59)
+uncoached <- data.frame(n = 2733, mean = 21, s = 52)
 
-no.outliers <- subset(ex33, diff < 20, select = c(diff))
-print(xtable(t.summary(no.outliers$diff), digits = 4), 
-      booktabs = TRUE, include.rownames = FALSE)
+t.2s(coached, uncoached)
+delta <- round(s.2s(coached, uncoached) * 2.626, 4)
 
-plot <- ggplot(ex33, aes(x = diff)) + 
-  geom_histogram(binwidth = 5, color = "black", fill = "lightblue") +
-  theme_ubb + theme(axis.title.y = element_blank()) +
-  labs(x = "control - experiment") 
-print(plot)
-
-save.plot(plot, figure.dir, 'ex33.pdf')
-
-df <- t.summary(ex33$diff)
-
-df
-t.value(df$m, 0, df$s, df$n)
-
-t.test(ex33$diff, alternative = "greater")
-t.test(subset(ex33, diff < 20, select = c(diff)), alternative = "greater")
-
-# ex 35
-ex35 <- read.delim("ex17-35.dat", header = TRUE, sep = '\t')
-str(ex35)
-
-print(xtable(t.summary(ex35$Days), digits = 4), 
-      booktabs = TRUE, include.rownames = FALSE)
-
-plot <- ggplot(ex35, aes(x = Days)) + 
-  geom_histogram(binwidth = 0.5, color = "black", fill = "lightblue") +
-  theme_ubb + theme(axis.title.y = element_blank()) +
-  labs(x = "Days") 
-print(plot)
-
-save.plot(plot, figure.dir, 'ex35.pdf')
-
-df <- t.summary(ex35$diff)
-
-df
-t.value(df$m, 0, df$s, df$n)
-
-t.test(ex35$Days, conf = 0.90)
+8 + delta
 
 # ex 38
-ex38 <- read.delim("ex17-38.dat", header = TRUE, sep = '\t')
-ex38$diff <- ex38$Killrm - ex38$Procrm
-str(ex38)
+ex38 <- read.delim('ex18-38.dat', strip.white = T, header = T)
 
-print(xtable(t.summary(ex38$diff), digits = 4), 
-      booktabs = TRUE, include.rownames = FALSE)
+ex38.t <- ddply(ex38, .(Process), summarize, 
+                n = length(Strength), mean = mean(Strength), s = sd(Strength))
 
-plot <- ggplot(ex38, aes(x = diff)) + 
-  geom_histogram(binwidth = 500, color = "black", fill = "lightblue") +
-  theme_ubb + theme(axis.title.y = element_blank()) +
-  labs(x = "kill - processing") 
-print(plot)
+t.2s(subset(ex38.t, Process == 'HY'), subset(ex38.t, Process == 'Perm'))
 
-save.plot(plot, figure.dir, 'ex38.pdf')
+# ex 39
+ex39 <- read.delim('ex18-39.dat', strip.white = T, header = T)
 
-t.summary(ex38$Killrm)
-t.summary(ex38$Procrm)
-t.summary(ex38$diff)
+t.test(subset(ex39, Process == 'HY', select = 'Angle'), 
+       subset(ex39, Process == 'Perm', select = 'Angle'))
 
-t.test(ex38$diff, conf = 0.90)
+ex39.t <- ddply(ex39, .(Process), summarize, n = 5, mean = mean(Angle), s = sd(Angle))
 
-# ex 44
-ex44 <- read.delim("ta17-04.dat", header = TRUE, sep = '\t')
-ex44$diff <- ex44$Fund - ex44$Eafe
-head(ex44)
+tex.table(ex39.t, digits = 4)
+t.2s(subset(ex39.t, Process == 'HY'), subset(ex39.t, Process == 'Perm'))
 
-print(xtable(t.summary(ex44$diff), digits = 4), 
-      booktabs = TRUE, include.rownames = FALSE)
+# ex 40
+ex38.t
 
-plot <- ggplot(ex44, aes(x = diff)) + 
-  geom_histogram(binwidth = 5, color = "black", fill = "lightblue") +
-  theme_ubb + theme(axis.title.y = element_blank()) +
-  labs(x = "fund - benchmark") 
-print(plot)
+diff(ex38.t$mean)
+s <- s.2s(subset(ex38.t, Process == 'HY'), subset(ex38.t, Process == 'Perm'))
 
-save.plot(plot, figure.dir, 'ex44.pdf')
+round(2.132 * s, 4)
 
-t.test(ex44$diff, conf = 0.95)
+# ex 41
+ex39.t
 
-# ex 45
-ex45 <- read.delim("ta17-05.dat", header = TRUE, sep = '\t')
-ex45$diff <- ex45$Left - ex45$Right
+diff(ex39.t$mean)
+s <- s.2s(subset(ex39.t, Process == 'HY'), subset(ex39.t, Process == 'Perm'), digits = 8)
 
-print(xtable(t.summary(ex45$diff), digits = 4), 
-      booktabs = TRUE, include.rownames = FALSE)
-mean(ex45$Right)/mean(ex45$Left)
+s
+diff(ex39.t$mean) - s * 2.132 
 
-plot <- ggplot(ex45, aes(x = diff)) + 
-  geom_histogram(binwidth = 20, color = "black", fill = "lightblue") +
-  theme_ubb + theme(axis.title.y = element_blank()) +
-  labs(x = "left - right") 
-print(plot)
-
-save.plot(plot, figure.dir, 'ex45.pdf')
-
-t.test(ex45$diff, conf = 0.90, alternative = "two.sided")
-
+4/sqrt(10000)

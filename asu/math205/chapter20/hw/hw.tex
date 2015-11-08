@@ -1,0 +1,121 @@
+% no answer kef
+% \documentclass[letterpaper]{exam}
+
+% answer key
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
+
+\usepackage{units} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+% \usepackage{fullpage}
+\usepackage{comment}
+\usepackage{todonotes}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{parskip}
+
+\everymath{\displaystyle}
+
+\title{Statistics \\ Chapter 20 Homework}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Homework}
+  Chapter 20: TODO
+
+  \ifprintanswers{}
+    \section{Solutions}
+    \begin{description}
+
+      \item[17] 
+        \begin{enumerate}[label = ({\alph*})]
+          \item Yes---we have a large sample size.
+
+          \item 
+            \begin{align*}
+              \hat{p}_{y} - \hat{p}_{o} & = 0.2087 \pm 0.0887 \\
+                                        & = (0.1200, 0.2975) \\
+            \end{align*}
+        \end{enumerate}
+
+      \item[18]
+        \begin{enumerate}[label = ({\alph*})]
+          \item There were only 7 positive responses from one of the schools and we
+            need at least 10 from both.
+
+          \item 9/139 and 29/145
+
+          \item 
+            \begin{align*}
+              \hat{p}_{ut} - \hat{p}_{t} & = 0.1374 \pm 0.0760 \\
+                                         & = (0.0614, 0.2134) \\
+            \end{align*}
+        \end{enumerate}
+
+      \item[19]
+        \begin{enumerate}[label = ({\alph*})]
+          \item One of the samples has zero successes.
+
+          \item 25/37 and 2/22
+
+          \item 
+            \begin{align*}
+              \hat{p}_{a} - \hat{p}_{n} & = 0.6357 \pm 0.2379 \\
+                                        & = (0.3978, 0.8737) \\
+            \end{align*}
+        \end{enumerate}
+
+      \item[20]
+        The hypotheses are:
+        \begin{itemize}[label = {}, itemsep = 0pt]
+          \item $H_0$: $\hat{p}_{ut} = \hat{p}_{t}$
+          \item $H_a$: $\hat{p}_{ut} > \hat{p}_{t}$
+        \end{itemize}
+
+        The z-statistic is 3.5285. 
+        
+        $P < 0.0005$ and there is a statistically significant difference. 
+
+      \item[21]
+        The hypotheses are:
+        \begin{itemize}[label = {}, itemsep = 0pt]
+          \item $H_0$: $\hat{p}_{h} = \hat{p}_{nh}$
+          \item $H_0$: $\hat{p}_{h} \ne \hat{p}_{nh}$
+        \end{itemize}
+
+        The z-statistic is 3.39.
+        
+        $P < 0.001$ and there is a statistically significant difference. 
+
+      \item[23]
+        \begin{align*}
+          \hat{p}_{nh} - \hat{p}_{h} & = 0.1405 \pm 0.0774 \\
+                                     & = (0.0631, 0.2179) \\
+        \end{align*}
+
+  \end{description}
+
+  \else
+    \vspace{12 cm}
+    \begin{quote}
+      \begin{em}
+        TODO
+      \end{em}
+    \end{quote}
+    \hspace{1 cm}--TODO
+  \fi
+
+\end{document}
+

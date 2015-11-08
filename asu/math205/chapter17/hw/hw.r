@@ -5,30 +5,6 @@ setwd(data.dir)
 
 week.dir <- paste(math205.dir, 'chapter17', sep = '/')
 figure.dir <- paste(week.dir, 'hw', 'figures', sep = '/')
-￼
-# returns data frame containing values needed to do t-test analysis
-t.summary <- function(x) {
-  round(data.frame(s = sd(x), m = mean(x), n = length(x)), 4)
-}
-
-t.value <- function(mean, mu, s, n) {
-  se <- s/sqrt(n)
-  t.value.se(mean, mu, se)
-}
-
-t.value.se <- function(mean, mu, se) {
-  round((mean - mu)/se, 4)
-}
-
-confidence <- function(mean, t.star, s, n) {
-  se <- s/sqrt(n)
-  confidence.se(mean, t.star, se)
-}
-
-confidence.se <- function(mean, t.star, se) {
-  delta <- t.star * se
-  round(c(mean - delta, mean + delta), 4)
-}
 
 # ex 25
 m1 <- 0.08
@@ -44,8 +20,8 @@ n <- 654
 s <- 7.42
 
 x <- rnorm(n, m, s)
-x
-confidence(m, 1.984, s, n)
+
+t.conf(m, 1.984, s, n)
 t.test(x)
 
 # ex 27
@@ -58,7 +34,7 @@ mu <- 243
 
 x <- rnorm(n, m, s)
 
-confidence.se(m, t.star, se)
+t.conf.se(m, t.star, se)
 t.value.se(m, mu, se)
 
 t.test(x, mu = 243, conf.level = 0.95, alternative = "less")
@@ -69,7 +45,7 @@ s <- 9.3
 n <- 27
 t.star <- 2.056
 
-confidence(m, t.star, s, n)
+t.conf(m, t.star, s, n)
 
 # ex 30
 ex30 <- read.delim("ex17-30.dat", header = TRUE, sep = '\t')
@@ -86,7 +62,7 @@ mu <- 1
 t.star <- 2.228
 t.value(m, mu, s, nrow(ex30))
 
-confidence(m, t.star, s, n)
+t.conf(m, t.star, s, n)
 
 plot <- ggplot(ex30, aes(x = Cond)) + 
   geom_histogram(binwidth = 0.03, color = "black", fill = "lightblue") +
@@ -158,17 +134,18 @@ print(plot)
 
 save.plot(plot, figure.dir, 'ex35.pdf')
 
-df <- t.summary(ex35$diff)
+df <- t.summary(ex35$Days)
 
-df
 t.value(df$m, 0, df$s, df$n)
 
 t.test(ex35$Days, conf = 0.90)
 
+df
+t.conf(df$m, 1.812, df$s, 11)
+
 # ex 38
 ex38 <- read.delim("ex17-38.dat", header = TRUE, sep = '\t')
 ex38$diff <- ex38$Killrm - ex38$Procrm
-str(ex38)
 
 print(xtable(t.summary(ex38$diff), digits = 4), 
       booktabs = TRUE, include.rownames = FALSE)
@@ -183,9 +160,9 @@ save.plot(plot, figure.dir, 'ex38.pdf')
 
 t.summary(ex38$Killrm)
 t.summary(ex38$Procrm)
-t.summary(ex38$diff)
+s38 <- t.summary(ex38$diff)
 
-t.test(ex38$diff, conf = 0.90)
+with(s38, t.conf(m, 2.353, s, 4))
 
 # ex 44
 ex44 <- read.delim("ta17-04.dat", header = TRUE, sep = '\t')

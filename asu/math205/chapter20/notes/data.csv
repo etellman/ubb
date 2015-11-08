@@ -1,0 +1,5 @@
+population   , white , hispanic , black , other
+us           , 145   , 49       , 37    , 19
+prison       , 89    , 51       , 81    , 29
+drug.use     , 153   , 44       , 25    , 28
+drug.offense , 75    , 47       , 100   , 28

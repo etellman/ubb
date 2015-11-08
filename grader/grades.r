@@ -7,8 +7,8 @@ percentage <- function(score, points) {
   c(actual = actual, percentage = round(100 * (actual) / points))
 }
 
-possible <- 5 * length(c(34, 36:38, 40, 42:46, 48:53, 55, 57))
-percentage(-12, possible)
+possible <- 5 * length(c(25:29, 31:34, 38))
+percentage(-3, possible)
 
 # overall course grades
 
@@ -41,6 +41,8 @@ grades.summary <- ddply(grades.m, .(id), summarize,
       overall = round(sum(0.2 * homework + 0.4 * exam01 + 0.4 * exam02)),
       grade = letter.grade(overall)
 )
+
+summary(grades.summary$overall)
 
 # grades ordered by overall score, descending
 grades.summary[order(-grades.summary$overall),]

@@ -90,7 +90,7 @@
           two coming up not six is:
 
           \[
-            P(\text{first two six}) = \cdot \frac{1}{6} \cdot \frac{1}{6} \cdot \frac{5}{6} 
+            P(\text{first two six}) = \frac{1}{6} \cdot \frac{1}{6} \cdot \frac{5}{6} 
           \]
 
           The probability of the second or third roll being the single non-six
@@ -121,10 +121,14 @@
     of a four child family having more girls than boys?
 
     \begin{solution}
-      There are 16 equally likely possibilities. 1 of these is ``four girls''
-      and four of them are ``three girls'' (the single boy could be any one of
-      the kids).  So the probability of having more girls than boys is
-      \sfrac{5}{16}.
+      There are 16 equally likely possibilities for kid combinations. 
+      
+      The only way to have more girls than boys is if you have no boys or one
+      boy. There are four ways to have one boy (oldest kid is the boy, second
+      oldest kid is the boy, etc.). There is only one way to have all girls.
+
+      Since five of the sixteen possibilities meet the requirement of more girls
+      than boys, the probability of more girls than boys is \sfrac{5}{16}.
 
       Another way to look at it is that the probability of any particular
       combination of girls and boys is:
@@ -132,8 +136,8 @@
         \frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{16}
       \]
 
-      Since there are 5 combinations that work, the probability of having more
-      girls than boys is:
+      Since there are 5 combinations that work and the probabilities are
+      disjoint, the probability of having more girls than boys is:
       \[
         P(g > b) = 5 \cdot \frac{1}{16} = \boxed{ \frac{5}{16} }
       \]
@@ -245,11 +249,12 @@
 
           \item Poll each sample for candy preferences.
 
-          \item Go to the store and buy candy. Make sure you also get something
-            you like. Don't hand the ones you like out to the customers
-            except as a last resort when you run out of everything else that
-            they probably like better after all the effort you put into keeping
-            them happy. 
+          \item Go to the store and buy candy.  Make sure you also get something
+            you like. Don't hand the ones you like out to the customers except
+            as a last resort when you run out of everything else. There's
+            nothing more demoralizing than reaching the end of Halloween night
+            and realizing that there's no candy left in the house for you to
+            eat.
 
         \end{itemize}
 
@@ -332,6 +337,7 @@
         \fbox{ 37.72 cm to 59 cm }
 
       \end{solution}
+
     \question{}
       A team of scientists has theorized that the mean insect detection distance
       is more than 40 cm. 
@@ -355,10 +361,8 @@
             \begin{align*}
               \bar{x} & \approx 48.36 \\
               s &= \frac{18}{\sqrt{11}} \approx 5.427 \\
-              z       & = \frac{48.36 - 40}{5.417} \\
-                      & \approx 1.54 \\
+              z       & = \frac{48.36 - 40}{5.417} \approx 1.54 \\
             \end{align*}
-
             This is a P-value of 0.0617, so the data don't support the
             hypothesis at the 0.05 significance level.
             

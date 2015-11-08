@@ -1,0 +1,175 @@
+\documentclass[letterpaper, landscape]{exam}
+\usepackage{2in1, lscape} 
+\printanswers{}
+
+\usepackage{units} 
+\usepackage{parskip} 
+\usepackage{xfrac} 
+\usepackage[fleqn]{amsmath}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{polynom}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{mathtools} 
+\usepackage{commath}
+
+\everymath{\displaystyle}
+
+\title{Statistics \\ Chapter 20}
+\date{\today}
+\author{}
+
+\begin{document}
+
+  \maketitle
+  \setcounter{tocdepth}{2}
+  \tableofcontents
+
+  \newpage
+
+  \section{Data} % (fold)
+
+  The data is created by taking a random sample of 250 from a large population
+  with the correct percentages of each trait (race or drug/usage). Each row in the
+  table is a different population, so the rows all add up to 250.
+
+  \begin{table}
+    \centering
+    \begin{tabular}{lrrrr}
+      \toprule
+                     & White & Hispanic & Black & Other     \\
+      \midrule                
+      US Population  & 145   & 49       & 37    & 19       \\
+      In Prison      & 89    & 51       & 81    & 29      \\
+      Drug Offense   & 75    & 47       & 100   & 28      \\
+      Drug Users     & 153   & 44       & 25    & 28       \\
+      \bottomrule
+    \end{tabular}
+    \caption{2013 data, 250 samples, various sources}\label{tab:population}
+  \end{table}
+
+  Table~\ref{tab:population} shows various populations broken down by race:
+  \begin{description}[parsep = 0pt]
+    \item[US] entire US population
+    \item[In Prison] people in state prisons 
+    \item[Drug Offence] people in state prisons for drug offenses
+    \item[Drug Users] people that use illegal drugs
+  \end{description}
+
+  \begin{table}
+    \centering
+    \begin{tabular}{lrrrr}
+      \toprule
+            & Users & Not Users      \\
+      \midrule
+      White & 24    & 226 \\
+      Black & 27    & 223 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Drug use by race}\label{tab:by_race}
+  \end{table}
+
+  Table~\ref{tab:by_race} shows drug use for black vs.\ white
+
+  \section{Confidence Intervals} % (fold)
+
+  \subsection{Calculation} % (fold)
+  
+  \begin{align*}
+    SE & = \sqrt{ SE_1^2 + SE_2^2 } \\
+       & = \sqrt{ \del{ \sqrt{ \frac{\hat{p}_1 ( 1 - \hat{p}_1 )}{ n_1 } } }^2
+                + \del{ \sqrt{ \frac{\hat{p}_2 ( 1 - \hat{p}_2 )}{ n_2 } } }^2} \\
+       & = \sqrt{ \frac{\hat{p}_1 ( 1 - \hat{p}_1 )}{ n_1 } 
+                + \frac{\hat{p}_2 ( 1 - \hat{p}_2 )}{ n_2 } } \\
+    \\
+    p_1 - p_2 & = (\hat{p}_1 - \hat{p}_2) \pm z^* SE \\
+  \end{align*}
+
+  \subsection{Plus Four} % (fold)
+
+  Add one imaginary success and one failure to each sample when sample size is small.
+  
+  \section{Significance Tests} % (fold)
+
+  Null hypothesis proportion is weighted average of two sample proportions.
+
+  \begin{align*}
+    \hat{p} &= \del{ \frac{n_1}{n_1 + n_2} } \hat{p}_1 
+             + \del{ \frac{n_2}{n_1 + n_2} } \hat{p}_2 \\
+    \hat{p} &= \del{ \frac{n_1}{n_1 + n_2} } \del{ \frac{s_1}{n_1} } 
+             + \del{ \frac{n_2}{n_1 + n_2} } \del{ \frac{s_2}{n_2} } \\
+            & = \frac{s_1 + s_2}{n_1 + n_2} \\
+  \end{align*}
+
+  This is the same as the combined average. 
+
+  The standard error uses this proportion and each sample's sample size:
+
+  \begin{align*}
+    SE & = \sqrt{ \del{ \sqrt{ \frac{\hat{p} ( 1 - \hat{p} )}{ n_1 } } }^2
+               + \del{ \sqrt{ \frac{\hat{p} ( 1 - \hat{p} )}{ n_2 } } }^2} \\
+       & = \sqrt{ \frac{\hat{p} ( 1 - \hat{p} )}{ n_1 } 
+               + \frac{\hat{p} ( 1 - \hat{p} )}{ n_2 } } \\
+       & = \sqrt{ \hat{p} ( 1 - \hat{p} ) \del{ \frac{1}{n_1} + \frac{1}{n_2} } } \\
+    \\
+    z  & = \frac{\hat{p}_1 - \hat{p}_2}{SE} \\
+  \end{align*}
+  
+  \section{War on Drugs Calculations} % (fold)
+
+  \subsection{US Population vs.\ Prison Population} % (fold)
+
+  \paragraph{White} % (fold)
+  \begin{align*}
+    p_{us} - p_p & = 0.224 \pm 0.0852 \\
+    z            & \approx 5.0191 \\
+  \end{align*}
+  
+  \paragraph{Black} % (fold)
+  \begin{align*}
+    p_p - p_{us} & = 0.176 \pm 0.0728 \\
+    z            & \approx 4.6341 \\
+  \end{align*}
+  
+  \subsection{US Population vs.\ Drug Offenses} % (fold)
+
+  \paragraph{White} % (fold)
+  \begin{align*}
+    p_{us} - p_p & = 0.28 \pm 0.0835 \\
+    z            & \approx 6.3066 \\
+  \end{align*}
+  
+  \paragraph{Black} % (fold)
+  \begin{align*}
+    p_p - p_{us} & = 0.252 \pm 0.075 \\
+    z            & \approx 6.317 \\
+  \end{align*}
+
+  \subsection{Drug Use} % (fold)
+
+  \paragraph{Population White/Black}
+  \begin{align*}
+    p_b - p_w & = 0.012 \pm 0.053 \\
+    z         & \approx 0.443 \\
+  \end{align*}
+  
+  \paragraph{US Population vs.\ Drug Use (White)}
+  \begin{align*}
+    p_d - p_{us} & = 0.032 \pm 0.086 \\
+    z            & \approx 0.7291 \\
+  \end{align*}
+  
+  \paragraph{US Population vs.\ Drug Use (Black)}
+  \begin{align*}
+    p_{us} - p_{d} & = 0.048 \pm 0.0576 \\
+    z              & \approx 1.6283 \\
+  \end{align*}
+
+\end{document}
+

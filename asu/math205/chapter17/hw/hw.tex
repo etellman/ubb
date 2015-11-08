@@ -18,14 +18,15 @@
 \usepackage[fleqn]{amsmath}
 \usepackage{cancel}
 \usepackage{float}
-\usepackage{mdwlist}
+% \usepackage{mdwlist}
+\usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{cancel}
 \usepackage{polynom}
 \usepackage{caption}
 \usepackage{fullpage}
 \usepackage{comment}
-\usepackage{enumerate}
+% \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{parskip}
 
@@ -47,43 +48,45 @@
     \begin{description}
 
       \item[25] 
-        \begin{align*}
-          t_1 &= 0.7490 \\
-          t_2 &= 3.2769 \\
-        \end{align*}
+        The correct t-statistics and P-values are:
+        \begin{itemize}[nosep, label={}]
+          \item $t_1 = 0.7490$, $0.4 < P < 0.5$
+          \item $t_2 = 3.2769$, $0.005 < P < 0.01 $
+        \end{itemize}
 
-        From Table C, the first P-value is between 0.4 and 0.5 and the second
-        P-value is between 0.01 and 0.005.
+        In the first case there isn't a significant difference and in the second case
+        there is.
 
-      \item[26]
-        From Table C, $t^* = 1.984$. This produces a 95\% confidence interval of
-        $(26,22, 27.38)$.
+      \item[26] $\mu = 26.8 \pm 0.5756$; $26.2244 < \mu < 27.3756$.
 
       \item[27]
-        \begin{enumerate}[(a)]
-          \item The sample size of 1470 is big enough that it doesn't matter
-            much whether the data has a normal distribution.
+        \begin{enumerate}[label = (\alph*)]
+          \item With a large sample size and limited range data, the normality
+            of the population shouldn't be a problem.
 
-          \item From Table C, $t^* = 2.581$. This produces a 99\% confidence
-            interval of $(237.16, 242.84)$.
+          \item $240 \pm 2.8381$ or 237.16 to 242.84
 
           \item 
-            \[
-              t = -2.7273
-            \]
+            The hypotheses are:
+            \begin{itemize}[parsep=0pt,label={}]
+              \item $H_0$: $\mu = 243$
+              \item $H_a$: $\mu < 243$
+            \end{itemize}
+            
+            This gives $t = -2.7273$ and $0.0025 < P < 0.005$
 
-            From Table C, the one-sided P-value is somewhere between 0.005 and
-            0.0025. This is good evidence that the students are below average.
+            With $P < 0.005$, there is strong evidence that the students are below
+            average.
 
         \end{enumerate}
 
       \item[28]
-        \begin{enumerate}[(a)]
-          \item From Table C, $t^* = 2.056$.  The 95\% confidence interval is
-            $(111.22, 118.58)$.
+        \begin{enumerate}[label = (\alph*)]
+          \item $\mu = 114.9 \pm 3.6798$; $111.22 < \mu < 118.58$
 
           \item
-            \begin{itemize*}
+            The requirements might include:
+            \begin{itemize}
               \item The original 54 subjects are randomly selected from the
                 white male population.
 
@@ -93,7 +96,7 @@
                 control groups.
 
               \item Blood pressure has an approximately Normal distribution.
-            \end{itemize*}
+            \end{itemize}
 
         \end{enumerate}
 
@@ -104,30 +107,25 @@
           \caption{Exercise 30}\label{fig:ex30}
         \end{figure}
         
-        \begin{enumerate}[(a)]
+        \begin{enumerate}[label = (\alph*)]
           \item See Figure~\ref{fig:ex30}. There aren't very many samples, but
             they look evenly distributed.
 
-          \item
-            \begin{align*}
-              \bar{x} & = 1.12 \\
-              s       & = 0.044 \\
-            \end{align*}
+          \item From the sample: $\bar{x} \approx 1.12$ and $sd \approx 0.044$
 
-            From Table C, $t^* = 2.228$. The confidence interval is:
-            \begin{align*}
-              \mu & = 1.12 \pm 2.228 \cdot \frac{0.044}{\sqrt{10}} \\
-                  & = (1.10, 1.13)
-            \end{align*}
+            The 95\% confidence interval is:
+            
+            $\mu = 1.1182 \pm 0.0294$; $1.0888 < \mu < 1.1476$
 
-          \item
-            \[
-              t = 8.9538
-            \]
+          \item 
+            \begin{itemize}[parsep=0pt,label={}]
+              \item $H_0$: $\mu = 1$
+              \item $H_a$: $\mu \ne 1$
+            \end{itemize}
 
-            Since all the values are greater than 1, the alternative hypothesis
-            should be one sided. From Table C, $P-value < 0.0005$, so it is very
-            likely the mean conductivity of this glass is 1.
+            With these values, $t = 8.9538$ and $P < 0.001$. There is strong
+            evidence that the mean conductivity of the glass is not 1.
+
         \end{enumerate}
 
       \item[31]
@@ -137,21 +135,16 @@
           \caption{Exercise 31}\label{fig:ex31}
         \end{figure}
         
-        \begin{enumerate}[(a)]
+        \begin{enumerate}[label = (\alph*)]
           \item See Figure~\ref{fig:ex31}. There aren't very many samples, but
             they look fairly Normal.
 
-          \item
-            \begin{align*}
-              \bar{x} & = 12.83 \\
-              s       & = 4.65 \\
-            \end{align*}
+          \item From the sample: $\bar{x} \approx 12.83$ and $s \approx 4.65$.
 
-            From Table C, $t^* = 1.796$. The confidence interval is:
-            \begin{align*}
-              \mu & = 12.83 \pm 1.796 \cdot \frac{4.65}{\sqrt{10}} \\
-                  & = (10.42, 15.24)
-            \end{align*}
+            The 90\% confidence interval is: 
+            
+            $\mu = 12.83 \pm 2.41$; $10.42 < \mu < 15.24$
+
         \end{enumerate}
 
       \item[33]
@@ -161,7 +154,7 @@
           \caption{Exercise 33}\label{fig:ex33}
         \end{figure}
 
-        \begin{enumerate}[(a)]
+        \begin{enumerate}[label = (\alph*)]
           \item See Figure~\ref{fig:ex33}.
 
           \item 
@@ -170,10 +163,10 @@
 
             \begin{tabular}[H]{lrr}
               \toprule
-                              & t-value & P-value \\
+                              & t      & P-value \\
               \midrule
-              with outlier    & 2.0761  & 0.031 \\
-              without outlier & 1.7881  & 0.052 \\
+              with outlier    & 2.0761 & $0.025 < P < 0.05$ \\
+              without outlier & 1.7881 & $0.05 < P < 0.1$ \\
               \bottomrule
             \end{tabular}
 
@@ -186,26 +179,24 @@
           \caption{Exercise 35}\label{fig:ex35}
         \end{figure}
 
-        \begin{enumerate}[(a)]
+        \begin{enumerate}[label = (\alph*)]
           \item See Figure~\ref{fig:ex35}. 
-          \item The 90\% confidence interval is $(0.9210, 1.4244)$.
+          \item 90\% confidence interval: 
+            
+            $\mu = 1.1727 \pm 0.2516$; $0.9211 < \mu < 1.4243$ 
+
+            The treatment seems to be effective for these types of patients.
+
         \end{enumerate}
 
       \item[38]
-        \begin{enumerate}[(a)]
+        \begin{enumerate}[label = (\alph*)]
           \item The spore count varies quite a bit by day. We want to make sure
             we compare the two rooms on the same day, so that the experiment
             isn't measuring differences between days instead of the difference
             between the two rooms.
 
-          \item 
-            \begin{align*}
-              \bar{x}_{kr}   & = 2138.5 \\
-              \bar{x}_{pr}   & = 314 \\
-              \bar{x}_{diff} & = 1824.5 \\
-              \\
-              \mu_{diff} &= (843, 2806) \\
-            \end{align*}
+          \item $\mu = 1824 \pm 981$; $843 < \mu < 2806$
 
           \item The sample size is very small. We can be confident that there
             are more spores in the kill room, but not very precise about how
@@ -220,16 +211,16 @@
           \caption{Exercise 44}\label{fig:ex44}
         \end{figure}
 
-        The data looks fairly Normal. See Figure~\ref{fig:ex44}.
+        The data look fairly Normal. See Figure~\ref{fig:ex44}.
 
-        The 95\% confidence interval for the mean difference is $(-3.45, 3.30)$.
-        Since this interval contains 0, it doesn't rule out the fund exactly
-        matching its benchmark.
+        The 95\% confidence interval for the mean difference is $-3.45 < \mu < 3.30$.
+        Since this interval contains 0, it doesn't rule out the fund exactly matching
+        its benchmark.
 
         The null hypothesis is that the mean difference is 0 and the alternative
         hypothesis is that the mean difference is non-zero.
 
-        t = -0.0462 which gives a P-value of 0.9636. This doesn't rule out the
+        $t = -0.0462$ which gives a P-value of 0.9636. This doesn't rule out the
         null hypothesis, so there's no reason to think the fund's performance is
         different from its benchmark.
         
@@ -240,28 +231,33 @@
           \caption{Exercise 45}\label{fig:ex45}
         \end{figure}
 
-        The data looks fairly Normal. See Figure~\ref{fig:ex45}.
+        The data look fairly Normal. See Figure~\ref{fig:ex45}.
 
         The null hypothesis is that the mean difference is 0 and the alternative
         hypothesis is that the mean difference is greater than zero. We should
         use a one-sided t-test.
 
-        t = 2.9037 which gives a one-sided P-value of 0.0.0078. There is a
-        statistically significant difference at the $\alpha = 0.05$ level.
+        t = 2.9037 which gives a one-sided P-value of $0.0025 < P < 0.005$. There is
+        a statistically significant difference, $P < 0.005$.
         
       \item[47]
 
-        \paragraph{Approach 1}
+        {\em Approach 1\/}
 
-        \begin{align*}
-          \bar{x}_{right} &= \unit[104.12]{s} \\
-          \bar{x}_{left} &= \unit[117.44]{s} \\
-        \end{align*}
+        \begin{itemize}[parsep=0pt, label={}]
+          \item $\bar{x}_{right} = \unit[104.12]{s}$
+          \item $\bar{x}_{left} = \unit[117.44]{s}$
+        \end{itemize}
 
         The right hand threads only take 89\% of the time of the left hand
         threads.
 
-        \paragraph{Approach 2}
+        {\em Approach 2\/}
+
+        The 90\% confidence interval for the mean difference is:
+
+        $\unit[5.47]{s} < \mu < \unit[21.17]{s}$.
+
         It looks like the task takes around 2 minutes, so a worker could do
         about 30 tasks per hour working steadily. 
 
@@ -271,8 +267,6 @@
         
         If a worker typically worked 50 weeks per year, he would do about $600
         \cdot 50 = 30,000$ tasks per year.
-
-        The 90\% confidence interval for the mean difference is $(5.47, 21.17)$.
 
         If we save 5 to 21 seconds per task, we could save 40 to 175 hours per
         worker per year. 
@@ -286,11 +280,10 @@
     \vspace{12 cm}
     \begin{quote}
       \begin{em}
-        Everything goes, everything returns; eternally rolls the wheel of
-        being.
+        If the world were perfect, it wouldn't be.
       \end{em}
     \end{quote}
-    \hspace{1 cm}--Frederich Nietzsche
+    \hspace{1 cm}--Yogi Berra
   \fi
 
 \end{document}
