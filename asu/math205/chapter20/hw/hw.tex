@@ -1,10 +1,10 @@
-% no answer kef
-% \documentclass[letterpaper]{exam}
+% no answer key
+\documentclass[letterpaper]{exam}
 
 % answer key
-\documentclass[letterpaper, landscape]{exam}
-\usepackage{2in1, lscape} 
-\printanswers{}
+% \documentclass[letterpaper, landscape]{exam}
+% \usepackage{2in1, lscape} 
+% \printanswers{}
 
 \usepackage{units} 
 \usepackage{xfrac} 
@@ -15,9 +15,8 @@
 \usepackage{cancel}
 \usepackage{polynom}
 \usepackage{caption}
-% \usepackage{fullpage}
+\usepackage{fullpage}
 \usepackage{comment}
-\usepackage{todonotes}
 \usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{parskip}
@@ -33,7 +32,7 @@
   \maketitle
 
   \section{Homework}
-  Chapter 20: TODO
+  Chapter 20: 17--21, 23--28, 32, 35
 
   \ifprintanswers{}
     \section{Solutions}
@@ -104,6 +103,120 @@
           \hat{p}_{nh} - \hat{p}_{h} & = 0.1405 \pm 0.0774 \\
                                      & = (0.0631, 0.2179) \\
         \end{align*}
+        
+      \item[24] This should be a matched pair study rather than a proportion study.
+        The two samples aren't independent since they are using the same facilities.
+
+      \newpage
+
+      \item[25]
+        \begin{enumerate}[label = ({\alph*})]
+          \item
+            \begin{align*}
+              p_m &= \sfrac{15}{106} \approx 0.1415 \\
+              p_w &= \sfrac{7}{42} \approx 0.1667 \\
+            \end{align*}
+            With these proportions:
+
+            The 2-sided hypotheses are:
+            \begin{itemize}[label = {}, parsep = 0pt]
+              \item $H_0$: $p_m = p_w$
+              \item $H_a$: $p_m \ne p_w$
+            \end{itemize}
+
+            The z statistic is $z = 0.3879$ making $p > 0.5$. There isn't a
+            statistically significant difference.
+
+          \item With the new sample size: $z = 2.144$ and $0.02 < p < 0.04$
+
+          \item 
+            The original confidence interval is:
+            \begin{align*}
+              p_w - p_m & = 0.0252 \pm 0.1308 \\
+                        & = (-0.1056, 0.1559) \\
+            \end{align*}
+
+            With the larger sample, the confidence interval is:
+            \begin{align*}
+              p_w - p_m & = 0.0252 \pm 0.0239 \\
+                        & = (0.0013, 0.0490) \\
+            \end{align*}
+
+            The new confidence interval is smaller by a factor of $\sqrt{30}$. 
+            
+            We can be confident the women-run business fail more frequently, but the
+            difference is somewhere between 0.1 and 4.9 percentage points.
+
+        \end{enumerate}
+
+      \item[26]
+        We don't know which group will do better, so a 2-sided hypothesis makes
+        sense: 
+        \begin{itemize}[label = {}, parsep = 0pt]
+          \item $H_0$: $p_u = p_r$
+          \item $H_a$: $p_u \ne p_r$
+        \end{itemize}
+
+        The z-statistic is: $z = 2.9867$ and $0.001 < p < 0.0025$. 
+
+        There is a statistically significant difference, $p < 0.0025$, between the
+        two groups of students.
+
+      \item[27]
+        We don't know which group will do better, so a 2-sided hypothesis makes
+        sense: 
+        \begin{itemize}[label = {}, parsep = 0pt]
+          \item $H_0$: $p_w = p_m$
+          \item $H_a$: $p_w \ne p_m$
+        \end{itemize}
+
+        The z-statistic is: $z = 0.0245$ and $p > 0.5$. There's no evidence of a
+        difference.
+
+      \item[28]
+        \begin{align*}
+          p_u - p_r & = 0.2545 \pm 0.1373 \\
+                    & = (0.1172, 0.3919) \\
+        \end{align*}
+
+      \item[32]
+        \begin{enumerate}[label = {(\alph*)}]
+          \item This is an observational study. The observers didn't randomly assign
+            people to one of two groups. They just observed the drivers on the road.
+
+          \item 
+            We don't know which group will do better, so a 2-sided hypothesis makes
+            sense: 
+            \begin{itemize}[label = {}, parsep = 0pt]
+              \item $H_0$: $p_b = p_{ny}$
+              \item $H_a$: $p_b \ne p_{ny}$
+            \end{itemize}
+
+            The z-statistic is: $z = 5.025$ and $p < 0.001$. Either the seat belt law
+            is working or the New Yorkers are buckling up for some other reason.
+        \end{enumerate}
+
+      \item[35]
+        The 95\% confidence interval for the people who use a credit card is:
+        \begin{align*}
+          p & = 0.4948 \pm 0.0995 \\
+            & = (0.3953, 0.5943) \\
+        \end{align*}
+
+        The difference in credit card use for planned vs.\ impulse purchases is:
+        \begin{align*}
+          p_{p} - p_i & = 0.1109 \pm 0.2114 \\
+                       & = (-0.1004, 0.3223) \\
+        \end{align*}
+
+        The 2-sided hypotheses are:
+        \begin{itemize}[label = {}, parsep = 0pt]
+          \item $H_0$: $p_p = p_i$
+          \item $H_a$: $p_p \ne p_i$
+        \end{itemize}
+
+        $z = 1.0192$ which means $0.2 < z < 0.3$ and the difference is not
+        statistically significant.
 
   \end{description}
 
@@ -111,10 +224,10 @@
     \vspace{12 cm}
     \begin{quote}
       \begin{em}
-        TODO
+        The degree of civilization in a society can be judged by entering its prisons. 
       \end{em}
     \end{quote}
-    \hspace{1 cm}--TODO
+    \hspace{1 cm}--Fyodor Dostoyevsky
   \fi
 
 \end{document}
